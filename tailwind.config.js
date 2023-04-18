@@ -6,11 +6,11 @@ module.exports = {
       spacing: {
         112: '28rem',
         124: '32rem',
-        'default': '1260px',
+        default: '1260px',
         1300: '1300px',
         1920: '1912px',
-        'minus80' : '-50px',
-        'minus105' : '-105px',
+        minus80: '-50px',
+        minus105: '-105px',
         '2px': '2px',
         '3px': '3px',
         '4px': '4px',
@@ -229,7 +229,7 @@ module.exports = {
         '400px': '400px',
         '406px': '406px',
         '407px': '407px',
-        '428px':'428px',
+        '428px': '428px',
         '440px': '440px',
         '466px': '466px',
         '480px': '480px',
@@ -243,7 +243,7 @@ module.exports = {
         '540px': '540px',
         '550px': '550px',
         '573px': '573px',
-        '592px':'592px',
+        '592px': '592px',
         '610px': '610px',
         '612px': '612px',
         '614px': '614px',
@@ -266,10 +266,11 @@ module.exports = {
         '862px': '862px',
         '978px': '978px',
         '1040px': '1040px',
-        '1836px': '1836px'
+        '1836px': '1836px',
       },
       boxShadow: {
-        plain: '0 0px 5px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
+        plain:
+          '0 0px 5px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.06)',
         plain1: '0 4px 3.5px 0px rgba(0, 0, 0, 0.25)',
         plain2: 'inset 1px 1px 1px 0px rgba(0, 0, 0, 0.2)',
         plain3: '1px 1px 2px 0px rgba(0, 0, 0, 0.3)',
@@ -288,14 +289,14 @@ module.exports = {
         table: '0 0px 7px 1px rgba(0,0,0,0.6)',
         card: '5px 5px 2px 0 rgba(0,0,0,0.75)',
         plain10: '0px 1px 1px 0px rgba(0, 0, 0, 0.6)',
-        plain11: '0px 1px 4px 0px rgba(0, 0, 0, 0.5)'
+        plain11: '0px 1px 4px 0px rgba(0, 0, 0, 0.5)',
       },
       screens: {
-        'limit': '1261px',
-        'limit1836': '1836px',
-        'limit1920': '1905px',
-        'limit1600': '1600px',
-        'limit734': '734px',
+        limit: '1261px',
+        limit1836: '1836px',
+        limit1920: '1905px',
+        limit1600: '1600px',
+        limit734: '734px',
       },
       brightness: {
         300: '3.00',
@@ -367,21 +368,20 @@ module.exports = {
           r40566c: '#40566c',
           '3d4a8d': '#3d4a8d',
           '528ccd': '#528ccd',
-          '396084': '#396084',
+          396084: '#396084',
           '88d9e8': '#88d9e8',
           '4c98ff': '#4c98ff',
-          'd6f3ff': '#d6f3ff',
+          d6f3ff: '#d6f3ff',
           '0469a3': '#0469a3',
           '2980b9': '#2980b9',
           '6cbbe9': '#6cbbe9',
-          '87eaff': '#87eaff'
-
+          '87eaff': '#87eaff',
         },
         gray: {
-          gradLight:'rgb(127,95,63) 0%',
-          gradDark:'rgb(166,124,82) 100%',
+          gradLight: 'rgb(127,95,63) 0%',
+          gradDark: 'rgb(166,124,82) 100%',
           text: '#393e41',
-          activeText:'#ffdfbd',
+          activeText: '#ffdfbd',
           subNavbar: '#616161',
           r948d81: '#948d81',
           r828282: '#828282',
@@ -450,47 +450,47 @@ module.exports = {
           f2f2f2: '#f2f2f2',
           929292: '#929292',
           ccc2b6: '#ccc2b6',
-          '404040': '#404040',
+          404040: '#404040',
           '2b2b2a': '#2b2b2a',
           c8c8c8: '#c8c8c8',
           '473b35': '#473b35',
           '2a2a2a': '#2a2a2a',
-          '323232': '#323232',
-          '323231': '#323231',
-          '545452': '#545452',
+          323232: '#323232',
+          323231: '#323231',
+          545452: '#545452',
           '2e2e2e': '#2e2e2e',
           '8e8780': '#8e8780',
           '1e1e1e': '#1e1e1e',
           '635f5b': '#635f5b',
-          '414141': '#414141',
-          '272726': '#272726',
+          414141: '#414141',
+          272726: '#272726',
           '5c5c5c': '#5c5c5c',
           a57b51: '#a57b51',
           '80603f': '#80603f',
           e6b786: '#e6b786',
-          '252525': '#252525',
+          252525: '#252525',
           '1a1b1c': '#1a1b1c',
           '16181a': '#16181a',
-          '242424': '#242424',
-          '585858': '#585858',
+          242424: '#242424',
+          585858: '#585858',
           '181a1d': '#181a1d',
           '2c2c2c': '#2c2c2c',
           '4e4941': '#4e4941',
           '776f5f': '#776f5f',
-          'f1e7d5': '#f1e7d5',
+          f1e7d5: '#f1e7d5',
           '1f1f1e': '#1f1f1e',
-          '343434': '#343434',
+          343434: '#343434',
           '5f5951': '#5f5951',
-          'dcd6c3': '#dcd6c3',
+          dcd6c3: '#dcd6c3',
           '44423e': '#44423e',
-          '828282': '#828282',
-          '272624': '#272624',
-          '262626': '#262626',
+          828282: '#828282',
+          272624: '#272624',
+          262626: '#262626',
           '7e7564': '#7e7564',
-          'f1e9e9': '#f1e9e9',
+          f1e9e9: '#f1e9e9',
           '3d3934': '#3d3934',
           '4b3b09': '#4b3b09',
-          e8b888:'#e8b888'
+          e8b888: '#e8b888',
         },
         red: {
           notification: '#ed2f59',
@@ -519,28 +519,27 @@ module.exports = {
           e88895: '#e88895',
           e06446: '#e06446',
           '96341d': '#96341d',
-          'ffd2d2': '#ffd2d2',
-          'e65454': '#e65454',
+          ffd2d2: '#ffd2d2',
+          e65454: '#e65454',
           c65337: '#c65337',
           ff7f7f: '#ff7f7f',
           '594c49': '#594c49',
-          '413937': '#413937',
-          d74220: '#d74220'
-
+          413937: '#413937',
+          d74220: '#d74220',
         },
         orange: {
           ff7e00: '#ff7e00',
           e39e90: '#e39e90',
           ff7a45: '#ff7a45',
           e9441d: '#e9441d',
-          f56032: '#f56032'
+          f56032: '#f56032',
         },
         teal: {
-          r4eb2ba: '#4eb2ba'
+          r4eb2ba: '#4eb2ba',
         },
         purple: {
           d03ab7: '#d03ab7',
-          a898ee: '#a898ee'
+          a898ee: '#a898ee',
         },
         yellow: {
           e3ba3c: '#e3ba3c',
@@ -551,20 +550,20 @@ module.exports = {
           c08029: '#c08029',
           ffd200: ' #ffd200',
           d2b28f: '#d2b28f',
-          ffdeb3: '#ffdeb3'
+          ffdeb3: '#ffdeb3',
         },
         green: {
           r7bd26a: '#7bd26a',
           e3ba3c: '#e3ba3c',
           r279140: '#279140',
           '45bc61': '#45bc61',
-          '4aca68': '#4aca68'
+          '4aca68': '#4aca68',
         },
         brown: {
           r351a1e: '#351a1e',
           r381d1e: '#381d1e',
           r3d3934: '#3d3934',
-          r796657: '#796657'
+          r796657: '#796657',
         },
         submenu: {
           r8b5f5a: '#8b5f5a',
@@ -574,13 +573,13 @@ module.exports = {
           r5a6340: '#5a6340',
           r5a608b: '#5a608b',
           r87409b: '#87409b',
-          r9e5959: '#9e5959'
+          r9e5959: '#9e5959',
         },
         dark: {
           '1a1a1a': '#1a1a1a',
-          '252525': '#252525',
-          '323232': '#323232',
-          '2e2e2e':'#2e2e2e',
+          252525: '#252525',
+          323232: '#323232',
+          '2e2e2e': '#2e2e2e',
         },
         golden: {
           gradLight: '#a67c52',
@@ -588,10 +587,9 @@ module.exports = {
           ccc2b6: '#ccc2b6',
           highLight: '#ffdfbd',
           '89806f': '#89806f',
-          'a47b51': '#a47b51',
-          'aa9264':'#aa9264'
-          
-        }
+          a47b51: '#a47b51',
+          aa9264: '#aa9264',
+        },
       },
       fontFamily: {
         spoqa: ['SpoqaHanSansNeo'],
@@ -601,7 +599,7 @@ module.exports = {
         roboto: ['RobotoMedium'],
         robotoBold: ['RobotoBold'],
         digital: ['Digital-7'],
-        swagger: ['Swagger']
+        swagger: ['Swagger'],
       },
       fontSize: {
         '10px': '10px',
@@ -626,22 +624,22 @@ module.exports = {
         '42px': '42px',
       },
       borderRadius: {
-        '2px':'2px',
+        '2px': '2px',
         '3px': '3px',
         '4px': '4px',
         '6px': '6px',
-        '10px':'10px',
+        '10px': '10px',
         '20px': '20px',
-        '25px':'25px',
-        '26px': '26px'
+        '25px': '25px',
+        '26px': '26px',
       },
       letterSpacing: {
         digital: '.04em',
-        minus05: '-.005em'
+        minus05: '-.005em',
       },
       backgroundOpacity: {
-        '85': '0.85',
-      }
+        85: '0.85',
+      },
     },
   },
   variants: {
@@ -651,8 +649,6 @@ module.exports = {
       brightness: ['hover'],
       filter: ['hover', 'focus'],
     },
-    
-    
   },
   plugins: [],
-}
+};

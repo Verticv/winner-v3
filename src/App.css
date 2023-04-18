@@ -33,6 +33,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -41,3 +42,31 @@
 body {
   background-color: #1e1e1e !important;
 }
+
+/* Start Carousel Style */
+.card_animation {
+  display: flex;
+}
+
+.card_animation .card_animation_slide {
+  flex: 1;
+  transition: all .5s;
+}
+
+.card_animation .card_animation_slide:hover {
+  flex: 1.5;
+}
+
+.card_animation .card_animation_slide:not(:hover) {
+  flex: 1;
+}
+
+.animated_carousel .carousel_tray_wrapper {
+  min-width: 1260px;
+}
+
+.vertical_carousel .carousel_tray_wrapper {
+  min-width: 252px;
+}
+
+/* End Carousel Style */
