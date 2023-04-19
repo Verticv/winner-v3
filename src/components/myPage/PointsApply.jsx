@@ -40,8 +40,8 @@ const PointsApply = () => {
                 </div>
             </div>
 
-        <div className="mt-20px w-full h-573px shadow-table p-px rounded-4px"
-          style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}>
+        <div className="mt-20px w-full shadow-table p-px rounded-4px"
+          style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)", height:'573px' }}>
           <div className='bg-gray-323232 p-9px rounded-4px flex flex-col  w-full h-full'>
                 <div style={{height: '128px'}} className="w-full rounded-4px bg-gray-252525 border border-gray-404040">
                     <div className="ml-114px mt-37px flex flex-col font-spoqaMedium tracking-tight">
@@ -53,7 +53,7 @@ const PointsApply = () => {
                     </div>
                 </div>
 
-                <div className="w-785px ml-117px mt-37px flex flex-col space-y-38px">
+                <div style={{width:'785px'}} className="ml-117px mt-37px flex flex-col space-y-38px">
                     <div className="flex space-x-10px items-center">
                         <Title text="현재 잔여 포인트" />
                         <div className="w-full h-44px">

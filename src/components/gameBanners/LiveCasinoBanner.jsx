@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom'
 const LiveCasinoBanner = () => {
 
     const history = useHistory()
-    const cardClass = "group relative flex justify-end w-300px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer border border-gray-afafaf overflow-hidden"
+    const cardClass = "group relative flex justify-end border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer border border-gray-afafaf overflow-hidden"
 
     const gamesArray = [
         { id: 0, img: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
@@ -29,6 +29,7 @@ const LiveCasinoBanner = () => {
         return items.map(item => (
             <div 
                 key={item.id} 
+                style={{height:'185px', width:'300px'}}
                 className={`${cardClass} ${item.id !==6 && item.id !==7 && "angled-gradient"}`} 
                 onClick={() => item.id !==6 && item.id !==7 && history.push('/live-casino')}
             >

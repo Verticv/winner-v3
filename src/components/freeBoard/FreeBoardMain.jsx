@@ -390,7 +390,7 @@ const FreeBoardMain = () => {
 
                     <div 
                         style={{width: "796px"}}
-                        className={`w-612px flex items-center font-spoqaMedium text-gray-c8c8c8 group ml-px tracking-tight`}>
+                        className={`flex items-center font-spoqaMedium text-gray-c8c8c8 group ml-px tracking-tight`}>
                         {
                             item.type === "공지" 
                             ? <div style={{maxWidth: '92px'}} className="px-10px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px mr-14px flex-shrink-0">공지</div> 

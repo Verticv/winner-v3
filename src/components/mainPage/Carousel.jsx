@@ -56,8 +56,8 @@ const Carousel = () => {
     <button
       type='button'
       onClick={isLeft ? previousImage : nextImage}
-      style={{ left: isLeft && '295px', right: !isLeft && '295px' }}
-      className={`${arrowStyle} mb-minus105 hover:opacity-50 filter opacity-30`}
+      style={{ left: isLeft && '295px', right: !isLeft && '295px', marginBottom:'-105px' }}
+      className={`${arrowStyle} hover:opacity-50 filter opacity-30`}
     >
       {isLeft ? leftArrow : rightArrow}
     </button>
@@ -123,8 +123,8 @@ const Carousel = () => {
   }, [currentImage, isHover]);
 
   return (
-    <div className='flex w-1920 flex-shrink-0  h-491px'>
-      <div className='relative w-1920 h-491px flex items-center justify-center'>
+    <div style={{height:'491px', width:'1920px'}} className='flex flex-shrink-0'>
+      <div style={{height:'491px', width:'1920px'}} className='relative flex items-center justify-center'>
         {sliderControl(true)}
         {imagesDisplay}
         {sliderControl()}

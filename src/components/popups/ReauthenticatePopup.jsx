@@ -16,7 +16,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
             <button className="absolute top-0 right-0 mt-22px mr-22px cursor-pointer z-20 hover:opacity-75" onClick={() => setPopupOpen(false)}>
                 <img src={CloseIcon} alt="close_icon" />
             </button>
-            <div style={{ marginTop: '-64px' }} className="absolute w-630px -mt-79px flex justify-center">
+            <div style={{ marginTop: '-64px', width:'630px' }} className="absolute -mt-79px flex justify-center">
                 <div className="flex items-center justify-center h-158px w-158px">
                     <img src={LoginIcon} alt="login_icon" />
                 </div>

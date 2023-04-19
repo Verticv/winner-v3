@@ -99,7 +99,7 @@ const DateSearchBar = ({
           </div>
         )}
 
-        <div className="flex space-x-10px items-center w-304px h-full">
+        <div style={{width:'304px'}} className="flex space-x-10px items-center h-full">
               <div className="relative">
               <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-2px bg-dark-1a1a1a border border-gray-404040 px-10px font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 focus:ml-10px`} />
            
