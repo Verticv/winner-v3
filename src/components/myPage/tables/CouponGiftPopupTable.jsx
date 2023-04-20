@@ -17,7 +17,7 @@ const CouponGiftPopupTable = () => {
     const nickname = "위너테스트2"
 
     return (
-        <div className="overflow-auto  shadow-table w-550px h-330px rounded-4px ">
+        <div style={{width:'550px', height:'330px'}} className="overflow-auto shadow-table rounded-4px ">
             <div
                 className="flex flex-col justify-center rounded-4px p-px"
                 style={{

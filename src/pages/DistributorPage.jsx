@@ -146,8 +146,9 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
     <div
       style={{
         background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)",
+        width:"227px"
       }}
-      className="w-227px h-165px rounded-10px flex flex-col items-center justify-center overflow-hidden shadow-navbar p-px"
+      className="h-165px rounded-10px flex flex-col items-center justify-center overflow-hidden shadow-navbar p-px"
     >
       <div className="w-full h-163px flex flex-col items-center justify-start rounded-10px bg-gray-323232">
         <img className="mt-19px object-none" src={img} alt="" />
@@ -1426,7 +1427,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
       </div>
 
       <div className="relative flex flex-col items-center limit496:items-center mt-12px">
-        <div className="space-x-4px h-50px w-496px flex items-center justify-center text-24px tracking-tight text-gray-c8c8c8 bg-gray-272726 rounded-25px">
+        <div style={{borderRadius:'25px', width:'496px'}} className="space-x-4px h-50px flex items-center justify-center text-24px tracking-tight text-gray-c8c8c8 bg-gray-272726">
           <span
             style={{
               maxWidth: "160px",

@@ -6,8 +6,8 @@ import Step2 from '../../images/popups/step2_v2.png'
 
 const CouponGiftPopup = ({setPopupOpen}) => {
   return (
-    <div className="h-722px w-610px flex flex-col rounded-10px overflow-hidden p-px shadow-table"
-    style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}>
+    <div className="flex flex-col rounded-10px overflow-hidden p-px shadow-table"
+    style={{ width:'610px', height:'722px', background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}>
       <div className="h-full w-full flex flex-col rounded-10px overflow-hidden bg-gray-323231"
         // style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
       >
@@ -36,7 +36,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span className="font-spoqaMedium text-16px tracking-tight text-gray-929292 pt-3px">쿠폰받을 회원을 선택하세요.</span>
                 </div>
 
-               <div className="mt-17px w-550px h-337px  items-center flex justify-center">
+               <div style={{height:'337px', width:'550px'}} className="mt-17px items-center flex justify-center">
                     <CouponGiftPopupTable />
                 </div>
 

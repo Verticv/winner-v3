@@ -95,7 +95,7 @@ const MinigameBetHistoryPanel = ({
             } 
                         flex items-center justify-between h-34px rounded-3px cursor-pointer px-10px pt-px`}
           >
-            <span className="truncate w-231px text-left font-spoqaMedium tracking-tight text-14px text-shadow overflow-ellipsis">
+            <span style={{width:"231px"}} className="truncate text-left font-spoqaMedium tracking-tight text-14px text-shadow overflow-ellipsis">
               {team1}
             </span>
             <div className="flex items-center space-x-5px">
@@ -167,7 +167,7 @@ const MinigameBetHistoryPanel = ({
               </span>
               {hasDown && <img className="object-none" src={DownIcon} alt="" />}
             </div>
-            <span className="truncate w-231px font-spoqaMedium tracking-tight text-14px text-right text-shadow overflow-ellipsis">
+            <span style={{width:"231px"}} className="truncate font-spoqaMedium tracking-tight text-14px text-right text-shadow overflow-ellipsis">
               {team2}
             </span>
           </div>

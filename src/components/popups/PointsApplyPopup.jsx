@@ -10,8 +10,8 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
     const [inputValue, setInputValue] = useState(null)
 
     return (
-        <div className="h-510px w-610px flex flex-col rounded-10px overflow-hidden p-px shadow-table"
-            style={{ width: "609px", background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}>
+        <div className="flex flex-col rounded-10px overflow-hidden p-px shadow-table"
+            style={{ width: "609px", height:'510px', background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}>
             <div className="h-full w-full flex flex-col rounded-10px overflow-hidden bg-gray-323231">
                 <div className="relative pt-20px pb-20px h-61px bg-gray-272726 flex items-center justify-center flex-shrink-0 rounded-t-10px">
                     <label className="font-spoqaBold text-yellow-ad9e8c  text-24px">포인트  전환  신청</label>
@@ -54,8 +54,8 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
                         <button className="flex items-center justify-center h-52px w-268px rounded-4px hover:filter hover:brightness-125 shadow-link"
                             style={{background:"linear-gradient(to bottom, #88d9e8, #3d4a8d)"}} >
                             <div 
-                                style={{background:"linear-gradient(to top, #396084, #528ccd)"}} 
-                                className="flex items-center justify-center h-50px w-266px rounded-4px cursor-pointer"
+                                style={{background:"linear-gradient(to top, #396084, #528ccd)", width:'266px'}} 
+                                className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
                             >
                                 <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff text-shadow-5 pt-2px">포인트전환</span>
                             </div>
@@ -65,8 +65,8 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
                             onClick={() => isQuickMenu ? history.push('/mypage/points/points-apply',setPopupOpen(false)) : history.push('/mypage/points/points-transaction-history',setPopupOpen(false))}
                             style={{background:"linear-gradient(to bottom, #5f80a4, #223348)"}} >
                             <div 
-                                style={{background:"linear-gradient(to bottom, #39618e, #27405d)"}} 
-                                className="flex items-center justify-center h-50px w-266px rounded-4px cursor-pointer"
+                                style={{background:"linear-gradient(to bottom, #39618e, #27405d)", width:'266px'}} 
+                                className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
                             >
                                 <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff text-shadow-5 pt-2px">상세내역</span>
                             </div>

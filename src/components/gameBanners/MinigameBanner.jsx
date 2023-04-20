@@ -21,7 +21,8 @@ const MinigameBanner = () => {
             <div 
                 onClick={() => history.push(item.path)}
                 key={item.id} 
-                className="angled-gradient relative group flex justify-end w-620px h-185px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer overflow-hidden"
+                style={{height:'185px'}}
+                className="angled-gradient relative group flex justify-end w-620px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer overflow-hidden"
             >
                 <img className="z-20" src={item.background} alt="background" />
                 <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-115px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
@@ -30,7 +31,7 @@ const MinigameBanner = () => {
     }
 
     return (
-        <div className="h-384px grid gap-0 grid-cols-2 gap-x-21px gap-y-17px">
+        <div style={{height:'384px'}} className="grid gap-0 grid-cols-2 gap-x-21px gap-y-17px">
             <CardList items={gamesArray} />
         </div>
     )

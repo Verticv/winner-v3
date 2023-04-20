@@ -30,7 +30,7 @@ const WinLoseSettlement = () => {
             <DateSearchBar isLeagueSearch={false} has3MonthSearch={true} />
 
              <div className="flex h-48px w-full mt-20px space-x-12px">
-                <div className="w-255px h-48px rounded-full border-2 border-gray-635f5b bg-dark-2e2e2e flex items-center justify-center font-spoqaMedium text-16px">
+                <div style={{width:'255px'}} className="h-48px rounded-full border-2 border-gray-635f5b bg-dark-2e2e2e flex items-center justify-center font-spoqaMedium text-16px">
                     <img className="-ml-2px" src={Diamond} alt="" />
                     <div className="flex items-center space-x-4px pt-2px ml-14px">
                       <span className="text-white tracking-tight">진행중인 금액 :</span>
@@ -38,7 +38,7 @@ const WinLoseSettlement = () => {
                     </div>
                 </div>
 
-                <div className="w-255px h-48px rounded-full border-2 border-gray-635f5b bg-dark-2e2e2e flex items-center justify-center font-spoqaMedium text-16px">
+                <div style={{width:'255px'}} className="h-48px rounded-full border-2 border-gray-635f5b bg-dark-2e2e2e flex items-center justify-center font-spoqaMedium text-16px">
                     <img className="-ml-2px" src={Diamond} alt="" />
                     <div className="flex items-center space-x-4px pt-2px ml-14px">
                         <span className="text-white tracking-tight">정산 총 금액 :</span>

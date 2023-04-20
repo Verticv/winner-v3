@@ -97,8 +97,8 @@ const MenuCard = ({
     }
 
     return (
-        <div className="relative flex flex-col items-center w-300px h-307px border border-gray-ececec shadow-glow rounded-md bg-gradient-to-b from-white to-gray-f6f6f6 px-8px">
-            <div className="flex flex-col h-308px justify-between pt-19px pb-10px">
+        <div style={{height:'307px', width:'300px'}} className="relative flex flex-col items-center border border-gray-ececec shadow-glow rounded-md bg-gradient-to-b from-white to-gray-f6f6f6 px-8px">
+            <div style={{height:"308px"}} className="flex flex-col justify-between pt-19px pb-10px">
                 <div className="flex flex-col space-y-4px items-center justify-center">
                     <img className={`object-none ${extraIconCss}`} src={mainIcon} alt="icon" />
                     <span className="text-18px text-gray-r667177 font-spoqaMedium pt-2px tracking-tight">{menuTitle}</span>
@@ -109,12 +109,11 @@ const MenuCard = ({
                 </div>
             </div>
             
-            <div className="absolute top-0 mt-306px">
+            <div style={{marginTop:'306px'}} className="absolute top-0">
                 <img  src={Shadow} alt="shadow" />
             </div>
 
         </div>
     )
 }
-// "w-full h-178px border border-gray-d5d5d5 rounded-md shadow-plain5"
 export default MenuCard
