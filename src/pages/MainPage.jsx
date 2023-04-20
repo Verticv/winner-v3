@@ -8,7 +8,7 @@ import Other from 'components/mainPage/Other';
 import SlotGame from 'components/mainPage/SlotGame';
 import Sports from 'components/mainPage/Sports';
 import Tabs from 'components/mainPage/Tabs';
-import TopBar from 'components/mainPage/TopBar';
+// import TopBar from 'components/mainPage/TopBar/TopBar';
 import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
 import Carousel from '../components/mainPage/Carousel';

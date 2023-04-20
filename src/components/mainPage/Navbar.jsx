@@ -7,7 +7,6 @@ import NavbarHover from '../hovers/NavbarHover';
 
 import { useHistory } from 'react-router-dom';
 import ArrowDown from '../../images/arrows/arrow_dn.png';
-
 import TopBar from './TopBar';
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
