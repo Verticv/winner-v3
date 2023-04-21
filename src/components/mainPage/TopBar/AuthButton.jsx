@@ -11,10 +11,10 @@ const AuthButton = ({
     <button
       style={{
         width: '104px',
-        height: '28px',
+        height: '25px',
         borderRadius: '2px',
-        background: 'linear-gradient(to bottom, #a67c52, #826140)',
-        textShadow: '0px 0px 6px #000000',
+        background: 'linear-gradient(to right, #de52ff, #6c22ff)',
+        textShadow: '0px 0px 5px rgba(0, 0, 0, 0.5)',
         color: '#ffdfbd',
         ...style,
       }}

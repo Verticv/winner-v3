@@ -7,108 +7,106 @@ import LinkButton from './LinkButton';
 
 import Nav2 from '../../../images/navBar/2.png';
 import Nav3 from '../../../images/navBar/3.png';
-import Nav4 from '../../../images/navBar/4.png';
-import Nav5 from '../../../images/navBar/5.png';
 import Nav13 from '../../../images/navBar/1_3.png';
 import LogoutIcon from '../../../images/logout.png';
+import CountryButton from './CountryButton';
 
 const LoggedInHeader = ({ setAuth }) => {
   const history = useHistory();
   const [isPointPopupOpen, setPointPopupOpen] = useState(true);
-  const username = '마이프로틴화이팅예시길이추가닉네임';
 
   return (
-    <div className='space-x-5px flex'>
-      <button
-        className='flex items-center h-12px flex-shrink-0'
-        onClick={() => history.push('/mypage/bet-history')}
-      >
-        <img src={Nav13} alt='' className='mr-3px object-none' />
-        <p
-          style={{ color: '#ad9e8c', WebkitTextStroke: '0.2px' }}
-          className='text-13px h-12px flex items-center tracking-tighter font-spoqaMedium'
+    <div className='flex h-full'>
+      <div className='flex items-center'>
+        <button
+          className='flex items-center h-13px mr-10px flex-shrink-0'
+          onClick={() => history.push('/mypage/bet-history')}
         >
-          <p style={{ marginRight: '2px' }}>Lv3</p>
-          <p
-            style={{
-              maxWidth: '144px',
-              textOverflow: 'unset',
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-            }}
-          >
-            {username.length > 12 ? `${username.slice(0, 12)}...` : username}
-          </p>
-          <p>님</p>
-        </p>
-      </button>
-      <div style={{ backgroundColor: '#36322c' }} className='w-px h-12px' />
-      <button
-        className='flex items-center h-12px flex-shrink-0'
-        onClick={() => history.push('/money/charge')}
-      >
-        <img src={Nav2} alt='' className=' object-none' />
-        <p
-          style={{ color: '#ad9e8c', WebkitTextStroke: '0.2px' }}
-          className='text-13px h-12px flex items-center tracking-tighter font-spoqaMedium'
-        >
-          10,000,000원
-        </p>
-      </button>
-      <div style={{ backgroundColor: '#36322c' }} className='w-px h-12px' />
-      <PopupControls
-        buttonChild={
-          <button className='flex items-center h-12px flex-shrink-0'>
-            <img src={Nav3} alt='' className=' object-none' />
+          <img src={Nav13} alt='' className='mr-4px object-none' />
+          <p className='text-white text-14px h-13px flex items-center font-spoqa'>
+            <p style={{ marginRight: '2px' }}>Lv.3</p>
             <p
-              style={{ color: '#ad9e8c', WebkitTextStroke: '0.2px' }}
-              className='text-13px h-12px flex items-center tracking-tighter font-spoqaMedium'
+              style={{
+                maxWidth: '144px',
+                textOverflow: 'unset',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                letterSpacing: '-0.4px',
+              }}
             >
-              12,500P
+              마이프로틴님
             </p>
-          </button>
-        }
-        isPopupOpen={isPointPopupOpen}
-        setPopupOpen={setPointPopupOpen}
-      >
-        <PointsApplyPopup setPopupOpen={setPointPopupOpen} />
-      </PopupControls>
+          </p>
+        </button>
+        <button
+          className='flex items-center h-13px mr-11px flex-shrink-0'
+          onClick={() => history.push('/money/charge')}
+        >
+          <img src={Nav2} alt='' className=' object-none mr-3px' />
+          <p
+            style={{ letterSpacing: '-0.4px' }}
+            className='text-white text-14px h-13px flex items-center font-spoqa'
+          >
+            보유머니 10,000,000원
+          </p>
+        </button>
+        <PopupControls
+          buttonChild={
+            <button className='flex items-center h-13px mr-9px flex-shrink-0'>
+              <img src={Nav3} alt='' className=' object-none mr-2px' />
+              <p
+                style={{ letterSpacing: '-0.4px' }}
+                className='text-white text-14px h-13px flex items-center font-spoqa'
+              >
+                포인트 125,000P
+              </p>
+            </button>
+          }
+          isPopupOpen={isPointPopupOpen}
+          setPopupOpen={setPointPopupOpen}
+        >
+          <PointsApplyPopup setPopupOpen={setPointPopupOpen} />
+        </PopupControls>
+      </div>
 
-      <div style={{ backgroundColor: '#36322c' }} className='w-px h-12px' />
-      <button
-        className='flex items-center h-12px flex-shrink-0'
-        onClick={() => history.push('/mypage/inbox')}
-      >
-        <img src={Nav4} alt='' className=' object-none' />
-        <p
-          style={{ color: '#ad9e8c', WebkitTextStroke: '0.2px' }}
-          className='text-13px h-12px flex items-center tracking-tighter font-spoqaMedium'
-        >
-          쪽지 2
-        </p>
-      </button>
-      <div style={{ backgroundColor: '#36322c' }} className='w-px h-12px' />
-      <button
-        className='flex items-center h-12px flex-shrink-0'
-        onClick={() => history.push('/mypage/coupon/coupon-usage')}
-      >
-        <img src={Nav5} alt='' className=' object-none' />
-        <p
-          style={{ color: '#ad9e8c', WebkitTextStroke: '0.2px' }}
-          className='text-13px h-12px flex items-center tracking-tighter font-spoqaMedium'
-        >
-          쿠폰 3
-        </p>
-      </button>
-      <LinkButton />
-      <LinkButton />
-      <LinkButton />
-      <button onClick={() => setAuth?.(false)}>
-        <img
-          src={LogoutIcon}
-          alt=''
-          className='object-none ml-11px mr-4px cursor-pointer'
+      <div className='space-x-5px flex items-center'>
+        <LinkButton
+          buttonText='충전신청'
+          linkProps={{ href: '/distributor-page' }} // TODO: add the correct link (Recharge application)
+          buttonProps={{
+            style: {
+              background: 'linear-gradient(to right, #ff7760, #f14a53)',
+            },
+          }}
         />
+        <LinkButton
+          buttonText='환전신청'
+          linkProps={{ href: '/distributor-page' }} // TODO: add the correct link (Exchange request)
+          buttonProps={{
+            style: {
+              background: 'linear-gradient(to right, #14c9e7, #3197e5)',
+            },
+          }}
+        />
+        <LinkButton
+          buttonText='포인트전환'
+          linkProps={{ href: '/distributor-page' }} // TODO: add the correct link (point conversion)
+          buttonProps={{
+            style: {
+              background: 'linear-gradient(to right, #f5c665, #fab072)',
+            },
+          }}
+        />
+      </div>
+      <div className='flex items-center ml-10px mr-5px'>
+        <CountryButton />
+      </div>
+      <button
+        style={{ marginRight: '-4px' }}
+        className='mt-4px'
+        onClick={() => setAuth?.(false)}
+      >
+        <img src={LogoutIcon} alt='' className='object-none cursor-pointer' />
       </button>
     </div>
   );

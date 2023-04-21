@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
-import Koreaflag from '../../images/korea_flag.png';
-import UKflag from '../../images/uk_flag.png';
-import DropDownControls from '../dropdowns/DropDownControls';
-import CountryDropDown from '../dropdowns/CountryDropDown';
 import NavbarHover from '../hovers/NavbarHover';
 
 import { useHistory } from 'react-router-dom';
-import ArrowDown from '../../images/arrows/arrow_dn.png';
 import TopBar from './TopBar';
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
@@ -14,8 +9,6 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
 
   const [selectedTab, setSelectedTab] = useState();
   const [hoveredTab, setHoveredTab] = useState();
-  const [country, setCountry] = useState('KR');
-  const [isCountryOpen, setCountryOpen] = useState();
 
   const tabClass =
     'flex-shrink-0 text-yellow-ad9e8c hover:text-white relative flex flex-col items-center justify-center h-45px px-9px cursor-pointer';
@@ -66,33 +59,18 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     ));
   }
 
-  const CountryButton = (
-    <div
-      style={{ height: '22px', color: '#ffdfbd' }}
-      className='flex items-center px-6px hover:brightness-110 filter text-12px text-yellow-ad9e8c cursor-pointer -mt-px'
-    >
-      <img
-        className='object-none mr-7px'
-        src={country === 'KR' ? Koreaflag : UKflag}
-        alt='flag'
-      ></img>
-      <label className='font-spoqaBold cursor-pointer'>{country}</label>
-      <img className='object-none ml-2px' src={ArrowDown} alt='flag'></img>
-    </div>
-  );
-
   return (
     <>
       <TopBar isAuthenticated={isAuthenticated} setAuth={setAuth} />
       <div
         style={{ borderBottomWidth: '1px', borderBottomColor: '#414141' }}
-        className='relative w-full z-50 bg-black bg-opacity-85 flex flex-col items-start limit:items-center limit1920:items-center'
+        className='relative w-full bg-black bg-opacity-85 flex flex-col items-start limit:items-center limit1920:items-center'
       >
         <div
           onMouseMove={() => setHoveredTab(null)}
           className='w-full h-full absolute'
         ></div>
-        <div style={{ width: '1260px' }} className='z-50 w-full'>
+        <div style={{ width: '1260px' }} className='w-full'>
           <div className=''>
             <div className='flex justify-between w-full'>
               <div
@@ -100,27 +78,13 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 className='relative flex justify-between flex-row flex-shrink-0 -mt-px'
               >
                 <div className='flex items-center flex-shrink-0 -ml-13px'>
-                  <TabsList items={tabsArray} />
+                  {/* <TabsList items={tabsArray} /> */}
                 </div>
 
                 <div
                   onMouseMove={() => setHoveredTab(null)}
                   className='w-full h-full'
                 ></div>
-              </div>
-              <div>
-                <DropDownControls
-                  buttonChild={CountryButton}
-                  onClick={() => setCountryOpen(!isCountryOpen)}
-                  onClose={() => setCountryOpen(false)}
-                >
-                  <div className='z-40'>
-                    <CountryDropDown
-                      setCountry={setCountry}
-                      country={country}
-                    />
-                  </div>
-                </DropDownControls>
               </div>
             </div>
           </div>

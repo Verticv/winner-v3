@@ -1,20 +1,40 @@
 import React from 'react';
 
-const LinkButton = () => {
+const LinkButton = ({
+  buttonText,
+  linkProps: {
+    style: linkStyle,
+    className: linkClassName,
+    ...linkProperties
+  } = {
+    style: {},
+    className: '',
+  },
+  buttonProps: { style, className, ...buttonProperties } = {
+    style: {},
+    className: '',
+  },
+}) => {
   return (
-    <a href='/distributor-page' target='_blank'>
+    <a
+      target='_blank'
+      style={linkStyle}
+      className={linkClassName}
+      {...linkProperties}
+    >
       <button
         style={{
-          width: '104px',
-          height: '28px',
-          borderRadius: '2px',
-          background: 'linear-gradient(to bottom, #a67c52, #826140)',
-          textShadow: '0px 0px 6px #000000',
-          color: '#ffdfbd',
+          width: '84px',
+          height: '25px',
+          borderRadius: '4px',
+          textShadow: ' 0px 0px 5px rgba(0, 0, 0, 0.5)',
+          // TODO: Add box shadow
+          ...style,
         }}
-        className='flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 mr-5px'
+        className={`flex items-center justify-center text-white text-12px font-spoqaMedium filter hover:brightness-125 ${className}`}
+        {...buttonProperties}
       >
-        총판페이지
+        {buttonText}
       </button>
     </a>
   );
