@@ -3,7 +3,6 @@ import visual2 from '../../images/carousel/visual2.png';
 import visual3 from '../../images/carousel/visual3.png';
 import LeftArrow from '../../images/arrows/gold_arrow_left.png';
 import RightArrow from '../../images/arrows/gold_arrow_right.png';
-import NoticeBanner from './NoticeBanner';
 import { useHistory } from 'react-router-dom';
 
 const images = [visual2, visual3];
@@ -56,7 +55,11 @@ const Carousel = () => {
     <button
       type='button'
       onClick={isLeft ? previousImage : nextImage}
-      style={{ left: isLeft && '295px', right: !isLeft && '295px', marginBottom:'-105px' }}
+      style={{
+        left: isLeft && '295px',
+        right: !isLeft && '295px',
+        marginBottom: '-105px',
+      }}
       className={`${arrowStyle} hover:opacity-50 filter opacity-30`}
     >
       {isLeft ? leftArrow : rightArrow}
@@ -123,8 +126,14 @@ const Carousel = () => {
   }, [currentImage, isHover]);
 
   return (
-    <div style={{height:'491px', width:'1920px'}} className='flex flex-shrink-0'>
-      <div style={{height:'491px', width:'1920px'}} className='relative flex items-center justify-center'>
+    <div
+      style={{ height: '491px', width: '1920px' }}
+      className='flex flex-shrink-0'
+    >
+      <div
+        style={{ height: '491px', width: '1920px' }}
+        className='relative flex items-center justify-center'
+      >
         {sliderControl(true)}
         {imagesDisplay}
         {sliderControl()}
