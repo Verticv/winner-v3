@@ -82,133 +82,135 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   }, []);
 
   return (
-    <div
-      style={{
-        background: 'linear-gradient(to right, #b644c4, #351894)',
-        minHeight: '3000px',
-      }} // TODO: remove this min height
-      className='w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'
-    >
-      <img
-        style={{ top: '124px' }}
-        src={OverlayBackground1}
-        alt='overlay background'
-        className='absolute w-full'
-      />
-      <img
-        style={{ top: '956px' }}
-        src={OverlayBackground2}
-        alt='overlay background'
-        className='absolute w-full opacity-50'
-      />
-
-      <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
-        <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-      </div>
-
-      {/* 
-      <div
-        style={{ marginTop: '86.6px' }}
-        className='relative w-full bg-black bg-opacity-85 flex flex-col items-start limit:items-center limit1920:items-center'
-      >
-        <NoticeBanner />
-      </div> */}
-
-      {/* <div
-        style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
-        className={`${
-          scrollPosition > 497 ? 'top-235px' : 'bottom-0'
-        } fixed z-20 flex justify-end`}
-      >
-        <QuickMenu scrollPosition={scrollPosition} />
-      </div>
-
+    <>
       <div
         style={{
-          background: 'green',
-          maxWidth: '300px',
-          marginTop: '20px',
-          marginBottom: '20px',
-        }}
+          background: 'linear-gradient(to right, #b644c4, #351894)',
+          minHeight: '3000px',
+        }} // TODO: remove this min height
+        className='w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'
       >
-        <CarouselV2Vertical />
+        <img
+          style={{ top: '124px' }}
+          src={OverlayBackground1}
+          alt='overlay background'
+          className='absolute w-full'
+        />
+        <img
+          style={{ top: '956px' }}
+          src={OverlayBackground2}
+          alt='overlay background'
+          className='absolute w-full opacity-50'
+        />
       </div>
+      <div className='w-full absolute top-125px flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'>
+        <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
+          <Navbar
+            isAuthenticated={isAuthenticated}
+            setAuth={setAuthenticated}
+          />
+        </div>
 
-      <div
-        style={{
-          background: 'green',
-          maxWidth: '1260px',
-          marginTop: '250px',
-          marginBottom: '20px',
-        }}
-      >
-        <Index />
+        <div className='relative w-full flex flex-col items-start limit:items-center limit1920:items-center'>
+          <NoticeBanner />
+        </div>
+
+        {/* <div
+          style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
+          className={`${
+            scrollPosition > 497 ? 'top-235px' : 'bottom-0'
+          } fixed z-20 flex justify-end`}
+        >
+          <QuickMenu scrollPosition={scrollPosition} />
+        </div>
+
+        <div
+          style={{
+            background: 'green',
+            maxWidth: '300px',
+            marginTop: '20px',
+            marginBottom: '20px',
+          }}
+        >
+          <CarouselV2Vertical />
+        </div>
+
+        <div
+          style={{
+            background: 'green',
+            maxWidth: '1260px',
+            marginTop: '250px',
+            marginBottom: '20px',
+          }}
+        >
+          <Index />
+        </div>
+
+        <div
+          style={{
+            background: 'blue',
+            maxWidth: '1260px',
+            marginTop: '20px',
+            marginBottom: '250px',
+          }}
+        >
+          <CarouselV2WorkingExample />
+        </div>
+
+        <div
+          style={{ marginLeft: size.width < 1261 ? '-324px' : '0px' }}
+          className='flex items-center justify-start limit:justify-center w-screen'
+        >
+          <Carousel />
+        </div>
+
+        <div className='flex flex-col items-start limit:items-center h-full relative z-30'>
+          <div style={{ marginTop: '31px' }}>
+            <Tabs />
+          </div>
+
+          <div style={{ marginTop: '20px' }}>
+            <SubComp text='슬롯게임' />
+          </div>
+
+          <SlotGame />
+
+          <div style={{ marginTop: '29px' }}>
+            <SubComp text='라이브카지노' />
+          </div>
+
+          <div style={{ marginTop: '7px' }}>
+            <LiveCasino />
+          </div>
+
+          <div style={{ marginTop: '27px' }}>
+            <SubComp text='스포츠' />
+          </div>
+
+          <div style={{ marginTop: '27px' }}>
+            <Sports />
+          </div>
+
+          <div style={{ marginTop: '27px' }}>
+            <SubComp text='호텔카지노' />
+          </div>
+
+          <div style={{ marginTop: '27px' }}>
+            <HotelCasino />
+          </div>
+
+          <div style={{ marginTop: '24px' }}>
+            <SubComp text='기타게임' />
+          </div>
+
+          <div style={{ marginTop: '30px', marginBottom: '92px' }}>
+            <Other />
+          </div>
+        </div> */}
+
+        {/* <Footer /> */}
       </div>
-
-      <div
-        style={{
-          background: 'blue',
-          maxWidth: '1260px',
-          marginTop: '20px',
-          marginBottom: '250px',
-        }}
-      >
-        <CarouselV2WorkingExample />
-      </div>
-
-      <div
-        style={{ marginLeft: size.width < 1261 ? '-324px' : '0px' }}
-        className='flex items-center justify-start limit:justify-center w-screen'
-      >
-        <Carousel />
-      </div>
-
-      <div className='flex flex-col items-start limit:items-center h-full relative z-30'>
-        <div style={{ marginTop: '31px' }}>
-          <Tabs />
-        </div>
-
-        <div style={{ marginTop: '20px' }}>
-          <SubComp text='슬롯게임' />
-        </div>
-
-        <SlotGame />
-
-        <div style={{ marginTop: '29px' }}>
-          <SubComp text='라이브카지노' />
-        </div>
-
-        <div style={{ marginTop: '7px' }}>
-          <LiveCasino />
-        </div>
-
-        <div style={{ marginTop: '27px' }}>
-          <SubComp text='스포츠' />
-        </div>
-
-        <div style={{ marginTop: '27px' }}>
-          <Sports />
-        </div>
-
-        <div style={{ marginTop: '27px' }}>
-          <SubComp text='호텔카지노' />
-        </div>
-
-        <div style={{ marginTop: '27px' }}>
-          <HotelCasino />
-        </div>
-
-        <div style={{ marginTop: '24px' }}>
-          <SubComp text='기타게임' />
-        </div>
-
-        <div style={{ marginTop: '30px', marginBottom: '92px' }}>
-          <Other />
-        </div>
-      </div> */}
-
-      {/* <Footer /> */}
-    </div>
+    </>
   );
 };
 

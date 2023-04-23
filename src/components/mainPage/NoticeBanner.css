@@ -4,6 +4,13 @@
     position: relative;
 }
 
+#banner:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
 @keyframes banneranimation {
     0% {
         left: 1200px;
