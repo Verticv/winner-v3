@@ -32,8 +32,6 @@ export default function DropDownControls({
 
   useOnClickOutside(ref, handler);
 
-  console.log('buttonChild :>> ', buttonChild);
-
   return (
     <div className='relative'>
       <button

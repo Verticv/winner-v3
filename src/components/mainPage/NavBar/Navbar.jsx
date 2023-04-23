@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavbarHover from '../../hovers/NavbarHover';
 import Item1 from '../../../images/navBar/item_1.png';
 import Item2 from '../../../images/navBar/item_2.png';
@@ -76,7 +76,12 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   function TabsList({ items }) {
-    return items.map((item) => {
+    // TODO: remove this useEffect
+    useEffect(() => {
+      setSelectedTab(items[4].id);
+      setHoveredTab(items[4].id);
+    }, [items]);
+    return items.map((item, index) => {
       const isSelectedTap = selectedTab === item.id;
       return (
         <button
@@ -87,7 +92,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           }}
           className={`w-83px h-full ${
             isSelectedTap ? selectedTabClass : tabClass
-          }`}
+          } ${items.length - 1 !== index ? 'mr-10px' : ''}`}
           onClick={() => {
             setSelectedTab(item.id);
             history.push(item.path);
@@ -190,13 +195,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             </div>
           </div>
         </div>
-        <div className='bg-black bg-opacity-85 w-screen -mt-px'>
-          <NavbarHover
-            selection={hoveredTab}
-            setHoveredTab={setHoveredTab}
-            setSelectedTab={setSelectedTab}
-          />
-        </div>
+        <NavbarHover
+          selection={hoveredTab}
+          setHoveredTab={setHoveredTab}
+          setSelectedTab={setSelectedTab}
+        />
       </div>
     </>
   );

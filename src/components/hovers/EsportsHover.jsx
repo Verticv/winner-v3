@@ -1,63 +1,118 @@
-import React, { useState } from 'react'
-import LolBanner from '../../images/navbarHover/5_1.png'
-import LolBannerHighlight from '../../images/navbarHover/5_1_hl.png'
-import SuddenAttackBanner from '../../images/navbarHover/5_2.png'
-import SuddenAttackBannerHighlight from '../../images/navbarHover/5_2_hl.png'
-import OverwatchBanner from '../../images/navbarHover/5_3.png'
-import OverwatchBannerHighlight from '../../images/navbarHover/5_3_hl.png'
-import PubgBanner from '../../images/navbarHover/5_4.png'
-import PubgBannerHighlight from '../../images/navbarHover/5_4_hl.png'
-import Expand from 'react-expand-animated'
-import { useHistory } from 'react-router-dom'
+import React, { useState } from 'react';
+import LolBanner from '../../images/navbarHover/5_1.png';
+import LolBannerLogo from '../../images/navbarHover/5_1_logo.png';
+import SuddenAttackBanner from '../../images/navbarHover/5_2.png';
+import SuddenAttackBannerLogo from '../../images/navbarHover/5_2_logo.png';
+import OverwatchBanner from '../../images/navbarHover/5_3.png';
+import OverwatchBannerLogo from '../../images/navbarHover/5_3_logo.png';
+import PubgBanner from '../../images/navbarHover/5_4.png';
+import PubgBannerLogo from '../../images/navbarHover/5_4_logo.png';
+import Preparing from '../../images/navbarHover/5_5.png';
+import PreparingLogo from '../../images/navbarHover/5_5_logo.png';
+import Expand from 'react-expand-animated';
+import { useHistory } from 'react-router-dom';
 
+// TODO: Remove the old images
 const EsportsHover = ({ selection }) => {
+  const [isHover, setHover] = useState(null);
+  const history = useHistory();
 
-	const [isHover, setHover] = useState(null)
-	const history = useHistory()
+  const gamesArray = [
+    {
+      id: 0,
+      background: LolBanner,
+      logo: LolBannerLogo,
+      imgText: '두윈카지노',
+    },
+    {
+      id: 1,
+      background: SuddenAttackBanner,
+      logo: SuddenAttackBannerLogo,
+      imgText: '이용가이드',
+      path: '/esports/structure',
+    },
+    {
+      id: 2,
+      background: OverwatchBanner,
+      logo: OverwatchBannerLogo,
+      imgText: '보타카지노',
+      path: '/esports/single',
+    },
+    {
+      id: 3,
+      background: PubgBanner,
+      logo: PubgBannerLogo,
+      imgText: '이용가이드',
+      path: '/esports/multi',
+    },
+    {
+      id: 4,
+      background: Preparing,
+      logo: PreparingLogo,
+      imgText: '준비중',
+      path: '/esports/multi',
+    },
+    {
+      id: 5,
+      background: Preparing,
+      logo: PreparingLogo,
 
-	const gamesArray = [
-		{ id: 0, background: LolBanner, highlight: LolBannerHighlight, imgText: "e-스포츠", color: "group-hover:bg-purple-a898ee", btnText: "게임시작", class: "bg-opacity-25" },
-		{ id: 1, background: SuddenAttackBanner, highlight: SuddenAttackBannerHighlight, imgText: "화면구성설명", color: "group-hover:bg-red-db4a4a", btnText: "설명보기", class: "bg-opacity-25", path: "/esports/structure" },
-		{ id: 2, background: OverwatchBanner, highlight: OverwatchBannerHighlight, imgText: "단폴더베팅방법", color: "group-hover:bg-blue-r3384ca", btnText: "설명보기", class: "bg-opacity-25", path: "/esports/single" },
-		{ id: 3, background: PubgBanner, highlight: PubgBannerHighlight, imgText: "다폴더베팅방법", color: "group-hover:bg-teal-r4eb2ba", btnText: "설명보기", class: "bg-opacity-25", path: "/esports/multi" }
-	];
+      imgText: '준비중',
+      path: '/esports/multi',
+    },
+  ];
 
-	function GamesList({ items }) {
-		return items.map(item => (
-			<div
-				key={item.id}
-				className={`group relative cursor-pointer flex flex-col items-center justify-end flex-shrink-0 h-262px`}
-				// style={{ width: '235px' }}
-				onMouseEnter={() => setHover(item.id)}
-				onClick={() => history.push(item.path)}
-			>
-				<p style={{ color: '#ffdfbd', marginBottom: '70px' }} className={`absolute bottom-0 z-20 text-13px tracking-tighter font-spoqa h-13px items-center flex`}>{item.imgText}</p>
-				<div style={{ marginBottom: '31px' }} className={`absolute z-20`}>
-					<button style={{ width: '89px', height: '26px', borderRadius: '2px', background: 'linear-gradient(to bottom, #e8b888, #4e3d0b)' }} className={`p-px  filter hover:brightness-125`}>
-						<div style={{ borderRadius: '2px', background: isHover === item.id ? 'linear-gradient(to bottom, #f38d27, #b55b01)' : 'linear-gradient(to bottom, #a67c52, #805f3f)' }} className='w-full h-full flex items-center justify-center'>
-							<p style={{ color: '#ffdfbd', textShadow: "0 0 3px #00000090" }} className="text-13px font-spoqaMedium tracking-tight">{item.btnText}</p>
-						</div>
-					</button>
-				</div>
-				<img className={`${isHover === item.id ? "opacity-0" : "opacity-100"} absolute bottom-0 object-none h-full mb-13px`} src={item.background} alt="game_image" />
-				<img className={`${isHover === item.id ? "opacity-100" : "opacity-0"} absolute bottom-0 object-none h-full mb-13px`} src={item.highlight} alt="game_image" />
-			</div>
-		))
-	}
+  function GamesList({ items }) {
+    return items.map((item) => (
+      <div
+        key={item.id}
+        className={`relative group cursor-pointer flex items-center flex-shrink-0 h-68px rounded-6px`}
+        style={{
+          width: '210px',
+          background: 'linear-gradient(to right, #9c3bbb, #411d99)',
+        }}
+        onMouseEnter={() => setHover(item.id)}
+        onClick={() => history.push(item.path)}
+      >
+        {isHover === item.id && (
+          <div className='w-full h-full bg-black opacity-60 z-10 rounded-6px'></div>
+        )}
+        <img
+          className={`absolute bottom-0 object-none h-auto z-50`}
+          src={item.background}
+          alt='game_image'
+        />
+        <div className='absolute flex flex-col justify-center items-center h-full right-0 top-0 w-132px z-0'>
+          <img src={item.logo} alt='game_image_logo' />
+          <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa'>
+            {item.imgText}
+          </p>
+        </div>
+      </div>
+    ));
+  }
 
-	return (
-		<Expand
-			open={selection === 4}
-			duration={200}
-			className="absolute w-full h-262px border-b border-t border-brown-r796657"
-		>
-			<div onMouseLeave={() => setHover(null)} style={{ minHeight: '262px' }} className="h-full w-full flex justify-center bg-black bg-opacity-85">
-				<div style={{ width: '720px' }} className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 limit:grid-cols-4">
-					<GamesList items={gamesArray} />
-				</div>
-			</div>
-		</Expand>
-	)
-}
+  return (
+    <Expand
+      open={selection === 4}
+      duration={200}
+      styles={{ open: { left: '698px' } }}
+      className='rounded-8px absolute w-auto m-auto h-262px border-b border-t bg-white'
+    >
+      <div
+        onMouseLeave={() => setHover(null)}
+        style={{ minHeight: '254px' }}
+        className='h-full w-auto flex justify-center'
+      >
+        <div
+          style={{ width: '460px' }}
+          className='p-15px grid gap-10px grid-cols-2 limit:grid-cols-2'
+        >
+          <GamesList items={gamesArray} />
+        </div>
+      </div>
+    </Expand>
+  );
+};
 
-export default EsportsHover
+export default EsportsHover;
