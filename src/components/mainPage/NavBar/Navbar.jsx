@@ -78,8 +78,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   function TabsList({ items }) {
     // TODO: remove this useEffect
     useEffect(() => {
-      setSelectedTab(items[4].id);
-      setHoveredTab(items[4].id);
+      setSelectedTab(items[0].id);
+      setHoveredTab(items[0].id);
     }, [items]);
     return items.map((item, index) => {
       const isSelectedTap = selectedTab === item.id;

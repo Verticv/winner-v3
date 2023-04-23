@@ -17,7 +17,7 @@ const NavbarHover = ({ selection, setHoveredTab, setSelectedTab }) => {
         setSelectedTab(null);
       }}
     >
-      {/* <LiveCasinoHover selection={selection}/> */}
+      <LiveCasinoHover selection={selection} />
       {/* <SlotGameHover selection={selection} />
       <SportsHover selection={selection} />
       <HotelCasinoHover selection={selection} /> */}

@@ -265,6 +265,7 @@ module.exports = {
         '8px': '8px',
         '9px': '9px',
         '10px': '10px',
+        '14px': '14px',
         '20px': '20px',
       },
       letterSpacing: {
