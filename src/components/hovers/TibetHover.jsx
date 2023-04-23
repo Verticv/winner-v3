@@ -1,46 +1,33 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import Expand from 'react-expand-animated';
-import AugBanner from '../../images/navbarHover/7_1.png';
-import AugBannerLogo from '../../images/navbarHover/7_1_logo.png';
-import AugBanner2 from '../../images/navbarHover/7_2.png';
-import AugBannerLogo2 from '../../images/navbarHover/7_2_logo.png';
-import AugBanner3 from '../../images/navbarHover/7_3.png';
-import AugBannerLogo3 from '../../images/navbarHover/7_3_logo.png';
-import AugBanner4 from '../../images/navbarHover/7_4.png';
-import AugBannerLogo4 from '../../images/navbarHover/7_4_logo.png';
+import { useHistory } from 'react-router-dom';
+import img1 from '../../images/navbarHover/10_1.png';
+import img1Logo from '../../images/navbarHover/10_1_logo.png';
+import img2 from '../../images/navbarHover/10_3.png';
+import img3 from '../../images/navbarHover/10_2.png';
 
-const ARHover = ({ selection }) => {
+const TibetHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
 
   const gamesArray = [
     {
       id: 0,
-      background: AugBanner,
-      logo: AugBannerLogo,
-      imgText: '파워볼',
+      background: img1,
+      logo: img1Logo,
+      imgText: '티비벳',
     },
     {
       id: 1,
-      background: AugBanner2,
-      logo: AugBannerLogo2,
-      imgText: '스피드키노',
-      path: '/esports/structure',
+      background: img2,
+      logo: img1Logo,
+      imgText: '화면구성설명',
     },
     {
       id: 2,
-      background: AugBanner3,
-      logo: AugBannerLogo3,
-      imgText: '파워사다리',
-      path: '/esports/single',
-    },
-    {
-      id: 3,
-      background: AugBanner4,
-      logo: AugBannerLogo4,
-      imgText: '키노사다리',
-      path: '/esports/multi',
+      background: img3,
+      logo: img1Logo,
+      imgText: '베팅방법',
     },
   ];
 
@@ -73,21 +60,22 @@ const ARHover = ({ selection }) => {
       </div>
     ));
   }
+
   return (
     <Expand
-      open={selection === 6}
+      open={selection === 9}
       duration={200}
-      styles={{ open: { left: '882px' } }}
-      className='rounded-8px absolute w-auto m-auto h-262px bg-white'
+      styles={{ open: { left: '1159px' } }}
+      className='rounded-8px absolute w-auto m-auto h-98px bg-white'
     >
       <div
         onMouseLeave={() => setHover(null)}
-        style={{ minHeight: '176px' }}
+        style={{ minHeight: '254px' }}
         className='h-full w-auto flex justify-center'
       >
         <div
-          style={{ width: '460px' }}
-          className='p-15px grid gap-10px grid-cols-2 limit:grid-cols-2'
+          style={{ width: '240px' }}
+          className='p-15px grid gap-10px grid-cols-1 limit:grid-cols-1'
         >
           <GamesList items={gamesArray} />
         </div>
@@ -96,4 +84,4 @@ const ARHover = ({ selection }) => {
   );
 };
 
-export default ARHover;
+export default TibetHover;

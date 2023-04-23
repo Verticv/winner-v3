@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import NavbarHover from '../../hovers/NavbarHover';
 import Item1 from '../../../images/navBar/item_1.png';
 import Item2 from '../../../images/navBar/item_2.png';
@@ -76,11 +76,6 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   function TabsList({ items }) {
-    // TODO: remove this useEffect
-    useEffect(() => {
-      setSelectedTab(items[1].id);
-      setHoveredTab(items[1].id);
-    }, [items]);
     return items.map((item, index) => {
       const isSelectedTap = selectedTab === item.id;
       return (
@@ -108,7 +103,6 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
               src={isSelectedTap ? item.activeIcon : item.icon}
               alt={item.text}
             />
-            {/* <img className="object-none" src={Bubble1} alt="" /> */}
           </div>
           <span
             style={{ marginBottom: '0px' }}
@@ -116,10 +110,6 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           >
             {item.text}
           </span>
-          {/* <div
-            style={{ backgroundColor: selectedTab === item.id ? '#fcd6a8' : '' }}
-            className={selectedTab === item.id ? selectedLineClass : lineClass}
-          ></div> */}
         </button>
       );
     });
@@ -180,8 +170,12 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 ButtonIcon={MyMenuIcon}
                 ButtonActiveIcon={MyMenuActiveIcon}
               />
-              <LinkButton ButtonIcon={MessageIcon} buttonText='쪽지' />
-              <LinkButton ButtonIcon={CouponIcon} buttonText='쿠폰' />
+              <LinkButton
+                ButtonIcon={MessageIcon}
+                buttonText='쪽지'
+                count={25}
+              />
+              <LinkButton ButtonIcon={CouponIcon} buttonText='쿠폰' count={5} />
               <DropdownButton
                 onMouseOver={() => {
                   setSelectedTab(null);

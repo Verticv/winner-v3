@@ -8,6 +8,7 @@ import ARHover from './ARHover';
 import FishingGameHover from './FishingGameHover';
 import HotelCasinoHover from './HotelCasinoHover';
 import TvBetHover from './TvBetHover';
+import TibetHover from './TibetHover';
 
 const NavbarHover = ({ selection, setHoveredTab, setSelectedTab }) => {
   return (
@@ -19,13 +20,14 @@ const NavbarHover = ({ selection, setHoveredTab, setSelectedTab }) => {
     >
       <LiveCasinoHover selection={selection} />
       <SlotGameHover selection={selection} />
-      {/* <SportsHover selection={selection} />
-      <HotelCasinoHover selection={selection} /> */}
+      <SportsHover selection={selection} />
+      <HotelCasinoHover selection={selection} />
       <EsportsHover selection={selection} />
-      {/* <MinigamesHover selection={selection} />
+      <MinigamesHover selection={selection} />
       <ARHover selection={selection} />
       <FishingGameHover selection={selection} />
-      <TvBetHover selection={selection} /> */}
+      <TvBetHover selection={selection} />
+      <TibetHover selection={selection} />
     </div>
   );
 };

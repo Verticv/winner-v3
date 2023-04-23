@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LinkButton = ({ buttonText, ButtonIcon }) => {
+const LinkButton = ({ buttonText, ButtonIcon, count }) => {
   const myMenuButton = (
     <div
       style={{
@@ -17,7 +17,7 @@ const LinkButton = ({ buttonText, ButtonIcon }) => {
             padding: '0 6.7px',
           }}
         >
-          5
+          {count}
         </div>
         <img className='object-none' src={ButtonIcon} alt='my menu' />
       </div>
