@@ -1,27 +1,5 @@
 import React from 'react';
 
-// .Rounded_Rectangle {
-//   border-radius: 9px;
-//   background-color: rgb(240, 66, 129);
-//   position: absolute;
-//   left: 1479px;
-//   top: 51px;
-//   width: 20px;
-//   height: 19px;
-//   z-index: 752;
-// }
-
-// .Rounded_Rectangle {
-//   border-radius: 9px;
-//   background-color: rgb(240, 66, 129);
-//   position: absolute;
-//   left: 1394px;
-//   top: 51px;
-//   width: 30px;
-//   height: 19px;
-//   z-index: 745;
-// }
-
 const LinkButton = ({ buttonText, ButtonIcon }) => {
   const myMenuButton = (
     <div

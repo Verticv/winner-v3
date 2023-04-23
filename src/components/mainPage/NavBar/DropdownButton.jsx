@@ -46,13 +46,13 @@ const DropdownButton = ({
     </div>
   );
 
-  // TODO: add box shadow
   const dropDownCellClass = 'flex w-full h-24px items-center pl-16px';
   const searchDropdown = (
     <>
       <div className='arrow_box'></div>
       <div
         style={{ boxShadow: '1px 1.732px 10px 0px rgba(0, 0, 0, 0.5)' }}
+        // TODO: fix the position of the dropdown, it should be below by 1px
         className='flex flex-col items-center justify-center py-7px w-123px overflow-hidden rounded-4px font-spoqaMedium text-14px tracking-tight bg-white'
       >
         <div className='w-full h-full overflow-x-hidden'>
@@ -97,7 +97,7 @@ const DropdownButton = ({
             setDropdownOpen={setIsMyMenuOpen}
             onClick={() => setIsMyMenuOpen(true)}
             onClose={() => setIsMyMenuOpen(false)}
-            classes='left-0 mt-80px sm:mt-80px'
+            classes='left-0 mt-81px sm:mt-81px'
           >
             {searchDropdown}
           </DropDownControls>
