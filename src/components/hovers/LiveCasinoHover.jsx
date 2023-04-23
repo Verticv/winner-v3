@@ -174,7 +174,7 @@ const LiveCasinoHover = ({ selection }) => {
       open={selection === 0}
       duration={200}
       styles={{ open: { left: '326px' } }} // TODO: check the position!
-      className='rounded-8px absolute w-auto m-auto h-262px border-b border-t bg-white'
+      className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
       <div
         onMouseLeave={() => setHover(null)}

@@ -18,8 +18,8 @@ const NavbarHover = ({ selection, setHoveredTab, setSelectedTab }) => {
       }}
     >
       <LiveCasinoHover selection={selection} />
-      {/* <SlotGameHover selection={selection} />
-      <SportsHover selection={selection} />
+      <SlotGameHover selection={selection} />
+      {/* <SportsHover selection={selection} />
       <HotelCasinoHover selection={selection} /> */}
       <EsportsHover selection={selection} />
       {/* <MinigamesHover selection={selection} />

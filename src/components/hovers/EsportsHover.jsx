@@ -12,7 +12,6 @@ import PreparingLogo from '../../images/navbarHover/5_5_logo.png';
 import Expand from 'react-expand-animated';
 import { useHistory } from 'react-router-dom';
 
-// TODO: Remove the old images
 const EsportsHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
@@ -97,7 +96,7 @@ const EsportsHover = ({ selection }) => {
       open={selection === 4}
       duration={200}
       styles={{ open: { left: '698px' } }}
-      className='rounded-8px absolute w-auto m-auto h-262px border-b border-t bg-white'
+      className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
       <div
         onMouseLeave={() => setHover(null)}
