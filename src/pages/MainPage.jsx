@@ -9,13 +9,14 @@ import Other from 'components/mainPage/Other';
 import SlotGame from 'components/mainPage/SlotGame';
 import Sports from 'components/mainPage/Sports';
 import Tabs from 'components/mainPage/Tabs';
-// import TopBar from 'components/mainPage/TopBar/TopBar';
 import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
 import Carousel from '../components/mainPage/Carousel';
 import Footer from '../components/mainPage/Footer';
 import SubtitleLeft from '../images/subtitle_left.png';
 import SubtitleRight from '../images/subtitle_right.png';
+import OverlayBackground1 from '../images/overlay_background_1.png';
+import OverlayBackground2 from '../images/overlay_background_2.png';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   function useWindowSize() {
@@ -82,21 +83,38 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
 
   return (
     <div
-      style={{ backgroundColor: '#1e1e1e' }}
+      style={{
+        background: 'linear-gradient(to right, #b644c4, #351894)',
+        minHeight: '3000px',
+      }} // TODO: remove this min height
       className='w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'
     >
+      <img
+        style={{ top: '124px' }}
+        src={OverlayBackground1}
+        alt='overlay background'
+        className='absolute w-full'
+      />
+      <img
+        style={{ top: '956px' }}
+        src={OverlayBackground2}
+        alt='overlay background'
+        className='absolute w-full opacity-50'
+      />
+
       <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
 
+      {/* 
       <div
         style={{ marginTop: '86.6px' }}
         className='relative w-full bg-black bg-opacity-85 flex flex-col items-start limit:items-center limit1920:items-center'
       >
         <NoticeBanner />
-      </div>
+      </div> */}
 
-      <div
+      {/* <div
         style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
         className={`${
           scrollPosition > 497 ? 'top-235px' : 'bottom-0'
@@ -187,9 +205,9 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div style={{ marginTop: '30px', marginBottom: '92px' }}>
           <Other />
         </div>
-      </div>
+      </div> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
