@@ -3,6 +3,7 @@ import CarouselV2Vertical from 'components/mainPage/CarouselV2Vertical';
 import CarouselV2WorkingExample from 'components/mainPage/CarouselV2WorkingExample';
 import HotelCasino from 'components/mainPage/HotelCasino';
 import LiveCasino from 'components/mainPage/LiveCasino';
+import Navbar from '../components/mainPage/NavBar';
 import NoticeBanner from 'components/mainPage/NoticeBanner';
 import Other from 'components/mainPage/Other';
 import SlotGame from 'components/mainPage/SlotGame';
@@ -13,7 +14,6 @@ import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
 import Carousel from '../components/mainPage/Carousel';
 import Footer from '../components/mainPage/Footer';
-import Navbar from '../components/mainPage/Navbar';
 import SubtitleLeft from '../images/subtitle_left.png';
 import SubtitleRight from '../images/subtitle_right.png';
 

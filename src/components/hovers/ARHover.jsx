@@ -1,48 +1,99 @@
-import React, { useState } from 'react'
-import Expand from 'react-expand-animated'
-import AugBanner from '../../images/navbarHover/7_1.png'
-import AugBannerHighlight from '../../images/navbarHover/7_1_hl.png'
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import Expand from 'react-expand-animated';
+import AugBanner from '../../images/navbarHover/7_1.png';
+import AugBannerLogo from '../../images/navbarHover/7_1_logo.png';
+import AugBanner2 from '../../images/navbarHover/7_2.png';
+import AugBannerLogo2 from '../../images/navbarHover/7_2_logo.png';
+import AugBanner3 from '../../images/navbarHover/7_3.png';
+import AugBannerLogo3 from '../../images/navbarHover/7_3_logo.png';
+import AugBanner4 from '../../images/navbarHover/7_4.png';
+import AugBannerLogo4 from '../../images/navbarHover/7_4_logo.png';
 
 const ARHover = ({ selection }) => {
-  const [isHover, setHover] = useState(null)
+  const [isHover, setHover] = useState(null);
+  const history = useHistory();
 
   const gamesArray = [
-    { id: 0, background: AugBanner, highlight: AugBannerHighlight, imgText: "키론가상게임", color: "group-hover:bg-green-r7bd26a", btnText: "게임시작", class: "bg-opacity-25" }
+    {
+      id: 0,
+      background: AugBanner,
+      logo: AugBannerLogo,
+      imgText: '파워볼',
+    },
+    {
+      id: 1,
+      background: AugBanner2,
+      logo: AugBannerLogo2,
+      imgText: '스피드키노',
+      path: '/esports/structure',
+    },
+    {
+      id: 2,
+      background: AugBanner3,
+      logo: AugBannerLogo3,
+      imgText: '파워사다리',
+      path: '/esports/single',
+    },
+    {
+      id: 3,
+      background: AugBanner4,
+      logo: AugBannerLogo4,
+      imgText: '키노사다리',
+      path: '/esports/multi',
+    },
   ];
 
   function GamesList({ items }) {
-		return items.map(item => (
-			<div 
-				key={item.id} 
-				className={`group relative cursor-pointer flex flex-col items-center justify-end`}
-				style={{width:'235px'}}
-				onMouseEnter={() => setHover(item.id)}
-			>
-				<p style={{color:'#ffdfbd', marginBottom:'70px'}} className={`absolute bottom-0 z-20 text-13px tracking-tighter font-spoqa h-13px items-center flex`}>{item.imgText}</p>
-				<div style={{marginBottom:'31px'}} className={`absolute z-20`}>
-					<button style={{width:'89px', height:'26px', borderRadius:'2px', background:'linear-gradient(to bottom, #e8b888, #4e3d0b)'}} className={`p-px filter hover:brightness-125`}>
-						<div style={{borderRadius:'2px', background: isHover === item.id ? 'linear-gradient(to bottom, #f38d27, #b55b01)' : 'linear-gradient(to bottom, #a67c52, #805f3f)'}} className='w-full h-full flex items-center justify-center'>
-							<p style={{color:'#ffdfbd', textShadow: "0 0 3px #00000090"}} className="text-13px font-spoqaMedium tracking-tight">게임시작</p>
-						</div>
-					</button>
-				</div>
-				<img className={`${isHover === item.id ? "opacity-0" : "opacity-100"} absolute bottom-0 object-none h-full mb-13px`} src={item.background} alt="game_image" />
-				<img className={`${isHover === item.id ? "opacity-100" : "opacity-0"} absolute bottom-0 object-none h-full mb-13px`} src={item.highlight} alt="game_image" />				
-			</div>
-		))
-	}
-
+    return items.map((item) => (
+      <div
+        key={item.id}
+        className={`relative group cursor-pointer flex items-center flex-shrink-0 h-68px rounded-6px`}
+        style={{
+          width: '210px',
+          background: 'linear-gradient(to right, #9c3bbb, #411d99)',
+        }}
+        onMouseEnter={() => setHover(item.id)}
+        onClick={() => history.push(item.path)}
+      >
+        {isHover === item.id && (
+          <div className='w-full h-full bg-black opacity-60 z-10 rounded-6px'></div>
+        )}
+        <img
+          className={`absolute bottom-0 object-none h-auto z-50`}
+          src={item.background}
+          alt='game_image'
+        />
+        <div className='absolute flex flex-col justify-center items-center h-full right-0 top-0 w-132px z-0'>
+          <img src={item.logo} alt='game_image_logo' />
+          <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa'>
+            {item.imgText}
+          </p>
+        </div>
+      </div>
+    ));
+  }
   return (
     <Expand
       open={selection === 6}
       duration={200}
-      className="absolute w-full h-262px border-b border-t border-brown-r796657"
+      styles={{ open: { left: '882px' } }}
+      className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
-      <div onMouseLeave={() => setHover(null)} className="h-262px w-full flex justify-center bg-black bg-opacity-85 -space-x-12">
-        <GamesList items={gamesArray} />
+      <div
+        onMouseLeave={() => setHover(null)}
+        style={{ minHeight: '176px' }}
+        className='h-full w-auto flex justify-center'
+      >
+        <div
+          style={{ width: '460px' }}
+          className='p-15px grid gap-10px grid-cols-2 limit:grid-cols-2'
+        >
+          <GamesList items={gamesArray} />
+        </div>
       </div>
     </Expand>
-  )
-}
+  );
+};
 
-export default ARHover
+export default ARHover;

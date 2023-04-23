@@ -46,6 +46,7 @@ module.exports = {
         '38px': '38px',
         '39px': '39px',
         '40px': '40px',
+        '41px': '41px',
         '42px': '42px',
         '43px': '43px',
         '44px': '44px',
@@ -114,6 +115,7 @@ module.exports = {
         '119px': '119px',
         '120px': '120px',
         '122px': '122px',
+        '123px': '123px',
         '124px': '124px',
         '126px': '126px',
         '127px': '127px',
@@ -145,6 +147,7 @@ module.exports = {
         '170px': '170px',
         '172px': '172px',
         '175px': '175px',
+        '176px': '176px',
         '180px': '180px',
         '181px': '181px',
         '183px': '183px',
@@ -220,6 +223,8 @@ module.exports = {
       colors: {
         r797979: '#797979',
         r362574: '#362574', // header
+        r9688c7: '#9688c7',
+        rf04281: '#f04281', // Red circle
       },
       fontFamily: {
         spoqa: ['SpoqaHanSansNeo'],
@@ -258,7 +263,10 @@ module.exports = {
         '3px': '3px',
         '4px': '4px',
         '6px': '6px',
+        '8px': '8px',
+        '9px': '9px',
         '10px': '10px',
+        '14px': '14px',
         '20px': '20px',
       },
       letterSpacing: {
