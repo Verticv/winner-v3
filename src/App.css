@@ -69,6 +69,10 @@ body {
   min-width: 252px;
 }
 
+.animated_carousel-multiple .carousel_tray_wrapper {
+  min-width: 1267px;
+}
+
 .vertical_carousel.slot_vertical_carousel .carousel_tray_wrapper {
   min-width: 293px;
 }
