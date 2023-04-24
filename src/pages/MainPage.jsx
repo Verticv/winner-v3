@@ -115,6 +115,19 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           <NoticeBanner />
         </div>
 
+        <div
+          style={{ width: '1260px' }}
+          className='flex items-center justify-start mt-4px'
+        >
+          <Carousel />
+          <div
+            className='ml-5px'
+            style={{ width: '313px', height: '313px', background: 'green' }}
+          >
+            Content
+          </div>
+        </div>
+
         {/* <div
           style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
           className={`${
@@ -155,13 +168,6 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           }}
         >
           <CarouselV2WorkingExample />
-        </div>
-
-        <div
-          style={{ marginLeft: size.width < 1261 ? '-324px' : '0px' }}
-          className='flex items-center justify-start limit:justify-center w-screen'
-        >
-          <Carousel />
         </div>
 
         <div className='flex flex-col items-start limit:items-center h-full relative z-30'>

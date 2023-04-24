@@ -17,70 +17,30 @@ const Carousel = () => {
   const [isHover, setHover] = useState(false);
 
   const history = useHistory();
-  // Some validation for checking the array length could be added if needed
-  const totalImages = images.length;
-
-  // Below functions will assure that after last image we'll scroll back to the start,
-  // or another way round - first to last in previousImage method.
-  const nextImage = () => {
-    if (currentImage >= totalImages - 1) {
-      setCurrentImage(0);
-    } else {
-      setCurrentImage(currentImage + 1);
-    }
-  };
-
-  const previousImage = () => {
-    if (currentImage === 0) {
-      setCurrentImage(totalImages - 1);
-    } else {
-      setCurrentImage(currentImage - 1);
-    }
-  };
-
-  // Tailwind styles. Most importantly notice position absolute, this will sit relative to the carousel's outer div.
-  const arrowStyle = 'absolute z-10 hover:brightness-125 filter';
-
   // Let's create dynamic buttons. It can be either left or right. Using
   // isLeft boolean we can determine which side we'll be rendering our button
   // as well as change its position and content.
 
-  const leftArrow = <img className='object-none' src={LeftArrow} alt='arrow' />;
-
-  const rightArrow = (
-    <img className='object-none' src={RightArrow} alt='arrow' />
-  );
-
-  const sliderControl = (isLeft) => (
-    <button
-      type='button'
-      onClick={isLeft ? previousImage : nextImage}
-      style={{
-        left: isLeft && '295px',
-        right: !isLeft && '295px',
-        marginBottom: '-105px',
-      }}
-      className={`${arrowStyle} hover:opacity-50 filter opacity-30`}
-    >
-      {isLeft ? leftArrow : rightArrow}
-    </button>
-  );
-
   const positionIndicator = (
-    <div
-      style={{ marginBottom: '65px' }}
-      className='absolute z-10 w-full flex justify-center bottom-0 space-x-3px'
-    >
+    <div className='absolute z-10 w-full flex justify-start bottom-10px left-10px space-x-3px'>
       {images.map((img, i) => (
         <button
           key={i}
-          className='w-14px h-14px bg-black rounded-full p-2px'
+          className={`${
+            currentImage === i
+              ? 'bg-white rounded-5px w-29px h-12px'
+              : 'bg-white opacity-30 rounded-full w-12px h-12px'
+          } p-3px`}
           onClick={() => setCurrentImage(i)}
         >
           {currentImage === i && (
             <div
-              style={{ backgroundColor: '#a67c52' }}
-              className='w-full h-full rounded-full bg-blue-gradDark'
+              style={{
+                backgroundColor: currentImage === i ? 'white' : 'transparent',
+              }}
+              className={`w-full h-full ${
+                currentImage === i ? 'bg-white' : 'bg-transparent'
+              }`}
             />
           )}
         </button>
@@ -103,8 +63,11 @@ const Carousel = () => {
           src={images[i]}
           className={`${currentImage === i ? 'opacity-100' : 'opacity-0'} ${
             i === 1 && 'absolute top-0'
-          } w-full object-none transition duration-300 cursor-pointer`}
+          } w-full h-full object-none transition duration-300 cursor-pointer rounded-8px`}
           alt={'banner_images'}
+          // style={{
+          //   backgroundColor: currentImage === i ? 'white' : '',
+          // }}
         />
       ))}
     </>
@@ -127,16 +90,18 @@ const Carousel = () => {
 
   return (
     <div
-      style={{ height: '491px', width: '1920px' }}
+      style={{
+        height: '325px',
+        width: '947px',
+        boxShadow: '0px 2px 10px 0px rgba(0, 0, 0, 0.4)',
+      }}
       className='flex flex-shrink-0'
     >
       <div
-        style={{ height: '491px', width: '1920px' }}
+        style={{ height: '325px', width: '100%' }}
         className='relative flex items-center justify-center'
       >
-        {sliderControl(true)}
         {imagesDisplay}
-        {sliderControl()}
         {positionIndicator}
       </div>
     </div>
