@@ -96,6 +96,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             setHoveredTab(item.id);
             setSelectedTab(item.id);
           }}
+          onMouseLeave={() => {
+            setHoveredTab(null);
+            setSelectedTab(null);
+            // TODO: seems there is a bug here with the animation
+          }}
         >
           <div className='flex justify-center w-48px h-48px'>
             <img
