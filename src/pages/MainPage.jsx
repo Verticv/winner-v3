@@ -1,23 +1,23 @@
-import Index from 'components/mainPage/CarouselV2';
-import CarouselV2Vertical from 'components/mainPage/CarouselV2Vertical';
-import CarouselV2WorkingExample from 'components/mainPage/CarouselV2WorkingExample';
-import HotelCasino from 'components/mainPage/HotelCasino';
-import LiveCasino from 'components/mainPage/LiveCasino';
+// import Index from 'components/mainPage/CarouselV2';
+// import CarouselV2Vertical from 'components/mainPage/CarouselV2Vertical';
+// import CarouselV2WorkingExample from 'components/mainPage/CarouselV2WorkingExample';
+// import HotelCasino from 'components/mainPage/HotelCasino';
+// import LiveCasino from 'components/mainPage/LiveCasino';
 import Navbar from '../components/mainPage/NavBar';
 import NoticeBanner from 'components/mainPage/NoticeBanner';
-import Other from 'components/mainPage/Other';
-import SlotGame from 'components/mainPage/SlotGame';
-import Sports from 'components/mainPage/Sports';
-import Tabs from 'components/mainPage/Tabs';
-import QuickMenu from 'components/QuickMenu';
+// import Other from 'components/mainPage/Other';
+// import SlotGame from 'components/mainPage/SlotGame';
+// import Sports from 'components/mainPage/Sports';
+// import Tabs from 'components/mainPage/Tabs';
+// import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
 import Carousel from '../components/mainPage/Carousel';
-import Footer from '../components/mainPage/Footer';
-import SubtitleLeft from '../images/subtitle_left.png';
-import SubtitleRight from '../images/subtitle_right.png';
+// import Footer from '../components/mainPage/Footer';
+// import SubtitleLeft from '../images/subtitle_left.png';
+// import SubtitleRight from '../images/subtitle_right.png';
 import OverlayBackground1 from '../images/overlay_background_1.png';
 import OverlayBackground2 from '../images/overlay_background_2.png';
-import goldCardImg from '../images/gold_card_img.png';
+// import goldCardImg from '../images/gold_card_img.png';
 import SlotGameVerticalCarousel from 'components/mainPage/SlotGameVerticalCarousel';
 import Jackpot from 'components/mainPage/Jackpot';
 import MiddleList from 'components/mainPage/MiddleList';
@@ -25,56 +25,57 @@ import SlotGameHorizontalCarousel from 'components/mainPage/SlotGameHorizontalCa
 import TabsComponent from 'components/mainPage/TabsComponent';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
-  function useWindowSize() {
-    // Initialize state with undefined width/height so server and client renders match
-    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-    const [windowSize, setWindowSize] = useState({
-      width: undefined,
-      height: undefined,
-    });
-    useEffect(() => {
-      // Handler to call on window resize
-      function handleResize() {
-        // Set window width/height to state
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      }
-      // Add event listener
-      window.addEventListener('resize', handleResize);
-      // Call handler right away so state gets updated with initial window size
-      handleResize();
-      // Remove event listener on cleanup
-      return () => window.removeEventListener('resize', handleResize);
-    }, []); // Empty array ensures that effect is only run on mount
-    return windowSize;
-  }
+  // function useWindowSize() {
+  //   // Initialize state with undefined width/height so server and client renders match
+  //   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  //   const [windowSize, setWindowSize] = useState({
+  //     width: undefined,
+  //     height: undefined,
+  //   });
+  //   useEffect(() => {
+  //     // Handler to call on window resize
+  //     function handleResize() {
+  //       // Set window width/height to state
+  //       setWindowSize({
+  //         width: window.innerWidth,
+  //         height: window.innerHeight,
+  //       });
+  //     }
+  //     // Add event listener
+  //     window.addEventListener('resize', handleResize);
+  //     // Call handler right away so state gets updated with initial window size
+  //     handleResize();
+  //     // Remove event listener on cleanup
+  //     return () => window.removeEventListener('resize', handleResize);
+  //   }, []); // Empty array ensures that effect is only run on mount
+  //   return windowSize;
+  // }
 
-  const size = useWindowSize();
+  // const size = useWindowSize();
 
-  const SubComp = ({ text }) => (
-    <div className='flex justify-center h-22px items-center space-x-29px flex-shrink-0'>
-      <img
-        src={SubtitleLeft}
-        className='object-none flex-shrink-0 mt-3px'
-        alt=''
-      />
-      <h3
-        style={{ color: '#ad9e8c', fontSize: '24px' }}
-        className='font-spoqaBold h-22px flex items-center flex-shrink-0'
-      >
-        {text}
-      </h3>
-      <img
-        src={SubtitleRight}
-        className='object-none flex-shrink-0 mt-3px'
-        alt=''
-      />
-    </div>
-  );
+  // const SubComp = ({ text }) => (
+  //   <div className='flex justify-center h-22px items-center space-x-29px flex-shrink-0'>
+  //     <img
+  //       src={SubtitleLeft}
+  //       className='object-none flex-shrink-0 mt-3px'
+  //       alt=''
+  //     />
+  //     <h3
+  //       style={{ color: '#ad9e8c', fontSize: '24px' }}
+  //       className='font-spoqaBold h-22px flex items-center flex-shrink-0'
+  //     >
+  //       {text}
+  //     </h3>
+  //     <img
+  //       src={SubtitleRight}
+  //       className='object-none flex-shrink-0 mt-3px'
+  //       alt=''
+  //     />
+  //   </div>
+  // );
 
   const [scrollPosition, setScrollPosition] = useState(0);
+  console.log('scrollPosition :>> ', scrollPosition);
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
