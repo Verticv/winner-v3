@@ -69,6 +69,12 @@ body {
   min-width: 252px;
 }
 
+.vertical_carousel.slot_vertical_carousel .carousel_tray_wrapper {
+  min-width: 293px;
+}
+
+
+
 /* End Carousel Style */
 
 /* Start Dropdown Arrow Style */

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import visual2 from '../../images/carousel/visual2.png';
-import visual3 from '../../images/carousel/visual3.png';
-import LeftArrow from '../../images/arrows/gold_arrow_left.png';
-import RightArrow from '../../images/arrows/gold_arrow_right.png';
+import visual1 from '../../images/carousel/visual.png';
 import { useHistory } from 'react-router-dom';
 
-const images = [visual2, visual3];
+const images = [visual1, visual1, visual1, visual1, visual1];
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 // images must be an array of urls , if using Next JS this could something like
@@ -61,13 +58,10 @@ const Carousel = () => {
           onMouseLeave={() => setHover(false)}
           key={i}
           src={images[i]}
-          className={`${currentImage === i ? 'opacity-100' : 'opacity-0'} ${
-            i === 1 && 'absolute top-0'
-          } w-full h-full object-none transition duration-300 cursor-pointer rounded-8px`}
+          className={`${
+            currentImage === i ? 'opacity-100' : 'opacity-0'
+          } absolute w-full h-full object-none transition duration-300 cursor-pointer rounded-8px`}
           alt={'banner_images'}
-          // style={{
-          //   backgroundColor: currentImage === i ? 'white' : '',
-          // }}
         />
       ))}
     </>
@@ -76,10 +70,10 @@ const Carousel = () => {
   useEffect(() => {
     let timer1 = setTimeout(() => {
       if (isHover === false) {
-        if (currentImage === 0) {
-          setCurrentImage(1);
-        } else {
+        if (currentImage === images.length - 1) {
           setCurrentImage(0);
+        } else {
+          setCurrentImage((prev) => prev + 1);
         }
       }
     }, 5000);
@@ -88,6 +82,7 @@ const Carousel = () => {
     };
   }, [currentImage, isHover]);
 
+  // TODO: check/apply the shadow!
   return (
     <div
       style={{

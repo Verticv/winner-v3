@@ -17,6 +17,12 @@ import SubtitleLeft from '../images/subtitle_left.png';
 import SubtitleRight from '../images/subtitle_right.png';
 import OverlayBackground1 from '../images/overlay_background_1.png';
 import OverlayBackground2 from '../images/overlay_background_2.png';
+import goldCardImg from '../images/gold_card_img.png';
+import SlotGameVerticalCarousel from 'components/mainPage/SlotGameVerticalCarousel';
+import slotCardBackground from '../images/slot_card_background.png';
+import slotTitleLeftIcon from '../images/slot_title_left_icon.png';
+import slotTitleReftIcon from '../images/slot_title_right_icon.png';
+import jackpot from '../images/jackpot.png';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   function useWindowSize() {
@@ -120,11 +126,40 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           className='flex items-center justify-start mt-4px'
         >
           <Carousel />
+          {/* // TODO: move this inot a separate component */}
           <div
-            className='ml-5px'
-            style={{ width: '313px', height: '313px', background: 'green' }}
+            style={{ height: '325px' }}
+            className='flex flex-col ml-5px justify-end'
           >
-            Content
+            <div
+              style={{
+                width: '313px',
+                height: '133px',
+              }}
+              className='mb-5px relative'
+            >
+              <img
+                style={{ minWidth: '349px', height: '202px' }}
+                src={jackpot}
+                alt='jackpot'
+                className='absolute -top-40px -left-18px'
+              />
+              {/* // TODO: add the number inside the image */}
+            </div>
+            <div
+              style={{
+                backgroundImage: `url(${slotCardBackground})`,
+                backgroundRepeat: 'round',
+              }}
+              className='rounded-8px'
+            >
+              <div className='flex text-white h-37px w-full justify-center items-center'>
+                <img src={slotTitleLeftIcon} alt='slot title icon' />
+                <p>슬롯 실시간 우승 </p>
+                <img src={slotTitleReftIcon} alt='slot title icon' />
+              </div>
+              <SlotGameVerticalCarousel />
+            </div>
           </div>
         </div>
 
