@@ -21,13 +21,13 @@
     }
 }
 
-#slotgame {
-    animation: slide 60s infinite;
+#middle-list {
+    animation: slide 10s infinite;
     animation-timing-function: linear;
     position: relative;
 }
 
-#slotgame:hover {
+#middle-list:hover {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
@@ -38,7 +38,7 @@
     }
 
     100% {
-        transform: translate3d(-1500px, 0, 0);
+        transform: translate3d(0, -330px, 0);
         /* The image width */
     }
 }

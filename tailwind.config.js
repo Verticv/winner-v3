@@ -186,6 +186,7 @@ module.exports = {
         '356px': '356px',
         '381px': '381px',
         '387px': '387px',
+        '373px': '373px',
         '407px': '407px',
         '428px': '428px',
         '540px': '540px',
@@ -269,6 +270,7 @@ module.exports = {
         '9px': '9px',
         '10px': '10px',
         '14px': '14px',
+        '16px': '16px',
         '20px': '20px',
       },
       letterSpacing: {
