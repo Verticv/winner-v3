@@ -1,10 +1,10 @@
 import React from 'react';
 import whiteFootball from '../../images/sport/white_football.png';
 import world from '../../images/sport/world.png';
-import england from '../../images/sport/england.png';
+// import england from '../../images/sport/england.png';
 import liverpool from '../../images/sport/liverpool.png';
-import manchester_united from '../../images/sport/manchester_united.png';
-import tottenham from '../../images/sport/tottenham.png';
+// import manchester_united from '../../images/sport/manchester_united.png';
+// import tottenham from '../../images/sport/tottenham.png';
 import slotTitleIcon from '../../images/slotCarousel/slot_title_icon.png';
 import villarreal from '../../images/sport/villarreal.png';
 
@@ -159,7 +159,6 @@ export default function SportHorizontalCarousel() {
               // ,background: 'green'
             }}
             classNameTrayWrap='sport_carousel__slider-tray'
-            className='gap-10px vvvvvvvvvvvvvvv'
           >
             <Slide index={0}>
               <Card />
