@@ -49,16 +49,19 @@ body {
 }
 
 .card_animation .card_animation_slide {
-  flex: 1;
+  width: 184px !important;
+  min-width: 184px !important;
   transition: all .5s;
 }
 
 .card_animation .card_animation_slide:hover {
-  flex: 1.5;
+  width: 484px !important;
+  min-width: 484px !important;
 }
 
 .card_animation .card_animation_slide:not(:hover) {
-  flex: 1;
+  width: 184px !important;
+  min-width: 184px !important;
 }
 
 .animated_carousel .carousel_tray_wrapper {
@@ -88,6 +91,10 @@ body {
 }
 
 .live_carousel_tray_wrapper .carousel__slider-tray--horizontal {
+  gap: 10px;
+}
+
+.carousel_tray_wrapper .carousel__slider-tray--horizontal {
   gap: 10px;
 }
 

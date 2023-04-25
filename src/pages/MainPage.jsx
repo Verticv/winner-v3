@@ -25,6 +25,7 @@ import SlotGameHorizontalCarousel from 'components/mainPage/SlotGameHorizontalCa
 import SportHorizontalCarousel from 'components/mainPage/SportHorizontalCarousel';
 import LiveHorizontalCarousel from 'components/mainPage/LiveHorizontalCarousel';
 import LiveRight from 'components/mainPage/LiveRight';
+import AnimatedCarousel from 'components/mainPage/AnimatedCarousel';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   // function useWindowSize() {
@@ -177,6 +178,15 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
             <LiveHorizontalCarousel />
             <LiveRight />
           </div>
+        </div>
+
+        <div
+          style={{
+            maxWidth: '1260px',
+            marginBottom: '37px',
+          }}
+        >
+          <AnimatedCarousel />
         </div>
 
         {/* <div
