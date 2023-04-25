@@ -208,13 +208,14 @@ const CustomSlide = ({
   );
 };
 
-export const CarouselBackButton = ({ className }) => {
+export const CarouselBackButton = ({ className, style }) => {
   return (
     <ButtonBack
       role='button'
       aria-label='slide backward'
       style={{
         boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
+        ...style,
       }}
       className={`hover:opacity-50 w-30px h-76px bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -left-35px cursor-pointer ${className}`}
       id='prev'
@@ -224,11 +225,14 @@ export const CarouselBackButton = ({ className }) => {
   );
 };
 
-export const CarouselNextButton = ({ className }) => {
+export const CarouselNextButton = ({ className, style }) => {
   return (
     <ButtonNext
       role='button'
       aria-label='slide forward'
+      style={{
+        ...style,
+      }}
       className={`hover:opacity-50 w-30px h-76px bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -right-35px cursor-pointer ${className}`}
       id='next'
     >

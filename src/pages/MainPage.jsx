@@ -23,6 +23,8 @@ import Jackpot from 'components/mainPage/Jackpot';
 import MiddleList from 'components/mainPage/MiddleList';
 import SlotGameHorizontalCarousel from 'components/mainPage/SlotGameHorizontalCarousel';
 import SportHorizontalCarousel from 'components/mainPage/SportHorizontalCarousel';
+import LiveHorizontalCarousel from 'components/mainPage/LiveHorizontalCarousel';
+import LiveRight from 'components/mainPage/LiveRight';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   // function useWindowSize() {
@@ -159,11 +161,22 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: '1260px',
-            marginTop: '20px',
-            marginBottom: '250px',
+            marginBottom: '37px',
           }}
         >
           <SportHorizontalCarousel />
+        </div>
+
+        <div
+          style={{
+            maxWidth: '1260px',
+            marginBottom: '37px',
+          }}
+        >
+          <div className='flex space-x-10px'>
+            <LiveHorizontalCarousel />
+            <LiveRight />
+          </div>
         </div>
 
         {/* <div

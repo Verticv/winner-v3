@@ -87,6 +87,10 @@ body {
   gap: 10px;
 }
 
+.live_carousel_tray_wrapper .carousel__slider-tray--horizontal {
+  gap: 10px;
+}
+
 
 
 /* End Carousel Style */

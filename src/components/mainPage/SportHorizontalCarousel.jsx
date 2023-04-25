@@ -159,7 +159,6 @@ export default function SportHorizontalCarousel() {
               // ,background: 'green'
             }}
             classNameTrayWrap='sport_carousel__slider-tray'
-            className='gap-10px vvvvvvvvvvvvvvv'
           >
             <Slide index={0}>
               <Card />
