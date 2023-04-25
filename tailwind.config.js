@@ -37,6 +37,7 @@ module.exports = {
         '28px': '28px',
         '29px': '29px',
         '30px': '30px',
+        '31px': '31px',
         '32px': '32px',
         '33px': '33px',
         '34px': '34px',
@@ -70,6 +71,7 @@ module.exports = {
         '72px': '72px',
         '73px': '73px',
         '75px': '75px',
+        '76px': '76px',
         '78px': '78px',
         '80px': '80px',
         '81px': '81px',
@@ -83,10 +85,12 @@ module.exports = {
         '120px': '120px',
         '122px': '122px',
         '138px': '138px',
+        '139px': '139px',
         '156px': '156px',
         '170px': '170px',
         '176px': '176px',
         '262px': '262px',
+        '403px': '403px',
         '1836px': '1836px',
       },
       boxShadow: {
@@ -123,6 +127,7 @@ module.exports = {
         r362574: '#362574', // header
         r9688c7: '#9688c7',
         rf04281: '#f04281', // Red circle
+        r666666: '#666666', // Text
       },
       fontFamily: {
         spoqa: ['SpoqaHanSansNeo'],
