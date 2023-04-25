@@ -22,7 +22,7 @@ import SlotGameVerticalCarousel from 'components/mainPage/SlotGameVerticalCarous
 import Jackpot from 'components/mainPage/Jackpot';
 import MiddleList from 'components/mainPage/MiddleList';
 import SlotGameHorizontalCarousel from 'components/mainPage/SlotGameHorizontalCarousel';
-import TabsComponent from 'components/mainPage/TabsComponent';
+import SportHorizontalCarousel from 'components/mainPage/SportHorizontalCarousel';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   // function useWindowSize() {
@@ -110,7 +110,10 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           className='absolute w-full opacity-50'
         />
       </div>
-      <div style={{top:'125px'}} className='w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'>
+      <div
+        style={{ top: '125px' }}
+        className='w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'
+      >
         <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
           <Navbar
             isAuthenticated={isAuthenticated}
@@ -147,22 +150,20 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           style={{
             maxWidth: '1260px',
             marginTop: '20px',
+            marginBottom: '32px',
+          }}
+        >
+          <SlotGameHorizontalCarousel />
+        </div>
+
+        <div
+          style={{
+            maxWidth: '1260px',
+            marginTop: '20px',
             marginBottom: '250px',
           }}
         >
-          <div className='w-full flex items-center justify-end'>
-            <TabsComponent />
-            <button
-              style={{
-                background: '#936cee',
-                textShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',
-              }}
-              className='w-83px h-28px ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px'
-            >
-              더보기
-            </button>
-          </div>
-          <SlotGameHorizontalCarousel />
+          <SportHorizontalCarousel />
         </div>
 
         {/* <div

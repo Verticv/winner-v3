@@ -73,8 +73,18 @@ body {
   min-width: 1267px;
 }
 
+.animated_carousel-sport .carousel_tray_wrapper {
+  min-width: 1284px;
+}
+
 .vertical_carousel.slot_vertical_carousel .carousel_tray_wrapper {
   min-width: 293px;
+}
+
+/* carousel__slider-tray--horizontal */
+
+.sport_carousel__slider-tray .carousel__slider-tray--horizontal {
+  gap: 10px;
 }
 
 

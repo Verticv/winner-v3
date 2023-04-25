@@ -24,6 +24,8 @@ import RightArrow from '../../images/slotCarousel/right_arrow.png';
 import RedBadge from '../../images/slotCarousel/badges/red.png';
 import BlueBadge from '../../images/slotCarousel/badges/blue.png';
 import GreenBadge from '../../images/slotCarousel/badges/green.png';
+import slotTitleIcon from '../../images/slotCarousel/slot_title_icon.png';
+import TabsComponent from './TabsComponent';
 
 const list = [
   {
@@ -206,7 +208,7 @@ const CustomSlide = ({
   );
 };
 
-export const CarouselBackButton = () => {
+export const CarouselBackButton = ({ className }) => {
   return (
     <ButtonBack
       role='button'
@@ -214,7 +216,7 @@ export const CarouselBackButton = () => {
       style={{
         boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
       }}
-      className='hover:opacity-50 w-30px h-76px bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -left-35px cursor-pointer'
+      className={`hover:opacity-50 w-30px h-76px bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -left-35px cursor-pointer ${className}`}
       id='prev'
     >
       <img src={LeftArrow} alt='left' className='' />
@@ -222,12 +224,12 @@ export const CarouselBackButton = () => {
   );
 };
 
-export const CarouselNextButton = () => {
+export const CarouselNextButton = ({ className }) => {
   return (
     <ButtonNext
       role='button'
       aria-label='slide forward'
-      className='hover:opacity-50 w-30px h-76px bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -right-35px cursor-pointer'
+      className={`hover:opacity-50 w-30px h-76px bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -right-35px cursor-pointer ${className}`}
       id='next'
     >
       <img src={RightArrow} alt='left' className='' />
@@ -237,49 +239,73 @@ export const CarouselNextButton = () => {
 
 export default function SlotGameHorizontalCarousel() {
   return (
-    <div className='container mx-auto'>
-      <div className='animated_carousel-multiple flex items-center justify-center w-full h-full'>
-        <CarouselProvider
-          className=''
-          naturalSlideWidth={100}
-          isIntrinsicHeight={true}
-          totalSlides={12}
-          visibleSlides={6}
-          step={1}
-          infinite={false}
-        >
-          <div className='w-full relative flex items-center justify-center'>
-            <CarouselBackButton />
-            <div className='w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden'>
-              <Slider classNameTrayWrap='carousel_tray_wrapper'>
-                <div
-                  id='slider'
-                  // TODO: remove this card_animation
-                  className='card_animation flex gap-10px items-center justify-start transition ease-out duration-700'
-                >
-                  {[...list, ...list].map((item, index) => (
-                    <CustomSlide
-                      Row1Badge={item.row1.Badge}
-                      row1BadgeText={item.row1.badgeText}
-                      Row1Img={item.row1.Img}
-                      row1Caption={item.row1.caption}
-                      row1Game={item.row1.game}
-                      Row2Badge={item.row2.Badge}
-                      row2BadgeText={item.row2.badgeText}
-                      Row2Img={item.row2.Img}
-                      row2Caption={item.row2.caption}
-                      row2Game={item.row2.game}
-                      key={item.id}
-                      index={index}
-                    />
-                  ))}
-                </div>
-              </Slider>
-            </div>
-            <CarouselNextButton />
-          </div>
-        </CarouselProvider>
+    <>
+      <div className='w-full flex items-center justify-between'>
+        <div className='flex items-center'>
+          <img src={slotTitleIcon} alt='' />
+          <p className='text-white text-22px font-spoqaBold tracking-tight'>
+            슬롯게임
+          </p>
+        </div>
+        <div className='flex items-center justify-end'>
+          <TabsComponent />
+          <button
+            style={{
+              background: '#936cee',
+              textShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',
+            }}
+            className='w-83px h-28px ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px'
+          >
+            더보기
+          </button>
+        </div>
       </div>
-    </div>
+      {/* Start Carousel */}
+      <div className='container mx-auto'>
+        <div className='animated_carousel-multiple flex items-center justify-center w-full h-full'>
+          <CarouselProvider
+            className=''
+            naturalSlideWidth={100}
+            isIntrinsicHeight={true}
+            totalSlides={12}
+            visibleSlides={6}
+            step={1}
+            infinite={false}
+          >
+            <div className='w-full relative flex items-center justify-center'>
+              <CarouselBackButton />
+              <div className='w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden'>
+                <Slider classNameTrayWrap='carousel_tray_wrapper'>
+                  <div
+                    id='slider'
+                    // TODO: remove this card_animation
+                    className='card_animation flex gap-10px items-center justify-start transition ease-out duration-700'
+                  >
+                    {[...list, ...list].map((item, index) => (
+                      <CustomSlide
+                        Row1Badge={item.row1.Badge}
+                        row1BadgeText={item.row1.badgeText}
+                        Row1Img={item.row1.Img}
+                        row1Caption={item.row1.caption}
+                        row1Game={item.row1.game}
+                        Row2Badge={item.row2.Badge}
+                        row2BadgeText={item.row2.badgeText}
+                        Row2Img={item.row2.Img}
+                        row2Caption={item.row2.caption}
+                        row2Game={item.row2.game}
+                        key={item.id}
+                        index={index}
+                      />
+                    ))}
+                  </div>
+                </Slider>
+              </div>
+              <CarouselNextButton />
+            </div>
+          </CarouselProvider>
+        </div>
+      </div>
+      {/* End Carousel */}
+    </>
   );
 }
