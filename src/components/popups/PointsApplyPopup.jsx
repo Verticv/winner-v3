@@ -37,10 +37,11 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
                         <span className="text-gray-ccc2b6">P</span>
                     </div>
                     <div className="h-64px w-full bg-gray-252525 rounded-4px mt-14px flex items-center">
-                        <span className="text-14px tracking-tight font-spoqaMedium ml-65px text-gray-ccc2b6 leading-none">전환포인트 입력</span>
+                        <span style={{marginLeft:'65px'}} className="text-14px tracking-tight font-spoqaMedium text-gray-ccc2b6 leading-none">전환포인트 입력</span>
                         <input 
                             placeholder="0"
-                            className="flex-shrink-0 outline-none w-311px h-42px rounded-2px border border-gray-404040 px-10px font-spoqaMedium text-14px tracking-tight text-gray-828282 bg-dark-1a1a1a ml-9px" 
+                            style={{width:'311px'}}
+                            className="flex-shrink-0 outline-none h-42px rounded-2px border border-gray-404040 px-10px font-spoqaMedium text-14px tracking-tight text-gray-828282 bg-dark-1a1a1a ml-9px" 
                             value={inputValue !==null ? nf.format(inputValue) : ""}
                             onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
                             onKeyPress={(event) => {
@@ -51,8 +52,8 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
                         />
                     </div>
                     <div className="flex w-full mt-20px space-x-3px">
-                        <button className="flex items-center justify-center h-52px w-268px rounded-4px hover:filter hover:brightness-125 shadow-link"
-                            style={{background:"linear-gradient(to bottom, #88d9e8, #3d4a8d)"}} >
+                        <button className="flex items-center justify-center h-52px rounded-4px hover:filter hover:brightness-125 shadow-link"
+                            style={{background:"linear-gradient(to bottom, #88d9e8, #3d4a8d)", width:'268px'}} >
                             <div 
                                 style={{background:"linear-gradient(to top, #396084, #528ccd)", width:'266px'}} 
                                 className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
@@ -61,9 +62,9 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
                             </div>
                         </button>
                         <button 
-                            className="flex items-center justify-center h-52px w-268px rounded-4px  hover:filter hover:brightness-125 shadow-link"
+                            className="flex items-center justify-center h-52px rounded-4px  hover:filter hover:brightness-125 shadow-link"
                             onClick={() => isQuickMenu ? history.push('/mypage/points/points-apply',setPopupOpen(false)) : history.push('/mypage/points/points-transaction-history',setPopupOpen(false))}
-                            style={{background:"linear-gradient(to bottom, #5f80a4, #223348)"}} >
+                            style={{background:"linear-gradient(to bottom, #5f80a4, #223348)", width:'268px'}} >
                             <div 
                                 style={{background:"linear-gradient(to bottom, #39618e, #27405d)", width:'266px'}} 
                                 className="flex items-center justify-center h-50px rounded-4px cursor-pointer"

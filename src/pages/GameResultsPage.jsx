@@ -60,15 +60,13 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
       <div
-        style={{ width: '1496px' }}
-        className={`${
-          scrollPosition > 200 ? 'top-235px' : 'top-428px'
-        } fixed z-20 flex justify-end`}
+        style={{ width: '1496px', top: scrollPosition > 200 ? '235px' : '428px'}}
+        className={`fixed z-20 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
 
-      <div className='flex flex-col items-start limit:items-center mt-104px w-full h-full'>
+      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route exact path='/gameresults/sports/win-draw-lose'>
           <DirectoryComponent
             branch1='경기결과'
@@ -120,7 +118,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
           />
         </Route>
 
-        <div className='relative w-default h-125px'>
+        <div style={{height:'125px'}} className='relative w-default'>
           <img className='z-10' src={GameResultsBanner} alt='' />
           <div
             className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
@@ -141,7 +139,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
             />
           </div>
 
-          <div className='ml-20px w-1040px'>
+          <div style={{width:'1040px'}} className='ml-20px'>
             <Route exact path='/gameresults/sports/win-draw-lose'>
               <WinDrawLose />
             </Route>

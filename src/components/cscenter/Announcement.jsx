@@ -58,7 +58,7 @@ const Announcement = () => {
 
 
     const searchDropdown = (
-        <div  className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a ">
+        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a ">
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("제목")
                 setDropdownOpen(false)
@@ -75,8 +75,8 @@ const Announcement = () => {
     )
 
     const dropdownButton = (
-        <div className="flex w-120px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group">
-            <input  className="w-0 text-16px"/>
+        <div style={{width:'120px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group">
+            <input className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
             >
@@ -96,7 +96,7 @@ const Announcement = () => {
                 {searchDropdown}
             </DropDownControls>
 
-            <div className="flex w-381px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
+            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
                 <input 
                     className="pl-11px rounded-md placeholder-gray-r7c7c7c w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a text-gray-c8c8c8"
                     placeholder="검색어를 입력해 주세요"

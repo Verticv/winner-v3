@@ -17,9 +17,10 @@ const HorizontalMenu1 = ({
                   background: isState === item.id
                   ? 'linear-gradient( to top, #62553f, #dabe82)'
                   : 'linear-gradient( to top, rgb(41,41,41) 0%, rgb(80,80,78) 100%)',
-                  boxShadow: '0 5px 5px -2px rgba(0,0,0,0.5)'
+                  boxShadow: '0 5px 5px -2px rgba(0,0,0,0.5)',
+                  height:'98px'
                 }}
-                className='h-98px w-full flex items-end  relative overflow-hidden rounded-4px' 
+                className='w-full flex items-end  relative overflow-hidden rounded-4px' 
                 onClick={() => setState(item.id)}
                 onMouseOver={() => setHover(item.id)}
                 onMouseLeave={() => setHover(null)}
@@ -29,9 +30,10 @@ const HorizontalMenu1 = ({
                         height:"95px", 
                         background: isState === item.id
                         ? 'linear-gradient(to top, #a6926f, #f9f0d3)'
-                        : 'linear-gradient(to top, rgb(57,56,53) 0%, rgb(107,104,101) 100%)'
+                        : 'linear-gradient(to top, rgb(57,56,53) 0%, rgb(107,104,101) 100%)',
+                        height:'98px'
                     }} 
-                     className={`w-full flex h-98px absolute top-0 p-px rounded-4px`}>
+                     className={`w-full flex absolute top-0 p-px rounded-4px`}>
                     
                     <div 
                         style={{
@@ -71,7 +73,7 @@ const HorizontalMenu1 = ({
     }
 
     return (
-        <div className="flex w-full h-98px space-x-3px px-4px ">
+        <div style={{height:'98px'}} className="flex w-full space-x-3px px-4px ">
             <TabsList items={itemsArray} />
         </div>
     )

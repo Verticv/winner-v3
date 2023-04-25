@@ -5,7 +5,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
   const [selectedInput, setSelectedInput] = useState();
 
   const Title = ({ text }) => (
-    <div className="w-140px space-y-2 flex-shrink-0 bg-gray-272726 h-44px pl-10px flex items-center rounded-4px">
+    <div style={{width:'140px'}} className="space-y-2 flex-shrink-0 bg-gray-272726 h-44px pl-10px flex items-center rounded-4px">
       <label className="text-gray-ccc2b6 font-spoqaMedium text-16px mt-2px tracking-tight">
         {text}
       </label>
@@ -41,18 +41,19 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
             background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)",
           }}
         >
-          <div className="h-full w-full bg-dark-323232 pt-40px px-175px rounded-4px">
+          <div style={{paddingLeft:'175px', paddingRight:'175px'}} className="h-full w-full bg-dark-323232 pt-40px rounded-4px">
             <div className="w-full flex flex-col space-y-8px">
               <div className="flex space-x-10px w-full">
                 <Title text="아이디" />
                 <div
-                  className="h-44px w-540px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px overflow-hidden"
+                  className="h-44px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px overflow-hidden"
                   style={{
+                    width: "540px",
                     background: "#191817",
                     boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                   }}
                 >
-                  <label className=" font-spoqa text-16px pl-10px pr-5px mt-px w-540px">
+                  <label style={{width: "540px"}} className=" font-spoqa text-16px pl-10px pr-5px mt-px">
                     louie3
                   </label>
                   {/* <div className="border-b w-full border-gray-bebebe"></div> */}
@@ -86,7 +87,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                   />
                 </div>
               </div>
-              <div className="h-13px flex items-center text-14px font-spoqaMedium text-gray-828282 ml-150px tracking-minus05">
+              <div style={{marginLeft:'150px'}} className="h-13px flex items-center text-14px font-spoqaMedium text-gray-828282 tracking-minus05">
                 영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로
                 입력해주세요. (특수문자 사용불가)
               </div>
@@ -146,7 +147,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                   />
                 </div>
               </div>
-              <div className="h-13px flex items-center text-14px font-spoqa text-gray-828282 ml-150px tracking-minus05">
+              <div style={{marginLeft:'150px'}} className="h-13px flex items-center text-14px font-spoqa text-gray-828282 tracking-minus05">
                 영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로
                 입력해주세요. (특수문자 사용불가)
               </div>
@@ -185,8 +186,9 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="레벨" />
                   <div
-                    className="h-44px w-540px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
+                    className="h-44px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
                     style={{
+                      width: "540px",
                       background: "#191817",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                     }}
@@ -202,8 +204,9 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="스포츠" />
                   <div
-                    className="h-44px w-540px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
+                    className="h-44px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
                     style={{
+                      width: "540px",
                       background: "#191817",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                     }}
@@ -219,8 +222,9 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="카지노" />
                   <div
-                    className="h-44px w-540px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
+                    className="h-44px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
                     style={{
+                      width: "540px",
                       background: "#191817",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                     }}
@@ -236,8 +240,9 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="슬롯" />
                   <div
-                    className="h-44px w-540px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
+                    className="h-44px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
                     style={{
+                      width: "540px",
                       background: "#191817",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                     }}
@@ -253,8 +258,9 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="미니게임" />
                   <div
-                    className="h-44px w-540px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
+                    className="h-44px space-y-2 flex items-center flex-shrink-0 text-gray-c8c8c8 rounded-4px"
                     style={{
+                      width: "540px",
                       background: "#191817",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                     }}
@@ -270,8 +276,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
           </div>
         </div>
         <div className="mt-20px w-full flex items-center justify-center mb-60px">
-          <button className="flex items-center justify-center w-192px h-52px rounded-4px bg-gradient-to-t from-red-4b0923 to-red-e88895  hover:filter hover:brightness-125 shadow-link">
-            <div className="flex items-center justify-center h-50px w-190px rounded-4px  bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
+          <button style={{width:'192px'}} className="flex items-center justify-center h-52px rounded-4px bg-gradient-to-t from-red-4b0923 to-red-e88895  hover:filter hover:brightness-125 shadow-link">
+            <div style={{width:'190px'}} className="flex items-center justify-center h-50px rounded-4px  bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
               <span className="font-spoqaMedium tracking-tight text-16px text-red-ffd2d2 text-shadow-5">
                 수정하기
               </span>

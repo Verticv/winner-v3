@@ -25,8 +25,8 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                 </div>
 
                  <div className="mt-17px h-64px w-full bg-gray-252525 rounded-4px flex items-center font-spoqaMedium text-14px tracking-tight ">
-                    <span className="ml-76px text-gray-ccc2b6 leading-none">선물할 쿠폰</span>
-                    <div className="w-311px h-42px ml-10px bg-dark-1a1a1a  border border-gray-404040 rounded-2px flex items-center">
+                    <span style={{marginLeft:'76px'}} className="text-gray-ccc2b6 leading-none">선물할 쿠폰</span>
+                    <div style={{width:'311px'}} className="h-42px ml-10px bg-dark-1a1a1a border border-gray-404040 rounded-2px flex items-center">
                       <span className="text-gray-r8c8c8c ml-11px leading-none">쿠폰테스트</span>
                     </div>
                 </div>
@@ -41,9 +41,10 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                 </div>
 
                 <div className="w-full flex items-center justify-center mt-21px">
-                    <button className="flex items-center justify-center h-52px w-192px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px shadow-link filter hover:brightness-125" onClick={()=> setPopupOpen(false)}>
+                    <button style={{width:'192px'}} className="flex items-center justify-center h-52px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px shadow-link filter hover:brightness-125" onClick={()=> setPopupOpen(false)}>
                         <div 
-                        className="flex items-center justify-center h-50px w-190px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer"
+                            style={{width:'190px'}}
+                            className="flex items-center justify-center h-50px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff pt-px text-shadow-5">쿠폰발송</span>
                         </div>

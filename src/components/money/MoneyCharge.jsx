@@ -123,7 +123,7 @@ const MoneyCharge = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{marginLeft: "268px"}} className={`mt-23px flex space-x-5px w-full justify-start pr-115px`}>
+                <div style={{marginLeft: "268px", paddingRight:'115px'}} className={`mt-23px flex space-x-5px w-full justify-start`}>
                     <button 
                       style={{background:'linear-gradient(to top, #3f3d37, #a69685)'}}
                         className="flex items-center justify-center h-42px w-75px rounded-4px  hover:brightness-125 filter shadow-link"

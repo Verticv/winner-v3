@@ -37,7 +37,7 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
-      <div className='flex flex-col items-start limit:items-center mt-104px w-full h-full'>
+      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route exact path='/freeboard'>
           <DirectoryComponent branch1='게시판' mainPath='/freeboard' />
         </Route>
@@ -62,7 +62,7 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
             mainPath='/freeboard/compose'
           />
         </Route>
-        <div className='relative w-default h-125px'>
+        <div style={{height:'125px'}} className='relative w-default'>
           <img className='z-10 mt-px' src={FreeBoardBanner} alt='' />
           <div
             className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'

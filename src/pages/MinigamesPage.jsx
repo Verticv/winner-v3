@@ -86,7 +86,7 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
-      <div className='w-full flex flex-col items-center  mt-117px'>
+      <div style={{marginTop:'117px'}} className='w-full flex flex-col items-center'>
         <div className='w-default z-30'>
           <Route path='/minigame/powerball'>
             <HorizontalMenu3

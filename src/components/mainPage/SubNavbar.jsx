@@ -66,7 +66,7 @@ const SubNavbar = () => {
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
             </div>
-            <div className="flex w-full h-387px mt-16px">
+            <div style={{height: '387px'}} className="flex w-full mt-16px">
                 <GameBanner selection={isGameBanner}/>
             </div>
         </div>

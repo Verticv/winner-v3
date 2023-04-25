@@ -10,15 +10,15 @@ const PointsApply = () => {
     var nf = new Intl.NumberFormat();
 
     const Title = ({text}) => (
-        <div className="space-y-14px w-140px flex-shrink-0 bg-gray-272726 h-44px pl-10px flex items-center rounded-4px">
+        <div style={{width:'140px'}} className="space-y-14px flex-shrink-0 bg-gray-272726 h-44px pl-10px flex items-center rounded-4px">
             <div className=" text-gray-ccc2b6 font-spoqaMedium text-16px mt-3px tracking-tight">{text}</div>
             {/* <div className="h-px w-full bg-gray-bebebe"></div> */}
         </div>
     )
 
     const PopupButton = (
-        <button className="flex items-center justify-center h-52px w-212px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
-            <div className="flex items-center justify-center h-50px w-210px rounded-4px  bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
+        <button style={{width:'212px'}} className="flex items-center justify-center h-52px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
+            <div style={{width:'210px'}} className="flex items-center justify-center h-50px rounded-4px  bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
                 <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff text-shadow-5">신청하기</span>
             </div>
         </button>
@@ -28,7 +28,7 @@ const PointsApply = () => {
         <div className="w-full flex flex-col items-center">
             <MyPageTitle title="포인트전환신청" />
 
-            <div className="mt-20px w-full h-157px rounded-4px border border-red-594c49 bg-red-413937 px-19px pt-17px">
+            <div style={{height:'157px'}} className="mt-20px w-full rounded-4px border border-red-594c49 bg-red-413937 px-19px pt-17px">
                 <div className="flex items-center h-26px space-x-9px">
                     <img src={AlertIcon} alt="" />
                     <span className="text-red-e65454 font-spoqaMedium text-20px tracking-tight mt-px" style={{WebkitTextStroke:"0.2px"}}>확인 / 필독사항</span>
@@ -44,7 +44,7 @@ const PointsApply = () => {
           style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)", height:'573px' }}>
           <div className='bg-gray-323232 p-9px rounded-4px flex flex-col  w-full h-full'>
                 <div style={{height: '128px'}} className="w-full rounded-4px bg-gray-252525 border border-gray-404040">
-                    <div className="ml-114px mt-37px flex flex-col font-spoqaMedium tracking-tight">
+                    <div style={{marginLeft:'114px'}} className="mt-37px flex flex-col font-spoqaMedium tracking-tight">
                         <span className="text-20px h-19px text-gray-ccc2b6">전환 포인트 입력</span>
                         <span className="text-16px text-gray-c8c8c8 mt-15px">
                             현재 포인트가 보유머니로 전환되며, 최소 
@@ -53,7 +53,7 @@ const PointsApply = () => {
                     </div>
                 </div>
 
-                <div style={{width:'785px'}} className="ml-117px mt-37px flex flex-col space-y-38px">
+                <div style={{width:'785px', marginLeft:'117px'}} className="mt-37px flex flex-col space-y-38px">
                     <div className="flex space-x-10px items-center">
                         <Title text="현재 잔여 포인트" />
                         <div className="w-full h-44px">
@@ -109,7 +109,7 @@ const PointsApply = () => {
                     </div>
                 </div>
 
-                <div className={`mt-20px flex space-x-5px w-full justify-end pr-117px`}>
+                <div style={{paddingRight:'117px'}} className={`mt-20px flex space-x-5px w-full justify-end`}>
                     <button 
                       className="flex items-center justify-center h-42px w-75px p-px  rounded-4px shadow-link hover:filter hover:brightness-125"
                       style={{ background: 'linear-gradient(to top, #3f3d37, #a69685)'}}

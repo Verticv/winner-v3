@@ -489,8 +489,8 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                   </div>
                 </div>
                 <span
-                  style={{ color: "#7a7a7a" }}
-                  className="text-14px font-spoqa ml-150px h-14px flex items-center mt-6px"
+                  style={{ color: "#7a7a7a", marginLeft:'150px' }}
+                  className="text-14px font-spoqa h-14px flex items-center mt-6px"
                 >
                   영문, 숫자만 입력가능하며 최소 4자이상 입력하세요.
                 </span>
@@ -534,8 +534,8 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                   </div>
                 </div>
                 <span
-                  style={{ color: "#7a7a7a" }}
-                  className="text-14px font-spoqa ml-150px h-14px flex items-center mt-6px"
+                  style={{ color: "#7a7a7a", marginLeft:'150px' }}
+                  className="text-14px font-spoqa h-14px flex items-center mt-6px"
                 >
                   영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로
                   입력해주세요. (특수문자 사용불가)
@@ -580,8 +580,8 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                   </div>
                 </div>
                 <span
-                  style={{ color: "#7a7a7a" }}
-                  className="text-14px font-spoqa ml-150px h-14px flex items-center mt-6px"
+                  style={{ color: "#7a7a7a", marginLeft:'150px' }}
+                  className="text-14px font-spoqa h-14px flex items-center mt-6px"
                 >
                   영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로
                   입력해주세요. (특수문자 사용불가)
@@ -625,8 +625,8 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                   </div>
                 </div>
                 <span
-                  style={{ color: "#7a7a7a" }}
-                  className="text-14px font-spoqa ml-150px h-14px flex items-center mt-6px"
+                  style={{ color: "#7a7a7a", marginLeft:'150px' }}
+                  className="text-14px font-spoqa h-14px flex items-center mt-6px"
                 >
                   한글, 영문, 숫자를 포함한 4~16자로 입력해주세요.
                 </span>
@@ -716,8 +716,8 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                   </div>
                 </div>
                 <span
-                  style={{ color: "#7a7a7a" }}
-                  className="text-14px font-spoqa ml-150px h-14px flex items-center mt-6px"
+                  style={{ color: "#7a7a7a", marginLeft:'150px' }}
+                  className="text-14px font-spoqa h-14px flex items-center mt-6px"
                 >
                   수기로 작성시 아이디 생성이 불가합니다. (달력으로
                   선택해주세요.)

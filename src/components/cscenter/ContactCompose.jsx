@@ -10,7 +10,7 @@ const ContactCompose = () => {
     const dropDownCellClass = "flex w-120px h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-14px"
 
     const dropdownButton = (
-        <div className="flex w-120px h-35px bg-dark-1a1a1a rounded-2px border border-gray-404040 group">
+        <div style={{width:'120px'}} className="flex h-35px bg-dark-1a1a1a rounded-2px border border-gray-404040 group">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
@@ -21,7 +21,7 @@ const ContactCompose = () => {
         </div>
     )
     const searchDropdown = (
-        <div className="-mt-2px flex flex-col items-center justify-center w-120px overflow-hidden bg-gray-1f1f1e rounded-2px border border-gray-2c2c2c text-gray-ccc2b6 font-spoqaMedium text-14px tracking-tight">
+        <div style={{width:'120px'}} className="-mt-2px flex flex-col items-center justify-center overflow-hidden bg-gray-1f1f1e rounded-2px border border-gray-2c2c2c text-gray-ccc2b6 font-spoqaMedium text-14px tracking-tight">
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("라이브카지노")
                 setDropdownOpen(false)
@@ -148,14 +148,14 @@ const ContactCompose = () => {
               </div>
             </div>
             <div className="w-full mt-20px flex items-center justify-center space-x-5px mb-60px">
-                <button className="flex items-center justify-center h-52px w-192px rounded-2px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
-                    <div className="flex items-center justify-center h-50px w-190px rounded-2px bg-gradient-to-b from-blue-528ccd to-blue-396084  cursor-pointer">
+                <button style={{width:'192px'}} className="flex items-center justify-center h-52px rounded-2px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
+                    <div style={{width:'190px'}} className="flex items-center justify-center h-50px rounded-2px bg-gradient-to-b from-blue-528ccd to-blue-396084  cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff pt-2px text-shadow-5">신청하기</span>
                     </div>
                 </button>
-                <button className="flex items-center justify-center w-192px h-52px p-px rounded-2px  shadow-link hover:filter hover:brightness-125" style={{ background: 'linear-gradient(to top, #4b3b09, #e8b888)'}}>
-                  <div style={{ background: 'linear-gradient(to bottom,  #a67c52, #7f5f3f)' }}
-                     className="flex items-center justify-center h-50px w-190px rounded-2px cursor-pointer">
+                <button className="flex items-center justify-center h-52px p-px rounded-2px  shadow-link hover:filter hover:brightness-125" style={{ background: 'linear-gradient(to top, #4b3b09, #e8b888)', width:'192px'}}>
+                  <div style={{ background: 'linear-gradient(to bottom,  #a67c52, #7f5f3f)', width:'190px' }}
+                     className="flex items-center justify-center h-50px rounded-2px cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-16px text-golden-highLight pt-px text-shadow-5">취소하기</span>
                     </div>
                 </button>

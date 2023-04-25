@@ -69,8 +69,8 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                 </button>
 
                 <button
-                    style={{textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",background:"linear-gradient(to bottom, #4f4a41, #2f2c28)"}} 
-                    className={`flex group items-center justify-center w-82px h-36px rounded-4px shadow-btn `}
+                    style={{textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",background:"linear-gradient(to bottom, #4f4a41, #2f2c28)", width:'82px'}} 
+                    className={`flex group items-center justify-center h-36px rounded-4px shadow-btn `}
                 >
                   <div
                     style={{background: bet === "middle" ? "linear-gradient(to bottom, #987959, #634d38 )" : ""}}

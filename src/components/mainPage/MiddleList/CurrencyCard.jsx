@@ -57,7 +57,7 @@ const CurrencyCard = () => {
       headerText='금주의 환전 TOP'
       headerActionText=''
     >
-      <div className='h-143px overflow-hidden'>
+      <div style={{height:'143px'}} className='overflow-hidden'>
         <div
           id='middle-list'
           className='flex flex-col mt-12px w-full pl-11px pr-15px'

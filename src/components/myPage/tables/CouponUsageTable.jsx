@@ -111,13 +111,13 @@ const CouponUsageTable = () => {
                   : "bg-dark-2e2e2e"
                 } font-spoqa text-14px tracking-tight text-gray-c8c8c8 h-56px border-b border-dark-252525 last:border-b-0`}
             >
-                    <td className="w-313px text-center"><div className='w-313px truncate px-5px'>{item.name}</div></td>
-                    <td className="w-172px text-right text-red-e9441d pr-20px font-robotoRegular">{item.amount}</td>
-                    <td className="w-111px text-center"><div className='w-111px truncate px-5px'>{item.username}</div></td>
-                    <td className="w-108px text-center  text-red-e65454">{item.status}</td>
-                    <td className="w-122px text-center font-robotoRegular">{item.date}</td>
-                    <td className="w-111px text-center font-robotoRegular">{item.expireDate}</td>
-                    <td className="w-103px pl-13px"><UseButton /></td>
+                    <td style={{width:'313px'}} className="text-center"><div style={{width:'313px'}} className='truncate px-5px'>{item.name}</div></td>
+                    <td style={{width:'172px'}} className="text-right text-red-e9441d pr-20px font-robotoRegular">{item.amount}</td>
+                    <td style={{width:'111px'}} className="text-center"><div style={{width:'111px'}} className='truncate px-5px'>{item.username}</div></td>
+                    <td style={{width:'108px'}} className="text-center  text-red-e65454">{item.status}</td>
+                    <td style={{width:'122px'}} className="text-center font-robotoRegular">{item.date}</td>
+                    <td style={{width:'111px'}} className="text-center font-robotoRegular">{item.expireDate}</td>
+                    <td style={{width:'103px'}} className="pl-13px"><UseButton /></td>
                 </tr>
         ));
     }
@@ -130,13 +130,13 @@ const CouponUsageTable = () => {
             <table className="rounded-3px overflow-hidden">
                 <thead className="font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-56px  border-b border-dark-252525 bg-dark-2e2e2e ">
                 <tr>
-                    <td className="w-313px text-center">쿠폰명</td>
-                    <td className="w-172px text-center">쿠폰금액</td>
-                    <td className="w-111px text-center">보낸회원아이디</td>
-                    <td className="w-108px text-center">처리상태</td>
-                    <td className="w-122px text-center">발급일</td>
-                    <td className="w-111px text-center">만료일</td>
-                    <td className="w-103px text-center">쿠폰사용</td>
+                    <td style={{width:'313px'}} className="text-center">쿠폰명</td>
+                    <td style={{width:'172px'}} className="text-center">쿠폰금액</td>
+                    <td style={{width:'111px'}} className="text-center">보낸회원아이디</td>
+                    <td style={{width:'108px'}} className="text-center">처리상태</td>
+                    <td style={{width:'122px'}} className="text-center">발급일</td>
+                    <td style={{width:'111px'}} className="text-center">만료일</td>
+                    <td style={{width:'103px'}} className="text-center">쿠폰사용</td>
                 </tr>
             </thead>
             <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">

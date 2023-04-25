@@ -120,12 +120,13 @@ const MinigameBetHistoryPanel = ({
           }`}
         >
           <div
+            style={{width:'79px'}}
             className={`${
               bet === "middle"
                 ? "text-white "
                 : "bg-dark-252525 text-gray-c8c8c8"
             }
-                    pt-px flex items-center justify-center h-34px w-79px rounded-3px  cursor-pointer`}
+                    pt-px flex items-center justify-center h-34px rounded-3px cursor-pointer`}
           >
             <span className="font-roboto tracking-tight text-14px text-shadow">
               {stat2}
@@ -343,12 +344,12 @@ const MinigameBetHistoryPanel = ({
               }`}
             >
               {isAttached === false && (
-                <div className="w-45px h-full flex items-center justify-center">
+                <div style={{width:'45px'}} className="h-full flex items-center justify-center">
                   선택
                 </div>
               )}
               {isAttached === false && isPopup === false && (
-                <div className="w-116px h-full flex items-center justify-center border-l border-gray-2b2b2a">
+                <div style={{width:'116px'}} className="h-full flex items-center justify-center border-l border-gray-2b2b2a">
                   베팅번호
                 </div>
               )}
@@ -424,7 +425,7 @@ const MinigameBetHistoryPanel = ({
               }`}
             >
               {isAttached === false && checkedState && (
-                <div className="w-45px h-full flex items-center justify-center">
+                <div style={{width:'45px'}} className="h-full flex items-center justify-center">
                   <input
                     className="radio"
                     type="checkbox"
@@ -436,8 +437,8 @@ const MinigameBetHistoryPanel = ({
               )}
               {isAttached === false && isPopup === false && (
                 <div
-                  style={{ WebkitTextStroke: "0.2px" }}
-                  className="w-116px h-full flex items-center justify-center border-l border-gray-2b2b2a"
+                  style={{ WebkitTextStroke: "0.2px", width:'116px' }}
+                  className="h-full flex items-center justify-center border-l border-gray-2b2b2a"
                 >
                   {ticketNumber}
                 </div>
@@ -520,9 +521,10 @@ const MinigameBetHistoryPanel = ({
                   setPopupOpen && setPopupOpen(false);
                   setAttachedArray && addEntryClick();
                 }}
-                className="flex items-center justify-center w-112px h-73px rounded-4px bg-gradient-to-b from-blue-88d9e8  to-blue-3d4a8d hover:filter hover:brightness-125 shadow-link"
+                style={{width:'112px'}}
+                className="flex items-center justify-center h-73px rounded-4px bg-gradient-to-b from-blue-88d9e8  to-blue-3d4a8d hover:filter hover:brightness-125 shadow-link"
               >
-                <div className="pt-px flex items-center justify-center h-71px w-110px rounded-3px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
+                <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-3px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
                   <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff text-shadow-5">
                     내역올리기
                   </span>
@@ -533,9 +535,10 @@ const MinigameBetHistoryPanel = ({
             {isPopup === false && (
               <button
                 onClick={() => setAttachedArray && handleRemoveItem(id)}
-                className="flex items-center justify-center w-112px h-73px rounded-4px bg-gradient-to-t from-red-4b0923 to-red-e88895  hover:filter hover:brightness-125 shadow-link"
+                style={{width:'112px'}}
+                className="flex items-center justify-center h-73px rounded-4px bg-gradient-to-t from-red-4b0923 to-red-e88895  hover:filter hover:brightness-125 shadow-link"
               >
-                <div className="pt-px flex items-center justify-center h-71px w-110px rounded-3px  bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
+                <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-3px bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
                   <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 text-shadow-5">
                     내역삭제
                   </span>

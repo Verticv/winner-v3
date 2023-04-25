@@ -156,7 +156,7 @@ const Inbox = () => {
                 {searchDropdown}
             </DropDownControls>
 
-            <div className="flex w-381px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
+            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
                 <input 
                     className="pl-11px  placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
                     placeholder="검색어를 입력해 주세요"
@@ -202,8 +202,8 @@ const Inbox = () => {
                         </div>
                     </button>
                 </div>
-                <button className="flex items-center justify-center w-114px h-36px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px  hover:filter hover:brightness-125 shadow-link ">
-                    <div className="flex items-center justify-center h-34px w-157px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
+                <button style={{width:'114px'}} className="flex items-center justify-center h-36px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px  hover:filter hover:brightness-125 shadow-link ">
+                    <div style={{width:'157px'}} className="flex items-center justify-center h-34px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff text-shadow-5">전체읽음처리</span>
                     </div>
                 </button>

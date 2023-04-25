@@ -72,7 +72,7 @@ const HorizontalMenu6 = ({
     }
 
     return (
-      <div className="flex w-full h-103px space-x-3px px-2px">
+      <div style={{height:'103px'}} className="flex w-full space-x-3px px-2px">
         <TabsList items={itemsArray} />
       </div>
     )

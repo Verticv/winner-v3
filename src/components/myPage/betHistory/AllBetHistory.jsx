@@ -98,8 +98,8 @@ const AllBetHistory = ({ isPopup = false}) => {
                             </div>
                         </button>
                     </div>
-                    <button className="flex items-center justify-center w-159px h-36px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
-                        <div className="flex items-center justify-center h-34px w-157px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
+                    <button style={{width:'159px'}} className="flex items-center justify-center h-36px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
+                        <div style={{width:'157px'}} className="flex items-center justify-center h-34px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-shadow-5">게시판에 내역올리기</span>
                         </div>
                     </button>

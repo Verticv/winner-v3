@@ -26,15 +26,13 @@ const AttendPage = ({ isAuthenticated, setAuthenticated }) => {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
       <div
-        style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
-        className={`${
-          scrollPosition > 297 ? 'top-235px' : 'top-428px'
-        } fixed z-20 flex justify-end`}
+        style={{ width: '1496px', height: 'calc(100vh - 497px)', top: scrollPosition > 297 ? '235px' : '428px' }}
+        className={`fixed z-20 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
 
-      <div className='flex flex-col items-start limit:items-center  mt-160px w-full h-full'>
+      <div style={{marginTop:'160px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         {/* <Route path="/attendance">
                     <DirectoryComponent 
                         branch1="출석부" 
@@ -42,7 +40,7 @@ const AttendPage = ({ isAuthenticated, setAuthenticated }) => {
                     />
                 </Route> */}
 
-        <div className='relative w-default h-125px'>
+        <div style={{height:'125px'}} className='relative w-default'>
           <img className='z-10' src={MyPageBanner} alt='' />
           <div
             className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'

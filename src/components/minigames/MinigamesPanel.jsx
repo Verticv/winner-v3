@@ -121,10 +121,11 @@ const MinigamesPanel = ({
                         </button>
                     </div>
                     <button 
-                        className="flex items-center justify-center h-36px w-114px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link"
+                        style={{width:'114px'}}
+                        className="flex items-center justify-center h-36px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link"
                         onClick={() => history.push('/mypage/bet-history/minigame')}
                     >
-                        <div className="flex items-center justify-center h-34px w-112px bg-black rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
+                        <div style={{width:'112px'}} className="flex items-center justify-center h-34px bg-black rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-2px text-shadow-5">전체베팅내역</span>
                         </div>
                     </button>

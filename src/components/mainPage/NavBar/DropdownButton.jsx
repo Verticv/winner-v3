@@ -51,9 +51,9 @@ const DropdownButton = ({
     <>
       <div className='arrow_box'></div>
       <div
-        style={{ boxShadow: '1px 1.732px 10px 0px rgba(0, 0, 0, 0.5)' }}
+        style={{ boxShadow: '1px 1.732px 10px 0px rgba(0, 0, 0, 0.5)', width:'123px' }}
         // TODO: fix the position of the dropdown, it should be below by 1px
-        className='flex flex-col items-center justify-center py-7px w-123px overflow-hidden rounded-4px font-spoqaMedium text-14px tracking-tight bg-white'
+        className='flex flex-col items-center justify-center py-7px overflow-hidden rounded-4px font-spoqaMedium text-14px tracking-tight bg-white'
       >
         <div className='w-full h-full overflow-x-hidden'>
           {optionsArray.map((option) => {

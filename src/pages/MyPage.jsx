@@ -134,14 +134,12 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
       <div
-        style={{ width: '1496px' }}
-        className={`${
-          scrollPosition > 100 ? 'top-235px' : 'top-428px'
-        } fixed z-20 flex justify-end`}
+        style={{ width: '1496px', top: scrollPosition > 100 ? '235px' : '428px' }}
+        className={`fixed z-20 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
-      <div className='flex flex-col items-start limit:items-center mt-104px w-full h-full'>
+      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route path='/mypage/bet-history'>
           <DirectoryComponent
             setSelectedTab={setSelectedTab}
@@ -256,7 +254,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
           />
         </Route>
 
-        <div className='h-125px w-default relative'>
+        <div style={{height:'125px'}} className='w-default relative'>
           <img className='z-10' src={MyPageBanner} alt='' />
           <div
             className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
@@ -277,7 +275,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             />
           </div>
 
-          <div className='ml-20px w-1040px'>
+          <div style={{width:'1040px'}} className='ml-20px'>
             <Route path='/mypage/bet-history'>
               <BetHistory />
             </Route>
