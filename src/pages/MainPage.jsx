@@ -21,6 +21,7 @@ import goldCardImg from '../images/gold_card_img.png';
 import SlotGameVerticalCarousel from 'components/mainPage/SlotGameVerticalCarousel';
 import Jackpot from 'components/mainPage/Jackpot';
 import MiddleList from 'components/mainPage/MiddleList';
+import SlotGameHorizontalCarousel from 'components/mainPage/SlotGameHorizontalCarousel';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   function useWindowSize() {
@@ -138,6 +139,16 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           className='flex items-center justify-start mt-30px'
         >
           <MiddleList />
+        </div>
+
+        <div
+          style={{
+            maxWidth: '1260px',
+            marginTop: '20px',
+            marginBottom: '250px',
+          }}
+        >
+          <SlotGameHorizontalCarousel />
         </div>
 
         {/* <div
