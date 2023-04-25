@@ -60,15 +60,15 @@ const FreeBoardCompose = () => {
 
         <div className="flex w-full items-center justify-center space-x-5px mb-60px mt-20px">
           
-              <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center h-52px w-192px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
-                  <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer pt-2px">
+              <button style={{width:'192px'}} onClick={() => history.push("/freeboard")} className="flex items-center justify-center h-52px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link">
+                  <div style={{width:'190px'}} className="flex items-center justify-center h-50px bg-black rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer pt-2px">
                       <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff text-shadow-5">작성하기</span>
                   </div>
               </button>
-          <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center w-192px h-52px rounded-4px  shadow-link hover:filter hover:brightness-125"
-            style={{ background: 'linear-gradient(to top, #4b3b09, #e8b888)' }}>
-                <div className="flex items-center justify-center h-50px w-190px rounded-4px cursor-pointer"
-                  style={{background: 'linear-gradient(to bottom,  #a67c52, #7f5f3f)'}}>
+          <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center h-52px rounded-4px  shadow-link hover:filter hover:brightness-125"
+            style={{ background: 'linear-gradient(to top, #4b3b09, #e8b888)', width:'192px' }}>
+                <div className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
+                  style={{background: 'linear-gradient(to bottom,  #a67c52, #7f5f3f)', width:'190px'}}>
                       <span className="font-spoqaMedium tracking-tight text-16px text-golden-highLight pt-px text-shadow-5">취소하기</span>
                   </div>
               </button>

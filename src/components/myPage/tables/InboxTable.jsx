@@ -35,7 +35,8 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
           </div>
 
           <div
-            className="w-107px flex justify-center cursor-pointer"
+            style={{width:'107px'}}
+            className="flex justify-center cursor-pointer"
             onClick={() => history.push(item.path)}
           >
             <img
@@ -128,7 +129,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
       <div className="rounded-3px overflow-hidden">
         <div className="flex items-center font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-56px border-b border-dark-252525 bg-dark-2e2e2e px-52px">
           <div className="w-26px flex justify-center">선택</div>
-          <div className="w-107px flex justify-center">확인</div>
+          <div style={{width:'107px'}} className="flex justify-center">확인</div>
           <div
             className="flex justify-center pr-34px"
             style={{ width: "569px" }}

@@ -444,7 +444,7 @@ const BetCombinationPanel = ({
                     }}  
                     className="flex items-center justify-between rounded-lg bg-gradient-to-b cursor-pointer px-10px pt-px"
                 >
-                    <span className="truncate w-108px text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
+                    <span style={{width:'108px'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
                     <span className="font-roboto tracking-tight text-14px">{stat1}</span>
                 </div>
                 {isHover1 === 0 && (
@@ -750,14 +750,15 @@ const BetCombinationPanel = ({
                     <img className="mx-10px" src={FootballIcon} alt="" />
                     <img className="mr-10px -mt-px" src={flag} alt="" />
                     <p 
-                        className="text-20px font-spoqaMedium text-golden-highLight mt-2px truncate w-350px" 
+                        style={{width: '350px'}}
+                        className="text-20px font-spoqaMedium text-golden-highLight mt-2px truncate" 
                         onMouseEnter={() => setHover4(title)}
                         onMouseLeave={() => setHover4("")}
                     >
                         {title}
                     </p>
                     {isHover4.length > 30 && (
-                        <div style={{marginLeft:"15px"}} className="absolute bottom-12px left-407px z-20 h-36px flex items-center">
+                        <div style={{marginLeft:"15px", left:'407px'}} className="absolute bottom-12px z-20 h-36px flex items-center">
                             <div className={`relative bottom-0 w-20px overflow-hidden inline-block transform -rotate-90 mb-4px -mr-px`}>
                                 <div className="h-10px w-10px bg-gray-f9f9f9 rotate-45 transform origin-bottom-left border border-gray-400"></div>
                             </div>
@@ -795,7 +796,7 @@ const BetCombinationPanel = ({
             <p style={{marginLeft: "109px"}}>정보</p>
           </div>
 
-          <div className="relative flex flex-col justify-start items-center h-115px px-7px">
+          <div style={{height:'115px'}} className="relative flex flex-col justify-start items-center px-7px">
             <img className="absolute object-none -mt-4px" src={BonusCell} alt="" />
             <div className="h-50px w-full z-20 mt-8px flex items-center">
               <div style={{color:"#ffffff", textShadow: "2px 2px 0px #00000050"}} className="ml-54px font-spoqaBold text-20px -mt-2px">보너스 이벤트</div>

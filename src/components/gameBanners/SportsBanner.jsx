@@ -22,19 +22,21 @@ const SportsBanner = () => {
                     <a 
                         href={item.link}
                         key={item.id} 
-                        className="angled-gradient relative group flex w-407px h-387px object-contain border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition cursor-pointer overflow-hidden" 
+                        style={{width:'407px', height:'387px'}}
+                        className="angled-gradient relative group flex object-contain border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition cursor-pointer overflow-hidden" 
                     >
                         <img className="z-20 object-none" src={item.background} alt="background" />
-                        <div className={`absolute z-20 left-0 bottom-0 ml-30px mb-34px w-124px h-44px rounded-full flex items-center justify-center text-white font-spoqaBold text-18px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
+                        <div style={{width:'124px'}} className={`absolute z-20 left-0 bottom-0 ml-30px mb-34px h-44px rounded-full flex items-center justify-center text-white font-spoqaBold text-18px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
                     </a>
                 ) : (
                     <button 
                         onClick={() => history.push(item.path)}
                         key={item.id} 
-                        className="angled-gradient relative group flex w-407px h-387px object-contain border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition cursor-pointer overflow-hidden" 
+                        style={{width:'407px', height:'387px'}}
+                        className="angled-gradient relative group flex object-contain border border-gray-afafaf justify-end rounded-lg shadow-plain1 transition cursor-pointer overflow-hidden" 
                     >
                         <img className="z-20 object-none" src={item.background} alt="background" />
-                        <div className={`absolute z-20 left-0 bottom-0 ml-30px mb-34px w-124px h-44px rounded-full flex items-center justify-center text-white font-spoqaBold text-18px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
+                        <div style={{width:'124px'}} className={`absolute z-20 left-0 bottom-0 ml-30px mb-34px h-44px rounded-full flex items-center justify-center text-white font-spoqaBold text-18px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
                     </button>
                 )}
             
@@ -43,7 +45,7 @@ const SportsBanner = () => {
     }
 
     return (
-        <div className="flex bg-white h-387px w-full justify-between rounded">
+        <div style={{height:'387px'}} className="flex bg-white w-full justify-between rounded">
             <BannerList items={gamesArray} />
         </div>
     )

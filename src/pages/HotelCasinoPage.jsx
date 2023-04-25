@@ -32,15 +32,13 @@ const HotelCasino = ({ isAuthenticated, setAuthenticated }) => {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
       <div
-        style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
-        className={`${
-          scrollPosition > 497 ? 'top-235px' : 'top-356px'
-        } fixed z-20 flex justify-end`}
+        style={{ width: '1496px', height: 'calc(100vh - 497px)', top: scrollPosition > 497 ? '235px' : '356px' }}
+        className={`fixed z-20 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
 
-      <div className='flex flex-col items-start limit:items-center mt-103px w-full h-full'>
+      <div style={{marginTop:'103px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route path='/hotel-casino/structure'>
           <DirectoryComponent
             branch1='호텔카지노'

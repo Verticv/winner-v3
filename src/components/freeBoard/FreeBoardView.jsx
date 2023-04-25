@@ -257,15 +257,17 @@ const FreeBoardView = () => {
             />
 
             <button
-              className="rounded-4px right-0 absolute flex items-center justify-center h-93px w-120px p-px hover:filter hover:brightness-125 shadow-link"
+              className="rounded-4px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125 shadow-link"
               style={{
                 background: "linear-gradient(to top, #223348, #5f80a4)",
+                height:'93px'
               }}
             >
               <div
-                className="flex items-center justify-center h-91px w-118px  rounded-4px cursor-pointer"
+                className="flex items-center justify-center rounded-4px cursor-pointer"
                 style={{
                   width: "118px",
+                  height:'91px',
                   background: "linear-gradient(to bottom, #39618e, #27405d)",
                 }}
               >
@@ -407,15 +409,17 @@ const FreeBoardView = () => {
                 placeholder="두개의 이벤트 모두 참여하였습니다."
               />
               <button
-                className="rounded-4px right-0 absolute flex items-center justify-center h-93px w-120px p-px hover:filter hover:brightness-125 shadow-link"
+                className="rounded-4px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125 shadow-link"
                 style={{
                   background: "linear-gradient(to top, #223348, #5f80a4)",
+                  height:'93px'
                 }}
               >
                 <div
-                  className="flex items-center justify-center h-91px w-118px  rounded-4px cursor-pointer"
+                  className="flex items-center justify-center rounded-4px cursor-pointer"
                   style={{
                     width: "118px",
+                    height:'91px',
                     background: "linear-gradient(to bottom, #39618e, #27405d)",
                   }}
                 >
@@ -473,15 +477,17 @@ const FreeBoardView = () => {
               />
 
               <button
-                className="rounded-4px right-0 absolute flex items-center justify-center h-93px w-120px p-px hover:filter hover:brightness-125 shadow-link"
+                className="rounded-4px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125 shadow-link"
                 style={{
                   background: "linear-gradient(to top, #223348, #5f80a4)",
+                  height:'93px'
                 }}
               >
                 <div
-                  className="flex items-center justify-center h-91px w-118px  rounded-4px cursor-pointer"
+                  className="flex items-center justify-center rounded-4px cursor-pointer"
                   style={{
                     width: "118px",
+                    height:'91px',
                     background: "linear-gradient(to bottom, #39618e, #27405d)",
                   }}
                 >
@@ -513,15 +519,16 @@ const FreeBoardView = () => {
         </button>
 
         <button
-          className="flex items-center justify-center h-52px w-192px p-px rounded-4px  shadow-link hover:filter hover:brightness-125"
-          style={{ background: "linear-gradient(to top, #4b3b09, #e8b888)" }}
+          className="flex items-center justify-center h-52px p-px rounded-4px  shadow-link hover:filter hover:brightness-125"
+          style={{ background: "linear-gradient(to top, #4b3b09, #e8b888)", width:'192px' }}
           onClick={() => history.push("/freeboard")}
         >
           <div
             style={{
               background: "linear-gradient(to bottom,  #a67c52, #7f5f3f)",
+              width:'190px'
             }}
-            className="flex items-center justify-center h-50px w-190px rounded-4px cursor-pointer"
+            className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
           >
             <span className="font-spoqaMedium tracking-tight text-16px text-golden-highLight pt-px text-shadow-5">
               목록보기

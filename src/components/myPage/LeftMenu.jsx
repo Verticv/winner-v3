@@ -238,8 +238,8 @@ const LeftMenu = ({
     }
 
   return (
-    <div className="w-200px rounded-6px mb-180px p-px shadow-table overflow-hidden flex flex-col items-center"
-      style={{ background: 'linear-gradient(to top,rgb(31,31,30) 0% ,rgb(31,31,30) 80% , rgb(52,52,52) 100%)' }}
+    <div className="rounded-6px p-px shadow-table overflow-hidden flex flex-col items-center"
+      style={{ background: 'linear-gradient(to top,rgb(31,31,30) 0% ,rgb(31,31,30) 80% , rgb(52,52,52) 100%)', width:'200px', marginBottom:'180px' }}
     >
       <div className="rounded-6px bg-gray-323232 overflow-hidden w-full p-5px pb-6px space-y-6px">
         <MenuList items={array} />

@@ -98,13 +98,13 @@ const AnnouncementView = () => {
                 </button>
 
                 <button 
-                    style={{ background: 'linear-gradient(to top, #4b3b09, #e8b888)'}}
-                   className="flex items-center justify-center h-52px w-192px rounded-4px p-px shadow-link hover:filter hover:brightness-125"
+                    style={{ background: 'linear-gradient(to top, #4b3b09, #e8b888)', width:'192px'}}
+                   className="flex items-center justify-center h-52px rounded-4px p-px shadow-link hover:filter hover:brightness-125"
                     onClick={() => history.goBack()}
                 >
                     <div
-                        style={{background: 'linear-gradient(to bottom,  #a67c52, #7f5f3f)'}}
-                        className="flex items-center justify-center h-50px w-190px  rounded-4px cursor-pointer"
+                        style={{background: 'linear-gradient(to bottom,  #a67c52, #7f5f3f)', width:'190px'}}
+                        className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-16px text-golden-highLight pt-px text-shadow-5">목록보기</span>
                     </div>

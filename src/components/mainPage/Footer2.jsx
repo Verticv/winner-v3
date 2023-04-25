@@ -18,7 +18,7 @@ import WmLogo from '../../images/gray/wm_gray_logo.png'
 
 const Footer2 = ({fullWidth = false}) => {
 
-    const itemsClass = "flex items-center justify-center w-135px h-32px"
+    const itemsClass = "flex items-center justify-center h-32px"
 
     const logosArray1 = [
         { logo: EvoLogo,  id: 0 },
@@ -44,12 +44,12 @@ const Footer2 = ({fullWidth = false}) => {
 
     function LogosList({ items }) {
         return items.map(item => (
-            <div className={`${itemsClass} ${item.id === 7 && "-mt-8px"}`} key={item.id}><img src={item.logo} alt="logo" /></div>
+            <div style={{width:'135px'}} className={`${itemsClass} ${item.id === 7 && "-mt-8px"}`} key={item.id}><img src={item.logo} alt="logo" /></div>
         ));
     }
 
     return (
-        <div className={`flex justify-center bg-gray-f9f9f9 h-114px ${fullWidth ? "w-1836px limit1836:w-screen" : "w-1300 limit:w-screen"} `}>
+        <div style={{height:'114px'}} className={`flex justify-center bg-gray-f9f9f9 ${fullWidth ? "w-1836px limit1836:w-screen" : "w-1300 limit:w-screen"} `}>
             <div className="flex flex-col w-default flex-shrink-0 items-center justify-center space-y-10px pl-20px">
                 <div className="flex justify-between w-default pr-20px"><LogosList items={logosArray1} /></div>
                 <div className="flex justify-between w-default pr-20px"><LogosList items={logosArray2} /></div>

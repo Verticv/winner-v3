@@ -6,8 +6,10 @@ const Card = ({ children, HeaderIcon, headerText, headerActionText }) => {
       style={{
         boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.6)',
         backgroundColor: 'rgb(237, 237, 235)',
+        width: '373px',
+        height: '184px'
       }}
-      className='w-373px h-184px rounded-16px p-5px'
+      className='rounded-16px p-5px'
     >
       <div
         style={{

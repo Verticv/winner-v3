@@ -12,8 +12,8 @@ const QuickMenu = ({ scrollPosition }) => {
 
   return (
     <div
-      style={{ height: "553px", width: "86px" }}
-      className={"flex-shrink-0 z-10 -mt-120px"}
+      style={{ height: "553px", width: "86px", marginTop:'-120px' }}
+      className={"flex-shrink-0 z-10"}
     >
       <div
         style={{ height: "553px", width: "86px" }}

@@ -81,7 +81,7 @@ const SportsBetHistoryPanel = ({
                 : "bg-dark-252525 text-gray-c8c8c8"} 
                 flex items-center justify-between h-34px rounded-3px cursor-pointer px-10px pt-px`
               }>
-                <span className={`${isAttached? 'w-290px': hasUp ?'w-210px':'w-223px'} truncate text-left font-spoqaMedium tracking-tight text-14px text-shadow overflow-ellipsis`}>{team1}</span>
+                <span style={{width: isAttached? '290px': hasUp ? '210px': '223px'}} className={`truncate text-left font-spoqaMedium tracking-tight text-14px text-shadow overflow-ellipsis`}>{team1}</span>
                 <div className="flex items-center space-x-5px">
                     {hasUp && <img className="object-none" src={UpIcon} alt="" /> }
                     <span className="font-roboto tracking-tight text-14px text-shadow">{stat1}</span>
@@ -93,11 +93,11 @@ const SportsBetHistoryPanel = ({
                 style={{textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",background: bet === "middle" ? "" : "linear-gradient(to bottom, #4f4a41, #2f2c28)",}} 
                 className={`flex group items-center justify-center w-81px h-36px rounded-4px  shadow-btn p-px ${bet === "middle" ? "bg-red-cb4343" : ""}`}
             >
-                <div className={`${
+                <div style={{width:'79px'}} className={`${
                     bet === "middle" 
                     ? "text-white border-red-ff7982 from-red-ff535f via-red-ff535f to-red-ee4e5a" 
                     : "bg-dark-252525 text-gray-c8c8c8"}
-                    pt-px flex items-center justify-center h-34px w-79px rounded-3px  cursor-pointer`}
+                    pt-px flex items-center justify-center h-34px rounded-3px cursor-pointer`}
                 >
                     <span className="font-roboto tracking-tight text-14px text-shadow">{stat2}</span>
                 </div>
@@ -123,14 +123,14 @@ const SportsBetHistoryPanel = ({
                       <span className="font-roboto tracking-tight text-14px">{stat3}</span>
                         {hasDown && <img className="object-none" src={DownIcon} alt="" /> }
                     </div>
-                    <span className={`${isAttached? 'w-290px': hasDown ?'w-210px':'w-223px'} truncate font-spoqaMedium tracking-tight text-14px text-right text-shadow overflow-ellipsis`}>{team2}</span>
+                    <span style={{width: isAttached? '290px': hasDown ?'210px':'223px'}} className={`truncate font-spoqaMedium tracking-tight text-14px text-right text-shadow overflow-ellipsis`}>{team2}</span>
                 </div>
             </button>
         </div>
 
         <div className="flex ml-10px font-spoqaMedium tracking-tight text-14px text-center">
-            <div style={{width: isAttached && "90px"}} className="font-roboto w-99px text-gray-c8c8c8">{score}</div>
-            <div style={{width: isAttached && "59px"}} className="w-61px text-gray-c8c8c8">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
+            <div style={{width: isAttached ? "90px" : "99px"}} className="font-roboto text-gray-c8c8c8">{score}</div>
+            <div style={{width: isAttached ? "59px" : '61px'}} className="text-gray-c8c8c8">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
             <div 
             style={{marginRight:isAttached && "5px",WebkitTextStroke:"0.2px"}}
             className={`${
@@ -334,10 +334,10 @@ const SportsBetHistoryPanel = ({
                 <table>
                     <div style={{backgroundColor: 'rgb(55,55,55)'}} className={`${isPopup && "pt-px"} flex w-auto h-36px rounded-4px bg-dark-252525 font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 overflow-hidden`}>
                         {(isAttached === false) && (
-                            <div style={{backgroundColor: 'rgb(55,55,55)'}} className="w-45px h-full flex items-center justify-center">선택</div>
+                            <div style={{backgroundColor: 'rgb(55,55,55)', width:'45px'}} className="h-full flex items-center justify-center">선택</div>
                         )}
                         {(isAttached === false && isPopup === false) && (
-                            <div className="w-116px h-full flex items-center justify-center border-l border-gray-2b2b2a">베팅번호</div>
+                            <div style={{width:'116px'}} className="h-full flex items-center justify-center border-l border-gray-2b2b2a">베팅번호</div>
                         )}
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "151px"}} className="h-full flex items-center justify-center border-l border-gray-2b2b2a">베팅시간</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "150px"}} className="h-full flex items-center justify-center border-l border-gray-2b2b2a">베팅금액</div>
@@ -348,7 +348,7 @@ const SportsBetHistoryPanel = ({
                     </div>
                     <div className={`flex w-auto h-36px font-spoqa text-14px tracking-tight text-gray-c8c8c8 ${isPopup && "pt-2px"}`}>
                         {(isAttached === false) && checkedState && (
-                            <div className="w-45px h-full flex items-center justify-center">
+                            <div style={{width:'45px'}} className="h-full flex items-center justify-center">
                                 <input 
                                     className="radio" 
                                     type="checkbox" 
@@ -359,7 +359,7 @@ const SportsBetHistoryPanel = ({
                             </div>
                         )}
                         {(isAttached === false && isPopup === false) && (
-                            <div className="w-116px h-full flex items-center justify-center ">{ticketNumber}</div>
+                            <div style={{width:'116px'}} className="h-full flex items-center justify-center ">{ticketNumber}</div>
                         )}
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "151px" : "151px"}} className="h-full flex items-center justify-center ">{time}</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "150px"}} className="h-full flex items-center justify-end  pr-5px">{amount}</div>
@@ -376,17 +376,18 @@ const SportsBetHistoryPanel = ({
                                 setPopupOpen && setPopupOpen(false)
                                 setAttachedArray && addEntryClick()
                             }} 
-                            className="flex items-center justify-center w-112px h-73px rounded-4px bg-gradient-to-b from-blue-88d9e8  to-blue-3d4a8d hover:brightness-125 filter shadow-link" 
+                            style={{width:'112px'}}
+                            className="flex items-center justify-center h-73px rounded-4px bg-gradient-to-b from-blue-88d9e8 to-blue-3d4a8d hover:brightness-125 filter shadow-link" 
                         >
-                            <div className="pt-px flex items-center justify-center h-71px w-110px rounded-3px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
+                            <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-3px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff text-shadow-5">내역올리기</span>
                             </div>
                         </button>
                     )}
                     
                     {(isPopup === false && noButtons === false) && (
-                        <button onClick={() => setAttachedArray && handleRemoveItem(id) } className="flex items-center justify-center w-112px h-73px rounded-4px bg-gradient-to-t from-red-4b0923 to-red-e88895  hover:brightness-125 filter shadow-link">
-                            <div className="pt-px flex items-center justify-center h-71px w-110px rounded-3px  bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
+                        <button style={{width:'112px'}} onClick={() => setAttachedArray && handleRemoveItem(id) } className="flex items-center justify-center h-73px rounded-4px bg-gradient-to-t from-red-4b0923 to-red-e88895  hover:brightness-125 filter shadow-link">
+                            <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-3px bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 text-shadow-5">내역삭제</span>
                             </div>
                         </button>

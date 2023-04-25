@@ -31,7 +31,8 @@ const ContactTable = ({ array }) => {
           </div>
 
           <div
-            className="w-102px flex justify-center cursor-pointer h-full items-center -mt-px"
+            style={{width:'102px'}}
+            className="flex justify-center cursor-pointer h-full items-center -mt-px"
             onClick={() => history.push(item.path)}
           >
             <div
@@ -95,8 +96,8 @@ const ContactTable = ({ array }) => {
           <div
             className={`${
               item.isRead === true ? "text-gray-929292" : "text-gray-c8c8c8"
-            } w-138px flex font-spoqa justify-center text-center cursor-pointer h-full items-center pr-5px`}
-            style={{ color: item.isRead === true ? "#a0a0a0" : "#eeeeee" }}
+            } flex font-spoqa justify-center text-center cursor-pointer h-full items-center pr-5px`}
+            style={{ color: item.isRead === true ? "#a0a0a0" : "#eeeeee", width:'138px' }}
             onClick={() => history.push(item.path)}
           >
             {item.time}
@@ -124,9 +125,9 @@ const ContactTable = ({ array }) => {
     >
       <div className="w-full bg-gray-323232 rounded-4px overflow-hidden">
         <div className="flex items-center bg-gray-2e2e2e font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-55px border-b border-gray-252525 px-52px pt-px">
-          <div className="w-57px flex justify-center">확인</div>
-          <div className="w-92px flex justify-center">상태</div>
-          <div className="w-124px flex justify-center">구분</div>
+          <div style={{width:'57px'}} className="flex justify-center">확인</div>
+          <div style={{width:'92px'}} className="flex justify-center">상태</div>
+          <div style={{width:'124px'}} className="flex justify-center">구분</div>
           <div style={{ width: "416px" }} className="flex justify-center">
             제목
           </div>

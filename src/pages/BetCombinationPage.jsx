@@ -82,14 +82,12 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
       <div
-        style={{ width: '1496px' }}
-        className={`${
-          scrollPosition > 200 ? 'top-235px' : 'top-282px'
-        } fixed z-20 flex justify-end`}
+        style={{ width: '1496px', top: scrollPosition > 200 ? '235px' : '282px'  }}
+        className={`fixed z-20 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
-      <div className='flex flex-col items-start limit:items-center mt-104px w-full h-full'>
+      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route path='/bet-combination'>
           <DirectoryComponent
             branch1='스포츠'

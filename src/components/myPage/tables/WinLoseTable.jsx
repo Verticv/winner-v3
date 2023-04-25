@@ -129,8 +129,8 @@ const WinLoseTable = ({
                 <td className="h-55px text-center font-robotoRegular pt-2px">{item.endDate}</td>
                 <td className="h-55px text-center pt-2px">{item.type}</td>
                <td 
-                    style={{color: item.amount.includes("+") ? "#e65454" : item.amount.includes("-") ? "#4c98ff" : "#c8c8c8"}}
-                    className="h-55px text-right font-robotoRegular pt-2px pr-82px"
+                    style={{color: item.amount.includes("+") ? "#e65454" : item.amount.includes("-") ? "#4c98ff" : "#c8c8c8", paddingRight:'82px'}}
+                    className="h-55px text-right font-robotoRegular pt-2px"
                 >
                     {item.amount}
                 </td>

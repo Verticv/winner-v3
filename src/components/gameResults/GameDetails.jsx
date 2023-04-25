@@ -17,8 +17,9 @@ const GameDetails = () => {
         style={{
           textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
           background: "linear-gradient(to bottom, #4f4a41, #2f2c28)",
+          width: '285px'
         }}
-        className={`flex items-center justify-center w-285px h-36px rounded-4px shadow-btn p-px`}
+        className={`flex items-center justify-center h-36px rounded-4px shadow-btn p-px`}
       >
         <div
           style={{
@@ -35,7 +36,7 @@ const GameDetails = () => {
           } 
                     flex items-center justify-between h-34px rounded-3px cursor-pointer pl-8px pr-9px pt-px`}
         >
-          <span className="truncate w-223px text-left font-spoqaMedium tracking-tight text-14px overflow-ellipsis">
+          <span style={{width:'223px'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px overflow-ellipsis">
             {team1}
           </span>
           <span className="font-roboto tracking-tight text-14px pt-2px">
@@ -60,13 +61,14 @@ const GameDetails = () => {
               bet === "middle"
                 ? "linear-gradient(to bottom, #987959, #634d38 )"
                 : "",
+            width:'79px'
           }}
           className={`${
             bet === "middle"
               ? "text-golden-highLight"
               : "bg-dark-252525 text-gray-c8c8c8"
           }
-                    pt-px flex items-center justify-center h-34px w-79px rounded-3px cursor-pointer `}
+                    pt-px flex items-center justify-center h-34px rounded-3px cursor-pointer `}
         >
           <span className="font-roboto tracking-tight text-14px pt-2px">
             {stat2}
@@ -78,8 +80,9 @@ const GameDetails = () => {
         style={{
           textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
           background: "linear-gradient(to bottom, #4f4a41, #2f2c28)",
+          width: '285px'
         }}
-        className={` flex group items-center justify-center w-285px h-36px rounded-4px shadow-btn p-px`}
+        className={` flex group items-center justify-center h-36px rounded-4px shadow-btn p-px`}
       >
         <div
           style={{
@@ -99,7 +102,7 @@ const GameDetails = () => {
           <span className="font-roboto tracking-tight text-14px pt-2px">
             {stat3}
           </span>
-          <span className="truncate w-223px font-spoqaMedium tracking-tight text-14px text-right overflow-ellipsis">
+          <span style={{width:'223px'}} className="truncate font-spoqaMedium tracking-tight text-14px text-right overflow-ellipsis">
             {team2}
           </span>
         </div>
@@ -262,8 +265,8 @@ const GameDetails = () => {
             종목
           </div>
           <div
-            style={{ marginLeft: "0px" }}
-            className="w-285px h-14px flex justify-center items-center"
+            style={{ marginLeft: "0px", width: '285px' }}
+            className="h-14px flex justify-center items-center"
           >
             승(홈)
           </div>
@@ -274,8 +277,8 @@ const GameDetails = () => {
             무
           </div>
           <div
-            style={{ marginLeft: "4px", marginRight: "17px" }}
-            className="w-285px h-14px flex justify-center items-center"
+            style={{ marginLeft: "4px", marginRight: "17px", width: '285px' }}
+            className="h-14px flex justify-center items-center"
           >
             패(원정)
           </div>

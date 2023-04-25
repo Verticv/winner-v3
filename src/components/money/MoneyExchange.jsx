@@ -24,7 +24,7 @@ const MoneyExchange = () => {
             
             <MyPageTitle title="보유머니 환전" />
 
-            <div className="mt-20px w-full h-157px rounded-4px border border-red-594c49 bg-red-413937 px-19px pt-17px">
+            <div style={{height:'157px'}} className="mt-20px w-full rounded-4px border border-red-594c49 bg-red-413937 px-19px pt-17px">
                 <div className="flex items-center h-26px space-x-9px">
                     <img src={AlertIcon} alt="" />
                     <span className="text-red-e65454 font-spoqaMedium text-20px tracking-tight mt-px" style={{WebkitTextStroke:"0.2px"}}>확인 / 필독사항</span>
@@ -86,7 +86,7 @@ const MoneyExchange = () => {
                     </div>
                 </div>
 
-                <div style={{marginLeft: "277px"}} className={`mt-20px flex space-x-5px w-full justify-start pr-115px`}>
+                <div style={{marginLeft: "277px", paddingRight:'115px'}} className={`mt-20px flex space-x-5px w-full justify-start`}>
                     <button 
                         style={{background:'linear-gradient(to top, #3f3d37, #a69685)'}}
                         className="flex items-center justify-center h-42px w-75px rounded-4px hover:brightness-125 filter shadow-link"

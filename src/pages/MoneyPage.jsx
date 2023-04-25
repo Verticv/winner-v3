@@ -53,14 +53,12 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
       </div>
 
       <div
-        style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
-        className={`${
-          scrollPosition > 397 ? 'top-235px' : 'top-428px'
-        } w-full fixed z-20 flex  justify-end`}
+        style={{ width: '1496px', height: 'calc(100vh - 497px)', top: scrollPosition > 397 ? '235px' : '428px' }}
+        className={`w-full fixed z-20 flex  justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
-      <div className='flex flex-col items-start limit:items-center mt-104px w-full h-full'>
+      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route path='/money/charge'>
           <DirectoryComponent
             branch1='충전/환전'
@@ -79,7 +77,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
         </Route>
 
         <Route path='/money/charge'>
-          <div className='relative w-default h-125px'>
+          <div style={{height:'125px'}} className='relative w-default'>
             <img className='z-10' src={MoneyChargeBanner} alt='' />
             <div
               className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
@@ -90,7 +88,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
           </div>
         </Route>
         <Route path='/money/exchange'>
-          <div className='relative w-default h-125px'>
+          <div style={{height:'125px'}} className='relative w-default'>
             <img className='z-10' src={MoneyExchangeBanner} alt='' />
             <div
               className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
@@ -111,7 +109,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
             />
           </div>
 
-          <div className='ml-20px w-1040px'>
+          <div style={{width:'1040px'}} className='ml-20px'>
             <Route path='/money/charge'>
               <MoneyCharge />
             </Route>

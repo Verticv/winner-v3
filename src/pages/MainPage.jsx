@@ -107,7 +107,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           className='absolute w-full opacity-50'
         />
       </div>
-      <div className='w-full absolute top-125px flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'>
+      <div style={{top:'125px'}} className='w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'>
         <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
           <Navbar
             isAuthenticated={isAuthenticated}

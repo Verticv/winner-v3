@@ -25,7 +25,7 @@ const MinigameBanner = () => {
                 className="angled-gradient relative group flex justify-end w-620px border border-gray-afafaf rounded-lg shadow-plain1 transition cursor-pointer overflow-hidden"
             >
                 <img className="z-20" src={item.background} alt="background" />
-                <div className={`absolute left-0 bottom-0 ml-20px mb-20px w-115px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
+                <div style={{width:'115px'}} className={`absolute left-0 bottom-0 ml-20px mb-20px h-34px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px group-hover:shadow-plain3 ${item.color}`}>{item.btnText}</div>
             </div>
         ));
     }

@@ -147,7 +147,7 @@ const Contact = () => {
     const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px"
 
     const searchDropdown = (
-        <div className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-dark-1a1a1a  rounded-2px border border-gray-404040 shadow-plain5 text-gray-ccc2b6 font-spoqaMedium text-14px tracking-tight">
+        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden bg-dark-1a1a1a  rounded-2px border border-gray-404040 shadow-plain5 text-gray-ccc2b6 font-spoqaMedium text-14px tracking-tight">
             <div className="w-full mt-2px h-full overflow-x-hidden border-gray-2c2c2c">
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("제목")
@@ -172,7 +172,7 @@ const Contact = () => {
     )
 
     const dropdownButton = (
-        <div className="flex w-120px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group">
+        <div style={{width:'120px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
@@ -193,7 +193,7 @@ const Contact = () => {
                 {searchDropdown}
             </DropDownControls>
 
-            <div className="flex w-381px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
+            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
                 <input 
                     className="pl-11px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
                     placeholder="검색어를 입력해 주세요"

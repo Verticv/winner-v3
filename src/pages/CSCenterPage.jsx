@@ -102,14 +102,12 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
       </div>
 
       <div
-        style={{ width: '1496px' }}
-        className={`${
-          scrollPosition > 397 ? 'top-235px' : 'top-428px'
-        } fixed z-20 flex justify-end`}
+        style={{ width: '1496px', top: scrollPosition > 397 ? '235px' : '428px' }}
+        className={`fixed z-20 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
-      <div className='flex flex-col items-start limit:items-center mt-104px w-full h-full'>
+      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route path='/cscenter/contact/all*'>
           <DirectoryComponent
             branch1='고객센터'
@@ -199,7 +197,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
           />
         </Route>
 
-        <div className='relative w-default h-125px'>
+        <div style={{height:'125px'}} className='relative w-default'>
           <img className='z-10' src={CsPageBanner} alt='' />
           <div
             className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
@@ -220,7 +218,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
             />
           </div>
 
-          <div className='ml-20px w-1040px'>
+          <div style={{width:'1040px'}} className='ml-20px'>
             <Route path='/cscenter/contact/all/'>
               <Contact />
             </Route>

@@ -65,7 +65,7 @@ const WalletDropDown = () => {
     }
 
     return (
-        <div className="relative bg-white shadow-plain rounded-20px bg-white w-184px h-126px p-2px flex flex-col items-center -mt-5px limit1600:-mr-28px mr-0px limit1600:-mt-5px -mt-16px">
+        <div style={{width:'184px', height:'126px'}} className="relative bg-white shadow-plain rounded-20px bg-white p-2px flex flex-col items-center -mt-5px limit1600:-mr-28px mr-0px limit1600:-mt-5px -mt-16px">
             <div className="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
                 <div className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>

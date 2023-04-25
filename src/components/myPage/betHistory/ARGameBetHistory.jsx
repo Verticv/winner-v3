@@ -129,8 +129,8 @@ const ARGameBetHistory = ({isState, setState, showSub = true, isPopup = false}) 
                         </div>
                     </button>
                 </div>
-                <button className="flex items-center justify-center w-159px h-36px rounded-4px bg-gradient-to-b from-blue-88d9e8 to-blue-3d4a8d p-px shadow-link hover:filter hover:brightness-125">
-                    <div className="flex items-center justify-center h-34px w-157px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
+                <button style={{width:'159px'}} className="flex items-center justify-center h-36px rounded-4px bg-gradient-to-b from-blue-88d9e8 to-blue-3d4a8d p-px shadow-link hover:filter hover:brightness-125">
+                    <div style={{width:'157px'}} className="flex items-center justify-center h-34px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-shadow-5">게시판에 내역올리기</span>
                     </div>
                 </button>

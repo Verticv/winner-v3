@@ -334,7 +334,7 @@ const FreeBoardMain = () => {
     )
 
     const InboxSearch = (
-        <div className="h-102px w-full bg-gray-2e2e2e rounded-4px flex items-center justify-center space-x-10px">
+        <div style={{height:'102px'}} className="w-full bg-gray-2e2e2e rounded-4px flex items-center justify-center space-x-10px">
             <DropDownControls 
                 buttonChild={dropdownButton} 
                 isDropdownOpen={isDropdownOpen} 
@@ -343,7 +343,7 @@ const FreeBoardMain = () => {
                 {searchDropdown}
             </DropDownControls>
 
-            <div className="flex w-381px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
+            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
                 <input 
                     className="pl-11px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a" 
                     placeholder="검색어를 입력해 주세요"
