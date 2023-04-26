@@ -85,6 +85,7 @@ module.exports = {
         '100px': '100px',
         '120px': '120px',
         '122px': '122px',
+        '127px': '127px',
         '130px': '130px',
         '134px': '134px',
         '138px': '138px',
@@ -98,6 +99,7 @@ module.exports = {
         '262px': '262px',
         '403px': '403px',
         '410px': '410px',
+        '1260px': '1260px',
         '1836px': '1836px',
       },
       boxShadow: {
