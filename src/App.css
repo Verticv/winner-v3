@@ -48,21 +48,21 @@ body {
   display: flex;
 }
 
-.card_animation .card_animation_slide {
+.card_animation_slide {
   width: 184px !important;
   min-width: 184px !important;
   transition: all .5s;
 }
 
-.card_animation .card_animation_slide:hover {
+.card_animation_slide.animated-card {
   width: 484px !important;
   min-width: 484px !important;
 }
 
-.card_animation .card_animation_slide:not(:hover) {
+/* .card_animation .card_animation_slide:not(:hover) {
   width: 184px !important;
   min-width: 184px !important;
-}
+} */
 
 .animated_carousel .carousel_tray_wrapper {
   min-width: 1260px;
