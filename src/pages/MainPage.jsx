@@ -12,7 +12,7 @@ import NoticeBanner from 'components/mainPage/NoticeBanner';
 // import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
 import Carousel from '../components/mainPage/Carousel';
-// import Footer from '../components/mainPage/Footer';
+import Footer from '../components/mainPage/Footer';
 // import SubtitleLeft from '../images/subtitle_left.png';
 // import SubtitleRight from '../images/subtitle_right.png';
 import OverlayBackground1 from '../images/overlay_background_1.png';
@@ -98,7 +98,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         style={{
           background: 'linear-gradient(to right, #b644c4, #351894)',
           minHeight: '3000px',
-        }} // TODO: remove this min height
+        }}
         className='w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden'
       >
         <img
@@ -198,6 +198,8 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           </div>
         </div>
 
+        <Footer />
+
         {/* <div
           style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
           className={`${
@@ -283,8 +285,6 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
             <Other />
           </div>
         </div> */}
-
-        {/* <Footer /> */}
       </div>
     </>
   );
