@@ -17,6 +17,7 @@ import Carousel from '../components/mainPage/Carousel';
 // import SubtitleRight from '../images/subtitle_right.png';
 import OverlayBackground1 from '../images/overlay_background_1.png';
 import OverlayBackground2 from '../images/overlay_background_2.png';
+import slotTitleIcon from '../images/slotCarousel/slot_title_icon.png';
 // import goldCardImg from '../images/gold_card_img.png';
 import SlotGameVerticalCarousel from 'components/mainPage/SlotGameVerticalCarousel';
 import Jackpot from 'components/mainPage/Jackpot';
@@ -25,6 +26,7 @@ import SlotGameHorizontalCarousel from 'components/mainPage/SlotGameHorizontalCa
 import SportHorizontalCarousel from 'components/mainPage/SportHorizontalCarousel';
 import LiveHorizontalCarousel from 'components/mainPage/LiveHorizontalCarousel';
 import LiveRight from 'components/mainPage/LiveRight';
+import AnimatedCarousel from 'components/mainPage/AnimatedCarousel';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   // function useWindowSize() {
@@ -176,6 +178,23 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           <div className='flex space-x-10px'>
             <LiveHorizontalCarousel />
             <LiveRight />
+          </div>
+        </div>
+
+        <div
+          style={{
+            maxWidth: '1260px',
+            marginBottom: '37px',
+          }}
+        >
+          <div className='flex flex-col'>
+            <div className='flex items-center'>
+              <img src={slotTitleIcon} alt='' />
+              <p className='text-white text-22px font-spoqaBold tracking-tight'>
+                기타게임
+              </p>
+            </div>
+            <AnimatedCarousel />
           </div>
         </div>
 
