@@ -10,7 +10,7 @@ import image3Bottom from '../../images/live/3_bottom.png';
 import image4 from '../../images/live/4.png';
 import image4Bottom from '../../images/live/4_bottom.png';
 import Left from '../../images/live/left.png';
-import slotTitleIcon from '../../images/slotCarousel/slot_title_icon.png';
+import Card from '../../images/slotCarousel/card.png';
 
 import {
   CarouselBackButton,
@@ -114,9 +114,9 @@ export default function LiveHorizontalCarousel() {
   return (
     <div className='flex flex-col'>
       <div className='flex items-center'>
-        <img src={slotTitleIcon} alt='' />
+        <img src={Card} alt='' />
         <p className='text-white text-22px font-spoqaBold tracking-tight'>
-          슬롯게임
+          라이브카지노
         </p>
       </div>
       <div

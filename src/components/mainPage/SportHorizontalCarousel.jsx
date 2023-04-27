@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import whiteFootball from '../../images/sport/white_football.png';
 import world from '../../images/sport/world.png';
 // import england from '../../images/sport/england.png';
 import liverpool from '../../images/sport/liverpool.png';
 // import manchester_united from '../../images/sport/manchester_united.png';
 // import tottenham from '../../images/sport/tottenham.png';
-import slotTitleIcon from '../../images/slotCarousel/slot_title_icon.png';
 import villarreal from '../../images/sport/villarreal.png';
+import Ball from '../../images/slotCarousel/ball.png';
 
 import { CarouselProvider, Slide, Slider } from 'pure-react-carousel';
 import {
@@ -111,73 +111,91 @@ const Card = () => {
   );
 };
 
-export default function SportHorizontalCarousel() {
+const Carousel = () => {
   return (
-    <>
-      <div className='w-full flex items-center justify-between'>
-        <div className='flex items-center'>
-          <img src={slotTitleIcon} alt='' />
-          <p className='text-white text-22px font-spoqaBold tracking-tight'>
-            슬롯게임
-          </p>
-        </div>
-        <div className='flex items-center justify-end'>
-          <TabsComponent />
-          <button
-            style={{
-              background: '#936cee',
-              textShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',
-            }}
-            className='w-83px h-28px ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px'
-          >
-            더보기
-          </button>
-        </div>
-      </div>
-      {/* Start Carousel */}
-      <div
-        className='relative rounded-8px p-10px'
-        style={{
-          background:
-            'linear-gradient(to top, rgb(67,42,123), rgb(125,23,196))',
-          boxShadow:
-            '0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)',
-        }}
+    <div
+      className='relative rounded-8px p-10px'
+      style={{
+        background: 'linear-gradient(to top, rgb(67,42,123), rgb(125,23,196))',
+        boxShadow:
+          '0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)',
+      }}
+    >
+      <CarouselProvider
+        visibleSlides={3}
+        totalSlides={4}
+        step={1}
+        naturalSlideWidth={400}
+        naturalSlideHeight={500}
+        isIntrinsicHeight
       >
-        <CarouselProvider
-          visibleSlides={3}
-          totalSlides={4}
-          step={1}
-          naturalSlideWidth={400}
-          naturalSlideHeight={500}
-          isIntrinsicHeight
+        <CarouselBackButton className='top-47px' />
+        <Slider
+          style={{
+            maxWidth: '1229px',
+            // ,background: 'green'
+          }}
+          classNameTrayWrap='sport_carousel__slider-tray'
         >
-          <CarouselBackButton className='top-47px' />
-          <Slider
-            style={{
-              maxWidth: '1229px',
-              // ,background: 'green'
-            }}
-            classNameTrayWrap='sport_carousel__slider-tray'
-          >
-            <Slide index={0}>
-              <Card />
-            </Slide>
-            <Slide index={1}>
-              <Card />
-            </Slide>
-            <Slide index={2}>
-              <Card />
-            </Slide>
-            <Slide index={2}>
-              <Card />
-            </Slide>
-          </Slider>
-          <CarouselNextButton className='top-47px' />
-        </CarouselProvider>
-      </div>
+          <Slide index={0}>
+            <Card />
+          </Slide>
+          <Slide index={1}>
+            <Card />
+          </Slide>
+          <Slide index={2}>
+            <Card />
+          </Slide>
+          <Slide index={2}>
+            <Card />
+          </Slide>
+        </Slider>
+        <CarouselNextButton className='top-47px' />
+      </CarouselProvider>
+    </div>
+  );
+};
 
-      {/* End Carousel */}
-    </>
+export default function SportHorizontalCarousel() {
+  const tabsData = [
+    { id: 1, label: '조합베팅' },
+    { id: 2, label: '스페셜베팅' },
+    { id: 3, label: '실시간스포츠' },
+  ];
+
+  const [selectedTab, setSelectedTab] = useState(tabsData[0].id);
+
+  const tabsChildren = [<Carousel />, <Carousel />, <Carousel />];
+
+  const HeaderLeftComponent = (
+    <div className='flex items-center'>
+      <img src={Ball} alt='' />
+      <p className='text-white text-22px font-spoqaBold tracking-tight'>
+        스포츠
+      </p>
+    </div>
+  );
+
+  const HeaderRightComponent = (
+    <button
+      style={{
+        background: '#936cee',
+        textShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',
+      }}
+      className='w-83px h-28px ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px'
+    >
+      더보기
+    </button>
+  );
+
+  return (
+    <TabsComponent
+      selectedTab={selectedTab}
+      setSelectedTab={setSelectedTab}
+      tabsData={tabsData}
+      tabsChildren={tabsChildren}
+      headerLeftComponent={HeaderLeftComponent}
+      headerRightComponent={HeaderRightComponent}
+    />
   );
 }

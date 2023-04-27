@@ -1,66 +1,79 @@
 import React from 'react';
-import clsx from 'clsx'; // TODO: remove this
 
-export default function TabsComponent() {
-  const [app, setApp] = React.useState('인기게임');
+const TabsComponent = ({
+  tabsData,
+  tabsChildren,
+  selectedTab,
+  setSelectedTab,
+  headerLeftComponent,
+  headerRightComponent,
+}) => {
+  const handleTabClick = (id) => {
+    setSelectedTab(id);
+  };
+
+  const ContentComponent = tabsChildren?.[selectedTab - 1];
+
   return (
-    <div
-      style={{ width: '536px', color: '#5e399a' }}
-      className='flex h-28px mx-2 mt-2 bg-white relative tabs mb-20px rounded-13px'
-    >
-      <button
-        className={clsx(
-          'tabs-item relative z-10 text-center rounded-md w-full text-sm cursor-pointer select-none focus:outline-none',
-          {
-            'active-tab': app === '인기게임',
-            'text-white': app === '인기게임',
-          }
-        )}
-        onClick={() => {
-          setApp('인기게임');
-        }}
-      >
-        인기게임
-      </button>
-      <button
-        className={clsx(
-          'tabs-item w-full relative z-10 text-center rounded-md  text-sm cursor-pointer select-none focus:outline-none',
-          {
-            'active-tab': app === '추천게임',
-            'text-white': app === '추천게임',
-          }
-        )}
-        onClick={() => {
-          setApp('추천게임');
-        }}
-      >
-        추천게임
-      </button>
-      <button
-        className={clsx(
-          'tabs-item w-full relative z-10 text-center rounded-md text-sm cursor-pointer select-none focus:outline-none',
-          {
-            'active-tab': app === '신규게임',
-            'text-white': app === '신규게임',
-          }
-        )}
-        onClick={() => {
-          setApp('신규게임');
-        }}
-      >
-        신규게임
-      </button>
-      <span
-        style={{
-          background: 'linear-gradient(to right, #df52ff, #6b22ff)',
-        }}
-        className={clsx(
-          'tab-item-animate text-white text-14px font-spoqaMedium rounded-12px',
-          {
-            'active-tab': app === '신규게임',
-          }
-        )}
-      ></span>
+    <div className='flex flex-col w-full'>
+      <div className='w-full flex justify-between items-end mb-6px'>
+        {headerLeftComponent}
+        <div className='flex justify-end items-end'>
+          {/* Start TabsComponent */}
+          <div
+            style={{ width: '536px' }}
+            className='relative h-28px overflow-hidden bg-white z-10 p-2px rounded-13px'
+          >
+            <div
+              className='absolute left-0 top-0 bottom-0 transition-all duration-500 rounded-12px m-2px'
+              style={{
+                width: '33.333%',
+                zIndex: -1,
+                background: 'linear-gradient(to right, #df52ff, #6b22ff)',
+                transform: `translateX(${
+                  selectedTab === tabsData[0].id
+                    ? '0%'
+                    : selectedTab === tabsData[1].id
+                    ? '100%'
+                    : '197%'
+                })`,
+              }}
+            />
+            <button
+              className='w-1/3 h-full text-white text-14px rounded-md font-spoqa cursor-pointer transition-colors duration-500'
+              onClick={() => handleTabClick(tabsData[0].id)}
+              style={{
+                color: selectedTab === tabsData[0].id ? '#fff' : '#5e399a',
+              }}
+            >
+              {tabsData[0].label}
+            </button>
+            <button
+              className='w-1/3 h-full text-white text-14px rounded-md font-spoqa cursor-pointer transition-colors duration-500'
+              onClick={() => handleTabClick(tabsData[1].id)}
+              style={{
+                color: selectedTab === tabsData[1].id ? '#fff' : '#5e399a',
+              }}
+            >
+              {tabsData[1].label}
+            </button>
+            <button
+              className='w-1/3 h-full text-white text-14px rounded-md font-spoqa cursor-pointer transition-colors duration-500'
+              onClick={() => handleTabClick(tabsData[2].id)}
+              style={{
+                color: selectedTab === tabsData[2].id ? '#fff' : '#5e399a',
+              }}
+            >
+              {tabsData[2].label}
+            </button>
+          </div>
+          {/* End TabsComponent */}
+          {headerRightComponent}
+        </div>
+      </div>
+      {ContentComponent}
     </div>
   );
-}
+};
+
+export default TabsComponent;

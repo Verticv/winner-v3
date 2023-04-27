@@ -132,22 +132,25 @@ body {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: calc(100% - 12px);
+  width: 180px;
   height: 24px;
   transform-origin: 0 0;
   transition: transform 0.25s;
 }
 
 .tabs .tabs-item:first-child.active-tab~.tab-item-animate {
-  transform: translateX(0) scaleX(0.333);
+  /* transform: translateX(0) scaleX(0.333); */
+  left: 0;
 }
 
 .tabs .tabs-item:nth-child(2).active-tab~.tab-item-animate {
-  transform: translateX(33.333%) scaleX(0.333);
+  /* transform: translateX(33.333%) scaleX(0.333); */
+  left: 100px;
 }
 
 .tabs .tabs-item:nth-child(3).active-tab~.tab-item-animate {
-  transform: translateX(calc(33.333% * 2)) scaleX(0.333);
+  /* transform: translateX(calc(33.333% * 2)) scaleX(0.333); */
+  left: 200px;
 }
 
 /* End Tabs Style */

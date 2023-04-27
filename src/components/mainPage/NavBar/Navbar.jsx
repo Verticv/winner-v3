@@ -96,11 +96,11 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             setHoveredTab(item.id);
             setSelectedTab(item.id);
           }}
-          onMouseLeave={() => {
-            setHoveredTab(null);
-            setSelectedTab(null);
-            // TODO: seems there is a bug here with the animation
-          }}
+          // onMouseLeave={() => {
+          //   setHoveredTab(null);
+          //   setSelectedTab(null);
+          //   // TODO: seems there is a bug here with the animation
+          // }}
         >
           <div className='flex justify-center w-48px h-48px'>
             <img
@@ -130,7 +130,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
       >
         <div className='w-full absolute h-px bottom-0 bg-r9688c7' />
         <div
-          onMouseMove={() => setHoveredTab(null)}
+          // onMouseMove={() => setHoveredTab(null)}
           className='w-full h-full absolute'
         ></div>
         <div style={{ width: '1260px' }} className='w-full'>
@@ -145,7 +145,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 </div>
 
                 <div
-                  onMouseMove={() => setHoveredTab(null)}
+                  // onMouseMove={() => setHoveredTab(null)}
                   className='w-full h-full'
                 ></div>
               </div>
