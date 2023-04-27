@@ -10,15 +10,11 @@ const AuthButton = ({
   return (
     <button
       style={{
-        width: '104px',
-        height: '25px',
-        borderRadius: '2px',
-        background: 'linear-gradient(to right, #de52ff, #6c22ff)',
+        background: 'linear-gradient(to right, #df52ff, #6c22ff)',
         textShadow: '0px 0px 5px rgba(0, 0, 0, 0.5)',
-        color: '#ffdfbd',
         ...style,
       }}
-      className={`flex items-center justify-center text-white text-14px font-spoqaMedium pt-px hover:brightness-125 filter ${className}`}
+      className={`h-25px w-84px rounded-4px flex mt-2px items-center justify-center text-white text-12px font-spoqaMedium hover:brightness-125 filter ${className}`}
       {...buttonProperties}
     >
       {buttonText}

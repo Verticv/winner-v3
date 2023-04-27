@@ -1,5 +1,27 @@
 import React from 'react';
 
+// .Rounded_Rectangle {
+//   border-radius: 9px;
+//   background-color: rgb(240, 66, 129);
+//   position: absolute;
+//   left: 1479px;
+//   top: 51px;
+//   width: 20px;
+//   height: 19px;
+//   z-index: 752;
+// }
+
+// .Rounded_Rectangle {
+//   border-radius: 9px;
+//   background-color: rgb(240, 66, 129);
+//   position: absolute;
+//   left: 1394px;
+//   top: 51px;
+//   width: 30px;
+//   height: 19px;
+//   z-index: 745;
+// }
+
 const LinkButton = ({ buttonText, ButtonIcon, count }) => {
   const myMenuButton = (
     <div
@@ -8,22 +30,25 @@ const LinkButton = ({ buttonText, ButtonIcon, count }) => {
         height: '81px',
         marginTop: '-1px',
       }}
-      className={`w-83px flex-shrink-0 text-r2d2834 hover:text-white relative flex flex-col items-center justify-center cursor-pointer`}
+      className={`w-80px flex-shrink-0 text-r2d2834 hover:text-white relative flex flex-col items-center justify-center cursor-pointer`}
     >
-      <div className='relative flex justify-center w-48px h-48px'>
+      <div className='relative flex justify-center w-48px h-48px mt-2px'>
         <div
-          className='absolute flex items-center justify-center h-19px top-0 -right-4px text-white font-roboto text-12px bg-rf04281 rounded-9px'
-          style={{
-            padding: '0 6.7px',
-          }}
+          className='absolute flex items-center justify-center px-8px h-19px top-0 -right-8px text-white font-roboto tracking-tight text-12px bg-rf04281 rounded-9px'
+          // style={{
+          //   padding: '0 8.5px',
+          // }}
+          style={{ minWidth: '20px' }}
         >
-          {count}
+          <p className='flex items-center justify-center text-white font-roboto tracking-tight text-12px'>
+            {count}
+          </p>
         </div>
         <img className='object-none' src={ButtonIcon} alt='my menu' />
       </div>
       <span
-        style={{ marginBottom: '0px' }}
-        className='cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+        style={{ marginBottom: '0px', color: '#5e399a' }}
+        className='cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-4px'
       >
         {buttonText}
       </span>

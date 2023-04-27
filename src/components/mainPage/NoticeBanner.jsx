@@ -8,11 +8,12 @@ const NoticeBanner = () => {
       style={{
         width: '1450px',
         border: '1px solid rgb(91, 73, 141)',
+        borderTop: 'none',
         boxShadow: '0px 2px 20px 0px rgba(0, 0, 0, 0.2)',
         borderRadius: '26% 24% 7% 6% / 0% 0% 100% 100%',
         background: 'rgb(54, 47, 45)',
       }}
-      className='flex items-center h-27px w-full overflow-x-hidden rounded-full flex-shrink-0'
+      className='flex items-center h-28px w-full overflow-x-hidden rounded-full flex-shrink-0'
     >
       <div
         style={{ background: 'rgb(54, 47, 45)', paddingLeft: '94px' }}

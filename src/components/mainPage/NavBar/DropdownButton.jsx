@@ -22,15 +22,15 @@ const DropdownButton = ({
   const myMenuButton = (
     <div
       style={{
-        color: isMyMenuOpen ? '#ffffff' : '#2d2834',
+        color: isMyMenuOpen ? '#ffffff' : '#5e399a',
         background: isMyMenuOpen ? '#5323a0' : 'none',
-        height: '81px',
+        height: '82px',
         marginTop: '-1px',
       }}
-      className={`w-83px ${isMyMenuOpen ? selectedTabClass : tabClass}`}
+      className={`w-80px ${isMyMenuOpen ? selectedTabClass : tabClass}`}
       onMouseOver={onMouseOver}
     >
-      <div className='flex justify-center w-48px h-48px'>
+      <div className='flex justify-center w-48px h-48px ml-px mt-2px'>
         <img
           className='object-none'
           src={isMyMenuOpen ? ButtonActiveIcon : ButtonIcon}
@@ -38,8 +38,11 @@ const DropdownButton = ({
         />
       </div>
       <span
-        style={{ marginBottom: '0px' }}
-        className='cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+        style={{
+          marginBottom: '0px',
+          color: isMyMenuOpen ? '#ffffff' : '#5e399a',
+        }}
+        className='cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-4px'
       >
         {buttonText}
       </span>
@@ -51,8 +54,11 @@ const DropdownButton = ({
     <>
       <div className='arrow_box'></div>
       <div
-        style={{ boxShadow: '1px 1.732px 10px 0px rgba(0, 0, 0, 0.5)', width:'123px' }}
-        // TODO: fix the position of the dropdown, it should be below by 1px
+        style={{
+          boxShadow: '1px 1.732px 10px 0px rgba(0, 0, 0, 0.5)',
+          width: '123px',
+        }}
+        // TODO: check the style of the dropdown
         className='flex flex-col items-center justify-center py-7px overflow-hidden rounded-4px font-spoqaMedium text-14px tracking-tight bg-white'
       >
         <div className='w-full h-full overflow-x-hidden'>
@@ -97,7 +103,7 @@ const DropdownButton = ({
             setDropdownOpen={setIsMyMenuOpen}
             onClick={() => setIsMyMenuOpen(true)}
             onClose={() => setIsMyMenuOpen(false)}
-            classes='left-0 mt-81px sm:mt-81px'
+            classes='left-0 mt-82px sm:mt-82px'
           >
             {searchDropdown}
           </DropDownControls>

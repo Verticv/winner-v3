@@ -36,7 +36,7 @@ export default function AnimatedCarousel() {
       >
         {isHover && (
           <button
-            className='absolute z-30 top-143px right-176px flex items-center justify-center h-30px w-134px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tighter'
+            className='absolute z-30 top-143px right-176px flex items-center justify-center h-30px w-134px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight'
             style={{
               boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
               background:

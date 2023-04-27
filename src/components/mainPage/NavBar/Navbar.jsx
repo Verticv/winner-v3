@@ -87,7 +87,13 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           }}
           className={`w-83px h-full ${
             isSelectedTap ? selectedTabClass : tabClass
-          } ${items.length - 1 !== index ? 'mr-10px' : ''}`}
+          } ${
+            items.length - 2 === index
+              ? 'mr-10px'
+              : items.length - 1 === index
+              ? ''
+              : 'mr-9px'
+          }`}
           onClick={() => {
             setSelectedTab(item.id);
             history.push(item.path);
@@ -102,7 +108,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           //   // TODO: seems there is a bug here with the animation
           // }}
         >
-          <div className='flex justify-center w-48px h-48px'>
+          <div className='flex justify-center w-48px h-48px mt-2px'>
             <img
               className='object-none'
               src={isSelectedTap ? item.activeIcon : item.icon}
@@ -111,7 +117,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           </div>
           <span
             style={{ marginBottom: '0px' }}
-            className='cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+            className='cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-4px'
           >
             {item.text}
           </span>
