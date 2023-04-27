@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   CarouselProvider,
   Slider,
@@ -243,75 +243,95 @@ export const CarouselNextButton = ({ className, style, onClick }) => {
   );
 };
 
-export default function SlotGameHorizontalCarousel() {
+const Carousel = () => {
   return (
-    <>
-      <div className='w-full flex items-center justify-between'>
-        <div className='flex items-center'>
-          <img src={slotTitleIcon} alt='' />
-          <p className='text-white text-22px font-spoqaBold tracking-tight'>
-            슬롯게임
-          </p>
-        </div>
-        <div className='flex items-center justify-end'>
-          <TabsComponent />
-          <button
-            style={{
-              background: '#936cee',
-              textShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',
-            }}
-            className='w-83px h-28px ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px'
-          >
-            더보기
-          </button>
-        </div>
-      </div>
-      {/* Start Carousel */}
-      <div className='container mx-auto'>
-        <div className='animated_carousel-multiple flex items-center justify-center w-full h-full'>
-          <CarouselProvider
-            className=''
-            naturalSlideWidth={100}
-            isIntrinsicHeight={true}
-            totalSlides={12}
-            visibleSlides={6}
-            step={1}
-            infinite={false}
-          >
-            <div className='w-full relative flex items-center justify-center'>
-              <CarouselBackButton />
-              <div className='w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden'>
-                <Slider classNameTrayWrap='carousel_tray_wrapper'>
-                  <div
-                    id='slider'
-                    // TODO: remove this card_animation
-                    className='card_animation flex gap-10px items-center justify-start transition ease-out duration-700'
-                  >
-                    {[...list, ...list].map((item, index) => (
-                      <CustomSlide
-                        Row1Badge={item.row1.Badge}
-                        row1BadgeText={item.row1.badgeText}
-                        Row1Img={item.row1.Img}
-                        row1Caption={item.row1.caption}
-                        row1Game={item.row1.game}
-                        Row2Badge={item.row2.Badge}
-                        row2BadgeText={item.row2.badgeText}
-                        Row2Img={item.row2.Img}
-                        row2Caption={item.row2.caption}
-                        row2Game={item.row2.game}
-                        key={index}
-                        index={index}
-                      />
-                    ))}
-                  </div>
-                </Slider>
-              </div>
-              <CarouselNextButton />
+    <div className='container mx-auto'>
+      <div className='animated_carousel-multiple flex items-center justify-center w-full h-full'>
+        <CarouselProvider
+          className=''
+          naturalSlideWidth={100}
+          isIntrinsicHeight={true}
+          totalSlides={12}
+          visibleSlides={6}
+          step={1}
+          infinite={false}
+        >
+          <div className='w-full relative flex items-center justify-center'>
+            <CarouselBackButton />
+            <div className='w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden'>
+              <Slider classNameTrayWrap='carousel_tray_wrapper'>
+                <div
+                  id='slider'
+                  // TODO: remove this card_animation
+                  className='card_animation flex gap-10px items-center justify-start transition ease-out duration-700'
+                >
+                  {[...list, ...list].map((item, index) => (
+                    <CustomSlide
+                      Row1Badge={item.row1.Badge}
+                      row1BadgeText={item.row1.badgeText}
+                      Row1Img={item.row1.Img}
+                      row1Caption={item.row1.caption}
+                      row1Game={item.row1.game}
+                      Row2Badge={item.row2.Badge}
+                      row2BadgeText={item.row2.badgeText}
+                      Row2Img={item.row2.Img}
+                      row2Caption={item.row2.caption}
+                      row2Game={item.row2.game}
+                      key={index}
+                      index={index}
+                    />
+                  ))}
+                </div>
+              </Slider>
             </div>
-          </CarouselProvider>
-        </div>
+            <CarouselNextButton />
+          </div>
+        </CarouselProvider>
       </div>
-      {/* End Carousel */}
-    </>
+    </div>
+  );
+};
+
+export default function SlotGameHorizontalCarousel() {
+  const tabsData = [
+    { id: 1, label: '인기게임' },
+    { id: 2, label: '추천게임' },
+    { id: 3, label: '신규게임' },
+  ];
+
+  const [selectedTab, setSelectedTab] = useState(tabsData[0].id);
+
+  const tabsChildren = [<Carousel />, <Carousel />, <Carousel />];
+
+  const HeaderLeftComponent = (
+    <div className='flex items-center'>
+      <img src={slotTitleIcon} alt='' />
+      <p className='text-white text-22px font-spoqaBold tracking-tight'>
+        슬롯게임
+      </p>
+    </div>
+  );
+
+  const HeaderRightComponent = (
+    <button
+      style={{
+        background: '#936cee',
+        textShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',
+      }}
+      className='w-83px h-28px ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px'
+    >
+      더보기
+    </button>
+  );
+
+  return (
+    <TabsComponent
+      selectedTab={selectedTab}
+      setSelectedTab={setSelectedTab}
+      tabsData={tabsData}
+      tabsChildren={tabsChildren}
+      headerLeftComponent={HeaderLeftComponent}
+      headerRightComponent={HeaderRightComponent}
+    />
   );
 }

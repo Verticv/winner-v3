@@ -9,7 +9,7 @@ import TgLogo from '../../images/live/right/2_logo.png';
 import Preparing from '../../images/live/right/3.png';
 import PreparingLogo from '../../images/live/right/3_logo.png';
 
-import slotTitleIcon from '../../images/slotCarousel/slot_title_icon.png';
+import Circle from '../../images/slotCarousel/circle.png';
 
 const LiveRight = () => {
   const [isHover, setHover] = useState(null);
@@ -88,9 +88,9 @@ const LiveRight = () => {
   return (
     <div className='flex flex-col'>
       <div className='flex items-center'>
-        <img src={slotTitleIcon} alt='' />
+        <img src={Circle} alt='' />
         <p className='text-white text-22px font-spoqaBold tracking-tight'>
-          슬롯게임
+          호텔카지노
         </p>
       </div>
       <div
