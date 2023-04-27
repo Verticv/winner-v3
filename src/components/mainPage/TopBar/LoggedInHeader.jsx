@@ -19,20 +19,26 @@ const LoggedInHeader = ({ setAuth }) => {
     <div className='flex h-full'>
       <div className='flex items-center'>
         <button
-          className='flex items-center h-13px mr-10px flex-shrink-0'
+          className='flex items-center h-13px mr-8px flex-shrink-0'
           onClick={() => history.push('/mypage/bet-history')}
         >
           <img src={Nav13} alt='' className='mr-4px object-none' />
           <p className='text-white text-14px h-13px flex items-center font-spoqa'>
-            <p style={{ marginRight: '2px' }}>Lv.3</p>
+            <p
+              className='tracking-tight font-spoqa'
+              style={{ marginRight: '2px', lineHeight: '18px' }}
+            >
+              Lv.3
+            </p>
             <p
               style={{
                 maxWidth: '144px',
                 textOverflow: 'unset',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
-                letterSpacing: '-0.4px',
+                lineHeight: '18px',
               }}
+              className='font-spoqa tracking-tight'
             >
               마이프로틴님
             </p>
@@ -44,8 +50,8 @@ const LoggedInHeader = ({ setAuth }) => {
         >
           <img src={Nav2} alt='' className=' object-none mr-3px' />
           <p
-            style={{ letterSpacing: '-0.4px' }}
-            className='text-white text-14px h-13px flex items-center font-spoqa'
+            style={{ lineHeight: '18px' }}
+            className='text-white text-14px h-13px flex items-center font-spoqa tracking-tight'
           >
             보유머니 10,000,000원
           </p>
@@ -55,8 +61,8 @@ const LoggedInHeader = ({ setAuth }) => {
             <button className='flex items-center h-13px mr-9px flex-shrink-0'>
               <img src={Nav3} alt='' className=' object-none mr-2px' />
               <p
-                style={{ letterSpacing: '-0.4px' }}
-                className='text-white text-14px h-13px flex items-center font-spoqa'
+                style={{ lineHeight: '18px' }}
+                className='text-white text-14px h-13px flex items-center font-spoqa tracking-tight'
               >
                 포인트 125,000P
               </p>

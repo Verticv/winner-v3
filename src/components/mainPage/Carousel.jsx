@@ -87,10 +87,10 @@ const Carousel = () => {
     <div
       style={{
         height: '325px',
-        width: '947px',
+        width: '942px',
         boxShadow: '0px 2px 10px 0px rgba(0, 0, 0, 0.4)',
       }}
-      className='flex flex-shrink-0'
+      className='flex flex-shrink-0 rounded-8px'
     >
       <div
         style={{ height: '325px', width: '100%' }}

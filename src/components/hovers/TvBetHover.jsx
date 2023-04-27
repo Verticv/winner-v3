@@ -37,7 +37,10 @@ const TvBetHover = ({ selection }) => {
           src={item.background}
           alt='game_image'
         />
-        <div style={{width:'132px'}} className='absolute flex flex-col justify-center items-center h-full right-0 top-0 z-0'>
+        <div
+          style={{ width: '132px' }}
+          className='absolute flex flex-col justify-start items-center h-full right-0 top-0 z-0'
+        >
           <img src={item.logo} alt='game_image_logo' />
           <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa'>
             {item.imgText}

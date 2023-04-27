@@ -132,7 +132,7 @@ const LiveCasinoHover = ({ selection }) => {
             style={{
               boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
               background: 'linear-gradient(to right, #df52ff, #6c22ff)',
-              width:'102px'
+              width: '102px',
             }}
             className='absolute z-20 top-20px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
           >
@@ -144,7 +144,7 @@ const LiveCasinoHover = ({ selection }) => {
             style={{
               boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
               background: 'linear-gradient(to right, #7e7e7e, #505050)',
-              width:'102px'
+              width: '102px',
             }}
             className='absolute z-20 top-20px right-54px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
           >
@@ -162,7 +162,10 @@ const LiveCasinoHover = ({ selection }) => {
           src={item.background}
           alt='game_image'
         />
-        <div style={{width:'132px'}} className='absolute flex flex-col justify-center items-center h-full right-0 top-0 z-0'>
+        <div
+          style={{ width: '132px' }}
+          className='absolute flex flex-col justify-start items-center h-full right-0 top-0 z-0'
+        >
           {item.logo && <img src={item.logo} alt='game_image_logo' />}
           <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa'>
             {item.imgText}
@@ -171,11 +174,13 @@ const LiveCasinoHover = ({ selection }) => {
       </div>
     ));
   }
+  // 42px
+  // 132px
   return (
     <Expand
       open={selection === 0}
       duration={200}
-      styles={{ open: { left: '326px' } }} // TODO: check the position!
+      styles={{ open: { left: '330px' } }} // TODO: check the position!
       className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
       <div
