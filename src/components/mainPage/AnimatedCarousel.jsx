@@ -84,6 +84,7 @@ export default function AnimatedCarousel() {
               .fill(undefined)
               .map((_, index) => (
                 <Slide
+                  key={index}
                   className={`card_animation_slide ${
                     hoveredTab === index ? 'animated-card' : ''
                   }`}

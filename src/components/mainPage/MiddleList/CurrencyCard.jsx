@@ -65,7 +65,7 @@ const CurrencyCard = () => {
           {Array(12)
             .fill(undefined)
             .map((_, i) => (
-              <Item text='₩130,456,800' itemOrder={i} />
+              <Item key={i} text='₩130,456,800' itemOrder={i} />
             ))}
         </div>
       </div>

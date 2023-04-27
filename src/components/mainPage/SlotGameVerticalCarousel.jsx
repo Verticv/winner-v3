@@ -118,7 +118,7 @@ export default function SlotGameVerticalCarousel() {
               {Array(9)
                 .fill(undefined)
                 .map((_, index) => (
-                  <Slide className='card_animation_slide' index={index}>
+                  <Slide key={index} className='card_animation_slide' index={index}>
                     <SlideWithAnimation />
                   </Slide>
                 ))}

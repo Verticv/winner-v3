@@ -187,7 +187,7 @@ export default function LiveHorizontalCarousel() {
                           Row2Img={item.row2.Img}
                           row2Caption={item.row2.caption}
                           row2Game={item.row2.game}
-                          key={item.id}
+                          key={index}
                           index={index}
                         />
                       ))}
