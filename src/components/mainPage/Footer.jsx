@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Telegram from '../../images/telegram.png';
-import Kakao from '../../images/kakao.png';
-import Plus18 from '../../images/18.png';
+import React from 'react';
+// import Telegram from '../../images/telegram.png';
+// import Kakao from '../../images/kakao.png';
+// import Plus18 from '../../images/18.png';
 import Footer1 from '../../images/footer/1.png';
 import Footer2 from '../../images/footer/2.png';
 import Footer3 from '../../images/footer/3.png';
@@ -45,12 +45,12 @@ import ContactImg2 from '../../images/footer/contact/2.png';
 import ContactImg3 from '../../images/footer/contact/3.png';
 
 import { useHistory } from 'react-router-dom';
-import PopupControls from 'components/popups/PopupControls';
-import ReauthenticatePopup from 'components/popups/ReauthenticatePopup';
+// import PopupControls from 'components/popups/PopupControls';
+// import ReauthenticatePopup from 'components/popups/ReauthenticatePopup';
 
 const Footer = ({ fullWidth = false }) => {
   const history = useHistory();
-  const [isPopupOpen, setPopupOpen] = useState(true);
+  // const [isPopupOpen, setPopupOpen] = useState(true);
 
   //   const FirstRow = () => (
   //     <div className='flex items-center mr-36px'>
@@ -67,56 +67,56 @@ const Footer = ({ fullWidth = false }) => {
   //     </div>
   //   );
 
-  const FirstRow = () => (
-    <div className='flex items-center mr-36px'>
-      <img src={Footer1} className='object-none' alt='' />
-      <img src={Footer2} className='object-none' alt='' />
-      <img src={Footer3} className='object-none' alt='' />
-      <img src={Footer4} className='object-none' alt='' />
-      <img src={Footer5} className='object-none' alt='' />
-    </div>
-  );
+  // const FirstRow = () => (
+  //   <div className='flex items-center mr-36px'>
+  //     <img src={Footer1} className='object-none' alt='' />
+  //     <img src={Footer2} className='object-none' alt='' />
+  //     <img src={Footer3} className='object-none' alt='' />
+  //     <img src={Footer4} className='object-none' alt='' />
+  //     <img src={Footer5} className='object-none' alt='' />
+  //   </div>
+  // );
 
-  const SecondRow = () => (
-    <div className='flex items-center mr-26px mt-25px'>
-      <img src={Footer6} className='object-none' alt='' />
-      <img src={Footer7} className='object-none ml-40px' alt='' />
-      <img src={Footer8} className='object-none ml-55px' alt='' />
-      <img
-        style={{ marginLeft: '74px' }}
-        src={Footer9}
-        className='object-none'
-        alt=''
-      />
-      <img src={Footer10} className='object-none ml-57px' alt='' />
-    </div>
-  );
+  // const SecondRow = () => (
+  //   <div className='flex items-center mr-26px mt-25px'>
+  //     <img src={Footer6} className='object-none' alt='' />
+  //     <img src={Footer7} className='object-none ml-40px' alt='' />
+  //     <img src={Footer8} className='object-none ml-55px' alt='' />
+  //     <img
+  //       style={{ marginLeft: '74px' }}
+  //       src={Footer9}
+  //       className='object-none'
+  //       alt=''
+  //     />
+  //     <img src={Footer10} className='object-none ml-57px' alt='' />
+  //   </div>
+  // );
 
-  const ThirdRow = () => (
-    <div className='flex items-center mr-40px mt-27px'>
-      <img src={Footer11} className='object-none' alt='' />
-      <img src={Footer12} className='object-none ml-50px' alt='' />
-      <img src={Footer13} className='object-none ml-19px' alt='' />
-      <img
-        style={{ marginLeft: '35px' }}
-        src={Footer14}
-        className='object-none'
-        alt=''
-      />
-      <img
-        style={{ marginLeft: '51px' }}
-        src={Footer15}
-        className='object-none'
-        alt=''
-      />
-      <img
-        style={{ marginLeft: '68px' }}
-        src={Footer16}
-        className='object-none'
-        alt=''
-      />
-    </div>
-  );
+  // const ThirdRow = () => (
+  //   <div className='flex items-center mr-40px mt-27px'>
+  //     <img src={Footer11} className='object-none' alt='' />
+  //     <img src={Footer12} className='object-none ml-50px' alt='' />
+  //     <img src={Footer13} className='object-none ml-19px' alt='' />
+  //     <img
+  //       style={{ marginLeft: '35px' }}
+  //       src={Footer14}
+  //       className='object-none'
+  //       alt=''
+  //     />
+  //     <img
+  //       style={{ marginLeft: '51px' }}
+  //       src={Footer15}
+  //       className='object-none'
+  //       alt=''
+  //     />
+  //     <img
+  //       style={{ marginLeft: '68px' }}
+  //       src={Footer16}
+  //       className='object-none'
+  //       alt=''
+  //     />
+  //   </div>
+  // );
 
   const images = [
     Footer1,

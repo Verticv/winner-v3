@@ -31,7 +31,7 @@ const HorizontalMenu1 = ({
                         background: isState === item.id
                         ? 'linear-gradient(to top, #a6926f, #f9f0d3)'
                         : 'linear-gradient(to top, rgb(57,56,53) 0%, rgb(107,104,101) 100%)',
-                        height:'98px'
+                        // height:'98px'
                     }} 
                      className={`w-full flex absolute top-0 p-px rounded-4px`}>
                     
