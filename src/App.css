@@ -51,7 +51,7 @@ body {
 .card_animation_slide {
   width: 184px !important;
   min-width: 184px !important;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .card_animation_slide.animated-card {
@@ -87,7 +87,9 @@ body {
 /* carousel__slider-tray--horizontal */
 
 .sport_carousel__slider-tray .carousel__slider-tray--horizontal {
-  /* gap: 10px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 0px;
 }
 
 .live_carousel_tray_wrapper .carousel__slider-tray--horizontal {
@@ -97,8 +99,6 @@ body {
 .carousel_tray_wrapper .carousel__slider-tray--horizontal {
   gap: 10px;
 }
-
-
 
 /* End Carousel Style */
 
@@ -138,17 +138,17 @@ body {
   transition: transform 0.25s;
 }
 
-.tabs .tabs-item:first-child.active-tab~.tab-item-animate {
+.tabs .tabs-item:first-child.active-tab ~ .tab-item-animate {
   /* transform: translateX(0) scaleX(0.333); */
   left: 0;
 }
 
-.tabs .tabs-item:nth-child(2).active-tab~.tab-item-animate {
+.tabs .tabs-item:nth-child(2).active-tab ~ .tab-item-animate {
   /* transform: translateX(33.333%) scaleX(0.333); */
   left: 100px;
 }
 
-.tabs .tabs-item:nth-child(3).active-tab~.tab-item-animate {
+.tabs .tabs-item:nth-child(3).active-tab ~ .tab-item-animate {
   /* transform: translateX(calc(33.333% * 2)) scaleX(0.333); */
   left: 200px;
 }
