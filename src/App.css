@@ -73,7 +73,7 @@ body {
 }
 
 .animated_carousel-multiple .carousel_tray_wrapper {
-  min-width: 1267px;
+  width: 1270px;
 }
 
 .animated_carousel-sport .carousel_tray_wrapper {
@@ -97,7 +97,8 @@ body {
 }
 
 .carousel_tray_wrapper .carousel__slider-tray--horizontal {
-  gap: 10px;
+  gap: 0px;
+  padding-bottom: 10px;
 }
 
 /* End Carousel Style */

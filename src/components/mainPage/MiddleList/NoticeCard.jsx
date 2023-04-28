@@ -5,7 +5,7 @@ import announcementItems from "../../../images/middleList/announcement_item.png"
 import noticeItem from "../../../images/middleList/notice_item.png";
 
 const Item = ({ text }) => (
-  <div className="flex h-14px items-center hover:filter hover:brightness-125 cursor-pointer">
+  <div className="flex h-14px items-center hover:filter hover:brightness-125 cursor-pointer transition">
     <img className="ml-15px mr-9px object-none" src={announcementItems} alt="" />
     <p
       style={{

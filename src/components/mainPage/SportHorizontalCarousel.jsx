@@ -39,7 +39,7 @@ const sampleArray = [
 const Button = ({ number }) => {
   return (
     <button
-      className="w-61px h-31px filter hover:brightness-125 rounded-6px p-px"
+      className="w-61px h-31px filter hover:brightness-125 rounded-6px p-px transition"
       style={{
         boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
         background: "linear-gradient(to bottom, #edcfff, #553c84)",
