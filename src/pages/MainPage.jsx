@@ -153,7 +153,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: '1260px',
-            marginTop: '20px',
+            marginTop: '30px',
             marginBottom: '32px',
           }}
         >
