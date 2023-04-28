@@ -3,10 +3,16 @@ import LebronBanner from '../../images/navbarHover/3_1.png';
 import LebronBannerLogo from '../../images/navbarHover/3_1_logo.png';
 import Expand from 'react-expand-animated';
 import { useHistory } from 'react-router-dom';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const SportsHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-2-button'
+  );
 
   const gamesArray = [
     {
@@ -54,7 +60,10 @@ const SportsHover = ({ selection }) => {
     <Expand
       open={selection === 2}
       duration={200}
-      styles={{ open: { left: '514px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-98px bg-white'
     >
       <div

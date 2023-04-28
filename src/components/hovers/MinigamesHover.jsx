@@ -6,10 +6,16 @@ import Speedkino from '../../images/navbarHover/6_3.png';
 import KinoLadder from '../../images/navbarHover/6_4.png';
 import Expand from 'react-expand-animated';
 import { useHistory } from 'react-router-dom';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const MinigamesHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-5-button'
+  );
 
   const gamesArray = [
     {
@@ -77,7 +83,10 @@ const MinigamesHover = ({ selection }) => {
     <Expand
       open={selection === 5}
       duration={200}
-      styles={{ open: { left: '790px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
       <div

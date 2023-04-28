@@ -9,10 +9,9 @@ const DropdownButton = ({
   ButtonActiveIcon,
 }) => {
   const [isMyMenuOpen, setIsMyMenuOpen] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [myMenuSelectedOption, setMyMenuSelectedOption] = useState('');
   const [hoveredOption, setHoveredOption] = useState('');
-
-  console.log('myMenuSelectedOption :>> ', myMenuSelectedOption);
 
   const tabClass =
     'flex-shrink-0 text-r2d2834 hover:text-white relative flex flex-col items-center justify-center cursor-pointer';

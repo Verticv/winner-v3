@@ -11,10 +11,16 @@ import Preparing from '../../images/navbarHover/5_5.png';
 import PreparingLogo from '../../images/navbarHover/5_5_logo.png';
 import Expand from 'react-expand-animated';
 import { useHistory } from 'react-router-dom';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const EsportsHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-4-button'
+  );
 
   const gamesArray = [
     {
@@ -98,7 +104,10 @@ const EsportsHover = ({ selection }) => {
     <Expand
       open={selection === 4}
       duration={200}
-      styles={{ open: { left: '698px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
       <div

@@ -80,6 +80,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
       const isSelectedTap = selectedTab === item.id;
       return (
         <button
+          id={`navbar-${index}-button`}
           key={item.id}
           style={{
             color: isSelectedTap ? '#ffffff' : '#2d2834',
@@ -139,7 +140,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           // onMouseMove={() => setHoveredTab(null)}
           className='w-full h-full absolute'
         ></div>
-        <div style={{ width: '1260px' }} className='w-full'>
+        <div id='menu-wrapper' style={{ width: '1260px' }} className='w-full'>
           <div className=''>
             <div className='flex justify-start w-full'>
               <div

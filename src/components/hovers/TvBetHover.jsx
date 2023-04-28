@@ -3,10 +3,16 @@ import Expand from 'react-expand-animated';
 import { useHistory } from 'react-router-dom';
 import img1 from '../../images/navbarHover/9_1.png';
 import img1Logo from '../../images/navbarHover/9_1_logo.png';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const TvBetHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-8-button'
+  );
 
   const gamesArray = [
     {
@@ -53,7 +59,10 @@ const TvBetHover = ({ selection }) => {
     <Expand
       open={selection === 8}
       duration={200}
-      styles={{ open: { left: '1066px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-98px bg-white'
     >
       <div
