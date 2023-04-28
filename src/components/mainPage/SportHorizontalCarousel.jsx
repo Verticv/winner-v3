@@ -78,49 +78,54 @@ const Club = ({ text, Icon }) => {
 
 const Card = ({ item }) => {
   return (
-    <div
-      style={{
-        // boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.4)',
-        width: "403px",
-        height: "139px",
-      }}
-      // TODO: add the correct shadow
-      className="flex flex-col p-5px bg-white rounded-6px"
-    >
+    <div className="flex justify-center">
       <div
         style={{
-          height: "44px",
-          background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+          boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.4)',
+          width: "403px",
+          height: "139px",
         }}
-        className="flex flex-col w-full pl-5px pb-5px pt-6px rounded-4px justify-center"
+        // TODO: add the correct shadow
+        className="flex flex-col p-5px bg-white rounded-6px"
       >
-        <div className="flex items-center">
-          <img className="object-contain" src={whiteFootball} alt="white football" />
-          <img className="object-contain ml-4px" src={item.icon} alt="white football" />
-          <p className="text-white font-spoqaBold text-14px h-14px flex items-center tracking-tight ml-4px">
-            {item.title}
+        <div
+          style={{
+            height: "44px",
+            background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+          }}
+          className="flex flex-col w-full pl-5px pb-5px pt-6px rounded-4px justify-center"
+        >
+          <div className="flex items-center">
+            <img className="object-contain" src={whiteFootball} alt="white football" />
+            <img className="object-contain ml-4px" src={item.icon} alt="white football" />
+            <p className="text-white font-spoqaBold text-14px h-14px flex items-center tracking-tight ml-4px">
+              {item.title}
+            </p>
+          </div>
+          <p
+            style={{ color: "#ebabff" }}
+            className="font-spoqa text-12px tracking-tight h-12px flex items-center mt-4px"
+          >
+            2022-08-25 / 15:45
           </p>
         </div>
-        <p style={{ color: "#ebabff" }} className="font-spoqa text-12px tracking-tight h-12px flex items-center mt-4px">
-          2022-08-25 / 15:45
-        </p>
-      </div>
-      <div className="flex mt-17px justify-between px-5px">
-        <div className="space-y-4px">
-          <Club text={item.team1.name} Icon={item.team1.icon} />
-          <Club text={item.team2.name} Icon={item.team2.icon} />
-        </div>
-
-        <div className="flex flex-col items-center justify-between">
-          <div className="flex space-x-4px mt-10px">
-            <Paragraph text="W1" />
-            <Paragraph text="X" />
-            <Paragraph text="W2" />
+        <div className="flex mt-17px justify-between px-5px">
+          <div className="space-y-4px">
+            <Club text={item.team1.name} Icon={item.team1.icon} />
+            <Club text={item.team2.name} Icon={item.team2.icon} />
           </div>
-          <div className="space-x-4px -mb-px">
-            <Button number="1.93" />
-            <Button number="4.83" />
-            <Button number="3.14" />
+
+          <div className="flex flex-col items-center justify-between">
+            <div className="flex space-x-4px mt-10px">
+              <Paragraph text="W1" />
+              <Paragraph text="X" />
+              <Paragraph text="W2" />
+            </div>
+            <div className="space-x-4px -mb-px">
+              <Button number="1.93" />
+              <Button number="4.83" />
+              <Button number="3.14" />
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +136,7 @@ const Card = ({ item }) => {
 const Carousel = () => {
   return (
     <div
-      className="relative rounded-8px p-10px"
+      className="relative rounded-8px px-10px"
       style={{
         background: "linear-gradient(to top, rgb(67,42,123), rgb(125,23,196))",
         boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
@@ -139,16 +144,16 @@ const Carousel = () => {
     >
       <CarouselProvider
         visibleSlides={3}
-        totalSlides={4}
+        totalSlides={7}
         step={1}
         naturalSlideWidth={400}
         naturalSlideHeight={500}
         isIntrinsicHeight
       >
-        <CarouselBackButton className="top-47px" />
+        <CarouselBackButton className="top-42px" />
         <Slider
           style={{
-            maxWidth: "1229px",
+            maxWidth: "1260px",
           }}
           classNameTrayWrap="sport_carousel__slider-tray"
         >
@@ -161,11 +166,20 @@ const Carousel = () => {
           <Slide index={2}>
             <Card item={sampleArray[2]} />
           </Slide>
-          <Slide index={2}>
+          <Slide index={3}>
+            <Card item={sampleArray[0]} />
+          </Slide>
+          <Slide index={4}>
+            <Card item={sampleArray[0]} />
+          </Slide>
+          <Slide index={5}>
+            <Card item={sampleArray[0]} />
+          </Slide>
+          <Slide index={6}>
             <Card item={sampleArray[0]} />
           </Slide>
         </Slider>
-        <CarouselNextButton className="top-47px" />
+        <CarouselNextButton className="top-42px" />
       </CarouselProvider>
     </div>
   );
