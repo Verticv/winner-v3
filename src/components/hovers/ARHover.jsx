@@ -9,10 +9,16 @@ import AugBanner3 from '../../images/navbarHover/7_3.png';
 import AugBannerLogo3 from '../../images/navbarHover/7_3_logo.png';
 import AugBanner4 from '../../images/navbarHover/7_4.png';
 import AugBannerLogo4 from '../../images/navbarHover/7_4_logo.png';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const ARHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-6-button'
+  );
 
   const gamesArray = [
     {
@@ -80,7 +86,10 @@ const ARHover = ({ selection }) => {
     <Expand
       open={selection === 6}
       duration={200}
-      styles={{ open: { left: '882px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
       <div

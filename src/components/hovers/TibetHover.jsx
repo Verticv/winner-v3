@@ -5,10 +5,16 @@ import img1 from '../../images/navbarHover/10_1.png';
 import img1Logo from '../../images/navbarHover/10_1_logo.png';
 import img2 from '../../images/navbarHover/10_3.png';
 import img3 from '../../images/navbarHover/10_2.png';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const TibetHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-8-button'
+  );
 
   const gamesArray = [
     {
@@ -68,7 +74,10 @@ const TibetHover = ({ selection }) => {
     <Expand
       open={selection === 9}
       duration={200}
-      styles={{ open: { left: '1159px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-98px bg-white'
     >
       <div

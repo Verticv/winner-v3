@@ -3,10 +3,16 @@ import Expand from 'react-expand-animated';
 import AugBanner from '../../images/navbarHover/8_1.png';
 import AugBannerLogo from '../../images/navbarHover/8_1_logo.png';
 import { useHistory } from 'react-router-dom';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const FishingGameHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-7-button'
+  );
 
   const gamesArray = [
     {
@@ -53,7 +59,10 @@ const FishingGameHover = ({ selection }) => {
     <Expand
       open={selection === 7}
       duration={200}
-      styles={{ open: { left: '974px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-98px bg-white'
     >
       <div

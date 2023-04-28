@@ -5,10 +5,16 @@ import KslotBanner from '../../images/navbarHover/2_1.png';
 import KslotBannerLogo from '../../images/navbarHover/2_1_logo.png';
 import KslotBanner1 from '../../images/navbarHover/2_2.png';
 import KslotBanner1Logo from '../../images/navbarHover/2_2_logo.png';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 
 const SlotGameHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-1-button'
+  );
 
   const gamesArray = [
     {
@@ -62,7 +68,10 @@ const SlotGameHover = ({ selection }) => {
     <Expand
       open={selection === 1}
       duration={200}
-      styles={{ open: { left: '421px' } }}
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-176px bg-white'
     >
       <div

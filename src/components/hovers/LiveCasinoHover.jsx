@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Expand from 'react-expand-animated';
+import useNavButtonPosition from 'hooks/useNavButtonPosition';
 import { useHistory } from 'react-router';
 
 import Img1_1 from '../../images/navbarHover/1_1.png';
@@ -28,6 +29,11 @@ import Img1_11_logo from '../../images/navbarHover/1_11_logo.png';
 const LiveCasinoHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
+
+  const hoverMenuPosition = useNavButtonPosition(
+    'menu-wrapper',
+    'navbar-0-button'
+  );
 
   const gamesArray = [
     {
@@ -174,13 +180,14 @@ const LiveCasinoHover = ({ selection }) => {
       </div>
     ));
   }
-  // 42px
-  // 132px
   return (
     <Expand
       open={selection === 0}
       duration={200}
-      styles={{ open: { left: '330px' } }} // TODO: check the position!
+      styles={{
+        open: { left: hoverMenuPosition },
+        close: { left: hoverMenuPosition },
+      }}
       className='rounded-8px absolute w-auto m-auto h-262px bg-white'
     >
       <div
