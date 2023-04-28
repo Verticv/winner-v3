@@ -154,7 +154,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           style={{
             maxWidth: '1260px',
             marginTop: '30px',
-            marginBottom: '32px',
+            marginBottom: '22px',
           }}
         >
           <SlotGameHorizontalCarousel />

@@ -142,12 +142,14 @@ const CustomSlide = ({
   const alt = "image";
 
   const Card = ({ game, caption, Img, Badge, badgeText }) => (
+    <div className="flex w-full justify-center">
     <div
       style={{
         background: "linear-gradient(to top, #ccc4ff, #ffd8f5)",
         boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
+        width: "202px",
       }}
-      className="flex flex-shrink-0 relative w-full p-10px rounded-8px cursor-pointer hover:filter hover:brightness-110"
+      className="flex flex-shrink-0 relative w-full p-10px rounded-8px cursor-pointer hover:filter hover:brightness-125 transition"
     >
       <img src={Img} alt={alt} className="object-cover object-center w-full rounded-6px" />
       <img src={Badge} alt="badge" className="object-cover object-center absolute -top-2px left-12px" />
@@ -161,6 +163,7 @@ const CustomSlide = ({
         </p>
       </div>
     </div>
+     </div>
   );
 
   return (
@@ -185,7 +188,7 @@ export const CarouselBackButton = ({ className, style, onClick }) => {
         width: "30px",
         ...style,
       }}
-      className={`hover:opacity-75 bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -left-35px cursor-pointer ${className}`}
+      className={`hover:opacity-75 bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -left-35px cursor-pointer transition ${className}`}
       id="prev"
     >
       <img src={LeftArrow} alt="left" className="" />
@@ -205,7 +208,7 @@ export const CarouselNextButton = ({ className, style, onClick }) => {
         width: "30px",
         ...style,
       }}
-      className={`hover:opacity-75 bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -right-35px cursor-pointer ${className}`}
+      className={`hover:opacity-75 bg-white opacity-80 rounded-6px absolute flex items-center justify-center z-30 -right-35px cursor-pointer transition ${className}`}
       id="next"
     >
       <img src={RightArrow} alt="left" className="" />
@@ -227,14 +230,14 @@ const Carousel = () => {
           infinite={false}
         >
           <div className="w-full relative flex items-center justify-center">
-            <CarouselBackButton />
+            <CarouselBackButton style={{ marginTop: "-15px", marginLeft: "4px" }} />
             <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
               <Slider classNameTrayWrap="carousel_tray_wrapper">
-                <div
+                {/* <div
                   id="slider"
                   // TODO: remove this card_animation
-                  className="card_animation flex gap-10px items-center justify-start transition ease-out duration-700"
-                >
+                  // className="card_animation flex gap-10px items-center justify-center transition ease-out duration-700"
+                > */}
                   {[...list, ...list].map((item, index) => (
                     <CustomSlide
                       Row1Badge={item.row1.Badge}
@@ -251,10 +254,10 @@ const Carousel = () => {
                       index={index}
                     />
                   ))}
-                </div>
+                {/* </div> */}
               </Slider>
             </div>
-            <CarouselNextButton />
+            <CarouselNextButton style={{ marginTop: "-15px", marginRight: "4px" }} />
           </div>
         </CarouselProvider>
       </div>
