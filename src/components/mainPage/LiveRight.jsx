@@ -21,6 +21,7 @@ const LiveRight = () => {
       background: Dowin,
       logo: DowinLogo,
       imgText: '두윈카지노',
+      logoClass: 'top-24px',
     },
     {
       id: 1,
@@ -28,6 +29,7 @@ const LiveRight = () => {
       logo: TgLogo,
       imgText: '보타카지노',
       path: '/esports/single',
+      logoClass: 'top-29px',
     },
     {
       id: 2,
@@ -36,6 +38,7 @@ const LiveRight = () => {
 
       imgText: '준비중',
       path: '/esports/multi',
+      logoClass: 'top-36px',
     },
   ];
 
@@ -59,7 +62,7 @@ const LiveRight = () => {
               background: 'linear-gradient(to right, #df52ff, #6c22ff)',
               width: '102px',
             }}
-            className='absolute z-30 top-51px right-130px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+            className='absolute z-30 top-51px right-130px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium pt-2px text-14px tracking-tight'
           >
             게임시작
           </button>
@@ -76,10 +79,16 @@ const LiveRight = () => {
           style={{ width: '132px' }}
           className='absolute flex flex-col justify-center items-center h-full left-0 top-0 z-10'
         >
-          <img src={item.logo} alt='game_image_logo' />
-          <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa'>
-            {item.imgText}
-          </p>
+          <img
+            className={`absolute left-0 ${item.logoClass}`}
+            src={item.logo}
+            alt='game_image_logo'
+          />
+          <div className='absolute bottom-6px left-0'>
+            <p className='text-white text-14px tracking-tight font-spoqaMedium ml-11px'>
+              {item.imgText}
+            </p>
+          </div>
         </div>
       </div>
     ));
@@ -87,9 +96,12 @@ const LiveRight = () => {
 
   return (
     <div className='flex flex-col'>
-      <div className='flex items-center'>
+      <div className='flex items-center mb-8px -ml-3px'>
         <img src={Circle} alt='' />
-        <p className='text-white text-22px font-spoqaBold tracking-tight'>
+        <p
+          style={{ textShadow: '0px 2px 5px rgba(0, 0, 0, 0.75)' }}
+          className='text-white text-22px font-spoqaBold tracking-tight'
+        >
           호텔카지노
         </p>
       </div>
@@ -102,7 +114,7 @@ const LiveRight = () => {
           boxShadow:
             '0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)',
         }}
-        className='rounded-8px w-auto h-full bg-white'
+        className='rounded-8px w-auto h-full bg-white -mt-3px'
       >
         <div
           style={{ minHeight: '254px' }}

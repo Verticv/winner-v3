@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import image1 from '../../images/live/1.png';
@@ -75,30 +75,50 @@ const CustomSlide = ({
   Row2Img,
 }) => {
   const alt = 'image';
+  const Card = ({ game, caption, Img }) => {
+    const [isHover, setHover] = useState(null);
 
-  const Card = ({ game, caption, Img }) => (
-    <div
-      style={{
-        width: '148px',
-        height: '200px',
-      }}
-      className='flex flex-shrink-0 relative w-full rounded-6px'
-    >
-      <img
-        src={Img}
-        alt={alt}
-        className='object-cover object-center w-full rounded-6px'
-      />
-      <div className='absolute bottom-4px ml-10px'>
-        <p
-          style={{ color: '#eeeeee' }}
-          className='font-spoqaMedium text-14px tracking-tighter'
-        >
-          {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
-        </p>
+    return (
+      <div
+        style={{
+          width: '148px',
+          height: '200px',
+        }}
+        className='flex flex-shrink-0 relative w-full rounded-6px'
+        onMouseOver={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <img
+          src={Img}
+          alt={alt}
+          className='object-cover object-center w-full rounded-6px'
+        />
+        <div className='absolute bottom-4px ml-10px'>
+          <p
+            style={{ color: '#eeeeee' }}
+            className='font-spoqaMedium text-14px tracking-tighter mb-px'
+          >
+            {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
+          </p>
+        </div>
+        {isHover && (
+          <button
+            className='absolute z-30 top-83px left-25px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight'
+            style={{
+              boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
+              background:
+                'linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))',
+            }}
+          >
+            게임시작
+          </button>
+        )}
+        {isHover && (
+          <div className='absolute w-full h-full bg-black opacity-60 z-20 rounded-6px'></div>
+        )}
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <Slide className='space-y-4' index={index}>
@@ -113,9 +133,12 @@ const CustomSlide = ({
 export default function LiveHorizontalCarousel() {
   return (
     <div className='flex flex-col'>
-      <div className='flex items-center'>
-        <img src={Card} alt='' />
-        <p className='text-white text-22px font-spoqaBold tracking-tight'>
+      <div className='flex items-center mb-4px -ml-3px'>
+        <img className='mb-px' src={Card} alt='' />
+        <p
+          style={{ textShadow: '0px 2px 5px rgba(0, 0, 0, 0.75)' }}
+          className='text-white text-22px font-spoqaBold tracking-tight'
+        >
           라이브카지노
         </p>
       </div>
@@ -132,7 +155,7 @@ export default function LiveHorizontalCarousel() {
       >
         <div
           style={{ minWidth: '193px' }}
-          className='flex flex-shrink-0 relative rounded-6px w-193px h-410px'
+          className='flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px'
         >
           <img
             src={Left}
