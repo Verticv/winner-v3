@@ -140,7 +140,7 @@ const LiveCasinoHover = ({ selection }) => {
               background: 'linear-gradient(to right, #df52ff, #6c22ff)',
               width: '102px',
             }}
-            className='absolute z-20 top-20px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+            className='absolute z-20 top-20px pt-px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
           >
             게임시작
           </button>
@@ -152,7 +152,7 @@ const LiveCasinoHover = ({ selection }) => {
               background: 'linear-gradient(to right, #7e7e7e, #505050)',
               width: '102px',
             }}
-            className='absolute z-20 top-20px right-54px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+            className='absolute z-20 top-20px pt-2px right-54px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
           >
             점검중
           </button>
@@ -170,10 +170,25 @@ const LiveCasinoHover = ({ selection }) => {
         />
         <div
           style={{ width: '132px' }}
-          className='absolute flex flex-col justify-start items-center h-full right-0 top-0 z-0'
+          className={`absolute flex flex-col ${
+            item.logo ? 'justify-start' : 'justify-center'
+          } items-center h-full right-0 top-0 z-0`}
         >
-          {item.logo && <img src={item.logo} alt='game_image_logo' />}
-          <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa'>
+          {item.logo && (
+            <img
+              style={{
+                marginTop:
+                  item.id === 8 || item.id === 6
+                    ? '2px'
+                    : item.id === 5
+                    ? '1px'
+                    : '',
+              }}
+              src={item.logo}
+              alt='game_image_logo'
+            />
+          )}
+          <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa w-full text-center pr-px'>
             {item.imgText}
           </p>
         </div>
