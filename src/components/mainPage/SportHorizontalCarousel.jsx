@@ -1,39 +1,65 @@
-import React, { useState } from 'react';
-import whiteFootball from '../../images/sport/white_football.png';
-import world from '../../images/sport/world.png';
-// import england from '../../images/sport/england.png';
-import liverpool from '../../images/sport/liverpool.png';
-// import manchester_united from '../../images/sport/manchester_united.png';
-// import tottenham from '../../images/sport/tottenham.png';
-import villarreal from '../../images/sport/villarreal.png';
-import Ball from '../../images/slotCarousel/ball.png';
+import React, { useState } from "react";
+import whiteFootball from "../../images/sport/white_football.png";
+import world from "../../images/sport/world.png";
+import england from "../../images/sport/england.png";
+import liverpool from "../../images/sport/liverpool.png";
+import manchester_united from "../../images/sport/manchester_united.png";
+import tottenham from "../../images/sport/tottenham.png";
+import villarreal from "../../images/sport/villarreal.png";
+import Ball from "../../images/slotCarousel/ball.png";
 
-import { CarouselProvider, Slide, Slider } from 'pure-react-carousel';
-import {
-  CarouselBackButton,
-  CarouselNextButton,
-} from './SlotGameHorizontalCarousel';
-import TabsComponent from './TabsComponent';
+import { CarouselProvider, Slide, Slider } from "pure-react-carousel";
+import { CarouselBackButton, CarouselNextButton } from "./SlotGameHorizontalCarousel";
+import TabsComponent from "./TabsComponent";
+
+const sampleArray = [
+  {
+    id: 0,
+    icon: world,
+    title: "UEFA Champions League",
+    team1: { icon: liverpool, name: "리버풀" },
+    team2: { icon: villarreal, name: "비야레알" },
+  },
+  {
+    id: 1,
+    icon: england,
+    title: "Premier League",
+    team1: { icon: manchester_united, name: "맨체스터유나이티드" },
+    team2: { icon: tottenham, name: "토트넘" },
+  },
+  {
+    id: 2,
+    icon: world,
+    title: "UEFA Champions League",
+    team1: { icon: liverpool, name: "리버풀" },
+    team2: { icon: villarreal, name: "비야레알" },
+  },
+];
 
 const Button = ({ number }) => {
   return (
     <button
-      className='w-61px h-31px filter hover:brightness-125 rounded-6px'
+      className="w-61px h-31px filter hover:brightness-125 rounded-6px p-px"
       style={{
-        boxShadow: '0px 2px 5px 0px rgba(0, 0, 0, 0.6)',
-        background: 'linear-gradient(to top, rgb(73,31,156), rgb(158,60,188))',
+        boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
+        background: "linear-gradient(to bottom, #edcfff, #553c84)",
       }}
     >
-      <p className='text-white font-spoqaMedium text-14px tracking-tight'>
-        {number}
-      </p>
+      <div
+        className="w-full h-full rounded-6px flex items-center justify-center"
+        style={{
+          background: "linear-gradient(to top, rgb(73,31,156), rgb(158,60,188))",
+        }}
+      >
+        <p className="text-white font-spoqaMedium text-14px tracking-tight h-14px flex items-center mt-px">{number}</p>
+      </div>
     </button>
   );
 };
 
 const Paragraph = ({ text }) => {
   return (
-    <p className='w-61px h-31px text-center text-r666666 font-spoqaMedium text-12px tracking-tight'>
+    <p className="w-61px h-12px flex justify-center items-center text-center text-r666666 font-spoqaMedium text-12px tracking-tight">
       {text}
     </p>
   );
@@ -41,69 +67,60 @@ const Paragraph = ({ text }) => {
 
 const Club = ({ text, Icon }) => {
   return (
-    <div className='flex items-center'>
-      <div
-        style={{ background: '#b8afcd' }}
-        className='w-28px h-28px flex items-center justify-center rounded-full'
-      >
-        <img className='object-contain' src={Icon} alt={text} />
+    <div className="flex items-center">
+      <div style={{ background: "#b8afcd" }} className="w-28px h-28px flex items-center justify-center rounded-full">
+        <img className="object-contain" src={Icon} alt={text} />
       </div>
-      <p className='text-r666666 font-spoqaBold text-15px tracking-tight'>
-        {text}
-      </p>
+      <p className="text-r666666 font-spoqaBold text-15px tracking-tight ml-5px h-15px flex items-center">{text}</p>
     </div>
   );
 };
 
-const Card = () => {
+const Card = ({ item }) => {
   return (
     <div
-      // style={{
-      //   boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.4)',
-      // }}
+      style={{
+        // boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.4)',
+        width: "403px",
+        height: "139px",
+      }}
       // TODO: add the correct shadow
-      // TODO: add dynamic data
-      className='flex flex-col justify-between w-403px h-139px p-5px bg-white rounded-6px'
+      className="flex flex-col p-5px bg-white rounded-6px"
     >
       <div
         style={{
-          background: 'linear-gradient(to right, #9d3bbb, #5423a0)',
+          height: "44px",
+          background: "linear-gradient(to right, #9d3bbb, #5423a0)",
         }}
-        className='flex flex-col w-full h-44px pl-5px rounded-4px justify-center'
+        className="flex flex-col w-full pl-5px pb-5px pt-6px rounded-4px justify-center"
       >
-        <div className='flex'>
-          <img
-            className='object-contain'
-            src={whiteFootball}
-            alt='white football'
-          />
-          <img className='object-contain' src={world} alt='white football' />
-          <p className='text-white font-spoqaBold text-14px tracking-tight'>
-            UEFA Champions League
+        <div className="flex items-center">
+          <img className="object-contain" src={whiteFootball} alt="white football" />
+          <img className="object-contain ml-4px" src={item.icon} alt="white football" />
+          <p className="text-white font-spoqaBold text-14px h-14px flex items-center tracking-tight ml-4px">
+            {item.title}
           </p>
         </div>
-        <p
-          style={{ color: '#ebabff' }}
-          className='font-spoqa text-12px tracking-tight'
-        >
+        <p style={{ color: "#ebabff" }} className="font-spoqa text-12px tracking-tight h-12px flex items-center mt-4px">
           2022-08-25 / 15:45
         </p>
       </div>
-      <div className='flex flex-col'>
-        <div className='flex w-full items-center justify-between'>
-          <Club text='리버플' Icon={liverpool} />
-          <div className='flex space-x-4px'>
-            <Paragraph text='W1' />
-            <Paragraph text='X' />
-            <Paragraph text='W2' />
-          </div>
+      <div className="flex mt-17px justify-between px-5px">
+        <div className="space-y-4px">
+          <Club text={item.team1.name} Icon={item.team1.icon} />
+          <Club text={item.team2.name} Icon={item.team2.icon} />
         </div>
-        <div className='flex items-center justify-between'>
-          <Club text='비야레알' Icon={villarreal} />
-          <div className='space-x-4px'>
-            <Button number='1.93' />
-            <Button number='4.83' />
-            <Button number='3.14' />
+
+        <div className="flex flex-col items-center justify-between">
+          <div className="flex space-x-4px mt-10px">
+            <Paragraph text="W1" />
+            <Paragraph text="X" />
+            <Paragraph text="W2" />
+          </div>
+          <div className="space-x-4px -mb-px">
+            <Button number="1.93" />
+            <Button number="4.83" />
+            <Button number="3.14" />
           </div>
         </div>
       </div>
@@ -114,11 +131,10 @@ const Card = () => {
 const Carousel = () => {
   return (
     <div
-      className='relative rounded-8px p-10px'
+      className="relative rounded-8px p-10px"
       style={{
-        background: 'linear-gradient(to top, rgb(67,42,123), rgb(125,23,196))',
-        boxShadow:
-          '0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)',
+        background: "linear-gradient(to top, rgb(67,42,123), rgb(125,23,196))",
+        boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
       }}
     >
       <CarouselProvider
@@ -129,28 +145,27 @@ const Carousel = () => {
         naturalSlideHeight={500}
         isIntrinsicHeight
       >
-        <CarouselBackButton className='top-47px' />
+        <CarouselBackButton className="top-47px" />
         <Slider
           style={{
-            maxWidth: '1229px',
-            // ,background: 'green'
+            maxWidth: "1229px",
           }}
-          classNameTrayWrap='sport_carousel__slider-tray'
+          classNameTrayWrap="sport_carousel__slider-tray"
         >
           <Slide index={0}>
-            <Card />
+            <Card item={sampleArray[0]} />
           </Slide>
           <Slide index={1}>
-            <Card />
+            <Card item={sampleArray[1]} />
           </Slide>
           <Slide index={2}>
-            <Card />
+            <Card item={sampleArray[2]} />
           </Slide>
           <Slide index={2}>
-            <Card />
+            <Card item={sampleArray[0]} />
           </Slide>
         </Slider>
-        <CarouselNextButton className='top-47px' />
+        <CarouselNextButton className="top-47px" />
       </CarouselProvider>
     </div>
   );
@@ -158,9 +173,9 @@ const Carousel = () => {
 
 export default function SportHorizontalCarousel() {
   const tabsData = [
-    { id: 1, label: '조합베팅' },
-    { id: 2, label: '스페셜베팅' },
-    { id: 3, label: '실시간스포츠' },
+    { id: 1, label: "조합베팅" },
+    { id: 2, label: "스페셜베팅" },
+    { id: 3, label: "실시간스포츠" },
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabsData[0].id);
@@ -168,9 +183,12 @@ export default function SportHorizontalCarousel() {
   const tabsChildren = [<Carousel />, <Carousel />, <Carousel />];
 
   const HeaderLeftComponent = (
-    <div className='flex items-center'>
-      <img src={Ball} alt='' />
-      <p className='text-white text-22px font-spoqaBold tracking-tight'>
+    <div className="flex items-center">
+      <img src={Ball} alt="" />
+      <p
+        style={{ textShadow: "2px 2px 3px #00000090" }}
+        className="text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-4px"
+      >
         스포츠
       </p>
     </div>
@@ -179,12 +197,14 @@ export default function SportHorizontalCarousel() {
   const HeaderRightComponent = (
     <button
       style={{
-        background: '#936cee',
-        textShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',
+        background: "#936cee",
+        boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
+        height: "28px",
+        width: "83px",
       }}
-      className='w-83px h-28px ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px'
+      className="ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px"
     >
-      더보기
+      <p className="text-14px h-14px flex items-center mt-px">더보기</p>
     </button>
   );
 

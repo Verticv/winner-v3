@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #792fad;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
 }
 
 body {
-  background-color: #1e1e1e !important;
+  background-color: #792fad !important;
 }
 
 /* Start Carousel Style */
@@ -87,7 +87,7 @@ body {
 /* carousel__slider-tray--horizontal */
 
 .sport_carousel__slider-tray .carousel__slider-tray--horizontal {
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .live_carousel_tray_wrapper .carousel__slider-tray--horizontal {

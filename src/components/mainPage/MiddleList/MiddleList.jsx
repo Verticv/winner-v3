@@ -5,7 +5,7 @@ import CurrencyCard from './CurrencyCard';
 
 const MiddleList = () => {
   return (
-    <div className='w-full flex justify-between pl-41px pr-40px'>
+    <div style={{paddingLeft:'41px', paddingRight:'40px'}} className='w-full flex justify-between'>
       <AnnouncementCard />
       <NoticeCard />
       <CurrencyCard />
