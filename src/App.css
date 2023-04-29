@@ -68,6 +68,10 @@ body {
   min-width: 1260px;
 }
 
+.animated_carousel_tray_wrapper .carousel__slider-tray--horizontal {
+  gap: 10px;
+}
+
 .vertical_carousel .carousel_tray_wrapper {
   min-width: 252px;
 }
@@ -139,17 +143,17 @@ body {
   transition: transform 0.25s;
 }
 
-.tabs .tabs-item:first-child.active-tab ~ .tab-item-animate {
+.tabs .tabs-item:first-child.active-tab~.tab-item-animate {
   /* transform: translateX(0) scaleX(0.333); */
   left: 0;
 }
 
-.tabs .tabs-item:nth-child(2).active-tab ~ .tab-item-animate {
+.tabs .tabs-item:nth-child(2).active-tab~.tab-item-animate {
   /* transform: translateX(33.333%) scaleX(0.333); */
   left: 100px;
 }
 
-.tabs .tabs-item:nth-child(3).active-tab ~ .tab-item-animate {
+.tabs .tabs-item:nth-child(3).active-tab~.tab-item-animate {
   /* transform: translateX(calc(33.333% * 2)) scaleX(0.333); */
   left: 200px;
 }

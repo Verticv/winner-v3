@@ -172,7 +172,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: '1260px',
-            marginBottom: '37px',
+            marginBottom: '28px',
           }}
         >
           <div className='flex space-x-10px'>
@@ -189,8 +189,11 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         >
           <div className='flex flex-col'>
             <div className='flex items-center'>
-              <img src={Cube} alt='' />
-              <p className='text-white text-22px font-spoqaBold tracking-tight'>
+              <img src={Cube} alt='' className='-ml-4px mr-px' />
+              <p
+                style={{ textShadow: '0px 2px 5px rgba(0, 0, 0, 0.75)' }}
+                className='text-white text-22px font-spoqaBold tracking-tight mb-px'
+              >
                 기타게임
               </p>
             </div>
