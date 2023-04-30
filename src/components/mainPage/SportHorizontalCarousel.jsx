@@ -81,7 +81,7 @@ const Card = ({ item }) => {
     <div className="flex justify-center">
       <div
         style={{
-          boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.4)',
+          boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.4)",
           width: "403px",
           height: "139px",
         }}
@@ -200,7 +200,7 @@ export default function SportHorizontalCarousel() {
     <div className="flex items-center">
       <img src={Ball} alt="" />
       <p
-        style={{ textShadow: "2px 2px 3px #00000090" }}
+        style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
         className="text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-4px"
       >
         스포츠
