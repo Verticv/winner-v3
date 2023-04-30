@@ -13,7 +13,8 @@ const NoticeBanner = () => {
         borderRadius: '26% 24% 7% 6% / 0% 0% 100% 100%',
         background: 'rgb(54, 47, 45)',
       }}
-      className='flex items-center h-28px w-full overflow-x-hidden rounded-full flex-shrink-0'
+      className='flex items-center h-28px w-full overflow-x-hidden rounded-full flex-shrink-0 wrap cursor-default'
+      id="test"
     >
       <div
         style={{ background: 'rgb(54, 47, 45)', paddingLeft: '94px' }}
@@ -21,7 +22,7 @@ const NoticeBanner = () => {
       >
         <img className='object-none' src={SpeakerIcon} alt='speakerIcon' />
       </div>
-      <span id='banner' className='font-spoqa text-15px text-white z-10 mt-px'>
+      <span className='banner font-spoqa text-15px text-white z-10 mt-px cursor-default'>
         입금하시기전 계좌문의 후 입금해 주시기 바랍니다.
       </span>
     </div>
