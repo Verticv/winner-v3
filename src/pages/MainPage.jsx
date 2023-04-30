@@ -9,7 +9,7 @@ import NoticeBanner from 'components/mainPage/NoticeBanner';
 // import SlotGame from 'components/mainPage/SlotGame';
 // import Sports from 'components/mainPage/Sports';
 // import Tabs from 'components/mainPage/Tabs';
-// import QuickMenu from 'components/QuickMenu';
+import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
 import Carousel from '../components/mainPage/Carousel';
 import Footer from '../components/mainPage/Footer';
@@ -27,6 +27,7 @@ import SportHorizontalCarousel from 'components/mainPage/SportHorizontalCarousel
 import LiveHorizontalCarousel from 'components/mainPage/LiveHorizontalCarousel';
 import LiveRight from 'components/mainPage/LiveRight';
 import AnimatedCarousel from 'components/mainPage/AnimatedCarousel';
+import TopButton from 'components/TopButton';
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
   // function useWindowSize() {
@@ -203,16 +204,21 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
 
         <Footer />
 
-        {/* <div
+        <div
           style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
-          className={`${
-            scrollPosition > 497 ? 'top-235px' : 'bottom-0'
-          } fixed z-20 flex justify-end`}
+          className={`bottom-0 fixed z-20 flex justify-end`}
         >
-          <QuickMenu scrollPosition={scrollPosition} />
+          <QuickMenu />
         </div>
 
         <div
+          style={{ top: '827px', right: '11px' }}
+          className={`fixed z-20 flex justify-end`}
+        >
+          <TopButton scrollPosition={scrollPosition} />
+        </div>
+
+        {/* <div
           style={{
             background: 'green',
             maxWidth: '300px',
