@@ -204,10 +204,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
 
         <Footer />
 
-        <div
-          style={{ width: '1496px', height: 'calc(100vh - 497px)' }}
-          className={`bottom-0 fixed z-20 flex justify-end`}
-        >
+        <div>
           <QuickMenu />
         </div>
 
