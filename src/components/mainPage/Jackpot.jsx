@@ -22,7 +22,7 @@ export default function Jackpot() {
       >
         <p
           style={{ lineHeight: '18px', color: '#fff568' }}
-          className='text-2xl font-spoqaBold tracking-normal'
+          className='text-30px font-spoqaBold tracking-normal mt-2px'
         >
           1,234,567,890
         </p>
