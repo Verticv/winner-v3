@@ -53,6 +53,7 @@ const LiveRight = () => {
           background: 'linear-gradient(to right, #9c3bbb, #411d99)',
         }}
         onMouseEnter={() => setHover(item.id)}
+        onMouseLeave={() => setHover(null)}
         onClick={() => history.push(item.path)}
       >
         {isHover === item.id && (

@@ -97,7 +97,7 @@ body {
 }
 
 .live_carousel_tray_wrapper .carousel__slider-tray--horizontal {
-  gap: 10px;
+  gap: 0px;
 }
 
 .carousel_tray_wrapper .carousel__slider-tray--horizontal {

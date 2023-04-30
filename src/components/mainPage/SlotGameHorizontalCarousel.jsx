@@ -319,8 +319,8 @@ export default function SlotGameHorizontalCarousel() {
     <div className='flex items-center'>
       <img src={slotTitleIcon} alt='' />
       <p
-        style={{ textShadow: '2px 2px 3px #00000090' }}
-        className='text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-4px'
+          style={{ textShadow: '0px 2px 5px rgba(0, 0, 0, 0.75)' }}
+          className='text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-4px'
       >
         슬롯게임
       </p>
