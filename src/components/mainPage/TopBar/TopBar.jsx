@@ -40,7 +40,7 @@ const TopBar = ({ isAuthenticated, setAuth }) => {
                   <LoggedInHeader setAuth={setAuth} />
                 </div>
               ) : (
-                <div className='flex space-x-10px flex-shrink-0 items-center'>
+                <div className='flex space-x-10px flex-shrink-0 items-center -mt-px'>
                   <div className='flex space-x-5px flex-shrink-0 items-center'>
                     <PopupControls
                       buttonChild={LoginButton}

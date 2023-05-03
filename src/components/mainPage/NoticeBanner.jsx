@@ -10,14 +10,14 @@ const NoticeBanner = () => {
         border: '1px solid rgb(91, 73, 141)',
         borderTop: 'none',
         boxShadow: '0px 2px 20px 0px rgba(0, 0, 0, 0.2)',
-        borderRadius: '26% 24% 7% 6% / 0% 0% 100% 100%',
-        background: 'rgb(54, 47, 45)',
+        borderRadius: '45% 45% 7% 6% / 0% 0% 100% 100%',
+        background: '#362f2d',
       }}
       className='flex items-center h-28px w-full overflow-x-hidden rounded-full flex-shrink-0 wrap cursor-default'
       id="test"
     >
       <div
-        style={{ background: 'rgb(54, 47, 45)', paddingLeft: '94px' }}
+        style={{ background: '#362f2d', paddingLeft: '94px' }}
         className='z-20 pr-15px flex -mt-px'
       >
         <img className='object-none' src={SpeakerIcon} alt='speakerIcon' />

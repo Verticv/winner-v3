@@ -71,7 +71,7 @@ const Club = ({ text, Icon }) => {
       <div style={{ background: "#b8afcd" }} className="w-28px h-28px flex items-center justify-center rounded-full">
         <img className="object-contain" src={Icon} alt={text} />
       </div>
-      <p className="text-r666666 font-spoqaBold text-15px tracking-tight ml-5px h-15px flex items-center">{text}</p>
+      <p className="text-r666666 font-spoqaBold text-15px tracking-tight ml-5px h-15px flex items-center mt-px">{text}</p>
     </div>
   );
 };
@@ -84,9 +84,10 @@ const Card = ({ item }) => {
           boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.4)",
           width: "403px",
           height: "139px",
+          backgroundColor:'#eeeeee'
         }}
         // TODO: add the correct shadow
-        className="flex flex-col p-5px bg-white rounded-6px"
+        className="flex flex-col p-5px rounded-6px"
       >
         <div
           style={{
@@ -150,10 +151,10 @@ const Carousel = () => {
         naturalSlideHeight={500}
         isIntrinsicHeight
       >
-        <CarouselBackButton className="top-42px" />
+        <CarouselBackButton className="top-47px" />
         <Slider
           style={{
-            maxWidth: "1260px",
+            maxWidth: "1259px",
           }}
           classNameTrayWrap="sport_carousel__slider-tray"
         >
@@ -179,7 +180,7 @@ const Carousel = () => {
             <Card item={sampleArray[0]} />
           </Slide>
         </Slider>
-        <CarouselNextButton className="top-42px" />
+        <CarouselNextButton className="top-47px" />
       </CarouselProvider>
     </div>
   );
@@ -197,11 +198,11 @@ export default function SportHorizontalCarousel() {
   const tabsChildren = [<Carousel />, <Carousel />, <Carousel />];
 
   const HeaderLeftComponent = (
-    <div className="flex items-center">
+    <div className="flex items-center -mt-3px">
       <img src={Ball} alt="" />
       <p
         style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-        className="text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-4px"
+        className="text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-2px"
       >
         스포츠
       </p>

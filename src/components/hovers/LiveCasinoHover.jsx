@@ -1,123 +1,153 @@
-import React, { useState } from 'react';
-import Expand from 'react-expand-animated';
-import useNavButtonPosition from 'hooks/useNavButtonPosition';
-import { useHistory } from 'react-router';
+import React, { useState } from "react";
+import Expand from "react-expand-animated";
+import useNavButtonPosition from "hooks/useNavButtonPosition";
+import { useHistory } from "react-router";
 
-import Img1_1 from '../../images/navbarHover/1_1.png';
-import Img1_2 from '../../images/navbarHover/1_2.png';
-import Img1_3 from '../../images/navbarHover/1_3.png';
-import Img1_4 from '../../images/navbarHover/1_4.png';
-import Img1_5 from '../../images/navbarHover/1_5.png';
-import Img1_6 from '../../images/navbarHover/1_6.png';
-import Img1_7 from '../../images/navbarHover/1_7.png';
-import Img1_8 from '../../images/navbarHover/1_8.png';
-import Img1_9 from '../../images/navbarHover/1_9.png';
-import Img1_10 from '../../images/navbarHover/1_10.png';
-import Img1_11 from '../../images/navbarHover/1_11.png';
+import Img1_1 from "../../images/navbarHover/1_1.png";
+import Img1_2 from "../../images/navbarHover/1_2.png";
+import Img1_3 from "../../images/navbarHover/1_3.png";
+import Img1_4 from "../../images/navbarHover/1_4.png";
+import Img1_5 from "../../images/navbarHover/1_5.png";
+import Img1_6 from "../../images/navbarHover/1_6.png";
+import Img1_7 from "../../images/navbarHover/1_7.png";
+// import Img1_8 from "../../images/navbarHover/1_8.png";
+import Img1_9 from "../../images/navbarHover/1_9.png";
+import Img1_10 from "../../images/navbarHover/1_10.png";
+import Img1_11 from "../../images/navbarHover/1_11.png";
+import Img1_12 from "../../images/navbarHover/1_12.png";
+import Img1_13 from "../../images/navbarHover/1_13.png";
+import Img1_14 from "../../images/navbarHover/1_14.png";
+import Img1_15 from "../../images/navbarHover/1_15.png";
 
-import Img1_1_logo from '../../images/navbarHover/1_1_logo.png';
-import Img1_2_logo from '../../images/navbarHover/1_2_logo.png';
-import Img1_3_logo from '../../images/navbarHover/1_3_logo.png';
-import Img1_4_logo from '../../images/navbarHover/1_4_logo.png';
-import Img1_5_logo from '../../images/navbarHover/1_5_logo.png';
-import Img1_6_logo from '../../images/navbarHover/1_6_logo.png';
-import Img1_7_logo from '../../images/navbarHover/1_7_logo.png';
-import Img1_9_logo from '../../images/navbarHover/1_9_logo.png';
-import Img1_10_logo from '../../images/navbarHover/1_10_logo.png';
-import Img1_11_logo from '../../images/navbarHover/1_11_logo.png';
+import Img1_1_logo from "../../images/navbarHover/1_1_logo.png";
+import Img1_2_logo from "../../images/navbarHover/1_2_logo.png";
+import Img1_3_logo from "../../images/navbarHover/1_3_logo.png";
+import Img1_4_logo from "../../images/navbarHover/1_4_logo.png";
+import Img1_5_logo from "../../images/navbarHover/1_5_logo.png";
+import Img1_6_logo from "../../images/navbarHover/1_6_logo.png";
+import Img1_7_logo from "../../images/navbarHover/1_7_logo.png";
+import Img1_9_logo from "../../images/navbarHover/1_9_logo.png";
+import Img1_10_logo from "../../images/navbarHover/1_10_logo.png";
+import Img1_11_logo from "../../images/navbarHover/1_11_logo.png";
+import Img1_12_logo from "../../images/navbarHover/1_12_logo.png";
+import Img1_13_logo from "../../images/navbarHover/1_13_logo.png";
+import Img1_14_logo from "../../images/navbarHover/1_14_logo.png";
+import Img1_15_logo from "../../images/navbarHover/1_15_logo.png";
+
+import Best from "../../images/navbarHover/best.png";
 
 const LiveCasinoHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
 
-  const hoverMenuPosition = useNavButtonPosition(
-    'menu-wrapper',
-    'navbar-0-button'
-  );
+  const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-0-button");
 
   const gamesArray = [
     {
       id: 0,
       background: Img1_1,
       logo: Img1_1_logo,
-      imgText: '프레그메틱플레이',
+      imgText: "프레그메틱플레이",
     },
     {
       id: 1,
-      background: Img1_2,
-      logo: Img1_2_logo,
-      imgText: '아시아게이밍',
-      path: '/esports/structure',
+      background: Img1_5,
+      logo: Img1_5_logo,
+      imgText: "에볼루션",
+      path: "/esports/multi",
     },
     {
       id: 2,
-      background: Img1_3,
-      logo: Img1_3_logo,
-      imgText: '빅게이밍',
-      path: '/esports/single',
+      background: Img1_9,
+      logo: Img1_9_logo,
+      imgText: "로얄지",
+      path: "/esports/multi",
     },
     {
       id: 3,
-      background: Img1_4,
-      logo: Img1_4_logo,
-      imgText: '마이크로게이밍',
-      path: '/esports/multi',
+      background: Img1_2,
+      logo: Img1_2_logo,
+      imgText: "아시아게이밍",
+      path: "/esports/structure",
     },
     {
       id: 4,
-      background: Img1_5,
-      logo: Img1_5_logo,
-      imgText: '에볼루션',
-      path: '/esports/multi',
-    },
-    {
-      id: 5,
       background: Img1_6,
       logo: Img1_6_logo,
 
-      imgText: '드림게이밍',
-      path: '/esports/multi',
+      imgText: "드림게이밍",
+      path: "/esports/multi",
+    },
+    {
+      id: 5,
+      background: Img1_10,
+      logo: Img1_10_logo,
+      imgText: "섹시게이밍",
+      path: "/esports/multi",
     },
     {
       id: 6,
-      background: Img1_7,
-      logo: Img1_7_logo,
-
-      imgText: '오리엔탈게임',
-      path: '/esports/multi',
+      background: Img1_3,
+      logo: Img1_3_logo,
+      imgText: "빅게이밍",
+      path: "/esports/single",
     },
     {
       id: 7,
-      background: Img1_8,
-      imgText: '준비중',
-      path: '/esports/multi',
+      background: Img1_7,
+      logo: Img1_7_logo,
+
+      imgText: "오리엔탈게임",
+      path: "/esports/multi",
     },
     {
       id: 8,
-      background: Img1_9,
-      logo: Img1_9_logo,
-      imgText: '로얄지',
-      path: '/esports/multi',
+      background: Img1_11,
+      logo: Img1_11_logo,
+      imgText: "이주기",
+      path: "/esports/multi",
     },
     {
       id: 9,
-      background: Img1_10,
-      logo: Img1_10_logo,
-      imgText: '섹시게이밍',
-      path: '/esports/multi',
+      background: Img1_4,
+      logo: Img1_4_logo,
+      imgText: "마이크로게이밍",
+      path: "/esports/multi",
     },
     {
       id: 10,
-      background: Img1_11,
-      logo: Img1_11_logo,
-      imgText: '이주기',
-      path: '/esports/multi',
+      background: Img1_12,
+      logo: Img1_12_logo,
+      imgText: "베가스라운지",
+      path: "/esports/multi",
     },
     {
       id: 11,
-      background: Img1_8,
-      imgText: '준비중',
-      path: '/esports/multi',
+      background: Img1_13,
+      logo: Img1_13_logo,
+      imgText: "비터라이브",
+      path: "/esports/multi",
+    },
+    {
+      id: 12,
+      background: Img1_14,
+      logo: Img1_14_logo,
+      imgText: "타이산",
+      path: "/esports/multi",
+    },
+    {
+      id: 13,
+      background: Img1_15,
+      logo: Img1_15_logo,
+      imgText: "준비중",
+      path: "/esports/multi",
+    },
+    {
+      id: 14,
+      background: Img1_15,
+      logo: Img1_15_logo,
+      imgText: "준비중",
+      path: "/esports/multi",
     },
   ];
 
@@ -127,68 +157,68 @@ const LiveCasinoHover = ({ selection }) => {
         key={item.id}
         className={`relative group cursor-pointer flex items-center flex-shrink-0 h-68px rounded-6px`}
         style={{
-          width: '210px',
-          background: 'linear-gradient(to right, #9c3bbb, #411d99)',
+          width: "210px",
+          background: "linear-gradient(to right, #9c3bbb, #411d99)",
         }}
         onMouseEnter={() => setHover(item.id)}
         onClick={() => history.push(item.path)}
       >
-        {isHover === item.id && item.id !== 11 && (
+        {0 === item.id && <img src={Best} alt="" className="absolute -left-3px bottom-7px z-50 object-none" />}
+
+        {isHover === item.id && item.id !== 13 && item.id !== 14 && (
           <button
             style={{
-              boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
-              background: 'linear-gradient(to right, #df52ff, #6c22ff)',
-              width: '102px',
+              boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+              background: "linear-gradient(to right, #df52ff, #6c22ff)",
+              width: "102px",
             }}
-            className='absolute z-20 top-20px pt-px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+            className="absolute z-50 top-20px pt-px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter"
           >
             게임시작
           </button>
         )}
-        {item.id === 11 && (
+        {item.id === 14 && (
           <button
             style={{
-              boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.5)',
-              background: 'linear-gradient(to right, #7e7e7e, #505050)',
-              width: '102px',
+              boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+              background: "linear-gradient(to right, #7e7e7e, #505050)",
+              width: "102px",
             }}
-            className='absolute z-20 top-20px pt-2px right-54px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter'
+            className="absolute z-50 top-20px pt-2px right-54px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter"
           >
             점검중
           </button>
         )}
-        {(isHover === item.id || 11 === item.id) && (
-          <div className='relative w-full h-full bg-black opacity-60 z-10 rounded-6px'></div>
+        {((isHover === item.id && item.id !== 13) || 14 === item.id) && (
+          <div
+            className={`${14 === item.id ? "z-20" : "z-10"} relative w-full h-full bg-black opacity-60  rounded-6px`}
+          ></div>
         )}
 
         <img
-          className={`absolute bottom-0 object-none h-auto ${
-            11 === item.id ? 'z-0' : 'z-50'
-          } `}
+          className={`absolute bottom-0 object-none h-auto ${14 === item.id ? "z-0" : "z-40"} `}
           src={item.background}
-          alt='game_image'
+          alt="game_image"
         />
         <div
-          style={{ width: '132px' }}
+          style={{ width: "132px" }}
           className={`absolute flex flex-col ${
-            item.logo ? 'justify-start' : 'justify-center'
+            item.logo ? "justify-start" : "justify-center"
           } items-center h-full right-0 top-0 z-0`}
         >
           {item.logo && (
             <img
               style={{
-                marginTop:
-                  item.id === 8 || item.id === 6
-                    ? '2px'
-                    : item.id === 5
-                    ? '1px'
-                    : '',
+                marginTop: item.id === 8 || item.id === 6 ? "2px" : item.id === 5 ? "1px" : "",
               }}
               src={item.logo}
-              alt='game_image_logo'
+              alt="game_image_logo"
             />
           )}
-          <p className='text-white text-12px -mb-8px tracking-tighter font-spoqa w-full text-center pr-px'>
+          <p
+            style={{ color: item.imgText === "준비중" ? "#ebabff" : "#fff" }}
+            className="text-12px -mb-8px tracking-tighter font-spoqa w-full text-center pr-px"
+          >
             {item.imgText}
           </p>
         </div>
@@ -203,17 +233,14 @@ const LiveCasinoHover = ({ selection }) => {
         open: { left: hoverMenuPosition },
         close: { left: hoverMenuPosition },
       }}
-      className='rounded-8px absolute w-auto m-auto h-262px bg-white'
+      className="rounded-8px absolute w-auto m-auto h-262px bg-white"
     >
       <div
         onMouseLeave={() => setHover(null)}
-        style={{ minHeight: '254px' }}
-        className='h-full w-auto flex justify-center'
+        style={{ minHeight: "254px" }}
+        className="h-full w-auto flex justify-center"
       >
-        <div
-          style={{ width: '900px' }}
-          className='p-15px grid gap-10px grid-cols-4 limit:grid-cols-4'
-        >
+        <div style={{ width: "1120px" }} className="p-15px grid gap-10px grid-cols-5 limit:grid-cols-5">
           <GamesList items={gamesArray} />
         </div>
       </div>

@@ -5,10 +5,15 @@ import currencyItemGold from "../../../images/middleList/currency_item_gold.png"
 import currencyItemGrey from "../../../images/middleList/currency_item_grey.png";
 import currencyItemBronze from "../../../images/middleList/currency_item_bronze.png";
 
-const testArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const testArray = [
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+];
 
 const Item = ({ text, itemOrder }) => (
-  <div style={{ height: "25px" }} className="flex justify-between items-end cursor-pointer hover:filter hover:brightness-125 transition">
+  <div
+    style={{ height: "25px" }}
+    className="flex justify-between items-end cursor-pointer hover:filter hover:brightness-125 transition"
+  >
     <div className="flex items-end">
       <div style={{ width: "30px", height: "25px" }} className="relative mr-10px flex justify-center items-end">
         {itemOrder === 0 && <img className="" src={currencyItemGold} alt="" />}

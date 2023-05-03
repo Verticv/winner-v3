@@ -131,7 +131,25 @@ const Footer = ({ fullWidth = false }) => {
     return (
       <>
         {menuLists.map((menu, index) => (
-          <div key={`menu-${index}`} className="flex-shrink-0">
+          <div
+            key={`menu-${index}`}
+            style={{
+              width: "207px",
+              paddingLeft:
+                index === 0
+                  ? "0px"
+                  : index === 1
+                  ? "21px"
+                  : index === 2
+                  ? "17px"
+                  : index === 3
+                  ? "24px"
+                  : index === 4
+                  ? "13px"
+                  : "9px",
+            }}
+            className="flex-shrink-0"
+          >
             <p
               style={{ color: "#7f7d9c" }}
               className="font-spoqaMedium text-14px h-14px tracking-tigther flex items-center text-white mb-19px"

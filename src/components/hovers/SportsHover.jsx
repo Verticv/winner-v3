@@ -36,10 +36,22 @@ const SportsHover = ({ selection }) => {
         onClick={() => history.push(item.path)}
       >
         {isHover === item.id && (
+          <button
+            style={{
+              boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+              background: "linear-gradient(to right, #df52ff, #6c22ff)",
+              width: "102px",
+            }}
+            className="absolute z-50 top-20px pt-px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter"
+          >
+            게임시작
+          </button>
+        )}
+        {isHover === item.id && (
           <div className='w-full h-full bg-black opacity-60 z-10 rounded-6px'></div>
         )}
         <img
-          className={`absolute bottom-0 object-none h-auto z-50`}
+          className={`absolute bottom-0 object-none h-auto z-40`}
           src={item.background}
           alt='game_image'
         />

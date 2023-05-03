@@ -163,15 +163,10 @@ export default function LiveHorizontalCarousel() {
                 <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
                   <Slider
                     style={{
-                      maxWidth: "634px",
+                      maxWidth: "632px",
                     }}
                     classNameTrayWrap="live_carousel_tray_wrapper"
                   >
-                    {/* <div
-                      id='slider'
-                      // TODO: remove this card_animation
-                      className='card_animation flex gap-10px items-center justify-start transition ease-out duration-700'
-                    > */}
                     {[...list, ...list].map((item, index) => (
                       <CustomSlide
                         Row1Img={item.row1.Img}
@@ -184,7 +179,6 @@ export default function LiveHorizontalCarousel() {
                         index={index}
                       />
                     ))}
-                    {/* </div> */}
                   </Slider>
                 </div>
                 <CarouselNextButton style={{ right: "-4px" }} />
