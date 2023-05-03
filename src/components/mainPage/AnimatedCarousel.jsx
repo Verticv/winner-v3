@@ -193,6 +193,7 @@ export default function AnimatedCarousel() {
           height: "316px",
           padding: "1px",
           background: "linear-gradient(to bottom, #e398d4, #311c43)",
+          boxShadow: "0px 3px 10px 0px rgba(0, 0, 0, 0.3)",
           borderRadius: "6px",
         }}
       >

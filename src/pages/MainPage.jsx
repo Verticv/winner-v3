@@ -95,7 +95,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: "1260px",
-            marginBottom: "28px",
+            marginBottom: "18px",
           }}
         >
           <div className="flex space-x-10px">
