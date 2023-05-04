@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Slot1 from "../../images/slotCarousel/1.png";
-import Slot1Bottom from "../../images/slotCarousel/1_bottom.png";
+import Slot1Bottom from "../../images/slotCarousel/1_bottom.jpg";
 import Slot2 from "../../images/slotCarousel/2.png";
-import Slot2Bottom from "../../images/slotCarousel/2_bottom.png";
+import Slot2Bottom from "../../images/slotCarousel/2_bottom.jpg";
 import Slot3 from "../../images/slotCarousel/3.png";
-import Slot3Bottom from "../../images/slotCarousel/3_bottom.png";
+import Slot3Bottom from "../../images/slotCarousel/3_bottom.jpg";
 import Slot4 from "../../images/slotCarousel/4.png";
-import Slot4Bottom from "../../images/slotCarousel/4_bottom.png";
+import Slot4Bottom from "../../images/slotCarousel/4_bottom.jpg";
 import Slot5 from "../../images/slotCarousel/5.png";
-import Slot5Bottom from "../../images/slotCarousel/5_bottom.png";
-import Slot6 from "../../images/slotCarousel/6.png";
+import Slot5Bottom from "../../images/slotCarousel/5_bottom.jpg";
+import Slot6 from "../../images/slotCarousel/6.jpg";
 import Slot6Bottom from "../../images/slotCarousel/6_bottom.png";
 import LeftArrow from "../../images/slotCarousel/left_arrow.png";
 import RightArrow from "../../images/slotCarousel/right_arrow.png";
@@ -139,7 +139,6 @@ const CustomSlide = ({
   Row2Badge,
   row2BadgeText,
 }) => {
-
   const Card = ({ game, caption, Img, Badge, badgeText }) => (
     <div className="flex w-full justify-center">
       <div
@@ -151,21 +150,25 @@ const CustomSlide = ({
         }}
         className="flex flex-shrink-0 relative w-full p-10px rounded-8px cursor-pointer hover:filter hover:brightness-125 transition"
       >
-        <div style={{ height: "212px", width: "182px" }} className="bg-black rounded-6px">
-          {/* <img src={Img} alt="image" className="object-cover object-center w-full rounded-6px" /> */}
+        <div style={{ height: "212px", width: "182px" }} className="rounded-6px">
+          <img src={Img} style={{aspectRatio: 1, width: "182px"}} alt="" className="object-cover rounded-t-6px object-center w-full" />
         </div>
 
-        <img src={Badge} alt="badge" className="object-cover object-center absolute -top-2px left-12px" />
+        <img src={Badge} alt="badge" className="object-cover object-center absolute -top-2px left-12px z-20" />
         <p
           style={{ textShadow: "0px 0px 3px rgba(0, 0, 0, 0.4)" }}
-          className="absolute top-9px left-22px font-spoqaBold text-white text-14px tracking-tighter"
+          className="absolute top-9px left-22px font-spoqaBold text-white text-14px tracking-tighter z-30"
         >
           {badgeText}
         </p>
 
         <div
-          style={{ height: "72px", width: "182px", background: "linear-gradient(to top, #311c43, #311c4300)" }}
-          className="w-full absolute bottom-10px rounded-b-5px flex flex-col justify-end pl-5px"
+          style={{ height: "20px", width: "182px", background: "linear-gradient(to top, #311c43, #311c4300)", bottom:'45px' }}
+          className="w-full absolute z-20"
+        ></div>
+        <div
+          style={{ height: "35px", width: "182px", background: "#311c43" }}
+          className="w-full absolute bottom-10px rounded-b-5px flex flex-col justify-end pl-5px z-20"
         >
           <p
             style={{ color: "#a5eefe" }}

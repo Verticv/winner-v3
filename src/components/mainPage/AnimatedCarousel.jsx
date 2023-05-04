@@ -171,6 +171,19 @@ const sampleArray = [
 // Slider with animation
 export default function AnimatedCarousel() {
   const [hoveredTab, setHoveredTab] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    console.log(hoveredTab);
+    if (currentIndex > hoveredTab) {
+      setHoveredTab(hoveredTab + 1);
+    }
+
+    if (hoveredTab > currentIndex + 4) {
+      setHoveredTab(hoveredTab - 1);
+    }
+    return () => {};
+  }, [currentIndex, hoveredTab]);
 
   const SlideWithAnimation = ({ item, index }) => {
     const isHover = hoveredTab === index;
@@ -269,7 +282,10 @@ export default function AnimatedCarousel() {
           naturalSlideHeight={316}
           isIntrinsicHeight
         >
-          <CarouselBackButton style={{ left: "-35px", top: "125px" }} />
+          <CarouselBackButton
+            style={{ left: "-35px", top: "125px" }}
+            onClick={() => currentIndex > 0 && setCurrentIndex(currentIndex - 1)}
+          />
           <Slider
             style={{
               maxWidth: "1260px",
@@ -287,7 +303,10 @@ export default function AnimatedCarousel() {
               </Slide>
             ))}
           </Slider>
-          <CarouselNextButton style={{ right: "-35px", top: "125px" }} />
+          <CarouselNextButton
+            style={{ right: "-35px", top: "125px" }}
+            onClick={() => setCurrentIndex(currentIndex + 1)}
+          />
         </CarouselProvider>
       </div>
     </div>
