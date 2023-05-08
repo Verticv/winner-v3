@@ -139,14 +139,14 @@ const Footer = ({ fullWidth = false }) => {
                 index === 0
                   ? "0px"
                   : index === 1
-                  ? "21px"
+                  ? "10px"
                   : index === 2
-                  ? "17px"
+                  ? "10px"
                   : index === 3
-                  ? "24px"
+                  ? "10px"
                   : index === 4
-                  ? "13px"
-                  : "9px",
+                  ? "10px"
+                  : "10px",
             }}
             className="flex-shrink-0"
           >
@@ -205,23 +205,23 @@ const Footer = ({ fullWidth = false }) => {
         <div style={{ height: "135px", paddingTop: "34px" }} className="flex items-start justify-between">
           <div>
             <img src={Logo} className="object-none" draggable={false} alt="" />
-            <div className="w-full flex items-start mt-12px">
+            <div className="w-full flex items-start mt-12px flex-shrink-0">
               <div className="flex items-center">
                 <img src={ContactImg1} draggable={false} className="object-none" alt="" />
                 <p className="text-white text-14px h-14px flex items-center font-spoqa ml-5px">고객센터</p>
               </div>
               <div className="flex items-center ml-15px">
                 <img src={ContactImg2} draggable={false} className="object-none" alt="" />
-                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-5px">test1234</p>
+                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-2px">test1234</p>
               </div>
-              <div className="flex items-center ml-15px">
+              <div className="flex items-center ml-9px">
                 <img src={ContactImg3} draggable={false} className="object-none" alt="" />
-                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-5px">test1234</p>
+                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-2px">test1234</p>
               </div>
             </div>
           </div>
 
-          <img src={Etc} className="object-none mr-13px" draggable={false} alt="" />
+          <img src={Etc} className="object-none mr-28px" draggable={false} alt="" />
         </div>
         <div style={{ borderColor: "#42404e", height: "62px" }} className="flex justify-center border-t">
           <p

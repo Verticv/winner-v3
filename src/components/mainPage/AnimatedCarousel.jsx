@@ -247,11 +247,11 @@ export default function AnimatedCarousel() {
             <img src={right} alt="" />
           </div>
           {!isHover && (
-            <div className="absolute w-full h-full items-center flex justify-center">
+            <div className="absolute w-full h-full items-center flex justify-center pt-8px">
               <img src={item.center} alt="" />
             </div>
           )}
-          <div className="absolute bottom-32px w-full flex justify-center">
+          <div className={`absolute bottom-32px w-full flex justify-center -ml-2px ${item.title === "티비벳" && "mb-6px"}`}>
             <img src={item.logo} alt="" />
           </div>
           <div

@@ -51,7 +51,7 @@ const Button = ({ number }) => {
           background: "linear-gradient(to top, rgb(73,31,156), rgb(158,60,188))",
         }}
       >
-        <p className="text-white font-spoqaMedium text-14px tracking-tight h-14px flex items-center mt-px">{number}</p>
+        <p className="text-white font-roboto text-14px tracking-tight h-14px flex items-center mt-px">{number}</p>
       </div>
     </button>
   );
@@ -105,7 +105,7 @@ const Card = ({ item }) => {
           </div>
           <p
             style={{ color: "#ebabff" }}
-            className="font-spoqa text-12px tracking-tight h-12px flex items-center mt-4px"
+            className="font-robotoRegular text-12px tracking-tight h-12px flex items-center mt-4px"
           >
             2022-08-25 / 15:45
           </p>
@@ -117,7 +117,7 @@ const Card = ({ item }) => {
           </div>
 
           <div className="flex flex-col items-center justify-between">
-            <div className="flex space-x-4px mt-10px">
+            <div className="flex space-x-4px mt-8px">
               <Paragraph text="W1" />
               <Paragraph text="X" />
               <Paragraph text="W2" />
@@ -154,7 +154,7 @@ const Carousel = () => {
         <CarouselBackButton className="top-47px" />
         <Slider
           style={{
-            maxWidth: "1259px",
+            maxWidth: "1258px",
           }}
           classNameTrayWrap="sport_carousel__slider-tray"
         >
@@ -198,7 +198,7 @@ export default function SportHorizontalCarousel() {
   const tabsChildren = [<Carousel />, <Carousel />, <Carousel />];
 
   const HeaderLeftComponent = (
-    <div className="flex items-center -mt-3px">
+    <div className="flex items-center -mt-3px -ml-3px">
       <img src={Ball} alt="" />
       <p
         style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}

@@ -140,14 +140,14 @@ const LiveCasinoHover = ({ selection }) => {
       background: Img1_15,
       logo: Img1_15_logo,
       imgText: "준비중",
-      path: "/esports/multi",
+      path: "/",
     },
     {
       id: 14,
       background: Img1_15,
       logo: Img1_15_logo,
       imgText: "준비중",
-      path: "/esports/multi",
+      path: "/",
     },
   ];
 
@@ -170,9 +170,11 @@ const LiveCasinoHover = ({ selection }) => {
             style={{
               boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
               background: "linear-gradient(to right, #df52ff, #6c22ff)",
-              width: "102px",
+              width: "90px",
+              height: "26px",
+              right: "60px",
             }}
-            className="absolute z-50 top-20px pt-px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter"
+            className="absolute z-50 top-0px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-12px tracking-tighter"
           >
             게임시작
           </button>
@@ -182,9 +184,11 @@ const LiveCasinoHover = ({ selection }) => {
             style={{
               boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
               background: "linear-gradient(to right, #7e7e7e, #505050)",
-              width: "102px",
+              width: "90px",
+              height: "26px",
+              right: "60px",
             }}
-            className="absolute z-50 top-20px pt-2px right-54px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter"
+            className="absolute z-50 top-21px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-12px tracking-tighter"
           >
             점검중
           </button>
@@ -217,7 +221,7 @@ const LiveCasinoHover = ({ selection }) => {
           )}
           <p
             style={{ color: item.imgText === "준비중" ? "#ebabff" : "#fff" }}
-            className="text-12px -mb-8px tracking-tighter font-spoqa w-full text-center pr-px"
+            className="absolute bottom-0 text-12px mb-6px tracking-tighter font-spoqa w-full text-center pr-px"
           >
             {item.imgText}
           </p>

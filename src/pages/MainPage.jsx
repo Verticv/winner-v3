@@ -63,7 +63,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
 
         <div style={{ width: "1260px" }} className="flex items-center justify-start mt-4px">
           <Carousel />
-          <div style={{ height: "325px" }} className="flex flex-col ml-5px justify-end">
+          <div style={{ height: "326px" }} className="flex flex-col ml-5px justify-end">
             <Jackpot />
             <SlotGameVerticalCarousel />
           </div>
@@ -86,7 +86,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: "1260px",
-            marginBottom: "37px",
+            marginBottom: "30px",
           }}
         >
           <SportHorizontalCarousel />
@@ -95,7 +95,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: "1260px",
-            marginBottom: "18px",
+            marginBottom: "24px",
           }}
         >
           <div className="flex space-x-10px">
@@ -107,7 +107,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: "1260px",
-            marginBottom: "37px",
+            marginBottom: "27px",
           }}
         >
           <div className="flex flex-col">
@@ -115,7 +115,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
               <img src={Cube} alt="" className="-ml-4px mr-px" />
               <p
                 style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-                className="text-white text-22px font-spoqaBold tracking-tight mb-px"
+                className="text-white text-22px font-spoqaBold tracking-tight mb-2px"
               >
                 기타게임
               </p>

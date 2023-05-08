@@ -93,6 +93,7 @@ export default function SlotGameVerticalCarousel() {
         backgroundImage: `url(${slotCardBackground})`,
         backgroundRepeat: "round",
         boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.4)",
+        height:'147px'
       }}
       className="rounded-8px pt-3px"
     >

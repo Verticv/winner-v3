@@ -37,7 +37,7 @@ const LiveRight = () => {
       logo: PreparingLogo,
 
       imgText: "호텔카지노",
-      path: "/esports/multi",
+      path: "/",
       logoClass: "top-36px",
     },
   ];
@@ -46,7 +46,7 @@ const LiveRight = () => {
     return items.map((item) => (
       <div
         key={item.id}
-        className={`relative group cursor-pointer flex items-center flex-shrink-0 h-68px rounded-6px`}
+        className={`${2 !== item.id ? "cursor-pointer" : "cursor-default" } relative group flex items-center flex-shrink-0 h-68px rounded-6px`}
         style={{
           width: "360px",
           height: "130px",
@@ -56,7 +56,7 @@ const LiveRight = () => {
         onMouseLeave={() => setHover(null)}
         onClick={() => history.push(item.path)}
       >
-        {isHover === item.id && (
+        {isHover === item.id && 2 !== item.id && (
           <button
             style={{
               boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
@@ -68,14 +68,14 @@ const LiveRight = () => {
             게임시작
           </button>
         )}
-        {isHover === item.id && <div className="w-full h-full bg-black opacity-60 z-20 rounded-6px"></div>}
+        {isHover === item.id && 2 !== item.id && <div className="w-full h-full bg-black opacity-60 z-20 rounded-6px"></div>}
         <img className={`absolute bottom-0 object-none h-auto z-0`} src={item.background} alt="game_image" />
         <div
           style={{ width: "132px" }}
           className="absolute flex flex-col justify-center items-center h-full left-0 top-0 z-10"
         >
           <img className={`absolute left-0 ${item.logoClass}`} src={item.logo} alt="game_image_logo" />
-          <div className="absolute bottom-6px left-0 flex">
+          <div className="absolute bottom-6px -left-px flex">
             <p className="text-white text-14px tracking-tight font-spoqaMedium ml-11px">{item.imgText}</p>
             {item.imgText === "호텔카지노" && (
               <p style={{color:'#ebabff'}} className="text-white text-14px tracking-tight font-spoqaMedium">(준비중)</p>
@@ -88,7 +88,7 @@ const LiveRight = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex items-center mb-8px -ml-3px">
+      <div className="flex items-center mb-10px -ml-3px">
         <img src={Circle} alt="" />
         <p
           style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}

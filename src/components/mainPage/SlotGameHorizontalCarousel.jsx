@@ -140,12 +140,12 @@ const CustomSlide = ({
   row2BadgeText,
 }) => {
   const Card = ({ game, caption, Img, Badge, badgeText }) => (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full justify-center flex-shrink-0">
       <div
         style={{
           background: "linear-gradient(to top, #ccc4ff, #ffd8f5)",
           boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
-          width: "202px",
+          width: "201px",
           height: "232px",
         }}
         className="flex flex-shrink-0 relative w-full p-10px rounded-8px cursor-pointer hover:filter hover:brightness-125 transition"
@@ -251,7 +251,7 @@ const Carousel = () => {
           infinite={false}
         >
           <div className="w-full relative flex items-center justify-center">
-            <CarouselBackButton style={{ marginTop: "-15px", marginLeft: "4px" }} />
+            <CarouselBackButton style={{ marginTop: "-13px", marginLeft: "5px" }} />
             <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
               <Slider classNameTrayWrap="carousel_tray_wrapper">
                 {/* <div
@@ -293,7 +293,7 @@ const Carousel = () => {
                 {/* </div> */}
               </Slider>
             </div>
-            <CarouselNextButton style={{ marginTop: "-15px", marginRight: "4px" }} />
+            <CarouselNextButton style={{ marginTop: "-13px", marginRight: "5px" }} />
           </div>
         </CarouselProvider>
       </div>

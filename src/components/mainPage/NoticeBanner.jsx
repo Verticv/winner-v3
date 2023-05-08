@@ -10,19 +10,19 @@ const NoticeBanner = () => {
         border: '1px solid rgb(91, 73, 141)',
         borderTop: 'none',
         boxShadow: '0px 2px 20px 0px rgba(0, 0, 0, 0.2)',
-        borderRadius: '45% 45% 7% 6% / 0% 0% 100% 100%',
-        background: '#362f2d',
+        borderRadius: '0% 0% 7% 7% / 0% 0% 100% 100%',
+        background: '#2d2834',
       }}
       className='flex items-center h-28px w-full overflow-x-hidden rounded-full flex-shrink-0 wrap cursor-default'
       id="test"
     >
       <div
-        style={{ background: '#362f2d', paddingLeft: '94px' }}
+        style={{ background: '#2d2834', paddingLeft: '94px' }}
         className='z-20 pr-15px flex -mt-px'
       >
         <img className='object-none' src={SpeakerIcon} alt='speakerIcon' />
       </div>
-      <span className='banner font-spoqa text-15px text-white z-10 mt-px cursor-default'>
+      <span style={{color:'#eeeeee'}} className='banner font-spoqa text-14px z-10 mt-2px cursor-default'>
         입금하시기전 계좌문의 후 입금해 주시기 바랍니다.
       </span>
     </div>

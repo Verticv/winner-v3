@@ -9,7 +9,13 @@ import image3 from "../../images/live/3.png";
 import image3Bottom from "../../images/live/3_bottom.png";
 import image4 from "../../images/live/4.png";
 import image4Bottom from "../../images/live/4_bottom.png";
+import image5 from "../../images/live/5.png";
+import image5Bottom from "../../images/live/5_bottom.png";
+import image6 from "../../images/live/6.png";
+import image6Bottom from "../../images/live/6_bottom.png";
+import image7 from "../../images/live/7.png";
 import Left from "../../images/live/left.png";
+import Best from "../../images/live/best.png";
 import Card from "../../images/slotCarousel/card.png";
 
 import { CarouselBackButton, CarouselNextButton } from "./SlotGameHorizontalCarousel";
@@ -60,6 +66,39 @@ const list = [
       Img: image4Bottom,
     },
   },
+  {
+    id: 4,
+    row1: {
+      game: "마이크로게이밍",
+      Img: image5,
+    },
+    row2: {
+      game: "베가스라운지",
+      Img: image5Bottom,
+    },
+  },
+  {
+    id: 5,
+    row1: {
+      game: "비터라이브",
+      Img: image6,
+    },
+    row2: {
+      game: "타이산",
+      Img: image6Bottom,
+    },
+  },
+  {
+    id: 6,
+    row1: {
+      game: "준비중",
+      Img: image7,
+    },
+    row2: {
+      game: "점검중",
+      Img: image7,
+    },
+  },
 ];
 
 const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Caption, Row2Img }) => {
@@ -84,7 +123,7 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
               {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
             </p>
           </div>
-          {isHover && (
+          {isHover && game !== "점검중" && game !== "준비중" && (
             <button
               className="absolute z-30 top-83px left-25px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight"
               style={{
@@ -95,7 +134,9 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
               게임시작
             </button>
           )}
-          {isHover && <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px"></div>}
+          {isHover && game !== "점검중" && game !== "준비중" && (
+            <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px"></div>
+          )}
         </div>
       </div>
     );
@@ -112,9 +153,10 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
 };
 
 export default function LiveHorizontalCarousel() {
+  const [isPlaying, setPlaying] = useState(true);
   return (
     <div className="flex flex-col">
-      <div className="flex items-center mb-4px -ml-3px">
+      <div className="flex items-center mb-6px -ml-3px">
         <img className="mb-px" src={Card} alt="" />
         <p
           style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
@@ -124,7 +166,7 @@ export default function LiveHorizontalCarousel() {
         </p>
       </div>
       <div
-        className="flex p-15px pr-5px rounded-8px"
+        className="flex p-15px pr-5px rounded-8px relative"
         style={{
           width: "860px",
           height: "440px",
@@ -132,6 +174,7 @@ export default function LiveHorizontalCarousel() {
           background: "linear-gradient(to top, rgb(204,196,255), rgb(255,216,245))",
         }}
       >
+        <img src={Best} style={{ left: "10px", top: "22px" }} alt="" className="absolute z-50" />
         <div style={{ minWidth: "193px" }} className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px">
           <img
             src={Left}
@@ -153,13 +196,24 @@ export default function LiveHorizontalCarousel() {
               naturalSlideWidth={148}
               naturalSlideHeight={410}
               isIntrinsicHeight={true}
-              totalSlides={8}
+              totalSlides={14}
               visibleSlides={4}
               step={1}
-              infinite={false}
+              infinite={true}
+              interval={3000}
+              isPlaying={isPlaying}
             >
               <div className="w-full relative flex items-center justify-center">
-                <CarouselBackButton style={{ left: "-4px" }} className="-left-10px" />
+                <CarouselBackButton
+                  style={{ left: "-4px" }}
+                  className="-left-10px"
+                  onClick={() => {
+                    setPlaying(false);
+                    setTimeout(() => {
+                      setPlaying(true);
+                    }, 1000);
+                  }}
+                />
                 <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
                   <Slider
                     style={{
@@ -181,7 +235,15 @@ export default function LiveHorizontalCarousel() {
                     ))}
                   </Slider>
                 </div>
-                <CarouselNextButton style={{ right: "-4px" }} />
+                <CarouselNextButton
+                  style={{ right: "-4px" }}
+                  onClick={() => {
+                    setPlaying(false);
+                    setTimeout(() => {
+                      setPlaying(true);
+                    }, 1000);
+                  }}
+                />
               </div>
             </CarouselProvider>
           </div>

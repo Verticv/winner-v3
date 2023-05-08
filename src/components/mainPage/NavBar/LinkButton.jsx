@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 // .Rounded_Rectangle {
 //   border-radius: 9px;
@@ -22,33 +22,34 @@ import React from 'react';
 //   z-index: 745;
 // }
 
-const LinkButton = ({ buttonText, ButtonIcon, count }) => {
+const LinkButton = ({ buttonText, ButtonIcon, count, isAuthenticated }) => {
   const myMenuButton = (
     <div
       style={{
-        color: '#2d2834',
-        height: '81px',
-        marginTop: '-1px',
+        color: "#2d2834",
+        height: "81px",
+        marginTop: "-1px",
       }}
       className={`w-80px flex-shrink-0 text-r2d2834 hover:text-white relative flex flex-col items-center justify-center cursor-pointer`}
     >
-      <div className='relative flex justify-center w-48px h-48px mt-2px'>
-        <div
-          className='absolute flex items-center justify-center px-8px h-19px top-0 -right-8px text-white font-roboto tracking-tight text-12px bg-rf04281 rounded-9px'
-          // style={{
-          //   padding: '0 8.5px',
-          // }}
-          style={{ minWidth: '20px' }}
-        >
-          <p className='flex items-center justify-center text-white font-roboto tracking-tight text-12px'>
-            {count}
-          </p>
-        </div>
-        <img className='object-none' src={ButtonIcon} alt='my menu' />
+      <div className="relative flex justify-center w-48px h-48px mt-2px">
+        {isAuthenticated && (
+          <div
+            className="absolute flex items-center justify-center px-8px h-19px top-0 -right-8px text-white font-roboto tracking-tight text-12px bg-rf04281 rounded-9px"
+            // style={{
+            //   padding: '0 8.5px',
+            // }}
+            style={{ minWidth: "20px" }}
+          >
+            <p className="flex items-center justify-center text-white font-roboto tracking-tight text-12px">{count}</p>
+          </div>
+        )}
+
+        <img className="object-none" src={ButtonIcon} alt="my menu" />
       </div>
       <span
-        style={{ marginBottom: '0px', color: '#5e399a' }}
-        className='cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-4px'
+        style={{ marginBottom: "0px", color: "#5e399a" }}
+        className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-4px"
       >
         {buttonText}
       </span>
@@ -57,11 +58,8 @@ const LinkButton = ({ buttonText, ButtonIcon, count }) => {
 
   return (
     <>
-      <div
-        style={{ height: '82px' }}
-        className='relative flex justify-between flex-row flex-shrink-0'
-      >
-        <div className='flex items-center flex-shrink-0'>{myMenuButton}</div>
+      <div style={{ height: "82px" }} className="relative flex justify-between flex-row flex-shrink-0">
+        <div className="flex items-center flex-shrink-0">{myMenuButton}</div>
       </div>
     </>
   );

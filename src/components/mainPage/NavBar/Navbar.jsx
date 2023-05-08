@@ -103,12 +103,12 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           //   // TODO: seems there is a bug here with the animation
           // }}
         >
-          <div className="flex justify-center w-48px h-48px mt-2px">
+          <div className="flex justify-center w-48px h-48px -mt-px">
             <img className="object-none" src={isSelectedTap ? item.activeIcon : item.icon} alt={item.text} />
           </div>
           <span
             style={{ marginBottom: "0px" }}
-            className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-4px"
+            className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-3px"
           >
             {item.text}
           </span>
@@ -176,8 +176,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 ButtonIcon={MyMenuIcon}
                 ButtonActiveIcon={MyMenuActiveIcon}
               />
-              <LinkButton ButtonIcon={MessageIcon} buttonText="쪽지" count={25} />
-              <LinkButton ButtonIcon={CouponIcon} buttonText="쿠폰" count={5} />
+              <LinkButton ButtonIcon={MessageIcon} buttonText="쪽지" count={25} isAuthenticated={isAuthenticated} />
+              <LinkButton ButtonIcon={CouponIcon} buttonText="쿠폰" count={5} isAuthenticated={isAuthenticated} />
               <DropdownButton
                 onMouseOver={() => {
                   setSelectedTab(null);

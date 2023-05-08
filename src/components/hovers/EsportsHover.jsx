@@ -8,6 +8,7 @@ import OverwatchBannerLogo from "../../images/navbarHover/5_3_logo.png";
 import PubgBanner from "../../images/navbarHover/5_4.png";
 import PubgBannerLogo from "../../images/navbarHover/5_4_logo.png";
 import Preparing from "../../images/navbarHover/5_5.png";
+import Image6 from "../../images/navbarHover/5_6.png";
 import PreparingLogo from "../../images/navbarHover/5_5_logo.png";
 import Expand from "react-expand-animated";
 import { useHistory } from "react-router-dom";
@@ -31,7 +32,7 @@ const EsportsHover = ({ selection }) => {
       background: SuddenAttackBanner,
       logo: SuddenAttackBannerLogo,
       imgText: "이용가이드",
-      path: "/esports/structure",
+      path: "/",
     },
     {
       id: 2,
@@ -51,16 +52,16 @@ const EsportsHover = ({ selection }) => {
       id: 4,
       background: Preparing,
       logo: PreparingLogo,
-      imgText: "준비중",
-      path: "/esports/multi",
+      imgText: "호텔카지노",
+      path: "/",
     },
     {
       id: 5,
-      background: Preparing,
+      background: Image6,
       logo: PreparingLogo,
 
-      imgText: "준비중",
-      path: "/esports/multi",
+      imgText: "이용가이드",
+      path: "/",
     },
   ];
 
@@ -81,9 +82,11 @@ const EsportsHover = ({ selection }) => {
             style={{
               boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
               background: "linear-gradient(to right, #df52ff, #6c22ff)",
-              width: "102px",
+              width: "90px",
+              height: "26px",
+              right: "60px",
             }}
-            className="absolute z-50 top-20px pt-px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-15px tracking-tighter"
+            className="absolute z-50 top-20px pt-2px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-12px tracking-tighter"
           >
             게임시작
           </button>
@@ -97,7 +100,9 @@ const EsportsHover = ({ selection }) => {
           className="absolute flex flex-col justify-start items-center h-full right-0 top-0 z-0"
         >
           <img src={item.logo} alt="game_image_logo" />
-          <p className="text-white text-12px -mb-8px tracking-tighter font-spoqa">{item.imgText}</p>
+          <div className="text-white text-12px -mb-8px tracking-tighter font-spoqa flex">
+            {item.imgText} {item.path === "/" && <p style={{color:'#ebabff'}}>(준비중)</p>}{" "}
+          </div>
         </div>
       </div>
     ));
