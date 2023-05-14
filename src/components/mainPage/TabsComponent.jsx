@@ -39,7 +39,7 @@ const TabsComponent = ({
               className="w-1/3 h-full text-white text-14px rounded-md font-spoqaMedium cursor-pointer transition-colors duration-500 flex items-center justify-center"
               onClick={() => handleTabClick(tabsData[0].id)}
               style={{
-                color: selectedTab === tabsData[0].id ? "#fff" : "#5e399a",
+                color: selectedTab === tabsData[0].id ? "#ededeb" : "#5e399a",
               }}
             >
               <p className="text-14px h-14px flex items-center justify-center tracking-tight mt-px">{tabsData[0].label}</p>
@@ -48,7 +48,7 @@ const TabsComponent = ({
               className="w-1/3 h-full text-white text-14px rounded-md font-spoqaMedium cursor-pointer transition-colors duration-500 flex items-center justify-center"
               onClick={() => handleTabClick(tabsData[1].id)}
               style={{
-                color: selectedTab === tabsData[1].id ? "#fff" : "#5e399a",
+                color: selectedTab === tabsData[1].id ? "#ededeb" : "#5e399a",
               }}
             >
               <p className="text-14px h-14px flex items-center justify-center tracking-tight mt-px">{tabsData[1].label}</p>
@@ -57,7 +57,7 @@ const TabsComponent = ({
               className="w-1/3 h-full text-white text-14px rounded-md font-spoqaMedium cursor-pointer transition-colors duration-500 flex items-center justify-center"
               onClick={() => handleTabClick(tabsData[2].id)}
               style={{
-                color: selectedTab === tabsData[2].id ? "#fff" : "#5e399a",
+                color: selectedTab === tabsData[2].id ? "#ededeb" : "#5e399a",
               }}
             >
               <p className="text-14px h-14px flex items-center justify-center tracking-tight mt-px">{tabsData[2].label}</p>

@@ -15,7 +15,7 @@ const Item = ({ text }) => (
         overflow: "hidden",
         textOverflow: "ellipsis",
       }}
-      className="text-14px flex items-center font-spoqaMedium tracking-tight w-full"
+      className="text-14px flex items-center font-spoqaMedium tracking-tight w-full -ml-px"
     >
       {text}
     </p>
@@ -24,9 +24,9 @@ const Item = ({ text }) => (
 );
 
 const RightItem = ({ text }) => (
-  <div className="flex flex-shrink-0 mr-21px">
-    <img className="mr-4px w-14px h-18px" src={noticeItem} alt="" />
-    <p style={{ color: "#666666" }} className="text-14px font-spoqaMedium tracking-tighter">
+  <div className="flex flex-shrink-0 mr-16px">
+    <img className="mr-4px mb-px object-none" src={noticeItem} alt="" />
+    <p style={{ color: "#666666" }} className="text-13px font-spoqaMedium tracking-tight mt-px">
       {text}
     </p>
   </div>

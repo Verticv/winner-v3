@@ -103,7 +103,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           //   // TODO: seems there is a bug here with the animation
           // }}
         >
-          <div className="flex justify-center w-48px h-48px -mt-px">
+          <div className="flex justify-center w-48px h-48px -mt-2px flex-shrink-0">
             <img className="object-none" src={isSelectedTap ? item.activeIcon : item.icon} alt={item.text} />
           </div>
           <span

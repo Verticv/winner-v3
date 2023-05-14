@@ -35,7 +35,7 @@ const Card = ({ icon, game }) => (
       style={{
         color: "#6f6f6f",
       }}
-      className="ml-8px text-14px font-spoqa tracking-tight pt-2px pl-2px"
+      className="ml-8px text-14px font-spoqa tracking-tight pt-px pl-2px"
     >
       <p
         style={{
@@ -45,7 +45,7 @@ const Card = ({ icon, game }) => (
           overflow: "hidden",
           lineHeight: "26px",
         }}
-        className="text-20px font-spoqaBold tracking-tight"
+        className="text-20px font-spoqaBold tracking-tight -ml-2px"
       >
         Wild West Gold
       </p>
@@ -57,13 +57,13 @@ const Card = ({ icon, game }) => (
           color: "#dcd5d3",
           lineHeight: "26px",
         }}
-        className="text-14px font-spoqa text-left tracking-tight"
+        className="text-14px font-spoqa text-left tracking-tight mt-px ml-px"
       >
         {game.length > 19 ? `${game.slice(0, 19)}...` : game}
       </p>
       <p
         style={{ color: "#f5e074", lineHeight: "26px" }}
-        className="font-spoqaBold text-22px flex items-center tracking-tight"
+        className="font-spoqaBold text-22px flex items-center tracking-tight -mt-2px ml-px"
       >
         ₩123,456,789
       </p>
@@ -95,11 +95,11 @@ export default function SlotGameVerticalCarousel() {
         boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.4)",
         height:'147px'
       }}
-      className="rounded-8px pt-3px"
+      className="rounded-8px pt-2px"
     >
-      <div className="flex text-white h-37px w-full justify-center items-center">
+      <div className="flex text-white h-36px w-full justify-center items-center">
         <img src={slotTitleLeftIcon} alt="slot title icon" />
-        <p className="text-16px font-spoqaMedium tracking-tight px-2px">슬롯 실시간 우승 </p>
+        <p className="text-16px font-spoqaMedium tracking-tight pl-5px pr-3px mt-px -ml-px">슬롯 실시간 우승 </p>
         <img src={slotTitleReftIcon} alt="slot title icon" />
       </div>
       {/* Start Carousel */}

@@ -145,7 +145,7 @@ const CustomSlide = ({
         style={{
           background: "linear-gradient(to top, #ccc4ff, #ffd8f5)",
           boxShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.3),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
-          width: "201px",
+          width: "202px",
           height: "232px",
         }}
         className="flex flex-shrink-0 relative w-full p-10px rounded-8px cursor-pointer hover:filter hover:brightness-125 transition"
@@ -209,7 +209,7 @@ export const CarouselBackButton = ({ className, style, onClick }) => {
         width: "30px",
         ...style,
       }}
-      className={`hover:opacity-75 bg-white opacity-80 rounded-6px absolute z-30 -left-35px cursor-pointer transition ${className}`}
+      className={`hover:brightness-125 filter bg-white hover:opacity-100 opacity-80 rounded-6px absolute z-30 -left-35px cursor-pointer transition ${className}`}
       id="prev"
     >
       <img src={LeftArrow} alt="left" className="ml-7px object-none" />
@@ -229,7 +229,7 @@ export const CarouselNextButton = ({ className, style, onClick }) => {
         width: "30px",
         ...style,
       }}
-      className={`hover:opacity-75 bg-white opacity-80 rounded-6px absolute z-30 -right-35px cursor-pointer transition ${className}`}
+      className={`hover:brightness-125 filter bg-white hover:opacity-100 bg-white opacity-80 rounded-6px absolute z-30 -right-35px cursor-pointer transition ${className}`}
       id="next"
     >
       <img src={RightArrow} alt="left" className="ml-10px object-none" />

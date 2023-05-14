@@ -20,8 +20,8 @@ const Card = ({ children, HeaderIcon, headerText, headerActionText }) => {
         }}
         className="w-full rounded-14px flex items-center justify-between z-20"
       >
-        <div className="flex items-center">
-          <img src={HeaderIcon} alt="" draggable={false} className="mr-4px" />
+        <div className={`${headerText === "금주의 환전 TOP" && "-ml-px"} flex items-center`}>
+          <img src={HeaderIcon} alt="" draggable={false} className={`${headerText === "금주의 환전 TOP" ? "mr-5px" : "mr-4px"} `} />
           <p className="text-white text-14px h-14px flex items-center font-spoqaBold tracking-tight">{headerText}</p>
         </div>
         {headerActionText && (

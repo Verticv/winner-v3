@@ -1,28 +1,28 @@
-import React from 'react';
-import JackpotImage from '../../images/jackpot.png';
+import React from "react";
+import JackpotImage from "../../images/jackpot.png";
 
 export default function Jackpot() {
   return (
     <div
       style={{
-        width: '313px',
-        height: '133px',
+        width: "313px",
+        height: "133px",
       }}
-      className='mb-5px relative'
+      className="mb-5px relative"
     >
       <img
-        style={{ minWidth: '349px', height: '202px' }}
+        style={{ minWidth: "349px", height: "202px" }}
         src={JackpotImage}
-        alt='jackpot'
-        className='absolute -top-40px -left-18px'
+        alt="jackpot"
+        className="absolute -top-40px -left-18px"
       />
       <div
-        style={{ width: '239px', height: '44px' }}
-        className='absolute top-54px left-37px flex items-center justify-center rounded-10px'
+        style={{ width: "239px", height: "44px" }}
+        className="absolute top-54px left-37px flex items-center justify-center rounded-10px"
       >
         <p
-          style={{ lineHeight: '18px', color: '#fff568' }}
-          className='text-30px font-spoqaBold tracking-normal mt-2px'
+          style={{ lineHeight: "18px", color: "#fff568", textShadow: "#000000 1px 1px 4px" }}
+          className="text-30px font-spoqaBold tracking-normal mt-2px"
         >
           1,234,567,890
         </p>

@@ -24,7 +24,7 @@ const DropdownButton = ({
         color: isMyMenuOpen ? '#ffffff' : '#5e399a',
         background: isMyMenuOpen ? '#5323a0' : 'none',
         height: '82px',
-        marginTop: '-1px',
+        marginTop: '-4px',
       }}
       className={`w-80px ${isMyMenuOpen ? selectedTabClass : tabClass}`}
       onMouseOver={onMouseOver}
@@ -41,7 +41,7 @@ const DropdownButton = ({
           marginBottom: '0px',
           color: isMyMenuOpen ? '#ffffff' : '#5e399a',
         }}
-        className='cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-4px'
+        className='cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-3px'
       >
         {buttonText}
       </span>

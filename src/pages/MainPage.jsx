@@ -61,7 +61,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           <NoticeBanner />
         </div>
 
-        <div style={{ width: "1260px" }} className="flex items-center justify-start mt-4px">
+        <div style={{ width: "1260px" }} className="flex items-center justify-start mt-2px">
           <Carousel />
           <div style={{ height: "326px" }} className="flex flex-col ml-5px justify-end">
             <Jackpot />
