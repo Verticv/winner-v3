@@ -248,6 +248,7 @@ const Carousel = () => {
           totalSlides={84}
           visibleSlides={6}
           step={1}
+          currentSlide={42}
           infinite={false}
         >
           <div className="w-full relative flex items-center justify-center">

@@ -59,7 +59,7 @@ const Button = ({ number }) => {
 
 const Paragraph = ({ text }) => {
   return (
-    <p className="w-61px h-12px flex justify-center items-center text-center text-r666666 font-spoqaMedium text-12px tracking-tight">
+    <p className="w-61px h-12px flex justify-center items-center text-center text-r666666 font-spoqaMedium text-12px tracking-tight mt-px">
       {text}
     </p>
   );
@@ -71,7 +71,9 @@ const Club = ({ text, Icon }) => {
       <div style={{ background: "#b8afcd" }} className="w-28px h-28px flex items-center justify-center rounded-full">
         <img className="object-contain" src={Icon} alt={text} />
       </div>
-      <p className="text-r666666 font-spoqaBold text-15px tracking-tight ml-5px h-15px flex items-center mt-px">{text}</p>
+      <p className="text-r666666 font-spoqaBold text-15px tracking-tight ml-4px h-15px flex items-center mt-2px">
+        {text}
+      </p>
     </div>
   );
 };
@@ -84,7 +86,7 @@ const Card = ({ item }) => {
           boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.4)",
           width: "403px",
           height: "139px",
-          backgroundColor:'#eeeeee'
+          backgroundColor: "#eeeeee",
         }}
         // TODO: add the correct shadow
         className="flex flex-col p-5px rounded-6px"
@@ -99,13 +101,13 @@ const Card = ({ item }) => {
           <div className="flex items-center">
             <img className="object-contain" src={whiteFootball} alt="white football" />
             <img className="object-contain ml-4px" src={item.icon} alt="white football" />
-            <p className="text-white font-spoqaBold text-14px h-14px flex items-center tracking-tight ml-4px">
+            <p className="text-white font-spoqaBold text-14px h-14px flex items-center tracking-tight ml-3px mt-px">
               {item.title}
             </p>
           </div>
           <p
             style={{ color: "#ebabff" }}
-            className="font-robotoRegular text-12px tracking-tight h-12px flex items-center mt-4px"
+            className="font-robotoRegular text-12px tracking-wide h-12px flex items-center mt-4px"
           >
             2022-08-25 / 15:45
           </p>
@@ -145,11 +147,12 @@ const Carousel = () => {
     >
       <CarouselProvider
         visibleSlides={3}
-        totalSlides={7}
+        totalSlides={100}
         step={1}
         naturalSlideWidth={400}
         naturalSlideHeight={500}
         isIntrinsicHeight
+        currentSlide={51}
       >
         <CarouselBackButton className="top-47px" />
         <Slider
@@ -158,27 +161,13 @@ const Carousel = () => {
           }}
           classNameTrayWrap="sport_carousel__slider-tray"
         >
-          <Slide index={0}>
-            <Card item={sampleArray[0]} />
-          </Slide>
-          <Slide index={1}>
-            <Card item={sampleArray[1]} />
-          </Slide>
-          <Slide index={2}>
-            <Card item={sampleArray[2]} />
-          </Slide>
-          <Slide index={3}>
-            <Card item={sampleArray[0]} />
-          </Slide>
-          <Slide index={4}>
-            <Card item={sampleArray[0]} />
-          </Slide>
-          <Slide index={5}>
-            <Card item={sampleArray[0]} />
-          </Slide>
-          <Slide index={6}>
-            <Card item={sampleArray[0]} />
-          </Slide>
+          {Array(100)
+            .fill(0)
+            .map((item, index) => (
+              <Slide index={0}>
+                <Card item={sampleArray[index % 3]} />
+              </Slide>
+            ))}
         </Slider>
         <CarouselNextButton className="top-47px" />
       </CarouselProvider>

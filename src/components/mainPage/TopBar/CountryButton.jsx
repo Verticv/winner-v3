@@ -12,10 +12,15 @@ const CountryButton = () => {
   // TODO: the button should have a shadow
   const CountryButtonComponent = (
     <div
-      style={{ color: "#ffdfbd", height: "25px" }}
+      style={{ color: "#ffdfbd", height: "25px", width: "38px" }}
       className="flex items-center hover:brightness-110 filter text-12px text-yellow-ad9e8c cursor-pointer mt-px" // TODO: check if we should return -mt-px
     >
-      <img className="object-none" src={country === "KR" ? Koreaflag : UKflag} alt="flag" />
+      <img
+        className="object-cover w-full h-full"
+        style={{ borderRadius: "4px" }}
+        src={country === "KR" ? Koreaflag : UKflag}
+        alt="flag"
+      />
     </div>
   );
 
@@ -25,7 +30,7 @@ const CountryButton = () => {
       onClick={() => setCountryOpen(!isCountryOpen)}
       onClose={() => setCountryOpen(false)}
     >
-      <div className="z-50">
+      <div style={{ marginRight: "-30px", marginTop: "4px" }} className="z-50">
         <CountryDropDown setCountry={setCountry} country={country} />
       </div>
     </DropDownControls>

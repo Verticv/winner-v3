@@ -170,8 +170,9 @@ const sampleArray = [
 
 // Slider with animation
 export default function AnimatedCarousel() {
-  const [hoveredTab, setHoveredTab] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const startIndex = 40;
+  const [hoveredTab, setHoveredTab] = useState(startIndex);
+  const [currentIndex, setCurrentIndex] = useState(startIndex);
 
   useEffect(() => {
     console.log(hoveredTab);
@@ -230,13 +231,14 @@ export default function AnimatedCarousel() {
         >
           {isHover && showText && (
             <button
-              className="absolute z-30 top-143px right-176px flex items-center justify-center h-30px w-134px text-white rounded-15px cursor-pointer font-spoqaMedium text-14px tracking-tight"
+              className="absolute z-30 top-143px right-176px flex items-center justify-center h-30px text-white rounded-15px cursor-pointer font-spoqaMedium text-14px tracking-tight"
               style={{
                 boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
                 background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
+                width: "132px",
               }}
             >
-              게임시작
+              <p className="-ml-px mt-2px">게임시작</p>
             </button>
           )}
           {isHover && <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px -mt-px -ml-px"></div>}
@@ -247,11 +249,13 @@ export default function AnimatedCarousel() {
             <img src={right} alt="" />
           </div>
           {!isHover && (
-            <div className="absolute w-full h-full items-center flex justify-center pt-8px">
+            <div className="absolute w-full h-full items-center flex justify-center pt-8px -ml-px">
               <img src={item.center} alt="" />
             </div>
           )}
-          <div className={`absolute bottom-32px w-full flex justify-center -ml-2px ${item.title === "티비벳" && "mb-6px"}`}>
+          <div
+            className={`absolute bottom-30px w-full flex justify-center  ${item.title === "e-스포츠" ? "mb-px -ml-2px" : item.title === "키론가상게임" ? "-ml-3px mb-px" : item.title === "피싱게임" ? "mb-px -ml-px" : item.title === "티비벳" ? "mb-8px -ml-3px" : "-ml-2px"}`}
+          >
             <img src={item.logo} alt="" />
           </div>
           <div
@@ -262,9 +266,10 @@ export default function AnimatedCarousel() {
               borderBottomLeftRadius: "6px",
               borderBottomRightRadius: "6px",
             }}
-            className="w-full bg-red-100 absolute bottom-0 font-spoqaMedium text-16px tracking-tight flex justify-center items-center pt-px -ml-px"
+            className="w-full bg-red-100 absolute bottom-0 font-spoqaMedium text-16px tracking-tight flex justify-center items-center pt-2px -ml-px"
           >
-            {item.title}
+            <p className="-mt-2px">{item.title}</p>
+            
           </div>
         </div>
       </div>
@@ -275,12 +280,13 @@ export default function AnimatedCarousel() {
     <div className="container mx-auto">
       <div className="relative flex items-center justify-center w-full h-full px-4 pb-23px pt-5px">
         <CarouselProvider
-          visibleSlides={81.5}
-          totalSlides={100.29} // the total slid is not an integer because of the animation. if the slides number changed, this number (0.29) should be changed too
+          visibleSlides={201.5}
+          totalSlides={1000.29} // the total slid is not an integer because of the animation. if the slides number changed, this number (0.29) should be changed too
           step={1}
           naturalSlideWidth={184}
           naturalSlideHeight={316}
           isIntrinsicHeight
+          currentSlide={startIndex}
         >
           <CarouselBackButton
             style={{ left: "-35px", top: "125px" }}
@@ -293,7 +299,18 @@ export default function AnimatedCarousel() {
             classNameTrayWrap="animated_carousel_tray_wrapper"
             className="card_animation"
           >
-            {[...sampleArray, ...sampleArray, ...sampleArray, ...sampleArray].map((item, index) => (
+            {[
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+              ...sampleArray,
+            ].map((item, index) => (
               <Slide
                 key={index}
                 className={`card_animation_slide ${hoveredTab === index ? "animated-card" : ""}`}

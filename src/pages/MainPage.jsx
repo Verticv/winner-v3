@@ -77,7 +77,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
           style={{
             maxWidth: "1260px",
             marginTop: "30px",
-            marginBottom: "22px",
+            marginBottom: "23px",
           }}
         >
           <SlotGameHorizontalCarousel />
@@ -95,7 +95,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             maxWidth: "1260px",
-            marginBottom: "24px",
+            marginBottom: "28px",
           }}
         >
           <div className="flex space-x-10px">

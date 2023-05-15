@@ -152,7 +152,7 @@ const Footer = ({ fullWidth = false }) => {
           >
             <p
               style={{ color: "#7f7d9c" }}
-              className="font-spoqaMedium text-14px h-14px tracking-tigther flex items-center text-white mb-19px"
+              className="font-spoqaMedium text-14px h-14px tracking-tigther flex items-center text-white mb-20px"
             >
               {menu.title}
             </p>
@@ -161,7 +161,7 @@ const Footer = ({ fullWidth = false }) => {
                 key={`menu-item-${index}`}
                 onClick={() => history.push(item.link)}
                 style={{ color: "#c8c8c8" }}
-                className="font-spoqa text-13px h-13px flex items-center mb-12px tracking-tigther hover:filter hover:brightness-125 cursor-pointer"
+                className="font-spoqa text-13px h-12px flex items-center mb-12px tracking-tigther hover:filter hover:brightness-125 cursor-pointer"
               >
                 {item.text}
               </p>
@@ -205,28 +205,28 @@ const Footer = ({ fullWidth = false }) => {
         <div style={{ height: "135px", paddingTop: "34px" }} className="flex items-start justify-between">
           <div>
             <img src={Logo} className="object-none" draggable={false} alt="" />
-            <div className="w-full flex items-start mt-12px flex-shrink-0">
+            <div className="w-full flex items-start mt-8px flex-shrink-0 ml-px">
               <div className="flex items-center">
                 <img src={ContactImg1} draggable={false} className="object-none" alt="" />
-                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-5px">고객센터</p>
+                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-5px -mt-px">고객센터</p>
               </div>
-              <div className="flex items-center ml-15px">
-                <img src={ContactImg2} draggable={false} className="object-none" alt="" />
-                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-2px">test1234</p>
+              <div className="flex items-center ml-14px -mb-2px">
+                <img src={ContactImg2} draggable={false} className="object-none mt-2px -ml-px" alt="" />
+                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-2px mb-2px">test1234</p>
               </div>
-              <div className="flex items-center ml-9px">
-                <img src={ContactImg3} draggable={false} className="object-none" alt="" />
-                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-2px">test1234</p>
+              <div className="flex items-center ml-8px -mb-2px">
+                <img src={ContactImg3} draggable={false} className="object-none mt-2px -ml-px" alt="" />
+                <p className="text-white text-14px h-14px flex items-center font-spoqa ml-2px mb-2px">test1234</p>
               </div>
             </div>
           </div>
 
-          <img src={Etc} className="object-none mr-28px" draggable={false} alt="" />
+          <img src={Etc} style={{marginRight:'29px'}} className="object-none -mt-3px" draggable={false} alt="" />
         </div>
         <div style={{ borderColor: "#42404e", height: "62px" }} className="flex justify-center border-t">
           <p
-            style={{ color: "#7f7d9c", marginTop: "19px" }}
-            className="text-14px h-14px flex items-center font-spoqa text-gray-r828282"
+            style={{ color: "#7f7d9c", marginTop: "18px" }}
+            className="text-14px h-14px flex items-center font-spoqaMedium tracking-tight text-gray-r828282"
           >
             Copyright © WINNER. All rights reserved.
           </p>

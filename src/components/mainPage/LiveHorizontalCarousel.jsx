@@ -97,13 +97,14 @@ const list = [
     row2: {
       game: "점검중",
       Img: image7,
+      blur: true,
     },
   },
 ];
 
 const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Caption, Row2Img }) => {
   const alt = "image";
-  const Card = ({ game, caption, Img }) => {
+  const Card = ({ game, caption, Img, isRow2 }) => {
     const [isHover, setHover] = useState(null);
 
     return (
@@ -113,10 +114,24 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
             width: "148px",
             height: "200px",
           }}
-          className="flex flex-shrink-0 relative w-full rounded-6px"
+          className="flex flex-shrink-0 relative w-full rounded-6px overflow-hidden"
           onMouseOver={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
+          {row2Game === "점검중" && isRow2 && (
+            <div className="w-full h-full absolute bg-black z-20 bg-opacity-60">
+              <button
+                style={{
+                  boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+                  background: "linear-gradient(to right, #7e7e7e, #505050)",
+                }}
+                className="absolute z-30 top-83px left-25px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-default font-spoqaMedium text-14px tracking-tight"
+              >
+                점검중
+              </button>
+            </div>
+          )}
+
           <img src={Img} alt={alt} className="object-cover object-center w-full rounded-6px" />
           <div className="absolute bottom-4px ml-10px">
             <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter mb-px">
@@ -135,7 +150,7 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
             </button>
           )}
           {isHover && game !== "점검중" && game !== "준비중" && (
-            <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px"></div>
+            <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px flex items-center justify-center"></div>
           )}
         </div>
       </div>
@@ -145,9 +160,9 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
   return (
     <Slide className="space-y-4" index={index}>
       <div className="mb-10px">
-        <Card Img={Row1Img} game={row1Game} caption={row1Caption} />
+        <Card Img={Row1Img} game={row1Game} caption={row1Caption} isRow2={false} />
       </div>
-      <Card Img={Row2Img} game={row2Game} caption={row2Caption} />
+      <Card Img={Row2Img} game={row2Game} caption={row2Caption} isRow2={true} />
     </Slide>
   );
 };
@@ -156,11 +171,11 @@ export default function LiveHorizontalCarousel() {
   const [isPlaying, setPlaying] = useState(true);
   return (
     <div className="flex flex-col">
-      <div className="flex items-center mb-6px -ml-3px">
+      <div className="flex items-center mb-5px -ml-4px">
         <img className="mb-px" src={Card} alt="" />
         <p
           style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-          className="text-white text-22px font-spoqaBold tracking-tight"
+          className="text-white text-22px font-spoqaBold tracking-tight -mt-4px"
         >
           라이브카지노
         </p>
@@ -196,12 +211,13 @@ export default function LiveHorizontalCarousel() {
               naturalSlideWidth={148}
               naturalSlideHeight={410}
               isIntrinsicHeight={true}
-              totalSlides={14}
+              totalSlides={70}
               visibleSlides={4}
               step={1}
               infinite={true}
               interval={3000}
               isPlaying={isPlaying}
+              currentSlide={35}
             >
               <div className="w-full relative flex items-center justify-center">
                 <CarouselBackButton
@@ -221,18 +237,20 @@ export default function LiveHorizontalCarousel() {
                     }}
                     classNameTrayWrap="live_carousel_tray_wrapper"
                   >
-                    {[...list, ...list].map((item, index) => (
-                      <CustomSlide
-                        Row1Img={item.row1.Img}
-                        row1Caption={item.row1.caption}
-                        row1Game={item.row1.game}
-                        Row2Img={item.row2.Img}
-                        row2Caption={item.row2.caption}
-                        row2Game={item.row2.game}
-                        key={index}
-                        index={index}
-                      />
-                    ))}
+                    {[...list, ...list, ...list, ...list, ...list, ...list, ...list, ...list, ...list, ...list].map(
+                      (item, index) => (
+                        <CustomSlide
+                          Row1Img={item.row1.Img}
+                          row1Caption={item.row1.caption}
+                          row1Game={item.row1.game}
+                          Row2Img={item.row2.Img}
+                          row2Caption={item.row2.caption}
+                          row2Game={item.row2.game}
+                          key={index}
+                          index={index}
+                        />
+                      )
+                    )}
                   </Slider>
                 </div>
                 <CarouselNextButton

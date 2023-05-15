@@ -88,11 +88,11 @@ const LiveRight = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex items-center mb-10px -ml-3px">
+      <div className="flex items-center mb-10px -ml-2px -mt-px">
         <img src={Circle} alt="" />
         <p
           style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-          className="text-white text-22px font-spoqaBold tracking-tight"
+          className="text-white text-22px font-spoqaBold tracking-tight -mt-2px ml-px"
         >
           호텔카지노
         </p>
