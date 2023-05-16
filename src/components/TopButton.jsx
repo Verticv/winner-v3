@@ -21,7 +21,7 @@ const TopButton = ({ scrollPosition }) => {
       }
     >
       <img src={Top} alt='' className='mt-17px' />
-      <p className='font-spoqaMedium text-14px text-black tracking-tight mt-px cursor-pointer'>
+      <p style={{color:'#494650'}} className='font-spoqaMedium text-14px tracking-tight mt-px cursor-pointer'>
         TOP
       </p>
     </div>

@@ -65,19 +65,20 @@ const MinigamesHover = ({ selection }) => {
               height: "26px",
               right: "60px",
             }}
-            className="absolute z-50 top-20px pt-2px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-12px tracking-tighter"
+            className="absolute z-50 top-20px pt-2px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
             게임시작
           </button>
         )}
         {isHover === item.id && <div className="w-full h-full bg-black opacity-60 z-10 rounded-6px"></div>}
+        {item.logo && <img className="object-none absolute right-0 bottom-0" src={item.logo} alt="game_image_logo" />}
+
         <img className={`absolute bottom-0 object-none h-auto z-40`} src={item.background} alt="game_image" />
         <div
           style={{ width: "132px" }}
-          className="absolute flex flex-col justify-start items-center h-full right-0 top-0 z-0"
+          className="absolute flex flex-col justify-end items-center h-full right-0 bottom-0 z-0"
         >
-          <img src={item.logo} alt="game_image_logo" />
-          <p className="text-white text-12px -mb-8px tracking-tighter font-spoqa">{item.imgText}</p>
+          <p className="text-white text-12px tracking-tighter font-spoqa mb-7px">{item.imgText}</p>
         </div>
       </div>
     ));
@@ -87,7 +88,7 @@ const MinigamesHover = ({ selection }) => {
       open={selection === 5}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
         close: { left: hoverMenuPosition },
       }}
       className="rounded-8px absolute w-auto m-auto h-262px bg-white"

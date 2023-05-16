@@ -26,13 +26,14 @@ const Button = ({ text, img }) => {
         boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
         backgroundImage: `url(${ButtonBackground})`,
         backgroundRepeat: "round",
+        borderRadius: '5px'
       }}
-      className="flex flex-col items-center w-75px h-68px rounded-6px pt-7px cursor-pointer hover:filter hover:brightness-125"
+      className="flex flex-col items-center w-75px h-68px pt-7px cursor-pointer hover:filter hover:brightness-125"
     >
-      <div className="w-32px h-32px">
+      <div className="w-32px h-32px mt-px">
         <img src={img} alt={text} className="" />
       </div>
-      <p className="text-white text-13px font-spoqa tracking-tight mt-6px">{text}</p>
+      <p className="text-white text-13px font-spoqa tracking-tight mt-5px">{text}</p>
     </div>
   );
 };
@@ -70,11 +71,13 @@ const QuickMenu = () => {
           className="flex flex-col items-center w-full h-full pt-13px cursor-pointer"
           onMouseOver={() => setIsHover(true)}
         >
-          <img src={LeftIcon} alt="" className="" />
+          <div className="-ml-2px">
+            <img src={LeftIcon} alt="" />
+          </div>
           <div className="text-center">
             <p
               style={{ color: "#5e399a" }}
-              className="absolute left-18px font-semibold transform rotate-90 origin-bottom-left text-16px font-spoqa tracking-normal mt-3px"
+              className="absolute left-18px font-semibold transform rotate-90 origin-bottom-left text-16px font-spoqaMedium tracking-normal mt-3px"
             >
               메뉴열기
             </p>
@@ -101,17 +104,17 @@ const QuickMenu = () => {
           <Button text="비번변경" img={Quick10} />
         </div>
         <div style={{ backgroundColor: "#b8aadd" }} className="h-px w-full mb-10px" />
-        <div className="bg-white h-240px flex flex-col rounded-4px">
+        <div style={{ backgroundColor: "#f9f8fe", width: "155px" }} className="h-240px flex flex-col rounded-4px">
           <div
             style={{
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             }}
-            className="flex justify-center items-center h-32px w-full rounded-4px rounded-b-none"
+            className="flex items-center h-32px w-full rounded-4px rounded-b-none"
           >
-            <img src={Contact} alt="" className="mr-4px" />
+            <img src={Contact} alt="" style={{ marginLeft: "43px" }} className="mr-4px" />
             <p className="text-white text-14px font-spoqa tracking-tight">고객센터</p>
           </div>
-          <div className="flex flex-col justify-center items-center pt-15px">
+          <div className="flex flex-col justify-center items-center pt-15px -ml-px">
             <img src={Telegram} alt="" className="" />
             <p style={{ color: "#62438f" }} className="text-14px font-spoqa tracking-tight -mt-5px">
               test1234
@@ -121,7 +124,7 @@ const QuickMenu = () => {
               test1234
             </p>
             <div style={{ backgroundColor: "#b8aadd", width: "145px" }} className="h-px mt-11px mx-5px" />
-            <p style={{ color: "#62438f" }} className="text-13px font-spoqa tracking-tight mt-11px text-center">
+            <p style={{ color: "#62438f" }} className="text-13px font-spoqa tracking-tight mt-11px text-center ml-3px">
               24시간 운영중 <br /> <span className="block -mt-4px">언제든지 문의주세요.</span>
             </p>
           </div>

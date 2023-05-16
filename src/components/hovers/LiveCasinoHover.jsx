@@ -51,66 +51,66 @@ const LiveCasinoHover = ({ selection }) => {
     },
     {
       id: 1,
-      background: Img1_5,
-      logo: Img1_5_logo,
+      background: Img1_2,
+      logo: Img1_2_logo,
       imgText: "에볼루션",
       path: "/esports/multi",
     },
     {
       id: 2,
-      background: Img1_9,
-      logo: Img1_9_logo,
+      background: Img1_3,
+      logo: Img1_3_logo,
       imgText: "로얄지",
       path: "/esports/multi",
     },
     {
       id: 3,
-      background: Img1_2,
-      logo: Img1_2_logo,
+      background: Img1_4,
+      logo: Img1_4_logo,
       imgText: "아시아게이밍",
       path: "/esports/structure",
     },
     {
       id: 4,
-      background: Img1_6,
-      logo: Img1_6_logo,
+      background: Img1_5,
+      logo: Img1_5_logo,
 
       imgText: "드림게이밍",
       path: "/esports/multi",
     },
     {
       id: 5,
-      background: Img1_10,
-      logo: Img1_10_logo,
+      background: Img1_6,
+      logo: Img1_6_logo,
       imgText: "섹시게이밍",
       path: "/esports/multi",
     },
     {
       id: 6,
-      background: Img1_3,
-      logo: Img1_3_logo,
+      background: Img1_7,
+      logo: Img1_7_logo,
       imgText: "빅게이밍",
       path: "/esports/single",
     },
     {
       id: 7,
-      background: Img1_7,
-      logo: Img1_7_logo,
+      background: Img1_9,
+      logo: Img1_9_logo,
 
       imgText: "오리엔탈게임",
       path: "/esports/multi",
     },
     {
       id: 8,
-      background: Img1_11,
-      logo: Img1_11_logo,
+      background: Img1_10,
+      logo: Img1_10_logo,
       imgText: "이주기",
       path: "/esports/multi",
     },
     {
       id: 9,
-      background: Img1_4,
-      logo: Img1_4_logo,
+      background: Img1_11,
+      logo: Img1_11_logo,
       imgText: "마이크로게이밍",
       path: "/esports/multi",
     },
@@ -174,7 +174,7 @@ const LiveCasinoHover = ({ selection }) => {
               height: "26px",
               right: "60px",
             }}
-            className="absolute z-50 top-0px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-12px tracking-tighter"
+            className="absolute z-50 top-0px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
             게임시작
           </button>
@@ -188,7 +188,7 @@ const LiveCasinoHover = ({ selection }) => {
               height: "26px",
               right: "60px",
             }}
-            className="absolute z-50 top-21px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-12px tracking-tighter"
+            className="absolute z-50 top-21px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
             점검중
           </button>
@@ -204,21 +204,14 @@ const LiveCasinoHover = ({ selection }) => {
           src={item.background}
           alt="game_image"
         />
+        {item.logo && <img className="object-none absolute right-0 bottom-0" src={item.logo} alt="game_image_logo" />}
+
         <div
           style={{ width: "132px" }}
           className={`absolute flex flex-col ${
             item.logo ? "justify-start" : "justify-center"
           } items-center h-full right-0 top-0 z-0`}
         >
-          {item.logo && (
-            <img
-              style={{
-                marginTop: item.id === 8 || item.id === 6 ? "2px" : item.id === 5 ? "1px" : "",
-              }}
-              src={item.logo}
-              alt="game_image_logo"
-            />
-          )}
           <p
             style={{ color: item.imgText === "준비중" ? "#ebabff" : "#fff" }}
             className="absolute bottom-0 text-12px mb-6px tracking-tighter font-spoqa w-full text-center pr-px"
@@ -234,7 +227,7 @@ const LiveCasinoHover = ({ selection }) => {
       open={selection === 0}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
         close: { left: hoverMenuPosition },
       }}
       className="rounded-8px absolute w-auto m-auto h-262px bg-white"

@@ -12,32 +12,16 @@ import DropDownControls from "components/dropdowns/DropDownControls";
 registerLocale("ko", ko);
 
 const CustomDatePicker = ({ classes }) => {
-  const months = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-  ];
+  const months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
   const [selectedYear, setSelectedYear] = useState(getYear(new Date()));
-  const [selectedMonth, setSelectedMonth] = useState(
-    months[getMonth(new Date())]
-  );
+  const [selectedMonth, setSelectedMonth] = useState(months[getMonth(new Date())]);
   const [startDate, setStartDate] = useState(new Date());
   const years = range(getYear(new Date()) - 100, getYear(new Date()) + 1, 1);
 
   const [isDropdownOpen, setDropdownOpen] = useState(true);
 
-  const dropDownCellClass =
-    "flex w-170px h-40px py-4px items-center hover:bg-white hover:bg-opacity-10 px-10px";
+  const dropDownCellClass = "flex w-170px h-40px py-4px items-center hover:bg-white hover:bg-opacity-10 px-10px";
 
   const yearButton = (
     <div
@@ -176,6 +160,7 @@ const CustomDatePicker = ({ classes }) => {
         dateFormatCalendar="yyyy년 MM월"
       />
       <img
+        style={{ marginTop: "13px", marginRight: "12px" }}
         src={CalendarIcon}
         alt=""
         className="absolute top-0 right-0 mt-12px mr-10px"

@@ -34,16 +34,14 @@ const SignedUpPopup = ({ setToLogin }) => {
           </div>
         </div>
 
-        <div
-          style={{ backgroundColor: "#dfdbfa" }}
-          className="w-full h-full flex flex-col items-center"
-        >
+        <div style={{ backgroundColor: "#dfdbfa" }} className="w-full h-full flex flex-col items-center">
           <div className="w-full flex justify-center mt-15px">
             <img src={SignedUpIcon} alt="login_icon" className="object-none" />
           </div>
           <label
             style={{
-              marginTop: "13px",
+              marginTop: "14px",
+              marginLeft: "2px",
               color: "#682aa7",
               letterSpacing: "-0.005em",
             }}
@@ -52,34 +50,28 @@ const SignedUpPopup = ({ setToLogin }) => {
             가입 신청이 완료 되었습니다.
           </label>
           <label
-            style={{ color: "#666666", letterSpacing: "-0.005em" }}
-            className="flex font-spoqaMedium text-30px h-30px items-center mt-13px"
+            style={{ color: "#666666", letterSpacing: "-0.005em", marginLeft: "12px" }}
+            className="flex font-spoqaMedium text-30px h-30px items-center mt-11px"
           >
             관리자{" "}
-            <label
-              style={{ color: "#ec1676" }}
-              className="font-spoqaBold pl-4px"
-            >
+            <label style={{ color: "#ec1676" }} className="font-spoqaBold pl-7px pr-px">
               승인 대기중
             </label>{" "}
             입니다.
           </label>
           <div
-            style={{ marginTop: "42px", color: "#666666" }}
+            style={{ marginTop: "41px", color: "#666666", marginLeft: "-1px" }}
             className="text-20px font-spoqaMedium flex flex-col items-center justify-center tracking-tighter"
           >
             <span style={{ height: "20px" }} className="flex items-center">
               관리자 승인 후 로그인 하시면 정상적으로 서비스 이용이 가능합니다.
             </span>
-            <span
-              style={{ height: "20px" }}
-              className="flex items-center mt-5px"
-            >
+            <span style={{ height: "20px", marginLeft: "-2px" }} className="flex items-center mt-4px">
               깨끗하고 안전한 운영을 자랑합니다.
             </span>
           </div>
           {/* BREAK */}
-          <div style={{ marginTop: "51px" }} className="flex space-x-5px">
+          <div style={{ marginTop: "49px" }} className="flex space-x-5px">
             <div
               style={{
                 height: "190px",
@@ -90,10 +82,7 @@ const SignedUpPopup = ({ setToLogin }) => {
               className="flex flex-col items-center"
             >
               <img style={{ marginTop: "20px" }} src={img1} alt="" />
-              <div
-                style={{ color: "#fff", marginTop: "18px" }}
-                className="flex flex-col items-center"
-              >
+              <div style={{ color: "#fff", marginTop: "19px" }} className="flex flex-col items-center">
                 <div className="font-spoqaMedium text-16px tracking-tight h-16px flex items-center">
                   회원님의 모든 데이터는
                 </div>
@@ -115,10 +104,7 @@ const SignedUpPopup = ({ setToLogin }) => {
               className="flex flex-col items-center"
             >
               <img style={{ marginTop: "20px" }} src={img2} alt="" />
-              <div
-                style={{ color: "#fff", marginTop: "18px" }}
-                className="flex flex-col items-center"
-              >
+              <div style={{ color: "#fff", marginTop: "19px" }} className="flex flex-col items-center">
                 <div className="font-spoqaMedium text-16px tracking-tight h-16px flex items-center">
                   아이디/비밀번호를
                 </div>
@@ -140,13 +126,8 @@ const SignedUpPopup = ({ setToLogin }) => {
               className="flex flex-col items-center"
             >
               <img style={{ marginTop: "20px" }} src={img3} alt="" />
-              <div
-                style={{ color: "#fff", marginTop: "18px" }}
-                className="flex flex-col items-center"
-              >
-                <div className="font-spoqaMedium text-16px tracking-tight h-16px flex items-center">
-                  회원 탈퇴 후
-                </div>
+              <div style={{ color: "#fff", marginTop: "19px" }} className="flex flex-col items-center">
+                <div className="font-spoqaMedium text-16px tracking-tight h-16px flex items-center">회원 탈퇴 후</div>
                 <div className="font-spoqaMedium text-16px tracking-tight h-16px flex items-center mt-3px">
                   회원님의 정보는
                 </div>
@@ -162,14 +143,12 @@ const SignedUpPopup = ({ setToLogin }) => {
               width: "390px",
               boxShadow: "0 2px 6px #00000090",
               background: "linear-gradient(to right, #df52ff, #6f2afd)",
-							marginTop:'30px'
+              marginTop: "30px",
             }}
             className="text-20px tracking-tighter font-spoqaMedium text-white filter hover:brightness-125 flex-shrink-0 rounded-full"
             onClick={() => setToLogin(true)}
           >
-            <p className="text-20px h-20px flex items-center justify-center">
-              로그인
-            </p>
+            <p className="text-20px h-20px flex items-center justify-center mt-2px -ml-px">로그인</p>
           </button>
         </div>
       </div>

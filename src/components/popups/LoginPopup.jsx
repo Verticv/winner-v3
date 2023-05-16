@@ -9,8 +9,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
   const [toSignup, setToSignup] = useState(false);
   const [selectedInput, setSelectedInput] = useState();
 
-  if (toSignup)
-    return <SignupPopup setAuth={setAuth} setPopupOpen={setPopupOpen} />;
+  if (toSignup) return <SignupPopup setAuth={setAuth} setPopupOpen={setPopupOpen} />;
   else
     return (
       <div
@@ -32,7 +31,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
         >
           <div style={{ height: "68px" }} className="w-full">
             <button
-              style={{ top: "24px", right: "22px" }}
+              style={{ top: "26px", right: "22px" }}
               className="absolute cursor-pointer z-20 filter hover:brightness-125"
               onClick={() => setPopupOpen(false)}
             >
@@ -41,7 +40,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
 
             <div className="w-full flex justify-center">
               <label
-                style={{ color: "#ffffff", marginTop: "23px" }}
+                style={{ color: "#ffffff", marginTop: "22px", marginLeft: "2px" }}
                 className="font-spoqaBold text-24px h-24px flex items-center"
               >
                 로그인
@@ -53,10 +52,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
             style={{ height: "546px", backgroundColor: "#dfdbfa" }}
             className="w-full h-full flex flex-col items-center"
           >
-            <div
-              style={{ marginTop: "37px" }}
-              className="w-full flex justify-center object-none"
-            >
+            <div style={{ marginTop: "37px" }} className="w-full flex justify-center object-none">
               <img src={LoginIcon} alt="login_icon" />
             </div>
             <div
@@ -65,7 +61,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                 height: "64px",
                 backgroundColor: "#fff",
                 borderRadius: "4px",
-                boxShadow: "inset 1px 1px 0px 0px #00000050",
+                boxShadow: "inset 1px 1px 0px 0px #00000060",
                 marginTop: "37px",
               }}
               className="relative overflow-hidden flex items-center flex-shrink-0 py-4px"
@@ -76,7 +72,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                   color: "#000",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqa w-full h-full px-18px placeholder-r797979 pt-3px text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r797979 pt-3px text-center"
                 placeholder={"아이디"}
                 onFocus={(e) => {
                   e.target.placeholder = "";
@@ -91,8 +87,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
 
               <div
                 style={{
-                  backgroundColor:
-                    selectedInput === 0 ? "#732dab" : "#ffffff00",
+                  backgroundColor: selectedInput === 0 ? "#732dab" : "#ffffff00",
                 }}
                 className={`absolute bottom-0 w-full h-3px`}
               />
@@ -104,7 +99,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                 height: "64px",
                 backgroundColor: "#fff",
                 borderRadius: "4px",
-                boxShadow: "inset 1px 1px 0px 0px #00000050",
+                boxShadow: "inset 1px 1px 0px 0px #00000060",
                 marginTop: "20px",
               }}
               className="relative overflow-hidden flex items-center flex-shrink-0 py-4px"
@@ -115,7 +110,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                   color: "#000",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqa w-full h-full px-18px placeholder-r797979 pt-3px text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r797979 pt-3px text-center"
                 placeholder={"비밀번호"}
                 type="password"
                 onFocus={(e) => {
@@ -131,8 +126,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
 
               <div
                 style={{
-                  backgroundColor:
-                    selectedInput === 1 ? "#732dab" : "#ffffff00",
+                  backgroundColor: selectedInput === 1 ? "#732dab" : "#ffffff00",
                 }}
                 className={`absolute bottom-0 w-full h-3px`}
               />
@@ -148,20 +142,12 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
               className="text-20px tracking-tighter font-spoqaMedium text-white filter hover:brightness-125 mt-40px flex-shrink-0 rounded-full"
               onClick={() => setAuth(true)}
             >
-              <p className="text-20px h-20px flex items-center justify-center">
-                로그인
-              </p>
+              <p className="text-20px h-20px flex items-center justify-center mt-px">로그인</p>
             </button>
 
-            <div
-              style={{ marginTop: "37px", color: "#5e399a" }}
-              className="text-16px mt-55px"
-            >
+            <div style={{ marginTop: "33px", color: "#5e399a", marginLeft: "-2px" }} className="text-16px">
               <span className="font-spoqa">아이디가 없으신가요?</span>
-              <button
-                className="filter hover:brightness-125 ml-8px"
-                onClick={() => setToSignup(true)}
-              >
+              <button className="filter hover:brightness-125 ml-8px" onClick={() => setToSignup(true)}>
                 <p className="h-16px font-spoqaMedium">회원가입</p>
                 <div
                   style={{
