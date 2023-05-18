@@ -157,6 +157,7 @@ const Carousel = () => {
         naturalSlideHeight={500}
         isIntrinsicHeight
         currentSlide={51}
+        dragEnabled={false}
       >
         <CarouselBackButton className="top-47px" />
         <Slider

@@ -151,7 +151,12 @@ const CustomSlide = ({
         className="flex flex-shrink-0 relative w-full p-10px rounded-8px cursor-pointer hover:filter hover:brightness-125 transition"
       >
         <div style={{ height: "212px", width: "182px" }} className="rounded-6px">
-          <img src={Img} style={{aspectRatio: 1, width: "182px"}} alt="" className="object-cover rounded-t-6px object-center w-full" />
+          <img
+            src={Img}
+            style={{ aspectRatio: 1, width: "182px" }}
+            alt=""
+            className="object-cover rounded-t-6px object-center w-full"
+          />
         </div>
 
         <img src={Badge} alt="badge" className="object-cover object-center absolute -top-2px left-12px z-20" />
@@ -163,7 +168,12 @@ const CustomSlide = ({
         </p>
 
         <div
-          style={{ height: "20px", width: "182px", background: "linear-gradient(to top, #311c43, #311c4300)", bottom:'45px' }}
+          style={{
+            height: "20px",
+            width: "182px",
+            background: "linear-gradient(to top, #311c43, #311c4300)",
+            bottom: "45px",
+          }}
           className="w-full absolute z-20"
         ></div>
         <div
@@ -250,6 +260,7 @@ const Carousel = () => {
           step={1}
           currentSlide={42}
           infinite={false}
+          dragEnabled={false}
         >
           <div className="w-full relative flex items-center justify-center">
             <CarouselBackButton style={{ marginTop: "-12px", marginLeft: "5px" }} />

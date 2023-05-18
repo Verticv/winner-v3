@@ -171,3 +171,7 @@ body {
 }
 
 /* End Tabs Style */
+
+.focusRing___1airF.carousel__slide-focus-ring {
+  outline: none !important;
+}

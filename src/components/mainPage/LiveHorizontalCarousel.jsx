@@ -218,6 +218,7 @@ export default function LiveHorizontalCarousel() {
               interval={3000}
               isPlaying={isPlaying}
               currentSlide={35}
+              dragEnabled={false}
             >
               <div className="w-full relative flex items-center justify-center">
                 <CarouselBackButton

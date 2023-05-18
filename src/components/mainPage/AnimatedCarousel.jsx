@@ -188,18 +188,19 @@ export default function AnimatedCarousel() {
 
   const SlideWithAnimation = ({ item, index }) => {
     const isHover = hoveredTab === index;
-    const [showText, setShowText] = useState(false);
-    useEffect(() => {
-      if (isHover) {
-        setTimeout(() => {
-          setShowText(true);
-        }, 200);
-      }
+    // const [showText, setShowText] = useState(false);
+    // useEffect(() => {
+    //   console.log(showText, isHover)
+    //   if (isHover) {
+    //     setTimeout(() => {
+    //       setShowText(true);
+    //     }, 200);
+    //   }
 
-      return () => {
-        setShowText(false);
-      };
-    }, [isHover]);
+    //   return () => {
+    //     setShowText(false);
+    //   };
+    // }, [isHover]);
 
     return (
       <div
@@ -229,17 +230,19 @@ export default function AnimatedCarousel() {
             setHoveredTab(index);
           }}
         >
-          {isHover && showText && (
-            <button
-              className="absolute z-30 top-143px right-176px flex items-center justify-center h-30px text-white rounded-15px cursor-pointer font-spoqaMedium text-14px tracking-tight"
-              style={{
-                boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
-                background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
-                width: "132px",
-              }}
-            >
-              <p className="-ml-px mt-2px">게임시작</p>
-            </button>
+          {isHover && (
+            <div className="absolute z-30 flex items-center justify-center h-full w-full">
+              <button
+                className="flex items-center justify-center h-30px text-white rounded-15px cursor-pointer font-spoqaMedium text-14px tracking-tight mb-2px mr-2px"
+                style={{
+                  boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+                  background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
+                  width: "132px",
+                }}
+              >
+                <p className="-ml-px mt-2px">게임시작</p>
+              </button>
+            </div>
           )}
           {isHover && <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px -mt-px -ml-px"></div>}
           <div className="absolute top-px left-px rounded-6px overflow-hidden">
@@ -254,7 +257,17 @@ export default function AnimatedCarousel() {
             </div>
           )}
           <div
-            className={`absolute bottom-30px w-full flex justify-center  ${item.title === "e-스포츠" ? "mb-px -ml-2px" : item.title === "키론가상게임" ? "-ml-3px mb-px" : item.title === "피싱게임" ? "mb-px -ml-px" : item.title === "티비벳" ? "mb-8px -ml-3px" : "-ml-2px"}`}
+            className={`absolute bottom-30px w-full flex justify-center  ${
+              item.title === "e-스포츠"
+                ? "mb-px -ml-2px"
+                : item.title === "키론가상게임"
+                ? "-ml-3px mb-px"
+                : item.title === "피싱게임"
+                ? "mb-px -ml-px"
+                : item.title === "티비벳"
+                ? "mb-8px -ml-3px"
+                : "-ml-2px"
+            }`}
           >
             <img src={item.logo} alt="" />
           </div>
@@ -269,7 +282,6 @@ export default function AnimatedCarousel() {
             className="w-full bg-red-100 absolute bottom-0 font-spoqaMedium text-16px tracking-tight flex justify-center items-center pt-2px -ml-px"
           >
             <p className="-mt-2px">{item.title}</p>
-            
           </div>
         </div>
       </div>
@@ -287,6 +299,7 @@ export default function AnimatedCarousel() {
           naturalSlideHeight={316}
           isIntrinsicHeight
           currentSlide={startIndex}
+          dragEnabled={false}
         >
           <CarouselBackButton
             style={{ left: "-35px", top: "125px" }}
