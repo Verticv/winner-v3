@@ -233,7 +233,7 @@ export default function AnimatedCarousel() {
           {isHover && (
             <div className="absolute z-30 flex items-center justify-center h-full w-full">
               <button
-                className="flex items-center justify-center h-30px text-white rounded-15px cursor-pointer font-spoqaMedium text-14px tracking-tight mb-2px mr-2px"
+                className="flex items-center justify-center h-30px text-white rounded-15px cursor-pointer font-spoqaMedium text-14px tracking-tight mb-2px mr-2px filter hover:brightness-125"
                 style={{
                   boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
                   background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
