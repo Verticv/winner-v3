@@ -115,6 +115,7 @@ export default function SlotGameVerticalCarousel() {
             naturalSlideHeight={100}
             // Note: there is a min-width style applied to the carousel based on the vertical_carousel class in tha App.css file
             isPlaying
+            dragEnabled={false}
           >
             <Slider classNameTrayWrap="carousel_tray_wrapper_horizontal" className="card_animation">
               {Array(20)
