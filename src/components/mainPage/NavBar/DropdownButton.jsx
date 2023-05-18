@@ -23,10 +23,10 @@ const DropdownButton = ({
       style={{
         color: isMyMenuOpen ? '#ffffff' : '#5e399a',
         background: isMyMenuOpen ? '#5323a0' : 'none',
-        height: '82px',
+        height: '85px',
         marginTop: '-4px',
       }}
-      className={`w-80px ${isMyMenuOpen ? selectedTabClass : tabClass}`}
+      className={`w-80px hover:filter hover:brightness-150 ${isMyMenuOpen ? selectedTabClass : tabClass}`}
       onMouseOver={onMouseOver}
     >
       <div className='flex justify-center w-48px h-48px ml-px mt-2px'>

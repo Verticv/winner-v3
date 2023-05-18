@@ -95,7 +95,7 @@ const list = [
       Img: image7,
     },
     row2: {
-      game: "점검중",
+      game: "준비중",
       Img: image7,
       blur: true,
     },
@@ -118,7 +118,7 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
           onMouseOver={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
-          {row2Game === "점검중" && isRow2 && (
+          {row2Game === "준비중" && isRow2 && (
             <div className="w-full h-full absolute bg-black z-20 bg-opacity-60">
               <button
                 style={{
@@ -132,7 +132,7 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
             </div>
           )}
 
-          <img src={Img} alt={alt} className="object-cover object-center w-full rounded-6px" />
+          <img src={Img} alt={alt} className="object-none object-center w-full rounded-6px" />
           <div className="absolute bottom-4px ml-10px">
             <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter mb-px">
               {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
@@ -197,7 +197,7 @@ export default function LiveHorizontalCarousel() {
             // style={{ width: '193px', height: '410px' }}
             className="object-cover rounded-6px"
           />
-          <div className="absolute bottom-4px ml-10px">
+          <div className="absolute bottom-5px ml-10px">
             <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter">
               프레그메틱플레이
             </p>

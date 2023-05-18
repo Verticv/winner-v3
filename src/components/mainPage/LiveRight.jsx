@@ -21,7 +21,7 @@ const LiveRight = () => {
       background: Dowin,
       logo: DowinLogo,
       imgText: "두윈카지노",
-      logoClass: "top-24px",
+      logoClass: "top-25px ml-px",
     },
     {
       id: 1,
@@ -29,7 +29,7 @@ const LiveRight = () => {
       logo: TgLogo,
       imgText: "보타카지노",
       path: "/esports/single",
-      logoClass: "top-29px",
+      logoClass: "top-30px",
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ const LiveRight = () => {
 
       imgText: "호텔카지노",
       path: "/",
-      logoClass: "top-36px",
+      logoClass: "top-37px ml-px",
     },
   ];
 
@@ -46,11 +46,14 @@ const LiveRight = () => {
     return items.map((item) => (
       <div
         key={item.id}
-        className={`${2 !== item.id ? "cursor-pointer" : "cursor-default" } relative group flex items-center flex-shrink-0 h-68px rounded-6px`}
+        className={`${
+          2 !== item.id ? "cursor-pointer" : "cursor-default"
+        } relative group flex items-center flex-shrink-0 rounded-6px`}
         style={{
           width: "360px",
           height: "130px",
           background: "linear-gradient(to right, #9c3bbb, #411d99)",
+          overflow: "hidden",
         }}
         onMouseEnter={() => setHover(item.id)}
         onMouseLeave={() => setHover(null)}
@@ -68,17 +71,21 @@ const LiveRight = () => {
             게임시작
           </button>
         )}
-        {isHover === item.id && 2 !== item.id && <div className="w-full h-full bg-black opacity-60 z-20 rounded-6px"></div>}
-        <img className={`absolute bottom-0 object-none h-auto z-0`} src={item.background} alt="game_image" />
+        {isHover === item.id && 2 !== item.id && (
+          <div className="w-full h-full bg-black opacity-60 z-20 rounded-6px"></div>
+        )}
+        <img className={`absolute top-0 object-none h-auto z-0`} src={item.background} alt="game_image" />
         <div
           style={{ width: "132px" }}
           className="absolute flex flex-col justify-center items-center h-full left-0 top-0 z-10"
         >
           <img className={`absolute left-0 ${item.logoClass}`} src={item.logo} alt="game_image_logo" />
-          <div className="absolute bottom-6px -left-px flex">
+          <div className={`${item.imgText === "보타카지노" ? "bottom-4px" : "bottom-5px"} absolute  -left-px flex`}>
             <p className="text-white text-14px tracking-tight font-spoqaMedium ml-11px">{item.imgText}</p>
             {item.imgText === "호텔카지노" && (
-              <p style={{color:'#ebabff'}} className="text-white text-14px tracking-tight font-spoqaMedium">(준비중)</p>
+              <p style={{ color: "#ebabff" }} className="text-white text-14px tracking-tight font-spoqaMedium">
+                (준비중)
+              </p>
             )}
           </div>
         </div>

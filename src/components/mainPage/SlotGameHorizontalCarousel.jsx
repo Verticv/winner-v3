@@ -252,7 +252,7 @@ const Carousel = () => {
           infinite={false}
         >
           <div className="w-full relative flex items-center justify-center">
-            <CarouselBackButton style={{ marginTop: "-13px", marginLeft: "5px" }} />
+            <CarouselBackButton style={{ marginTop: "-12px", marginLeft: "5px" }} />
             <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
               <Slider classNameTrayWrap="carousel_tray_wrapper">
                 {/* <div
@@ -294,7 +294,7 @@ const Carousel = () => {
                 {/* </div> */}
               </Slider>
             </div>
-            <CarouselNextButton style={{ marginTop: "-13px", marginRight: "5px" }} />
+            <CarouselNextButton style={{ marginTop: "-12px", marginRight: "5px" }} />
           </div>
         </CarouselProvider>
       </div>

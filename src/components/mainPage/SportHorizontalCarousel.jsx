@@ -39,19 +39,23 @@ const sampleArray = [
 const Button = ({ number }) => {
   return (
     <button
-      className="w-61px h-31px filter hover:brightness-125 rounded-6px p-px transition"
+      className="w-61px h-31px filter hover:brightness-125 p-px transition"
       style={{
         boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
         background: "linear-gradient(to bottom, #edcfff, #553c84)",
+        borderRadius: "5px",
       }}
     >
       <div
-        className="w-full h-full rounded-6px flex items-center justify-center"
+        className="w-full h-full flex items-center justify-center"
         style={{
           background: "linear-gradient(to top, rgb(73,31,156), rgb(158,60,188))",
+          borderRadius: "5px",
         }}
       >
-        <p className="text-white font-roboto text-14px tracking-tight h-14px flex items-center mt-px">{number}</p>
+        <p className="text-white font-robotoRegular text-14px tracking-tight h-14px flex items-center mt-px">
+          {number}
+        </p>
       </div>
     </button>
   );
