@@ -32,15 +32,15 @@ const LoggedInHeader = ({ setAuth }) => {
             </p>
             <p
               style={{
-                maxWidth: '144px',
-                textOverflow: 'unset',
+                maxWidth: '120px',
+                textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
                 lineHeight: '18px',
               }}
               className='font-spoqa tracking-tight'
             >
-              마이프로틴님
+              마이프로틴님asdasdasd
             </p>
           </p>
         </button>

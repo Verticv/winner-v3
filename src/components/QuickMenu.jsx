@@ -13,8 +13,6 @@ import Quick10 from "../images/sideMenu/10.png";
 import Telegram from "../images/sideMenu/telegram.png";
 import Tiktok from "../images/sideMenu/tiktok.png";
 import Contact from "../images/sideMenu/contact.png";
-
-import ButtonBackground from "../images/sideMenu/button_background.png";
 import LeftIcon from "../images/sideMenu/left.png";
 
 const Button = ({ text, img }) => {
@@ -24,16 +22,40 @@ const Button = ({ text, img }) => {
       onClick={() => history.push("#")}
       style={{
         boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
-        backgroundImage: `url(${ButtonBackground})`,
-        backgroundRepeat: "round",
-        borderRadius: '5px'
+        borderRadius: "5px",
+        height: "68px",
+        width: "75px",
+        padding: "1px",
+        background: "linear-gradient(to bottom, #edcfff, #503b7c)",
       }}
-      className="flex flex-col items-center w-75px h-68px pt-7px cursor-pointer hover:filter hover:brightness-125"
     >
-      <div className="w-32px h-32px mt-px">
-        <img src={img} alt={text} className="" />
+      <div
+        style={{ borderRadius: "4.5px", background: "linear-gradient(to bottom, #9c3bbb, #4a1f9c)" }}
+        className="flex flex-col items-center w-full h-full pt-6px cursor-pointer hover:filter hover:brightness-125 bg-transparent"
+      >
+        <div className="w-32px h-32px mt-px">
+          <img src={img} alt={text} className="" />
+        </div>
+        <p
+          className={`${
+            text === "출석부"
+              ? "-ml-2px"
+              : text === "경기결과"
+              ? "-ml-2px"
+              : text === "문의하기"
+              ? "-ml-2px"
+              : text === "베팅내역"
+              ? "-ml-2px"
+              : text === "라이브영상"
+              ? "-ml-2px"
+              : text === "충/환전내역"
+              ? "-mr-px"
+              : ""
+          } text-white text-13px font-spoqa tracking-tight mt-5px`}
+        >
+          {text}
+        </p>
       </div>
-      <p className="text-white text-13px font-spoqa tracking-tight mt-5px">{text}</p>
     </div>
   );
 };
@@ -116,15 +138,18 @@ const QuickMenu = () => {
           </div>
           <div className="flex flex-col justify-center items-center pt-15px -ml-px">
             <img src={Telegram} alt="" className="" />
-            <p style={{ color: "#62438f" }} className="text-14px font-spoqa tracking-tight -mt-5px">
+            <p style={{ color: "#62438f" }} className="text-14px font-spoqaMedium tracking-tight -mt-5px">
               test1234
             </p>
             <img src={Tiktok} alt="" className="mt-5px" />
-            <p style={{ color: "#62438f" }} className="text-14px font-spoqa tracking-tight -mt-5px">
+            <p style={{ color: "#62438f" }} className="text-14px font-spoqaMedium tracking-tight -mt-5px">
               test1234
             </p>
             <div style={{ backgroundColor: "#b8aadd", width: "145px" }} className="h-px mt-11px mx-5px" />
-            <p style={{ color: "#62438f" }} className="text-13px font-spoqa tracking-tight mt-11px text-center ml-3px">
+            <p
+              style={{ color: "#62438f" }}
+              className="text-13px font-spoqaMedium tracking-tight mt-11px text-center ml-3px"
+            >
               24시간 운영중 <br /> <span className="block -mt-4px">언제든지 문의주세요.</span>
             </p>
           </div>

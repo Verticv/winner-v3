@@ -13,7 +13,7 @@ const CountryButton = () => {
   const CountryButtonComponent = (
     <div
       style={{ color: "#ffdfbd", height: "25px", width: "38px" }}
-      className="flex items-center hover:brightness-110 filter text-12px text-yellow-ad9e8c cursor-pointer mt-px" // TODO: check if we should return -mt-px
+      className="flex items-center hover:brightness-110 filter text-12px text-yellow-ad9e8c cursor-pointer" // TODO: check if we should return -mt-px
     >
       <img
         className="object-cover w-full h-full"

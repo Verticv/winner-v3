@@ -75,7 +75,10 @@ const Club = ({ text, Icon }) => {
       <div style={{ background: "#b8afcd" }} className="w-28px h-28px flex items-center justify-center rounded-full">
         <img className="object-contain" src={Icon} alt={text} />
       </div>
-      <p className="text-r666666 font-spoqaBold text-15px tracking-tight ml-4px h-15px flex items-center mt-2px">
+      <p
+        style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", width: "155px" }}
+        className="text-r666666 font-spoqaBold text-15px tracking-tight ml-4px h-16px flex items-center mt-2px w-full"
+      >
         {text}
       </p>
     </div>
@@ -105,7 +108,10 @@ const Card = ({ item }) => {
           <div className="flex items-center">
             <img className="object-contain" src={whiteFootball} alt="white football" />
             <img className="object-contain ml-4px" src={item.icon} alt="white football" />
-            <p className="text-white font-spoqaBold text-14px h-14px flex items-center tracking-tight ml-3px mt-px">
+            <p
+              style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", width: "330px" }}
+              className="text-white font-spoqaBold text-14px h-15px flex items-center tracking-tight ml-3px mt-px"
+            >
               {item.title}
             </p>
           </div>

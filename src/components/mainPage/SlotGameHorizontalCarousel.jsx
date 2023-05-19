@@ -181,8 +181,14 @@ const CustomSlide = ({
           className="w-full absolute bottom-10px rounded-b-5px flex flex-col justify-end pl-5px z-20"
         >
           <p
-            style={{ color: "#a5eefe" }}
-            className="font-spoqaBold text-white text-14px tracking-tighter h-14px flex items-center mb-px"
+            style={{
+              color: "#a5eefe",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              width: "165px",
+            }}
+            className="font-spoqaBold text-white text-14px tracking-tighter mb-px"
           >
             {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
           </p>

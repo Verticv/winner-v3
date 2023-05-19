@@ -51,15 +51,16 @@ const Card = ({ icon, game }) => (
       </p>
       <p
         style={{
-          textOverflow: "unset",
+          textOverflow: "ellipsis",
           whiteSpace: "nowrap",
           overflow: "hidden",
           color: "#dcd5d3",
           lineHeight: "26px",
+          width: "90px",
         }}
         className="text-14px font-spoqa text-left tracking-tight mt-px ml-px"
       >
-        {game.length > 19 ? `${game.slice(0, 19)}...` : game}
+        {game.length > 5 ? `${game.slice(0, 5)}***` : game}
       </p>
       <p
         style={{ color: "#f5e074", lineHeight: "26px" }}
@@ -80,7 +81,7 @@ const SlideWithAnimation = () => {
       }}
       className="h-full flex-shrink-0"
     >
-      <Card icon={goldCardImg} game="마이프로틴***" />
+      <Card icon={goldCardImg} game="마이프로틴마이프로틴" />
     </div>
   );
 };
@@ -93,13 +94,13 @@ export default function SlotGameVerticalCarousel() {
         backgroundImage: `url(${slotCardBackground})`,
         backgroundRepeat: "round",
         boxShadow: "0px 2px 10px 0px rgba(0, 0, 0, 0.4)",
-        height:'147px'
+        height: "147px",
       }}
       className="rounded-8px pt-2px"
     >
       <div className="flex text-white h-36px w-full justify-center items-center">
         <img src={slotTitleLeftIcon} alt="slot title icon" />
-        <p className="text-16px font-spoqaMedium tracking-tight pl-5px pr-3px mt-px -ml-px">슬롯 실시간 우승 </p>
+        <p className="text-16px font-spoqaMedium tracking-tight pl-5px pr-3px mt-px -ml-px">슬롯 실시간 우승</p>
         <img src={slotTitleReftIcon} alt="slot title icon" />
       </div>
       {/* Start Carousel */}
@@ -110,7 +111,6 @@ export default function SlotGameVerticalCarousel() {
             totalSlides={20}
             step={1}
             interval={5000}
-            // orientation='vertical'
             naturalSlideWidth={294}
             naturalSlideHeight={100}
             // Note: there is a min-width style applied to the carousel based on the vertical_carousel class in tha App.css file
