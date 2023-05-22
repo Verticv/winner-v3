@@ -16,7 +16,7 @@ const TvBetHover = ({ selection }) => {
       id: 0,
       background: img1,
       logo: img1Logo,
-      imgText: "케이플레이피싱게임",
+      imgText: "케이플레이피싱",
     },
   ];
 

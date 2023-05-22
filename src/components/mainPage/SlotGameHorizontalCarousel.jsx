@@ -188,7 +188,7 @@ const CustomSlide = ({
               overflow: "hidden",
               width: "165px",
             }}
-            className="font-spoqaBold text-white text-14px tracking-tighter mb-px"
+            className="font-spoqaBold text-white text-14px h-17px flex items-center tracking-tighter"
           >
             {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
           </p>
@@ -245,7 +245,7 @@ export const CarouselNextButton = ({ className, style, onClick }) => {
         width: "30px",
         ...style,
       }}
-      className={`hover:brightness-125 filter bg-white hover:opacity-100 bg-white opacity-80 rounded-6px absolute z-30 -right-35px cursor-pointer transition ${className}`}
+      className={`hover:brightness-125 filter bg-white hover:opacity-100 opacity-80 rounded-6px absolute z-30 -right-35px cursor-pointer transition ${className}`}
       id="next"
     >
       <img src={RightArrow} alt="left" className="ml-10px object-none" />
@@ -269,7 +269,7 @@ const Carousel = () => {
           dragEnabled={false}
         >
           <div className="w-full relative flex items-center justify-center">
-            <CarouselBackButton style={{ marginTop: "-12px", marginLeft: "5px" }} />
+            <CarouselBackButton style={{ marginTop: "-11px", marginLeft: "5px" }} />
             <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
               <Slider classNameTrayWrap="carousel_tray_wrapper">
                 {/* <div
@@ -311,7 +311,7 @@ const Carousel = () => {
                 {/* </div> */}
               </Slider>
             </div>
-            <CarouselNextButton style={{ marginTop: "-12px", marginRight: "5px" }} />
+            <CarouselNextButton style={{ marginTop: "-11px", marginRight: "5px" }} />
           </div>
         </CarouselProvider>
       </div>

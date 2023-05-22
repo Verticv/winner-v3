@@ -27,6 +27,7 @@ const Card = ({ icon, game }) => (
         background: "linear-gradient(to right, #49435b, #514e79)",
         overflow: "hidden",
       }}
+      className="flex-shrink-0"
     >
       <img src={icon} alt="" className="object-none w-full h-full" />
     </div>
@@ -40,12 +41,13 @@ const Card = ({ icon, game }) => (
       <p
         style={{
           color: "#a5eefe",
-          textOverflow: "unset",
+          textOverflow: "ellipsis",
           whiteSpace: "nowrap",
           overflow: "hidden",
           lineHeight: "26px",
+          width: "190px",
         }}
-        className="text-20px font-spoqaBold tracking-tight -ml-2px"
+        className="text-20px font-spoqaBold tracking-tight ml-2px text-left"
       >
         Wild West Gold
       </p>

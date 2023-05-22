@@ -30,9 +30,9 @@ const sampleArray = [
   {
     id: 2,
     icon: world,
-    title: "UEFA Champions League",
-    team1: { icon: liverpool, name: "리버풀" },
-    team2: { icon: villarreal, name: "비야레알" },
+    title: "UEFA Champions League UEFA Champions League UEFA Champions League UEFA Champions League",
+    team1: { icon: liverpool, name: "리버풀리버풀리버풀리버풀리버풀" },
+    team2: { icon: villarreal, name: "비야레알비야레알비야레알비야레알" },
   },
 ];
 
@@ -79,7 +79,7 @@ const Club = ({ text, Icon }) => {
         style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", width: "155px" }}
         className="text-r666666 font-spoqaBold text-15px tracking-tight ml-4px h-16px flex items-center mt-2px w-full"
       >
-        {text}
+        {text.length > 10 ? `${text.slice(0, 10)}...` : text}
       </p>
     </div>
   );
@@ -112,7 +112,7 @@ const Card = ({ item }) => {
               style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", width: "330px" }}
               className="text-white font-spoqaBold text-14px h-15px flex items-center tracking-tight ml-3px mt-px"
             >
-              {item.title}
+              {item.title.length > 40 ? `${item.title.slice(0, 40)}...` : item.title}
             </p>
           </div>
           <p

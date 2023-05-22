@@ -8,7 +8,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
   const [hoveredOption, setHoveredOption] = useState("");
 
   const tabClass =
-    "flex-shrink-0 text-r2d2834 hover:text-white relative flex flex-col items-center justify-center cursor-pointer";
+    "flex-shrink-0 text-r2d2834 hover:text-white relative flex flex-col items-center justify-center cursor-pointer hover:filter hover:brightness-150";
   const selectedTabClass =
     "flex-shrink-0 relative flex flex-col items-center justify-center cursor-pointer text-white cursor-pointer";
 
@@ -20,7 +20,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
         height: "82px",
         marginTop: "-1px",
       }}
-      className={`w-80px hover:filter hover:brightness-150 z-50 ${isMyMenuOpen ? selectedTabClass : tabClass}`}
+      className={`w-80px z-50 ${isMyMenuOpen ? selectedTabClass : tabClass}`}
       onMouseOver={onMouseOver}
     >
       <div className="flex justify-center w-48px h-48px ml-px -mt-px">

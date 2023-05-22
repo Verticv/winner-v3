@@ -35,11 +35,17 @@ const Item = ({ text, itemOrder }) => (
           textOverflow: "ellipsis",
           whiteSpace: "nowrap",
           overflow: "hidden",
-          width: "65px",
+          width: "85px",
         }}
         className="text-14px h-15px flex items-center font-spoqaMedium tracking-tight mb-2px"
       >
-        {"Happy***".length > 5 ? `${"Happy***".slice(0, 5)}***` : "Happy***"}
+        {itemOrder === 19
+          ? "가나다라마바사".length > 5
+            ? `${"가나다라마바사".slice(0, 5)}***`
+            : "가나다라마바사"
+          : "Happy***".length > 5
+          ? `${"Happy***".slice(0, 5)}***`
+          : "Happy***"}
       </p>
     </div>
     <div>

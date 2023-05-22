@@ -40,7 +40,19 @@ const LoggedInHeader = ({ setAuth }) => {
               }}
               className='font-spoqa tracking-tight'
             >
-              마이프로틴님asdasdasd
+              마이프로틴
+            </p>
+            <p
+              style={{
+                maxWidth: '120px',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                lineHeight: '18px',
+              }}
+              className='font-spoqa tracking-tight'
+            >
+              님
             </p>
           </p>
         </button>
