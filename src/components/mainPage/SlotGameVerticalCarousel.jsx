@@ -2,12 +2,14 @@ import React from "react";
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import goldCardImg from "../../images/gold_card_img.png";
+import Slot1 from "../../images/slotCarousel/1.png";
+import Slot6 from "../../images/slotCarousel/6.jpg";
 import slotInternalCardBackground from "../../images/slot_internal_card_background.png";
 import slotCardBackground from "../../images/slot_card_background.png";
 import slotTitleLeftIcon from "../../images/slot_title_left_icon.png";
 import slotTitleReftIcon from "../../images/slot_title_right_icon.png";
 
-const Card = ({ icon, game }) => (
+const Card = ({ icon, name, game }) => (
   <button
     style={{
       width: "295px",
@@ -29,7 +31,7 @@ const Card = ({ icon, game }) => (
       }}
       className="flex-shrink-0"
     >
-      <img src={icon} alt="" className="object-none w-full h-full" />
+      <img style={{ borderRadius: "3px" }} src={icon} alt="" className="object-cover w-full h-full" />
     </div>
 
     <div
@@ -49,7 +51,7 @@ const Card = ({ icon, game }) => (
         }}
         className="text-20px font-spoqaBold tracking-tight ml-2px text-left"
       >
-        Wild West Gold
+        {game.length > 16 ? `${game.slice(0, 16)}...` : game}
       </p>
       <p
         style={{
@@ -62,7 +64,7 @@ const Card = ({ icon, game }) => (
         }}
         className="text-14px font-spoqa text-left tracking-tight mt-px ml-px"
       >
-        {game.length > 5 ? `${game.slice(0, 5)}***` : game}
+        {name.length > 5 ? `${name.slice(0, 5)}***` : name}
       </p>
       <p
         style={{ color: "#f5e074", lineHeight: "26px" }}
@@ -74,7 +76,7 @@ const Card = ({ icon, game }) => (
   </button>
 );
 
-const SlideWithAnimation = () => {
+const SlideWithAnimation = ({ count }) => {
   return (
     <div
       style={{
@@ -83,7 +85,11 @@ const SlideWithAnimation = () => {
       }}
       className="h-full flex-shrink-0"
     >
-      <Card icon={goldCardImg} game="마이프로틴마이프로틴" />
+      <Card
+        icon={count % 3 === 0 ? goldCardImg : count % 3 === 1 ? Slot1 : Slot6}
+        name="마이프로틴마이프로틴"
+        game={count % 3 === 0 ? "Wild West Gold" : count % 3 === 1 ? "Titan Thunder Wrath of Hades" : "Sun of Egypt"}
+      />
     </div>
   );
 };
@@ -110,7 +116,7 @@ export default function SlotGameVerticalCarousel() {
         <div className="vertical_carousel slot_vertical_carousel flex items-center justify-center w-full h-full p-9px pt-0">
           <CarouselProvider
             visibleSlides={1}
-            totalSlides={20}
+            totalSlides={100}
             step={1}
             interval={5000}
             naturalSlideWidth={294}
@@ -120,11 +126,11 @@ export default function SlotGameVerticalCarousel() {
             dragEnabled={false}
           >
             <Slider classNameTrayWrap="carousel_tray_wrapper_horizontal" className="card_animation">
-              {Array(20)
+              {Array(100)
                 .fill(undefined)
                 .map((_, index) => (
                   <Slide key={index} className="card_animation_slide_horizontal" index={index}>
-                    <SlideWithAnimation />
+                    <SlideWithAnimation count={index} />
                   </Slide>
                 ))}
             </Slider>

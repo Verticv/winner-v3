@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DropDownControls from "components/dropdowns/DropDownControls";
 
-const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, ButtonActiveIcon }) => {
+const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, ButtonActiveIcon, DropdownHeight }) => {
   const [isMyMenuOpen, setIsMyMenuOpen] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [myMenuSelectedOption, setMyMenuSelectedOption] = useState("");
@@ -38,7 +38,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
     </div>
   );
 
-  const dropDownCellClass = "flex w-full h-24px items-center pl-16px z-50";
+  const dropDownCellClass = "flex w-full items-center pl-16px z-50";
   const searchDropdown = (
     <>
       <div className="arrow_box"></div>
@@ -47,6 +47,8 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
           boxShadow: "1px 1.732px 10px 0px rgba(0, 0, 0, 0.5)",
           width: "123px",
           backgroundColor: "#ededeb",
+          borderRadius: "5px",
+          height: DropdownHeight,
         }}
         // TODO: check the style of the dropdown
         className="flex flex-col items-center justify-center py-7px overflow-hidden rounded-4px font-spoqaMedium text-14px tracking-tight bg-white z-50"
@@ -61,6 +63,9 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
                 style={{
                   background: isOptionHovered ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
                   color: isOptionHovered ? "white" : "#666666",
+                  height: "25px",
+                  paddingTop: "1px",
+                  marginBottom: "1px",
                 }}
                 onClick={() => {
                   setMyMenuSelectedOption(option.text);

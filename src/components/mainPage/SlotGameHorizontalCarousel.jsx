@@ -25,7 +25,7 @@ const list = [
   {
     id: 0,
     row1: {
-      game: "Titan Thunder Wrathhhhhhh",
+      game: "Titan Thunder Wrath of Hades",
       caption: "Quickspin",
       Img: Slot1,
       Badge: RedBadge,
@@ -110,7 +110,7 @@ const list = [
   {
     id: 5,
     row1: {
-      game: "Sun of Egypt",
+      game: "Sun of Egypt Sun of Egypt",
       caption: "Booongo",
       Img: Slot6,
       Badge: GreenBadge,
@@ -190,7 +190,7 @@ const CustomSlide = ({
             }}
             className="font-spoqaBold text-white text-14px h-17px flex items-center tracking-tighter"
           >
-            {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
+            {game.length > 24 ? `${game.slice(0, 24)} ...` : game}
           </p>
           <p
             style={{ color: "#e6e2e1" }}
