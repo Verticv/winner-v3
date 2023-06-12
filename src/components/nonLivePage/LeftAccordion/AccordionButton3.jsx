@@ -6,6 +6,7 @@ import img4 from "../../../images/nonLivePage/LeftAccordion/content/lasticon.png
 import flag1 from "../../../images/nonLivePage/LeftAccordion/Card/Flag1.png";
 import flag2 from "../../../images/nonLivePage/LeftAccordion/Card/Flag2.png";
 import flag3 from "../../../images/nonLivePage/LeftAccordion/Card/Flag3.png";
+import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 
 import AccordionContent from "./AccordionContent";
 
@@ -38,22 +39,12 @@ const AccordionButton3 = ({ icon, title }) => {
           </p>
         </div>
         <div>
-          <svg
-            className={`w-6 h-6 text-white mr-11px ${
+          <img
+            src={Arrow}
+            className={`w-6 h-6 text-white object-none mr-11px ${
               isOpen ? "transform rotate-180" : ""
             }`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
+          />
         </div>
       </div>
       {isOpen && (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AccordionContent2 from "./AccordionContent2";
+import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 
 const AccordionButton2 = ({ icon, title, card }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,22 +31,12 @@ const AccordionButton2 = ({ icon, title, card }) => {
           </p>
         </div>
         <div>
-          <svg
-            className={`w-6 h-6 text-white mr-11px ${
+          <img
+            src={Arrow}
+            className={`w-6 h-6 text-white object-none mr-11px ${
               isOpen ? "transform rotate-180" : ""
             }`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
+          />
         </div>
       </div>
       {isOpen && (

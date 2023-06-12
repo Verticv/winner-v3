@@ -8,7 +8,7 @@ const CenterAccordionContent = ({ card }) => {
         background: "#dddddd",
         borderColor: "#cccccc",
       }}
-      className="flex items-center border-b "
+      className="flex items-center border-b h-30px"
     >
       <div className="items-center ml-6px">
         <img src={icon} alt="icon" />
@@ -17,21 +17,33 @@ const CenterAccordionContent = ({ card }) => {
         style={{ borderColor: "#cccccc", width: "250px" }}
         className="flex items-center justify-between border-l border-r ml-6px mr-23px"
       >
-        <p className="text-12 ml-9px">{card.text}</p>
-        <p className="text-12 mr-10px">{card.text1}</p>
+        <p style={{ fontSize: "12px" }} className="text-12 ml-9px">
+          {card.text}
+        </p>
+        <p style={{ fontSize: "12px" }} className="text-12 mr-10px">
+          {card.text1}
+        </p>
       </div>
       <div style={{ borderColor: "#cccccc" }} className="items-center ">
-        <p className="text-12">{card.text2}</p>
+        <p style={{ fontSize: "12px" }} className="text-12">
+          {card.text2}
+        </p>
       </div>
       <div
         style={{ borderColor: "#cccccc", width: "250px" }}
         className="flex items-center justify-between border-l border-r ml-24px"
       >
-        <p className="text-12 ml-10px">{card.text3}</p>
-        <p className="text-12 mr-9px">{card.text4}</p>
+        <p style={{ fontSize: "12px" }} className="text-12 ml-10px">
+          {card.text3}
+        </p>
+        <p style={{ fontSize: "12px" }} className="text-12 mr-9px">
+          {card.text4}
+        </p>
       </div>
       <div style={{ width: "39px" }} className="items-center">
-        <p className="text-12 ml-9px mr-10px">{card.text5}</p>
+        <p style={{ fontSize: "12px" }} className="text-12 ml-9px mr-10px">
+          {card.text5}
+        </p>
       </div>
     </div>
   );

@@ -9,6 +9,9 @@ import LeftAccordion from "components/nonLivePage/LeftAccordion/LeftAccordion";
 import Search from "components/nonLivePage/Search/Search";
 import CenterComponent from "components/nonLivePage/CenterComponent/CenterComponent";
 import CenterAccordion from "components/nonLivePage/CenterAccordion/CenterAccordion";
+import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandComponent";
+import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
+import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,38 +79,14 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             <CenterComponent />
             <CenterAccordion />
           </div>
-        </div>
-
-        {/* <div>
-          <div className="border border-gray-300 rounded-lg mb-4">
-            <div
-              className="flex items-center justify-between px-4 py-2 cursor-pointer"
-              onClick={toggleAccordion}
-            >
-              <h2 className="text-lg font-medium">title</h2>
-              <svg
-                className={`w-6 h-6 ${isOpen ? "transform rotate-180" : ""}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-            {isOpen && (
-              <div className="px-4 py-2">
-                <p>content</p>
-              </div>
-            )}
+          <div>
+            <EnglandComponent />
+            <EntireAccordion />
           </div>
-        </div> */}
-
+          <div>
+            <RightComponent />
+          </div>
+        </div>
         <Footer />
       </div>
     </>
