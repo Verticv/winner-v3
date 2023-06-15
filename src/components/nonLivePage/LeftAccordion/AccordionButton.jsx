@@ -26,35 +26,48 @@ const AccordionButton = ({ icon, title }) => {
   return (
     <div
       style={{
-        background: "linear-gradient(to top, #4f3a7a, #e597ff)",
-        width: "281px",
+        background: "linear-gradient(to top, #4f3a7a, #cb78e6)",
+        width: "280px",
       }}
-      className="rounded-lg p-px mb-5px"
+      className="rounded-lg p-px mb-4px"
     >
       <div
         style={{ background: "linear-gradient(to top, #6b22ff, #df52ff)" }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-46px`}
+        } cursor-pointer h-43px`}
         onClick={toggleAccordion}
       >
-        <div className="flex">
-          <img className="ml-6px mt-15px mb-17px" src={icon} alt="icon" />
-          <p className="text-lg text-14px text-white ml-7px mt-22px mb-17px ">
+        <div className="flex items-center">
+          <img
+            className="ml-8px mt-11px mb-13px object-none"
+            src={icon}
+            alt="icon"
+          />
+          <p
+            style={{ letterSpacing: "-0.031em" }}
+            className="text-14px text-white ml-6px mt-14px mb-15px font-malgun "
+          >
             {title}
           </p>
         </div>
-        <div>
+        <div className="flex items-center">
+          <div
+            style={{ background: "#5423a0" }}
+            className="flex items-center justify-center w-18px h-19px rounded-lg mt-12px mb-12px"
+          >
+            <p className="text-13px text-white font-malgun">2</p>
+          </div>
           <img
             src={Arrow}
-            className={`w-6 h-6 object-none text-white mr-11px ${
+            className={`object-none text-white mr-10px ml-9px mt-17px mb-18px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
         </div>
       </div>
       {isOpen && (
-        <div style={{ background: "#420572" }}>
+        <div style={{ background: "#420572" }} className="pt-2px">
           <AccordionContent card={card1} />
         </div>
       )}

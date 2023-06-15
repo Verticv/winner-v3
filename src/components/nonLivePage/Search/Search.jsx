@@ -7,16 +7,16 @@ const Search = () => {
       <div
         style={{
           background: "#aea9cc",
-          width: "281px",
+          width: "280px",
         }}
         className="rounded-lg p-px"
       >
         <div
           style={{
-            background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
+            background: "#fee8ff",
             width: "280px",
           }}
-          className="flex items-center justify-end h-46px px-6px py-6px rounded-lg cursor-pointer relative"
+          className="flex items-center justify-end h-44px px-6px py-6px rounded-lg cursor-pointer relative"
         >
           <div
             style={{

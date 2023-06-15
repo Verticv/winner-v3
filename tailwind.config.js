@@ -158,6 +158,7 @@ module.exports = {
         robotoBold: ["RobotoBold"],
         digital: ["Digital-7"],
         swagger: ["Swagger"],
+        malgun: ["malgun-gothic"],
       },
       fontSize: {
         "10px": "10px",
