@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import icon from "../../../images/nonLivePage/RightComponent/icon.png";
 import icon1 from "../../../images/nonLivePage/RightComponent/Icon1.png";
 import icon2 from "../../../images/nonLivePage/RightComponent/Icon2.png";
 import icon3 from "../../../images/nonLivePage/RightComponent/Icon3.png";
 import icon4 from "../../../images/nonLivePage/RightComponent/refresh-icon.png";
 import icon5 from "../../../images/nonLivePage/RightComponent/Icon4.png";
-import img from "../../../images/nonLivePage/RightComponent/Icon6.png";
+// import img from "../../../images/nonLivePage/RightComponent/Icon6.png";
 import CustomDropdown from "./CustomDropdown";
-import RightComponentCard from "./RightComponentCard";
-import CheckBoxComponent from "./CheckBoxComponent";
-import RightComponentCard1 from "./RightComponentCard1";
+// import RightComponentCard from "./RightComponentCard";
+// import CheckBoxComponent from "./CheckBoxComponent";
+// import RightComponentCard1 from "./RightComponentCard1";
 
 const RightComponent = () => {
   return (

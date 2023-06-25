@@ -48,6 +48,7 @@ const CustomDropdown1 = () => {
         </p>
         <img
           src={img}
+          alt="img"
           className={`ml-21px mt-6px mb-9px transition-transform duration-300 ${
             isOpen ? "transform rotate-180" : ""
           }`}

@@ -35,6 +35,7 @@ const EntireAccordionButton = ({ icon, title, card }) => {
           />
           <img
             src={Arrow}
+            alt="img"
             className={`w-6 h-6 object-none text-white ml-13px mr-14px ${
               isOpen ? "transform rotate-180" : ""
             }`}

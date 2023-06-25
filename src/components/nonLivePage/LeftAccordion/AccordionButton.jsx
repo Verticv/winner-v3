@@ -63,6 +63,7 @@ const AccordionButton = ({ icon, title }) => {
           </div>
           <img
             src={Arrow}
+            alt=""
             className={`object-none text-white mr-10px ml-9px mt-17px mb-18px ${
               isOpen ? "transform rotate-180" : ""
             }`}

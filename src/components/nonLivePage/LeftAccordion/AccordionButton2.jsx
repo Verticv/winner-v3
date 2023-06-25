@@ -39,6 +39,7 @@ const AccordionButton2 = ({ icon, title, card }) => {
         <div>
           <img
             src={Arrow}
+            alt=""
             className={`object-none text-white mr-10px mt-17px mb-18px ${
               isOpen ? "transform rotate-180" : ""
             }`}

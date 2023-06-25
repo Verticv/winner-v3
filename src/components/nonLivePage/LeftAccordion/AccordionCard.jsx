@@ -52,6 +52,7 @@ const AccordionCard = () => {
           <img className="mt-8px object-none" src={icon} alt="img" />
           <img
             src={Arrow}
+            alt=""
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
             className={`object-none mr-10px ml-10px mt-10px ${

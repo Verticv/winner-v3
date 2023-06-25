@@ -1,8 +1,8 @@
 import React from "react";
-import icon from "../../../images/nonLivePage/EnglandComponent/Icon.png";
-import flag from "../../../images/nonLivePage/EnglandComponent/Flag.png";
-import img from "../../../images/nonLivePage/EnglandComponent/Img.png";
-import img2 from "../../../images/nonLivePage/EnglandComponent/img2.png";
+// import icon from "../../../images/nonLivePage/EnglandComponent/Icon.png";
+// import flag from "../../../images/nonLivePage/EnglandComponent/Flag.png";
+// import img from "../../../images/nonLivePage/EnglandComponent/Img.png";
+// import img2 from "../../../images/nonLivePage/EnglandComponent/img2.png";
 import img3 from "../../../images/nonLivePage/EnglandComponent/img3.png";
 import img4 from "../../../images/nonLivePage/EnglandComponent/img4.png";
 import img5 from "../../../images/nonLivePage/EnglandComponent/img5.png";

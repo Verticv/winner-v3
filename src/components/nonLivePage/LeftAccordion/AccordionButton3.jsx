@@ -8,7 +8,7 @@ import flag2 from "../../../images/nonLivePage/LeftAccordion/Card/Flag2.png";
 import flag3 from "../../../images/nonLivePage/LeftAccordion/Card/Flag3.png";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 
-import AccordionContent from "./AccordionContent";
+// import AccordionContent from "./AccordionContent";
 
 const AccordionButton3 = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +47,7 @@ const AccordionButton3 = ({ icon, title }) => {
         <div>
           <img
             src={Arrow}
+            alt=""
             className={`object-none text-white mr-10px mt-17px mb-18px ${
               isOpen ? "transform rotate-180" : ""
             }`}

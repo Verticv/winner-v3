@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import icon1 from "../../../images/nonLivePage/mainTabs/1.png";
 import icon2 from "../../../images/nonLivePage/mainTabs/2.png";
 import icon3 from "../../../images/nonLivePage/mainTabs/3.png";
@@ -8,7 +8,7 @@ import icon6 from "../../../images/nonLivePage/mainTabs/6.png";
 import TabButton from "./TabButton";
 
 const MainTabs = () => {
-  const [isActiveTab, setActiveTab] = useState(false);
+  // const [isActiveTab, setActiveTab] = useState(false);
   const items = [
     {
       id: 0,

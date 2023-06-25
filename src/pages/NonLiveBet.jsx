@@ -3,22 +3,22 @@ import Navbar from "components/mainPage/NavBar";
 import OverlayBackground1 from "../images/overlay_background_1.png";
 import OverlayBackground2 from "../images/overlay_background_2.png";
 import NoticeBanner from "components/mainPage/NoticeBanner";
-import React, { useState } from "react";
+import React from "react";
 import MainTabs from "components/nonLivePage/MainTabs/MainTabs";
 import LeftAccordion from "components/nonLivePage/LeftAccordion/LeftAccordion";
 import Search from "components/nonLivePage/Search/Search";
 import CenterComponent from "components/nonLivePage/CenterComponent/CenterComponent";
 import CenterAccordion from "components/nonLivePage/CenterAccordion/CenterAccordion";
 import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandComponent";
-import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
+// import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
 import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleAccordion = () => {
+  //   setIsOpen(!isOpen);
+  // };
   return (
     <>
       <div

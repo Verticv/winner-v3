@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CenterAccordionContent from "./CenterAccordionContent";
+// import CenterAccordionContent from "./CenterAccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 import CenterAccordionContent1 from "./CenterAccordionContent1";
 
@@ -64,6 +64,7 @@ const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
           >
             <img
               src={Arrow}
+              alt="img"
               className={`object-none text-white ml-13px mt-10px mb-12px mr-14px ${
                 isOpen ? "transform rotate-180" : ""
               }`}

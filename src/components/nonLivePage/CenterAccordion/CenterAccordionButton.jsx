@@ -64,6 +64,7 @@ const CenterAccordionButton = ({ icon, title, date, icon1, icon2, card }) => {
           >
             <img
               src={Arrow}
+              alt=""
               className={`object-none text-white ml-13px mt-10px mb-12px mr-14px ${
                 isOpen ? "transform rotate-180" : ""
               }`}
