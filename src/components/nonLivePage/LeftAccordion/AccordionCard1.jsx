@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
+import icon1 from "../../../images/nonLivePage/LeftAccordion/Card/Icon.png";
 
 const AccordionCard1 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,9 @@ const AccordionCard1 = () => {
     <div
       style={{
         background: "#ffffff",
+        width: "274px",
       }}
-      className="items-center justify-between mx-3px rounded-lg mb-2px "
+      className="items-center justify-between mx-2px rounded-lg mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
@@ -65,52 +67,55 @@ const AccordionCard1 = () => {
             background: "#eeeeee",
             borderColor: "#cccccc",
           }}
-          className="flex border-t border-b border-solid h-31px items-center justify-between rounded-b-lg"
+          className="flex border-t border-b border-solid h-31px items-center rounded-b-lg"
         >
-          <div className="flex items-center">
-            <p
-              style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className=" ml-6px mr-49px text-12px font-malgun"
-            >
-              1
-            </p>
-            <p
-              style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
-              className="mr-1px text-12px font-malgun"
-            >
-              2.12
-            </p>
-          </div>
           <div
-            style={{ borderColor: "#cccccc" }}
-            className="flex items-center border-l border-r border-solid "
+            style={{ width: "91px" }}
+            className="flex items-center justify-between"
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="ml-6px mr-44px text-12px font-malgun"
+              className=" ml-7px mt-9px mb-9px text-12px font-malgun"
+            >
+              1
+            </p>
+            <img
+              className="mr-8px mb-7px mt-7px object-none"
+              src={icon1}
+              alt="img"
+            />
+          </div>
+          <div
+            style={{ borderColor: "#cccccc", width: "93px" }}
+            className="flex items-center justify-between border-l border-r border-solid "
+          >
+            <p
+              style={{ color: "#444444", letterSpacing: "-0.031em" }}
+              className="ml-7px text-12px font-malgun"
             >
               무
             </p>
-            <p
-              style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
-              className="mr-7px text-12px font-malgun"
-            >
-              3.59
-            </p>
+            <img
+              className="mr-8px mb-7px mt-7px object-none"
+              src={icon1}
+              alt="img"
+            />
           </div>
-          <div className="flex mr-7px">
+          <div
+            style={{ width: "90px" }}
+            className="flex items-center justify-between"
+          >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="mr-14px text-12px font-malgun"
+              className="ml-8px mt-10px mb-9px text-12px font-malgun"
             >
               2
             </p>
-            <p
-              style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
-              className="ml-34px text-13px"
-            >
-              3.62
-            </p>
+            <img
+              className="mr-8px mb-7px mt-7px object-none"
+              src={icon1}
+              alt="img"
+            />
           </div>
         </div>
       )}

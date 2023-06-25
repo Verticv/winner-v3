@@ -31,7 +31,7 @@ const CustomDropdown1 = () => {
 
   return (
     <div
-      style={{ background: "#ffffff", width: "77px" }}
+      style={{ background: "#ffffff", width: "77px", height: "27px" }}
       className="relative items-center justify-between rounded-lg "
     >
       <button
@@ -40,15 +40,15 @@ const CustomDropdown1 = () => {
         onClick={toggleDropdown}
       >
         <p
-          style={{ color: "#444444" }}
-          className="text-11px ml-9px mt-9px mb-6px"
+          style={{ color: "#444444", letterSpacing: "-0.031em" }}
+          className="text-13px ml-9px mt-6px mb-6px font-malgun"
         >
           {" "}
           {selectedOption || "전체"}{" "}
         </p>
         <img
           src={img}
-          className={`ml-22px  mr-10px transition-transform duration-300 ${
+          className={`ml-21px mt-6px mb-9px transition-transform duration-300 ${
             isOpen ? "transform rotate-180" : ""
           }`}
         />

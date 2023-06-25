@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import CenterAccordionContent from "./CenterAccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
+import CenterAccordionContent1 from "./CenterAccordionContent1";
 
 // import AccordionContent1 from "./AccordionContent1";
 
-const CenterAccordionButton = ({ icon, title, date, icon1, icon2, card }) => {
+const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-  const lastIndex = card.length - 1;
-  const lastObject = card[lastIndex];
+
   return (
     <div
       style={{
@@ -74,20 +74,15 @@ const CenterAccordionButton = ({ icon, title, date, icon1, icon2, card }) => {
       {isOpen && (
         <div
           style={{ background: "#ffffff", width: "640px" }}
-          className=" -ml-px rounded-b-lg"
+          className=" -ml-px"
         >
-          {card.map((item) => (
-            // @ts-ignore
-            <CenterAccordionContent
-              key={item.id}
-              card={item}
-              lastObject={lastObject}
-            />
-          ))}
+          {/* {card.map((item) => ( */}
+          <CenterAccordionContent1 />
+          {/* ))} */}
         </div>
       )}
     </div>
   );
 };
 
-export default CenterAccordionButton;
+export default CenterAccordionButton1;

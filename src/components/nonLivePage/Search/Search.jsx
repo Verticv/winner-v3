@@ -14,9 +14,9 @@ const Search = () => {
         <div
           style={{
             background: "#fee8ff",
-            width: "280px",
+            width: "278px",
           }}
-          className="flex items-center justify-end h-44px px-6px py-6px rounded-lg cursor-pointer relative"
+          className="flex items-center justify-end h-44px px-4px py-5px rounded-lg cursor-pointer relative"
         >
           <div
             style={{
@@ -25,17 +25,24 @@ const Search = () => {
             className="rounded-lg p-px w-full"
           >
             <input
-              className="bg-white w-full rounded-lg px-6px py-6px"
+              style={{
+                color: "#444444",
+                letterSpacing: "-0.031em",
+                height: "34px",
+              }}
+              className="bg-white w-full rounded-lg pl-8px pt-2px text-13 font-malgun "
               type="text"
-              placeholder="검색 (팀명/리그)"
+              value="검색 (팀명/리그)"
             />
           </div>
           <div
             style={{
               position: "absolute",
               background: "#936cee",
+              width: "28px",
+              height: "28px",
             }}
-            className="mr-3px mt-3px mb-3px rounded-lg"
+            className="mr-4px mt-3px mb-3px rounded-lg"
           >
             <img src={icon} alt="" />
           </div>

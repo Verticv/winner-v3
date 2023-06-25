@@ -14,7 +14,7 @@ const AccordionContent = ({ card }) => {
         style={{
           background: "#361550",
         }}
-        className="rounded-lg p-px mr-3px ml-3px "
+        className="rounded-lg p-px mr-2px ml-2px "
       >
         <div
           style={{
@@ -22,12 +22,12 @@ const AccordionContent = ({ card }) => {
           }}
           className="flex items-center justify-center rounded-lg h-34px"
         >
-          <p className="text-13px text-white tracking-tight font-malgun">
+          <p className="mt-12px mb-11px text-13px text-white tracking-tight font-malgun">
             모두지우기
           </p>
         </div>
       </div>
-      <div className="ml-8px mt-7px mb-7px">
+      <div className="ml-8px mt-5px mb-4px">
         <p
           style={{ letterSpacing: "-0.031em" }}
           className="text-10px text-white font-malgun"
@@ -40,12 +40,12 @@ const AccordionContent = ({ card }) => {
         style={{
           background: "#ffffff",
         }}
-        className="flex items-center mx-3px rounded-lg h-35px mb-2px"
+        className="flex items-center mx-2px rounded-lg h-35px mb-2px"
       >
         <img className="ml-6px mt-7px mb-7px" src={icon} alt="img" />
         <p
           style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-12px mt-12px mb-12px ml-5px font-malgun"
+          className="text-12px mt-14px mb-13px ml-5px font-malgun"
         >
           프리미어리그
         </p>
@@ -60,7 +60,7 @@ const AccordionContent = ({ card }) => {
         style={{
           background: "#ffffff",
         }}
-        className="flex items-center mx-3px rounded-lg h-35px mb-2px"
+        className="flex items-center mx-2px rounded-lg h-35px mb-2px"
       >
         <img className="ml-6px" src={icon} alt="img" />
         <p style={{ color: "#444444" }} className="text-12px ml-5px">
@@ -71,14 +71,14 @@ const AccordionContent = ({ card }) => {
       <div>
         <AccordionCard1 />
       </div>
-      <div className="ml-8px mt-7px mb-7px">
+      <div className="ml-8px mt-5px mb-5px">
         <p className="text-10px text-white">리그</p>
       </div>
       <div
         style={{
           background: "#ffffff",
         }}
-        className="flex items-center justify-between mx-3px rounded-lg h-35px mb-2px"
+        className="flex items-center justify-between mx-2px rounded-lg h-35px mb-2px"
       >
         <div className="flex items-center">
           <img className="ml-6px" src={icon} alt="img" />
@@ -94,7 +94,7 @@ const AccordionContent = ({ card }) => {
         style={{
           background: "#ffffff",
         }}
-        className="flex items-center justify-between mx-3px rounded-lg h-35px mb-2px"
+        className="flex items-center justify-between mx-2px rounded-lg h-35px mb-2px"
       >
         <div className="flex items-center">
           <img className="ml-6px" src={img1} alt="img" />

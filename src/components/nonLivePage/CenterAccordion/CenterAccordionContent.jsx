@@ -1,51 +1,107 @@
 import React from "react";
 import icon from "../../../images/nonLivePage/CenterAccordion/star2.png";
 
-const CenterAccordionContent = ({ card }) => {
+const CenterAccordionContent = ({ card, lastObject }) => {
+  console.log(lastObject.id);
   return (
-    <div
-      style={{
-        background: "#dddddd",
-        borderColor: "#cccccc",
-      }}
-      className="flex items-center border-b h-30px"
-    >
-      <div className="items-center ml-6px">
-        <img src={icon} alt="icon" />
-      </div>
+    <>
       <div
-        style={{ borderColor: "#cccccc", width: "250px" }}
-        className="flex items-center justify-between border-l border-r ml-6px mr-23px"
+        style={{
+          borderColor: "#cccccc",
+        }}
+        //   className={`flex items-center
+        //    ${
+        //     lastObject.text == "첼시" ? "" : "border-b"
+        //   }
+        //    h-31px  `}
+        // >
+        className={`flex items-center
+     border-b
+      h-31px  `}
       >
-        <p style={{ fontSize: "12px" }} className="text-12 ml-9px">
-          {card.text}
-        </p>
-        <p style={{ fontSize: "12px" }} className="text-12 mr-10px">
-          {card.text1}
-        </p>
+        <div className="items-center ml-6px mt-6px mb-8px">
+          <img src={icon} alt="icon" />
+        </div>
+        <div
+          style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
+          className="flex items-center justify-between border-l border-r ml-6px"
+        >
+          <p
+            style={{
+              fontSize: "12px",
+              color: "#444444",
+              letterSpacing: "-0.031em",
+            }}
+            className="font-malgun ml-8px mt-10px mb-9px"
+          >
+            {card.text}
+          </p>
+          <p
+            style={{
+              fontSize: "12px",
+              color: "#444444",
+              letterSpacing: "-0.031em",
+            }}
+            className=" mr-10px mt-10px mb-11px font-malgun"
+          >
+            {card.text1}
+          </p>
+        </div>
+        <div className="flex items-center">
+          <p
+            style={{
+              fontSize: "12px",
+              color: "#444444",
+              letterSpacing: "-0.031em",
+              width: "21px",
+            }}
+            className="font-malgun ml-23px"
+          >
+            {card.text2}
+          </p>
+        </div>
+        <div
+          style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
+          className="flex items-center justify-between border-l border-r ml-24px"
+        >
+          <p
+            style={{
+              fontSize: "12px",
+              color: "#444444",
+              letterSpacing: "-0.031em",
+            }}
+            className=" ml-9px mt-10px mb-11px font-malgun"
+          >
+            {card.text3}
+          </p>
+          <p
+            style={{
+              fontSize: "12px",
+              color: "#444444",
+              letterSpacing: "-0.031em",
+            }}
+            className=" mr-9px mt-10px mb-9px font-malgun"
+          >
+            {card.text4}
+          </p>
+        </div>
+        <div
+          style={{ width: "39px" }}
+          className="flex items-center justify-center"
+        >
+          <p
+            style={{
+              fontSize: "12px",
+              color: "#444444",
+              letterSpacing: "-0.031em",
+            }}
+            className="font-malgun"
+          >
+            {card.text5}
+          </p>
+        </div>
       </div>
-      <div style={{ borderColor: "#cccccc" }} className="items-center ">
-        <p style={{ fontSize: "12px" }} className="text-12">
-          {card.text2}
-        </p>
-      </div>
-      <div
-        style={{ borderColor: "#cccccc", width: "250px" }}
-        className="flex items-center justify-between border-l border-r ml-24px"
-      >
-        <p style={{ fontSize: "12px" }} className="text-12 ml-10px">
-          {card.text3}
-        </p>
-        <p style={{ fontSize: "12px" }} className="text-12 mr-9px">
-          {card.text4}
-        </p>
-      </div>
-      <div style={{ width: "39px" }} className="items-center">
-        <p style={{ fontSize: "12px" }} className="text-12 ml-9px mr-10px">
-          {card.text5}
-        </p>
-      </div>
-    </div>
+    </>
   );
 };
 

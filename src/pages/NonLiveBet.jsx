@@ -60,13 +60,6 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           <MainTabs />
           <div className="absolute bottom-0 left-0 h-px w-full bg-r2c1137" />
         </div>
-
-        {/* <div
-          style={{ background: "linear-gradient(to right, #b644c4, #351894)" }}
-          className="relative w-full flex flex-col items-start h-full mr-10px ml-10px mt-10px mx-auto"
-        >
-          <Search />
-        </div> */}
         <div
           style={{ background: "linear-gradient(to right, #b644c4, #351894)" }}
           className="relative w-full flex items-start "
@@ -81,7 +74,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           </div>
           <div>
             <EnglandComponent />
-            <EntireAccordion />
+            {/* <EntireAccordion /> */}
           </div>
           <div>
             <RightComponent />

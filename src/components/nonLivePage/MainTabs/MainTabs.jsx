@@ -47,7 +47,7 @@ const MainTabs = () => {
       id: 4,
       icon: icon5,
       text: "라이브영상",
-      marginLeft: "4px",
+      marginLeft: "5px",
       marginRight: "15px",
       width: "124px",
     },
@@ -55,14 +55,14 @@ const MainTabs = () => {
       id: 5,
       icon: icon6,
       text: "베팅규정",
-      marginLeft: "4px",
+      marginLeft: "5px",
       width: "108px",
       marginRight: "14px",
     },
   ];
 
   return (
-    <div className="flex h-full cursor-pointer ml-10px">
+    <div className="flex h-full cursor-pointer ml-6px">
       {items.map((item) => (
         <TabButton key={item.id} item={item} />
       ))}

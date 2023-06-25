@@ -14,8 +14,9 @@ const AccordionCard2 = () => {
     <div
       style={{
         background: "#ffffff",
+        width: "274px",
       }}
-      className="items-center justify-between mx-3px rounded-lg mb-2px "
+      className="items-center justify-between mx-2px rounded-lg mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
@@ -67,52 +68,70 @@ const AccordionCard2 = () => {
             background: "#eeeeee",
             borderColor: "#cccccc",
           }}
-          className="flex border-t border-b border-solid h-31px items-center justify-between rounded-b-lg"
+          className="flex border-t border-b border-solid h-31px items-center rounded-b-lg"
         >
-          <div className="flex items-center">
+          <div
+            style={{ width: "91px" }}
+            className="flex items-center justify-between"
+          >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className=" ml-6px mr-34px text-12px font-malgun"
+              className=" ml-7px mt-9px mb-9px text-12px font-malgun"
             >
               1
             </p>
-            <img className="mr-9px" src={Up} alt="img" />
+            <img
+              className="ml-24px object-none mt-12px mb-12px"
+              src={Up}
+              alt="img"
+            />
             <p
-              style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
-              className="mr-1px text-12px font-malgun"
+              style={{ color: "#f04281", letterSpacing: "-0.031em" }}
+              className="mr-8px text-12px font-malgun"
             >
               2.12
             </p>
           </div>
           <div
-            style={{ borderColor: "#cccccc" }}
-            className="flex items-center border-l border-r border-solid "
+            style={{ borderColor: "#cccccc", width: "93px" }}
+            className="flex items-center border-l border-r border-solid justify-between"
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="ml-6px mr-27px text-12px font-malgun"
+              className="ml-7px mr-27px text-12px font-malgun"
             >
               무
             </p>
-            <img className="mr-10px" src={Up} alt="img" />
+            <img
+              className="mr-8px object-none mt-12px mb-12px"
+              src={Up}
+              alt="img"
+            />
             <p
-              style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
+              style={{ color: "#f04281", letterSpacing: "-0.031em" }}
               className="mr-7px text-12px font-malgun"
             >
               3.59
             </p>
           </div>
-          <div className="flex mr-7px ml-px">
+          <div
+            style={{ width: "90px" }}
+            className="flex items-center justify-between"
+          >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="mr-31px text-12px font-malgun"
+              className="ml-8px mt-10px mb-9px text-12px font-malgun"
             >
               2
             </p>
-            <img className="mr-10px object-none" src={Dn} alt="img" />
+            <img
+              className="ml-23px object-none mt-12px mb-12px"
+              src={Dn}
+              alt="img"
+            />
             <p
-              style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
-              className="text-13px"
+              style={{ color: "#0072bc", letterSpacing: "-0.031em" }}
+              className="mr-7px mt-8px mb-9px text-12px"
             >
               3.62
             </p>

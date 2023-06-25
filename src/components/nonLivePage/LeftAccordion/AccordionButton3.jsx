@@ -20,159 +20,182 @@ const AccordionButton3 = ({ icon, title }) => {
   return (
     <div
       style={{
-        background: "linear-gradient(to top, #4f3a7a, #e597ff)",
-        width: "281px",
+        background: "linear-gradient(to top, #4f3a7a, #cb78e6)",
+        width: "280px",
       }}
       className="rounded-lg p-px mb-5px"
     >
       <div
-        style={{ background: "linear-gradient(to top, #6b22ff, #df52ff)" }}
+        style={{
+          background: "linear-gradient(to top, #6b22ff, #df52ff)",
+          width: "278px",
+        }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-46px`}
+        } cursor-pointer h-43px`}
         onClick={toggleAccordion}
       >
-        <div className="flex">
-          <img className="ml-6px mt-15px mb-17px" src={icon} alt="icon" />
-          <p className="text-lg text-14px text-white ml-7px mt-22px mb-17px ">
+        <div className="flex items-center">
+          <img className="-ml-4px mb-10px" src={icon} alt="icon" />
+          <p
+            style={{ letterSpacing: "-0.031em" }}
+            className="text-14px text-white ml-6px mt-14px mb-15px font-malgun "
+          >
             {title}
           </p>
         </div>
         <div>
           <img
             src={Arrow}
-            className={`w-6 h-6 text-white object-none mr-11px ${
+            className={`object-none text-white mr-10px mt-17px mb-18px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
         </div>
       </div>
       {isOpen && (
-        <div style={{ background: "#420572" }}>
-          <div className="ml-3px mb-2px mr-3px pt-2px">
-            <div
-              style={{
-                background: "#ffffff",
-              }}
-              className="flex items-center px-3px rounded-lg h-35px mb-2px pt-2px"
+        <div
+          style={{ background: "#420572" }}
+          className="pt-2px rounded-b-lg pb-2px"
+        >
+          <div
+            style={{
+              background: "#ffffff",
+            }}
+            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px "
+          >
+            <img className="ml-6px mt-8px mb-8px" src={icon1} alt="img" />
+            <p
+              style={{ color: "#444444", letterSpacing: "-0.031em" }}
+              className="text-13px ml-5px mt-12px mb-11px font-malgun"
             >
-              <img className="ml-6px" src={icon1} alt="img" />
-              <p style={{ color: "#444444" }} className="text-12px ml-6px">
-                축구
+              축구
+            </p>
+          </div>
+          <div
+            style={{
+              background: "#eeeeee",
+            }}
+            className="items-center ml-2px mb-2px mr-2px rounded-lg "
+          >
+            <div className="flex items-center h-37px">
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-15px mt-12px mb-17px text-13px"
+              >
+                L
+              </p>
+              <img className="ml-10px" src={flag1} alt="img" />
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-4px mt-13px mb-11px text-13px font-malgun"
+              >
+                잉글랜드
               </p>
             </div>
             <div
-              style={{
-                background: "#eeeeee",
-              }}
-              className="items-center px-3px rounded-lg mb-2px pt-2px"
+              style={{ borderColor: "#cccccc", background: "#dddddd" }}
+              className="flex items-center h-38px border-t"
             >
-              <div className="flex items-center h-37px">
-                <p
-                  style={{ background: "444444" }}
-                  className="ml-15px text-13px"
-                >
-                  L
-                </p>
-                <img className="ml-7px" src={flag1} alt="img" />
-                <p
-                  style={{ background: "444444" }}
-                  className="ml-5px text-13px"
-                >
-                  잉글랜드
-                </p>
-              </div>
-              <div
-                style={{ borderColor: "#cccccc", background: "#dddddd" }}
-                className="flex items-center h-37px border-t"
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-44px mt-11px mb-18px text-13px"
               >
-                <p
-                  style={{ background: "444444", marginLeft: "45px" }}
-                  className="ml-45px text-13px"
-                >
-                  L
-                </p>
-                <p
-                  style={{ background: "444444" }}
-                  className="ml-10px text-13px"
-                >
-                  프리미어리그
-                </p>
-              </div>
-              <div
-                style={{ borderColor: "#cccccc", background: "#dddddd" }}
-                className="flex items-center h-37px border-t"
+                L
+              </p>
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-10px mt-13px mb-13px text-12px font-malgun"
               >
-                <p
-                  style={{ background: "444444", marginLeft: "45px" }}
-                  className="ml-45px text-13px"
-                >
-                  L
-                </p>
-                <p
-                  style={{ background: "444444" }}
-                  className="ml-10px text-13px"
-                >
-                  챔피언쉽
-                </p>
-              </div>
-              <div className="flex items-center h-37px">
-                <img className="ml-31px" src={flag2} alt="img" />
-                <p
-                  style={{ background: "444444" }}
-                  className="ml-5px text-13px"
-                >
-                  이탈리아
-                </p>
-              </div>
-              <div
-                style={{ borderColor: "#cccccc" }}
-                className="flex items-center h-37px border-t"
-              >
-                <img className="ml-31px" src={flag3} alt="img" />
-                <p
-                  style={{ background: "444444" }}
-                  className="ml-5px text-13px"
-                >
-                  스페인
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                background: "#ffffff",
-              }}
-              className="flex items-center px-3px rounded-lg h-35px mb-2px pt-2px"
-            >
-              <img className="ml-6px" src={img3} alt="img" />
-              <p style={{ color: "#444444" }} className="text-12px ml-6px">
-                농구
+                프리미어리그
               </p>
             </div>
             <div
-              style={{
-                background: "#ffffff",
-              }}
-              className="flex items-center px-3px rounded-lg h-35px mb-2px pt-2px"
+              style={{ borderColor: "#cccccc", background: "#dddddd" }}
+              className="flex items-center h-38px border-t"
             >
-              <img className="ml-6px" src={img1} alt="img" />
-              <p style={{ color: "#444444" }} className="text-12px ml-6px">
-                야구
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-44px mt-11px mb-18px text-13px"
+              >
+                L
+              </p>
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-10px mt-13px mb-13px text-12px font-malgun"
+              >
+                챔피언쉽
               </p>
             </div>
             <div
-              style={{
-                background: "#ffffff",
-              }}
-              className="flex items-center px-3px rounded-lg h-35px mb-2px pt-2px"
+              style={{ borderColor: "#cccccc", background: "#eeeeee" }}
+              className="flex items-center h-38px border-t"
             >
-              <img className="ml-7px" src={img4} alt="img" />
-              <p style={{ color: "#444444" }} className="text-12px ml-7px">
-                격투기
+              <img className="ml-31px" src={flag2} alt="img" />
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-4px mt-14px mb-11px text-13px font-malgun"
+              >
+                이탈리아
+              </p>
+            </div>
+            <div
+              style={{ borderColor: "#cccccc", background: "#eeeeee" }}
+              className="flex items-center h-38px border-t"
+            >
+              <img className="ml-31px" src={flag3} alt="img" />
+              <p
+                style={{ background: "444444", letterSpacing: "-0.031em" }}
+                className="ml-4px mt-14px mb-11px text-13px font-malgun"
+              >
+                스페인
               </p>
             </div>
           </div>
+          <div
+            style={{
+              background: "#ffffff",
+            }}
+            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px"
+          >
+            <img className="ml-6px" src={img3} alt="img" />
+            <p
+              style={{ color: "#444444", letterSpacing: "-0.031em" }}
+              className="text-13px ml-5px mt-13px mb-11px font-malgun"
+            >
+              농구
+            </p>
+          </div>
+          <div
+            style={{
+              background: "#ffffff",
+            }}
+            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px"
+          >
+            <img className="ml-6px" src={img1} alt="img" />
+            <p
+              style={{ color: "#444444", letterSpacing: "-0.031em" }}
+              className="text-13px ml-5px mt-13px mb-11px font-malgun"
+            >
+              야구
+            </p>
+          </div>
+          <div
+            style={{
+              background: "#ffffff",
+            }}
+            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px"
+          >
+            <img className="ml-7px" src={img4} alt="img" />
+            <p
+              style={{ color: "#444444", letterSpacing: "-0.031em" }}
+              className="text-13px ml-6px mt-13px mb-11px font-malgun"
+            >
+              격투기
+            </p>
+          </div>
         </div>
+        // </div>
       )}
     </div>
   );

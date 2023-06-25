@@ -12,8 +12,9 @@ const AccordionCard = () => {
     <div
       style={{
         background: "#ffffff",
+        width: "274px",
       }}
-      className="items-center justify-between mx-3px rounded-lg mb-2px "
+      className="items-center justify-between mx-2px rounded-lg mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
@@ -65,29 +66,32 @@ const AccordionCard = () => {
             background: "#eeeeee",
             borderColor: "#cccccc",
           }}
-          className="flex border-t border-b border-solid h-31px items-center justify-between rounded-b-lg"
+          className="flex border-t border-b border-solid h-31px items-center rounded-b-lg"
         >
-          <div className="flex items-center">
+          <div
+            style={{ width: "91px" }}
+            className="flex items-center justify-between"
+          >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className=" ml-6px mr-49px text-12px font-malgun"
+              className="ml-7px mt-9px mb-9px text-12px font-malgun"
             >
               1
             </p>
             <p
               style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
-              className="mr-1px text-12px font-malgun"
+              className="mr-7px text-12px font-malgun"
             >
               2.12
             </p>
           </div>
           <div
-            style={{ borderColor: "#cccccc" }}
-            className="flex items-center border-l border-r border-solid "
+            style={{ borderColor: "#cccccc", width: "93px", height: "31px" }}
+            className="flex items-center justify-between  border-l border-r border-solid"
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="ml-6px mr-44px text-12px font-malgun"
+              className="ml-7px text-12px font-malgun"
             >
               무
             </p>
@@ -98,16 +102,19 @@ const AccordionCard = () => {
               3.59
             </p>
           </div>
-          <div className="flex mr-7px">
+          <div
+            style={{ width: "90px" }}
+            className="flex items-center justify-between"
+          >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="mr-14px text-12px font-malgun"
+              className="ml-8px mt-10px mb-9px text-12px font-malgun"
             >
               2
             </p>
             <p
               style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
-              className="ml-34px text-13px"
+              className="mr-7px mt-8px mb-9px text-12px"
             >
               3.62
             </p>

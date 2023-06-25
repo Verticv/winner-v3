@@ -32,7 +32,10 @@ const AccordionButton = ({ icon, title }) => {
       className="rounded-lg p-px mb-4px"
     >
       <div
-        style={{ background: "linear-gradient(to top, #6b22ff, #df52ff)" }}
+        style={{
+          background: "linear-gradient(to top, #6b22ff, #df52ff)",
+          width: "278px",
+        }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
         } cursor-pointer h-43px`}
@@ -40,7 +43,7 @@ const AccordionButton = ({ icon, title }) => {
       >
         <div className="flex items-center">
           <img
-            className="ml-8px mt-11px mb-13px object-none"
+            className="-ml-3px mt-11px mb-16px object-none"
             src={icon}
             alt="icon"
           />
@@ -56,7 +59,7 @@ const AccordionButton = ({ icon, title }) => {
             style={{ background: "#5423a0" }}
             className="flex items-center justify-center w-18px h-19px rounded-lg mt-12px mb-12px"
           >
-            <p className="text-13px text-white font-malgun">2</p>
+            <p className="text-13px text-white font-malgun">5</p>
           </div>
           <img
             src={Arrow}
@@ -67,7 +70,10 @@ const AccordionButton = ({ icon, title }) => {
         </div>
       </div>
       {isOpen && (
-        <div style={{ background: "#420572" }} className="pt-2px">
+        <div
+          style={{ background: "#420572" }}
+          className="pt-2px rounded-b-lg pb-2px"
+        >
           <AccordionContent card={card1} />
         </div>
       )}
