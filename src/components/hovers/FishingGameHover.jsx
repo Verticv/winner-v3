@@ -9,7 +9,7 @@ const FishingGameHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
 
-  const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-7-button");
+  const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-8-button");
 
   const gamesArray = [
     {
@@ -61,7 +61,7 @@ const FishingGameHover = ({ selection }) => {
   }
   return (
     <Expand
-      open={selection === 7}
+      open={selection === 8}
       duration={200}
       styles={{
         open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },

@@ -10,6 +10,7 @@ import Item7 from "../../../images/navBar/item_7.png";
 import Item8 from "../../../images/navBar/item_8.png";
 import Item9 from "../../../images/navBar/item_9.png";
 import Item10 from "../../../images/navBar/item_10.png";
+import Item11 from "../../../images/navBar/item_11.png";
 
 import Item1Active from "../../../images/navBar/item_1_active.png";
 import Item2Active from "../../../images/navBar/item_2_active.png";
@@ -21,6 +22,8 @@ import Item7Active from "../../../images/navBar/item_7_active.png";
 import Item8Active from "../../../images/navBar/item_8_active.png";
 import Item9Active from "../../../images/navBar/item_9_active.png";
 import Item10Active from "../../../images/navBar/item_10_active.png";
+import Item11Active from "../../../images/navBar/item_11_active.png";
+
 import MyMenuIcon from "../../../images/navBar/managment/my_menu.png";
 import MyMenuActiveIcon from "../../../images/navBar/managment/my_menu_active.png";
 import ContactIcon from "../../../images/navBar/managment/contact.png";
@@ -50,11 +53,12 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     { id: 2, text: "실시간스포츠", icon: Item3, activeIcon: Item3Active },
     { id: 3, text: "슬롯게임", icon: Item4, activeIcon: Item4Active },
     { id: 4, text: "호텔카지노", icon: Item5, activeIcon: Item5Active },
-    { id: 5, text: "e-스포츠", icon: Item6, activeIcon: Item6Active },
-    { id: 6, text: "미니게임", icon: Item7, activeIcon: Item7Active },
-    { id: 7, text: "키론가상게임", icon: Item8, activeIcon: Item8Active },
-    { id: 8, text: "피싱게임", icon: Item9, activeIcon: Item9Active },
-    { id: 9, text: "티비벳", icon: Item10, activeIcon: Item10Active },
+    { id: 5, text: "홀덤게임", icon: Item11, activeIcon: Item11Active },
+    { id: 6, text: "e-스포츠", icon: Item6, activeIcon: Item6Active },
+    { id: 7, text: "미니게임", icon: Item7, activeIcon: Item7Active },
+    { id: 8, text: "키론가상게임", icon: Item8, activeIcon: Item8Active },
+    { id: 9, text: "피싱게임", icon: Item9, activeIcon: Item9Active },
+    { id: 10, text: "티비벳", icon: Item10, activeIcon: Item10Active },
   ];
 
   const myMenuOptionsArray = [

@@ -14,6 +14,7 @@ import image5Bottom from "../../images/live/5_bottom.png";
 import image6 from "../../images/live/6.png";
 import image6Bottom from "../../images/live/6_bottom.png";
 import image7 from "../../images/live/7.png";
+import image8 from "../../images/live/8.png";
 import Left from "../../images/live/left.png";
 import Best from "../../images/live/best.png";
 import Card from "../../images/slotCarousel/card.png";
@@ -91,8 +92,8 @@ const list = [
   {
     id: 6,
     row1: {
-      game: "준비중",
-      Img: image7,
+      game: "모티베이션",
+      Img: image8,
     },
     row2: {
       game: "준비중",

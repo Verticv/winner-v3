@@ -1,49 +1,29 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import Expand from "react-expand-animated";
-import AugBanner from "../../images/navbarHover/7_1.png";
-import AugBannerLogo from "../../images/navbarHover/7_1_logo.png";
-import AugBanner2 from "../../images/navbarHover/7_2.png";
-import AugBannerLogo2 from "../../images/navbarHover/7_2_logo.png";
-import AugBanner3 from "../../images/navbarHover/7_3.png";
-import AugBannerLogo3 from "../../images/navbarHover/7_3_logo.png";
-import AugBanner4 from "../../images/navbarHover/7_4.png";
-import AugBannerLogo4 from "../../images/navbarHover/7_4_logo.png";
+import Icon1 from "../../images/navbarHover/11_1.png";
+import Icon2 from "../../images/navbarHover/11_2.png";
+import AugBannerLogo from "../../images/navbarHover/11_1_logo.png";
+import { useHistory } from "react-router-dom";
 import useNavButtonPosition from "hooks/useNavButtonPosition";
 
-const ARHover = ({ selection }) => {
+const HoldemHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
 
-  const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-7-button");
+  const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-5-button");
 
   const gamesArray = [
     {
       id: 0,
-      background: AugBanner,
+      background: Icon1,
       logo: AugBannerLogo,
-      imgText: "파워볼",
+      imgText: "K-홀덤",
     },
     {
       id: 1,
-      background: AugBanner3,
-      logo: AugBannerLogo3,
-      imgText: "파워사다리",
-      path: "/esports/single",
-    },
-    {
-      id: 2,
-      background: AugBanner2,
-      logo: AugBannerLogo2,
-      imgText: "스피드키노",
-      path: "/esports/structure",
-    },
-    {
-      id: 3,
-      background: AugBanner4,
-      logo: AugBannerLogo4,
-      imgText: "키노사다리",
-      path: "/esports/multi",
+      background: Icon2,
+      logo: AugBannerLogo,
+      imgText: "이용가이드",
     },
   ];
 
@@ -68,7 +48,7 @@ const ARHover = ({ selection }) => {
               height: "26px",
               right: "60px",
             }}
-            className="absolute z-50 top-20px pt-px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
+            className="absolute z-50 top-20px pt-2px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
             게임시작
           </button>
@@ -88,20 +68,20 @@ const ARHover = ({ selection }) => {
   }
   return (
     <Expand
-      open={selection === 7}
+      open={selection === 5}
       duration={200}
       styles={{
         open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
         close: { left: hoverMenuPosition },
       }}
-      className="rounded-8px absolute w-auto m-auto h-262px bg-white"
+      className="rounded-8px absolute w-auto m-auto h-98px bg-white"
     >
       <div
         onMouseLeave={() => setHover(null)}
-        style={{ minHeight: "176px" }}
+        style={{ minHeight: "98px" }}
         className="h-full w-auto flex justify-center"
       >
-        <div style={{ width: "460px" }} className="p-15px grid gap-10px grid-cols-2 limit:grid-cols-2">
+        <div style={{ width: "240px" }} className="p-15px grid gap-10px grid-cols-1 limit:grid-cols-1">
           <GamesList items={gamesArray} />
         </div>
       </div>
@@ -109,4 +89,4 @@ const ARHover = ({ selection }) => {
   );
 };
 
-export default ARHover;
+export default HoldemHover;

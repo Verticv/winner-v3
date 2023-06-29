@@ -12,7 +12,7 @@ const MinigamesHover = ({ selection }) => {
   const [isHover, setHover] = useState(null);
   const history = useHistory();
 
-  const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-5-button");
+  const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-6-button");
 
   const gamesArray = [
     {
@@ -85,7 +85,7 @@ const MinigamesHover = ({ selection }) => {
   }
   return (
     <Expand
-      open={selection === 5}
+      open={selection === 6}
       duration={200}
       styles={{
         open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },

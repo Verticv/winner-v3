@@ -7,18 +7,21 @@ import activeImage2 from "../../images/otherGames/2_active.png";
 import activeImage3 from "../../images/otherGames/3_active.png";
 import activeImage4 from "../../images/otherGames/4_active.png";
 import activeImage5 from "../../images/otherGames/5_active.png";
+import activeImage6 from "../../images/otherGames/6_active.png";
 
 import logo1 from "../../images/otherGames/1_logo.png";
 import logo2 from "../../images/otherGames/2_logo.png";
 import logo3 from "../../images/otherGames/3_logo.png";
 import logo4 from "../../images/otherGames/4_logo.png";
 import logo5 from "../../images/otherGames/5_logo.png";
+import logo6 from "../../images/otherGames/6_logo.png";
 
 import center1 from "../../images/otherGames/1_center.png";
 import center2 from "../../images/otherGames/2_center.png";
 import center3 from "../../images/otherGames/3_center.png";
 import center4 from "../../images/otherGames/4_center.png";
 import center5 from "../../images/otherGames/5_center.png";
+import center6 from "../../images/otherGames/6_center.png";
 
 import left from "../../images/otherGames/left_corner.png";
 import right from "../../images/otherGames/right_corner.png";
@@ -63,119 +66,104 @@ const sampleArray = [
   },
   {
     id: 5,
-    activeIcon: activeImage1,
-    logo: logo1,
-    center: center1,
-    title: "e-스포츠",
+    activeIcon: activeImage6,
+    logo: logo6,
+    center: center6,
+    title: "K-홀덤",
   },
   {
     id: 6,
-    activeIcon: activeImage2,
-    logo: logo2,
-    center: center2,
-    title: "미니게임",
+    activeIcon: activeImage1,
+    logo: logo1,
+    center: center1,
+    title: "e-스포츠",
   },
   {
     id: 7,
-    activeIcon: activeImage3,
-    logo: logo3,
-    center: center3,
-    title: "키론가상게임",
+    activeIcon: activeImage2,
+    logo: logo2,
+    center: center2,
+    title: "미니게임",
   },
   {
     id: 8,
-    activeIcon: activeImage4,
-    logo: logo4,
-    center: center4,
-    title: "피싱게임",
+    activeIcon: activeImage3,
+    logo: logo3,
+    center: center3,
+    title: "키론가상게임",
   },
   {
     id: 9,
-    activeIcon: activeImage5,
-    logo: logo5,
-    center: center5,
-    title: "티비벳",
+    activeIcon: activeImage4,
+    logo: logo4,
+    center: center4,
+    title: "피싱게임",
   },
   {
     id: 10,
-    activeIcon: activeImage1,
-    logo: logo1,
-    center: center1,
-    title: "e-스포츠",
+    activeIcon: activeImage5,
+    logo: logo5,
+    center: center5,
+    title: "티비벳",
   },
   {
     id: 11,
-    activeIcon: activeImage2,
-    logo: logo2,
-    center: center2,
-    title: "미니게임",
+    activeIcon: activeImage6,
+    logo: logo6,
+    center: center6,
+    title: "K-홀덤",
   },
   {
     id: 12,
-    activeIcon: activeImage3,
-    logo: logo3,
-    center: center3,
-    title: "키론가상게임",
-  },
-  {
-    id: 13,
-    activeIcon: activeImage4,
-    logo: logo4,
-    center: center4,
-    title: "피싱게임",
-  },
-  {
-    id: 14,
-    activeIcon: activeImage5,
-    logo: logo5,
-    center: center5,
-    title: "티비벳",
-  },
-  {
-    id: 15,
     activeIcon: activeImage1,
     logo: logo1,
     center: center1,
     title: "e-스포츠",
   },
   {
-    id: 16,
+    id: 13,
     activeIcon: activeImage2,
     logo: logo2,
     center: center2,
     title: "미니게임",
   },
   {
-    id: 17,
+    id: 14,
     activeIcon: activeImage3,
     logo: logo3,
     center: center3,
     title: "키론가상게임",
   },
   {
-    id: 18,
+    id: 15,
     activeIcon: activeImage4,
     logo: logo4,
     center: center4,
     title: "피싱게임",
   },
   {
-    id: 19,
+    id: 16,
     activeIcon: activeImage5,
     logo: logo5,
     center: center5,
     title: "티비벳",
+  },
+  {
+    id: 17,
+    activeIcon: activeImage6,
+    logo: logo6,
+    center: center6,
+    title: "K-홀덤",
   },
 ];
 
 // Slider with animation
 export default function AnimatedCarousel() {
-  const startIndex = 40;
+  const startIndex = 48;
   const [hoveredTab, setHoveredTab] = useState(startIndex);
   const [currentIndex, setCurrentIndex] = useState(startIndex);
 
   useEffect(() => {
-    console.log(hoveredTab);
     if (currentIndex > hoveredTab) {
       setHoveredTab(hoveredTab + 1);
     }
@@ -188,19 +176,6 @@ export default function AnimatedCarousel() {
 
   const SlideWithAnimation = ({ item, index }) => {
     const isHover = hoveredTab === index;
-    // const [showText, setShowText] = useState(false);
-    // useEffect(() => {
-    //   console.log(showText, isHover)
-    //   if (isHover) {
-    //     setTimeout(() => {
-    //       setShowText(true);
-    //     }, 200);
-    //   }
-
-    //   return () => {
-    //     setShowText(false);
-    //   };
-    // }, [isHover]);
 
     return (
       <div
@@ -266,6 +241,8 @@ export default function AnimatedCarousel() {
                 ? "mb-px -ml-px"
                 : item.title === "티비벳"
                 ? "mb-8px -ml-3px"
+                : item.title === "K-홀덤"
+                ? "mb-7px -ml-px"
                 : "-ml-2px"
             }`}
           >
@@ -292,7 +269,7 @@ export default function AnimatedCarousel() {
     <div className="container mx-auto">
       <div className="relative flex items-center justify-center w-full h-full px-4 pb-23px pt-5px">
         <CarouselProvider
-          visibleSlides={201.5}
+          visibleSlides={181.5}
           totalSlides={1000.29} // the total slid is not an integer because of the animation. if the slides number changed, this number (0.29) should be changed too
           step={1}
           naturalSlideWidth={184}

@@ -18,6 +18,7 @@ import Img1_12 from "../../images/navbarHover/1_12.png";
 import Img1_13 from "../../images/navbarHover/1_13.png";
 import Img1_14 from "../../images/navbarHover/1_14.png";
 import Img1_15 from "../../images/navbarHover/1_15.png";
+import Img1_16 from "../../images/navbarHover/1_16.png";
 
 import Img1_1_logo from "../../images/navbarHover/1_1_logo.png";
 import Img1_2_logo from "../../images/navbarHover/1_2_logo.png";
@@ -33,6 +34,7 @@ import Img1_12_logo from "../../images/navbarHover/1_12_logo.png";
 import Img1_13_logo from "../../images/navbarHover/1_13_logo.png";
 import Img1_14_logo from "../../images/navbarHover/1_14_logo.png";
 import Img1_15_logo from "../../images/navbarHover/1_15_logo.png";
+import Img1_16_logo from "../../images/navbarHover/1_16_logo.png";
 
 import Best from "../../images/navbarHover/best.png";
 
@@ -137,10 +139,10 @@ const LiveCasinoHover = ({ selection }) => {
     },
     {
       id: 13,
-      background: Img1_15,
-      logo: Img1_15_logo,
-      imgText: "준비중",
-      path: "/",
+      background: Img1_16,
+      logo: Img1_16_logo,
+      imgText: "모티베이션",
+      path: "/esports/multi",
     },
     {
       id: 14,
@@ -165,7 +167,7 @@ const LiveCasinoHover = ({ selection }) => {
       >
         {0 === item.id && <img src={Best} alt="" className="absolute -left-3px bottom-7px z-50 object-none" />}
 
-        {isHover === item.id && item.id !== 13 && item.id !== 14 && (
+        {isHover === item.id && item.id !== 14 && (
           <button
             style={{
               boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
@@ -193,7 +195,7 @@ const LiveCasinoHover = ({ selection }) => {
             점검중
           </button>
         )}
-        {((isHover === item.id && item.id !== 13) || 14 === item.id) && (
+        {(isHover === item.id || 14 === item.id) && (
           <div
             className={`${14 === item.id ? "z-20" : "z-10"} relative w-full h-full bg-black opacity-60  rounded-6px`}
           ></div>
