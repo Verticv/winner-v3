@@ -12,6 +12,7 @@ import CenterAccordion from "components/nonLivePage/CenterAccordion/CenterAccord
 import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandComponent";
 // import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
 import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
+import Tabs from "components/nonLivePage/Tabs/Tabs";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   // const [isOpen, setIsOpen] = useState(false);
@@ -69,6 +70,8 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             <LeftAccordion />
           </div>
           <div>
+            <Tabs />
+            {/*  */}
             <CenterComponent />
             <CenterAccordion />
           </div>

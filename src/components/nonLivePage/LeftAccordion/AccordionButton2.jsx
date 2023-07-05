@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AccordionContent2 from "./AccordionContent2";
-import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
+import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 
 const AccordionButton2 = ({ icon, title, card }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +12,10 @@ const AccordionButton2 = ({ icon, title, card }) => {
   return (
     <div
       style={{
-        background: "linear-gradient(to top, #4f3a7a, #cb78e6)",
+        background: "linear-gradient(to top, #4f3a7a, #e597ff)",
         width: "280px",
+        borderRadius: "6px",
+        boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
       }}
       className="rounded-lg p-px mb-5px"
     >
@@ -21,6 +23,9 @@ const AccordionButton2 = ({ icon, title, card }) => {
         style={{
           background: "linear-gradient(to top, #6b22ff, #df52ff)",
           width: "278px",
+          borderRadius: "5px",
+          borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
+          borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
@@ -28,9 +33,21 @@ const AccordionButton2 = ({ icon, title, card }) => {
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
-          <img className="-ml-3px mb-6px object-none" src={icon} alt="icon" />
+          <img
+            className="-ml-3px mb-6px object-none"
+            src={icon}
+            alt="icon"
+            style={{
+              marginTop: 0,
+              marginBottom: "9px",
+            }}
+          />
           <p
-            style={{ letterSpacing: "-0.031em" }}
+            style={{
+              letterSpacing: "-0.031em",
+              fontFamily: "MalgunGothicRegular",
+              marginBottom: "3px",
+            }}
             className="text-14px text-white ml-5px font-malgun"
           >
             {title}

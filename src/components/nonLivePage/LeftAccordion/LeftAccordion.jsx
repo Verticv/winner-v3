@@ -10,11 +10,11 @@ import img2 from "../../../images/nonLivePage/LeftAccordion/content1/2.png";
 import img3 from "../../../images/nonLivePage/LeftAccordion/content1/3.png";
 import img4 from "../../../images/nonLivePage/LeftAccordion/content1/4.png";
 import img5 from "../../../images/nonLivePage/LeftAccordion/content1/5.png";
-import icon_1 from "../../../images/nonLivePage/LeftAccordion/content1/icon1.png";
-import icon_2 from "../../../images/nonLivePage/LeftAccordion/content1/icon2.png";
-import icon_3 from "../../../images/nonLivePage/LeftAccordion/content1/icon3.png";
-import icon_4 from "../../../images/nonLivePage/LeftAccordion/content1/icon4.png";
-import icon_5 from "../../../images/nonLivePage/LeftAccordion/content1/icon5.png";
+import icon_1 from "../../../images/nonLivePage/LeftAccordion/content1/icon11.png";
+import icon_2 from "../../../images/nonLivePage/LeftAccordion/content1/icon21.png";
+import icon_3 from "../../../images/nonLivePage/LeftAccordion/content1/icon31.png";
+import icon_4 from "../../../images/nonLivePage/LeftAccordion/content1/icon41.png";
+import icon_5 from "../../../images/nonLivePage/LeftAccordion/content1/icon51.png";
 import AccordionButton from "./AccordionButton";
 import AccordionButton3 from "./AccordionButton3";
 
@@ -56,30 +56,35 @@ const card3 = [
     icon2: icon_1,
     text: "메이저리그 (MLB)",
     num: "1",
+    style: "mt-16px mb-15px ml-4px",
   },
   {
     icon: img2,
     icon2: icon_2,
     text: "프리미어리그",
     num: "2",
+    style: "mb-4px ml-4px",
   },
   {
     icon: img3,
     icon2: icon_3,
     text: "NBA",
     num: "3",
+    style: "ml-5px",
   },
   {
     icon: img4,
     icon2: icon_4,
     text: "EFL챔피언십",
     num: "4",
+    style: "mb-px ml-5px",
   },
   {
     icon: img5,
     icon2: icon_5,
     text: "KBO",
     num: "5",
+    style: "mb-px ml-4px",
   },
 ];
 
