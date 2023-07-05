@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
+import "./style.css";
 
 const AccordionCard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,20 +14,28 @@ const AccordionCard = () => {
       style={{
         background: "#ffffff",
         width: "274px",
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
       className="items-center justify-between mx-2px rounded-lg mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
         <p
-          style={{ color: "#444444", letterSpacing: "-0.031em",  fontFamily: "MalgunGothicRegular"  }}
+          style={{
+            color: "#444444",
+            letterSpacing: "-0.031em",
+            fontFamily: "MalgunGothicRegular",
+          }}
           className="text-12px mt-5px"
         >
           맨체스터유나이티드
         </p>
         <p
-          style={{ color: "#f04281", letterSpacing: "-0.031em", fontFamily: "MalgunGothicRegular" }}
+          style={{
+            color: "#f04281",
+            letterSpacing: "-0.031em",
+            fontFamily: "MalgunGothicRegular",
+          }}
           className="text-12px font-malgun mt-5px"
         >
           18:30
@@ -50,7 +59,12 @@ const AccordionCard = () => {
           </p>
         </div>
         <div className="flex">
-          <img className="mt-14px object-none" src={icon} alt="img" />
+          <div className="tooltip mt-8px items-center justify-center">
+            <img className="mt-4px object-none" src={icon} alt="img" />
+            <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
+              즐겨찾기에서 제거
+            </span>
+          </div>
           <img
             src={Arrow}
             alt=""

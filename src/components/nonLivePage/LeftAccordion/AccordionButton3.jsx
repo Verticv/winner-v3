@@ -60,6 +60,19 @@ const AccordionButton3 = ({ icon, title }) => {
             {title}
           </p>
         </div>
+        <div
+          style={{
+            background: "#5423a0",
+            width: "39px",
+            height: "19px",
+            marginLeft: "110px",
+          }}
+          className="flex items-center justify-center rounded-lg"
+        >
+          <p className="text-13px text-white tracking-tight font-malgun ">
+            1000
+          </p>
+        </div>
         <div>
           <img
             src={Arrow}
@@ -88,6 +101,22 @@ const AccordionButton3 = ({ icon, title }) => {
             >
               축구
             </p>
+            <div
+              style={{
+                background: "#5423a0",
+                width: "36px",
+                height: "19px",
+                marginLeft: "176px",
+              }}
+              className="flex items-center justify-center rounded-lg"
+            >
+              <p
+                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                className="text-12px font-malgun "
+              >
+                1000
+              </p>
+            </div>
           </div>
           <div
             style={{
@@ -109,6 +138,22 @@ const AccordionButton3 = ({ icon, title }) => {
               >
                 잉글랜드
               </p>
+              <div
+                style={{
+                  background: "#666666",
+                  width: "36px",
+                  height: "19px",
+                  marginLeft: "118px",
+                }}
+                className="flex items-center justify-center rounded-lg"
+              >
+                <p
+                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  className="text-12px font-malgun "
+                >
+                  1000
+                </p>
+              </div>
             </div>
             <div
               style={{ borderColor: "#cccccc", background: "#dddddd" }}
@@ -126,6 +171,22 @@ const AccordionButton3 = ({ icon, title }) => {
               >
                 프리미어리그
               </p>
+              <div
+                style={{
+                  background: "#666666",
+                  width: "16px",
+                  height: "19px",
+                  marginLeft: "122px",
+                }}
+                className="flex items-center justify-center rounded-lg"
+              >
+                <p
+                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  className="text-12px  font-malgun "
+                >
+                  5
+                </p>
+              </div>
             </div>
             <div
               style={{ borderColor: "#cccccc", background: "#dddddd" }}
@@ -143,6 +204,22 @@ const AccordionButton3 = ({ icon, title }) => {
               >
                 챔피언쉽
               </p>
+              <div
+                style={{
+                  background: "#666666",
+                  width: "16px",
+                  height: "19px",
+                  marginLeft: "146px",
+                }}
+                className="flex items-center justify-center rounded-lg"
+              >
+                <p
+                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  className="text-12px  font-malgun "
+                >
+                  0
+                </p>
+              </div>
             </div>
             <div
               style={{ borderColor: "#cccccc", background: "#eeeeee" }}
@@ -155,6 +232,22 @@ const AccordionButton3 = ({ icon, title }) => {
               >
                 이탈리아
               </p>
+              <div
+                style={{
+                  background: "#666666",
+                  width: "29px",
+                  height: "19px",
+                  marginLeft: "125px",
+                }}
+                className="flex items-center justify-center rounded-lg"
+              >
+                <p
+                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  className="text-12px  font-malgun "
+                >
+                  100
+                </p>
+              </div>
             </div>
             <div
               style={{ borderColor: "#cccccc", background: "#eeeeee" }}
@@ -167,6 +260,22 @@ const AccordionButton3 = ({ icon, title }) => {
               >
                 스페인
               </p>
+              <div
+                style={{
+                  background: "#666666",
+                  width: "29px",
+                  height: "19px",
+                  marginLeft: "137px",
+                }}
+                className="flex items-center justify-center rounded-lg"
+              >
+                <p
+                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  className="text-12px  font-malgun "
+                >
+                  100
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -182,6 +291,22 @@ const AccordionButton3 = ({ icon, title }) => {
             >
               농구
             </p>
+            <div
+              style={{
+                background: "#6b22ff",
+                width: "29px",
+                height: "19px",
+                marginLeft: "183px",
+              }}
+              className="flex items-center justify-center rounded-lg"
+            >
+              <p
+                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                className="text-12px  font-malgun "
+              >
+                100
+              </p>
+            </div>
           </div>
           <div
             style={{
@@ -196,6 +321,22 @@ const AccordionButton3 = ({ icon, title }) => {
             >
               야구
             </p>
+            <div
+              style={{
+                background: "#6b22ff",
+                width: "29px",
+                height: "19px",
+                marginLeft: "183px",
+              }}
+              className="flex items-center justify-center rounded-lg"
+            >
+              <p
+                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                className="text-12px font-malgun "
+              >
+                100
+              </p>
+            </div>
           </div>
           <div
             style={{
@@ -210,6 +351,22 @@ const AccordionButton3 = ({ icon, title }) => {
             >
               격투기
             </p>
+            <div
+              style={{
+                background: "#6b22ff",
+                width: "29px",
+                height: "19px",
+                marginLeft: "170px",
+              }}
+              className="flex items-center justify-center rounded-lg"
+            >
+              <p
+                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                className="text-12px font-malgun "
+              >
+                100
+              </p>
+            </div>
           </div>
         </div>
         // </div>

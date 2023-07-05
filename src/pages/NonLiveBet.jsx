@@ -10,8 +10,11 @@ import Search from "components/nonLivePage/Search/Search";
 import CenterComponent from "components/nonLivePage/CenterComponent/CenterComponent";
 import CenterAccordion from "components/nonLivePage/CenterAccordion/CenterAccordion";
 import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandComponent";
-// import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
+import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
 import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
+// import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpComponent";
+// import AnimatedCarousel from "components/nonLivePage/AnimatedCarousel";
+// import HorizontalScroll from "components/nonLivePage/HorizontalScroll";
 import Tabs from "components/nonLivePage/Tabs/Tabs";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
@@ -20,6 +23,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   // const toggleAccordion = () => {
   //   setIsOpen(!isOpen);
   // };
+
   return (
     <>
       <div
@@ -77,12 +81,19 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           </div>
           <div>
             <EnglandComponent />
-            {/* <EntireAccordion /> */}
+            <EntireAccordion />
           </div>
           <div>
             <RightComponent />
           </div>
         </div>
+        {/* <div className="flex items-center justify-center absolute z-50">
+          <PoupUpComponent />
+        </div> */}
+        {/* <div>
+          <AnimatedCarousel />
+        </div> */}
+
         <Footer />
       </div>
     </>

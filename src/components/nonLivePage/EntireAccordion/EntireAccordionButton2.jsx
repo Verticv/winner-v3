@@ -13,30 +13,41 @@ const EntireAccordionButton2 = ({ icon, title, card }) => {
   };
 
   return (
-    <div className="ml-5px mr-5px mb-5px">
+    <div className="ml-4px mr-5px mb-5px">
       <div
-        style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
+        style={{
+          background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+          width: "630px",
+        }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-30px`}
+        } cursor-pointer h-31px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
-          <p style={{ color: "#eeeeee" }} className="text-12px ml-9px">
+          <p
+            style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+            className="text-13px mb-px ml-9px font-MalgunGothicBold"
+          >
             {title}
           </p>
         </div>
         <div className="flex items-center">
           <img
-            style={{ borderColor: "#764cbb" }}
-            className="border-r pr-10px"
+            style={{
+              borderColor: "#764cbb",
+              height: "31px",
+              paddingRight: "2px",
+            }}
+            className="border-r mb-px -mr-px object-none"
             src={icon}
             alt="icon"
           />
           <img
             src={Arrow}
-            alt=""
-            className={`w-6 h-6 object-none text-white ml-13px mr-14px ${
+            alt="img"
+            style={{ marginBottom: "1px" }}
+            className={` object-none text-white ml-14px mr-14px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
@@ -45,23 +56,41 @@ const EntireAccordionButton2 = ({ icon, title, card }) => {
       {isOpen && (
         <div style={{ background: "#420572" }} className="rounded-b-lg">
           <div
-            style={{ background: "#eeeeee" }}
-            className="flex items-center justify-between h-28px "
+            style={{ background: "#eeeeee", width: "630px" }}
+            className="flex items-center justify-between h-28px  "
           >
-            <div style={{ marginLeft: "141px" }}>
-              <p style={{ color: "444444" }} className="text-12">
+            <div style={{ marginLeft: "140px" }}>
+              <p
+                style={{
+                  color: "444444",
+                  letterSpacing: "-0.031em",
+                  fontSize: "12px",
+                }}
+                className=" font-malgun -mt-2px "
+              >
                 아스널
               </p>
             </div>
-            <div style={{ marginRight: "141px" }}>
-              <p style={{ color: "444444" }} className="text-12">
+            <div
+              style={{
+                marginRight: "140px",
+              }}
+            >
+              <p
+                style={{
+                  color: "444444",
+                  letterSpacing: "-0.031em",
+                  fontSize: "12px",
+                }}
+                className="font-malgun -mt-2px"
+              >
                 리버플
               </p>
             </div>
           </div>
-          {card.map((item) => (
-            <EntireAccordionContent2 key={item.id} card={item} />
-          ))}
+          {/* {card.map((item) => ( */}
+          <EntireAccordionContent2 />
+          {/* ))} */}
         </div>
       )}
     </div>

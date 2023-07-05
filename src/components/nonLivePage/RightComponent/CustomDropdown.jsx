@@ -18,8 +18,13 @@ const CustomDropdown = () => {
 
   return (
     <div
-      style={{ background: "#ffffff", width: "86px", height: "27px" }}
-      className="relative items-center justify-between rounded-lg "
+      style={{
+        background: "#ffffff",
+        width: "86px",
+        height: "27px",
+        borderRadius: "4px",
+      }}
+      className="relative items-center justify-between  "
     >
       <button
         type="button"
@@ -28,15 +33,15 @@ const CustomDropdown = () => {
       >
         <p
           style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-13px mt-6px ml-9px font-malgun"
+          className="text-13px mt-3px ml-9px font-malgun"
         >
           {" "}
           {selectedOption || "싱글"}{" "}
         </p>
         <img
           src={img}
-          alt=""
-          className={`ml-30px mt-3px transition-transform duration-300 ${
+          alt="img"
+          className={`ml-30px -mb-2px mt-3px transition-transform duration-300 ${
             isOpen ? "transform rotate-180" : ""
           }`}
         />

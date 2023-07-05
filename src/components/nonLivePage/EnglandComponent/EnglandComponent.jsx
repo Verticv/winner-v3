@@ -1,16 +1,18 @@
 import React from "react";
-// import icon from "../../../images/nonLivePage/EnglandComponent/Icon.png";
-// import flag from "../../../images/nonLivePage/EnglandComponent/Flag.png";
-// import img from "../../../images/nonLivePage/EnglandComponent/Img.png";
-// import img2 from "../../../images/nonLivePage/EnglandComponent/img2.png";
-import img3 from "../../../images/nonLivePage/EnglandComponent/img3.png";
-import img4 from "../../../images/nonLivePage/EnglandComponent/img4.png";
-import img5 from "../../../images/nonLivePage/EnglandComponent/img5.png";
+import icon from "../../../images/nonLivePage/EnglandComponent/Icon.png";
+import flag from "../../../images/nonLivePage/EnglandComponent/Flag.png";
+import img from "../../../images/nonLivePage/EnglandComponent/Img.png";
+import img2 from "../../../images/nonLivePage/EnglandComponent/img2.png";
+// import img3 from "../../../images/nonLivePage/EnglandComponent/img3.png";
+// import img4 from "../../../images/nonLivePage/EnglandComponent/img4.png";
+// import img5 from "../../../images/nonLivePage/EnglandComponent/img5.png";
+// import group from "../../../images/nonLivePage/EnglandComponent/Group.png";
+// import logo from "../../../images/nonLivePage/EnglandComponent/Logo.png";
 
 const EnglandComponent = () => {
   return (
     <>
-      <div className="flex flex-shrink-0 items-center justify-center mt-5px -ml-4px mb-5px">
+      {/*<div className="flex flex-shrink-0 items-center justify-center mt-5px -ml-4px mb-5px">
         <img src={img3} alt="icon" />
         <div className="absolute items-center justify-center">
           <p
@@ -34,7 +36,7 @@ const EnglandComponent = () => {
           height: "614px",
           borderRadius: "6px"
         }}
-        className="rounded-lg p-4px mb-4px"
+        className="rounded-lg p-4px mb-4px mr-10px"
       >
         <div
           style={{
@@ -43,9 +45,35 @@ const EnglandComponent = () => {
             height: "606px",
             borderRadius: "1px"
           }}
+          className="flex items-center justify-center"
+        >
+          <img className="mt-5px" src={group} alt="icon" />
+          <div className="flex absolute">
+            <img className="-mt-69px object-none" src={logo} alt="icon" />
+          </div>
+          <div
+            style={{
+              background: "linear-gradient(to right, #15cfee, #3197e5)",
+            }}
+            className="flex absolute items-center justify-center w-178px h-46px mt-180px rounded-lg"
+          >
+            <p
+              style={{ letterSpacing: "-0.1em" }}
+              className="text-16px  text-white font-malgun -ml-4px mt-2px"
+            >
+              베팅규정 안내확인
+            </p>
+          </div>
+          {/*
+        <div
+          style={{
+            background: "#5e399a",
+            width: "632px",
+            height: "606px",
+          }}
           className="flex "
         >
-          <div className="items-start">
+           <div className="items-start">
             <div className="flex">
               <img
                 className="ml-20px mt-20px object-none"
@@ -185,59 +213,79 @@ const EnglandComponent = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </div> */}
+      {/*  */}
+      {/* </div>
+      </div> */}
 
-      {/* <div
+      {/* hidden */}
+      <div
         style={{
           background: "#ebabff",
           width: "640px",
+          height: "61px",
+          borderRadius: "10px",
         }}
-        className="rounded-lg p-2px mb-10px mt-10px ml-10px"
+        className="p-2px mb-10px mt-10px mr-6px"
       >
         <div
-          style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
-          className="flex items-center justify-between rounded-lg"
+          style={{
+            background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+            height: "57px",
+            borderRadius: "8px",
+          }}
+          className="flex items-center justify-between"
         >
-          <div className="ml-14px items-center">
+          <div className="ml-13px items-center">
             <div className="flex items-center">
-              <img src={icon} alt="icon" />
-              <img className="ml-5px" src={flag} alt="icon" />
+              <img className="-ml-px mt-3px" src={icon} alt="icon" />
+              <img className="ml-5px mt-3px" src={flag} alt="icon" />
               <p
-                style={{ color: "#eeeeee" }}
-                className="ml-4px mt-13px text-12px"
+                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                className="ml-4px mt-10px text-12px font-MalgunGothicBold"
               >
                 잉글랜드 - 프리미어리그
               </p>
             </div>
-            <div className="flex items-center mb-13px">
-              <p style={{ color: "#dddddd" }} className="text-12px">
+            <div className="flex items-center mb-12px -ml-px">
+              <p
+                style={{ color: "#dddddd", letterSpacing: "-0.031em" }}
+                className="text-12px mt-2px font-MalgunGothicBold"
+              >
                 2023-03-22 13:00
               </p>
               <div
-                style={{ color: "#cb78e6" }}
-                className="ml-10px w-px h-10px"
+                style={{ background: "#cb78e6" }}
+                className="ml-10px mr-2px mt-4px w-px h-10px"
               ></div>
-              <p style={{ color: "#dddddd" }} className="ml-9px text-12px">
+              <p
+                style={{ color: "#dddddd", letterSpacing: "-0.031em" }}
+                className="ml-7px mt-3px mr-1px text-12px font-MalgunGothicBold"
+              >
                 아스널
               </p>
-              <p style={{ color: "#ffc900" }} className="ml-8px text-12px">
+              <p
+                style={{ color: "#ffc900", letterSpacing: "-0.031em" }}
+                className="ml-7px mr-3px -mb-3px mt-px text-12px font-MalgunGothicBold"
+              >
                 VS
               </p>
-              <p style={{ color: "#dddddd" }} className="ml-8px text-12px">
+              <p
+                style={{ color: "#dddddd", letterSpacing: "-0.031em" }}
+                className="ml-4px mt-3px text-12px font-MalgunGothicBold"
+              >
                 리버풀
               </p>
             </div>
           </div>
-          <div className="mr-15px mt-4px">
+          <div className="mr-13px mt-2px">
             <img src={img} alt="icon" />
           </div>
         </div>
       </div>
-      <div className="ml-10px mb-10px">
+      <div className=" mb-10px -mr-2px">
         <img src={img2} alt="icon" />
-      </div> */}
+      </div>
     </>
   );
 };
