@@ -13,30 +13,40 @@ const EntireAccordionButton = ({ icon, title, card }) => {
   };
 
   return (
-    <div className="ml-5px mr-5px mb-5px">
+    <div className="ml-4px mr-5px mb-5px ">
       <div
-        style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
+        style={{
+          background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+          width: "630px",
+        }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-30px`}
+        } cursor-pointer h-31px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
-          <p style={{ color: "#eeeeee" }} className="text-12px ml-9px">
+          <p
+            style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+            className="text-12px ml-10px font-MalgunGothicBold"
+          >
             {title}
           </p>
         </div>
         <div className="flex items-center">
           <img
-            style={{ borderColor: "#764cbb" }}
-            className="border-r pr-10px"
+            style={{
+              borderColor: "#764cbb",
+              height: "31px",
+              paddingRight: "2px",
+            }}
+            className="border-r -mr-px object-none"
             src={icon}
             alt="icon"
           />
           <img
             src={Arrow}
             alt="img"
-            className={`w-6 h-6 object-none text-white ml-13px mr-14px ${
+            className={`object-none text-white ml-14px mr-14px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />

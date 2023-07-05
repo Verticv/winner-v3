@@ -59,8 +59,14 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "MalgunGothic";
-  src: url("./fonts/malgun.ttf");
+  font-family: "MalgunGothicRegular";
+  src: url("./fonts/Malgun\ Gothic\ Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MalgunGothicBold";
+  src: url("./fonts/Malgun\ Gothic\ Bold.ttf");
   font-weight: normal;
   font-style: normal;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
+import "./style.css";
 
 const AccordionCard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,13 +50,18 @@ const AccordionCard = () => {
           </p>
         </div>
         <div className="flex">
-          <img className="mt-8px object-none" src={icon} alt="img" />
+          <div className="tooltip mt-8px items-center justify-center">
+            <img className="mt-8px object-none" src={icon} alt="img" />
+            <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
+              즐겨찾기에서 제거
+            </span>
+          </div>
           <img
             src={Arrow}
             alt=""
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
-            className={`object-none mr-10px ml-10px mt-10px ${
+            className={`object-none mr-10px ml-29px mt-10px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
