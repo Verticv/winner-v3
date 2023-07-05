@@ -60,11 +60,22 @@
 }
 @font-face {
   font-family: "MalgunGothic";
-  src: url("./fonts/malgun.ttf");
+  src: url("./fonts/MalgunGothicRegular.ttf");
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "MalgunGothicRegular";
+  src: url("./fonts/MalgunGothicRegular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MalgunGothicBold";
+  src: url("./fonts/Malgun\ Gothic\ Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 @layer utilities {
   @variants responsive {
     .text-shadow {

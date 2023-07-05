@@ -280,7 +280,7 @@ const CenterAccordionContent1 = () => {
         </div>
       </div>
 
-      <div className="flex items-center h-30px ">
+      <div className="flex items-center h-30px">
         <div className="items-center ml-6px mt-6px mb-8px">
           <img src={icon} alt="icon" />
         </div>
@@ -321,7 +321,7 @@ const CenterAccordionContent1 = () => {
         </div>
         <div
           style={{ width: "39px" }}
-          className="flex items-center justify-center"
+          className="flex items-center justify-center "
         >
           <p
             style={{

@@ -15,14 +15,15 @@ const AccordionCard2 = () => {
       style={{
         background: "#ffffff",
         width: "274px",
+        borderRadius: "4px"
       }}
       className="items-center justify-between mx-2px rounded-lg mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
         <p
-          style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun mt-8px"
+          style={{ color: "#444444", letterSpacing: "-0.031em",  fontFamily: "MalgunGothicRegular"  }}
+          className="text-12px mt-8px"
         >
           맨체스터유나이티드
         </p>
@@ -51,13 +52,13 @@ const AccordionCard2 = () => {
           </p>
         </div>
         <div className="flex">
-          <img className="mt-8px object-none" src={icon} alt="img" />
+          <img className="mt-12px object-none" src={icon} alt="img" />
           <img
             src={Arrow}
             alt="img"
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
-            className={`object-none mr-10px ml-10px mt-10px ${
+            className={`object-none mr-11px ml-9px mt-14px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />

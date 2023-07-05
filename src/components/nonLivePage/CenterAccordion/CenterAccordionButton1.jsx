@@ -75,7 +75,7 @@ const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
       {isOpen && (
         <div
           style={{ background: "#ffffff", width: "640px" }}
-          className=" -ml-px"
+          className=" -ml-px rounded-b-lg"
         >
           {/* {card.map((item) => ( */}
           <CenterAccordionContent1 />
