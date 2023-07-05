@@ -6,7 +6,7 @@ import img4 from "../../../images/nonLivePage/LeftAccordion/content/lasticon.png
 import flag1 from "../../../images/nonLivePage/LeftAccordion/Card/Flag1.png";
 import flag2 from "../../../images/nonLivePage/LeftAccordion/Card/Flag2.png";
 import flag3 from "../../../images/nonLivePage/LeftAccordion/Card/Flag3.png";
-import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
+import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 
 // import AccordionContent from "./AccordionContent";
 
@@ -20,8 +20,10 @@ const AccordionButton3 = ({ icon, title }) => {
   return (
     <div
       style={{
-        background: "linear-gradient(to top, #4f3a7a, #cb78e6)",
+        background: "linear-gradient(to top, #4f3a7a, #e597ff)",
         width: "280px",
+        borderRadius: "6px",
+        boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
       }}
       className="rounded-lg p-px mb-5px"
     >
@@ -29,17 +31,31 @@ const AccordionButton3 = ({ icon, title }) => {
         style={{
           background: "linear-gradient(to top, #6b22ff, #df52ff)",
           width: "278px",
+          borderRadius: "5px",
+          borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
+          borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-43px`}
+        } cursor-pointer h-44px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
-          <img className="-ml-4px mb-10px" src={icon} alt="icon" />
+          <img
+            className="-ml-4px mb-10px"
+            src={icon}
+            alt="icon"
+            style={{
+              marginTop: 0,
+              marginBottom: "8px",
+            }}
+          />
           <p
-            style={{ letterSpacing: "-0.031em" }}
-            className="text-14px text-white ml-6px mt-14px mb-15px font-malgun "
+            style={{
+              letterSpacing: "-0.031em",
+              fontFamily: "MalgunGothicRegular",
+            }}
+            className="text-14px text-white ml-6px mt-12px mb-15px font-malgun "
           >
             {title}
           </p>
@@ -81,7 +97,7 @@ const AccordionButton3 = ({ icon, title }) => {
             <img className="ml-6px mt-8px mb-8px" src={icon1} alt="img" />
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-5px mt-12px mb-11px font-malgun"
+              className="text-13px ml-6px mt-12px mb-11px font-malgun"
             >
               축구
             </p>

@@ -14,20 +14,21 @@ const AccordionCard1 = () => {
       style={{
         background: "#ffffff",
         width: "274px",
+        borderRadius: "4px"
       }}
       className="items-center justify-between mx-2px rounded-lg mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
         <p
-          style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun mt-8px"
+          style={{ color: "#444444", letterSpacing: "-0.031em", fontFamily: "MalgunGothicRegular"  }}
+          className="text-12px mt-6px"
         >
           FC바르셀로나
         </p>
         <p
           style={{ color: "#f04281", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun mt-4px"
+          className="text-12px font-malgun mt-5px"
         >
           18:30
         </p>
@@ -41,7 +42,7 @@ const AccordionCard1 = () => {
         </p>
       </div>
       <div className="flex justify-between ml-10px">
-        <div className="mt-17px mb-5px">
+        <div className="mt-19px mb-6px">
           <p
             style={{ color: "#0072bc", letterSpacing: "-0.031em" }}
             className="text-12px font-malgun"
@@ -50,13 +51,13 @@ const AccordionCard1 = () => {
           </p>
         </div>
         <div className="flex">
-          <img className="mt-8px object-none" src={icon} alt="img" />
+          <img className="mt-12px object-none" src={icon} alt="img" />
           <img
             src={Arrow}
             alt=""
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
-            className={`object-none mr-10px ml-10px mt-10px ${
+            className={`object-none mr-10px ml-10px mt-14px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />

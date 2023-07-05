@@ -2,7 +2,6 @@ import React from "react";
 import icon from "../../../images/nonLivePage/CenterAccordion/star2.png";
 
 const CenterAccordionContent = ({ card, lastObject }) => {
-  console.log(lastObject.id);
   return (
     <>
       <div
@@ -15,15 +14,21 @@ const CenterAccordionContent = ({ card, lastObject }) => {
         //   }
         //    h-31px  `}
         // >
-        className={`flex items-center
-     border-b
+        className={`flex items-center ${
+          lastObject.id !== card.id ? "border-b" : ""
+        }
       h-31px  `}
       >
         <div className="items-center ml-6px mt-6px mb-8px">
           <img src={icon} alt="icon" />
         </div>
         <div
-          style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
+          style={{
+            borderColor: "#cccccc",
+            width: "252px",
+            height: "30px",
+            fontFamily: "MalgunGothicRegular",
+          }}
           className="flex items-center justify-between border-l border-r ml-6px"
         >
           <p
@@ -32,7 +37,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className="font-malgun ml-8px mt-10px mb-9px"
+            className="ml-9px mt-10px mb-12px"
           >
             {card.text}
           </p>
@@ -42,7 +47,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-10px mt-10px mb-11px font-malgun"
+            className=" mr-10px mt-10px mb-11px"
           >
             {card.text1}
           </p>
@@ -55,7 +60,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               letterSpacing: "-0.031em",
               width: "21px",
             }}
-            className="font-malgun ml-23px"
+            className="ml-23px"
           >
             {card.text2}
           </p>
@@ -70,7 +75,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" ml-9px mt-10px mb-11px font-malgun"
+            className=" ml-9px mt-10px mb-11px"
           >
             {card.text3}
           </p>
@@ -80,7 +85,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-10px mb-9px font-malgun"
+            className=" mr-9px mt-10px mb-9px"
           >
             {card.text4}
           </p>
@@ -95,7 +100,6 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className="font-malgun"
           >
             {card.text5}
           </p>

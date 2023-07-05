@@ -12,15 +12,17 @@ import img2 from "../../../images/nonLivePage/EnglandComponent/img2.png";
 const EnglandComponent = () => {
   return (
     <>
-      {/* <div className="flex flex-shrink-0 items-center justify-center mt-6px -ml-8px mb-5px">
+      {/*<div className="flex flex-shrink-0 items-center justify-center mt-5px -ml-4px mb-5px">
         <img src={img3} alt="icon" />
         <div className="absolute items-center justify-center">
           <p
             style={{
               color: "#ffffff",
               letterSpacing: "-0.031em",
+              fontFamily: "MalgunGothicBold",
+              textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
             }}
-            className="text-18px font-malgun mt-25px mb-25px"
+            className="text-18px mb-3px"
           >
             스포츠 베팅규정 안내
           </p>
@@ -32,6 +34,7 @@ const EnglandComponent = () => {
           background: "#936cee",
           width: "640px",
           height: "614px",
+          borderRadius: "6px"
         }}
         className="rounded-lg p-4px mb-4px mr-10px"
       >
@@ -40,6 +43,7 @@ const EnglandComponent = () => {
             background: "#5e399a",
             width: "632px",
             height: "606px",
+            borderRadius: "1px"
           }}
           className="flex items-center justify-center"
         >
@@ -78,7 +82,7 @@ const EnglandComponent = () => {
               />
               <p
                 style={{ letterSpacing: "-0.094em" }}
-                className="ml-6px mt-21px text-white text-13px font-malgun"
+                className="ml-6px mt-18px text-white text-13px font-malgun"
               >
                 단폴/두폴/다폴 베팅규정 안내
               </p>

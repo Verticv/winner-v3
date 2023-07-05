@@ -15,6 +15,7 @@ import RightComponent from "components/nonLivePage/RightComponent/RightComponent
 // import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpComponent";
 // import AnimatedCarousel from "components/nonLivePage/AnimatedCarousel";
 // import HorizontalScroll from "components/nonLivePage/HorizontalScroll";
+import Tabs from "components/nonLivePage/Tabs/Tabs";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   // const [isOpen, setIsOpen] = useState(false);
@@ -73,6 +74,8 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             <LeftAccordion />
           </div>
           <div>
+            <Tabs />
+            {/*  */}
             <CenterComponent />
             <CenterAccordion />
           </div>

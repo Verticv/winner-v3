@@ -169,6 +169,7 @@ module.exports = {
         digital: ["Digital-7"],
         swagger: ["Swagger"],
         malgun: ["MalgunGothicRegular"],
+        MalgunGothicRegular: ["MalgunGothicRegular"],
         MalgunGothicBold: ["MalgunGothicBold"],
       },
       fontSize: {
