@@ -3,6 +3,7 @@ import icon from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
 import Up from "../../../images/nonLivePage/LeftAccordion/Card/Up.png";
 import Dn from "../../../images/nonLivePage/LeftAccordion/Card/Dn.png";
+import "./style.css";
 
 const AccordionCard2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +16,18 @@ const AccordionCard2 = () => {
       style={{
         background: "#ffffff",
         width: "274px",
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
-      className="items-center justify-between mx-2px rounded-lg mb-2px "
+      className="items-center justify-between mx-2px mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
         <p
-          style={{ color: "#444444", letterSpacing: "-0.031em",  fontFamily: "MalgunGothicRegular"  }}
+          style={{
+            color: "#444444",
+            letterSpacing: "-0.031em",
+            fontFamily: "MalgunGothicRegular",
+          }}
           className="text-12px mt-8px"
         >
           맨체스터유나이티드
@@ -51,7 +56,7 @@ const AccordionCard2 = () => {
             2023-05-14 18:30
           </p>
         </div>
-        <div className="flex">
+        {/* <div className="flex">
           <img className="mt-12px object-none" src={icon} alt="img" />
           <img
             src={Arrow}
@@ -62,6 +67,23 @@ const AccordionCard2 = () => {
               isOpen ? "transform rotate-180" : ""
             }`}
           />
+        </div> */}
+        <div className="flex">
+          <div className="tooltip mt-8px items-center justify-center">
+            <img className="mt-10px ml-px object-none" src={icon} alt="img" />
+            <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
+              즐겨찾기에서 제거
+            </span>
+          </div>
+          <img
+            src={Arrow}
+            alt=""
+            onClick={toggleAccordion}
+            style={{ color: "#444444" }}
+            className={`object-none mr-11px ml-29px mt-14px ${
+              isOpen ? "transform rotate-180" : ""
+            }`}
+          />
         </div>
       </div>
       {isOpen && (
@@ -69,8 +91,10 @@ const AccordionCard2 = () => {
           style={{
             background: "#eeeeee",
             borderColor: "#cccccc",
+            borderBottomLeftRadius: "4px",
+            borderBottomRightRadius: "4px",
           }}
-          className="flex border-t border-b border-solid h-31px items-center rounded-b-lg"
+          className="flex border-t border-solid h-31px items-center"
         >
           <div
             style={{ width: "91px" }}
@@ -96,7 +120,7 @@ const AccordionCard2 = () => {
           </div>
           <div
             style={{ borderColor: "#cccccc", width: "93px" }}
-            className="flex items-center border-l border-r border-solid justify-between"
+            className="flex items-center border-l border-r border-solid justify-between h-30px"
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}

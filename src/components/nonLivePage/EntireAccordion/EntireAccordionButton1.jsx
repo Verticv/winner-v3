@@ -18,6 +18,9 @@ const EntireAccordionButton1 = ({ icon, title, card }) => {
         style={{
           background: "linear-gradient(to right, #9d3bbb, #5423a0)",
           width: "630px",
+          borderRadius: "4px",
+          borderBottomRightRadius: `${isOpen ? "0px" : "4px"}`,
+          borderBottomLeftRadius: `${isOpen ? "0px" : "4px"}`,
         }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"

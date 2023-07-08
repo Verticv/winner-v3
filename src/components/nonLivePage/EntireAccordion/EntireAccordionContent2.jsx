@@ -215,8 +215,10 @@ const EntireAccordionContent2 = () => {
           background: "#ffffff",
           borderColor: "#bbbbbb",
           width: "630px",
+          borderBottomLeftRadius: "4px",
+          borderBottomRightRadius: "4px",
         }}
-        className="flex items-center h-31px border-t rounded-b-lg"
+        className="flex items-center h-31px border-t "
       >
         <div
           style={{ borderColor: "#bbbbbb", width: "307px" }}

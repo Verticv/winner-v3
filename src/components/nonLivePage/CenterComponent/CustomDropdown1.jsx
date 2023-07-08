@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import img from "../../../images/nonLivePage/RightComponent/Arrow.png";
+import "./CenterStyle.css";
 
 const CustomDropdown1 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,13 +32,18 @@ const CustomDropdown1 = () => {
 
   return (
     <div
-      style={{ background: "#ffffff", width: "77px", height: "27px", borderRadius: "4px" }}
+      style={{
+        background: "#ffffff",
+        width: "77px",
+        height: "27px",
+        borderRadius: "4px",
+      }}
       className="relative items-center justify-between rounded-lg "
     >
       <button
         type="button"
         className="flex items-center justify-between focus:outline-none"
-        style={{paddingTop: "4px"}}
+        style={{ paddingTop: "4px" }}
         onClick={toggleDropdown}
       >
         <p
@@ -57,17 +63,37 @@ const CustomDropdown1 = () => {
       </button>
 
       {isOpen && (
-        <ul className="absolute z-10 mt-2 w-full bg-white rounded-md shadow-lg">
-          {options.map((option) => (
-            <li
-              key={option}
-              className="py-2 px-4 hover:bg-gray-100 cursor-pointer"
-              onClick={() => handleOptionSelect(option)}
-            >
-              {option}
-            </li>
-          ))}
-        </ul>
+        <div
+          style={{
+            background: "#666666",
+            width: "79px",
+            borderRadius: "4px",
+          }}
+          className="p-px absolute mt-6px -ml-px"
+        >
+          <div
+            style={{
+              background: "#ffffff",
+              width: "77px",
+              // height: "27px",
+              borderRadius: "4px",
+            }}
+            className="relative items-center justify-between"
+          >
+            <ul>
+              {options.map((option) => (
+                <li
+                  key={option}
+                  style={{}}
+                  className="py-2 px-2  cursor-pointer font-malgun"
+                  onClick={() => handleOptionSelect(option)}
+                >
+                  {option}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       )}
     </div>
   );

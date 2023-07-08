@@ -150,7 +150,49 @@ const RightComponentCard1 = () => {
               </p>
             </div>
             <div className="flex items-center mr-7px">
-              <img className="mt-13px mb-12px" src={icon6} alt="icon" />
+              <div className="tooltip1">
+                <img className="mt-13px mb-12px" src={icon6} alt="icon" />
+                <div className="tooltiptext1">
+                  <div
+                    style={{ width: "170px", height: "40px" }}
+                    className="flex items-center justify-start ml-10px pb-13px"
+                  >
+                    <img className="object-none -mt-2px" src={img} alt="icon" />
+                    <span className="ml-5px -mt-3px text-12px font-MalgunGothicBold tracking-tight text-white">
+                      축구
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      width: "170px",
+                      height: "59px",
+                      background: "#ffffff",
+                      borderBottomLeftRadius: "4px",
+                      borderBottomRightRadius: "4px",
+                    }}
+                    className="-mt-10px items-center"
+                  >
+                    <p
+                      style={{ color: "#666666" }}
+                      className="ml-10px pt-5px text-10px font-MalgunGothicBold tracking-tight"
+                    >
+                      프리미어리그
+                    </p>
+                    <p
+                      style={{ color: "#666666", marginTop: "2px" }}
+                      className="ml-10px text-10px font-MalgunGothicBold tracking-tight"
+                    >
+                      시작되지 않음
+                    </p>
+                    <p
+                      style={{ color: "#666666", marginTop: "1px" }}
+                      className="ml-10px  text-10px font-MalgunGothicBold tracking-tight"
+                    >
+                      아스날 VS 리버풀
+                    </p>
+                  </div>
+                </div>
+              </div>
               <img className="ml-10px mt-15px mb-14px" src={icon7} alt="icon" />
             </div>
           </div>

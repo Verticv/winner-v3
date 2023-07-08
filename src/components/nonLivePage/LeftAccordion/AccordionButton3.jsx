@@ -25,7 +25,7 @@ const AccordionButton3 = ({ icon, title }) => {
         borderRadius: "6px",
         boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
       }}
-      className="rounded-lg p-px mb-5px"
+      className="p-px mb-5px"
     >
       <div
         style={{
@@ -37,17 +37,16 @@ const AccordionButton3 = ({ icon, title }) => {
         }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-44px`}
+        } cursor-pointer h-43px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
           <img
-            className="-ml-4px mb-10px"
+            className="-ml-4px mb-11px"
             src={icon}
             alt="icon"
             style={{
-              marginTop: 0,
-              marginBottom: "8px",
+              marginTop: "3px",
             }}
           />
           <p
@@ -55,7 +54,7 @@ const AccordionButton3 = ({ icon, title }) => {
               letterSpacing: "-0.031em",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="text-14px text-white ml-6px mt-12px mb-15px font-malgun "
+            className="text-14px text-white ml-5px mt-13px mb-15px font-malgun "
           >
             {title}
           </p>
@@ -65,11 +64,12 @@ const AccordionButton3 = ({ icon, title }) => {
             background: "#5423a0",
             width: "39px",
             height: "19px",
-            marginLeft: "110px",
+            marginLeft: "111px",
+            borderRadius: "4px",
           }}
-          className="flex items-center justify-center rounded-lg"
+          className="flex items-center justify-center"
         >
-          <p className="text-13px text-white tracking-tight font-malgun ">
+          <p className="text-13px mb-px text-white tracking-tight font-malgun ">
             1000
           </p>
         </div>
@@ -85,14 +85,19 @@ const AccordionButton3 = ({ icon, title }) => {
       </div>
       {isOpen && (
         <div
-          style={{ background: "#420572" }}
-          className="pt-2px rounded-b-lg pb-2px"
+          style={{
+            background: "#420572",
+            borderBottomRightRadius: "5px",
+            borderBottomLeftRadius: "5px",
+          }}
+          className="pt-2px  pb-2px"
         >
           <div
             style={{
               background: "#ffffff",
+              borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px "
+            className="flex items-center ml-2px mb-2px mr-2px h-37px "
           >
             <img className="ml-6px mt-8px mb-8px" src={icon1} alt="img" />
             <p
@@ -103,16 +108,17 @@ const AccordionButton3 = ({ icon, title }) => {
             </p>
             <div
               style={{
-                background: "#5423a0",
+                background: "#6b22ff",
                 width: "36px",
                 height: "19px",
-                marginLeft: "176px",
+                marginLeft: "175px",
+                borderRadius: "4px",
               }}
-              className="flex items-center justify-center rounded-lg"
+              className="flex items-center justify-center"
             >
               <p
                 style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px font-malgun "
+                className="text-12px font-malgun mb-px"
               >
                 1000
               </p>
@@ -121,20 +127,21 @@ const AccordionButton3 = ({ icon, title }) => {
           <div
             style={{
               background: "#eeeeee",
+              borderRadius: "4px",
             }}
-            className="items-center ml-2px mb-2px mr-2px rounded-lg "
+            className="items-center ml-2px mb-2px mr-2px "
           >
             <div className="flex items-center h-37px">
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-15px mt-12px mb-17px text-13px"
+                className="ml-15px mt-12px mb-19px text-13px"
               >
                 L
               </p>
               <img className="ml-10px" src={flag1} alt="img" />
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-4px mt-13px mb-11px text-13px font-malgun"
+                className="ml-4px mt-13px mb-14px text-13px font-malgun"
               >
                 잉글랜드
               </p>
@@ -144,12 +151,13 @@ const AccordionButton3 = ({ icon, title }) => {
                   width: "36px",
                   height: "19px",
                   marginLeft: "118px",
+                  borderRadius: "4px",
                 }}
-                className="flex items-center justify-center rounded-lg"
+                className="flex items-center justify-center "
               >
                 <p
                   style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px font-malgun "
+                  className="text-12px font-malgun mb-px"
                 >
                   1000
                 </p>
@@ -161,13 +169,13 @@ const AccordionButton3 = ({ icon, title }) => {
             >
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-44px mt-11px mb-18px text-13px"
+                className="ml-45px mt-11px mb-20px text-13px"
               >
                 L
               </p>
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-10px mt-13px mb-13px text-12px font-malgun"
+                className="ml-13px mt-13px mb-16px text-12px font-malgun"
               >
                 프리미어리그
               </p>
@@ -176,13 +184,14 @@ const AccordionButton3 = ({ icon, title }) => {
                   background: "#666666",
                   width: "16px",
                   height: "19px",
-                  marginLeft: "122px",
+                  marginLeft: "118px",
+                  borderRadius: "4px",
                 }}
-                className="flex items-center justify-center rounded-lg"
+                className="flex items-center justify-center "
               >
                 <p
                   style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun "
+                  className="text-12px  font-malgun mb-px"
                 >
                   5
                 </p>
@@ -194,13 +203,13 @@ const AccordionButton3 = ({ icon, title }) => {
             >
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-44px mt-11px mb-18px text-13px"
+                className="ml-45px mt-11px mb-20px text-13px"
               >
                 L
               </p>
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-10px mt-13px mb-13px text-12px font-malgun"
+                className="ml-13px mt-13px mb-16px text-12px font-malgun"
               >
                 챔피언쉽
               </p>
@@ -209,13 +218,14 @@ const AccordionButton3 = ({ icon, title }) => {
                   background: "#666666",
                   width: "16px",
                   height: "19px",
-                  marginLeft: "146px",
+                  marginLeft: "142px",
+                  borderRadius: "4px",
                 }}
-                className="flex items-center justify-center rounded-lg"
+                className="flex items-center justify-center"
               >
                 <p
                   style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun "
+                  className="text-12px  font-malgun mr-px mb-px"
                 >
                   0
                 </p>
@@ -228,7 +238,7 @@ const AccordionButton3 = ({ icon, title }) => {
               <img className="ml-31px" src={flag2} alt="img" />
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-4px mt-14px mb-11px text-13px font-malgun"
+                className="ml-4px mt-14px mb-15px text-13px font-malgun"
               >
                 이탈리아
               </p>
@@ -238,25 +248,31 @@ const AccordionButton3 = ({ icon, title }) => {
                   width: "29px",
                   height: "19px",
                   marginLeft: "125px",
+                  borderRadius: "4px",
                 }}
-                className="flex items-center justify-center rounded-lg"
+                className="flex items-center justify-center"
               >
                 <p
                   style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun "
+                  className="text-12px  font-malgun mb-px"
                 >
                   100
                 </p>
               </div>
             </div>
             <div
-              style={{ borderColor: "#cccccc", background: "#eeeeee" }}
+              style={{
+                borderColor: "#dddddd",
+                background: "#eeeeee",
+                borderBottomRightRadius: "4px",
+                borderBottomLeftRadius: "4px",
+              }}
               className="flex items-center h-38px border-t"
             >
               <img className="ml-31px" src={flag3} alt="img" />
               <p
                 style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-4px mt-14px mb-11px text-13px font-malgun"
+                className="ml-4px mt-14px mb-15px text-13px font-malgun"
               >
                 스페인
               </p>
@@ -266,12 +282,13 @@ const AccordionButton3 = ({ icon, title }) => {
                   width: "29px",
                   height: "19px",
                   marginLeft: "137px",
+                  borderRadius: "4px",
                 }}
-                className="flex items-center justify-center rounded-lg"
+                className="flex items-center justify-center"
               >
                 <p
                   style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun "
+                  className="text-12px  font-malgun mb-px"
                 >
                   100
                 </p>
@@ -281,13 +298,14 @@ const AccordionButton3 = ({ icon, title }) => {
           <div
             style={{
               background: "#ffffff",
+              borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px"
+            className="flex items-center ml-2px mb-2px mr-2px h-37px"
           >
             <img className="ml-6px" src={img3} alt="img" />
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-5px mt-13px mb-11px font-malgun"
+              className="text-13px ml-5px mt-13px mb-14px font-malgun"
             >
               농구
             </p>
@@ -297,12 +315,13 @@ const AccordionButton3 = ({ icon, title }) => {
                 width: "29px",
                 height: "19px",
                 marginLeft: "183px",
+                borderRadius: "4px",
               }}
-              className="flex items-center justify-center rounded-lg"
+              className="flex items-center justify-center"
             >
               <p
                 style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px  font-malgun "
+                className="text-12px  font-malgun mb-px"
               >
                 100
               </p>
@@ -311,13 +330,14 @@ const AccordionButton3 = ({ icon, title }) => {
           <div
             style={{
               background: "#ffffff",
+              borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px"
+            className="flex items-center ml-2px mb-2px mr-2px h-37px"
           >
             <img className="ml-6px" src={img1} alt="img" />
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-5px mt-13px mb-11px font-malgun"
+              className="text-13px ml-5px mt-13px mb-14px font-malgun"
             >
               야구
             </p>
@@ -327,12 +347,13 @@ const AccordionButton3 = ({ icon, title }) => {
                 width: "29px",
                 height: "19px",
                 marginLeft: "183px",
+                borderRadius: "4px",
               }}
-              className="flex items-center justify-center rounded-lg"
+              className="flex items-center justify-center "
             >
               <p
                 style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px font-malgun "
+                className="text-12px font-malgun mb-px"
               >
                 100
               </p>
@@ -341,13 +362,14 @@ const AccordionButton3 = ({ icon, title }) => {
           <div
             style={{
               background: "#ffffff",
+              borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px rounded-lg h-37px"
+            className="flex items-center ml-2px mr-2px h-37px"
           >
             <img className="ml-7px" src={img4} alt="img" />
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-6px mt-13px mb-11px font-malgun"
+              className="text-13px ml-6px mt-13px mb-14px font-malgun"
             >
               격투기
             </p>
@@ -357,12 +379,13 @@ const AccordionButton3 = ({ icon, title }) => {
                 width: "29px",
                 height: "19px",
                 marginLeft: "170px",
+                borderRadius: "4px",
               }}
-              className="flex items-center justify-center rounded-lg"
+              className="flex items-center justify-center"
             >
               <p
                 style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px font-malgun "
+                className="text-12px font-malgun mb-px"
               >
                 100
               </p>

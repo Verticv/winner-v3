@@ -16,7 +16,7 @@ const AccordionCard = () => {
         width: "274px",
         borderRadius: "4px",
       }}
-      className="items-center justify-between mx-2px rounded-lg mb-2px "
+      className="items-center justify-between mx-2px mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
@@ -60,7 +60,7 @@ const AccordionCard = () => {
         </div>
         <div className="flex">
           <div className="tooltip mt-8px items-center justify-center">
-            <img className="mt-4px object-none" src={icon} alt="img" />
+            <img className="mt-12px ml-px object-none" src={icon} alt="img" />
             <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
               즐겨찾기에서 제거
             </span>
@@ -70,7 +70,7 @@ const AccordionCard = () => {
             alt=""
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
-            className={`object-none mr-11px ml-9px mt-14px ${
+            className={`object-none mr-11px ml-29px mt-14px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
@@ -81,8 +81,10 @@ const AccordionCard = () => {
           style={{
             background: "#eeeeee",
             borderColor: "#cccccc",
+            borderBottomLeftRadius: "4px",
+            borderBottomRightRadius: "4px",
           }}
-          className="flex border-t border-b border-solid h-31px items-center rounded-b-lg"
+          className="flex border-t border-solid h-31px items-center "
         >
           <div
             style={{ width: "91px" }}
@@ -102,7 +104,7 @@ const AccordionCard = () => {
             </p>
           </div>
           <div
-            style={{ borderColor: "#cccccc", width: "93px", height: "31px" }}
+            style={{ borderColor: "#cccccc", width: "93px", height: "30px" }}
             className="flex items-center justify-between  border-l border-r border-solid"
           >
             <p

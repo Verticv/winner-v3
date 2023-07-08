@@ -39,22 +39,28 @@ const EntireAccordion = () => {
   ];
   const card4 = [
     {
+      id: 0,
       text: "오버 (0.5)",
       text1: "1.05",
       text2: "언더 (0.5)",
       text3: "12.80",
+      marginBottom: "2px",
     },
     {
+      id: 1,
       text: "오버 (1)",
       text1: "1.06",
       text2: "언더 (1)",
       text3: "11.50",
+      marginBottom: "2px",
     },
     {
+      id: 2,
       text: "오버 (1.5)",
       text1: "1.27",
       text2: "언더 (1.5)",
       text3: "4.12",
+      marginBottom: "3px",
     },
   ];
   const card5 = [
@@ -85,6 +91,7 @@ const EntireAccordion = () => {
   ];
   const card6 = [
     {
+      id: 0,
       text: "(-2)",
       text1: "4.30",
       text2: "(+2)",
@@ -93,6 +100,7 @@ const EntireAccordion = () => {
       text5: "1.56",
     },
     {
+      id: 1,
       text: "(-1)",
       text1: "2.29",
       text2: "(+1)",

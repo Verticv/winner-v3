@@ -1,17 +1,21 @@
 import React from "react";
 
-const EntireAccordionContent_1 = ({ card }) => {
+const EntireAccordionContent_1 = ({ card, lastObject }) => {
   return (
     <div
       style={{
         background: "#ffffff",
-        borderColor: "#bbbbbb",
+        borderColor: "#cccccc",
         width: "630px",
+        borderBottomRightRadius: `${card.id === 2 ? "4px" : "0px"}`,
+        borderBottomLeftRadius: `${card.id === 2 ? "4px" : "0px"}`,
       }}
-      className="flex items-center h-30px border-b"
+      className={`flex items-center
+     ${lastObject.id !== card.id ? "border-b h-31px" : "h-30px"}
+      `}
     >
       <div
-        style={{ borderColor: "#bbbbbb", width: "308px" }}
+        style={{ borderColor: "#cccccc", width: "307px" }}
         className="flex items-center justify-between border-r ml-9px h-30px"
       >
         <p
@@ -19,6 +23,7 @@ const EntireAccordionContent_1 = ({ card }) => {
             fontSize: "12px",
             color: "#444444",
             letterSpacing: "-0.031em",
+            marginBottom: `${card.marginBottom}`,
           }}
           className="font-malgun"
         >
@@ -30,7 +35,7 @@ const EntireAccordionContent_1 = ({ card }) => {
             color: "#682aa7",
             letterSpacing: "-0.031em",
           }}
-          className="mr-9px font-malgun"
+          className="mr-9px mb-2px font-malgun"
         >
           {card.text1}
         </p>
@@ -45,7 +50,7 @@ const EntireAccordionContent_1 = ({ card }) => {
             color: "#444444",
             letterSpacing: "-0.031em",
           }}
-          className="ml-8px mb-px font-malgun"
+          className="ml-8px mb-2px font-malgun"
         >
           {card.text2}
         </p>
@@ -55,7 +60,7 @@ const EntireAccordionContent_1 = ({ card }) => {
             color: "#682aa7",
             letterSpacing: "-0.031em",
           }}
-          className="mr-9px font-malgun"
+          className="mr-9px mb-2px font-malgun"
         >
           {card.text3}
         </p>

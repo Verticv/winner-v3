@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import icon1 from "../../../images/nonLivePage/Tabs/Icon1.png";
 import arrow from "../../../images/nonLivePage/Tabs/Arrow.png";
 import rArrow from "../../../images/nonLivePage/Tabs/RArrow.png";
+import icon2 from "../../../images/nonLivePage/Tabs/Icon2.png";
+import icon3 from "../../../images/nonLivePage/Tabs/Icon3.png";
+import icon4 from "../../../images/nonLivePage/Tabs/Icon4.png";
+import icon5 from "../../../images/nonLivePage/Tabs/Icon5.png";
+import icon6 from "../../../images/nonLivePage/Tabs/Icon6.png";
+import icon7 from "../../../images/nonLivePage/Tabs/Icon7.png";
+import icon8 from "../../../images/nonLivePage/Tabs/Icon8.png";
+import icon9 from "../../../images/nonLivePage/Tabs/Icon9.png";
+import icon10 from "../../../images/nonLivePage/Tabs/Icon10.png";
 
 const tabs = [
   {
@@ -12,39 +21,57 @@ const tabs = [
   },
   {
     id: 1,
-    icon: icon1,
-    name: "전체",
-    num: "854",
+    icon: icon2,
+    name: "축구",
+    num: "567",
   },
   {
     id: 2,
-    icon: icon1,
-    name: "전체",
-    num: "854",
+    icon: icon3,
+    name: "농구",
+    num: "227",
   },
   {
     id: 3,
-    icon: icon1,
-    name: "전체",
-    num: "854",
+    icon: icon4,
+    name: "야구",
+    num: "407",
   },
   {
     id: 4,
-    icon: icon1,
-    name: "전체",
-    num: "854",
+    icon: icon5,
+    name: "배구",
+    num: "0",
   },
   {
     id: 5,
-    icon: icon1,
-    name: "전체",
-    num: "854",
+    icon: icon6,
+    name: "테니스",
+    num: "0",
   },
   {
     id: 6,
-    icon: icon1,
-    name: "전체",
-    num: "854",
+    icon: icon7,
+    name: "배드민턴",
+    num: "0",
+  },
+  {
+    id: 7,
+    icon: icon8,
+    name: "하키",
+    num: "0",
+  },
+  {
+    id: 8,
+    icon: icon9,
+    name: "미식축구",
+    num: "0",
+  },
+  {
+    id: 9,
+    icon: icon10,
+    name: "격투기",
+    num: "0",
   },
 ];
 
@@ -67,13 +94,14 @@ const Tabs = () => {
           marginRight: "2px",
         }}
       >
-        <img src={arrow} alt="" />
+        <img className="mr-px" src={arrow} alt="img" />
       </div>
       <div
         style={{
           overflowX: "auto",
           whiteSpace: "nowrap",
           width: "585px",
+          marginLeft: "1px",
           //   position: "relative",
         }}
       >
@@ -136,6 +164,7 @@ const Tabs = () => {
                     padding: "0 4px",
                     background: "#421959",
                     borderRadius: "6px",
+                    marginBottom: "1px",
                   }}
                 >
                   <span>{tab.num}</span>

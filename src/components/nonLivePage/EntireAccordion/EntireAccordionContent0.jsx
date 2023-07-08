@@ -6,8 +6,10 @@ const EntireAccordionContent0 = ({ card }) => {
       style={{
         background: "#ffffff",
         width: "630px",
+        borderBottomLeftRadius: "4px",
+        borderBottomRightRadius: "4px",
       }}
-      className="flex items-center h-30px rounded-b-lg"
+      className="flex items-center h-30px "
     >
       <div
         style={{ borderColor: "#bbbbbb", width: "203px" }}
