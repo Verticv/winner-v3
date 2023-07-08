@@ -18,8 +18,9 @@ const RightComponent = () => {
       style={{
         background: "linear-gradient(to bottom, #cb78e6, #ffffff)",
         width: "310px",
+        boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
       }}
-      className="rounded-md p-px ml-4px mt-10px "
+      className="rounded-md p-px mt-10px "
     >
       <div
         style={{
@@ -42,6 +43,7 @@ const RightComponent = () => {
             background: "linear-gradient(to top, #4f3a7a, #f0d3ff)",
             width: "30px",
             borderRadius: "4px",
+            boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
           }}
           className="p-px mr-5px mt-4px mb-5px"
         >
@@ -79,8 +81,13 @@ const RightComponent = () => {
               베팅슬립
             </p>
             <div
-              style={{ background: "#f4ecce", width: "20px", height: "20px" }}
-              className="rounded-full p-px ml-4px mr-24px"
+              style={{
+                background: "#f4ecce",
+                width: "20px",
+                height: "20px",
+                boxShadow: "1px 1.732px 3px 0px rgba(0, 0, 0, 0.4)",
+              }}
+              className="rounded-full p-px ml-4px "
             >
               <div
                 style={{ background: "#f04281", height: "18px" }}
@@ -117,7 +124,12 @@ const RightComponent = () => {
               베팅내역
             </p>
             <div
-              style={{ background: "#f7efd1", width: "20px", height: "20px" }}
+              style={{
+                background: "#f7efd1",
+                width: "20px",
+                height: "20px",
+                boxShadow: "1px 1.732px 3px 0px rgba(0, 0, 0, 0.4)",
+              }}
               className="rounded-full p-px ml-3px mr-21px"
             >
               <div
@@ -340,6 +352,7 @@ const RightComponent = () => {
                     marginLeft: "143px",
                     borderRadius: "4px",
                     fontSize: "12px",
+                    outline: "0px",
                   }}
                   className="bg-white w-full tracking-tight font-MalgunGothicBold -mt-2px"
                   type="text"
@@ -399,6 +412,7 @@ const RightComponent = () => {
             background: "linear-gradient(to top, #866bbe, #f0d3ff)",
             width: "69px",
             height: "30px",
+            boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.4)",
           }}
           className="rounded-md p-px mt-6px mb-6px ml-10px"
         >
@@ -424,6 +438,7 @@ const RightComponent = () => {
             background: "linear-gradient(to top, #866bbe, #f0d3ff)",
             width: "69px",
             height: "30px",
+            boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.4)",
           }}
           className="rounded-md p-px mt-6px mb-6px ml-4px"
         >
@@ -449,6 +464,7 @@ const RightComponent = () => {
             background: "linear-gradient(to top, #866bbe, #f0d3ff)",
             width: "69px",
             height: "30px",
+            boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.4)",
           }}
           className="rounded-md p-px mt-6px mb-6px ml-4px"
         >
@@ -474,6 +490,7 @@ const RightComponent = () => {
             background: "linear-gradient(to top, #3e1d6b, #c95fee)",
             width: "69px",
             height: "30px",
+            boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.4)",
           }}
           className="rounded-md p-px mt-6px mb-6px ml-4px mr-10px"
         >
@@ -486,7 +503,10 @@ const RightComponent = () => {
             className="flex items-center justify-center rounded-md"
           >
             <p
-              style={{ color: "#ffffff" }}
+              style={{
+                color: "#ffffff",
+                textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
+              }}
               className="mb-2px text-12px text-white  tracking-tight font-MalgunGothicBold"
             >
               최대
@@ -634,7 +654,7 @@ const RightComponent = () => {
       </div>
       <div
         style={{ background: "#ffffff", height: "66px" }}
-        className="flex items-center justify-center rounded-b-lg "
+        className="flex items-center justify-center rounded-b-md "
       >
         <div
           style={{
@@ -642,6 +662,7 @@ const RightComponent = () => {
             width: "288px",
             height: "46px",
             borderRadius: "6px",
+            boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.4)",
           }}
           className=" p-px ml-11px mt-10px mr-11px mb-11px"
         >
@@ -654,9 +675,17 @@ const RightComponent = () => {
             }}
             className="flex items-center justify-center "
           >
-            <img className="mr-4px mt-4px" src={icon5} alt="icon" />
+            <img
+              style={{ textShadow: "1px 1.732px 3px 0px rgba(0, 0, 0, 0.4)" }}
+              className="mr-4px mt-4px"
+              src={icon5}
+              alt="icon"
+            />
             <p
-              style={{ color: "#ffffff" }}
+              style={{
+                color: "#ffffff",
+                textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
+              }}
               className="mb-2px mr-1px mt-4px font-MalgunGothicBold tracking-tight  text-15px"
             >
               베팅하기

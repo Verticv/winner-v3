@@ -19,12 +19,13 @@ const AccordionContent = ({ card }) => {
         <div
           style={{
             background: "#936cee",
-            borderRadius: "6px"
+            borderRadius: "6px",
           }}
-          className="flex items-center justify-center rounded-lg h-34px"
+          className="flex items-center justify-center h-34px"
         >
-          <p className="mb-3px text-13px text-white tracking-tight"
-            style={{fontFamily: "MalgunGothicBold"}}
+          <p
+            className="mb-3px text-13px text-white tracking-tight"
+            style={{ fontFamily: "MalgunGothicBold" }}
           >
             모두지우기
           </p>
@@ -32,7 +33,10 @@ const AccordionContent = ({ card }) => {
       </div>
       <div className="ml-7px mt-2px mb-6px">
         <p
-          style={{ letterSpacing: "-0.031em", fontFamily: "MalgunGothicRegular" }}
+          style={{
+            letterSpacing: "-0.031em",
+            fontFamily: "MalgunGothicRegular",
+          }}
           className="text-10px text-white"
         >
           프리매치경기
@@ -42,13 +46,17 @@ const AccordionContent = ({ card }) => {
       <div
         style={{
           background: "#ffffff",
-          borderRadius: "4px"
+          borderRadius: "4px",
         }}
-        className="flex items-center mx-2px rounded-lg h-35px mb-2px"
+        className="flex items-center mx-2px h-35px mb-2px"
       >
         <img className="ml-6px mt-7px mb-6px" src={icon} alt="img" />
         <p
-          style={{ color: "#444444", letterSpacing: "-0.031em", fontFamily: "MalgunGothicRegular"  }}
+          style={{
+            color: "#444444",
+            letterSpacing: "-0.031em",
+            fontFamily: "MalgunGothicRegular",
+          }}
           className="text-12px mt-10px mb-13px ml-5px"
         >
           프리미어리그
@@ -63,7 +71,7 @@ const AccordionContent = ({ card }) => {
       <div
         style={{
           background: "#ffffff",
-          borderRadius: "4px"
+          borderRadius: "4px",
         }}
         className="flex items-center mx-2px rounded-lg h-35px mb-2px"
       >
@@ -82,13 +90,16 @@ const AccordionContent = ({ card }) => {
       <div
         style={{
           background: "#ffffff",
-          borderRadius: "4px"
+          borderRadius: "4px",
         }}
         className="flex items-center justify-between mx-2px rounded-lg h-33px mb-2px"
       >
         <div className="flex items-center">
           <img className="ml-6px" src={icon} alt="img" />
-          <p style={{ color: "#444444", marginBottom: "3px" }} className="text-12px ml-5px">
+          <p
+            style={{ color: "#444444", marginBottom: "3px" }}
+            className="text-12px ml-5px"
+          >
             프리미어리그
           </p>
         </div>
@@ -99,13 +110,16 @@ const AccordionContent = ({ card }) => {
       <div
         style={{
           background: "#ffffff",
-          borderRadius: "4px"
+          borderRadius: "4px",
         }}
         className="flex items-center justify-between mx-2px rounded-lg h-33px mb-2px"
       >
         <div className="flex items-center">
           <img className="ml-6px" src={img1} alt="img" />
-          <p style={{ color: "#444444", marginBottom: "3px" }} className="text-12px ml-5px">
+          <p
+            style={{ color: "#444444", marginBottom: "3px" }}
+            className="text-12px ml-5px"
+          >
             메이저리그 (MLB)
           </p>
         </div>

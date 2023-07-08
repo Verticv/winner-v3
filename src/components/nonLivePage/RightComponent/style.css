@@ -31,3 +31,9 @@
 .tooltip1:hover .tooltiptext1 {
   visibility: visible;
 }
+
+input[type="checkbox"]:checked {
+  background: #1e1e1e
+    url("../../../images/nonLivePage/RightComponent/Check_On.png") no-repeat
+    center center;
+}

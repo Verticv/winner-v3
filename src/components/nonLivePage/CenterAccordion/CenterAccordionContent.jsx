@@ -15,9 +15,9 @@ const CenterAccordionContent = ({ card, lastObject }) => {
         //    h-31px  `}
         // >
         className={`flex items-center ${
-          lastObject.id !== card.id ? "border-b" : ""
+          lastObject.id !== card.id ? "border-b h-31px" : "h-30px"
         }
-      h-31px  `}
+        `}
       >
         <div className="items-center ml-6px mt-6px mb-8px">
           <img src={icon} alt="icon" />

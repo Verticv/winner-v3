@@ -6,25 +6,30 @@ const PoupUpComponent = () => {
       style={{
         width: "489px",
         background: "linear-gradient(to right, #b975cf, #8a66bd)",
+        borderRadius: "20px",
+        boxShadow:
+          "0px 0px 20px 0px rgba(0, 0, 0, 0.6),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
       }}
-      className="rounded-lg pt-2px "
+      className="pt-2px "
     >
       <div
         style={{
           height: "68px",
           width: "489px",
           background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+          borderTopLeftRadius: "20px",
+          borderTopRightRadius: "20px",
         }}
-        className="flex justify-between items-center rounded-t-lg"
+        className="flex justify-between items-center"
       >
         <p
           style={{ color: "#eeeeee", marginLeft: "202px", fontSize: "24px" }}
-          className=" font-spoqaBold -ml-10px mt-25px mb-24px"
+          className=" font-spoqaBold -ml-10px mt-24px mb-24px"
         >
           베팅정보
         </p>
         <img
-          className="object-none mr-22px mt-26px mb-26px"
+          className="object-none mr-22px mt-24px mb-26px"
           src={icon}
           alt="icon"
         />
@@ -34,8 +39,10 @@ const PoupUpComponent = () => {
           height: "288px",
           width: "489px",
           background: "#dfdbfa",
+          borderBottomLeftRadius: "20px",
+          borderBottomRightRadius: "20px",
         }}
-        className="justify-center items-center rounded-b-lg "
+        className="justify-center items-center "
       >
         <div className="flex justify-center items-center">
           <div
@@ -43,35 +50,37 @@ const PoupUpComponent = () => {
               height: "146px",
               width: "399px",
               background: "#bbbbbb",
+              borderRadius: "10px",
             }}
-            className="flex justify-center items-center rounded-lg p-px  mt-30px"
+            className="flex justify-center items-center p-px  mt-30px"
           >
             <div
               style={{
                 height: "144px",
                 width: "397px",
                 background: "#ffffff",
+                borderRadius: "10px",
               }}
-              className="justify-center items-center rounded-lg pt-px"
+              className="justify-center items-center pt-px"
             >
               <div className="flex justify-center items-center mt-49px">
                 <p
                   style={{ fontSize: "16px", color: "#666666" }}
-                  className="tracking-tight font-malgun"
+                  className="-mt-3px -ml-px tracking-tight font-malgun"
                 >
                   베팅이 수락되었습니다.
                 </p>
               </div>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center ml-2px">
                 <p
                   style={{ fontSize: "14px", color: "#666666" }}
-                  className="tracking-tight font-malgun"
+                  className="-ml-5px mt-1px tracking-tight font-MalgunGothicBold"
                 >
                   티켓번호
                 </p>
                 <p
                   style={{ fontSize: "14px", color: "#0072bc" }}
-                  className="tracking-tight font-malgun"
+                  className="mt-3px ml-4px tracking-tight font-MalgunGothicBold"
                 >
                   4004791
                 </p>
@@ -82,16 +91,21 @@ const PoupUpComponent = () => {
         <div
           style={{
             height: "52px",
-            borderRadius: "1.5rem",
+            borderRadius: "26px",
             width: "232px",
             marginLeft: "129px",
             background: "linear-gradient(to right, #df52ff, #6b22ff)",
+            boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
           }}
           className="flex justify-center items-center mt-20px"
         >
           <p
-            style={{ fontSize: "16px", color: "#ffffff" }}
-            className="tracking-tight font-spoqaMedium"
+            style={{
+              fontSize: "16px",
+              color: "#ffffff",
+              textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
+            }}
+            className="mt-px tracking-tight font-spoqaMedium"
           >
             확인
           </p>

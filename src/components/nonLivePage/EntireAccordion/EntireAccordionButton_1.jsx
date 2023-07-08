@@ -10,13 +10,17 @@ const EntireAccordionButton11 = ({ icon, title, card }) => {
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-
+  const lastIndex = card.length - 1;
+  const lastObject = card[lastIndex];
   return (
     <div className="ml-4px  mr-5px mb-5px">
       <div
         style={{
           background: "linear-gradient(to right, #9d3bbb, #5423a0)",
           width: "630px",
+          borderRadius: "4px",
+          borderBottomRightRadius: `${isOpen ? "0px" : "4px"}`,
+          borderBottomLeftRadius: `${isOpen ? "0px" : "4px"}`,
         }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
@@ -55,7 +59,11 @@ const EntireAccordionButton11 = ({ icon, title, card }) => {
       {isOpen && (
         <div style={{ background: "#420572" }} className="rounded-b-lg">
           {card.map((item) => (
-            <EntireAccordionContent11 key={item.id} card={item} />
+            <EntireAccordionContent11
+              key={item.id}
+              card={item}
+              lastObject={lastObject}
+            />
           ))}
         </div>
       )}

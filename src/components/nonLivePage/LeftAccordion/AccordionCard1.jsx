@@ -14,14 +14,18 @@ const AccordionCard1 = () => {
       style={{
         background: "#ffffff",
         width: "274px",
-        borderRadius: "4px"
+        borderRadius: "4px",
       }}
       className="items-center justify-between mx-2px rounded-lg mb-2px "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div className="flex ml-10px justify-between items-center mr-11px">
         <p
-          style={{ color: "#444444", letterSpacing: "-0.031em", fontFamily: "MalgunGothicRegular"  }}
+          style={{
+            color: "#444444",
+            letterSpacing: "-0.031em",
+            fontFamily: "MalgunGothicRegular",
+          }}
           className="text-12px mt-6px"
         >
           FC바르셀로나
@@ -51,13 +55,18 @@ const AccordionCard1 = () => {
           </p>
         </div>
         <div className="flex">
-          <img className="mt-12px object-none" src={icon} alt="img" />
+          <div className="tooltip mt-8px items-center justify-center">
+            <img className="mt-12px ml-px object-none" src={icon} alt="img" />
+            <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
+              즐겨찾기에서 제거
+            </span>
+          </div>
           <img
             src={Arrow}
             alt=""
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
-            className={`object-none mr-10px ml-10px mt-14px ${
+            className={`object-none mr-11px ml-29px mt-14px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
@@ -68,8 +77,10 @@ const AccordionCard1 = () => {
           style={{
             background: "#eeeeee",
             borderColor: "#cccccc",
+            borderBottomLeftRadius: "4px",
+            borderBottomRightRadius: "4px",
           }}
-          className="flex border-t border-b border-solid h-31px items-center rounded-b-lg"
+          className="flex border-t border-solid h-31px items-center"
         >
           <div
             style={{ width: "91px" }}
@@ -89,7 +100,7 @@ const AccordionCard1 = () => {
           </div>
           <div
             style={{ borderColor: "#cccccc", width: "93px" }}
-            className="flex items-center justify-between border-l border-r border-solid "
+            className="flex items-center justify-between border-l border-r border-solid h-30px "
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}

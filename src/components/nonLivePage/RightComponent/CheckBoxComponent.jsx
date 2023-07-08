@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./style.css";
 
 const CheckBoxComponent = () => {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -48,6 +49,7 @@ const CheckBoxComponent = () => {
             value="item1"
             checked={selectedItems.includes("item1")}
             onChange={handleCheckboxChange}
+            style={{ backgroundColor: "#281d45", borderColor: "#6045ad" }}
             className="ml-10px mt-9px mb-10px "
           />
           <p
@@ -71,6 +73,7 @@ const CheckBoxComponent = () => {
             value="item2"
             checked={selectedItems.includes("item2")}
             onChange={handleCheckboxChange}
+            style={{ backgroundColor: "#281d45", borderColor: "#6045ad" }}
             className="ml-10px mt-9px mb-10px "
           />
           <p
@@ -94,6 +97,7 @@ const CheckBoxComponent = () => {
             value="item3"
             checked={selectedItems.includes("item3")}
             onChange={handleCheckboxChange}
+            style={{ backgroundColor: "#281d45", borderColor: "#6045ad" }}
             className="ml-10px mt-9px mb-10px "
           />
           <p
