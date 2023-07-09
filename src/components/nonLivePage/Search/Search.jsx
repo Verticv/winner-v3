@@ -1,5 +1,6 @@
 import React from "react";
 import icon from "../../../images/nonLivePage/Search/search2.png";
+// import icon1 from "../../../images/nonLivePage/Search/Icon.png";
 
 const Search = () => {
   return (
@@ -59,6 +60,18 @@ const Search = () => {
           >
             <img src={icon} alt="" />
           </div>
+          {/* <div
+            style={{
+              position: "absolute",
+              background: "#f04281",
+              width: "28px",
+              height: "28px",
+              borderRadius: "3px",
+            }}
+            className="flex items-center justify-center mr-4px mt-3px mb-3px"
+          >
+            <img src={icon1} alt="icon" />
+          </div> */}
         </div>
       </div>
     </div>
