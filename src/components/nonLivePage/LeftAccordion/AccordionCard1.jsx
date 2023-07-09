@@ -26,13 +26,13 @@ const AccordionCard1 = () => {
             letterSpacing: "-0.031em",
             fontFamily: "MalgunGothicRegular",
           }}
-          className="text-12px mt-6px"
+          className="text-12px mt-6px -mb-px"
         >
           FC바르셀로나
         </p>
         <p
           style={{ color: "#f04281", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun mt-5px"
+          className="text-12px font-malgun mt-px -mb-6px"
         >
           18:30
         </p>
@@ -40,12 +40,12 @@ const AccordionCard1 = () => {
       <div className="ml-10px ">
         <p
           style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun"
+          className="text-12px font-malgun mt-px"
         >
           아틀레티코
         </p>
       </div>
-      <div className="flex justify-between ml-10px">
+      <div className="flex justify-between ml-10px -mt-px">
         <div className="mt-19px mb-6px">
           <p
             style={{ color: "#0072bc", letterSpacing: "-0.031em" }}
@@ -66,7 +66,7 @@ const AccordionCard1 = () => {
             alt=""
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
-            className={`object-none mr-11px ml-29px mt-14px ${
+            className={`object-none mr-11px ml-29px mt-15px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
@@ -88,12 +88,12 @@ const AccordionCard1 = () => {
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className=" ml-7px mt-9px mb-9px text-12px font-malgun"
+              className=" ml-6px mt-9px mb-11px text-12px font-malgun"
             >
               1
             </p>
             <img
-              className="mr-8px mb-7px mt-7px object-none"
+              className="mr-8px mb-8px mt-7px object-none"
               src={icon1}
               alt="img"
             />
@@ -104,12 +104,12 @@ const AccordionCard1 = () => {
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="ml-7px text-12px font-malgun"
+              className="ml-7px text-12px font-malgun mb-4px"
             >
               무
             </p>
             <img
-              className="mr-8px mb-7px mt-7px object-none"
+              className="mr-8px mb-8px mt-7px object-none"
               src={icon1}
               alt="img"
             />
@@ -120,12 +120,12 @@ const AccordionCard1 = () => {
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="ml-8px mt-10px mb-9px text-12px font-malgun"
+              className="ml-8px mt-10px mb-12px text-12px font-malgun"
             >
               2
             </p>
             <img
-              className="mr-8px mb-7px mt-7px object-none"
+              className="mr-8px mb-8px mt-7px object-none"
               src={icon1}
               alt="img"
             />
