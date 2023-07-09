@@ -28,13 +28,13 @@ const AccordionCard2 = () => {
             letterSpacing: "-0.031em",
             fontFamily: "MalgunGothicRegular",
           }}
-          className="text-12px mt-8px"
+          className="text-12px mt-6px -mb-px"
         >
           맨체스터유나이티드
         </p>
         <p
           style={{ color: "#f04281", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun mt-4px"
+          className="text-12px font-malgun mt-px -mb-6px"
         >
           18:30
         </p>
@@ -42,13 +42,13 @@ const AccordionCard2 = () => {
       <div className="ml-10px ">
         <p
           style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun"
+          className="text-12px font-malgun mt-px"
         >
           맨체스터시티
         </p>
       </div>
-      <div className="flex justify-between ml-10px">
-        <div className="mt-17px mb-5px">
+      <div className="flex justify-between ml-10px -mt-px">
+        <div className="mt-19px mb-6px">
           <p
             style={{ color: "#0072bc", letterSpacing: "-0.031em" }}
             className="text-12px font-malgun"
@@ -70,7 +70,7 @@ const AccordionCard2 = () => {
         </div> */}
         <div className="flex">
           <div className="tooltip mt-8px items-center justify-center">
-            <img className="mt-10px ml-px object-none" src={icon} alt="img" />
+            <img className="mt-12px ml-px object-none" src={icon} alt="img" />
             <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
               즐겨찾기에서 제거
             </span>
@@ -80,7 +80,7 @@ const AccordionCard2 = () => {
             alt=""
             onClick={toggleAccordion}
             style={{ color: "#444444" }}
-            className={`object-none mr-11px ml-29px mt-14px ${
+            className={`object-none mr-11px ml-29px mt-15px ${
               isOpen ? "transform rotate-180" : ""
             }`}
           />
@@ -102,18 +102,18 @@ const AccordionCard2 = () => {
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className=" ml-7px mt-9px mb-9px text-12px font-malgun"
+              className=" ml-6px mt-9px mb-11px text-12px font-malgun"
             >
               1
             </p>
             <img
-              className="ml-24px object-none mt-12px mb-12px"
+              className="ml-25px object-none mt-12px mb-13px"
               src={Up}
               alt="img"
             />
             <p
               style={{ color: "#f04281", letterSpacing: "-0.031em" }}
-              className="mr-8px text-12px font-malgun"
+              className="mr-8px text-12px font-malgun mb-2px"
             >
               2.12
             </p>
@@ -124,18 +124,18 @@ const AccordionCard2 = () => {
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="ml-7px mr-27px text-12px font-malgun"
+              className="ml-7px mr-27px text-12px font-malgun mb-4px"
             >
               무
             </p>
             <img
-              className="mr-8px object-none mt-12px mb-12px"
+              className="mr-8px object-none mt-12px mb-13px"
               src={Up}
               alt="img"
             />
             <p
               style={{ color: "#f04281", letterSpacing: "-0.031em" }}
-              className="mr-7px text-12px font-malgun"
+              className="mr-7px text-12px font-malgun mb-2px"
             >
               3.59
             </p>
@@ -146,18 +146,18 @@ const AccordionCard2 = () => {
           >
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="ml-8px mt-10px mb-9px text-12px font-malgun"
+              className="ml-7px mt-10px mb-12px text-12px font-malgun"
             >
               2
             </p>
             <img
-              className="ml-23px object-none mt-12px mb-12px"
+              className="ml-23px object-none mt-12px mb-13px"
               src={Dn}
               alt="img"
             />
             <p
               style={{ color: "#0072bc", letterSpacing: "-0.031em" }}
-              className="mr-7px mt-8px mb-9px text-12px"
+              className="mr-8px mt-8px mb-10px text-12px"
             >
               3.62
             </p>

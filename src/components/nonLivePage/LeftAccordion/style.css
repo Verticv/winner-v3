@@ -11,20 +11,20 @@
   text-align: center;
   border-radius: 6px;
   /* padding: 5px 0; */
-  padding-top: 9px;
+  padding-top: 6px;
   position: absolute;
   z-index: 1;
-  bottom: 105%;
-  margin-left: -71px;
+  bottom: 90%;
+  margin-left: -70px;
 }
 
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 49.1%;
   margin-left: 23px;
-  border-width: 7.8px;
+  border-width: 8px;
   border-style: solid;
   border-color: #6e3ae6 transparent transparent transparent;
 }

@@ -13,13 +13,14 @@ const AccordionContent = ({ card }) => {
       <div
         style={{
           background: "#361550",
+          borderRadius: "6px",
         }}
-        className="rounded-lg p-px mr-2px ml-2px "
+        className="p-px mr-2px ml-2px "
       >
         <div
           style={{
             background: "#936cee",
-            borderRadius: "6px",
+            borderRadius: "5px",
           }}
           className="flex items-center justify-center h-34px"
         >
