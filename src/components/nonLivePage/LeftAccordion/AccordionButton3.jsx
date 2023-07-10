@@ -102,7 +102,7 @@ const AccordionButton3 = ({ icon, title }) => {
             <img className="ml-6px mt-8px mb-8px" src={icon1} alt="img" />
             <p
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-6px mt-12px mb-11px font-malgun"
+              className="text-13px ml-5px mt-12px mb-13px font-malgun"
             >
               축구
             </p>

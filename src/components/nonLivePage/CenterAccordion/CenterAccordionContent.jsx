@@ -20,7 +20,9 @@ const CenterAccordionContent = ({ card, lastObject }) => {
         `}
       >
         <div className="items-center ml-6px mt-6px mb-8px">
-          <img src={icon} alt="icon" />
+          <img src={icon} alt="icon" style={{
+                marginTop: "1px"
+          }} />
         </div>
         <div
           style={{
@@ -47,7 +49,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-10px mt-10px mb-11px"
+            className=" mr-10px mt-10px mb-12px"
           >
             {card.text1}
           </p>
@@ -60,7 +62,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               letterSpacing: "-0.031em",
               width: "21px",
             }}
-            className="ml-23px"
+            className="ml-23px mb-2px"
           >
             {card.text2}
           </p>
@@ -75,7 +77,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" ml-9px mt-10px mb-11px"
+            className=" ml-10px mt-10px mb-12px"
           >
             {card.text3}
           </p>
@@ -85,7 +87,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-10px mb-9px"
+            className=" mr-9px mt-10px mb-8px"
           >
             {card.text4}
           </p>
@@ -99,6 +101,8 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              marginRight: "1px",
+              marginBottom: "2px",
             }}
           >
             {card.text5}
