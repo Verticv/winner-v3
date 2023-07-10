@@ -15,7 +15,6 @@ const CenterComponent = () => {
           width: "640px",
           background: "linear-gradient(to right, #622e8a, #4f2783)",
           borderRadius: "6px",
-
         }}
         className="items-center mt-3px pt-7px rounded-lg"
       >
@@ -62,7 +61,14 @@ const CenterComponent = () => {
               className="flex items-center justify-between rounded-lg h-32px"
             >
               <div className="flex ml-9px">
-                <img className="object-none mr-2px" src={icon1} alt="img" />
+                <img
+                  className="object-none mr-2px"
+                  src={icon1}
+                  alt="img"
+                  style={{
+                    marginRight: "1.5px",
+                  }}
+                />
                 <p
                   style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
                   className="mt-12px mb-11px text-13px font-spoqaMedium"
@@ -77,7 +83,7 @@ const CenterComponent = () => {
                     letterSpacing: "-0.031em",
                     fontFamily: "MalgunGothicRegular",
                   }}
-                  className="mt-15px mb-13px text-13px font-malgun"
+                  className="text-13px font-malgun"
                 >
                   1.03
                 </p>
@@ -106,7 +112,11 @@ const CenterComponent = () => {
               <div className="flex ml-10px">
                 <img className="object-none" src={icon1} alt="img" />
                 <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  style={{
+                    color: "#eeeeee",
+                    letterSpacing: "-0.031em",
+                    marginLeft: "1.5px",
+                  }}
                   className="ml-2px mt-12px mb-11px text-13px font-spoqaMedium"
                 >
                   6폴더 이상
@@ -119,7 +129,7 @@ const CenterComponent = () => {
                     letterSpacing: "-0.031em",
                     fontFamily: "MalgunGothicRegular",
                   }}
-                  className="mt-15px mb-13px text-13px font-malgun"
+                  className="text-13px font-malgun"
                 >
                   1.06
                 </p>
@@ -148,7 +158,11 @@ const CenterComponent = () => {
               <div className="flex ml-12px">
                 <img className="object-none" src={icon1} alt="img" />
                 <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  style={{
+                    color: "#eeeeee",
+                    letterSpacing: "-0.031em",
+                    marginLeft: "1.5px",
+                  }}
                   className="ml-2px mt-12px mb-11px text-13px font-spoqaMedium"
                 >
                   9폴더 이상
@@ -161,7 +175,7 @@ const CenterComponent = () => {
                     letterSpacing: "-0.031em",
                     fontFamily: "MalgunGothicRegular",
                   }}
-                  className="mt-15px mb-13px text-13px font-malgun"
+                  className="text-13px font-malgun"
                 >
                   1.09
                 </p>
@@ -185,7 +199,7 @@ const CenterComponent = () => {
             letterSpacing: "-0.031em",
             fontFamily: "MalgunGothicRegular",
           }}
-          className="ml-10px mt-11px mb-13px text-12px font-malgun"
+          className="ml-10px mb-4px text-12px font-malgun"
         >
           ※ 스포츠 베팅규정은{" "}
           <span style={{ color: "#a5eefe", borderBottom: "1px solid #a5eefe" }}>

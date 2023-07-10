@@ -45,7 +45,7 @@ const AccordionContent1 = ({ card }) => {
         style={{ background: "#e0e0e0" }}
         className="h-38px w-px mt-6px mb-6px"
       ></div>
-      <img className="ml-5px mt-15px mb-16px" src={icon2} alt="icon" />
+      <img className="ml-5px mt-15px mb-15px" src={icon2} alt="icon" />
       <div
         style={{ background: "#e0e0e0" }}
         className="h-38px ml-5px w-px mt-6px mb-6px"

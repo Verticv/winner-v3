@@ -17,7 +17,7 @@ const AccordionButton2 = ({ icon, title, card }) => {
         borderRadius: "6px",
         boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
       }}
-      className="rounded-lg p-px mb-5px"
+      className="rounded-lg p-px mb-4px"
     >
       <div
         style={{

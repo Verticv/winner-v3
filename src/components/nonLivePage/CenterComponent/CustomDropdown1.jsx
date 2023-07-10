@@ -43,7 +43,7 @@ const CustomDropdown1 = () => {
       <button
         type="button"
         className="flex items-center justify-between focus:outline-none"
-        style={{ paddingTop: "4px" }}
+        style={{ paddingTop: "3px" }}
         onClick={toggleDropdown}
       >
         <p
@@ -56,7 +56,7 @@ const CustomDropdown1 = () => {
         <img
           src={img}
           alt="img"
-          className={`ml-21px transition-transform duration-300 ${
+          className={`ml-21px mt-2px transition-transform duration-300 ${
             isOpen ? "transform rotate-180" : ""
           }`}
         />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import icon1 from "../../../images/nonLivePage/Tabs/Icon1.png";
+import icon1Active from "../../../images/nonLivePage/Tabs/Icon1_on.png";
 import arrow from "../../../images/nonLivePage/Tabs/Arrow.png";
 import rArrow from "../../../images/nonLivePage/Tabs/RArrow.png";
 import icon2 from "../../../images/nonLivePage/Tabs/Icon2.png";
@@ -16,6 +17,7 @@ const tabs = [
   {
     id: 0,
     icon: icon1,
+    activeIcon: icon1Active,
     name: "전체",
     num: "854",
   },
@@ -111,7 +113,7 @@ const Tabs = () => {
               style={{
                 background: `${
                   active === tab.id
-                    ? "linear-gradient(to top, #4f3a7a, #cb78e6 100%)"
+                    ? "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #cb78e6 100%)"
                     : "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff 100%)"
                 }`,
                 width: "105px",
@@ -134,15 +136,16 @@ const Tabs = () => {
                   height: "100%",
                   borderRadius: "5px",
                   display: "flex",
-                  justifyContent: "center",
+                  // justifyContent: "center",
                   alignItems: "center",
                 }}
               >
                 <img
-                  src={tab.icon}
+                  src={active === tab.id ? tab.activeIcon : tab.icon}
                   alt="tab"
                   style={{
-                    marginRight: "5px",
+                    marginRight: "4px",
+                    marginLeft: "11px",
                   }}
                 />
                 <span
@@ -150,7 +153,7 @@ const Tabs = () => {
                     color: `${active === tab.id ? "#fff" : "#2d2834"}`,
                     fontFamily: "MalgunGothicBold",
                     fontSize: "13px",
-                    marginRight: "4px",
+                    marginRight: "3px",
                     marginBottom: "2px",
                   }}
                 >
@@ -161,13 +164,16 @@ const Tabs = () => {
                     fontFamily: "MalgunGothicRegular",
                     color: "#fff",
                     fontSize: "12px",
-                    padding: "0 4px",
+                    padding: "0 5px",
                     background: "#421959",
                     borderRadius: "6px",
-                    marginBottom: "1px",
+                    // marginBottom: "1px",
                   }}
                 >
-                  <span>{tab.num}</span>
+                  <p style={{
+                    display: 'inline-block',
+                    height: '17px'
+                  }}>{tab.num}</p>
                 </div>
               </button>
               <div
@@ -209,3 +215,5 @@ const Tabs = () => {
 };
 
 export default Tabs;
+
+

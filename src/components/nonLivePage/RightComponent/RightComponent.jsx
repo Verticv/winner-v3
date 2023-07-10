@@ -40,7 +40,7 @@ const RightComponent = () => {
         </div>
         <div
           style={{
-            background: "linear-gradient(to top, #4f3a7a, #f0d3ff)",
+            background: "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
             width: "30px",
             borderRadius: "4px",
             boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
@@ -77,7 +77,7 @@ const RightComponent = () => {
             className="flex items-center"
           >
             <img className="ml-21px" src={icon1} alt="icon" />
-            <p className="ml-px -mt-3px text-14px text-white font-MalgunGothicBold tracking-tight">
+            <p className="ml-1px -mt-3px text-14px text-white font-MalgunGothicBold tracking-tight">
               베팅슬립
             </p>
             <div
@@ -307,7 +307,7 @@ const RightComponent = () => {
           <div className="flex items-center">
             <div
               style={{
-                background: "linear-gradient(to top, #4f3a7a, #f0d3ff)",
+                background: "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
                 width: "30px",
                 height: "30px",
                 position: "absolute",
@@ -421,12 +421,13 @@ const RightComponent = () => {
               background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
               width: "67px",
               height: "28px",
+              borderRadius: "0.3rem",
             }}
             className="flex items-center justify-center rounded-md"
           >
             <p
               style={{ color: "#444444" }}
-              className="-ml-1px mr-px mb-2px text-12px tracking-tight font-MalgunGothicBold"
+              className="-ml-1px mr-3px mb-2px text-12px tracking-tight font-MalgunGothicBold"
             >
               +10,000
             </p>
@@ -447,12 +448,13 @@ const RightComponent = () => {
               background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
               width: "67px",
               height: "28px",
+              borderRadius: "0.3rem",
             }}
             className="flex items-center justify-center rounded-md"
           >
             <p
               style={{ color: "#444444" }}
-              className="-ml-1px mr-px mb-2px text-12px  tracking-tight font-MalgunGothicBold"
+              className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-MalgunGothicBold"
             >
               +50,000
             </p>
@@ -473,12 +475,13 @@ const RightComponent = () => {
               background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
               width: "67px",
               height: "28px",
+              borderRadius: "0.3rem",
             }}
             className="flex items-center justify-center rounded-md"
           >
             <p
               style={{ color: "#444444" }}
-              className="-ml-1px mr-px mb-2px text-12px  tracking-tight font-MalgunGothicBold"
+              className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-MalgunGothicBold"
             >
               +100,000
             </p>
@@ -499,6 +502,7 @@ const RightComponent = () => {
               background: "linear-gradient(to top, #5423a0, #9d3bbb)",
               width: "67px",
               height: "28px",
+              borderRadius: "0.3rem",
             }}
             className="flex items-center justify-center rounded-md"
           >
@@ -507,7 +511,7 @@ const RightComponent = () => {
                 color: "#ffffff",
                 textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
               }}
-              className="mb-2px text-12px text-white  tracking-tight font-MalgunGothicBold"
+              className="mb-2px ml-px text-12px text-white  tracking-tight font-MalgunGothicBold"
             >
               최대
             </p>

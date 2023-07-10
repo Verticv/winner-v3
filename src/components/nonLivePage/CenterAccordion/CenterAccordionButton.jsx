@@ -20,7 +20,7 @@ const CenterAccordionButton = ({ icon, title, date, icon1, icon2, card }) => {
         boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
         borderRadius: "6px",
       }}
-      className="rounded-lg p-px mb-5px"
+      className="rounded-lg p-px mb-4px"
     >
       <div
         style={{
