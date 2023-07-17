@@ -17,11 +17,12 @@ const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
       style={{
         background: "#2e0450",
         width: "640px",
+        borderRadius: '6px',
       }}
-      className="rounded-lg p-px mb-5px"
+      className="rounded-lg p-px mb-4px"
     >
       <div
-        style={{ background: "#420572", width: "638px" }}
+        style={{ background: "#420572", width: "638px", borderRadius: "5px" }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
         } cursor-pointer h-30px `}
@@ -29,12 +30,17 @@ const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
       >
         <div className="flex items-center">
           <img
-            className="ml-5px mt-7px mb-7px object-none"
+            className="ml-5px mt-7px mb-8px object-none"
             src={icon}
             alt="icon"
           />
           <p
-            style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+            style={{
+              color: "#eeeeee",
+              letterSpacing: "-0.031em",
+              fontFamily: "MalgunGothicRegular",
+              marginBottom: "4px",
+            }}
             className="text-12px ml-4px font-malgun"
           >
             {title}
@@ -52,7 +58,7 @@ const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
               {date}
             </p>
             <img
-              className="-mr-14px -ml-px mb-2px object-none"
+              className="-mr-13px -ml-px mb-2px object-none"
               src={icon1}
               alt="icon1"
             />

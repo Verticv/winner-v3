@@ -14,7 +14,7 @@ const CenterAccordionContent1 = () => {
         className="flex items-center border-b h-31px"
       >
         <div className="items-center ml-6px mt-6px mb-8px">
-          <img src={icon} alt="icon" />
+          <img src={icon} alt="icon" style={{ marginTop: "1px" }}  />
         </div>
         <div
           style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
@@ -37,7 +37,7 @@ const CenterAccordionContent1 = () => {
               color: "#f04281",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-10px mt-10px mb-11px font-malgun"
+            className=" mr-10px mt-10px mb-12px font-malgun"
           >
             1.11
           </p>
@@ -50,6 +50,7 @@ const CenterAccordionContent1 = () => {
               color: "#f04281",
               letterSpacing: "-0.031em",
               width: "21px",
+              marginBottom: "2px",
             }}
             className="font-malgun ml-6px"
           >
@@ -66,7 +67,7 @@ const CenterAccordionContent1 = () => {
               color: "#0072bc",
               letterSpacing: "-0.031em",
             }}
-            className=" ml-9px mt-10px mb-11px font-malgun"
+            className=" ml-10px mt-10px mb-12px mr-px font-malgun"
           >
             1.77
           </p>
@@ -77,7 +78,7 @@ const CenterAccordionContent1 = () => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-10px mb-9px font-malgun"
+            className=" mr-9px mt-10px mb-8px font-malgun"
           >
             SC프라이부르크
           </p>
@@ -91,6 +92,8 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              marginRight: "1px",
+              marginBottom: "2px",
             }}
             className="font-malgun"
           >
@@ -106,7 +109,7 @@ const CenterAccordionContent1 = () => {
         className="flex items-center border-b h-31px"
       >
         <div className="items-center ml-6px mt-6px mb-8px">
-          <img src={icon} alt="icon" />
+          <img src={icon} alt="icon" style={{ marginTop: "1px" }}  />
         </div>
         <div
           style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
@@ -129,7 +132,7 @@ const CenterAccordionContent1 = () => {
               color: "#0072bc",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-10px mb-11px font-malgun"
+            className=" mr-10px mt-10px mb-12px font-malgun"
           >
             33.65
           </p>
@@ -142,6 +145,7 @@ const CenterAccordionContent1 = () => {
               color: "#0072bc",
               letterSpacing: "-0.031em",
               width: "21px",
+              marginBottom: "2px",
             }}
             className="font-malgun"
           >
@@ -158,7 +162,7 @@ const CenterAccordionContent1 = () => {
               color: "#f04281",
               letterSpacing: "-0.031em",
             }}
-            className=" ml-9px mt-10px mb-11px font-malgun"
+            className=" ml-10px mt-10px mb-12px font-malgun"
           >
             33.65
           </p>
@@ -169,7 +173,7 @@ const CenterAccordionContent1 = () => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-10px mb-9px font-malgun"
+            className=" mr-9px mt-10px mb-8px font-malgun"
           >
             바이에른뮌헨
           </p>
@@ -198,7 +202,7 @@ const CenterAccordionContent1 = () => {
         className="flex items-center border-b h-31px"
       >
         <div className="items-center ml-6px mt-6px mb-8px">
-          <img src={icon} alt="icon" />
+          <img src={icon} alt="icon" style={{ marginTop: "1px" }} />
         </div>
         <div
           style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
@@ -220,7 +224,7 @@ const CenterAccordionContent1 = () => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-10px mt-10px mb-11px font-malgun"
+            className=" mr-10px mt-10px mb-12px font-malgun"
           >
             2.78
           </p>
@@ -232,6 +236,7 @@ const CenterAccordionContent1 = () => {
               color: "#444444",
               letterSpacing: "-0.031em",
               width: "21px",
+              marginBottom: "2px",
             }}
             className="font-malgun ml-23px"
           >
@@ -248,7 +253,7 @@ const CenterAccordionContent1 = () => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" ml-11px mt-10px mb-11px font-malgun"
+            className=" ml-11px mt-10px mb-12px font-malgun"
           >
             2.99
           </p>
@@ -258,7 +263,7 @@ const CenterAccordionContent1 = () => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-10px mt-10px mb-9px font-malgun"
+            className=" mr-9px mt-10px mb-8px font-malgun"
           >
             FC샬케04
           </p>
@@ -282,7 +287,7 @@ const CenterAccordionContent1 = () => {
 
       <div className="flex items-center h-30px">
         <div className="items-center ml-6px mt-6px mb-8px">
-          <img src={icon} alt="icon" />
+          <img src={icon} alt="icon" style={{ marginTop: "1px" }} />
         </div>
         <div
           style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
@@ -314,7 +319,7 @@ const CenterAccordionContent1 = () => {
               color: "#444444",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-10px mb-9px font-malgun"
+            className=" mr-9px mt-10px mb-8px font-malgun"
           >
             FSV마인츠05
           </p>

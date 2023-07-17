@@ -150,27 +150,27 @@ const EnglandComponent = () => {
               style={{ color: "#e5bcf7", letterSpacing: "-0.094em" }}
               className="ml-19px mt-9px text-13px font-malgun"
             >
-              • 오즈포탈 등을 활용하여 배당률 하락경기에만 베팅하는 경우
+              <span style={{ marginRight: '3px'}}>•</span> 오즈포탈 등을 활용하여 배당률 하락경기에만 베팅하는 경우
             </p>
             <p
               style={{ color: "#e5bcf7", letterSpacing: "-0.094em" }}
               className="ml-19px mt-4px text-13px font-malgun"
             >
-              • 스포츠 경기에서 보너스 엣지를 악용하여 양방 혹은 시간차 양방
+              <span style={{ marginRight: '3px'}}>•</span> 스포츠 경기에서 보너스 엣지를 악용하여 양방 혹은 시간차 양방
               베팅하는 경우
             </p>
             <p
               style={{ color: "#e5bcf7", letterSpacing: "-0.094em" }}
               className="ml-19px mt-5px text-13px font-malgun"
             >
-              • 실시간 스포츠 농구/배구 경기에서 언/오버 핸디캡을 악용한 걸치기,
+              <span style={{ marginRight: '3px'}}>•</span> 실시간 스포츠 농구/배구 경기에서 언/오버 핸디캡을 악용한 걸치기,
               양방 베팅을 하는 경우
             </p>
             <p
               style={{ color: "#e5bcf7", letterSpacing: "-0.094em" }}
               className="ml-19px mt-4px text-13px font-malgun"
             >
-              • 운영진의 실수 및 프로그램 오류로 인해 발생된 비정상적인 경기에
+              <span style={{ marginRight: '3px'}}>•</span> 운영진의 실수 및 프로그램 오류로 인해 발생된 비정상적인 경기에
               베팅하는경우
             </p>
             <div
@@ -201,7 +201,7 @@ const EnglandComponent = () => {
               >
                 <p
                   style={{ letterSpacing: "-0.094em" }}
-                  className="ml-17px pt-14px text-white text-13px font-malgun"
+                  className="ml-17px pt-13px text-white text-13px font-malgun"
                 >
                   야구, 배구 등 각종 경기의 경우 베팅한 시점으로 최대 1분 이내에
                 </p>
@@ -213,7 +213,7 @@ const EnglandComponent = () => {
                 </p>
                 <p
                   style={{ color: "#fecf08", letterSpacing: "-0.094em" }}
-                  className="ml-17px mt-21px text-13px font-malgun"
+                  className="ml-17px mt-22px text-13px font-malgun"
                 >
                   1분 이내에 발생한 득점이 모든 경기가 적특처리 되는 것은
                   아니며,
