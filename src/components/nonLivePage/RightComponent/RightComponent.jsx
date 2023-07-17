@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { format } from 'date-fns'
+import { ko } from "date-fns/locale"
 import icon from "../../../images/nonLivePage/RightComponent/icon.png";
 import icon1 from "../../../images/nonLivePage/RightComponent/Icon1.png";
 import icon2 from "../../../images/nonLivePage/RightComponent/Icon2.png";
@@ -13,6 +15,18 @@ import CustomDropdown from "./CustomDropdown";
 // import RightComponentCard1 from "./RightComponentCard1";
 
 const RightComponent = () => {
+  const [time, setTime] = useState(Date.now());
+
+  const dateFormat = "yyyy-MM-dd";
+  const dateFormat1 = "H:mm:ss";
+
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div
       style={{
@@ -35,7 +49,7 @@ const RightComponent = () => {
             style={{ color: "#eeeeee" }}
             className="ml-8px mt-15px mb-14px text-13px font-malgun"
           >
-            2021-08-02(월) 15:25:42
+            {format(time, dateFormat, { locale: ko })}(월) {format(time, dateFormat1, { locale : ko })}
           </p>
         </div>
         <div
@@ -60,6 +74,7 @@ const RightComponent = () => {
         </div>
       </div>
       <div className="flex">
+        {/* // Active Button */}
         <div
           style={{
             background: "linear-gradient(to top, #7452aa, #e597ff)",
@@ -100,6 +115,7 @@ const RightComponent = () => {
             </div>
           </div>
         </div>
+        {/* // inactive Button */}
         <div
           style={{
             background: "linear-gradient(to top, #a281cf, #f0d3ff)",
