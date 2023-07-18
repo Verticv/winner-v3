@@ -20,69 +20,89 @@ const tabs = [
     activeIcon: icon1Active,
     name: "전체",
     num: "854",
+    width: "105px",
   },
   {
     id: 1,
     icon: icon2,
     name: "축구",
     num: "567",
+    width: "107px",
   },
   {
     id: 2,
     icon: icon3,
     name: "농구",
     num: "227",
+    width: "107px",
   },
   {
     id: 3,
     icon: icon4,
     name: "야구",
     num: "407",
+    width: "107px",
   },
   {
     id: 4,
     icon: icon5,
     name: "배구",
     num: "0",
+    width: "94px",
   },
   {
     id: 5,
     icon: icon6,
     name: "테니스",
     num: "0",
+    width: "106px",
   },
   {
     id: 6,
     icon: icon7,
     name: "배드민턴",
     num: "0",
+    width: "118px",
   },
   {
     id: 7,
     icon: icon8,
     name: "하키",
     num: "0",
+    width: "94px",
   },
   {
     id: 8,
     icon: icon9,
     name: "미식축구",
     num: "0",
+    width: "118px",
   },
   {
     id: 9,
     icon: icon10,
     name: "격투기",
     num: "0",
+    width: "106px",
   },
 ];
 
 const Tabs = () => {
   // eslint-disable-next-line no-unused-vars
   const [active, setActive] = useState(0);
+
+  const slideLeft = () => {
+    var slider = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft - 500;
+  };
+  const slideRight = () => {
+    var slider = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft + 500;
+  };
+
   return (
     <div style={{ display: "flex", position: "relative", marginTop: "10px" }}>
-      <div
+      <button
         className="leftArrow"
         style={{
           background: "#edd9f2",
@@ -95,10 +115,12 @@ const Tabs = () => {
           alignItems: "center",
           marginRight: "2px",
         }}
+        onClick={slideLeft}
       >
         <img className="mr-px" src={arrow} alt="img" />
-      </div>
+      </button>
       <div
+        id="slider"
         style={{
           overflowX: "auto",
           whiteSpace: "nowrap",
@@ -116,7 +138,7 @@ const Tabs = () => {
                     ? "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #cb78e6 100%)"
                     : "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff 100%)"
                 }`,
-                width: "105px",
+                width: `${tab.width}`,
                 height: "44px",
                 padding: "1px",
                 borderRadius: "6px",
@@ -165,15 +187,19 @@ const Tabs = () => {
                     color: "#fff",
                     fontSize: "12px",
                     padding: "0 5px",
-                    background: "#421959",
+                    background: `${active !== tab.id ? "#73677d" : "#421959"}`,
                     borderRadius: "6px",
                     // marginBottom: "1px",
                   }}
                 >
-                  <p style={{
-                    display: 'inline-block',
-                    height: '17px'
-                  }}>{tab.num}</p>
+                  <p
+                    style={{
+                      display: "inline-block",
+                      height: "17px",
+                    }}
+                  >
+                    {tab.num}
+                  </p>
                 </div>
               </button>
               <div
@@ -194,7 +220,7 @@ const Tabs = () => {
           ))}
         </div>
       </div>
-      <div
+      <button
         className="rightArrow"
         style={{
           background: "#edd9f2",
@@ -207,13 +233,12 @@ const Tabs = () => {
           alignItems: "center",
           zIndex: "10",
         }}
+        onClick={slideRight}
       >
         <img src={rArrow} alt="" />
-      </div>
+      </button>
     </div>
   );
 };
 
 export default Tabs;
-
-
