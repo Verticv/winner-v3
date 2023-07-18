@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import icon from "../../../images/nonLivePage/CenterAccordion/Icon.png";
 import icon1 from "../../../images/nonLivePage/CenterAccordion/star2.png";
 import icon2 from "../../../images/nonLivePage/CenterAccordion/Flag.png";
@@ -153,19 +154,24 @@ const card5 = [
 ];
 
 const CenterAccordion = () => {
+  const data = useSelector((state) => state?.nonLive?.data);
+  console.log("data :>> ", data);
   return (
     <>
       <div className="h-full items-start mr-10px mt-5px">
-        <CenterAccordionButton
-          icon={icon}
-          title="축구 / 잉글랜드 - 프리미어리그"
-          date="2023-03-22 13:00"
-          icon1={icon1}
-          icon2={icon2}
-          card={card1}
-          // lastItem={lastItem}
-        />
-        <CenterAccordionButton
+        {data?.map((item, index) => {
+          return (
+            <CenterAccordionButton
+              key={index}
+              title={item.title}
+              date={item.date}
+              icon2={item.icon}
+              cards={item.teams}
+              // lastItem={lastItem}
+            />
+          );
+        })}
+        {/* <CenterAccordionButton
           icon={icon}
           title="축구 / 스페인 - 라리가"
           date="2023-03-22 15:00"
@@ -245,7 +251,7 @@ const CenterAccordion = () => {
           icon2={icon3}
           card={card4}
           // lastItem={lastItem}
-        />
+        /> */}
       </div>
     </>
   );
