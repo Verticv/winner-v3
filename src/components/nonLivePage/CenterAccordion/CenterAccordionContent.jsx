@@ -41,7 +41,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             }}
             className="ml-9px mt-10px mb-12px"
           >
-            {card.text}
+            {card.team1}
           </p>
           <p
             style={{
@@ -51,7 +51,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             }}
             className=" mr-10px mt-10px mb-12px"
           >
-            {card.text1}
+            {card.score1}
           </p>
         </div>
         <div className="flex items-center">
@@ -64,7 +64,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             }}
             className="ml-23px mb-2px"
           >
-            {card.text2}
+            {card.score2}
           </p>
         </div>
         <div
@@ -79,7 +79,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             }}
             className=" ml-10px mt-10px mb-12px"
           >
-            {card.text3}
+            {card.score3}
           </p>
           <p
             style={{
@@ -89,7 +89,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             }}
             className=" mr-9px mt-10px mb-8px"
           >
-            {card.text4}
+            {card.team2}
           </p>
         </div>
         <div
@@ -105,7 +105,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               marginBottom: "2px",
             }}
           >
-            {card.text5}
+            {card.difference}
           </p>
         </div>
       </div>

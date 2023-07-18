@@ -6,7 +6,7 @@ import CenterAccordionContent1 from "./CenterAccordionContent1";
 // import AccordionContent1 from "./AccordionContent1";
 
 const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);

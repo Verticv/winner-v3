@@ -5,7 +5,7 @@ import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpCompon
 import icon from "../../../images/nonLivePage/RightComponent/icon.png";
 import icon1 from "../../../images/nonLivePage/RightComponent/Icon1.png";
 import icon2 from "../../../images/nonLivePage/RightComponent/Icon2.png";
-// import icon2Active from "../../../images/nonLivePage/RightComponent/icon2-active.png";
+import icon2Active from "../../../images/nonLivePage/RightComponent/icon2-active.png";
 import icon3 from "../../../images/nonLivePage/RightComponent/Icon3.png";
 import icon4 from "../../../images/nonLivePage/RightComponent/refresh-icon.png";
 import icon5 from "../../../images/nonLivePage/RightComponent/Icon4.png";
@@ -13,15 +13,21 @@ import icon5 from "../../../images/nonLivePage/RightComponent/Icon4.png";
 // import icon7 from "../../../images/nonLivePage/RightComponent/X.png";
 import CustomDropdown from "./CustomDropdown";
 import PopupControls from "components/popups/PopupControls";
+import { useSelector } from "react-redux";
 // import RightComponentCard from "./RightComponentCard";
-// import CheckBoxComponent from "./CheckBoxComponent";
+import CheckBoxComponent from "./CheckBoxComponent";
 // import RightComponentCard1 from "./RightComponentCard1";
 
 const RightComponent = () => {
   const [time, setTime] = useState(Date.now());
   const [isBetSlipActive, setIsBetSlipActive] = useState(true);
+  const [showSettings, setShowSettings] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
+
+  const data = useSelector((state) => state?.nonLive?.data);
+
+  console.log("data :>> ", data);
 
   console.log("isPopupOpen :>> ", isPopupOpen);
 
@@ -147,7 +153,7 @@ const RightComponent = () => {
         >
           <img
             className="ml-26px"
-            src={isBetSlipActive ? icon2 : icon2}
+            src={isBetSlipActive ? icon2 : icon2Active}
             alt="icon"
           />
           <p
@@ -248,7 +254,9 @@ const RightComponent = () => {
             className="p-px mr-5px mt-4px mb-5px"
           >
             <div
+              onClick={() => setShowSettings((prev) => !prev)}
               style={{
+                cursor: "pointer",
                 background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
                 height: "28px",
                 borderRadius: "3px",
@@ -289,7 +297,7 @@ const RightComponent = () => {
         </div>
       </div> */}
 
-        {/* <CheckBoxComponent /> */}
+        {showSettings && <CheckBoxComponent />}
 
         <div
           style={{
