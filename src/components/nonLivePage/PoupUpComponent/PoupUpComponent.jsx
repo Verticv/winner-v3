@@ -1,6 +1,6 @@
 import React from "react";
 import icon from "../../../images/nonLivePage/PoupUpComponent/X.png";
-const PoupUpComponent = () => {
+const PoupUpComponent = ({ setIsPopupOpen }) => {
   return (
     <div
       style={{
@@ -28,11 +28,13 @@ const PoupUpComponent = () => {
         >
           베팅정보
         </p>
-        <img
-          className="object-none mr-22px mt-24px mb-26px"
-          src={icon}
-          alt="icon"
-        />
+        <button onClick={() => setIsPopupOpen(false)}>
+          <img
+            className="object-none mr-22px mt-24px mb-26px"
+            src={icon}
+            alt="icon"
+          />
+        </button>
       </div>
       <div
         style={{
@@ -88,7 +90,8 @@ const PoupUpComponent = () => {
             </div>
           </div>
         </div>
-        <div
+        <button
+          onClick={() => setIsPopupOpen(false)}
           style={{
             height: "52px",
             borderRadius: "26px",
@@ -109,7 +112,7 @@ const PoupUpComponent = () => {
           >
             확인
           </p>
-        </div>
+        </button>
       </div>
     </div>
   );
