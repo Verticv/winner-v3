@@ -3,7 +3,7 @@ import Navbar from "components/mainPage/NavBar";
 import OverlayBackground1 from "../images/overlay_background_1.png";
 import OverlayBackground2 from "../images/overlay_background_2.png";
 import NoticeBanner from "components/mainPage/NoticeBanner";
-import React from "react";
+import React, { useState } from "react";
 import MainTabs from "components/nonLivePage/MainTabs/MainTabs";
 import LeftAccordion from "components/nonLivePage/LeftAccordion/LeftAccordion";
 import Search from "components/nonLivePage/Search/Search";
@@ -17,6 +17,7 @@ import RightComponent from "components/nonLivePage/RightComponent/RightComponent
 import Tabs from "components/nonLivePage/Tabs/Tabs";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
+  const [active, setActive] = useState(0);
   return (
     <>
       <div
@@ -73,10 +74,28 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             <LeftAccordion />
           </div>
           <div>
-            <Tabs />
+            <Tabs active={active} setActive={setActive} />
             {/*  */}
-            <CenterComponent />
-            <CenterAccordion />
+            <div style={{ width: "650px" }}>
+              {active === 0 ? (
+                <>
+                  <CenterComponent />
+                  <CenterAccordion />
+                </>
+              ) : active === 1 ? (
+                <>
+                  <CenterComponent />
+                  <CenterAccordion />
+                </>
+              ) : (
+                <>
+                  <CenterComponent />
+                  <CenterAccordion />
+                </>
+              )}
+            </div>
+            {/* <CenterComponent />
+            <CenterAccordion /> */}
           </div>
           <div>
             <EnglandComponent />

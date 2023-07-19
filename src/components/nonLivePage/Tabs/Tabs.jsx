@@ -1,6 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import icon1 from "../../../images/nonLivePage/Tabs/Icon1.png";
 import icon1Active from "../../../images/nonLivePage/Tabs/Icon1_on.png";
+import icon2Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon2.png";
+import icon3Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon3.png";
+import icon4Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon4.png";
+import icon5Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon5.png";
+import icon6Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon6.png";
+import icon7Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon7.png";
+import icon8Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon8.png";
+import icon9Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon9.png";
+import icon10Active from "../../../images/nonLivePage/Tabs/IconsOn/Icon10.png";
 import arrow from "../../../images/nonLivePage/Tabs/Arrow.png";
 import rArrow from "../../../images/nonLivePage/Tabs/RArrow.png";
 import icon2 from "../../../images/nonLivePage/Tabs/Icon2.png";
@@ -8,10 +17,10 @@ import icon3 from "../../../images/nonLivePage/Tabs/Icon3.png";
 import icon4 from "../../../images/nonLivePage/Tabs/Icon4.png";
 import icon5 from "../../../images/nonLivePage/Tabs/Icon5.png";
 import icon6 from "../../../images/nonLivePage/Tabs/Icon6.png";
-import icon7 from "../../../images/nonLivePage/Tabs/Icon7.png";
-import icon8 from "../../../images/nonLivePage/Tabs/Icon8.png";
-import icon9 from "../../../images/nonLivePage/Tabs/Icon9.png";
-import icon10 from "../../../images/nonLivePage/Tabs/Icon10.png";
+import icon7 from "../../../images/nonLivePage/Tabs/Icon10.png";
+import icon8 from "../../../images/nonLivePage/Tabs/Icon9.png";
+import icon9 from "../../../images/nonLivePage/Tabs/Icon8.png";
+import icon10 from "../../../images/nonLivePage/Tabs/Icon7.png";
 
 const tabs = [
   {
@@ -25,6 +34,7 @@ const tabs = [
   {
     id: 1,
     icon: icon2,
+    activeIcon: icon2Active,
     name: "축구",
     num: "567",
     width: "107px",
@@ -32,6 +42,7 @@ const tabs = [
   {
     id: 2,
     icon: icon3,
+    activeIcon: icon3Active,
     name: "농구",
     num: "227",
     width: "107px",
@@ -39,6 +50,7 @@ const tabs = [
   {
     id: 3,
     icon: icon4,
+    activeIcon: icon4Active,
     name: "야구",
     num: "407",
     width: "107px",
@@ -46,6 +58,7 @@ const tabs = [
   {
     id: 4,
     icon: icon5,
+    activeIcon: icon5Active,
     name: "배구",
     num: "0",
     width: "94px",
@@ -53,6 +66,7 @@ const tabs = [
   {
     id: 5,
     icon: icon6,
+    activeIcon: icon6Active,
     name: "테니스",
     num: "0",
     width: "106px",
@@ -60,6 +74,7 @@ const tabs = [
   {
     id: 6,
     icon: icon7,
+    activeIcon: icon7Active,
     name: "배드민턴",
     num: "0",
     width: "118px",
@@ -67,6 +82,7 @@ const tabs = [
   {
     id: 7,
     icon: icon8,
+    activeIcon: icon8Active,
     name: "하키",
     num: "0",
     width: "94px",
@@ -74,6 +90,7 @@ const tabs = [
   {
     id: 8,
     icon: icon9,
+    activeIcon: icon9Active,
     name: "미식축구",
     num: "0",
     width: "118px",
@@ -81,15 +98,16 @@ const tabs = [
   {
     id: 9,
     icon: icon10,
+    activeIcon: icon10Active,
     name: "격투기",
     num: "0",
     width: "106px",
   },
 ];
 
-const Tabs = () => {
+const Tabs = ({ active, setActive }) => {
   // eslint-disable-next-line no-unused-vars
-  const [active, setActive] = useState(0);
+  // const [active, setActive] = useState(0);
 
   const slideLeft = () => {
     var slider = document.getElementById("slider");
@@ -148,6 +166,7 @@ const Tabs = () => {
               }}
             >
               <button
+                onClick={() => setActive(tab.id)}
                 style={{
                   background: `${
                     active === tab.id
@@ -168,6 +187,11 @@ const Tabs = () => {
                   style={{
                     marginRight: "4px",
                     marginLeft: "11px",
+                    // webkitFilter: 'drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5))',
+                    filter:
+                      active === tab.id
+                        ? "drop-shadow(1px 1px 3px #d478ff)"
+                        : "",
                   }}
                 />
                 <span
