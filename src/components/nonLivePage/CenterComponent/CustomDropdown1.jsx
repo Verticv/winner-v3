@@ -69,7 +69,7 @@ const CustomDropdown1 = () => {
             width: "79px",
             borderRadius: "4px",
           }}
-          className="p-px absolute mt-6px -ml-px"
+          className="p-px absolute mt-6px -ml-px z-30"
         >
           <div
             style={{
