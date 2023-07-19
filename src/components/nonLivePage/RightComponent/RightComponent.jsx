@@ -152,7 +152,9 @@ const RightComponent = () => {
           className="flex items-center"
         >
           <img
-            className="ml-26px"
+            className={`${isBetSlipActive ? "ml-26px" : "ml-22px"}`}
+            // "ml-26px"
+            // "ml-22px"
             src={isBetSlipActive ? icon2 : icon2Active}
             alt="icon"
           />
@@ -491,7 +493,7 @@ const RightComponent = () => {
                       fontSize: "12px",
                       outline: "0px",
                     }}
-                    className="bg-white w-full tracking-tight font-MalgunGothicBold -mt-2px"
+                    className="bg-white w-full tracking-tight font-MalgunGothicBold -mt-2px pr-8px"
                     type="text"
                     onChange={onChangeHandler}
                     value={inputValue}

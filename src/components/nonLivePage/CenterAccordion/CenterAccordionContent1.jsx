@@ -14,7 +14,7 @@ const CenterAccordionContent1 = () => {
         className="flex items-center border-b h-31px"
       >
         <div className="items-center ml-6px mt-6px mb-8px">
-          <img src={icon} alt="icon" style={{ marginTop: "1px" }}  />
+          <img src={icon} alt="icon" style={{ marginTop: "1px" }} />
         </div>
         <div
           style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
@@ -71,7 +71,7 @@ const CenterAccordionContent1 = () => {
           >
             1.77
           </p>
-          <img src={Dn} alt="Up" className="mt-11px mb-12px mr-104px" />
+          <img src={Dn} alt="Dn" className="mt-11px mb-12px mr-104px" />
           <p
             style={{
               fontSize: "12px",
@@ -109,7 +109,7 @@ const CenterAccordionContent1 = () => {
         className="flex items-center border-b h-31px"
       >
         <div className="items-center ml-6px mt-6px mb-8px">
-          <img src={icon} alt="icon" style={{ marginTop: "1px" }}  />
+          <img src={icon} alt="icon" style={{ marginTop: "1px" }} />
         </div>
         <div
           style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
