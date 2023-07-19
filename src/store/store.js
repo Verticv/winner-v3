@@ -1,9 +1,9 @@
 import {
   configureStore,
   combineReducers,
-  getDefaultMiddleware,
+  // getDefaultMiddleware,
 } from "@reduxjs/toolkit";
-import { createBrowserHistory } from "history";
+// import { createBrowserHistory } from "history";
 
 import nonLive from "../reducers/nonLive-reducer";
 
@@ -15,4 +15,3 @@ export const store = configureStore({
   reducer: rootReducer,
   devTools: process.env.NODE_ENV !== "production",
 });
-
