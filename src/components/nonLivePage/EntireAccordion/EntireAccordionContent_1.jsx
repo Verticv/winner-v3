@@ -19,14 +19,14 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
       <div
         style={{
           borderColor: "#cccccc",
-          width: "307px",
+          width: "316px",
           background: leftActive
             ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
             : "#ffffff",
           color: leftActive ? "#eeeeee" : "#444444",
           borderBottomLeftRadius: `${card.id === 2 ? "4px" : "0px"}`,
         }}
-        className="flex items-center justify-between border-r  h-30px"
+        className="flex items-center justify-between border-r h-30px"
         onClick={() => setLeftActive((prev) => !prev)}
       >
         <p
@@ -53,7 +53,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
       <div
         style={{
           borderColor: "#bbbbbb",
-          width: "323px",
+          width: "314px",
           height: "100%",
           background: rightActive
             ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
