@@ -1,8 +1,9 @@
 import React from "react";
 import icon from "../../../images/nonLivePage/Search/search2.png";
-// import icon1 from "../../../images/nonLivePage/Search/Icon.png";
+import icon1 from "../../../images/nonLivePage/Search/Icon.png";
 
 const Search = () => {
+  const [value, setValue] = React.useState("");
   return (
     <div className="h-full items-start mr-10px ml-10px mt-10px">
       <div
@@ -40,15 +41,17 @@ const Search = () => {
                 fontSize: "13px",
                 outline: "0px",
               }}
+              onChange={(e) => setValue(e.target.value)}
               className="bg-white w-full rounded-lg pl-9px pt-2px text-13 font-malgun "
               type="text"
-              value="검색 (팀명/리그)"
+              value={value}
             />
           </div>
           <div
+            onClick={() => (value ? setValue("") : {})}
             style={{
               position: "absolute",
-              background: "#936cee",
+              background: value ? "#f04281" : "#936cee",
               width: "28px",
               height: "28px",
               borderRadius: "3px",
@@ -56,9 +59,9 @@ const Search = () => {
               justifyContent: "center",
               alignItems: "center",
             }}
-            className="mr-4px mt-3px mb-3px rounded-lg"
+            className="mr-4px mt-3px mb-3px rounded-lg cursor-pointer"
           >
-            <img src={icon} alt="" />
+            <img src={!value ? icon : icon1} alt="" />
           </div>
           {/* <div
             style={{

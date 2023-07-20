@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import CenterAccordionContent from "./CenterAccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 import icon1 from "../../../images/nonLivePage/CenterAccordion/star2.png";
+import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on.png";
 import icon from "../../../images/nonLivePage/CenterAccordion/Icon.png";
 
 // import AccordionContent1 from "./AccordionContent1";
 
 const CenterAccordionButton = ({ title, date, icon2, cards }) => {
   const [isOpen, setIsOpen] = useState(true);
+  const [activeStar, setActiveStar] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -71,8 +73,14 @@ const CenterAccordionButton = ({ title, date, icon2, cards }) => {
               {date}
             </p>
             <img
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("clicked");
+                setActiveStar((prev) => !prev);
+              }}
               className="-mr-13px -ml-px mb-2px object-none"
-              src={icon1}
+              src={activeStar ? activeStarIcon : icon1}
+              // TODO: add the active star icon
               alt="icon1"
             />
             <img className="-mr-2px object-none" src={icon2} alt="icon1" />

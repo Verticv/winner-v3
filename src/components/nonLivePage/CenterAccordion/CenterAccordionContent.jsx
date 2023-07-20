@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/CenterAccordion/star2.png";
 import Up from "../../../images/nonLivePage/LeftAccordion/Card/Up.png";
 import Dn from "../../../images/nonLivePage/LeftAccordion/Card/Dn.png";
 import icon1 from "../../../images/nonLivePage/CenterAccordion/Icon1.png";
+import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
+
 import { useDispatch } from "react-redux";
-import { setBetSlipData } from "reducers/nonLive-reducer";
+import { setBetSlipData, setLiveGameData } from "reducers/nonLive-reducer";
+import arrowActive from "../../../images/nonLivePage/CenterAccordion/ArrowActive.png";
 
 const CenterAccordionContent = ({ card, lastObject }) => {
   const dispatch = useDispatch();
+  const [leftActive, setLeftActive] = useState(false);
+  const [centerActive, setCenterActive] = useState(false);
+  const [rightActive, setRightActive] = useState(false);
+  const [lastItemActive, setLastItemActive] = useState(false);
+  const [activeStar, setActiveStar] = useState(false);
+
   return (
     <>
       <button
-        onClick={() =>
-          dispatch(
-            setBetSlipData({
-              data: card,
-            })
-          )
-        }
         style={{
           borderColor: "#cccccc",
         }}
@@ -32,28 +34,46 @@ const CenterAccordionContent = ({ card, lastObject }) => {
         }
         `}
       >
-        <div className="items-center ml-6px mt-6px mb-8px">
+        <div
+          className="items-center ml-6px mt-6px mb-8px"
+          style={{ width: "23px" }}
+        >
           <img
-            src={icon}
+            src={activeStar ? activeStarIcon : icon}
             alt="icon"
             style={{
               marginTop: "1px",
             }}
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveStar((prev) => !prev);
+            }}
           />
         </div>
         <div
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setLeftActive((prev) => !prev);
+          }}
           style={{
             borderColor: "#cccccc",
             width: "252px",
             height: "30px",
             fontFamily: "MalgunGothicRegular",
+            background: leftActive
+              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+              : "",
+            color: leftActive ? "#eeeeee" : "#444444",
           }}
-          className="flex items-center justify-between border-l border-r ml-6px"
+          className="flex items-center justify-between border-l border-r"
         >
           <p
             style={{
               fontSize: "12px",
-              color: "#444444",
               letterSpacing: "-0.031em",
             }}
             className="ml-9px mt-10px mb-12px"
@@ -68,7 +88,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
                 ? "#f04281"
                 : card.score1ArrowDown
                 ? "#0072bc"
-                : "#444444",
+                : "",
               letterSpacing: "-0.031em",
             }}
             className="flex items-center mr-10px mt-10px mb-12px"
@@ -103,7 +123,24 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             )}
           </p>
         </div>
-        <div className="flex items-center relative w-68px h-100% justify-center">
+        <div
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setCenterActive((prev) => !prev);
+          }}
+          style={{
+            height: "100%",
+            background: centerActive
+              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+              : "",
+            color: centerActive ? "#eeeeee" : "#444444",
+          }}
+          className="flex items-center relative w-68px justify-center"
+        >
           {card.score2ArrowUp ? (
             <img
               src={Up}
@@ -130,7 +167,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
                 ? "#f04281"
                 : card.score1ArrowDown
                 ? "#0072bc"
-                : "#444444",
+                : "",
               letterSpacing: "-0.031em",
               width: "100%",
               textAlign: "center",
@@ -151,7 +188,23 @@ const CenterAccordionContent = ({ card, lastObject }) => {
           </p>
         </div>
         <div
-          style={{ borderColor: "#cccccc", width: "252px", height: "30px" }}
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setRightActive((prev) => !prev);
+          }}
+          style={{
+            borderColor: "#cccccc",
+            width: "252px",
+            height: "30px",
+            background: rightActive
+              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+              : "",
+            color: rightActive ? "#eeeeee" : "#444444",
+          }}
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -161,7 +214,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
                 ? "#0072bc"
                 : card.score1ArrowDown
                 ? "#f04281"
-                : "#444444",
+                : "",
               letterSpacing: "-0.031em",
             }}
             className="flex items-center ml-10px mt-10px mb-12px"
@@ -199,7 +252,6 @@ const CenterAccordionContent = ({ card, lastObject }) => {
           <p
             style={{
               fontSize: "12px",
-              color: "#444444",
               letterSpacing: "-0.031em",
             }}
             className=" mr-9px mt-10px mb-8px"
@@ -208,13 +260,23 @@ const CenterAccordionContent = ({ card, lastObject }) => {
           </p>
         </div>
         <div
-          style={{ width: "39px" }}
+          style={{
+            width: "39px",
+            height: "100%",
+            background: lastItemActive
+              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+              : "",
+            color: lastItemActive ? "#eeeeee" : "#444444",
+          }}
           className="flex items-center justify-center"
+          onClick={() => {
+            dispatch(setLiveGameData(card));
+            setLastItemActive((prev) => !prev);
+          }}
         >
           <p
             style={{
               fontSize: "12px",
-              color: "#444444",
               letterSpacing: "-0.031em",
               marginRight: "1px",
               marginBottom: "2px",
@@ -222,6 +284,11 @@ const CenterAccordionContent = ({ card, lastObject }) => {
           >
             {card.difference}
           </p>
+          {lastItemActive ? (
+            <img className="ml-px" src={arrowActive} alt="" />
+          ) : (
+            ""
+          )}
         </div>
       </button>
     </>

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuidv4 } from "uuid";
 import england from "../images/nonLivePage/CenterAccordion/Flag.png";
 import spain from "../images/nonLivePage/CenterAccordion/Flag1.png";
 import germany from "../images/nonLivePage/CenterAccordion/Flag2.png";
@@ -50,7 +51,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 3,
             team1: "FC바르셀로나",
             team2: "아틀레티코",
             score1: 2.21,
@@ -66,7 +67,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 4,
             team1: "레알마드리드",
             team2: "레알베티스",
             score1: 1.77,
@@ -76,7 +77,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 3,
+            id: 5,
             team1: "비야레알",
             team2: "마요르카",
             score1: 2.34,
@@ -95,7 +96,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 6,
             team1: "아인트라흐트프랑크푸르트",
             team2: "SC프라이부르크",
             score1: 1.11,
@@ -111,7 +112,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 7,
             team1: "바이어레버쿠젠",
             team2: "바이에른뮌헨",
             score1: 33.65,
@@ -127,7 +128,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 3,
+            id: 8,
             team1: "RB라이프치히",
             team2: "FC샬케04",
             score1: 2.78,
@@ -143,7 +144,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 4,
+            id: 9,
             team1: "보루시아도르트문트",
             team2: "FSV마인츠05",
             score1: "",
@@ -168,7 +169,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 10,
             team1: "세비야",
             team2: "지로나",
             score1: 1.67,
@@ -184,7 +185,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 11,
             team1: "레알소스에다드",
             team2: "카디스",
             score1: "2.10",
@@ -203,7 +204,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 12,
             team1: "아스널",
             team2: "리버풀",
             score1: 1.25,
@@ -219,7 +220,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 13,
             team1: "첼시",
             team2: "토트넘",
             score1: 2.25,
@@ -238,7 +239,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 14,
             team1: "FC바르셀로나",
             team2: "아틀레티코",
             score1: 2.21,
@@ -254,7 +255,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 15,
             team1: "레알마드리드",
             team2: "레알베티스",
             score1: 1.77,
@@ -264,7 +265,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 3,
+            id: 16,
             team1: "비야레알",
             team2: "마요르카",
             score1: 2.34,
@@ -283,7 +284,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 17,
             team1: "아인트라흐트프랑크푸르트",
             team2: "SC프라이부르크",
             score1: 1.11,
@@ -299,7 +300,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 18,
             team1: "바이어레버쿠젠",
             team2: "바이에른뮌헨",
             score1: 2.65,
@@ -315,7 +316,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 3,
+            id: 19,
             team1: "RB라이프치히",
             team2: "FC샬케04",
             score1: 2.78,
@@ -331,7 +332,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 4,
+            id: 20,
             team1: "보루시아도르트문트",
             team2: "FSV마인츠05",
             score1: 2.25,
@@ -356,7 +357,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 21,
             team1: "세비야",
             team2: "지로나",
             score1: 1.67,
@@ -372,7 +373,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 22,
             team1: "레알소스에다드",
             team2: "카디스",
             score1: "2.10",
@@ -391,7 +392,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 23,
             team1: "아스널",
             team2: "리버풀",
             score1: 1.25,
@@ -407,7 +408,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 24,
             team1: "첼시",
             team2: "토트넘",
             score1: 2.25,
@@ -426,7 +427,7 @@ const nonLiveSlice = createSlice({
         isFavorite: false,
         teams: [
           {
-            id: 1,
+            id: 25,
             team1: "세비야",
             team2: "지로나",
             score1: 1.67,
@@ -442,7 +443,7 @@ const nonLiveSlice = createSlice({
             isFavorite: false,
           },
           {
-            id: 2,
+            id: 26,
             team1: "레알소스에다드",
             team2: "카디스",
             score1: "2.10",
@@ -458,6 +459,9 @@ const nonLiveSlice = createSlice({
       data: [],
       isSingle: true,
     },
+    liveGame: {
+      data: [],
+    },
   },
   reducers: {
     setNonLiveData: (_state, action) => ({
@@ -467,15 +471,50 @@ const nonLiveSlice = createSlice({
     setBetSlipData: (_state, action) => ({
       ..._state,
       betSlip: {
-        data: [..._state.betSlip.data, action.payload.data],
+        data: [
+          ..._state.betSlip.data,
+          { ...action.payload.data, id: uuidv4() },
+        ],
         isSingle: Boolean(
-          [..._state.betSlip.data, action.payload.data].length === 1
+          [..._state.betSlip.data, action.payload.data].length <= 1
         ),
+      },
+    }),
+    setLiveGameData: (_state, action) => ({
+      ..._state,
+      liveGame: {
+        data: [..._state.liveGame.data, { ...action.payload, id: uuidv4() }],
+      },
+    }),
+    deleteBetSlipCardById: (_state, action) => ({
+      ..._state,
+      betSlip: {
+        data: [..._state.betSlip.data].filter(
+          (item) => item.id !== action.payload.id
+        ),
+        isSingle: Boolean(
+          [..._state.betSlip.data].filter(
+            (item) => item.id !== action.payload.id
+          ).length <= 1
+        ),
+      },
+    }),
+    deleteAllBetSlipCards: (_state, action) => ({
+      ..._state,
+      betSlip: {
+        data: [],
+        isSingle: true,
       },
     }),
   },
 });
 
 const { actions, reducer } = nonLiveSlice;
-export const { setNonLiveData, setBetSlipData } = actions;
+export const {
+  setNonLiveData,
+  setBetSlipData,
+  deleteBetSlipCardById,
+  deleteAllBetSlipCards,
+  setLiveGameData,
+} = actions;
 export default reducer;

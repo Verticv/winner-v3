@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/EntireAccordion/Icon.png";
 import Up from "../../../images/nonLivePage/EntireAccordion/Up.png";
 import Dn from "../../../images/nonLivePage/EntireAccordion/Dn.png";
 
 const EntireAccordionContent2 = () => {
+  const [leftActive, setLeftActive] = useState(false);
+  const [leftActive1, setLeftActive1] = useState(false);
+  const [rightActive, setRightActive] = useState(false);
   return (
     <>
       <div
@@ -15,13 +18,20 @@ const EntireAccordionContent2 = () => {
         className="flex items-center h-31px border-t"
       >
         <div
-          style={{ borderColor: "#bbbbbb", width: "307px" }}
-          className="flex items-center justify-between border-r ml-9px h-30px"
+          style={{
+            borderColor: "#bbbbbb",
+            width: "307px",
+            background: leftActive
+              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+              : "#ffffff",
+            color: leftActive ? "#eeeeee" : "#444444",
+          }}
+          className="flex items-center justify-between border-r ml-9px  h-30px"
+          onClick={() => setLeftActive((prev) => !prev)}
         >
           <p
             style={{
               fontSize: "12px",
-              color: "#444444",
               letterSpacing: "-0.031em",
             }}
             className="font-malgun mb-2px"
@@ -37,7 +47,7 @@ const EntireAccordionContent2 = () => {
           <p
             style={{
               fontSize: "12px",
-              color: "#f04281",
+              color: leftActive ? "#eeeeee" : "#f04281",
               letterSpacing: "-0.031em",
             }}
             className="mr-9px mb-2px font-malgun"
@@ -46,13 +56,21 @@ const EntireAccordionContent2 = () => {
           </p>
         </div>
         <div
-          style={{ borderColor: "#bbbbbb", width: "314px" }}
+          style={{
+            borderColor: "#bbbbbb",
+            width: "314px",
+            height: "100%",
+            background: rightActive
+              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+              : "#ffffff",
+            color: rightActive ? "#eeeeee" : "#444444",
+          }}
           className="flex items-center justify-between"
+          onClick={() => setRightActive((prev) => !prev)}
         >
           <p
             style={{
               fontSize: "12px",
-              color: "#444444",
               letterSpacing: "-0.031em",
             }}
             className="font-malgun mb-2px ml-9px"
@@ -68,7 +86,7 @@ const EntireAccordionContent2 = () => {
           <p
             style={{
               fontSize: "12px",
-              color: "#0072bc",
+              color: rightActive ? "#eeeeee" : "#0072bc",
               letterSpacing: "-0.031em",
             }}
             className="font-malgun mb-2px mr-9px"
@@ -87,13 +105,20 @@ const EntireAccordionContent2 = () => {
         className="flex items-center h-31px border-t"
       >
         <div
-          style={{ borderColor: "#bbbbbb", width: "307px" }}
+          style={{
+            borderColor: "#bbbbbb",
+            width: "307px",
+            background: leftActive1
+              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+              : "#ffffff",
+            color: leftActive1 ? "#eeeeee" : "#444444",
+          }}
           className="flex items-center justify-between border-r ml-9px h-30px"
+          onClick={() => setLeftActive1((prev) => !prev)}
         >
           <p
             style={{
               fontSize: "12px",
-              color: "#444444",
               letterSpacing: "-0.031em",
             }}
             className="font-malgun mb-2px"
@@ -109,7 +134,7 @@ const EntireAccordionContent2 = () => {
           <p
             style={{
               fontSize: "12px",
-              color: "#f04281",
+              color: leftActive1 ? "#eeeeee" : "#f04281",
               letterSpacing: "-0.031em",
             }}
             className="mr-9px mb-2px font-malgun "

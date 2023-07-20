@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img from "../../../images/nonLivePage/RightComponent/Arrow.png";
+import { useSelector } from "react-redux";
 
 const CustomDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const isSingle = useSelector((state) => state?.nonLive?.betSlip?.isSingle);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -13,6 +15,14 @@ const CustomDropdown = () => {
     setSelectedOption(option);
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    if (isSingle) {
+      setSelectedOption("싱글");
+    } else {
+      setSelectedOption("멀티");
+    }
+  }, [isSingle]);
 
   const options = ["싱글", "멀티"];
 

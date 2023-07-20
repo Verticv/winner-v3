@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const EntireAccordionContent_1 = ({ card, lastObject }) => {
+  const [leftActive, setLeftActive] = useState(false);
+  const [rightActive, setRightActive] = useState(false);
   return (
     <div
       style={{
@@ -15,24 +17,32 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
       `}
     >
       <div
-        style={{ borderColor: "#cccccc", width: "307px" }}
-        className="flex items-center justify-between border-r ml-9px h-30px"
+        style={{
+          borderColor: "#cccccc",
+          width: "307px",
+          background: leftActive
+            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+            : "#ffffff",
+          color: leftActive ? "#eeeeee" : "#444444",
+          borderBottomLeftRadius: `${card.id === 2 ? "4px" : "0px"}`,
+        }}
+        className="flex items-center justify-between border-r  h-30px"
+        onClick={() => setLeftActive((prev) => !prev)}
       >
         <p
           style={{
             fontSize: "12px",
-            color: "#444444",
             letterSpacing: "-0.031em",
             marginBottom: `${card.marginBottom}`,
           }}
-          className="font-malgun"
+          className="font-malgun ml-9px"
         >
           {card.text}
         </p>
         <p
           style={{
             fontSize: "13px",
-            color: "#682aa7",
+            color: leftActive ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
           }}
           className="mr-9px mb-2px font-malgun"
@@ -41,13 +51,22 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
         </p>
       </div>
       <div
-        style={{ borderColor: "#bbbbbb", width: "314px" }}
+        style={{
+          borderColor: "#bbbbbb",
+          width: "323px",
+          height: "100%",
+          background: rightActive
+            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+            : "#ffffff",
+          color: rightActive ? "#eeeeee" : "#444444",
+          borderBottomRightRadius: `${card.id === 2 ? "4px" : "0px"}`,
+        }}
         className="flex items-center justify-between"
+        onClick={() => setRightActive((prev) => !prev)}
       >
         <p
           style={{
             fontSize: "12px",
-            color: "#444444",
             letterSpacing: "-0.031em",
           }}
           className="ml-8px mb-2px font-malgun"
@@ -57,7 +76,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
         <p
           style={{
             fontSize: "13px",
-            color: "#682aa7",
+            color: rightActive ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
           }}
           className="mr-9px mb-2px font-malgun"

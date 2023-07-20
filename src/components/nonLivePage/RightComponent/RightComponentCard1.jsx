@@ -3,131 +3,145 @@ import icon6 from "../../../images/nonLivePage/RightComponent/Icon5.png";
 import icon7 from "../../../images/nonLivePage/RightComponent/X.png";
 import img from "../../../images/nonLivePage/RightComponent/img.png";
 import "./style.css";
+import { useDispatch } from "react-redux";
+import { deleteBetSlipCardById } from "reducers/nonLive-reducer";
 
-const RightComponentCard1 = () => {
+const RightComponentCard1 = ({ teamsData }) => {
+  const dispatch = useDispatch();
   return (
     <>
       <div
-        style={{ background: "#ffffff", width: "308px", height: "202px" }}
-        className=" pt-2px"
+        style={{
+          background: "#ac8acb",
+          width: "304px",
+          borderRadius: "4px",
+        }}
+        className="p-px ml-2px mr-2px mb-2px"
       >
         <div
           style={{
-            background: "#ac8acb",
-            width: "304px",
-            borderRadius: "4px",
+            background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+            height: "40px",
+            borderTopLeftRadius: "3px",
+            borderTopRightRadius: "3px",
           }}
-          className="p-px ml-2px mr-2px mb-2px"
+          className="flex items-center justify-between"
         >
-          <div
-            style={{
-              background: "linear-gradient(to right, #9d3bbb, #5423a0)",
-              height: "40px",
-              borderTopLeftRadius: "3px",
-              borderTopRightRadius: "3px",
-            }}
-            className="flex items-center justify-between"
-          >
-            <div className="flex items-center ml-6px">
-              <p className="text-12px text-white mt-13px mb-15px font-MalgunGothicBold tracking-tight">
-                아스널 VS 리버플
-              </p>
-            </div>
-            <div className="flex items-center mr-7px">
-              <div className="tooltip1">
-                <img className="mt-13px mb-12px" src={icon6} alt="icon" />
-                <div className="tooltiptext1">
-                  <div
-                    style={{ width: "170px", height: "40px" }}
-                    className="flex items-center justify-start ml-10px pb-13px"
+          <div className="flex items-center ml-6px">
+            <p className="text-12px text-white mt-13px mb-15px font-MalgunGothicBold tracking-tight">
+              {teamsData?.team1} VS {teamsData?.team2}
+            </p>
+          </div>
+          <div className="flex items-center mr-7px">
+            <div className="tooltip1">
+              <img className="mt-13px mb-12px" src={icon6} alt="icon" />
+              <div className="tooltiptext1">
+                <div
+                  style={{ width: "170px", height: "40px" }}
+                  className="flex items-center justify-start ml-10px pb-13px"
+                >
+                  <img className="object-none -mt-2px" src={img} alt="icon" />
+                  <span className="ml-5px -mt-3px text-12px font-MalgunGothicBold tracking-tight text-white">
+                    {teamsData?.team1}
+                  </span>
+                </div>
+                <div
+                  style={{
+                    width: "170px",
+                    height: "59px",
+                    background: "#ffffff",
+                    borderBottomLeftRadius: "4px",
+                    borderBottomRightRadius: "4px",
+                  }}
+                  className="-mt-10px items-center"
+                >
+                  <p
+                    style={{ color: "#666666" }}
+                    className="ml-10px pt-5px text-10px font-MalgunGothicBold tracking-tight"
                   >
-                    <img className="object-none -mt-2px" src={img} alt="icon" />
-                    <span className="ml-5px -mt-3px text-12px font-MalgunGothicBold tracking-tight text-white">
-                      축구
-                    </span>
-                  </div>
-                  <div
-                    style={{
-                      width: "170px",
-                      height: "59px",
-                      background: "#ffffff",
-                      borderBottomLeftRadius: "4px",
-                      borderBottomRightRadius: "4px",
-                    }}
-                    className="-mt-10px items-center"
+                    프리미어리그
+                  </p>
+                  <p
+                    style={{ color: "#666666", marginTop: "2px" }}
+                    className="ml-10px text-10px font-MalgunGothicBold tracking-tight"
                   >
-                    <p
-                      style={{ color: "#666666" }}
-                      className="ml-10px pt-5px text-10px font-MalgunGothicBold tracking-tight"
-                    >
-                      프리미어리그
-                    </p>
-                    <p
-                      style={{ color: "#666666", marginTop: "2px" }}
-                      className="ml-10px text-10px font-MalgunGothicBold tracking-tight"
-                    >
-                      시작되지 않음
-                    </p>
-                    <p
-                      style={{ color: "#666666", marginTop: "1px" }}
-                      className="ml-10px  text-10px font-MalgunGothicBold tracking-tight"
-                    >
-                      아스날 VS 리버풀
-                    </p>
-                  </div>
+                    시작되지 않음
+                  </p>
+                  <p
+                    style={{ color: "#666666", marginTop: "1px" }}
+                    className="ml-10px  text-10px font-MalgunGothicBold tracking-tight"
+                  >
+                    {teamsData?.team1} VS {teamsData?.team2}
+                  </p>
                 </div>
               </div>
-              <img className="ml-10px mt-15px mb-14px" src={icon7} alt="icon" />
             </div>
-          </div>
-          <div
-            style={{
-              background: "linear-gradient(to right, #ffeaf5, #d4e8ff)",
-              height: "56px",
-              borderBottomLeftRadius: "4px",
-              borderBottomRightRadius: "4px",
-            }}
-            className="items-center justify-between "
-          >
-            <div className="flex items-center justify-between">
-              <div className="ml-6px mb-2px">
-                <p
-                  style={{ color: "#666666" }}
-                  className="text-12px mt-8px font-malgun tracking-tight"
-                >
-                  승무패[정규시간]
-                </p>
-              </div>
-              <div className="mr-7px mt-4px">
-                <del
-                  style={{ color: "#666666" }}
-                  className="text-12px mt-7px font-MalgunGothicBold tracking-tight"
-                >
-                  3.15
-                </del>
-              </div>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="ml-6px -mt-px">
-                <p
-                  style={{ color: "#5e399a" }}
-                  className="text-12px mt-1px font-MalgunGothicBold tracking-tight"
-                >
-                  리버풀
-                </p>
-              </div>
-              <div className="mr-7px -mt-px">
-                <p
-                  style={{ color: "#0072bc" }}
-                  className="text-12px mt-2px font-MalgunGothicBold tracking-tight "
-                >
-                  3.47
-                </p>
-              </div>
-            </div>
+            <img
+              onClick={() => {
+                dispatch(
+                  deleteBetSlipCardById({
+                    id: teamsData?.id,
+                  })
+                );
+              }}
+              className="cursor-pointer ml-10px mt-15px mb-14px"
+              src={icon7}
+              alt="icon"
+            />
           </div>
         </div>
         <div
+          style={{
+            background: "linear-gradient(to right, #ffeaf5, #d4e8ff)",
+            height: "56px",
+            borderBottomLeftRadius: "4px",
+            borderBottomRightRadius: "4px",
+          }}
+          className="items-center justify-between "
+        >
+          <div className="flex items-center justify-between">
+            <div className="ml-6px mb-2px">
+              <p
+                style={{ color: "#666666" }}
+                className="text-12px mt-8px font-malgun tracking-tight"
+              >
+                승무패[정규시간]
+              </p>
+            </div>
+            <div className="mr-7px mt-4px">
+              <del
+                style={{ color: "#666666" }}
+                className="text-12px mt-7px font-MalgunGothicBold tracking-tight"
+              >
+                {teamsData?.score3 > teamsData?.score1
+                  ? teamsData?.score1
+                  : teamsData?.score3}
+              </del>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="ml-6px -mt-px">
+              <p
+                style={{ color: "#5e399a" }}
+                className="text-12px mt-1px font-MalgunGothicBold tracking-tight"
+              >
+                리버풀
+              </p>
+            </div>
+            <div className="mr-7px -mt-px">
+              <p
+                style={{ color: "#0072bc" }}
+                className="text-12px mt-2px font-MalgunGothicBold tracking-tight "
+              >
+                {teamsData?.score3 > teamsData?.score1
+                  ? teamsData?.score3
+                  : teamsData?.score1}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div
           style={{
             background: "#ac8acb",
             width: "304px",
@@ -242,8 +256,7 @@ const RightComponentCard1 = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> */}
     </>
   );
 };
