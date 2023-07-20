@@ -454,14 +454,28 @@ const nonLiveSlice = createSlice({
         ],
       },
     ],
+    betSlip: {
+      data: [],
+      isSingle: true,
+    },
   },
   reducers: {
     setNonLiveData: (_state, action) => ({
+      ...action.payload,
       data: action.payload,
+    }),
+    setBetSlipData: (_state, action) => ({
+      ..._state,
+      betSlip: {
+        data: [..._state.betSlip.data, action.payload.data],
+        isSingle: Boolean(
+          [..._state.betSlip.data, action.payload.data].length === 1
+        ),
+      },
     }),
   },
 });
 
 const { actions, reducer } = nonLiveSlice;
-export const { setNonLiveData } = actions;
+export const { setNonLiveData, setBetSlipData } = actions;
 export default reducer;

@@ -3,11 +3,21 @@ import icon from "../../../images/nonLivePage/CenterAccordion/star2.png";
 import Up from "../../../images/nonLivePage/LeftAccordion/Card/Up.png";
 import Dn from "../../../images/nonLivePage/LeftAccordion/Card/Dn.png";
 import icon1 from "../../../images/nonLivePage/CenterAccordion/Icon1.png";
+import { useDispatch } from "react-redux";
+import { setBetSlipData } from "reducers/nonLive-reducer";
 
 const CenterAccordionContent = ({ card, lastObject }) => {
+  const dispatch = useDispatch();
   return (
     <>
-      <div
+      <button
+        onClick={() =>
+          dispatch(
+            setBetSlipData({
+              data: card,
+            })
+          )
+        }
         style={{
           borderColor: "#cccccc",
         }}
@@ -213,7 +223,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             {card.difference}
           </p>
         </div>
-      </div>
+      </button>
     </>
   );
 };
