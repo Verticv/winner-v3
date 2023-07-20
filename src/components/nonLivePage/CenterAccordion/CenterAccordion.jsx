@@ -155,7 +155,8 @@ import CenterAccordionButton from "./CenterAccordionButton";
 
 const CenterAccordion = () => {
   const data = useSelector((state) => state?.nonLive?.data);
-  console.log("data :>> ", data);
+  const state = useSelector((state) => state);
+  console.log("state :>> ", state);
   return (
     <>
       <div className="h-full items-start mr-10px mt-5px">

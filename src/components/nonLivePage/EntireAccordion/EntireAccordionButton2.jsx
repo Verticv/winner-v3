@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 // import CenterAccordionContent from "./CenterAccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
+import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
+
 import EntireAccordionContent2 from "./EntireAccordionContent2";
 
 // import AccordionContent1 from "./AccordionContent1";
 
 const EntireAccordionButton2 = ({ icon, title, card }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+  const [activeStar, setActiveStar] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -43,8 +46,12 @@ const EntireAccordionButton2 = ({ icon, title, card }) => {
               paddingRight: "2px",
             }}
             className="border-r mb-px -mr-px object-none"
-            src={icon}
+            src={activeStar ? activeStarIcon : icon}
             alt="icon"
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveStar((prev) => !prev);
+            }}
           />
           <img
             src={Arrow}

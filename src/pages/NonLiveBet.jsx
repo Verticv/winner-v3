@@ -10,14 +10,17 @@ import Search from "components/nonLivePage/Search/Search";
 import CenterComponent from "components/nonLivePage/CenterComponent/CenterComponent";
 import CenterAccordion from "components/nonLivePage/CenterAccordion/CenterAccordion";
 import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandComponent";
-// import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
+import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
 import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
 // import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpComponent";
 
 import Tabs from "components/nonLivePage/Tabs/Tabs";
+import { useSelector } from "react-redux";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   const [active, setActive] = useState(0);
+  const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
+  console.log("state :>> ", liveGameData);
   return (
     <>
       <div
@@ -99,7 +102,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           </div>
           <div>
             <EnglandComponent />
-            {/* <EntireAccordion /> */}
+            {liveGameData.length > 0 && <EntireAccordion />}
           </div>
           <div>
             <RightComponent />

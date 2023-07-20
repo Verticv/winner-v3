@@ -13,21 +13,22 @@ import icon5 from "../../../images/nonLivePage/RightComponent/Icon4.png";
 // import icon7 from "../../../images/nonLivePage/RightComponent/X.png";
 import CustomDropdown from "./CustomDropdown";
 import PopupControls from "components/popups/PopupControls";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // import RightComponentCard from "./RightComponentCard";
 import CheckBoxComponent from "./CheckBoxComponent";
-// import RightComponentCard1 from "./RightComponentCard1";
+import RightComponentCard1 from "./RightComponentCard1";
+import { deleteAllBetSlipCards } from "reducers/nonLive-reducer";
 
 const RightComponent = () => {
+  const dispatch = useDispatch();
   const [time, setTime] = useState(Date.now());
   const [isBetSlipActive, setIsBetSlipActive] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
-  const data = useSelector((state) => state?.nonLive?.data);
-
-  console.log("data :>> ", data);
+  const betSlipData = useSelector((state) => state?.nonLive?.betSlip?.data);
+  console.log("RightComponent state :>> ", betSlipData);
 
   console.log("isPopupOpen :>> ", isPopupOpen);
 
@@ -320,7 +321,12 @@ const RightComponent = () => {
           >
             <CustomDropdown />
           </div>
-          <div className="flex items-center mr-11px">
+          <div
+            onClick={() => {
+              dispatch(deleteAllBetSlipCards());
+            }}
+            className="cursor-pointer flex items-center mr-11px"
+          >
             <img className="mr-px" src={icon3} alt="icon" />
             <p
               style={{ color: "#666666", letterSpacing: "-0.031em" }}
@@ -330,7 +336,16 @@ const RightComponent = () => {
             </p>
           </div>
         </div>
-        {/* <RightComponentCard1 /> */}
+        {betSlipData.length > 0 && (
+          <div
+            style={{ background: "#ffffff", width: "308px", height: "auto" }}
+            className=" pt-2px"
+          >
+            {betSlipData.map((data, index) => (
+              <RightComponentCard1 teamsData={data} />
+            ))}
+          </div>
+        )}
         {/* card
       <div
         style={{ background: "#ffffff", width: "308px", height: "70px" }}
