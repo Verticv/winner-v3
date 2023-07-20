@@ -267,6 +267,9 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: lastItemActive ? "#eeeeee" : "#444444",
+            borderBottomRightRadius: `${
+              lastObject.id !== card.id ? "0px" : "6px"
+            }`,
           }}
           className="flex items-center justify-center"
           onClick={() => {

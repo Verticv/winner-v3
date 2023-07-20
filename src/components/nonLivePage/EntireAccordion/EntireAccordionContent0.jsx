@@ -17,7 +17,7 @@ const EntireAccordionContent0 = ({ card }) => {
       <div
         style={{
           borderColor: "#bbbbbb",
-          width: "203px",
+          width: "211px",
           background: leftActive
             ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
             : "#ffffff",
@@ -81,7 +81,7 @@ const EntireAccordionContent0 = ({ card }) => {
       </div>
       <div
         style={{
-          width: "219px",
+          width: "209px",
           height: "100%",
           background: rightActive
             ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"

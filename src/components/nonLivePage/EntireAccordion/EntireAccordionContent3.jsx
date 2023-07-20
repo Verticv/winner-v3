@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const EntireAccordionContent3 = ({ card }) => {
+  const [leftActive, setLeftActive] = useState(false);
+  const [centerActive, setCenterActive] = useState(false);
+  const [rightActive, setRightActive] = useState(false);
   return (
     <div
       style={{
@@ -13,23 +16,31 @@ const EntireAccordionContent3 = ({ card }) => {
       className="flex items-center h-31px border-t"
     >
       <div
-        style={{ borderColor: "#bbbbbb", width: "201px" }}
-        className="flex items-center justify-between border-r ml-9px h-30px"
+        style={{
+          borderColor: "#bbbbbb",
+          width: "210px",
+          background: leftActive
+            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+            : "#ffffff",
+          color: leftActive ? "#eeeeee" : "#444444",
+          borderBottomLeftRadius: `${card.id !== 0 ? "4px" : "0px"}`,
+        }}
+        className="flex items-center justify-between border-r h-30px"
+        onClick={() => setLeftActive((prev) => !prev)}
       >
         <p
           style={{
             fontSize: "12px",
-            color: "#444444",
             letterSpacing: "-0.031em",
           }}
-          className="-mt-2px font-malgun"
+          className="-mt-2px font-malgun ml-9px"
         >
           {card.text}
         </p>
         <p
           style={{
             fontSize: "12px",
-            color: "#682aa7",
+            color: leftActive ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
           }}
           className="mr-8px mb-2px font-malgun"
@@ -38,13 +49,20 @@ const EntireAccordionContent3 = ({ card }) => {
         </p>
       </div>
       <div
-        style={{ borderColor: "#bbbbbb", width: "209px" }}
+        style={{
+          borderColor: "#bbbbbb",
+          width: "209px",
+          background: centerActive
+            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+            : "#ffffff",
+          color: centerActive ? "#eeeeee" : "#444444",
+        }}
         className="flex items-center justify-between border-r h-30px"
+        onClick={() => setCenterActive((prev) => !prev)}
       >
         <p
           style={{
             fontSize: "12px",
-            color: "#444444",
             letterSpacing: "-0.031em",
           }}
           className="ml-10px mb-2px font-malgun"
@@ -54,7 +72,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: "#682aa7",
+            color: centerActive ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
           }}
           className=" mr-7px mb-2px font-malgun"
@@ -63,13 +81,21 @@ const EntireAccordionContent3 = ({ card }) => {
         </p>
       </div>
       <div
-        style={{ width: "211px" }}
+        style={{
+          width: "211px",
+          height: "100%",
+          background: rightActive
+            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
+            : "#ffffff",
+          color: rightActive ? "#eeeeee" : "#444444",
+          borderBottomRightRadius: `${card.id !== 0 ? "4px" : "0px"}`,
+        }}
         className="flex items-center justify-between"
+        onClick={() => setRightActive((prev) => !prev)}
       >
         <p
           style={{
             fontSize: "12px",
-            color: "#444444",
             letterSpacing: "-0.031em",
           }}
           className="ml-11px mb-2px font-malgun"
@@ -79,7 +105,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: "#682aa7",
+            color: rightActive ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
           }}
           className="font-malgun mb-2px mr-9px"
