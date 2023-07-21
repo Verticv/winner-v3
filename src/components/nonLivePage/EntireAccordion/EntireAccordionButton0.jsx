@@ -46,8 +46,9 @@ const EntireAccordionButton0 = ({ icon, title, card }) => {
           <img
             style={{
               borderColor: "#764cbb",
-              height: "31px",
-              paddingRight: "2px",
+              height: activeStar ? "33px" : "31px",
+              paddingRight: activeStar ? "1px" : "2px",
+              marginTop: activeStar ? "2px" : "",
             }}
             className="border-r mb-px -mr-px object-none"
             src={activeStar ? activeStarIcon : icon}

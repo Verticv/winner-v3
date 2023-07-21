@@ -17,6 +17,53 @@ const CenterAccordionContent = ({ card, lastObject }) => {
   const [lastItemActive, setLastItemActive] = useState(false);
   const [activeStar, setActiveStar] = useState(false);
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered3, setIsHovered3] = useState(false);
+
+  const hoverStyle = {
+    background: "linear-gradient(to top, #5423a0, #9d3bbb)",
+    color: "#eeeeee",
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleMouseEnter1 = () => {
+    setIsHovered1(true);
+  };
+
+  const handleMouseLeave1 = () => {
+    setIsHovered1(false);
+  };
+  const handleMouseEnter2 = () => {
+    setIsHovered2(true);
+  };
+
+  const handleMouseLeave2 = () => {
+    setIsHovered2(false);
+  };
+  const handleMouseEnter3 = () => {
+    setIsHovered3(true);
+  };
+
+  const handleMouseLeave3 = () => {
+    setIsHovered3(false);
+  };
+
+  //   <div
+  //   style={{ ...defaultStyle, ...(isHovered ? hoverStyle : null) }}
+  //   onMouseEnter={handleMouseEnter}
+  //   onMouseLeave={handleMouseLeave}
+  // >
+  //   Hover me!
+  // </div>
   return (
     <>
       <button
@@ -43,6 +90,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             alt="icon"
             style={{
               marginTop: "1px",
+              marginLeft: activeStar ? "-1px" : "",
             }}
             onClick={(e) => {
               e.stopPropagation();
@@ -68,7 +116,10 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: leftActive ? "#eeeeee" : "#444444",
+            ...(isHovered ? hoverStyle : null),
           }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -138,7 +189,10 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: centerActive ? "#eeeeee" : "#444444",
+            ...(isHovered1 ? hoverStyle : null),
           }}
+          onMouseEnter={handleMouseEnter1}
+          onMouseLeave={handleMouseLeave1}
           className="flex items-center relative w-68px justify-center"
         >
           {card.score2ArrowUp ? (
@@ -204,7 +258,10 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: rightActive ? "#eeeeee" : "#444444",
+            ...(isHovered2 ? hoverStyle : null),
           }}
+          onMouseEnter={handleMouseEnter2}
+          onMouseLeave={handleMouseLeave2}
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -267,10 +324,13 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: lastItemActive ? "#eeeeee" : "#444444",
+            ...(isHovered3 ? hoverStyle : null),
             borderBottomRightRadius: `${
               lastObject.id !== card.id ? "0px" : "6px"
             }`,
           }}
+          onMouseEnter={handleMouseEnter3}
+          onMouseLeave={handleMouseLeave3}
           className="flex items-center justify-center"
           onClick={() => {
             dispatch(setLiveGameData(card));
