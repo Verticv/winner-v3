@@ -1,3 +1,4 @@
-li:hover {
+.hover li:hover {
   background: linear-gradient(to right, #b644c4, #351894);
+  color: #ffffff;
 }

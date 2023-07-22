@@ -78,14 +78,13 @@ const CustomDropdown1 = () => {
               // height: "27px",
               borderRadius: "4px",
             }}
-            className="relative items-center justify-between"
+            className="hover relative items-center justify-between"
           >
             <ul>
               {options.map((option) => (
                 <li
                   key={option}
-                  style={{}}
-                  className="py-2 px-2  cursor-pointer font-malgun"
+                  className="py-2 px-2 cursor-pointer font-malgun"
                   onClick={() => handleOptionSelect(option)}
                 >
                   {option}
