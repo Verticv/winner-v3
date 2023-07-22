@@ -12,6 +12,8 @@ import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 
 const AccordionButton3 = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(true);
+  const [showCard, setShowCard] = useState(true);
+  const [showCard1, setShowCard1] = useState(true);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -93,11 +95,12 @@ const AccordionButton3 = ({ icon, title }) => {
           className="pt-2px  pb-2px"
         >
           <div
+            onClick={() => setShowCard((prev) => !prev)}
             style={{
               background: "#ffffff",
               borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px h-37px "
+            className="flex items-center ml-2px mb-2px mr-2px h-37px cursor-pointer"
           >
             <img className="ml-6px mt-8px mb-8px" src={icon1} alt="img" />
             <p
@@ -124,177 +127,206 @@ const AccordionButton3 = ({ icon, title }) => {
               </p>
             </div>
           </div>
-          <div
-            style={{
-              background: "#eeeeee",
-              borderRadius: "4px",
-            }}
-            className="items-center ml-2px mb-2px mr-2px "
-          >
-            <div className="flex items-center h-37px">
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-15px mt-12px mb-19px text-13px"
-              >
-                L
-              </p>
-              <img className="ml-10px" src={flag1} alt="img" />
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-4px mt-13px mb-14px text-13px font-malgun"
-              >
-                잉글랜드
-              </p>
+          {showCard && (
+            <>
               <div
                 style={{
-                  background: "#666666",
-                  width: "36px",
-                  height: "19px",
-                  marginLeft: "118px",
+                  background: "#eeeeee",
                   borderRadius: "4px",
                 }}
-                className="flex items-center justify-center "
+                className="items-center ml-2px mb-2px mr-2px "
               >
-                <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px font-malgun mb-px"
+                <div
+                  onClick={() => setShowCard1((prev) => !prev)}
+                  className="flex items-center h-37px cursor-pointer"
                 >
-                  1000
-                </p>
-              </div>
-            </div>
-            <div
-              style={{ borderColor: "#cccccc", background: "#dddddd" }}
-              className="flex items-center h-38px border-t"
-            >
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-45px mt-11px mb-20px text-13px"
-              >
-                L
-              </p>
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-13px mt-13px mb-16px text-12px font-malgun"
-              >
-                프리미어리그
-              </p>
-              <div
-                style={{
-                  background: "#666666",
-                  width: "16px",
-                  height: "19px",
-                  marginLeft: "118px",
-                  borderRadius: "4px",
-                }}
-                className="flex items-center justify-center "
-              >
-                <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun mb-px"
+                  <p
+                    style={{ background: "444444", letterSpacing: "-0.031em" }}
+                    className="ml-15px mt-12px mb-19px text-13px"
+                  >
+                    L
+                  </p>
+                  <img className="ml-10px" src={flag1} alt="img" />
+                  <p
+                    style={{ background: "444444", letterSpacing: "-0.031em" }}
+                    className="ml-4px mt-13px mb-14px text-13px font-malgun"
+                  >
+                    잉글랜드
+                  </p>
+                  <div
+                    style={{
+                      background: "#666666",
+                      width: "36px",
+                      height: "19px",
+                      marginLeft: "118px",
+                      borderRadius: "4px",
+                    }}
+                    className="flex items-center justify-center "
+                  >
+                    <p
+                      style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                      className="text-12px font-malgun mb-px"
+                    >
+                      1000
+                    </p>
+                  </div>
+                </div>
+                {showCard1 && (
+                  <>
+                    <div
+                      style={{ borderColor: "#cccccc", background: "#dddddd" }}
+                      className="flex items-center h-38px border-t"
+                    >
+                      <p
+                        style={{
+                          background: "444444",
+                          letterSpacing: "-0.031em",
+                        }}
+                        className="ml-45px mt-11px mb-20px text-13px"
+                      >
+                        L
+                      </p>
+                      <p
+                        style={{
+                          background: "444444",
+                          letterSpacing: "-0.031em",
+                        }}
+                        className="ml-13px mt-13px mb-16px text-12px font-malgun"
+                      >
+                        프리미어리그
+                      </p>
+                      <div
+                        style={{
+                          background: "#666666",
+                          width: "16px",
+                          height: "19px",
+                          marginLeft: "118px",
+                          borderRadius: "4px",
+                        }}
+                        className="flex items-center justify-center "
+                      >
+                        <p
+                          style={{
+                            color: "#eeeeee",
+                            letterSpacing: "-0.031em",
+                          }}
+                          className="text-12px  font-malgun mb-px"
+                        >
+                          5
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      style={{ borderColor: "#cccccc", background: "#dddddd" }}
+                      className="flex items-center h-38px border-t"
+                    >
+                      <p
+                        style={{
+                          background: "444444",
+                          letterSpacing: "-0.031em",
+                        }}
+                        className="ml-45px mt-11px mb-20px text-13px"
+                      >
+                        L
+                      </p>
+                      <p
+                        style={{
+                          background: "444444",
+                          letterSpacing: "-0.031em",
+                        }}
+                        className="ml-13px mt-13px mb-16px text-12px font-malgun"
+                      >
+                        챔피언쉽
+                      </p>
+                      <div
+                        style={{
+                          background: "#666666",
+                          width: "16px",
+                          height: "19px",
+                          marginLeft: "142px",
+                          borderRadius: "4px",
+                        }}
+                        className="flex items-center justify-center"
+                      >
+                        <p
+                          style={{
+                            color: "#eeeeee",
+                            letterSpacing: "-0.031em",
+                          }}
+                          className="text-12px  font-malgun mr-px mb-px"
+                        >
+                          0
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
+                <div
+                  style={{ borderColor: "#cccccc", background: "#eeeeee" }}
+                  className="flex items-center h-38px border-t"
                 >
-                  5
-                </p>
-              </div>
-            </div>
-            <div
-              style={{ borderColor: "#cccccc", background: "#dddddd" }}
-              className="flex items-center h-38px border-t"
-            >
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-45px mt-11px mb-20px text-13px"
-              >
-                L
-              </p>
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-13px mt-13px mb-16px text-12px font-malgun"
-              >
-                챔피언쉽
-              </p>
-              <div
-                style={{
-                  background: "#666666",
-                  width: "16px",
-                  height: "19px",
-                  marginLeft: "142px",
-                  borderRadius: "4px",
-                }}
-                className="flex items-center justify-center"
-              >
-                <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun mr-px mb-px"
+                  <img className="ml-31px" src={flag2} alt="img" />
+                  <p
+                    style={{ background: "444444", letterSpacing: "-0.031em" }}
+                    className="ml-4px mt-14px mb-15px text-13px font-malgun"
+                  >
+                    이탈리아
+                  </p>
+                  <div
+                    style={{
+                      background: "#666666",
+                      width: "29px",
+                      height: "19px",
+                      marginLeft: "125px",
+                      borderRadius: "4px",
+                    }}
+                    className="flex items-center justify-center"
+                  >
+                    <p
+                      style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                      className="text-12px  font-malgun mb-px"
+                    >
+                      100
+                    </p>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    borderColor: "#dddddd",
+                    background: "#eeeeee",
+                    borderBottomRightRadius: "4px",
+                    borderBottomLeftRadius: "4px",
+                  }}
+                  className="flex items-center h-38px border-t"
                 >
-                  0
-                </p>
+                  <img className="ml-31px" src={flag3} alt="img" />
+                  <p
+                    style={{ background: "444444", letterSpacing: "-0.031em" }}
+                    className="ml-4px mt-14px mb-15px text-13px font-malgun"
+                  >
+                    스페인
+                  </p>
+                  <div
+                    style={{
+                      background: "#666666",
+                      width: "29px",
+                      height: "19px",
+                      marginLeft: "137px",
+                      borderRadius: "4px",
+                    }}
+                    className="flex items-center justify-center"
+                  >
+                    <p
+                      style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                      className="text-12px  font-malgun mb-px"
+                    >
+                      100
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div
-              style={{ borderColor: "#cccccc", background: "#eeeeee" }}
-              className="flex items-center h-38px border-t"
-            >
-              <img className="ml-31px" src={flag2} alt="img" />
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-4px mt-14px mb-15px text-13px font-malgun"
-              >
-                이탈리아
-              </p>
-              <div
-                style={{
-                  background: "#666666",
-                  width: "29px",
-                  height: "19px",
-                  marginLeft: "125px",
-                  borderRadius: "4px",
-                }}
-                className="flex items-center justify-center"
-              >
-                <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun mb-px"
-                >
-                  100
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                borderColor: "#dddddd",
-                background: "#eeeeee",
-                borderBottomRightRadius: "4px",
-                borderBottomLeftRadius: "4px",
-              }}
-              className="flex items-center h-38px border-t"
-            >
-              <img className="ml-31px" src={flag3} alt="img" />
-              <p
-                style={{ background: "444444", letterSpacing: "-0.031em" }}
-                className="ml-4px mt-14px mb-15px text-13px font-malgun"
-              >
-                스페인
-              </p>
-              <div
-                style={{
-                  background: "#666666",
-                  width: "29px",
-                  height: "19px",
-                  marginLeft: "137px",
-                  borderRadius: "4px",
-                }}
-                className="flex items-center justify-center"
-              >
-                <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                  className="text-12px  font-malgun mb-px"
-                >
-                  100
-                </p>
-              </div>
-            </div>
-          </div>
+            </>
+          )}
           <div
             style={{
               background: "#ffffff",
