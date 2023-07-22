@@ -1,6 +1,6 @@
 import React from "react";
 import icon from "../../../images/nonLivePage/PoupUpComponent/X.png";
-const PoupUpComponent = ({ setIsPopupOpen }) => {
+const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
   return (
     <div
       style={{
@@ -91,7 +91,10 @@ const PoupUpComponent = ({ setIsPopupOpen }) => {
           </div>
         </div>
         <button
-          onClick={() => setIsPopupOpen(false)}
+          onClick={() => {
+            setActive(true);
+            setIsPopupOpen(false);
+          }}
           style={{
             height: "52px",
             borderRadius: "26px",
