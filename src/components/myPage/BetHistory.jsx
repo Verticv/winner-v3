@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import HorizontalMenu from '../horizontalMenus/HorizontalMenu'
-import Icon1 from '../../images/myPage/betHistory/ico_1_v2.png'
-import Icon2 from '../../images/myPage/betHistory/ico_2_v2.png'
-import Icon3 from '../../images/myPage/betHistory/ico_3_v2.png'
-import Icon4 from '../../images/myPage/betHistory/ico_4_v2.png'
-import Icon5 from '../../images/myPage/betHistory/ico_5_v2.png'
-import Icon6 from '../../images/myPage/betHistory/ico_6_v2.png'
-import Icon7 from '../../images/myPage/betHistory/ico_7_v2.png'
-import Icon8 from '../../images/myPage/betHistory/ico_8_v2.png'
-import Icon9 from '../../images/myPage/betHistory/ico_9_v2.png'
-import Icon10 from '../../images/myPage/betHistory/ico_10_v2.png'
+import Icon1 from '../../images/myPage/betHistory/ico_1.png'
+import Icon2 from '../../images/myPage/betHistory/ico_2.png'
+import Icon3 from '../../images/myPage/betHistory/ico_3.png'
+import Icon4 from '../../images/myPage/betHistory/ico_4.png'
+import Icon5 from '../../images/myPage/betHistory/ico_5.png'
+import Icon6 from '../../images/myPage/betHistory/ico_6.png'
+import Icon7 from '../../images/myPage/betHistory/ico_7.png'
+import Icon8 from '../../images/myPage/betHistory/ico_8.png'
+import Icon9 from '../../images/myPage/betHistory/ico_9.png'
+import Icon10 from '../../images/myPage/betHistory/ico_10.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
@@ -59,7 +59,7 @@ const BetHistory = () => {
             
             <MyPageTitle title="베팅내역" />
             
-             <div className="relative w-full mt-20px">
+            <div className="relative w-full mt-20px">
                 <HorizontalMenu itemsArray={tabsArray} setSelectedSubTab={setSelectedSubTab}/>
             </div>
             
@@ -141,7 +141,7 @@ const BetHistory = () => {
                 </div>
                 
               </>
-            </Route>
+            </Route> 
 
         </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
-import HomeIcon from '../../images/myPage/home_icon_v2.png'
+import HomeIcon from '../../images/myPage/home_icon.png'
 import RightArrow from '../../images/myPage/right_arrow.png'
 
 const DirectoryComponent = ({
@@ -61,7 +61,8 @@ const DirectoryComponent = ({
                     !branch2 
                         ? "font-spoqaBold" 
                         : "font-spoqaMedium"
-                }  text-13px tracking-tight cursor-pointer text-gray-929292 mt-px`}
+                    }  text-13px tracking-tight cursor-pointer mt-px`}
+                    style={{color:'#eeeeee'}}
                 onClick={() => {branch1Clicked(branch1)}}
             >
                 {branch1}
@@ -69,12 +70,13 @@ const DirectoryComponent = ({
             {branch2 && (
                 <>
                     <img className="object-none mb-px" src={RightArrow} alt="" />
-                    <span style={{marginLeft:'8px'}}
+                    <span style={{marginLeft:'8px',color:'#eeeeee'}}
                         className={`${
                             !branch3 
                             ? "font-spoqaBold" 
                             : "font-spoqaMedium"
                             } text-13px tracking-tight cursor-pointer text-gray-929292 mt-px`}
+                        
                         onClick={() => branch2Clicked(mainPath)}
                         >
                             {branch2}

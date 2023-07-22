@@ -11,10 +11,10 @@ const MyPageTitle = ({
     isTransaction = false,
 }) => {
     return (
-        <div className="flex h-21px w-full justify-between">
-            <div className="flex h-21px w-full">
-                <img className="z-10 object-none mt-4px" src={TitleIcon} alt="" />
-                <label className="font-spoqaMedium text-22px ml-7px -mt-4px" style={{color:'#89806f'}}>{title}</label>
+        <div className="flex w-full justify-between">
+            <div className="flex w-full">
+                <img className="z-10 -ml-5px" src={TitleIcon} alt="" />
+                <label className="font-spoqaMedium text-22px ml-3px -mt-3px" style={{color:'#eeeeee'}}>{title}</label>
                 {couponCount && (
                     <>
                         <div className="ml-20px h-21px flex items-center space-x-20px mt-2px">

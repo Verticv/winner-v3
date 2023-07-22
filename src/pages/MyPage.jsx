@@ -1,7 +1,7 @@
 import Navbar from '../components/mainPage/NavBar';
 import QuickMenu from 'components/QuickMenu';
 import React, { useState, useEffect } from 'react';
-import MyPageBanner from '../images/myPage/mypage_banner_v2.png';
+import MyPageBanner from '../images/myPage/mypage_banner.png';
 import LeftMenu from 'components/myPage/LeftMenu';
 import Footer from 'components/mainPage/Footer';
 import { Route } from 'react-router-dom';
@@ -28,7 +28,7 @@ import Icon5 from '../images/myPage/leftMenu/menuIcons/menuL_icon_05.png';
 import Icon6 from '../images/myPage/leftMenu/menuIcons/menuL_icon_06.png';
 import Icon7 from '../images/myPage/leftMenu/menuIcons/menuL_icon_07.png';
 import Icon8 from '../images/myPage/leftMenu/menuIcons/menuL_icon_08.png';
-
+import NoticeBanner from "components/mainPage/NoticeBanner";
 const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const LeftMenuArray = [
     {
@@ -128,18 +128,28 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+
   return (
-    <div className='relative flex flex-col justify-center items-center limit1920:overflow-x-hidden bg-gray-1e1e1e'>
-      <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center bg-black'>
+    <div className='relative flex flex-col justify-center items-center'
+      style={{
+          background: "linear-gradient(to right, #b644c4, #351894)"
+      }}
+    >
+    <div
+        style={{ top: "125px" }}
+        className="w-full absolute flex flex-col justify-center items-start limit:items-center "
+      >
+      <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
-      <div
-        style={{ width: '1496px', top: scrollPosition > 100 ? '235px' : '428px' }}
-        className={`fixed z-20 flex justify-end`}
-      >
-        <QuickMenu scrollPosition={scrollPosition} />
+      <div className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center">
+        <NoticeBanner />
       </div>
-      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
+        <div className='flex flex-col items-start limit:items-center w-full h-full'
+         style={{
+          background: "linear-gradient(to right, #b644c4, #351894)"
+      }}>
         <Route path='/mypage/bet-history'>
           <DirectoryComponent
             setSelectedTab={setSelectedTab}
@@ -252,19 +262,13 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             branch2='회원정보수정'
             mainPath='/mypage/edit-info'
           />
-        </Route>
+        </Route> 
 
-        <div style={{height:'125px'}} className='w-default relative'>
+        <div style={{height:'136px'}} className='relative'>
           <img className='z-10' src={MyPageBanner} alt='' />
-          <div
-            className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
-            style={{ color: '#ffdfbd' }}
-          >
-            <span className='leading-none mt-2px'>마이페이지</span>
-          </div>
         </div>
 
-        <div className='flex mt-20px w-default z-30'>
+        <div className='flex mt-9px w-default z-30'>
           <div>
             <LeftMenu
               selectedTab={selectedTab}
@@ -316,12 +320,16 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               <EditInfo />
             </Route>
             <Route path='*'></Route>
-          </div>
+          </div> 
         </div>
 
         <div>
           <Footer />
         </div>
+        <div>
+          <QuickMenu />
+        </div>
+      </div>
       </div>
     </div>
   );

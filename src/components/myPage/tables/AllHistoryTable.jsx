@@ -8,8 +8,8 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
 
         const detailButton = (
             <button 
-                style={{height:"29px", width: "73px",background: '#826140',boxShadow: '0px 1px 1px 0px rgba(0, 0, 0, 0.6)'}} 
-                className="rounded-4px text-golden-highLight font-spoqaMedium text-14px tracking-tight pt-2px flex-shrink-0 hover:filter hover:brightness-125"
+                style={{height:"29px", width: "73px",background: '#5d659f',boxShadow: '0px 1px 1px 0px rgba(0, 0, 0, 0.6)',color:'#ededeb'}} 
+                className="rounded-4px font-spoqaMedium text-14px tracking-tight pt-2px flex-shrink-0 hover:filter hover:brightness-125"
             >
                 상세보기
             </button>
@@ -23,11 +23,7 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
         }; 
 
         return items.map((item,index) => (
-            <div className={`${
-                index%2===0
-                  ? "bg-dark-323232" 
-                  : "bg-dark-2e2e2e"
-                } font-spoqa text-14px tracking-tight text-gray-c8c8c8 h-56px w-full flex items-center border-b border-dark-252525 last:border-b-0`}>
+            <div className={`font-spoqa text-14px tracking-tight text-r666666 h-56px w-full flex items-center border-b last:border-b-0`} style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd"}}>
                 <div style={{width: "92px"}} className="text-center flex justify-center items-center">
                     <input
                         type="checkbox"
@@ -40,8 +36,8 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
                 <div style={{width: "140px"}} className="text-center truncate px-10px">{item.type}</div>
                 <div style={{width: "118px"}} className="text-center truncate">{item.name}</div>
                 <div style={{width: "135px"}} className="font-robotoRegular text-right">{item.amount}</div>
-                <div style={{width: "135px", color: item.profit.includes("+") ? "#e65454" : "#c8c8c8"}} className="font-robotoRegular text-right">{item.profit}</div>
-                <div style={{width: "51px", color: item.status === "승" ? "#e65454" : "#c8c8c8"}} className="text-center">{item.status}</div>
+                <div style={{width: "135px", color: item.profit.includes("+") ? "#e9441d" : "#666666"}} className="font-robotoRegular text-right">{item.profit}</div>
+                <div style={{width: "51px", color: item.status === "승" ? "#f04281" : "#666666"}} className="text-center">{item.status}</div>
                 <div style={{width: "110px"}} className="text-center">
                     <PopupControls buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                         <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
@@ -53,10 +49,11 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
 
   return (
       <div
-        style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
-        className="rounded-4px shadow-table overflow-hidden p-px">
-        <div className="rounded-3px overflow-hidden">
-            <div className="font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-55px flex items-center border-b border-dark-252525 bg-dark-2e2e2e ">
+        style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
+        className="rounded-10px shadow-table overflow-hidden p-px">
+        <div className="rounded-10px overflow-hidden">
+            <div className="font-spoqaMedium text-14px tracking-tight h-55px flex items-center border-b "
+            style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                 {/* <tr className='h-full'> */}
                     <div style={{width: "92px"}} className="text-center">선택</div>
                     <div style={{width: "72px"}} className="text-center">베팅번호</div>

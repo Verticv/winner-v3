@@ -55,7 +55,8 @@ const LeftMenu = ({
                 pathname.includes(path)
                 ? "bg-gradient-to-b from-golden-gradLight to-golden-gradDark shadow-link" 
                 : ""
-            } flex w-full items-center h-48px rounded-4px hover:bg-gray-4e4941`} 
+                  } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
+            style={{ background: pathname.includes(path)?'linear-gradient(to right, #9d3bbb, #5423a0)':'' }}
             onClick={() => {
                 buttonPressed(path)
                 setPopupOpen(true)
@@ -103,10 +104,11 @@ const LeftMenu = ({
                     <div className='flex flex-col w-full items-center'>
                       <button 
                         className={`${
-                          pathname.includes(item.mainPath)
-                          ? "bg-gradient-to-b from-golden-gradLight to-golden-gradDark shadow-link" 
-                          :''
-                        } flex w-full items-center h-48px rounded-4px hover:bg-gray-4e4941`} 
+                        pathname.includes(item.mainPath)
+                        ? "bg-gradient-to-b from-golden-gradLight to-golden-gradDark shadow-link" 
+                        :''
+                                    } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
+                        style={{ background: pathname.includes(item.mainPath)?'linear-gradient(to right, #9d3bbb, #5423a0)':'' }}
                         onClick={(e) => buttonPressed(item.text, item.path)}
                         onMouseEnter={() => mouseHover(item.path)}
                         onMouseLeave={() => mouseLeave(item.path)}
@@ -116,7 +118,7 @@ const LeftMenu = ({
                             className={`w-50px flex items-center justify-start flex-shrink-0 pl-7px`} 
                           >
                             <img 
-                                className={`${isBig ? '-mt-2px' : 'mt-3px'} flex items-center justify-start object-contain`} 
+                                className={`${isBig ? '-mt-2px' : ''} flex items-center justify-start object-contain`} 
                               src={pathname.includes(item.mainPath) ? item.iconHighlight : item.icon} 
                                 alt="icon" />
                           </div>
@@ -126,11 +128,12 @@ const LeftMenu = ({
                             <label
                               className={`${
                                   pathname.includes(item.mainPath)
-                                  ? "text-golden-highLight" 
+                                  ? "text-white" 
                                   : isMouseHover === item.path
-                                  ? 'text-golden-ccc2b6'
-                                  : "text-golden-ccc2b6"
-                              }  font-spoqaMedium text-16px cursor-pointer tracking-tight mt-3px`}
+                                  ? 'text-golden-594e6a'
+                                  : "text-golden-594e6a"
+                                                }  font-spoqaMedium text-16px cursor-pointer tracking-tight`}
+                            style={{ color: pathname.includes(item.mainPath)?'#fff':'#594e6a' }}
                             >
                               {item.text}
                             </label>
@@ -239,9 +242,10 @@ const LeftMenu = ({
 
   return (
     <div className="rounded-6px p-px shadow-table overflow-hidden flex flex-col items-center"
-      style={{ background: 'linear-gradient(to top,rgb(31,31,30) 0% ,rgb(31,31,30) 80% , rgb(52,52,52) 100%)', width:'200px', marginBottom:'180px' }}
+      style={{ background: 'linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff 100%)', width:'200px', marginBottom:'180px' }}
     >
-      <div className="rounded-6px bg-gray-323232 overflow-hidden w-full p-5px pb-6px space-y-6px">
+    <div className="rounded-6px overflow-hidden w-full p-5px pb-6px space-y-6px"
+        style={{ background: 'linear-gradient(to top, #ccc4ff, #ffd9f5)' }}>
         <MenuList items={array} />
       </div>
     </div>
