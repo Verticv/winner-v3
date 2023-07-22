@@ -26,8 +26,7 @@ const RightComponent = () => {
   const [showSettings, setShowSettings] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  // const [showCards, setShowCards] = useState(true);
-  const [showCards1, setShowCards1] = useState(false);
+  const [showCards, setShowCards] = useState(0);
   const [active, setActive] = useState(false);
 
   const betSlipData = useSelector((state) => state?.nonLive?.betSlip?.data);
@@ -85,7 +84,7 @@ const RightComponent = () => {
         className="p-px -ml-px"
       >
         <div
-          // onClick={() => setShowCards((prev) => !prev)}
+          onClick={() => setShowCards(0)}
           style={{
             background: isBetSlipActive
               ? "linear-gradient(to top, #6b22ff, #df52ff)"
@@ -147,7 +146,7 @@ const RightComponent = () => {
         className="p-px -ml-px z-10"
       >
         <div
-          onClick={() => setShowCards1((prev) => !prev)}
+          onClick={() => setShowCards(1)}
           style={{
             background: isBetSlipActive
               ? "linear-gradient(to top, #ccc4ff, #ffd9f5)"
@@ -306,7 +305,7 @@ const RightComponent = () => {
       </div> */}
 
         {showSettings && <CheckBoxComponent />}
-        {!showCards1 ? (
+        {showCards === 0 ? (
           <>
             <div
               style={{
@@ -877,15 +876,6 @@ const RightComponent = () => {
             <RightComponentCard />
           </>
         )}
-
-        {/* {active === 1 ? (
-                <>
-                 
-                </>
-              ) : (
-                <>
-                </>
-              )} */}
       </div>
     </>
   );
