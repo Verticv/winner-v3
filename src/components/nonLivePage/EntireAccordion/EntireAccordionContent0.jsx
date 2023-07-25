@@ -77,7 +77,7 @@ const EntireAccordionContent0 = ({ card }) => {
             color: leftActive || isHovered ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
           }}
-          className="text-12 mr-9px font-malgun"
+          className="text-12 mb-2px mr-9px font-malgun"
         >
           {card.text1}
         </p>
@@ -112,7 +112,7 @@ const EntireAccordionContent0 = ({ card }) => {
             color: centerActive || isHovered1 ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
           }}
-          className="text-12  mr-9px font-malgun"
+          className="text-12 mb-2px  mr-9px font-malgun"
         >
           {card.text3}
         </p>

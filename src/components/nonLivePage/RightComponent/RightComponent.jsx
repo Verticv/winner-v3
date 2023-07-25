@@ -101,7 +101,7 @@ const RightComponent = () => {
           />
           <p
             style={{ color: isBetSlipActive ? "white" : "#5e399a" }}
-            className="ml-1px -mt-3px text-14px font-MalgunGothicBold tracking-tight"
+            className="ml-2px -mt-3px text-14px font-MalgunGothicBold tracking-tight"
           >
             베팅슬립
           </p>
@@ -112,7 +112,7 @@ const RightComponent = () => {
               height: "20px",
               boxShadow: "1px 1.732px 3px 0px rgba(0, 0, 0, 0.4)",
             }}
-            className="rounded-full p-px ml-4px "
+            className="rounded-full p-px ml-3px "
           >
             <div
               style={{
@@ -138,8 +138,8 @@ const RightComponent = () => {
         style={{
           cursor: "pointer",
           background: isBetSlipActive
-            ? "linear-gradient(to top, #7452aa, #e597ff)"
-            : "linear-gradient(to top, #a281cf, #f0d3ff)",
+            ? "linear-gradient(to top, #a281cf, #f0d3ff)"
+            : "linear-gradient(to top, #7452aa, #e597ff)",
           width: "155px",
           height: "46px",
         }}
@@ -348,7 +348,7 @@ const RightComponent = () => {
                   width: "308px",
                   height: "auto",
                 }}
-                className=" pt-2px"
+                className="pb-px pt-2px"
               >
                 {betSlipData.map((data, index) => (
                   <RightComponentCard1 teamsData={data} />
@@ -454,7 +454,7 @@ const RightComponent = () => {
                 </p>
                 <p
                   style={{ color: "#33a1e9" }}
-                  className="mr-11px text-13px font-MalgunGothicBold tracking-tight"
+                  className="mr-10px text-13px font-MalgunGothicBold tracking-tight"
                 >
                   3,522,170
                 </p>
@@ -494,7 +494,7 @@ const RightComponent = () => {
                       }
                       style={{
                         background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
-                        borderRadius: "4px",
+                        borderRadius: "3px",
                       }}
                       className="flex items-center justify-center "
                     >
@@ -527,7 +527,7 @@ const RightComponent = () => {
                           color: "#f04281",
                           textAlign: "right",
                           // TODO: add padding right
-                          borderRadius: "4px",
+                          borderRadius: "3px",
                           fontSize: "12px",
                           outline: "0px",
                         }}
