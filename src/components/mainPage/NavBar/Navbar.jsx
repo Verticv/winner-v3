@@ -90,8 +90,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           style={{
             color: isSelectedTap ? "#ffffff" : "#2d2834",
             background: isSelectedTap ? "#5323a0" : "none",
+            width: `calc(922px / ${tabsArray.length + 1})`
           }}
-          className={`w-83px h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
+          className={`h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
             items.length - 2 === index ? "mr-10px" : items.length - 1 === index ? "" : "mr-9px"
           }`}
           onClick={() => {
@@ -112,8 +113,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             <img className="object-none" src={isSelectedTap ? item.activeIcon : item.icon} alt={item.text} />
           </div>
           <span
-            style={{ marginBottom: "0px" }}
-            className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-3px"
+            style={{ marginBottom: "0px", fontSize: '13px', letterSpacing:'-0.05rem' }}
+            className="cursor-pointer font-spoqaMedium tracking-tightest -mt-3px flex-shrink-0"
           >
             {item.text}
           </span>
@@ -145,7 +146,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         <div id="menu-wrapper" style={{ width: "1260px" }} className="w-full z-50">
           <div className="">
             <div className="flex justify-start w-full">
-              <div style={{ height: "82px" }} className="relative flex justify-between flex-row flex-shrink-0">
+              <div
+                style={{ height: "82px", width: "922px" }}
+                className="relative flex justify-between flex-row flex-shrink-0"
+              >
                 <div className="flex items-center flex-shrink-0">
                   <TabsList items={tabsArray} />
                 </div>

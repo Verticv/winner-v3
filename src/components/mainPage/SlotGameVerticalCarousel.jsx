@@ -88,7 +88,7 @@ const SlideWithAnimation = ({ count }) => {
       <Card
         icon={count % 3 === 0 ? goldCardImg : count % 3 === 1 ? Slot1 : Slot6}
         name="마이프로틴마이프로틴"
-        game={count % 3 === 0 ? "Wild West Gold" : count % 3 === 1 ? "Titan Thunder Wrath of Hades" : "Sun of Egypt"}
+        game={count % 3 === 0 ? "Crown of Valor" : count % 3 === 1 ? "Titan Thunder Wrath of Hades" : "Sun of Egypt"}
       />
     </div>
   );

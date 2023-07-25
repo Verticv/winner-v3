@@ -513,7 +513,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                   style={{ color: "#7a7a7a", marginLeft: "149px" }}
                   className="text-14px font-spoqa h-14px flex items-center mt-5px -ml-2px mb-px"
                 >
-                  영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)
+                  최소 6~16자 내외로 입력해주세요. (알파벳 소문자 + 특수문자 포함)
                 </span>
               </div>
               {/* BREAK */}
@@ -552,9 +552,9 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                 </div>
                 <span
                   style={{ color: "#7a7a7a", marginLeft: "149px" }}
-                  className="text-14px font-spoqa h-14px flex items-center mt-5px -ml-2px mb-px"
+                  className="text-14px font-spoqa h-14px flex items-center mt-5px -ml-2px mb-px tracking-tighter"
                 >
-                  영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)
+                  영문 및 숫자를 1자 이상 반드시 포함하여 4~8자 내외로 입력해주세요. (특수문자 사용불가)
                 </span>
               </div>
               {/* BREAK */}
