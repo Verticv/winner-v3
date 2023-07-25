@@ -83,6 +83,10 @@ const Footer = ({ fullWidth = false }) => {
       title: "기타게임",
       items: [
         {
+          text: "K-홀덤",
+          link: "/live-casino/pragmatic-play",
+        },
+        {
           text: "e-스포츠",
           link: "/live-casino/pragmatic-play",
         },
@@ -96,10 +100,6 @@ const Footer = ({ fullWidth = false }) => {
         },
         {
           text: "피싱게임",
-          link: "/live-casino/pragmatic-play",
-        },
-        {
-          text: "티비벳",
           link: "/live-casino/pragmatic-play",
         },
       ],
@@ -221,7 +221,7 @@ const Footer = ({ fullWidth = false }) => {
             </div>
           </div>
 
-          <img src={Etc} style={{marginRight:'29px'}} className="object-none -mt-3px" draggable={false} alt="" />
+          <img src={Etc} style={{ marginRight: "29px" }} className="object-none -mt-3px" draggable={false} alt="" />
         </div>
         <div style={{ borderColor: "#42404e", height: "62px" }} className="flex justify-center border-t">
           <p
