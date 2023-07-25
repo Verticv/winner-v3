@@ -160,9 +160,9 @@ module.exports = {
         r2c1137: "#2c1137",
       },
       fontFamily: {
-        spoqa: ["SpoqaHanSansNeo"],
-        spoqaMedium: ["SpoqaHanSansNeoMedium"],
-        spoqaBold: ["SpoqaHanSansNeoBold"],
+        // spoqa: ["SpoqaHanSansNeo"],
+        // spoqaMedium: ["SpoqaHanSansNeoMedium"],
+        // spoqaBold: ["SpoqaHanSansNeoBold"],
         robotoRegular: ["RobotoRegular"],
         roboto: ["RobotoMedium"],
         robotoBold: ["RobotoBold"],
