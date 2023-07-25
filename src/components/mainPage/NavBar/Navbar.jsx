@@ -35,6 +35,7 @@ import { useHistory } from "react-router-dom";
 import TopBar from "../TopBar";
 import DropdownButton from "./DropdownButton";
 import LinkButton from "./LinkButton";
+import NoticeBanner from "../NoticeBanner";
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
   const history = useHistory();
@@ -134,7 +135,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           background: "linear-gradient(to bottom, #f0ecff, #cacdff)",
           boxShadow: "0px 2px 15px 0px rgba(0, 0, 0, 0.5)",
         }}
-        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-10"
+        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-20"
       >
         <div className="w-full absolute h-px bottom-0 bg-r9688c7" />
         <div
@@ -198,6 +199,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           </div>
         </div>
         <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} setSelectedTab={setSelectedTab} />
+      </div>
+      <div className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-10">
+        <NoticeBanner />
       </div>
     </>
   );
