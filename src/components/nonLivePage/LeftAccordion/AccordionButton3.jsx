@@ -114,7 +114,7 @@ const AccordionButton3 = ({ icon, title }) => {
                 background: "#6b22ff",
                 width: "36px",
                 height: "19px",
-                marginLeft: "175px",
+                marginLeft: "176px",
                 borderRadius: "4px",
               }}
               className="flex items-center justify-center"

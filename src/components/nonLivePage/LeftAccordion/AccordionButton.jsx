@@ -42,7 +42,7 @@ const AccordionButton = ({ icon, title }) => {
           borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
         className={`flex items-center justify-between 
-          cursor-pointer h-44px`}
+          cursor-pointer h-43px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
@@ -51,7 +51,7 @@ const AccordionButton = ({ icon, title }) => {
             src={icon}
             alt="icon"
             style={{
-              marginTop: 0,
+              marginTop: "1px",
               marginBottom: "8px",
             }}
           />
@@ -68,7 +68,7 @@ const AccordionButton = ({ icon, title }) => {
         <div className="flex items-center">
           <div
             style={{ background: "#5423a0", borderRadius: "4px" }}
-            className="flex items-center justify-center w-18px h-19px rounded-lg mt-10px mb-12px"
+            className="flex items-center justify-center w-18px h-19px rounded-lg mt-11px mb-12px"
           >
             <p
               className="text-13px text-white font-malgun"

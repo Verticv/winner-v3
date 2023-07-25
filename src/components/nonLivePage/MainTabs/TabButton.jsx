@@ -1,13 +1,14 @@
 import React from "react";
 
-const TabButton = ({ item }) => {
+const TabButton = ({ item, isActiveTab, setActiveTab }) => {
   return (
     <div
       style={{
-        borderBottom: item.active ? "2px solid #ffc900" : "",
+        borderBottom: isActiveTab === item.id ? "2px solid #ffc900" : "",
         width: `${item.width}}`,
       }}
       className="flex items-start z-10 mr-5px "
+      onClick={() => setActiveTab(item.id)}
     >
       <img className="ml-15px mt-px" src={item.icon} alt="icon" />
       <p
