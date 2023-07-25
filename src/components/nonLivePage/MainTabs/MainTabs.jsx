@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import icon1 from "../../../images/nonLivePage/mainTabs/1.png";
 import icon2 from "../../../images/nonLivePage/mainTabs/2.png";
 import icon3 from "../../../images/nonLivePage/mainTabs/3.png";
@@ -8,13 +8,13 @@ import icon6 from "../../../images/nonLivePage/mainTabs/6.png";
 import TabButton from "./TabButton";
 
 const MainTabs = () => {
-  // const [isActiveTab, setActiveTab] = useState(false);
+  const [isActiveTab, setActiveTab] = useState(0);
   const items = [
     {
       id: 0,
       icon: icon1,
       text: "조합베팅",
-      active: true,
+      // active: true,
       marginLeft: "5px",
       marginRight: "14px",
       width: "107px",
@@ -64,7 +64,12 @@ const MainTabs = () => {
   return (
     <div className="flex h-full cursor-pointer ml-6px">
       {items.map((item) => (
-        <TabButton key={item.id} item={item} />
+        <TabButton
+          key={item.id}
+          item={item}
+          isActiveTab={isActiveTab}
+          setActiveTab={setActiveTab}
+        />
       ))}
     </div>
   );

@@ -47,7 +47,7 @@ const CenterComponent = () => {
               width: "208px",
               height: "34px",
               borderRadius: "5px",
-              boxShadow: "rgba(0, 0, 0, 0.8) 0px 0px 4px 0px",
+              boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
             }}
             className="rounded-lg p-px mr-2px"
           >
@@ -96,7 +96,7 @@ const CenterComponent = () => {
               width: "207px",
               height: "34px",
               borderRadius: "5px",
-              boxShadow: "rgba(0, 0, 0, 0.8) 0px 0px 4px 0px",
+              boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
             }}
             className="rounded-lg p-px mr-2px"
           >
@@ -142,7 +142,7 @@ const CenterComponent = () => {
               width: "207px",
               height: "34px",
               borderRadius: "5px",
-              boxShadow: "rgba(0, 0, 0, 0.8) 0px 0px 4px 0px",
+              boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
             }}
             className="rounded-lg p-px mr-7px"
           >

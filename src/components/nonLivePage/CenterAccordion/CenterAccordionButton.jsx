@@ -105,8 +105,13 @@ const CenterAccordionButton = ({ title, date, icon2, cards }) => {
       </div>
       {isOpen && (
         <div
-          style={{ background: "#ffffff", width: "640px" }}
-          className=" -ml-px rounded-b-lg"
+          style={{
+            background: "#ffffff",
+            width: "640px",
+            borderBottomRightRadius: "5px",
+            borderBottomLeftRadius: "5px",
+          }}
+          className=" -ml-px"
         >
           {cards.map((item) => (
             // @ts-ignore
