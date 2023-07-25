@@ -161,6 +161,7 @@ const EntireAccordion = () => {
           width: "640px",
           // height: "686px",
           borderRadius: "6px",
+          boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
         }}
         className="flex items-center p-px"
       >
@@ -179,7 +180,11 @@ const EntireAccordion = () => {
               className="flex w-54px h-36px items-center cursor-pointer "
               onClick={() => setActiveId(0)}
             >
-              <img className="ml-15px object-none" src={star} alt="icon" />
+              <img
+                className="ml-15px mt-2px object-none"
+                src={star}
+                alt="icon"
+              />
               <div
                 style={{
                   width: "28px",
@@ -187,7 +192,7 @@ const EntireAccordion = () => {
                   background: "#f04281",
                   borderRadius: "9px",
                 }}
-                className="flex items-center justify-center absolute ml-29px mb-34px"
+                className="flex items-center justify-center absolute ml-29px mb-31px"
               >
                 <p className="text-13px tracking-tight font-MalgunGothicBold text-white ">
                   25
@@ -212,7 +217,7 @@ const EntireAccordion = () => {
                   style={{
                     color: activeId === content.id ? "#ffffff" : "#5e399a",
                   }}
-                  className="text-13px -mt-2px tracking-tight font-MalgunGothicBold"
+                  className="text-13px tracking-tight font-MalgunGothicBold"
                 >
                   {content.text}
                 </p>

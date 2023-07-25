@@ -59,7 +59,7 @@ const EntireAccordionContent1 = () => {
             fontSize: "12px",
             letterSpacing: "-0.031em",
           }}
-          className="font-malgun ml-8px"
+          className="font-malgun -mt-2px ml-8px"
         >
           아스널 (리저브)
         </p>
@@ -96,7 +96,7 @@ const EntireAccordionContent1 = () => {
             fontSize: "12px",
             letterSpacing: "-0.031em",
           }}
-          className="ml-8px mb-px font-malgun"
+          className="ml-8px mb-px -mt-2px font-malgun"
         >
           리버플 (리저브)
         </p>
