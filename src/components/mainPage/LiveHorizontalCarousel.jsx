@@ -190,7 +190,7 @@ export default function LiveHorizontalCarousel() {
           background: "linear-gradient(to top, rgb(204,196,255), rgb(255,216,245))",
         }}
       >
-        <img src={Best} style={{ left: "10px", top: "22px" }} alt="" className="absolute z-50" />
+        <img src={Best} style={{ left: "10px", top: "22px" }} alt="" className="absolute z-30" />
         <div style={{ minWidth: "193px" }} className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px">
           <img
             src={Left}
