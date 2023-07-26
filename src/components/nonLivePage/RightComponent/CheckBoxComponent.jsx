@@ -16,10 +16,7 @@ const CheckBoxComponent = () => {
   };
   return (
     <>
-      <div
-        style={{ background: "#ffffff", width: "308px", height: "184px" }}
-        className=" pt-px"
-      >
+      <div style={{ background: "#ffffff", width: "308px" }} className=" pt-px">
         <div
           style={{
             height: "35px",

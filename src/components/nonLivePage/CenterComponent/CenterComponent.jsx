@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/CenterComponent/Icon.png";
 import icon1 from "../../../images/nonLivePage/CenterComponent/star.png";
 import icon2 from "../../../images/nonLivePage/CenterComponent/Icon2.png";
@@ -7,6 +7,7 @@ import icon4 from "../../../images/nonLivePage/CenterComponent/Icon4.png";
 import CustomDropdown1 from "./CustomDropdown1";
 
 const CenterComponent = () => {
+  const [activeId, setActiveId] = useState(0);
   return (
     <>
       <div
@@ -221,13 +222,17 @@ const CenterComponent = () => {
         <div className="flex ml-7px">
           <div
             style={{
-              background: "linear-gradient(to top, #6b22ff, #df52ff)",
+              background:
+                activeId === 0
+                  ? "linear-gradient(to top, #6b22ff, #df52ff)"
+                  : "#936cee",
               width: "88px",
               height: "27px",
               boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.6)",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="flex items-center rounded-full mr-5px"
+            className="flex items-center rounded-full mr-5px cursor-pointer"
+            onClick={() => setActiveId(0)}
           >
             <img className="ml-8px object-none" src={icon2} alt="img" />
             <p
@@ -239,12 +244,16 @@ const CenterComponent = () => {
           </div>
           <div
             style={{
-              background: "#936cee",
+              background:
+                activeId === 1
+                  ? "linear-gradient(to top, #6b22ff, #df52ff)"
+                  : "#936cee",
               width: "88px",
               height: "27px",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="flex items-center rounded-full mr-6px"
+            className="flex items-center rounded-full mr-6px cursor-pointer"
+            onClick={() => setActiveId(1)}
           >
             <img className="object-none ml-17px" src={icon3} alt="img" />
             <p
@@ -256,12 +265,16 @@ const CenterComponent = () => {
           </div>
           <div
             style={{
-              background: "#936cee",
+              background:
+                activeId === 2
+                  ? "linear-gradient(to top, #6b22ff, #df52ff)"
+                  : "#936cee",
               width: "88px",
               height: "27px",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="flex items-center rounded-full"
+            className="flex items-center rounded-full cursor-pointer"
+            onClick={() => setActiveId(2)}
           >
             <img className="object-none ml-17px" src={icon4} alt="img" />
             <p
