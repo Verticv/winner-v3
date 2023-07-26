@@ -41,6 +41,7 @@ const Search = () => {
                 fontSize: "13px",
                 outline: "0px",
               }}
+              placeholder="검색 (팀명/리그)"
               onChange={(e) => setValue(e.target.value)}
               className="bg-white w-full rounded-lg pl-9px pt-2px text-13 font-malgun "
               type="text"
