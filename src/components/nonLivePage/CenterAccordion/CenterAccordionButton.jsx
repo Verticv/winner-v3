@@ -67,6 +67,7 @@ const CenterAccordionButton = ({ title, date, icon2, cards }) => {
                 color: "#eeeeee",
                 letterSpacing: "-0.031em",
                 fontFamily: "MalgunGothicRegular",
+                marginRight: activeStar ? "1px" : "",
               }}
               className="text-12px mt-5px font-malgun"
             >
@@ -77,6 +78,9 @@ const CenterAccordionButton = ({ title, date, icon2, cards }) => {
                 e.stopPropagation();
                 console.log("clicked");
                 setActiveStar((prev) => !prev);
+              }}
+              style={{
+                marginTop: activeStar ? "1px" : "",
               }}
               className="-mr-13px -ml-px mb-2px object-none"
               src={activeStar ? activeStarIcon : icon1}
@@ -101,8 +105,13 @@ const CenterAccordionButton = ({ title, date, icon2, cards }) => {
       </div>
       {isOpen && (
         <div
-          style={{ background: "#ffffff", width: "640px" }}
-          className=" -ml-px rounded-b-lg"
+          style={{
+            background: "#ffffff",
+            width: "640px",
+            borderBottomRightRadius: "5px",
+            borderBottomLeftRadius: "5px",
+          }}
+          className=" -ml-px"
         >
           {cards.map((item) => (
             // @ts-ignore

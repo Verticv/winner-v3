@@ -35,6 +35,7 @@ import { useHistory } from "react-router-dom";
 import TopBar from "../TopBar";
 import DropdownButton from "./DropdownButton";
 import LinkButton from "./LinkButton";
+import NoticeBanner from "../NoticeBanner";
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
   const history = useHistory();
@@ -89,8 +90,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           style={{
             color: isSelectedTap ? "#ffffff" : "#2d2834",
             background: isSelectedTap ? "#5323a0" : "none",
+            width: `calc(922px / ${tabsArray.length + 1})`
           }}
-          className={`w-83px h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
+          className={`h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
             items.length - 2 === index ? "mr-10px" : items.length - 1 === index ? "" : "mr-9px"
           }`}
           onClick={() => {
@@ -111,8 +113,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             <img className="object-none" src={isSelectedTap ? item.activeIcon : item.icon} alt={item.text} />
           </div>
           <span
-            style={{ marginBottom: "0px" }}
-            className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-3px"
+            style={{ marginBottom: "0px", fontSize: '13px', letterSpacing:'-0.05rem' }}
+            className="cursor-pointer font-spoqaMedium tracking-tightest -mt-3px flex-shrink-0"
           >
             {item.text}
           </span>
@@ -134,7 +136,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           background: "linear-gradient(to bottom, #f0ecff, #cacdff)",
           boxShadow: "0px 2px 15px 0px rgba(0, 0, 0, 0.5)",
         }}
-        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-10"
+        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-20"
       >
         <div className="w-full absolute h-px bottom-0 bg-r9688c7" />
         <div
@@ -144,7 +146,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         <div id="menu-wrapper" style={{ width: "1260px" }} className="w-full z-50">
           <div className="">
             <div className="flex justify-start w-full">
-              <div style={{ height: "82px" }} className="relative flex justify-between flex-row flex-shrink-0">
+              <div
+                style={{ height: "82px", width: "922px" }}
+                className="relative flex justify-between flex-row flex-shrink-0"
+              >
                 <div className="flex items-center flex-shrink-0">
                   <TabsList items={tabsArray} />
                 </div>
@@ -198,6 +203,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           </div>
         </div>
         <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} setSelectedTab={setSelectedTab} />
+      </div>
+      <div className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-10">
+        <NoticeBanner />
       </div>
     </>
   );

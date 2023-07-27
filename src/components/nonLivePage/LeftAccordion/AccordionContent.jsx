@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import iconStar from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import img1 from "../../../images/nonLivePage/LeftAccordion/content1/1.png";
 import icon from "../../../images/nonLivePage/LeftAccordion/content/Icon.png";
@@ -7,6 +7,8 @@ import AccordionCard1 from "./AccordionCard1";
 import AccordionCard2 from "./AccordionCard2";
 
 const AccordionContent = ({ card }) => {
+  const [showCard, setShowCard] = useState(true);
+  const [showCard1, setShowCard1] = useState(true);
   return (
     <>
       {/* // <div className="ml-3px mb-2px mr-3px pt-2px"> */}
@@ -32,7 +34,7 @@ const AccordionContent = ({ card }) => {
           </p>
         </div>
       </div>
-      <div className="ml-7px mt-2px mb-6px">
+      <div className="ml-7px mt-3px mb-6px">
         <p
           style={{
             letterSpacing: "-0.031em",
@@ -45,11 +47,12 @@ const AccordionContent = ({ card }) => {
       </div>
 
       <div
+        onClick={() => setShowCard((prev) => !prev)}
         style={{
           background: "#ffffff",
           borderRadius: "4px",
         }}
-        className="flex items-center mx-2px h-35px mb-2px"
+        className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
       >
         <img className="ml-6px mt-7px mb-6px" src={icon} alt="img" />
         <p
@@ -63,18 +66,23 @@ const AccordionContent = ({ card }) => {
           프리미어리그
         </p>
       </div>
-      <div>
-        <AccordionCard />
-      </div>
-      <div>
-        <AccordionCard2 />
-      </div>
+      {showCard && (
+        <>
+          <div>
+            <AccordionCard />
+          </div>
+          <div>
+            <AccordionCard2 />
+          </div>
+        </>
+      )}
       <div
+        onClick={() => setShowCard1((prev) => !prev)}
         style={{
           background: "#ffffff",
           borderRadius: "4px",
         }}
-        className="flex items-center mx-2px rounded-lg h-35px mb-2px"
+        className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer"
       >
         <img className="ml-6px" src={icon} alt="img" />
         <p style={{ color: "#444444" }} className="text-12px ml-5px">
@@ -82,10 +90,12 @@ const AccordionContent = ({ card }) => {
         </p>
       </div>
       {/* </div> */}
-      <div>
-        <AccordionCard1 />
-      </div>
-      <div className="ml-8px mt-5px mb-4px">
+      {showCard1 && (
+        <div>
+          <AccordionCard1 />
+        </div>
+      )}
+      <div className="ml-7px mt-5px mb-4px">
         <p className="text-10px text-white">리그</p>
       </div>
       <div
@@ -98,14 +108,14 @@ const AccordionContent = ({ card }) => {
         <div className="flex items-center">
           <img className="ml-6px" src={icon} alt="img" />
           <p
-            style={{ color: "#444444", marginBottom: "3px" }}
+            style={{ color: "#444444", marginBottom: "2px" }}
             className="text-12px ml-5px"
           >
             프리미어리그
           </p>
         </div>
         <div>
-          <img className="mr-7px" src={iconStar} alt="img" />
+          <img className="mr-6px" src={iconStar} alt="img" />
         </div>
       </div>
       <div
@@ -113,19 +123,19 @@ const AccordionContent = ({ card }) => {
           background: "#ffffff",
           borderRadius: "4px",
         }}
-        className="flex items-center justify-between mx-2px rounded-lg h-33px mb-2px"
+        className="flex items-center justify-between mx-2px rounded-lg h-33px mb-1px"
       >
         <div className="flex items-center">
           <img className="ml-6px" src={img1} alt="img" />
           <p
-            style={{ color: "#444444", marginBottom: "3px" }}
+            style={{ color: "#444444", marginBottom: "2px" }}
             className="text-12px ml-5px"
           >
             메이저리그 (MLB)
           </p>
         </div>
         <div>
-          <img className="mr-7px" src={iconStar} alt="img" />
+          <img className="mr-6px" src={iconStar} alt="img" />
         </div>
       </div>
     </>

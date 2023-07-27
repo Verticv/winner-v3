@@ -17,6 +17,53 @@ const CenterAccordionContent = ({ card, lastObject }) => {
   const [lastItemActive, setLastItemActive] = useState(false);
   const [activeStar, setActiveStar] = useState(false);
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered3, setIsHovered3] = useState(false);
+
+  const hoverStyle = {
+    background: "linear-gradient(to top, #5423a0, #9d3bbb)",
+    color: "#eeeeee",
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleMouseEnter1 = () => {
+    setIsHovered1(true);
+  };
+
+  const handleMouseLeave1 = () => {
+    setIsHovered1(false);
+  };
+  const handleMouseEnter2 = () => {
+    setIsHovered2(true);
+  };
+
+  const handleMouseLeave2 = () => {
+    setIsHovered2(false);
+  };
+  const handleMouseEnter3 = () => {
+    setIsHovered3(true);
+  };
+
+  const handleMouseLeave3 = () => {
+    setIsHovered3(false);
+  };
+
+  //   <div
+  //   style={{ ...defaultStyle, ...(isHovered ? hoverStyle : null) }}
+  //   onMouseEnter={handleMouseEnter}
+  //   onMouseLeave={handleMouseLeave}
+  // >
+  //   Hover me!
+  // </div>
   return (
     <>
       <button
@@ -43,6 +90,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             alt="icon"
             style={{
               marginTop: "1px",
+              marginLeft: activeStar ? "-1px" : "",
             }}
             onClick={(e) => {
               e.stopPropagation();
@@ -60,7 +108,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             setLeftActive((prev) => !prev);
           }}
           style={{
-            borderColor: "#cccccc",
+            borderColor: leftActive ? "#6227a5" : "#cccccc",
             width: "252px",
             height: "30px",
             fontFamily: "MalgunGothicRegular",
@@ -68,7 +116,10 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: leftActive ? "#eeeeee" : "#444444",
+            ...(isHovered ? hoverStyle : null),
           }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -98,14 +149,14 @@ const CenterAccordionContent = ({ card, lastObject }) => {
                 <img
                   src={Up}
                   alt="Up"
-                  className="mr-9px"
+                  className="mr-8px"
                   // className="ml-50px mt-11px mb-12px"
                 />
               ) : card.score1ArrowDown ? (
                 <img
                   src={Dn}
                   alt="Dn"
-                  className="mr-3px"
+                  className="mr-2px"
                   // className="ml-50px mt-11px mb-12px"
                 />
               ) : (
@@ -115,11 +166,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             {card.score1 ? (
               card.score1
             ) : (
-              <img
-                src={icon1}
-                alt="icon1"
-                // className="mr-14px"
-              />
+              <img src={icon1} alt="icon1" className="mr-4px mt-2px" />
             )}
           </p>
         </div>
@@ -138,14 +185,17 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: centerActive ? "#eeeeee" : "#444444",
+            ...(isHovered1 ? hoverStyle : null),
           }}
+          onMouseEnter={handleMouseEnter1}
+          onMouseLeave={handleMouseLeave1}
           className="flex items-center relative w-68px justify-center"
         >
           {card.score2ArrowUp ? (
             <img
               src={Up}
               alt="Up"
-              className="-mr-7px mb-px absolute"
+              className="-mr-6px mb-px absolute"
               style={{ right: "56px" }}
               //  className="ml-10px mt-11px mb-12px"
             />
@@ -153,7 +203,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             <img
               src={Dn}
               alt="Dn"
-              className="-mr-7px mb-px absolute"
+              className="-mr-6px mb-px absolute"
               style={{ right: "56px" }}
               //  className="ml-10px mt-11px mb-12px"
             />
@@ -178,11 +228,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               card.score2
             ) : (
               <span className="flex justify-center">
-                <img
-                  src={icon1}
-                  alt="icon1"
-                  //  className="ml-28px"
-                />
+                <img src={icon1} alt="icon1" className="mt-2px" />
               </span>
             )}
           </p>
@@ -197,14 +243,17 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             setRightActive((prev) => !prev);
           }}
           style={{
-            borderColor: "#cccccc",
+            borderColor: rightActive ? "#6227a5" : "#cccccc",
             width: "252px",
             height: "30px",
             background: rightActive
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: rightActive ? "#eeeeee" : "#444444",
+            ...(isHovered2 ? hoverStyle : null),
           }}
+          onMouseEnter={handleMouseEnter2}
+          onMouseLeave={handleMouseLeave2}
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -222,18 +271,14 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             {card.score3 ? (
               card.score3
             ) : (
-              <img
-                src={icon1}
-                alt="icon1"
-                // className="ml-14px"
-              />
+              <img src={icon1} alt="icon1" className="ml-4px mt-2px" />
             )}
             <span>
               {card.score3ArrowUp ? (
                 <img
                   src={Up}
                   alt="Up"
-                  className="ml-3px"
+                  className="ml-2px"
                   //  className="mr-104px mt-11px mb-12px"
                 />
               ) : card.score3ArrowDown ? (
@@ -254,7 +299,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               fontSize: "12px",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-10px mb-8px"
+            className=" mr-9px mt-8px mb-8px"
           >
             {card.team2}
           </p>
@@ -263,15 +308,19 @@ const CenterAccordionContent = ({ card, lastObject }) => {
           style={{
             width: "39px",
             height: "100%",
+            borderRight: lastItemActive ? "1px solid #6227a5" : "",
             background: lastItemActive
               ? `linear-gradient(to top, #5423a0, #9d3bbb)`
               : "",
             color: lastItemActive ? "#eeeeee" : "#444444",
+            ...(isHovered3 ? hoverStyle : null),
             borderBottomRightRadius: `${
               lastObject.id !== card.id ? "0px" : "6px"
             }`,
           }}
-          className="flex items-center justify-center"
+          onMouseEnter={handleMouseEnter3}
+          onMouseLeave={handleMouseLeave3}
+          className="flex items-center justify-center "
           onClick={() => {
             dispatch(setLiveGameData(card));
             setLastItemActive((prev) => !prev);

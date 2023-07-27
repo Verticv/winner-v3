@@ -157,6 +157,7 @@ const CenterAccordion = () => {
   const data = useSelector((state) => state?.nonLive?.data);
   const state = useSelector((state) => state);
   console.log("state :>> ", state);
+
   return (
     <>
       <div className="h-full items-start mr-10px mt-5px">
@@ -172,6 +173,7 @@ const CenterAccordion = () => {
             />
           );
         })}
+
         {/* <CenterAccordionButton
           icon={icon}
           title="축구 / 스페인 - 라리가"

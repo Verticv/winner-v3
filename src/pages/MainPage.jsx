@@ -1,7 +1,6 @@
 import Navbar from "../components/mainPage/NavBar";
-import NoticeBanner from "components/mainPage/NoticeBanner";
 import QuickMenu from "components/QuickMenu";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Carousel from "../components/mainPage/Carousel";
 import Footer from "../components/mainPage/Footer";
 import OverlayBackground1 from "../images/overlay_background_1.png";
@@ -18,20 +17,6 @@ import AnimatedCarousel from "components/mainPage/AnimatedCarousel";
 import TopButton from "components/TopButton";
 
 const MainPage = ({ isAuthenticated, setAuthenticated }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  console.log("scrollPosition :>> ", scrollPosition);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
       <div
@@ -51,16 +36,13 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
       </div>
       <div
         style={{ top: "125px" }}
-        className="w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
+        className="w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden z-50"
       >
         <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
           <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
         </div>
 
-        <div className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center">
-          <NoticeBanner />
-        </div>
-
+        <div className="h-28px mt-px" />
         <div style={{ width: "1260px" }} className="flex items-center justify-start mt-2px">
           <Carousel />
           <div style={{ height: "326px" }} className="flex flex-col ml-5px justify-end">
@@ -131,7 +113,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
         </div>
 
         <div style={{ top: "827px", right: "11px" }} className={`fixed z-20 flex justify-end`}>
-          <TopButton scrollPosition={scrollPosition} />
+          <TopButton />
         </div>
       </div>
     </>

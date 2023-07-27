@@ -24,8 +24,9 @@ const EnglandComponent = () => {
               width: "640px",
               height: "61px",
               borderRadius: "10px",
+              boxShadow: "0px 0px 6px 0px rgba(0, 0, 0, 0.8)",
             }}
-            className="p-2px mb-10px mt-10px mr-6px"
+            className="p-2px mb-10px mt-10px mr-10px"
           >
             <div
               style={{
@@ -291,13 +292,13 @@ const EnglandComponent = () => {
                       </p>
                       <p
                         style={{ letterSpacing: "-0.094em" }}
-                        className="ml-17px -mt-px text-white text-13px font-malgun"
+                        className="ml-17px  text-white text-13px font-malgun"
                       >
                         득점 발생시 적특처리 되실 수 있습니다
                       </p>
                       <p
                         style={{ color: "#fecf08", letterSpacing: "-0.094em" }}
-                        className="ml-17px mt-22px text-13px font-malgun"
+                        className="ml-17px mt-21px text-13px font-malgun"
                       >
                         1분 이내에 발생한 득점이 모든 경기가 적특처리 되는 것은
                         아니며,

@@ -16,7 +16,7 @@ const EntireAccordionButton3 = ({ icon, title, card }) => {
   };
 
   return (
-    <div className="ml-4px mr-5px mb-5px">
+    <div className="ml-4px mr-5px mb-4px">
       <div
         style={{
           background: "linear-gradient(to right, #9d3bbb, #5423a0)",
@@ -44,6 +44,7 @@ const EntireAccordionButton3 = ({ icon, title, card }) => {
               borderColor: "#764cbb",
               height: "31px",
               paddingRight: "2px",
+              marginTop: activeStar ? "1px" : "",
             }}
             className="border-r mb-px -mr-px object-none"
             src={activeStar ? activeStarIcon : icon}
@@ -88,7 +89,7 @@ const EntireAccordionButton3 = ({ icon, title, card }) => {
                   letterSpacing: "-0.031em",
                   fontSize: "12px",
                 }}
-                className="font-malgun -mt-2px ml-2px"
+                className="font-malgun -mt-2px ml-3px"
               >
                 무 : 리버플
               </p>

@@ -22,8 +22,8 @@ const RightComponentCard1 = ({ teamsData }) => {
           style={{
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             height: "40px",
-            borderTopLeftRadius: "3px",
-            borderTopRightRadius: "3px",
+            borderTopLeftRadius: "4px",
+            borderTopRightRadius: "4px",
           }}
           className="flex items-center justify-between"
         >
