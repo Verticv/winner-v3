@@ -64,7 +64,7 @@ const MinigameBetHistoryPanel = ({
           width: isAttached ? "127px" : "120px",
           marginLeft: isAttached ? "16px" : "0px",
         }}
-        className="-space-y-4px flex items-center justify-center h-54px font-spoqaMedium text-14px tracking-tight text-r666666 flex-shrink-0"
+        className="-space-y-4px flex items-center justify-center h-54px  text-14px tracking-tight text-r666666 flex-shrink-0"
       >
         <span>200</span>
       </div>
@@ -88,7 +88,7 @@ const MinigameBetHistoryPanel = ({
                     : "text-r666666"} 
                         flex items-center justify-between h-34px rounded-3px cursor-pointer px-10px pt-px`}
           >
-            <span style={{width:"231px"}} className="truncate text-left font-spoqaMedium tracking-tight text-14px overflow-ellipsis">
+            <span style={{width:"231px"}} className="truncate text-left  tracking-tight text-14px overflow-ellipsis">
               {team1}
             </span>
             <div className="flex items-center space-x-5px">
@@ -155,14 +155,14 @@ const MinigameBetHistoryPanel = ({
               </span>
               {hasDown && <img className="object-none" src={DownIcon} alt="" />}
             </div>
-            <span style={{width:"231px"}} className="truncate font-spoqaMedium tracking-tight text-14px text-right overflow-ellipsis">
+            <span style={{width:"231px"}} className="truncate  tracking-tight text-14px text-right overflow-ellipsis">
               {team2}
             </span>
           </div>
         </button>
       </div>
 
-      <div className="flex ml-10px font-spoqaMedium tracking-tight text-14px text-center">
+      <div className="flex ml-10px  tracking-tight text-14px text-center">
         <div
           style={{ width: isPopup ? "120px" : "130px" }}
           className="text-r666666"
@@ -190,7 +190,7 @@ const MinigameBetHistoryPanel = ({
         className="flex items-center justify-between h-54px w-full pl-17px pr-19px"
          style={{ background: '#6852a7' }}
       >
-        <div className="flex items-center">
+        <div className="flex items-center -mt-3px">
           {game === "파워사다리" ? (
             <img src={Example1} alt="" />
           ) : game === "스피드키노" ? (
@@ -210,29 +210,30 @@ const MinigameBetHistoryPanel = ({
           )}
 
           {game === "파워사다리" ? (
-            <span className="ml-4px font-spoqaMedium text-20px text-white pt-2px">
+            <span className="ml-4px text-20px text-white pt-2px">
               파워사다리
             </span>
           ) : game === "스피드키노" ? (
-            <span className="ml-6px font-spoqaMedium text-20px text-white pt-2px">
+            <span className="ml-6px text-20px text-white pt-2px">
               스피드키노
             </span>
           ) : (
-            <span className="ml-6px font-spoqaMedium text-20px text-white pt-2px">
+            <span className="ml-6px text-20px text-white pt-2px">
               키노사다리
             </span>
           )}
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center -mt-3px">
           <img src={ClockIcon} alt="" />
-          <span className="ml-5px font-spoqa text-16px tracking-tight text-white pt-px">
+          <span className="ml-5px text-16px tracking-tight text-white pt-px"
+          style={{letterSpacing:"0.02rem"}}>
             2021-06-29 15:45
           </span>
         </div>
       </div>
       <div
         className="flex flex-col w-full border-gray-dddddd"
-        style={{ background: "#323231" }}
+        style={{ background: "#fff" }}
       >
         <CardContent
           bet="right"
@@ -254,12 +255,12 @@ const MinigameBetHistoryPanel = ({
       style={{ background: 'linear-gradient(to top, #ededeb, #cb78e6)' }}
     >
       <div className="w-full bg-white rounded-6px pb-10px overflow-hidden">
-        <div className="flex h-54px w-full font-spoqaMedium text-14px tracking-tight text-white"
+        <div className="flex h-54px w-full  text-14px tracking-tight text-white"
           style={{ background: 'linear-gradient(to right, #9d3bbb, #5423a0)'}}>
           <div
             style={{
               width: isAttached === true ? "162px" : "120px",
-              marginLeft: isAttached === true ? "0" : "10px",
+              marginLeft: isAttached === true ? "0" : "8px",
             }}
             className="h-full flex items-center justify-center ml-10px"
           >
@@ -312,7 +313,7 @@ const MinigameBetHistoryPanel = ({
           <table>
             <div
               style={{ backgroundColor: "#eeeeee" }}
-              className={`flex w-auto h-36px rounded-4px  font-spoqaMedium text-14px tracking-tight text-r666666 ${
+              className={`flex w-auto h-36px rounded-4px  text-14px tracking-tight text-r666666 ${
                 isPopup && "pt-px"
               }`}
             >
@@ -487,18 +488,18 @@ const MinigameBetHistoryPanel = ({
             </div>
           </table>
 
-          <div className="flex space-x-4px">
+          <div className="flex space-x-6px pr-3px">
             {isAttached === false && (
               <button
                 onClick={() => {
                   setPopupOpen && setPopupOpen(false);
                   setAttachedArray && addEntryClick();
                 }}
-                style={{width:'112px',background:'#8458cd'}}
+                style={{width:'110px',background:'#8458cd'}}
                 className="flex items-center justify-center h-73px rounded-4px  hover:filter hover:brightness-125 shadow-link"
               >
-                <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-3px cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-14px text-white text-shadow-5">
+                <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-8px cursor-pointer">
+                  <span className="tracking-tight text-14px text-white text-shadow-5">
                     내역올리기
                   </span>
                 </div>
@@ -508,11 +509,11 @@ const MinigameBetHistoryPanel = ({
             {isPopup === false && (
               <button
                 onClick={() => setAttachedArray && handleRemoveItem(id)}
-                style={{width:'112px',background:'#646eb6'}}
+                style={{width:'110px',background:'#646eb6'}}
                 className="flex items-center justify-center h-73px rounded-4px  hover:filter hover:brightness-125 shadow-link"
               >
-                <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-3px cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-14px text-white text-shadow-5">
+                <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-8px cursor-pointer">
+                  <span className="tracking-tight text-14px text-white text-shadow-5">
                     내역삭제
                   </span>
                 </div>

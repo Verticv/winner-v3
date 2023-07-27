@@ -91,6 +91,7 @@ module.exports = {
         "92px": "92px",
         "98px": "98px",
         "100px": "100px",
+        "101px": "101px",
         "102px": "102px",
         "104px": "104px",
         "113px": "113px",
@@ -158,12 +159,13 @@ module.exports = {
         rf04281: "#f04281", // Red circle
         r666666: "#666666", // Text
         r2c1137: "#2c1137",
-        p682aa7: "#682aa7"
+        p682aa7: "#682aa7",
+        eeeeee: "#eeeeee"
       },
       fontFamily: {
-        spoqa: ["SpoqaHanSansNeo"],
-        spoqaMedium: ["SpoqaHanSansNeoMedium"],
-        spoqaBold: ["SpoqaHanSansNeoBold"],
+        // spoqa: ["SpoqaHanSansNeo"],
+        // spoqaMedium: ["SpoqaHanSansNeoMedium"],
+        // spoqaBold: ["SpoqaHanSansNeoBold"],
         robotoRegular: ["RobotoRegular"],
         roboto: ["RobotoMedium"],
         robotoBold: ["RobotoBold"],
@@ -212,6 +214,8 @@ module.exports = {
         "20px": "20px",
       },
       letterSpacing: {
+        tightest: "-0.13em",
+        tighter: "-0.031em",
         digital: ".04em",
         minus05: "-.005em",
       },

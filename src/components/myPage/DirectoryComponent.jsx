@@ -59,23 +59,23 @@ const DirectoryComponent = ({
             <span 
                 className={`${
                     !branch2 
-                        ? "font-spoqaBold" 
-                        : "font-spoqaMedium"
-                    }  text-13px tracking-tight cursor-pointer mt-px`}
-                    style={{color:'#eeeeee'}}
+                        ? "font-bold" 
+                        : ""
+                    }  text-13px text-eeeeee tracking-tightest  cursor-pointer`}
+                style={{ marginLeft: '9px'}}
                 onClick={() => {branch1Clicked(branch1)}}
             >
                 {branch1}
             </span>
             {branch2 && (
                 <>
-                    <img className="object-none mb-px" src={RightArrow} alt="" />
-                    <span style={{marginLeft:'8px',color:'#eeeeee'}}
+                    <img className="object-none mb-px" style={{marginLeft:'11px'}} src={RightArrow} alt="" />
+                    <span
                         className={`${
                             !branch3 
-                            ? "font-spoqaBold" 
-                            : "font-spoqaMedium"
-                            } text-13px tracking-tight cursor-pointer text-gray-929292 mt-px`}
+                            ? "font-bold" 
+                            : ""
+                            } text-13px  text-eeeeee tracking-tightest cursor-pointer`}
                         
                         onClick={() => branch2Clicked(mainPath)}
                         >
@@ -86,13 +86,13 @@ const DirectoryComponent = ({
             {branch3 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className="font-spoqaBold text-13px text-gray-929292 tracking-tight cursor-pointer">{branch3}</span>
+                    <span className="font-bold text-13px  text-eeeeee tracking-tightest  cursor-pointer">{branch3}</span>
                 </>
             )}
             {branch4 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className="font-spoqaBold text-13px text-gray-r393e41 tracking-tight">{branch4}</span>
+                    <span className="font-bold text-13px text-gray-r393e41 tracking-tightest ">{branch4}</span>
                 </>
             )}    
         </div>

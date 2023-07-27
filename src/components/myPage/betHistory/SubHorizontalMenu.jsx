@@ -14,7 +14,7 @@ const SubHorizontalMenu = ({
               key={item.id} 
               style={{
                 background: isState === item.id ?'linear-gradient( to top, #4f3a7a, #e597ff)':'linear-gradient( to top, #ada8a8, #d0d0d0)',
-                height:'82px'
+                height:'81px'
               }}
               className={`overflow-hidden w-full rounded-4px flex  border border-black relative`} 
               onClick={() => setState(item.id)}
@@ -32,7 +32,7 @@ const SubHorizontalMenu = ({
                     : isHover === item.id 
                     ? "linear-gradient( to top, #e5e5e5, #ffffff)"
                     : "linear-gradient( to top, #e5e5e5, #ffffff)",
-                  height: '78px',
+                  height: '77px',
                 }}
                   className={`w-full rounded-4px flex flex-col items-center justify-end`}
                   >

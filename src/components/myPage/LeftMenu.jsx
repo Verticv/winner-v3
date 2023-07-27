@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-// import ArrowDown from '../../images/myPage/leftMenu/arr_down.png'
-import ArrowDown from '../../images/myPage/leftMenu/arr_down_v2.png'
+import ArrowDown from '../../images/myPage/leftMenu/arr_down.png'
 import ArrowOn from '../../images/myPage/leftMenu/arrow_on.png'
 
 import { useHistory } from 'react-router-dom'
@@ -53,7 +52,7 @@ const LeftMenu = ({
         <button 
             className={`${
                 pathname.includes(path)
-                ? "bg-gradient-to-b from-golden-gradLight to-golden-gradDark shadow-link" 
+                ? "shadow-btn" 
                 : ""
                   } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
             style={{ background: pathname.includes(path)?'linear-gradient(to right, #9d3bbb, #5423a0)':'' }}
@@ -64,16 +63,17 @@ const LeftMenu = ({
         >
             <div 
                 className={`
-               w-50px flex items-center justify-center flex-shrink-0`} 
+               w-42px flex items-center justify-center flex-shrink-0 ml-7px`} 
             >
                 <img 
                     className="flex items-center justify-center object-contain" 
                     src={(pathname.includes(path)) ? iconHighlight : icon} 
                     alt="icon" />
             </div>
-            <div className="w-full flex mr-18px ml-8px justify-between items-center">
+            <div className="w-full flex mr-18px ml-7px justify-between items-center">
               <div className="flex items-center">              
-                <label className={`${(pathname.includes(path)) ? "text-gray-activeText" : "text-gray-ccc2b6"} font-spoqaMedium text-16px cursor-pointer tracking-tight`}>{text}</label>
+                <label className={`font-medium text-16px cursor-pointer tracking-tightest -mt-3px`}
+                style={{ color: pathname.includes(path)?'#fff':'#594e6a' }}>{text}</label>
               </div>
           </div>
         </button>
@@ -105,9 +105,9 @@ const LeftMenu = ({
                       <button 
                         className={`${
                         pathname.includes(item.mainPath)
-                        ? "bg-gradient-to-b from-golden-gradLight to-golden-gradDark shadow-link" 
+                        ? "shadow-btn" 
                         :''
-                                    } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
+                        } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
                         style={{ background: pathname.includes(item.mainPath)?'linear-gradient(to right, #9d3bbb, #5423a0)':'' }}
                         onClick={(e) => buttonPressed(item.text, item.path)}
                         onMouseEnter={() => mouseHover(item.path)}
@@ -115,7 +115,7 @@ const LeftMenu = ({
                       >
                         <div>
                           <div 
-                            className={`w-50px flex items-center justify-start flex-shrink-0 pl-7px`} 
+                            className={`w-42px flex items-center justify-center flex-shrink-0 ml-7px`} 
                           >
                             <img 
                                 className={`${isBig ? '-mt-2px' : ''} flex items-center justify-start object-contain`} 
@@ -123,7 +123,7 @@ const LeftMenu = ({
                                 alt="icon" />
                           </div>
                         </div>
-                        <div className="w-full flex mr-18px ml-8px justify-between items-center">
+                        <div className="w-full flex mr-13px ml-7px justify-between items-center">
                           <div className="flex items-center">
                             <label
                               className={`${
@@ -132,13 +132,13 @@ const LeftMenu = ({
                                   : isMouseHover === item.path
                                   ? 'text-golden-594e6a'
                                   : "text-golden-594e6a"
-                                                }  font-spoqaMedium text-16px cursor-pointer tracking-tight`}
-                            style={{ color: pathname.includes(item.mainPath)?'#fff':'#594e6a' }}
+                                }  font-medium text-16px cursor-pointer tracking-tightest -mt-3px`}
+                                style={{ color: pathname.includes(item.mainPath)?'#fff':'#594e6a' }}
                             >
                               {item.text}
                             </label>
                             {item.inboxCount && (
-                              <div className="bg-red-e9441d ml-10px h-17px w-17px rounded-4px text-white flex items-center justify-center text-12px font-roboto pt-px pr-px">
+                              <div className="bg-rf04281 ml-10px -mt-px h-19px w-20px rounded-9px text-white flex items-center justify-center text-12px font-roboto">
                                 {item.inboxCount}
                               </div>
                             )}
@@ -166,7 +166,7 @@ const LeftMenu = ({
                             && isExpanded !== item.path3 + "closed" 
                             ? item.sub1||item.sub2||item.sub3||item.sub4?'bg-gray-2c2c2c mt-px pl-px pr-px pb-px':'' : "hidden"
 
-                            } w-full font-spoqaMedium text-16px cursor-pointer tracking-tight rounded-b-4px overflow-hidden`} 
+                            } w-full font-medium text-16px cursor-pointer tracking-tightest rounded-b-4px overflow-hidden`} 
                         >
                             {item.sub1 && (
                                 <button 
@@ -241,10 +241,10 @@ const LeftMenu = ({
     }
 
   return (
-    <div className="rounded-6px p-px shadow-table overflow-hidden flex flex-col items-center"
+    <div className="rounded-6px p-px shadow-link overflow-hidden flex flex-col items-center"
       style={{ background: 'linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff 100%)', width:'200px', marginBottom:'180px' }}
     >
-    <div className="rounded-6px overflow-hidden w-full p-5px pb-6px space-y-6px"
+    <div className="rounded-6px overflow-hidden w-full p-5px pb-5px space-y-6px"
         style={{ background: 'linear-gradient(to top, #ccc4ff, #ffd9f5)' }}>
         <MenuList items={array} />
       </div>

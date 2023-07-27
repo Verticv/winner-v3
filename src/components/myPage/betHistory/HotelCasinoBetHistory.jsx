@@ -91,26 +91,26 @@ const HotelCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fal
             <div className="mt-40px h-36px w-full flex items-center justify-between">
               <div className="flex space-x-2px">
                 <button 
-                    style={{background:'#936cee'}}
-                    className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125 shadow-link" 
+                    style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                    className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125" 
                     onClick={() => allSelectButtonPressed()}
                         >
                             
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                                <span className="tracking-tight text-14px text-white pt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
                         
                         </button>
                         <button 
-                             style={{background:'#936cee'}}
-                            className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125 shadow-link"
+                             style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                            className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125"
                         >
                             
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px ">선택삭제</span>
+                                <span className="tracking-tight text-14px text-white pt-px ">선택삭제</span>
                             
                         </button>
                     </div>
-                    <button style={{width:'159px',background:'linear-gradient(to right, #15cfee, #3197e5)'}}  className="flex items-center justify-center h-36px rounded-6px hover:filter hover:brightness-125 p-px shadow-link">
+                    <button style={{width:'159px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}  className="flex items-center justify-center h-36px rounded-6px hover:filter hover:brightness-125 p-px">
                        
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px ">게시판에 내역올리기</span>
+                            <span className="tracking-tight text-14px text-white pt-px ">게시판에 내역올리기</span>
                        
                     </button>
                 </div>
