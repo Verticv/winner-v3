@@ -2,13 +2,55 @@ import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
 import "./style.css";
+import {
+  deleteFavoritePreMatchCardById,
+  deleteFavoriteLaLigaCardById,
+  deleteFavoriteBundesligaCardById,
+} from "reducers/nonLive-reducer";
+import { useDispatch } from "react-redux";
 
-const AccordionCard = () => {
+const AccordionCard = ({
+  id,
+  team1,
+  time,
+  team2,
+  dateAndTime,
+  t1,
+  t2,
+  t3,
+  t4,
+  t5,
+  t6,
+  type,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const dispatch = useDispatch();
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
+
+  const deleteFromFavorite = ({ type, id }) => {
+    if (type === "프리미어리그") {
+      dispatch(
+        deleteFavoritePreMatchCardById({
+          id,
+        })
+      );
+    } else if (type === "라리가") {
+      dispatch(
+        deleteFavoriteLaLigaCardById({
+          id,
+        })
+      );
+    } else if (type === "분데스리가") {
+      dispatch(
+        deleteFavoriteBundesligaCardById({
+          id,
+        })
+      );
+    }
+  };
+
   return (
     <div
       style={{
@@ -28,7 +70,7 @@ const AccordionCard = () => {
           }}
           className="text-12px mt-6px -mb-px"
         >
-          맨체스터유나이티드
+          {team1}
         </p>
         <p
           style={{
@@ -38,7 +80,7 @@ const AccordionCard = () => {
           }}
           className="text-12px font-malgun mt-px -mb-6px"
         >
-          18:30
+          {time}
         </p>
       </div>
       <div className="ml-10px ">
@@ -46,7 +88,7 @@ const AccordionCard = () => {
           style={{ color: "#444444", letterSpacing: "-0.031em" }}
           className="text-12px font-malgun mt-px"
         >
-          맨체스터시티
+          {team2}
         </p>
       </div>
       <div className="flex justify-between ml-10px -mt-px">
@@ -55,12 +97,23 @@ const AccordionCard = () => {
             style={{ color: "#0072bc", letterSpacing: "-0.031em" }}
             className="text-12px font-malgun"
           >
-            2023-05-14 18:30
+            {dateAndTime}
           </p>
         </div>
         <div className="flex">
           <div className="tooltip mt-8px items-center justify-center">
-            <img className="mt-12px ml-px object-none" src={icon} alt="img" />
+            <img
+              id={id}
+              className="mt-12px ml-px object-none"
+              src={icon}
+              alt="img"
+              onClick={() => {
+                deleteFromFavorite({
+                  type,
+                  id,
+                });
+              }}
+            />
             <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
               즐겨찾기에서 제거
             </span>
@@ -94,13 +147,13 @@ const AccordionCard = () => {
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
               className="ml-6px mt-9px mb-11px text-12px font-malgun"
             >
-              1
+              {t1 || "1"}
             </p>
             <p
               style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
               className="mr-7px text-12px font-malgun mb-2px"
             >
-              2.12
+              {t2 === "icon" ? "" : t2 || "2.12"}
             </p>
           </div>
           <div
@@ -111,13 +164,13 @@ const AccordionCard = () => {
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
               className="ml-7px text-12px font-malgun mb-4px"
             >
-              무
+              {t3 || "무"}
             </p>
             <p
               style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
               className="mr-7px text-12px font-malgun mb-2px"
             >
-              3.59
+              {t4 || "3.59"}
             </p>
           </div>
           <div
@@ -128,13 +181,13 @@ const AccordionCard = () => {
               style={{ color: "#444444", letterSpacing: "-0.031em" }}
               className="ml-8px mt-10px mb-12px text-12px font-malgun"
             >
-              2
+              {t5 || "2"}
             </p>
             <p
               style={{ color: "#682aa7", letterSpacing: "-0.031em" }}
               className="mr-7px mt-8px mb-10px text-12px"
             >
-              3.62
+              {t6 || "3.62"}
             </p>
           </div>
         </div>

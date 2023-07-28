@@ -30,6 +30,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+123",
             isFavorite: false,
+            type: "프리미어리그",
           },
           {
             id: 2,
@@ -40,6 +41,7 @@ const nonLiveSlice = createSlice({
             score3: 2.76,
             difference: "+45",
             isFavorite: false,
+            type: "프리미어리그",
           },
         ],
       },
@@ -65,6 +67,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+24",
             isFavorite: false,
+            type: "라리가",
           },
           {
             id: 4,
@@ -75,6 +78,7 @@ const nonLiveSlice = createSlice({
             score3: 3.76,
             difference: "+55",
             isFavorite: false,
+            type: "라리가",
           },
           {
             id: 5,
@@ -85,6 +89,7 @@ const nonLiveSlice = createSlice({
             score3: "2.90",
             difference: "+132",
             isFavorite: false,
+            type: "라리가",
           },
         ],
       },
@@ -110,6 +115,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: true,
             difference: "+99",
             isFavorite: false,
+            type: "분데스리가",
           },
           {
             id: 7,
@@ -126,6 +132,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+44",
             isFavorite: false,
+            type: "분데스리가",
           },
           {
             id: 8,
@@ -142,6 +149,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+155",
             isFavorite: false,
+            type: "분데스리가",
           },
           {
             id: 9,
@@ -158,6 +166,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+99",
             isFavorite: false,
+            type: "분데스리가",
           },
         ],
       },
@@ -183,6 +192,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+45",
             isFavorite: false,
+            type: "라리가",
           },
           {
             id: 11,
@@ -193,6 +203,7 @@ const nonLiveSlice = createSlice({
             score3: 3.87,
             difference: "+99",
             isFavorite: false,
+            type: "라리가",
           },
         ],
       },
@@ -218,6 +229,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+123",
             isFavorite: false,
+            type: "프리미어리그",
           },
           {
             id: 13,
@@ -228,6 +240,7 @@ const nonLiveSlice = createSlice({
             score3: 2.76,
             difference: "+45",
             isFavorite: false,
+            type: "프리미어리그",
           },
         ],
       },
@@ -253,6 +266,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+24",
             isFavorite: false,
+            type: "라리가",
           },
           {
             id: 15,
@@ -263,6 +277,7 @@ const nonLiveSlice = createSlice({
             score3: 3.76,
             difference: "+55",
             isFavorite: false,
+            type: "라리가",
           },
           {
             id: 16,
@@ -273,6 +288,7 @@ const nonLiveSlice = createSlice({
             score3: "2.90",
             difference: "+132",
             isFavorite: false,
+            type: "라리가",
           },
         ],
       },
@@ -298,6 +314,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+99",
             isFavorite: false,
+            type: "분데스리가",
           },
           {
             id: 18,
@@ -314,6 +331,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+44",
             isFavorite: false,
+            type: "분데스리가",
           },
           {
             id: 19,
@@ -330,6 +348,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+155",
             isFavorite: false,
+            type: "분데스리가",
           },
           {
             id: 20,
@@ -346,6 +365,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+99",
             isFavorite: false,
+            type: "분데스리가",
           },
         ],
       },
@@ -371,6 +391,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+45",
             isFavorite: false,
+            type: "라리가",
           },
           {
             id: 22,
@@ -381,6 +402,7 @@ const nonLiveSlice = createSlice({
             score3: 3.87,
             difference: "+99",
             isFavorite: false,
+            type: "라리가",
           },
         ],
       },
@@ -406,6 +428,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+123",
             isFavorite: false,
+            type: "프리미어리그",
           },
           {
             id: 24,
@@ -416,6 +439,7 @@ const nonLiveSlice = createSlice({
             score3: 2.76,
             difference: "+45",
             isFavorite: false,
+            type: "프리미어리그",
           },
         ],
       },
@@ -441,6 +465,7 @@ const nonLiveSlice = createSlice({
             score3ArrowDown: false,
             difference: "+45",
             isFavorite: false,
+            type: "라리가",
           },
           {
             id: 26,
@@ -451,6 +476,7 @@ const nonLiveSlice = createSlice({
             score3: 3.87,
             difference: "+99",
             isFavorite: false,
+            type: "라리가",
           },
         ],
       },
@@ -462,6 +488,73 @@ const nonLiveSlice = createSlice({
     liveGame: {
       data: [],
     },
+    favoritePreMatch: [
+      {
+        title: "프리미어리그",
+        items: [
+          // {
+          //   team1: "맨체스터유나이티드",
+          //   time: "18:30",
+          //   team2: "맨체스터시티",
+          //   dateAndTime: "2023-05-14 18:30",
+          //   type: "프리미어리그",
+          //   t1: "1",
+          //   t2: "2.12",
+          //   t3: "무",
+          //   t4: "3.59",
+          //   t5: "2",
+          //   t6: "3.62",
+          // },
+          // {
+          //   team1: "맨체스터유나이티드",
+          //   time: "18:30",
+          //   team2: "맨체스터시티",
+          //   dateAndTime: "2023-05-14 18:30",
+          //   type: "프리미어리그",
+          //   t1: "1",
+          //   t2: "2.12",
+          //   t3: "무",
+          //   t4: "3.59",
+          //   t5: "2",
+          //   t6: "3.62",
+          // },
+        ],
+      },
+    ],
+    favoriteLaLiga: [
+      {
+        title: "라리가",
+        items: [
+          // {
+          //   team1: "FC바르셀로나",
+          //   time: "18:30",
+          //   team2: "아틀레티코",
+          //   dateAndTime: "2023-05-14 18:30",
+          //   type: "프리미어리그",
+          //   t1: "1",
+          //   t2: "icon",
+          //   t3: "무",
+          //   t4: "icon",
+          //   t5: "2",
+          //   t6: "icon",
+          // },
+        ],
+      },
+    ],
+    bundesliga: [
+      {
+        title: "분데스리가",
+        items: [
+          // {
+          //   team1: "FC바르셀로나",
+          //   time: "18:30",
+          //   team2: "아틀레티코",
+          //   dateAndTime: "2023-05-14 18:30",
+          //   type: "프리미어리그",
+          // },
+        ],
+      },
+    ],
   },
   reducers: {
     setNonLiveData: (_state, action) => ({
@@ -485,6 +578,50 @@ const nonLiveSlice = createSlice({
       liveGame: {
         data: [..._state.liveGame.data, { ...action.payload, id: uuidv4() }],
       },
+    }),
+    addToPreMatchPremierLeague: (_state, action) => ({
+      ..._state,
+      favoritePreMatch: [
+        ..._state.favoritePreMatch,
+        action.payload.payload.items,
+      ].filter((item) => item.type === "프리미어리그"),
+    }),
+    addToFavoriteLaLiga: (_state, action) => ({
+      ..._state,
+      favoriteLaLiga: [
+        ..._state.favoriteLaLiga,
+        action.payload.payload.items,
+      ].filter((item) => item.type === "라리가"),
+    }),
+    addToBundesliga: (_state, action) => ({
+      ..._state,
+      bundesliga: [..._state.bundesliga, action.payload.payload.items].filter(
+        (item) => item.type === "분데스리가"
+      ),
+    }),
+    deleteAllFavoriteCards: (_state, action) => ({
+      ..._state,
+      favoritePreMatch: [],
+      favoriteLaLiga: [],
+      bundesliga: [],
+    }),
+    deleteFavoritePreMatchCardById: (_state, action) => ({
+      ..._state,
+      favoritePreMatch: [..._state.favoritePreMatch].filter((item) => {
+        return item.id !== action.payload.id;
+      }),
+    }),
+    deleteFavoriteLaLigaCardById: (_state, action) => ({
+      ..._state,
+      favoriteLaLiga: [..._state.favoriteLaLiga].filter(
+        (item) => item.id !== action.payload.id
+      ),
+    }),
+    deleteFavoriteBundesligaCardById: (_state, action) => ({
+      ..._state,
+      bundesliga: [..._state.bundesliga].filter(
+        (item) => item.id !== action.payload.id
+      ),
     }),
     deleteBetSlipCardById: (_state, action) => ({
       ..._state,
@@ -516,5 +653,12 @@ export const {
   deleteBetSlipCardById,
   deleteAllBetSlipCards,
   setLiveGameData,
+  addToPreMatchPremierLeague,
+  addToFavoriteLaLiga,
+  addToBundesliga,
+  deleteAllFavoriteCards,
+  deleteFavoritePreMatchCardById,
+  deleteFavoriteLaLigaCardById,
+  deleteFavoriteBundesligaCardById,
 } = actions;
 export default reducer;

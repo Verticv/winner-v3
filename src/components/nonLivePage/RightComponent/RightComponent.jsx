@@ -415,29 +415,31 @@ const RightComponent = () => {
               </>
             )}
 
-            <div
-              style={{ background: "#5e399a" }}
-              className="flex items-center h-70px "
-            >
-              <div className="items-center mb-4px">
-                <div className="mt-2px -mb-4px">
-                  <p
-                    style={{ color: "#ffffff", marginLeft: "88px" }}
-                    className="text-12px tracking-tight font-malgun"
-                  >
-                    선택하신 경기가 없습니다.
-                  </p>
-                </div>
-                <div>
-                  <p
-                    style={{ color: "#ffffff" }}
-                    className="ml-61px tracking-tight text-12px font-malgun"
-                  >
-                    원하시는 경기의 배당을 선택주세요.
-                  </p>
+            {betSlipData.length <= 0 && !active && (
+              <div
+                style={{ background: "#5e399a" }}
+                className="flex items-center h-70px "
+              >
+                <div className="items-center mb-4px">
+                  <div className="mt-2px -mb-4px">
+                    <p
+                      style={{ color: "#ffffff", marginLeft: "88px" }}
+                      className="text-12px tracking-tight font-malgun"
+                    >
+                      선택하신 경기가 없습니다.
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      style={{ color: "#ffffff" }}
+                      className="ml-61px tracking-tight text-12px font-malgun"
+                    >
+                      원하시는 경기의 배당을 선택주세요.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
             <div
               style={{ background: "#eeeeee", height: "94px" }}
               className="items-center"

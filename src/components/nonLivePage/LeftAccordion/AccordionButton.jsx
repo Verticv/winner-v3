@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AccordionContent from "./AccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
+import { useSelector } from "react-redux";
 
 const AccordionButton = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -8,20 +9,23 @@ const AccordionButton = ({ icon, title }) => {
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-  const card1 = [
-    {
-      text: "맨체스터유나이티드",
-      text2: "맨체스터시티",
-      time: "18:30",
-      date: "2023-05-14 18:30",
-    },
-    {
-      text: "맨체스터유나이티드",
-      text2: "맨체스터시티",
-      time: "18:30",
-      date: "2023-05-14 18:30",
-    },
-  ];
+
+  const state = useSelector((state) => state);
+  console.log("state :>> ", state);
+  // const card1 = [
+  //   {
+  //     text: "맨체스터유나이티드",
+  //     text2: "맨체스터시티",
+  //     time: "18:30",
+  //     date: "2023-05-14 18:30",
+  //   },
+  //   {
+  //     text: "맨체스터유나이티드",
+  //     text2: "맨체스터시티",
+  //     time: "18:30",
+  //     date: "2023-05-14 18:30",
+  //   },
+  // ];
 
   return (
     <div
@@ -91,7 +95,11 @@ const AccordionButton = ({ icon, title }) => {
           style={{ background: "#420572" }}
           className="pt-2px rounded-b-lg pb-2px"
         >
-          <AccordionContent card={card1} />
+          <div>
+            {/* {preMatch.map((item, index) => ( */}
+            <AccordionContent />
+            {/* ))} */}
+          </div>
         </div>
       )}
     </div>

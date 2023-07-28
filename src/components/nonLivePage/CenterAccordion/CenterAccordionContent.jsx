@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import icon from "../../../images/nonLivePage/CenterAccordion/star2.png";
 import Up from "../../../images/nonLivePage/LeftAccordion/Card/Up.png";
 import Dn from "../../../images/nonLivePage/LeftAccordion/Card/Dn.png";
@@ -6,7 +6,16 @@ import icon1 from "../../../images/nonLivePage/CenterAccordion/Icon1.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
 
 import { useDispatch } from "react-redux";
-import { setBetSlipData, setLiveGameData } from "reducers/nonLive-reducer";
+import {
+  setBetSlipData,
+  setLiveGameData,
+  addToPreMatchPremierLeague,
+  addToFavoriteLaLiga,
+  addToBundesliga,
+  deleteFavoritePreMatchCardById,
+  deleteFavoriteLaLigaCardById,
+  deleteFavoriteBundesligaCardById,
+} from "reducers/nonLive-reducer";
 import arrowActive from "../../../images/nonLivePage/CenterAccordion/ArrowActive.png";
 
 const CenterAccordionContent = ({ card, lastObject }) => {
@@ -21,6 +30,62 @@ const CenterAccordionContent = ({ card, lastObject }) => {
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
+
+  useEffect(() => {
+    console.log("card", card);
+  });
+  const addFavoriteForPreMatch = (title, items) => {
+    if (title === "프리미어리그") {
+      return dispatch(
+        addToPreMatchPremierLeague({
+          payload: {
+            title,
+            items,
+          },
+        })
+      );
+    } else if (title === "라리가") {
+      return dispatch(
+        addToFavoriteLaLiga({
+          payload: {
+            title,
+            items,
+          },
+        })
+      );
+    } else if (title === "분데스리가") {
+      return dispatch(
+        addToBundesliga({
+          payload: {
+            title,
+            items,
+          },
+        })
+      );
+    }
+  };
+
+  const deleteFromFavorite = ({ type, id }) => {
+    if (type === "프리미어리그") {
+      dispatch(
+        deleteFavoritePreMatchCardById({
+          id,
+        })
+      );
+    } else if (type === "라리가") {
+      dispatch(
+        deleteFavoriteLaLigaCardById({
+          id,
+        })
+      );
+    } else if (type === "분데스리가") {
+      dispatch(
+        deleteFavoriteBundesligaCardById({
+          id,
+        })
+      );
+    }
+  };
 
   const hoverStyle = {
     background: "linear-gradient(to top, #5423a0, #9d3bbb)",
@@ -86,6 +151,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
           style={{ width: "23px" }}
         >
           <img
+            id={card.id}
             src={activeStar ? activeStarIcon : icon}
             alt="icon"
             style={{
@@ -95,6 +161,21 @@ const CenterAccordionContent = ({ card, lastObject }) => {
             onClick={(e) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
+              if (!activeStar) {
+                addFavoriteForPreMatch(card.type, {
+                  id: e.target.id,
+                  team1: card.team1,
+                  time: "18:30",
+                  team2: card.team2,
+                  dateAndTime: "2023-05-14 18:30",
+                  type: card.type,
+                });
+              } else {
+                deleteFromFavorite({
+                  type: card.type,
+                  id: e.target.id,
+                });
+              }
             }}
           />
         </div>
