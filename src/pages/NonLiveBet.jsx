@@ -26,7 +26,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
       <div
         style={{
           background: "linear-gradient(to right, #b644c4, #351894)",
-          minHeight: "3000px",
+          // minHeight: "3000px",
         }}
         className="w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
       >

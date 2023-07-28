@@ -1,14 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import iconStar from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import img1 from "../../../images/nonLivePage/LeftAccordion/content1/1.png";
 import icon from "../../../images/nonLivePage/LeftAccordion/content/Icon.png";
 import AccordionCard from "./AccordionCard";
-import AccordionCard1 from "./AccordionCard1";
-import AccordionCard2 from "./AccordionCard2";
+// import AccordionCard1 from "./AccordionCard1";
+// import AccordionCard2 from "./AccordionCard2";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteAllFavoriteCards } from "reducers/nonLive-reducer";
 
-const AccordionContent = ({ card }) => {
+const AccordionContent = () => {
   const [showCard, setShowCard] = useState(true);
   const [showCard1, setShowCard1] = useState(true);
+  const [showCard2, setShowCard2] = useState(true);
+  const dispatch = useDispatch();
+
+  const favoritePreMatch = useSelector(
+    (state) => state?.nonLive?.favoritePreMatch
+  );
+  const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
+  const bundesliga = useSelector((state) => state?.nonLive?.bundesliga);
+
+  useEffect(() => {
+    setShowCard(true);
+  }, [favoritePreMatch]);
+
+  useEffect(() => {
+    setShowCard1(true);
+  }, [favoriteLaLiga]);
+
+  useEffect(() => {
+    console.log(
+      "bundesliga[0]?.items?.length !== 0",
+      bundesliga[0]?.items?.length !== 0
+    );
+    setShowCard2(true);
+  }, [bundesliga]);
   return (
     <>
       {/* // <div className="ml-3px mb-2px mr-3px pt-2px"> */}
@@ -24,7 +50,10 @@ const AccordionContent = ({ card }) => {
             background: "#936cee",
             borderRadius: "5px",
           }}
-          className="flex items-center justify-center h-34px"
+          className="flex items-center justify-center h-34px cursor-pointer hover:filter hover:brightness-150"
+          onClick={() => {
+            dispatch(deleteAllFavoriteCards());
+          }}
         >
           <p
             className="mb-3px text-13px text-white tracking-tight"
@@ -66,14 +95,27 @@ const AccordionContent = ({ card }) => {
           프리미어리그
         </p>
       </div>
-      {showCard && (
+      {showCard && favoritePreMatch[0]?.items?.length !== 0 && (
         <>
           <div>
-            <AccordionCard />
+            {favoritePreMatch?.map((el) => (
+              <AccordionCard
+                id={el?.id}
+                team1={el?.team1}
+                time={el?.time}
+                team2={el?.team2}
+                dateAndTime={el?.dateAndTime}
+                t1={el?.t1}
+                t2={el?.t2}
+                t3={el?.t3}
+                t4={el?.t4}
+                t5={el?.t5}
+                t6={el?.t6}
+                type={el?.type}
+              />
+            ))}
           </div>
-          <div>
-            <AccordionCard2 />
-          </div>
+          <div>{/* <AccordionCard2 /> */}</div>
         </>
       )}
       <div
@@ -90,10 +132,71 @@ const AccordionContent = ({ card }) => {
         </p>
       </div>
       {/* </div> */}
-      {showCard1 && (
+      {showCard1 && favoriteLaLiga[0]?.items?.length !== 0 && (
         <div>
-          <AccordionCard1 />
+          {favoriteLaLiga?.map((el) => (
+            <AccordionCard
+              id={el?.id}
+              team1={el?.team1}
+              time={el?.time}
+              team2={el?.team2}
+              dateAndTime={el?.dateAndTime}
+              t1={el?.t1}
+              t2={el?.t2}
+              t3={el?.t3}
+              t4={el?.t4}
+              t5={el?.t5}
+              t6={el?.t6}
+              type={el?.type}
+            />
+          ))}
         </div>
+      )}
+      {bundesliga[0]?.items?.length !== 0 && (
+        <>
+          <div
+            onClick={() => setShowCard2((prev) => !prev)}
+            style={{
+              background: "#ffffff",
+              borderRadius: "4px",
+            }}
+            className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
+          >
+            <img className="ml-6px mt-7px mb-6px" src={icon} alt="img" />
+            <p
+              style={{
+                color: "#444444",
+                letterSpacing: "-0.031em",
+                fontFamily: "MalgunGothicRegular",
+              }}
+              className="text-12px mt-10px mb-13px ml-5px"
+            >
+              분데스리가
+            </p>
+          </div>
+          {showCard2 && bundesliga[0]?.items?.length !== 0 && (
+            <>
+              <div>
+                {bundesliga?.map((el) => (
+                  <AccordionCard
+                    id={el?.id}
+                    team1={el?.team1}
+                    time={el?.time}
+                    team2={el?.team2}
+                    dateAndTime={el?.dateAndTime}
+                    t1={el?.t1}
+                    t2={el?.t2}
+                    t3={el?.t3}
+                    t4={el?.t4}
+                    t5={el?.t5}
+                    t6={el?.t6}
+                    type={el?.type}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </>
       )}
       <div className="ml-7px mt-5px mb-4px">
         <p className="text-10px text-white">리그</p>
