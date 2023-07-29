@@ -42,14 +42,14 @@ const HorizontalMenu = ({
                 background: pathname === item.path
                   ? 'linear-gradient(to top, #491f9c, #9e3cbc)'
                   :'linear-gradient(to top, #ccc4ff, #ffd8f5)'
-              }} className={`w-full rounded-3px flex flex-col justify-start items-center relative hover:filter hover:brightness-90 h-76px pt-5px pb-7px`}>
+              }} className={`w-full rounded-3px flex flex-col justify-start items-center relative hover:filter hover:brightness-90 h-76px pt-5px pb-6px`}>
               <img className='object-none h-48px w-48px'  src={pathname === item.path ? item.iconHighlight : item.icon} alt="" />
              
               <span className={`${
                   pathname === item.path 
                   ? "text-black"
                 : "text-golden-ccc2b6"} 
-                  text-14px tracking-tightest`}
+                  text-14px tracking-Stightest mt-px`}
               style={{
                 color: pathname === item.path
                   ? '#fff'
@@ -73,7 +73,7 @@ const HorizontalMenu = ({
   return (
     <>
     {!hasRows ? (
-      <div className="flex justify-start w-full h-78px space-x-2px pl-4px pr-6px">
+      <div className="flex justify-start w-full h-78px space-x-2px pl-4px pr-5px">
           <TabsList items={itemsArray} />
       </div>
     ) : (

@@ -214,7 +214,7 @@ module.exports = {
         "20px": "20px",
       },
       letterSpacing: {
-        tightest: "-0.13em",
+        Stightest: "-0.13em",
         tighter: "-0.031em",
         digital: ".04em",
         minus05: "-.005em",

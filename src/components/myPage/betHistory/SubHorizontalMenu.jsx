@@ -16,14 +16,13 @@ const SubHorizontalMenu = ({
                 background: isState === item.id ?'linear-gradient( to top, #4f3a7a, #e597ff)':'linear-gradient( to top, #ada8a8, #d0d0d0)',
                 height:'81px'
               }}
-              className={`overflow-hidden w-full rounded-4px flex  border border-black relative`} 
+              className={`overflow-hidden w-full rounded-4px flex  border border-black relative p-px`} 
               onClick={() => setState(item.id)}
               onMouseOver={() => setHover(item.id)}
               onMouseLeave={() => setHover(null)}
           >
             <div style={{
-               background: isState === item.id ?'linear-gradient( to top, #4f3a7a, #e597ff)':'linear-gradient( to top, #ada8a8, #d0d0d0)',
-              }} className={`overflow-hidden w-full flex flex-col items-center justify-start rounded-4px p-px`}>
+              }} className={`overflow-hidden w-full flex flex-col items-center justify-start rounded-4px`}>
               <div
 
                 style={{
@@ -32,7 +31,7 @@ const SubHorizontalMenu = ({
                     : isHover === item.id 
                     ? "linear-gradient( to top, #e5e5e5, #ffffff)"
                     : "linear-gradient( to top, #e5e5e5, #ffffff)",
-                  height: '77px',
+                  height: '79px',
                 }}
                   className={`w-full rounded-4px flex flex-col items-center justify-end`}
                   >
@@ -43,7 +42,7 @@ const SubHorizontalMenu = ({
                       ? "#fff"
                       : "#666"
                   }}
-                  className={`text-13px font-spoqaMedium tracking-tight  mb-6px mt-3px ${item.custom}`}
+                  className={`text-13px tracking-tight mb-8px mt-1px ${item.custom}`}
                 >{item.text}</span>
                   </div>
               </div>   

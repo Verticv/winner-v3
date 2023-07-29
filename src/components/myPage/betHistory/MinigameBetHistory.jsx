@@ -84,7 +84,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true, attachedArray, s
 
             <DateSearchBar isLeagueSearch={false} isPopup={isPopup}/>
 
-            <div className="w-full h-full mt-20px">
+            <div className="w-full h-full mt-10px">
 
                 {isState === 0 ? (
                     <MinigameBetHistoryTable 
@@ -187,29 +187,29 @@ const MinigameBetHistory = ({isState, setState, showSub = true, attachedArray, s
                 
             </div>
 
-            <div className="mt-40px h-36px w-full flex items-center justify-between">
-                <div className="flex space-x-2px">
+            <div className="mt-20px h-36px w-full flex items-center justify-between">
+                <div className="flex space-x-4px ml-px">
                     <button 
                         style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
-                            className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125" 
+                            className="flex items-center justify-center w-88px h-36px rounded-6px  hover:filter hover:brightness-125" 
                         onClick={() => allSelectButtonPressed()}
                     >
                        
-                            <span className="tracking-tight text-14px text-white pt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                            <span className="tracking-tight text-14px text-white pt-px text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
                         
                     </button>
                 <button 
                    style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
-                            className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125"
+                            className="flex items-center justify-center w-88px h-36px rounded-6px  hover:filter hover:brightness-125"
                 >
                    
-                        <span className="tracking-tight text-14px text-white pt-px">선택삭제</span>
+                        <span className="tracking-tight text-14px text-white pt-px text-shadow-5">선택삭제</span>
                    
                 </button>
                 </div>
-                <button style={{width:'159px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}} className="flex items-center justify-center h-36px rounded-6px  p-px hover:filter hover:brightness-125">
+                <button style={{width:'158px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}} className="flex items-center justify-center h-36px rounded-6px  p-px hover:filter hover:brightness-125 mr-px">
                    
-                        <span className="tracking-tight text-14px text-white pt-px">게시판에 내역올리기</span>
+                        <span className="tracking-tight text-14px text-white pt-px text-shadow-5">게시판에 내역올리기</span>
                     
                 </button>
             </div>

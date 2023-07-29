@@ -108,7 +108,7 @@ const DateSearchBar = ({
               <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-6px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 focus:ml-10px`} />
            
             </div>
-            <span className="font-medium text-14px text-white mt-px" style={{letterSpacing:'-0.13rem'}}>~</span>
+            <span className="font-medium text-14px text-white" style={{letterSpacing:'-0.13rem'}}>~</span>
               <div className="relative">
               <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-6px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666`} />
              
@@ -159,7 +159,7 @@ const DateSearchBar = ({
 
             {!hasIdSearch ? (
                 <div className="flex items-center justify-center h-42px w-75px rounded-4px shadow-link hover:filter hover:brightness-125"
-                  style={{background: "linear-gradient(to top, #4f3a7a, #df52ff)"}}>
+                  style={{background: "linear-gradient(to top, #4f3a7a, #e597ff)"}}>
                   <div className="flex items-center justify-center h-40px w-73px rounded-4px cursor-pointer"
                     style={{background: 'linear-gradient(0deg, #6b22ff, #df52ff)'}}>
                       <span className="font-medium tracking-tight text-14px  pt-px text-white text-shadow-5">검색</span>

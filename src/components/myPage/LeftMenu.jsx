@@ -70,9 +70,9 @@ const LeftMenu = ({
                     src={(pathname.includes(path)) ? iconHighlight : icon} 
                     alt="icon" />
             </div>
-            <div className="w-full flex mr-18px ml-7px justify-between items-center">
+            <div className="w-full flex mr-18px ml-9px justify-between items-center">
               <div className="flex items-center">              
-                <label className={`font-medium text-16px cursor-pointer tracking-tightest -mt-3px`}
+                <label className={`font-medium text-16px cursor-pointer tracking-Stightest -mt-3px`}
                 style={{ color: pathname.includes(path)?'#fff':'#594e6a' }}>{text}</label>
               </div>
           </div>
@@ -123,7 +123,7 @@ const LeftMenu = ({
                                 alt="icon" />
                           </div>
                         </div>
-                        <div className="w-full flex mr-13px ml-7px justify-between items-center">
+                        <div className="w-full flex mr-13px ml-9px justify-between items-center">
                           <div className="flex items-center">
                             <label
                               className={`${
@@ -132,13 +132,13 @@ const LeftMenu = ({
                                   : isMouseHover === item.path
                                   ? 'text-golden-594e6a'
                                   : "text-golden-594e6a"
-                                }  font-medium text-16px cursor-pointer tracking-tightest -mt-3px`}
+                                }  font-medium text-16px cursor-pointer tracking-Stightest -mt-3px`}
                                 style={{ color: pathname.includes(item.mainPath)?'#fff':'#594e6a' }}
                             >
                               {item.text}
                             </label>
                             {item.inboxCount && (
-                              <div className="bg-rf04281 ml-10px -mt-px h-19px w-20px rounded-9px text-white flex items-center justify-center text-12px font-roboto">
+                              <div className="bg-rf04281 ml-12px -mt-px h-19px w-20px rounded-9px text-white flex items-center justify-center text-12px font-roboto">
                                 {item.inboxCount}
                               </div>
                             )}
@@ -166,7 +166,7 @@ const LeftMenu = ({
                             && isExpanded !== item.path3 + "closed" 
                             ? item.sub1||item.sub2||item.sub3||item.sub4?'bg-gray-2c2c2c mt-px pl-px pr-px pb-px':'' : "hidden"
 
-                            } w-full font-medium text-16px cursor-pointer tracking-tightest rounded-b-4px overflow-hidden`} 
+                            } w-full font-medium text-16px cursor-pointer tracking-Stightest rounded-b-4px overflow-hidden`} 
                         >
                             {item.sub1 && (
                                 <button 

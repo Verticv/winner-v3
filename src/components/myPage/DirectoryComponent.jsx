@@ -61,7 +61,7 @@ const DirectoryComponent = ({
                     !branch2 
                         ? "font-bold" 
                         : ""
-                    }  text-13px text-eeeeee tracking-tightest  cursor-pointer`}
+                    }  text-13px text-eeeeee tracking-Stightest  cursor-pointer`}
                 style={{ marginLeft: '9px'}}
                 onClick={() => {branch1Clicked(branch1)}}
             >
@@ -75,7 +75,7 @@ const DirectoryComponent = ({
                             !branch3 
                             ? "font-bold" 
                             : ""
-                            } text-13px  text-eeeeee tracking-tightest cursor-pointer`}
+                            } text-13px  text-eeeeee tracking-Stightest cursor-pointer`}
                         
                         onClick={() => branch2Clicked(mainPath)}
                         >
@@ -86,13 +86,13 @@ const DirectoryComponent = ({
             {branch3 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className="font-bold text-13px  text-eeeeee tracking-tightest  cursor-pointer">{branch3}</span>
+                    <span className="font-bold text-13px  text-eeeeee tracking-Stightest  cursor-pointer">{branch3}</span>
                 </>
             )}
             {branch4 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className="font-bold text-13px text-gray-r393e41 tracking-tightest ">{branch4}</span>
+                    <span className="font-bold text-13px text-gray-r393e41 tracking-Stightest ">{branch4}</span>
                 </>
             )}    
         </div>
