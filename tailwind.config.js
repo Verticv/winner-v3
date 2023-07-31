@@ -160,7 +160,8 @@ module.exports = {
         r666666: "#666666", // Text
         r2c1137: "#2c1137",
         p682aa7: "#682aa7",
-        eeeeee: "#eeeeee"
+        eeeeee: "#eeeeee",
+        p594e6a: '#594e6a'
       },
       fontFamily: {
         // spoqa: ["SpoqaHanSansNeo"],

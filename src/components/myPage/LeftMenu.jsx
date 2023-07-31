@@ -55,11 +55,19 @@ const LeftMenu = ({
                 ? "shadow-btn" 
                 : ""
                   } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
-            style={{ background: pathname.includes(path)?'linear-gradient(to right, #9d3bbb, #5423a0)':'' }}
+              style={{
+                  background:
+                      pathname.includes(path) ? 'linear-gradient(to right, #9d3bbb, #5423a0)' :
+                      isMouseHover === path ?
+                        'rgb(157,59,187,30%)' :
+                        '', }}
             onClick={() => {
                 buttonPressed(path)
                 setPopupOpen(true)
-            }}
+                
+              }}
+            onMouseEnter={() => mouseHover(path)}
+            onMouseLeave={() => mouseLeave(path)}
         >
             <div 
                 className={`
@@ -108,7 +116,14 @@ const LeftMenu = ({
                         ? "shadow-btn" 
                         :''
                         } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
-                        style={{ background: pathname.includes(item.mainPath)?'linear-gradient(to right, #9d3bbb, #5423a0)':'' }}
+                        style={{
+                            background:
+                                pathname.includes(item.mainPath) ?
+                                'linear-gradient(to right, #9d3bbb, #5423a0)' :
+                                isMouseHover === item.path ?
+                                'rgb(157,59,187,30%)' :
+                                '',
+                        }}
                         onClick={(e) => buttonPressed(item.text, item.path)}
                         onMouseEnter={() => mouseHover(item.path)}
                         onMouseLeave={() => mouseLeave(item.path)}
@@ -164,23 +179,31 @@ const LeftMenu = ({
                             && isExpanded !== item.path + "closed" 
                             && isExpanded !== item.path2 + "closed"
                             && isExpanded !== item.path3 + "closed" 
-                            ? item.sub1||item.sub2||item.sub3||item.sub4?'bg-gray-2c2c2c mt-px pl-px pr-px pb-px':'' : "hidden"
-
-                            } w-full font-medium text-16px cursor-pointer tracking-Stightest rounded-b-4px overflow-hidden`} 
+                            ? item.sub1||item.sub2||item.sub3||item.sub4?'mt-px pb-px':'' : "hidden"
+                            } w-full font-medium text-16px cursor-pointer tracking-Stightest rounded-b-4px overflow-hidden bg-white`} 
+                           
                         >
                             {item.sub1 && (
                                 <button 
                                     onClick={() => {
                                         setSelectedSubTab(item.path)
                                         history.push(item.path)
-                                    }}
+                                        }}
+                                        style={{
+                                            background:
+                                            pathname === item.path || pathname === item.path_1 
+                                            || pathname === item.path_2 || pathname === item.path_3 
+                                            || pathname === item.path_4 || pathname === item.path_5 
+                                            || pathname === item.path_6 || pathname === item.path_7 || pathname === item.path_8?
+                                        'linear-gradient(to right, #df52ff, #6b22ff)':'#fff'
+                                        }}
                                     className={`${
                                         pathname === item.path || pathname === item.path_1 
                                         || pathname === item.path_2 || pathname === item.path_3 
                                         || pathname === item.path_4 || pathname === item.path_5 
                                         || pathname === item.path_6 || pathname === item.path_7 || pathname === item.path_8 
-                                        ? "text-gray-f1e7d5 bg-gray-4e4941" 
-                                        : "text-gray-7e7564 hover:bg-gray-44423e  hover:text-gray-c8c8c8  hover:opacity-50"
+                                        ? "text-white" 
+                                        : "text-p594e6a hover:opacity-50"
                                     } flex items-center h-47px w-full pl-57px `}>
                                         {item.sub1}
                                 </button>
@@ -191,11 +214,16 @@ const LeftMenu = ({
                                         setSelectedSubTab(item.path2)
                                         setSelectedTab(item.path2)
                                         history.push(item.path2)
+                                        }}
+                                    style={{
+                                        background:
+                                        pathname === item.path2 || pathname === item.path2_1 || pathname === item.path2_2 || pathname === item.path2_3?
+                                        'linear-gradient(to right, #df52ff, #6b22ff)':'#fff'
                                     }}
                                     className={`${
                                         pathname === item.path2 || pathname === item.path2_1 || pathname === item.path2_2 || pathname === item.path2_3
-                                        ? "text-gray-f1e7d5 bg-gray-4e4941" 
-                                        : "text-gray-7e7564 hover:bg-gray-44423e  hover:text-gray-c8c8c8  hover:opacity-50"
+                                        ? "text-white" 
+                                        : "text-p594e6a hover:opacity-50"
                                     }  flex items-center h-47px w-full pl-57px `}>
                                         {item.sub2}
                                 </button>
@@ -207,10 +235,15 @@ const LeftMenu = ({
                                         setSelectedTab(item.path3)
                                         history.push(item.path3)
                                     }}
+                                    style={{
+                                        background:
+                                        pathname === item.path3 || pathname === item.path3_1?
+                                        'linear-gradient(to right, #df52ff, #6b22ff)':'#fff'
+                                    }}
                                     className={`${
                                         pathname === item.path3 || pathname === item.path3_1
-                                        ? "text-gray-f1e7d5 bg-gray-4e4941" 
-                                        : "text-gray-7e7564 hover:bg-gray-44423e  hover:text-gray-c8c8c8  hover:opacity-50"
+                                        ? "text-white" 
+                                        : "text-p594e6a  hover:opacity-50"
                                     } ${item.sub3 === "키론가상게임" && "rounded-b-3xl"} flex items-center h-47px w-full  pl-57px `}>
                                         {item.sub3}
                                 </button>
@@ -222,11 +255,16 @@ const LeftMenu = ({
                                         setSelectedSubTab(item.path4)
                                         setSelectedTab(item.path4)
                                         history.push(item.path4)
+                                     }}
+                                    style={{
+                                        background:
+                                        pathname === item.path4?
+                                        'linear-gradient(to right, #df52ff, #6b22ff)':'#fff'
                                     }}
                                     className={`${
                                         pathname === item.path4
-                                        ? "text-gray-f1e7d5 bg-gray-4e4941 " 
-                                        : "text-gray-7e7564 hover:bg-gray-44423e  hover:text-gray-c8c8c8  hover:opacity-50"
+                                        ? "text-white" 
+                                        : "text-p594e6a  hover:opacity-50"
                                     } ${item.text === "미니게임" && "rounded-b-3xl"} flex items-center h-47px w-full  pl-57px `}>
                                         {item.sub4}
                                 </button>

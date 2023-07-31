@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const SubHorizontalMenu = ({
     itemsArray, 
@@ -6,7 +6,6 @@ const SubHorizontalMenu = ({
     setState
 }) => {
 
-    const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
         return items.map(item => (
@@ -18,8 +17,6 @@ const SubHorizontalMenu = ({
               }}
               className={`overflow-hidden w-full rounded-4px flex  border border-black relative p-px`} 
               onClick={() => setState(item.id)}
-              onMouseOver={() => setHover(item.id)}
-              onMouseLeave={() => setHover(null)}
           >
             <div style={{
               }} className={`overflow-hidden w-full flex flex-col items-center justify-start rounded-4px`}>
@@ -28,12 +25,10 @@ const SubHorizontalMenu = ({
                 style={{
                   background: isState === item.id 
                     ? "linear-gradient( to top, #6b22ff, #df52ff)"
-                    : isHover === item.id 
-                    ? "linear-gradient( to top, #e5e5e5, #ffffff)"
                     : "linear-gradient( to top, #e5e5e5, #ffffff)",
                   height: '79px',
                 }}
-                  className={`w-full rounded-4px flex flex-col items-center justify-end`}
+                  className={`w-full rounded-4px flex flex-col items-center justify-end hover:filter hover:brightness-125`}
                   >
                       <img className="mt-8px ml-2px object-none h-43px" src={item.icon} alt="" />
                 <span

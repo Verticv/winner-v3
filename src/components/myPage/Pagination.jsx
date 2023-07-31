@@ -9,7 +9,7 @@ const Pagination = ({page, setPage}) => {
 
     const LeftArrow = () => (
         <button 
-            className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 mr-8px"
+            className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 mr-12px"
             onClick={() => selectedPage !== 1 && setSelectedPage(selectedPage - 1)}
         >
             <img src={LeftIcon} alt="arrow" />
@@ -17,7 +17,7 @@ const Pagination = ({page, setPage}) => {
     )
     const RightArrow = () => (
         <button 
-            className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 ml-8px"
+            className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 ml-12px"
             onClick={() => selectedPage !== 5 && setSelectedPage(selectedPage + 1)}
         >
             <img src={RightIcon} alt="arrow" />
@@ -29,13 +29,13 @@ const Pagination = ({page, setPage}) => {
     return (
         <div className="relative flex h-32px items-center justify-center">
             <button 
-                className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125"
+                className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 mr-px"
                 onClick={() => setSelectedPage(1)}
             >
                 <img className="cursor-pointer h-32px object-none hover:bg-blend-darken" src={DoubleLeftIcon} alt="" />
             </button>
                 <LeftArrow />
-                <div className="space-x-px flex items-center">
+                <div className="space-x-px flex items-center -ml-2px">
                     <button 
                         style={{background: selectedPage === 1 && "linear-gradient(to top, #ada8a8, #d0d0d0)" }} 
                         className={`${selectedPage === 1?'shadow-link':''} flex items-center justify-center w-32px h-32px rounded-4px hover:filter hover:brightness-125`}
@@ -99,10 +99,10 @@ const Pagination = ({page, setPage}) => {
 
                 <RightArrow />                
                 <button 
-                    className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125"
+                    className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 ml-px"
                     onClick={() => setSelectedPage(5)}
                 >
-                    <img className=" cursor-pointer h-32px object-none hover:bg-blend-darken" src={DoubleRightIcon} alt="" />
+                    <img className="cursor-pointer h-32px object-none hover:bg-blend-darken" src={DoubleRightIcon} alt="" />
                 </button>
             </div>
     )
