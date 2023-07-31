@@ -7,7 +7,7 @@ input[type=checkbox] {
     width: 15px;
     height: 15px;
     cursor: pointer;
-    background: rgba(0,0,0,0.5) center center;
+    background: #281d45 center center;
 }
   
 .bg-gray-1f1f1e input[type=checkbox] {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const SubHorizontalMenu = ({
     itemsArray, 
@@ -6,43 +6,39 @@ const SubHorizontalMenu = ({
     setState
 }) => {
 
-    const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
         return items.map(item => (
             <button 
               key={item.id} 
               style={{
-                background:'linear-gradient( to top, rgb(30,30,29) 0%, rgb(81,80,78) 100%)',
-                height:'82px'
+                background: isState === item.id ?'linear-gradient( to top, #4f3a7a, #e597ff)':'linear-gradient( to top, #ada8a8, #d0d0d0)',
+                height:'81px'
               }}
-              className={`${
-                  isState === item.id
-                  ? "" 
-                  : ""
-              } overflow-hidden w-full rounded-4px flex items-start border border-gray-2a2a2a relative`} 
+              className={`overflow-hidden w-full rounded-4px flex  border border-black relative p-px`} 
               onClick={() => setState(item.id)}
-              onMouseOver={() => setHover(item.id)}
-              onMouseLeave={() => setHover(null)}
           >
             <div style={{
-                background: 'linear-gradient( to top, #393835, #6b6865)',
-                width:'79px'
-              }} className={`overflow-hidden w-full flex flex-col items-center justify-start p-px absolute top-0 rounded-4px`}>
+              }} className={`overflow-hidden w-full flex flex-col items-center justify-start rounded-4px`}>
               <div
 
                 style={{
                   background: isState === item.id 
-                    ? "linear-gradient( to top, rgb(77,77,73), rgb(121,121,113)"
-                    : isHover === item.id 
-                    ? "#4b4b46"
-                    : '',
-                    height:'77px'
+                    ? "linear-gradient( to top, #6b22ff, #df52ff)"
+                    : "linear-gradient( to top, #e5e5e5, #ffffff)",
+                  height: '79px',
                 }}
-                  className={`w-full rounded-3px flex flex-col items-center justify-end bg-gradient-to-t from-gray-323231 to-gray-545452`}
+                  className={`w-full rounded-4px flex flex-col items-center justify-end hover:filter hover:brightness-125`}
                   >
                       <img className="mt-8px ml-2px object-none h-43px" src={item.icon} alt="" />
-                      <span className={`text-13px font-spoqaMedium tracking-tight text-golden-ccc2b6 mb-6px mt-3px ${item.custom}`} >{item.text}</span>
+                <span
+                  style={{
+                    color: isState === item.id
+                      ? "#fff"
+                      : "#666"
+                  }}
+                  className={`text-13px tracking-tight mb-8px mt-1px ${item.custom}`}
+                >{item.text}</span>
                   </div>
               </div>   
             </button>

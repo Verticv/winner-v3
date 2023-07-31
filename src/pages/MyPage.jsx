@@ -1,7 +1,7 @@
 import Navbar from '../components/mainPage/NavBar';
 import QuickMenu from 'components/QuickMenu';
-import React, { useState, useEffect } from 'react';
-import MyPageBanner from '../images/myPage/mypage_banner_v2.png';
+import React, { useState } from 'react';
+import MyPageBanner from '../images/myPage/mypage_banner.png';
 import LeftMenu from 'components/myPage/LeftMenu';
 import Footer from 'components/mainPage/Footer';
 import { Route } from 'react-router-dom';
@@ -28,13 +28,22 @@ import Icon5 from '../images/myPage/leftMenu/menuIcons/menuL_icon_05.png';
 import Icon6 from '../images/myPage/leftMenu/menuIcons/menuL_icon_06.png';
 import Icon7 from '../images/myPage/leftMenu/menuIcons/menuL_icon_07.png';
 import Icon8 from '../images/myPage/leftMenu/menuIcons/menuL_icon_08.png';
+import IconHighlight1 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_01.png';
+import IconHighlight2 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_02.png';
+import IconHighlight3 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_03.png';
+import IconHighlight4 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_04.png';
+import IconHighlight5 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_05.png';
+import IconHighlight6 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_06.png';
+import IconHighlight7 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_07.png';
+import IconHighlight8 from '../images/myPage/leftMenu/menuIcons/menuL_on_icon_08.png';
 
+import NoticeBanner from "components/mainPage/NoticeBanner";
 const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const LeftMenuArray = [
     {
       text: '베팅내역',
       icon: Icon1,
-      iconHighlight: Icon1,
+      iconHighlight: IconHighlight1,
       id: 0,
       path: '/mypage/bet-history',
       mainPath: '/mypage/bet-history',
@@ -42,7 +51,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '충/환전내역',
       icon: Icon2,
-      iconHighlight: Icon2,
+      iconHighlight: IconHighlight2,
       id: 1,
       path: '/mypage/transaction/charge-history',
       sub1: '충전내역',
@@ -53,7 +62,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '총판페이지',
       icon: Icon3,
-      iconHighlight: Icon3,
+      iconHighlight: IconHighlight3,
       id: 2,
       path: '/distributor-page',
       mainPath: '/distributor-page',
@@ -61,7 +70,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '윈루즈정산',
       icon: Icon4,
-      iconHighlight: Icon4,
+      iconHighlight: IconHighlight4,
       id: 3,
       path: '/mypage/win-lose-settlement',
       mainPath: '/mypage/win-lose-settlement',
@@ -69,7 +78,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '쿠폰관리',
       icon: Icon5,
-      iconHighlight: Icon5,
+      iconHighlight: IconHighlight5,
       id: 4,
       path: '/mypage/coupon/coupon-usage',
       sub1: '쿠폰사용',
@@ -83,7 +92,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '포인트',
       icon: Icon6,
-      iconHighlight: Icon6,
+      iconHighlight: IconHighlight6,
       id: 5,
       path: '/mypage/points/points-apply',
       sub1: '포인트전환신청',
@@ -96,7 +105,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '쪽지관리',
       icon: Icon7,
-      iconHighlight: Icon7,
+      iconHighlight: IconHighlight7,
       id: 6,
       path: '/mypage/inbox',
       inboxCount: '3',
@@ -105,7 +114,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '회원정보수정',
       icon: Icon8,
-      iconHighlight: Icon8,
+      iconHighlight: IconHighlight8,
       id: 7,
       path: '/mypage/edit-info',
       mainPath: '/mypage/edit-info',
@@ -116,30 +125,31 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const [selectedTab, setSelectedTab] = useState(location.pathname);
   const [selectedSubTab, setSelectedSubTab] = useState(location.pathname);
   console.log('selectedTab', selectedTab, selectedSubTab);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+  
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+ 
+
+
   return (
-    <div className='relative flex flex-col justify-center items-center limit1920:overflow-x-hidden bg-gray-1e1e1e'>
-      <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center bg-black'>
+    <div className='relative flex flex-col justify-center items-center'
+      style={{
+          background: "linear-gradient(to right, #b644c4, #351894)"
+      }}
+    >
+    <div
+        style={{ top: "125px",background: "linear-gradient(to right, #b644c4, #351894)" }}
+        className="w-full absolute flex flex-col justify-center items-start limit:items-center "
+      >
+      <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
-      <div
-        style={{ width: '1496px', top: scrollPosition > 100 ? '235px' : '428px' }}
-        className={`fixed z-20 flex justify-end`}
-      >
-        <QuickMenu scrollPosition={scrollPosition} />
+      <div className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center">
+        <NoticeBanner />
       </div>
-      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
+        <div className='flex flex-col items-start limit:items-center w-full h-full'
+         style={{
+            background: "linear-gradient(to right, #b644c4, #351894)"
+        }}>
         <Route path='/mypage/bet-history'>
           <DirectoryComponent
             setSelectedTab={setSelectedTab}
@@ -252,19 +262,13 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             branch2='회원정보수정'
             mainPath='/mypage/edit-info'
           />
-        </Route>
+        </Route> 
 
-        <div style={{height:'125px'}} className='w-default relative'>
+        <div style={{height:'136px'}} className='relative'>
           <img className='z-10' src={MyPageBanner} alt='' />
-          <div
-            className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
-            style={{ color: '#ffdfbd' }}
-          >
-            <span className='leading-none mt-2px'>마이페이지</span>
-          </div>
         </div>
 
-        <div className='flex mt-20px w-default z-30'>
+        <div className='flex mt-9px w-default z-30'>
           <div>
             <LeftMenu
               selectedTab={selectedTab}
@@ -316,12 +320,16 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               <EditInfo />
             </Route>
             <Route path='*'></Route>
-          </div>
+          </div> 
         </div>
 
         <div>
           <Footer />
         </div>
+        <div>
+          <QuickMenu />
+        </div>
+      </div>
       </div>
     </div>
   );
