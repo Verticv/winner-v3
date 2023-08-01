@@ -162,6 +162,7 @@ const EntireAccordion = () => {
           // height: "686px",
           borderRadius: "6px",
           boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
+          marginLeft: "4px",
         }}
         className="flex items-center p-px"
       >
@@ -169,15 +170,22 @@ const EntireAccordion = () => {
           style={{ background: "#420572", width: "638px", borderRadius: "4px" }}
           className="items-center "
         >
-          <div className="flex items-center ml-4px mt-4px mb-5px">
+          <div
+            className="flex items-center ml-4px mt-4px mb-5px"
+            style={{
+              overflowX: "auto",
+              whiteSpace: "nowrap",
+            }}
+          >
             <div
               style={{
                 borderRadius: "4px",
+                flexShrink: 0,
                 background: activeId === 0 ? "#762ead" : "#f3cbff",
                 borderBottom:
                   activeId === 0 ? "3px solid #ffc900" : "3px solid #f3cbff",
               }}
-              className="flex w-54px h-36px items-center cursor-pointer "
+              className="flex w-54px h-36px items-center cursor-pointer relative"
               onClick={() => setActiveId(0)}
             >
               <img
@@ -191,6 +199,7 @@ const EntireAccordion = () => {
                   height: "19px",
                   background: "#f04281",
                   borderRadius: "9px",
+                  zIndex: 10,
                 }}
                 className="flex items-center justify-center absolute ml-29px mb-31px"
               >
@@ -204,6 +213,7 @@ const EntireAccordion = () => {
                 style={{
                   background: activeId === content.id ? "#762ead" : "#f3cbff",
                   borderRadius: "4px",
+                  flexShrink: 0,
                   width: content.width,
                   borderBottom:
                     activeId === content.id

@@ -153,7 +153,7 @@ import CenterAccordionButton from "./CenterAccordionButton";
 //   },
 // ];
 
-const CenterAccordion = () => {
+const CenterAccordion = ({ setEnglandActive }) => {
   const data = useSelector((state) => state?.nonLive?.data);
   const state = useSelector((state) => state);
   console.log("state :>> ", state);
@@ -169,6 +169,7 @@ const CenterAccordion = () => {
               date={item.date}
               icon2={item.icon}
               cards={item.teams}
+              setEnglandActive={setEnglandActive}
               // lastItem={lastItem}
             />
           );
