@@ -5,7 +5,7 @@ import Dn from "../../../images/nonLivePage/LeftAccordion/Card/Dn.png";
 import icon1 from "../../../images/nonLivePage/CenterAccordion/Icon1.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   setBetSlipData,
   setLiveGameData,
@@ -18,7 +18,7 @@ import {
 } from "reducers/nonLive-reducer";
 import arrowActive from "../../../images/nonLivePage/CenterAccordion/ArrowActive.png";
 
-const CenterAccordionContent = ({ card, lastObject }) => {
+const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
   const dispatch = useDispatch();
   const [leftActive, setLeftActive] = useState(false);
   const [centerActive, setCenterActive] = useState(false);
@@ -30,10 +30,27 @@ const CenterAccordionContent = ({ card, lastObject }) => {
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
+  const [idSelected, setIdSelected] = useState([]);
 
   useEffect(() => {
-    console.log("card", card);
+    console.log("idSelected", idSelected);
+  }, [idSelected, setIdSelected]);
+
+  const favoritePreMatch = useSelector(
+    (state) => state?.nonLive?.favoritePreMatch
+  );
+
+  const isIdInArray = (id) => {
+    return favoritePreMatch.includes(id);
+  };
+
+  useEffect(() => {
+    console.log("favoritePreMatch888888888888888888888888888888888");
+    // console.log("favoritePreMatch", favoritePreMatch);
+    favoritePreMatch.map((el) => console.log("favoritePreMatch", el.id));
+    console.log("favoritePreMatch888888888888888888888888888888888");
   });
+
   const addFavoriteForPreMatch = (title, items) => {
     if (title === "프리미어리그") {
       return dispatch(
@@ -162,6 +179,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
               if (!activeStar) {
+                isIdInArray(card.id);
                 addFavoriteForPreMatch(card.type, {
                   id: e.target.id,
                   team1: card.team1,
@@ -405,6 +423,7 @@ const CenterAccordionContent = ({ card, lastObject }) => {
           onClick={() => {
             dispatch(setLiveGameData(card));
             setLastItemActive((prev) => !prev);
+            setEnglandActive(false);
           }}
         >
           <p

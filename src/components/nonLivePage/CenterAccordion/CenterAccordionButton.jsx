@@ -7,7 +7,13 @@ import icon from "../../../images/nonLivePage/CenterAccordion/Icon.png";
 
 // import AccordionContent1 from "./AccordionContent1";
 
-const CenterAccordionButton = ({ title, date, icon2, cards }) => {
+const CenterAccordionButton = ({
+  title,
+  date,
+  icon2,
+  cards,
+  setEnglandActive,
+}) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
 
@@ -119,6 +125,7 @@ const CenterAccordionButton = ({ title, date, icon2, cards }) => {
               key={item.id}
               card={item}
               lastObject={lastObject}
+              setEnglandActive={setEnglandActive}
             />
           ))}
         </div>

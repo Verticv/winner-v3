@@ -149,7 +149,14 @@ const Tabs = ({ active, setActive }) => {
   };
 
   return (
-    <div style={{ display: "flex", position: "relative", marginTop: "10px" }}>
+    <div
+      style={{
+        display: "flex",
+        position: "relative",
+        marginTop: "10px",
+        width: "640px",
+      }}
+    >
       <button
         className="leftArrow"
         style={{
@@ -266,7 +273,7 @@ const Tabs = ({ active, setActive }) => {
                   position: "absolute",
                   //   background: "#191920",
                   top: "-3px",
-                  right: "30px",
+                  right: "23px",
                   //   boxShadow: "rgb(25, 25, 28) 2.4875px 0px 7px 4px",
                   boxShadow: "rgb(120,47,173) 4.4875px 0px 15px 2px",
                   // boxShadow: "rgb(120, 47, 173) 0.4875px -3px 9px 5px",

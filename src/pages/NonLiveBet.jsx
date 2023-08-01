@@ -3,13 +3,14 @@ import Navbar from "components/mainPage/NavBar";
 import OverlayBackground1 from "../images/overlay_background_1.png";
 import OverlayBackground2 from "../images/overlay_background_2.png";
 import NoticeBanner from "components/mainPage/NoticeBanner";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MainTabs from "components/nonLivePage/MainTabs/MainTabs";
 import LeftAccordion from "components/nonLivePage/LeftAccordion/LeftAccordion";
 import Search from "components/nonLivePage/Search/Search";
 import CenterComponent from "components/nonLivePage/CenterComponent/CenterComponent";
 import CenterAccordion from "components/nonLivePage/CenterAccordion/CenterAccordion";
 import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandComponent";
+import EnglandComponent2 from "components/nonLivePage/EnglandComponent/EnglandComponent2";
 import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
 import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
 // import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpComponent";
@@ -19,6 +20,11 @@ import { useSelector } from "react-redux";
 
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   const [active, setActive] = useState(0);
+  const [englandActive, setEnglandActive] = useState(true);
+
+  useEffect(() => {
+    console.log("englandActive", englandActive);
+  }, [englandActive, setEnglandActive]);
   const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
   console.log("state :>> ", liveGameData);
   return (
@@ -72,39 +78,77 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           >
             <PoupUpComponent />
           </div> */}
-          <div>
+          <div
+            style={{
+              overflowY: "auto",
+              flexShrink: 0,
+              height: "730px",
+            }}
+          >
             <Search />
             <LeftAccordion />
           </div>
-          <div>
+          <div
+            style={{
+              overflowY: "auto",
+              flexShrink: 0,
+              height: "730px",
+            }}
+          >
             <Tabs active={active} setActive={setActive} />
             {/*  */}
             <div style={{ width: "650px" }}>
               {active === 0 ? (
                 <>
-                  <CenterComponent />
-                  <CenterAccordion />
+                  <CenterComponent setEnglandActive={setEnglandActive} />
+                  <CenterAccordion setEnglandActive={setEnglandActive} />
                 </>
               ) : active === 1 ? (
                 <>
-                  <CenterComponent />
-                  <CenterAccordion />
+                  <CenterComponent setEnglandActive={setEnglandActive} />
+                  <CenterAccordion setEnglandActive={setEnglandActive} />
                 </>
               ) : (
                 <>
-                  <CenterComponent />
-                  <CenterAccordion />
+                  <CenterComponent setEnglandActive={setEnglandActive} />
+                  <CenterAccordion setEnglandActive={setEnglandActive} />
                 </>
               )}
             </div>
             {/* <CenterComponent />
             <CenterAccordion /> */}
           </div>
-          <div>
-            <EnglandComponent />
-            {liveGameData.length > 0 && <EntireAccordion />}
+          <div
+            style={{
+              overflowY: "auto",
+              flexShrink: 0,
+              height: "730px",
+              marginLeft: englandActive ? "-5px" : "-4px",
+              marginRight: englandActive ? "5px" : "",
+            }}
+          >
+            {englandActive ? (
+              <EnglandComponent2
+                englandActive={englandActive}
+                setEnglandActive={setEnglandActive}
+              />
+            ) : (
+              <>
+                <EnglandComponent
+                  englandActive={englandActive}
+                  setEnglandActive={setEnglandActive}
+                />
+                {liveGameData.length > 0 && <EntireAccordion />}
+              </>
+            )}
           </div>
-          <div>
+          <div
+            style={{
+              overflowY: "auto",
+              flexShrink: 0,
+              height: "730px",
+            }}
+          >
             <RightComponent />
           </div>
         </div>

@@ -3,6 +3,7 @@ import iconStar from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
 import img1 from "../../../images/nonLivePage/LeftAccordion/content1/1.png";
 import icon from "../../../images/nonLivePage/LeftAccordion/content/Icon.png";
 import AccordionCard from "./AccordionCard";
+import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
 // import AccordionCard1 from "./AccordionCard1";
 // import AccordionCard2 from "./AccordionCard2";
 import { useSelector, useDispatch } from "react-redux";
@@ -76,12 +77,11 @@ const AccordionContent = () => {
       </div>
 
       <div
-        onClick={() => setShowCard((prev) => !prev)}
         style={{
           background: "#ffffff",
           borderRadius: "4px",
         }}
-        className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
+        className="flex items-center mx-2px h-35px mb-2px"
       >
         <img className="ml-6px mt-7px mb-6px" src={icon} alt="img" />
         <p
@@ -94,6 +94,17 @@ const AccordionContent = () => {
         >
           프리미어리그
         </p>
+        <img
+          src={Arrow}
+          alt=""
+          onClick={() => {
+            setShowCard((prev) => !prev);
+          }}
+          style={{ color: "#444444" }}
+          className={`object-none ml-150px cursor-pointer ${
+            showCard ? "transform rotate-180" : ""
+          }`}
+        />
       </div>
       {showCard && favoritePreMatch[0]?.items?.length !== 0 && (
         <>
@@ -119,17 +130,25 @@ const AccordionContent = () => {
         </>
       )}
       <div
-        onClick={() => setShowCard1((prev) => !prev)}
         style={{
           background: "#ffffff",
           borderRadius: "4px",
         }}
-        className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer"
+        className="flex items-center mx-2px rounded-lg h-35px mb-2px"
       >
         <img className="ml-6px" src={icon} alt="img" />
         <p style={{ color: "#444444" }} className="text-12px ml-5px">
           라리가
         </p>
+        <img
+          src={Arrow}
+          alt=""
+          onClick={() => setShowCard1((prev) => !prev)}
+          style={{ color: "#444444" }}
+          className={`object-none ml-184px cursor-pointer ${
+            showCard1 ? "transform rotate-180" : ""
+          }`}
+        />
       </div>
       {/* </div> */}
       {showCard1 && favoriteLaLiga[0]?.items?.length !== 0 && (
@@ -155,12 +174,11 @@ const AccordionContent = () => {
       {bundesliga[0]?.items?.length !== 0 && (
         <>
           <div
-            onClick={() => setShowCard2((prev) => !prev)}
             style={{
               background: "#ffffff",
               borderRadius: "4px",
             }}
-            className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
+            className="flex items-center mx-2px h-35px mb-2px"
           >
             <img className="ml-6px mt-7px mb-6px" src={icon} alt="img" />
             <p
@@ -173,6 +191,15 @@ const AccordionContent = () => {
             >
               분데스리가
             </p>
+            <img
+              src={Arrow}
+              alt=""
+              onClick={() => setShowCard2((prev) => !prev)}
+              style={{ color: "#444444" }}
+              className={`object-none ml-162px cursor-pointer ${
+                showCard2 ? "transform rotate-180" : ""
+              }`}
+            />
           </div>
           {showCard2 && bundesliga[0]?.items?.length !== 0 && (
             <>

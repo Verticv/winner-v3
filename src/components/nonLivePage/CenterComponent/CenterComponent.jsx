@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/CenterComponent/Icon.png";
 import icon1 from "../../../images/nonLivePage/CenterComponent/star.png";
 import icon2 from "../../../images/nonLivePage/CenterComponent/Icon2.png";
+import icon_2 from "../../../images/nonLivePage/CenterComponent/Icon_2.png";
 import icon3 from "../../../images/nonLivePage/CenterComponent/Icon3.png";
+import icon_3 from "../../../images/nonLivePage/CenterComponent/Icon_3.png";
 import icon4 from "../../../images/nonLivePage/CenterComponent/Icon4.png";
+import icon_4 from "../../../images/nonLivePage/CenterComponent/Icon_4.png";
 import CustomDropdown1 from "./CustomDropdown1";
 
-const CenterComponent = () => {
+const CenterComponent = ({ setEnglandActive }) => {
   const [activeId, setActiveId] = useState(0);
+  const [active, setActive] = useState(0);
   return (
     <>
       <div
@@ -29,7 +33,7 @@ const CenterComponent = () => {
         >
           <img className="ml-2px" src={icon} alt="img" />
           <p
-            style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+            style={{ color: "#eeeeee", letterSpacing: "-0.039em" }}
             className="ml-5px text-13px mt-8px mb-6px font-spoqaBold"
           >
             다폴더 보너스 추가 배당
@@ -44,17 +48,24 @@ const CenterComponent = () => {
         <div className="flex mt-5px ml-7px mr-7px mb-7px">
           <div
             style={{
-              background: "linear-gradient(to top, #4f3a7a, #e597ff)",
+              background:
+                active === 2
+                  ? "linear-gradient(to top, #652347, #ff85b1)"
+                  : "linear-gradient(to top, #4f3a7a, #e597ff)",
               width: "208px",
               height: "34px",
               borderRadius: "5px",
               boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
             }}
-            className="rounded-lg p-px mr-2px"
+            className="rounded-lg p-px mr-2px cursor-pointer"
+            onClick={() => setActive(2)}
           >
             <div
               style={{
-                background: "linear-gradient(to top, #6b22ff, #df52ff)",
+                background:
+                  active === 2
+                    ? "linear-gradient(to top, #911c5c, #f04281)"
+                    : "linear-gradient(to top, #6b22ff, #df52ff)",
                 width: "206px",
                 borderRadius: "4px",
                 textShadow: "1px 0.866px 0px rgba(0, 0, 0, 0.5)",
@@ -93,17 +104,24 @@ const CenterComponent = () => {
           </div>
           <div
             style={{
-              background: "linear-gradient(to top, #4f3a7a, #e597ff)",
+              background:
+                active === 1
+                  ? "linear-gradient(to top, #652347, #ff85b1)"
+                  : "linear-gradient(to top, #4f3a7a, #e597ff)",
               width: "207px",
               height: "34px",
               borderRadius: "5px",
               boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
             }}
-            className="rounded-lg p-px mr-2px"
+            className="rounded-lg p-px mr-2px cursor-pointer"
+            onClick={() => setActive(1)}
           >
             <div
               style={{
-                background: "linear-gradient(to top, #6b22ff, #df52ff)",
+                background:
+                  active === 1
+                    ? "linear-gradient(to top, #911c5c, #f04281)"
+                    : "linear-gradient(to top, #6b22ff, #df52ff)",
                 width: "205px",
                 borderRadius: "4px",
                 textShadow: "1px 0.866px 0px rgba(0, 0, 0, 0.5)",
@@ -139,7 +157,10 @@ const CenterComponent = () => {
           </div>
           <div
             style={{
-              background: "linear-gradient(to top, #652347, #ff85b1)",
+              background:
+                active === 0
+                  ? "linear-gradient(to top, #652347, #ff85b1)"
+                  : "linear-gradient(to top, #4f3a7a, #e597ff)",
               width: "207px",
               height: "34px",
               borderRadius: "5px",
@@ -149,12 +170,16 @@ const CenterComponent = () => {
           >
             <div
               style={{
-                background: "linear-gradient(to top, #911c5c, #f04281)",
+                background:
+                  active === 0
+                    ? "linear-gradient(to top, #911c5c, #f04281)"
+                    : "linear-gradient(to top, #6b22ff, #df52ff)",
                 width: "205px",
                 borderRadius: "4px",
                 textShadow: "1px 0.866px 0px rgba(0, 0, 0, 0.5)",
               }}
-              className="flex items-center justify-between rounded-lg h-32px"
+              className="flex items-center justify-between rounded-lg h-32px cursor-pointer"
+              onClick={() => setActive(0)}
             >
               <div className="flex ml-12px">
                 <img className="object-none" src={icon1} alt="img" />
@@ -203,7 +228,14 @@ const CenterComponent = () => {
           className="ml-10px mb-4px text-12px font-malgun"
         >
           ※ 스포츠 베팅규정은{" "}
-          <span style={{ color: "#a5eefe", borderBottom: "1px solid #a5eefe" }}>
+          <span
+            style={{
+              color: "#a5eefe",
+              borderBottom: "1px solid #a5eefe",
+              cursor: "pointer",
+            }}
+            onClick={() => setEnglandActive(true)}
+          >
             ‘베팅규정안내’
           </span>
           를 열람하시면 확인이 가능합니다.
@@ -234,7 +266,11 @@ const CenterComponent = () => {
             className="flex items-center rounded-full mr-5px cursor-pointer"
             onClick={() => setActiveId(0)}
           >
-            <img className="ml-8px object-none" src={icon2} alt="img" />
+            <img
+              className="ml-8px object-none"
+              src={activeId === 0 ? icon2 : icon_2}
+              alt="img"
+            />
             <p
               style={{ color: "#ffffff" }}
               className="-ml-7px mt-5px mb-9px tracking-tight text-12px"
@@ -255,10 +291,20 @@ const CenterComponent = () => {
             className="flex items-center rounded-full mr-6px cursor-pointer"
             onClick={() => setActiveId(1)}
           >
-            <img className="object-none ml-17px" src={icon3} alt="img" />
+            <img
+              style={{
+                marginLeft: activeId === 1 ? "9px" : "17px",
+              }}
+              className="object-none"
+              src={activeId === 1 ? icon_3 : icon3}
+              alt="img"
+            />
             <p
-              style={{ color: "#ffffff" }}
-              className="ml-2px mt-5px mb-9px tracking-tight text-12px"
+              style={{
+                color: "#ffffff",
+                marginLeft: activeId === 1 ? "-6px" : "2px",
+              }}
+              className="mt-5px mb-9px tracking-tight text-12px"
             >
               인기순
             </p>
@@ -276,10 +322,21 @@ const CenterComponent = () => {
             className="flex items-center rounded-full cursor-pointer"
             onClick={() => setActiveId(2)}
           >
-            <img className="object-none ml-17px" src={icon4} alt="img" />
+            <img
+              style={{
+                marginLeft: activeId === 2 ? "9px" : "17px",
+              }}
+              className="object-none"
+              src={activeId === 2 ? icon_4 : icon4}
+              alt="img"
+            />
             <p
-              style={{ color: "#ffffff", fontFamily: "MalgunGothicRegular" }}
-              className="ml-2px mt-5px mb-9px tracking-tight text-12px"
+              style={{
+                color: "#ffffff",
+                fontFamily: "MalgunGothicRegular",
+                marginLeft: activeId === 2 ? "-6px" : "2px",
+              }}
+              className="mt-5px mb-9px tracking-tight text-12px"
             >
               리그순
             </p>

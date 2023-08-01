@@ -4,6 +4,7 @@ import { ko } from "date-fns/locale";
 import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpComponent";
 import icon from "../../../images/nonLivePage/RightComponent/icon.png";
 import icon1 from "../../../images/nonLivePage/RightComponent/Icon1.png";
+import icon_1 from "../../../images/nonLivePage/RightComponent/Icon_1.png";
 import icon2 from "../../../images/nonLivePage/RightComponent/Icon2.png";
 import icon2Active from "../../../images/nonLivePage/RightComponent/icon2-active.png";
 import icon3 from "../../../images/nonLivePage/RightComponent/Icon3.png";
@@ -96,12 +97,15 @@ const RightComponent = () => {
         >
           <img
             className="ml-21px"
-            src={isBetSlipActive ? icon1 : icon1}
+            src={isBetSlipActive ? icon1 : icon_1}
             alt="icon"
           />
           <p
-            style={{ color: isBetSlipActive ? "white" : "#5e399a" }}
-            className="ml-2px -mt-3px text-14px font-MalgunGothicBold tracking-tight"
+            style={{
+              color: isBetSlipActive ? "white" : "#5e399a",
+              marginLeft: isBetSlipActive ? "2px" : "-2px",
+            }}
+            className="-mt-3px text-14px font-MalgunGothicBold tracking-tight"
           >
             베팅슬립
           </p>
@@ -164,8 +168,11 @@ const RightComponent = () => {
             alt="icon"
           />
           <p
-            style={{ color: isBetSlipActive ? "#5e399a" : "white" }}
-            className="ml-7px -mt-3px text-14px font-MalgunGothicBold tracking-tight"
+            style={{
+              color: isBetSlipActive ? "#5e399a" : "white",
+              marginLeft: isBetSlipActive ? "7px" : "3px",
+            }}
+            className="-mt-3px text-14px font-MalgunGothicBold tracking-tight"
           >
             베팅내역
           </p>
@@ -473,7 +480,7 @@ const RightComponent = () => {
                     베팅금액
                   </p>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center relative">
                   <div
                     style={{
                       background:

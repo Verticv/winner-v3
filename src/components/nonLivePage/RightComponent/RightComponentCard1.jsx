@@ -1,7 +1,7 @@
 import React from "react";
 import icon6 from "../../../images/nonLivePage/RightComponent/Icon5.png";
 import icon7 from "../../../images/nonLivePage/RightComponent/X.png";
-import img from "../../../images/nonLivePage/RightComponent/img.png";
+import img from "../../../images/nonLivePage/RightComponent/Icon8.png";
 import "./style.css";
 import { useDispatch } from "react-redux";
 import { deleteBetSlipCardById } from "reducers/nonLive-reducer";
