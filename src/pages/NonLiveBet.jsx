@@ -152,7 +152,6 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             <RightComponent />
           </div>
         </div>
-
         <Footer />
       </div>
     </>

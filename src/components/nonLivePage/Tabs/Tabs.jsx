@@ -21,6 +21,8 @@ import icon7 from "../../../images/nonLivePage/Tabs/Icon7.png";
 import icon8 from "../../../images/nonLivePage/Tabs/Icon8.png";
 import icon9 from "../../../images/nonLivePage/Tabs/Icon9.png";
 import icon10 from "../../../images/nonLivePage/Tabs/Icon10.png";
+// import horizontalsScroll from "./horizontalsScroll.js";
+// import { ta } from "date-fns/locale";
 
 const tabs = [
   {
@@ -139,6 +141,12 @@ const Tabs = ({ active, setActive }) => {
   // eslint-disable-next-line no-unused-vars
   // const [active, setActive] = useState(0);
 
+  // const setActiveTab = ({ index, item }) => {
+  //   horizontalsScroll(tabs, "t-sub", "scroll-wrapper", index);
+  //   //setSelectedSection(item.section)
+  //   setActive(item.id);
+  // };
+
   const slideLeft = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 100;
@@ -147,7 +155,10 @@ const Tabs = ({ active, setActive }) => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 100;
   };
-
+  const slideRight1 = () => {
+    var slider = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft + 100;
+  };
   return (
     <div
       style={{
@@ -184,8 +195,8 @@ const Tabs = ({ active, setActive }) => {
           //   position: "relative",
         }}
       >
-        <div style={{ display: "flex", height: "48px" }}>
-          {tabs.map((tab) => (
+        <div style={{ display: "flex", height: "48px" }} id="scroll-wrapper">
+          {tabs.map((tab, index) => (
             <div
               style={{
                 background: `${
@@ -201,9 +212,17 @@ const Tabs = ({ active, setActive }) => {
                 boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
                 flexShrink: 0,
               }}
+              onClick={slideRight1}
             >
               <button
-                onClick={() => setActive(tab.id)}
+                id="slider1"
+                // onPointerUp={() => {
+                //   setActiveTab({ index, tab });
+                // }}
+                onClick={() => {
+                  setActive(tab.id);
+                }}
+                // id={`t-sub${index}`}
                 style={{
                   background: `${
                     active === tab.id
@@ -216,6 +235,8 @@ const Tabs = ({ active, setActive }) => {
                   display: "flex",
                   // justifyContent: "center",
                   alignItems: "center",
+                  overflowX: "auto",
+                  whiteSpace: "nowrap",
                 }}
               >
                 <img
