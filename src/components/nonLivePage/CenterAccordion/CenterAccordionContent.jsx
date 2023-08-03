@@ -40,16 +40,36 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
     (state) => state?.nonLive?.favoritePreMatch
   );
 
-  const isIdInArray = (id) => {
-    return favoritePreMatch.includes(id);
-  };
+  const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
+
+  const bundesliga = useSelector((state) => state?.nonLive?.bundesliga);
 
   useEffect(() => {
-    console.log("favoritePreMatch888888888888888888888888888888888");
-    // console.log("favoritePreMatch", favoritePreMatch);
-    favoritePreMatch.map((el) => console.log("favoritePreMatch", el.id));
-    console.log("favoritePreMatch888888888888888888888888888888888");
-  });
+    if (card.type === "프리미어리그") {
+      let card_index = favoritePreMatch.findIndex((el) => +el.id === card.id);
+      if (card_index === -1) {
+        setActiveStar(false);
+      }
+    }
+  }, [favoritePreMatch, setActiveStar, card.id, card.type]);
+
+  useEffect(() => {
+    if (card.type === "라리가") {
+      let card_index = favoriteLaLiga.findIndex((el) => +el.id === card.id);
+      if (card_index === -1) {
+        setActiveStar(false);
+      }
+    }
+  }, [favoriteLaLiga, setActiveStar, card.id, card.type]);
+
+  useEffect(() => {
+    if (card.type === "분데스리가") {
+      let card_index = bundesliga.findIndex((el) => +el.id === card.id);
+      if (card_index === -1) {
+        setActiveStar(false);
+      }
+    }
+  }, [bundesliga, setActiveStar, card.id, card.type]);
 
   const addFavoriteForPreMatch = (title, items) => {
     if (title === "프리미어리그") {
@@ -179,7 +199,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
               if (!activeStar) {
-                isIdInArray(card.id);
                 addFavoriteForPreMatch(card.type, {
                   id: e.target.id,
                   team1: card.team1,

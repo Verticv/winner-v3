@@ -167,7 +167,11 @@ const EntireAccordion = () => {
         className="flex items-center p-px"
       >
         <div
-          style={{ background: "#420572", width: "638px", borderRadius: "4px" }}
+          style={{
+            background: "#420572",
+            width: "638px",
+            borderRadius: "4px",
+          }}
           className="items-center "
         >
           <div
