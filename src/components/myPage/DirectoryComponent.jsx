@@ -53,15 +53,15 @@ const DirectoryComponent = ({
     }
 
     return (
-        <div className="flex items-center h-20px w-default my-20px space-x-10px">
+        <div className="flex items-center h-20px w-default mt-20px mb-11px space-x-10px">
             <img className="object-none cursor-pointer" src={HomeIcon} alt="" onClick={() => history.push("/")} />
             <img className="object-none cursor-none mb-px" src={RightArrow} alt=""/>
             <span 
                 className={`${
                     !branch2 
                         ? "font-bold" 
-                        : ""
-                    }  text-13px text-eeeeee tracking-Stightest  cursor-pointer`}
+                        : "opacity-60"
+                    } text-13px text-eeeeee tracking-Stightest cursor-pointer`}
                 style={{ marginLeft: '9px'}}
                 onClick={() => {branch1Clicked(branch1)}}
             >
@@ -74,7 +74,7 @@ const DirectoryComponent = ({
                         className={`${
                             !branch3 
                             ? "font-bold" 
-                            : ""
+                            : "opacity-60"
                             } text-13px  text-eeeeee tracking-Stightest cursor-pointer`}
                         
                         onClick={() => branch2Clicked(mainPath)}

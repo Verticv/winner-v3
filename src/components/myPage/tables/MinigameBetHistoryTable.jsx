@@ -8,8 +8,8 @@ const MinigameBetHistoryTable = ({array, checkedState, setCheckedState, isPopupO
 
         const detailButton = (
             <button 
-                style={{height:"29px", width: "72px",background: '#5d659f',color:'#ededeb',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}} 
-                className="rounded-4px text-golden-highLight font-spoqaMedium text-14px tracking-tight pt-2px hover:filter hover:brightness-125 flex-shrink-0"
+                style={{height:"30px", width: "72px",background: '#5d659f',color:'#ededeb',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}} 
+                className="rounded-4px text-golden-highLight font-spoqaMedium text-13px tracking-tight pt-2px hover:filter hover:brightness-125 flex-shrink-0"
             >
                 상세보기
             </button>

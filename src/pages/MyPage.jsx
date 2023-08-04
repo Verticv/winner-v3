@@ -265,10 +265,12 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         </Route> 
 
         <div style={{height:'136px'}} className='relative'>
-          <img className='z-10' src={MyPageBanner} alt='' />
+            <img className='z-10' src={MyPageBanner} alt='' />
+            <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex items-center justify-center">
+              <span className="leading-none text-white -mt-2px" >마이페이지</span></div>
         </div>
 
-        <div className='flex mt-9px w-default z-30'>
+        <div className='flex mt-18px w-default z-30'>
           <div>
             <LeftMenu
               selectedTab={selectedTab}

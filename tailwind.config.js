@@ -144,6 +144,8 @@ module.exports = {
         card: "5px 5px 2px 0 rgba(0,0,0,0.75)",
         plain10: "0px 1px 1px 0px rgba(0, 0, 0, 0.6)",
         plain11: "0px 1px 4px 0px rgba(0, 0, 0, 0.5)",
+        panel: "0px 2px 2px 0px rgba(0, 0, 0, 0.4)",
+        panelBtn: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
       },
       screens: {
         limit: "1261px",

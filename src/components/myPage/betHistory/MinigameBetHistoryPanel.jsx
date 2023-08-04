@@ -170,7 +170,7 @@ const MinigameBetHistoryPanel = ({
           {choice === "even" ? "짝" : "우"}
         </div>
         <div
-          style={{ width: isPopup ? "116px" : "108px",color:result === "win"?'#33a1e9':result === "lose"?'#c8c8c8':result === "cancel"?'#4c98ff':'666666'}}
+          style={{ width: isPopup ? "116px" : "108px",color:result === "win"?'#f04281':result === "lose"?'#666666':result === "cancel"?'#33a1e9':'#666666'}}
         >
           {result === "win"
             ? "승"
@@ -185,7 +185,7 @@ const MinigameBetHistoryPanel = ({
   );
 
   const Card = ({ team1, team2, choice, result }) => (
-    <div className="w-full rounded-4px overflow-hidden shadow-subNavbar border-2 mt-8px" style={{borderColor:'#6852a7'}}>
+    <div className="w-full rounded-4px overflow-hidden shadow-panel border-2 mt-8px" style={{borderColor:'#6852a7'}}>
       <div
         className="flex items-center justify-between h-54px w-full pl-17px pr-19px"
          style={{ background: '#6852a7' }}
@@ -496,7 +496,7 @@ const MinigameBetHistoryPanel = ({
                   setAttachedArray && addEntryClick();
                 }}
                 style={{width:'110px',background:'#8458cd'}}
-                className="flex items-center justify-center h-73px rounded-4px  hover:filter hover:brightness-125 shadow-link"
+                className="flex items-center justify-center h-73px rounded-8px  hover:filter hover:brightness-125 shadow-panelBtn"
               >
                 <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-8px cursor-pointer">
                   <span className="tracking-tight text-14px text-white text-shadow-5">
@@ -510,7 +510,7 @@ const MinigameBetHistoryPanel = ({
               <button
                 onClick={() => setAttachedArray && handleRemoveItem(id)}
                 style={{width:'110px',background:'#646eb6'}}
-                className="flex items-center justify-center h-73px rounded-4px  hover:filter hover:brightness-125 shadow-link"
+                className="flex items-center justify-center h-73px rounded-8px  hover:filter hover:brightness-125 shadow-panelBtn"
               >
                 <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-8px cursor-pointer">
                   <span className="tracking-tight text-14px text-white text-shadow-5">

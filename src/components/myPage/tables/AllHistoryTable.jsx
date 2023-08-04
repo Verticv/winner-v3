@@ -8,8 +8,8 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
 
         const detailButton = (
             <button 
-                style={{height:"29px", width: "72px",background: '#5d659f',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',color:'#ededeb'}} 
-                className="rounded-4px font-medium text-14px tracking-tight pt-2px flex-shrink-0 hover:filter hover:brightness-125"
+                style={{height:"30px", width: "72px",background: '#5d659f',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',color:'#ededeb'}} 
+                className="rounded-4px font-medium text-13px tracking-tight pt-2px flex-shrink-0 hover:filter hover:brightness-125"
             >
                 상세보기
             </button>
@@ -31,12 +31,12 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
                         onChange={() => handleOnChange(item.id)}
                     />
                 </div>
-                <div style={{width: "72px"}} className="font-robotoRegular text-center">{item.number}</div>
-                <div style={{width: "185px"}} className="font-robotoRegular text-center">{item.time}</div>
-                <div style={{width: "140px"}} className="text-center truncate px-10px">{item.type}</div>
-                <div style={{width: "118px"}} className="text-center truncate">{item.name}</div>
-                <div style={{width: "126px"}} className="font-robotoRegular text-right pr-10px">{item.amount}</div>
-                <div style={{width: "128px", color: item.profit.includes("+") ? "#e9441d" : "#666666"}} className="font-robotoRegular text-right">{item.profit}</div>
+                <div style={{width: "72px"}} className="font-robotoRegular text-center mt-px">{item.number}</div>
+                <div style={{width: "185px"}} className="font-robotoRegular text-center mt-px">{item.time}</div>
+                <div style={{width: "140px"}} className="text-center truncate px-10px mt-px">{item.type}</div>
+                <div style={{width: "118px"}} className="text-center truncate mt-px">{item.name}</div>
+                <div style={{width: "126px"}} className="font-robotoRegular text-right pr-10px mt-px">{item.amount}</div>
+                <div style={{width: "128px", color: item.profit.includes("+") ? "#e9441d" : "#666666"}} className="font-robotoRegular text-right mt-px">{item.profit}</div>
                <div style={{width: "88px", color: item.status === "승" ? "#f04281" : "#666666"}} className="text-center">{item.status}</div>
                 <div style={{width: "72px"}} className="text-center ml-px">
                     <PopupControls buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>

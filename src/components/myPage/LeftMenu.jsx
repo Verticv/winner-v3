@@ -54,7 +54,7 @@ const LeftMenu = ({
                 pathname.includes(path)
                 ? "shadow-btn" 
                 : ""
-                  } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
+                  } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941 `} 
               style={{
                   background:
                       pathname.includes(path) ? 'linear-gradient(to right, #9d3bbb, #5423a0)' :
@@ -80,7 +80,7 @@ const LeftMenu = ({
             </div>
             <div className="w-full flex mr-18px ml-9px justify-between items-center">
               <div className="flex items-center">              
-                <label className={`font-medium text-16px cursor-pointer tracking-Stightest -mt-3px`}
+                <label className={`font-bold text-16px cursor-pointer tracking-Stightest -mt-3px`}
                 style={{ color: pathname.includes(path)?'#fff':'#594e6a' }}>{text}</label>
               </div>
           </div>
@@ -147,14 +147,15 @@ const LeftMenu = ({
                                   : isMouseHover === item.path
                                   ? 'text-golden-594e6a'
                                   : "text-golden-594e6a"
-                                }  font-medium text-16px cursor-pointer tracking-Stightest -mt-3px`}
+                                }  font-bold text-16px cursor-pointer tracking-Stightest -mt-3px`}
                                 style={{ color: pathname.includes(item.mainPath)?'#fff':'#594e6a' }}
                             >
                               {item.text}
                             </label>
                             {item.inboxCount && (
-                              <div className="bg-rf04281 ml-12px -mt-px h-19px w-20px rounded-9px text-white flex items-center justify-center text-12px font-roboto">
-                                {item.inboxCount}
+                            <div className="bg-rf04281 ml-12px -mt-px h-19px text-white flex items-center justify-center text-12px font-roboto"
+                            style={{padding:" 0 6.1px",borderRadius:'100px'}}>
+                                {item.inboxCount} 
                               </div>
                             )}
                       </div>

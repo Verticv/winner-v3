@@ -591,6 +591,10 @@
   position: relative;
   display: inline-block;
   width: 100%;
+  
+}
+.react-datepicker__input-container input {
+  line-height: 3px;
 }
 
 .react-datepicker__year-read-view,
