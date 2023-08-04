@@ -90,7 +90,7 @@ const BetHistory = () => {
                     </div>
                 </>
              </Route>
-            <Route path="/mypage/bet-history/slot-game">
+            <Route path="/mypage/bet-history/sports">
                 <>
                     <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <div className='mt-5px mb-60px'>
@@ -98,7 +98,7 @@ const BetHistory = () => {
                     </div>
                 </>
             </Route>
-            <Route path="/mypage/bet-history/sports">
+            <Route path="/mypage/bet-history/slot-game">
                 <>
                     <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
                     <div className='mt-5px mb-60px'>
