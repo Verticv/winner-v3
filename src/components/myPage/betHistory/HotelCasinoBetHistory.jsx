@@ -9,9 +9,9 @@ import HIcon3 from '../../../images/myPage/betHistory/h_icon3.png'
 
 const subTabsArray = [
     { text: "전체", icon: AllIcon, id: 0 },
-    { text: "두윈카지노", icon: HIcon3, id: 3, custom: "mt-4px" },
-    { text: "보타카지노", icon: HIcon1, id: 1 },
-    { text: "준비중", icon: HIcon2, id: 4 },
+    { text: "두윈카지노", icon: HIcon1, id: 3, custom: "mt-4px" },
+    { text: "보타카지노", icon: HIcon2, id: 1 },
+    { text: "준비중", icon: HIcon3, id: 4 },
 ];
 
 const tableArray = [
@@ -66,7 +66,7 @@ const HotelCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fal
         <div className="w-full">
             {showSub === true && (
               <>
-                    <div className="mt-10px h-88px w-full px-4px py-3px rounded-4px"
+                    <div className="mt-10px h-88px w-full px-3px py-3px rounded-6px"
                     style={{background:'rgba(52, 34, 103, 0.6)'}}>
                   <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
                 </div>
@@ -96,7 +96,7 @@ const HotelCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fal
                     onClick={() => allSelectButtonPressed()}
                         >
                             
-                                <span className="tracking-tight text-14px text-white pt-px text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                                <span className="tracking-tight text-13px text-white pt-px text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
                         
                         </button>
                         <button 
@@ -104,13 +104,13 @@ const HotelCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fal
                             className="flex items-center justify-center w-88px h-36px rounded-6px  hover:filter hover:brightness-125"
                         >
                             
-                                <span className="tracking-tight text-14px text-white pt-px text-shadow-5">선택삭제</span>
+                                <span className="tracking-tight text-13px text-white pt-px text-shadow-5">선택삭제</span>
                             
                         </button>
                     </div>
                     <button style={{width:'158px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}  className="flex items-center justify-center h-36px rounded-6px hover:filter hover:brightness-125 p-px mr-px">
                        
-                            <span className="tracking-tight text-14px text-white pt-px text-shadow-5">게시판에 내역올리기</span>
+                            <span className="tracking-tight text-13px text-white pt-px text-shadow-5">게시판에 내역올리기</span>
                        
                     </button>
                 </div>

@@ -137,7 +137,7 @@ const SportsBetHistoryPanel = ({
             <div style={{width: isAttached ? "90px" : "99px"}} className="font-roboto text-r666666">{score}</div>
             <div style={{width: isAttached ? "59px" : '61px'}} className="text-r666666">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div>
             <div 
-            style={{marginRight:isAttached && "5px",WebkitTextStroke:"0.2px",color:result === "win"?'#33a1e9':result === "lose"?'#c8c8c8':result === "cancel"?'#4c98ff':'666666'}}
+            style={{marginRight:isAttached && "5px",WebkitTextStroke:"0.2px",color:result === "win"?'#f04281':result === "lose"?'#666666':result === "cancel"?'#33a1e9':'#666666'}}
             className={`
                 
                 ${
@@ -158,7 +158,7 @@ const SportsBetHistoryPanel = ({
 
 
     const Cards0 = ({bet = "right"}) => (
-        <div className="w-full rounded-4px overflow-hidden shadow-subNavbar border-2 mt-8px" style={{borderColor:'#6852a7'}}>
+        <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
             <div className={`flex items-center justify-between h-54px w-full ${isFullPage ? 'px-20px' : ' pl-17px pr-18px'}`}
                 style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
@@ -194,7 +194,7 @@ const SportsBetHistoryPanel = ({
     )
 
     const Cards1 = ({hasUp = true, hasDown = true}) => (
-        <div className="w-full rounded-4px overflow-hidden shadow-subNavbar border-2 mt-9px" style={{borderColor:'#6852a7'}}>
+        <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
             <div className="flex items-center justify-between h-54px w-full px-20px" style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
                     <img src={FootballIcon} alt="" className='ml-px'/>
@@ -243,7 +243,7 @@ const SportsBetHistoryPanel = ({
     )
 
     const Cards2 = () => (
-        <div className="w-full rounded-4px overflow-hidden shadow-subNavbar border-2 mt-9px" style={{borderColor:'#6852a7'}}>
+        <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
             <div className="flex items-center justify-between h-54px w-full  px-20px" style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
                     <img src={FootballIcon} alt="" className='ml-px'/>
@@ -275,7 +275,7 @@ const SportsBetHistoryPanel = ({
     )
 
     const Cards3 = () => (
-        <div className="w-full rounded-4px overflow-hidden shadow-subNavbar border-2 mt-9px" style={{borderColor:'#6852a7'}}>
+        <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
             <div className="flex items-center justify-between h-54px w-full  px-20px" style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
                     <img src={FootballIcon} alt="" className='ml-px'/>
@@ -310,9 +310,9 @@ const SportsBetHistoryPanel = ({
 
 
   return (
-    <div className="w-full shadow-table p-px rounded-6px"
+    <div className="w-full shadow-table p-px rounded-10px"
       style={{ background: 'linear-gradient(to top, #ededeb, #cb78e6)' }}>
-        <div className="w-full bg-white rounded-6px pb-10px overflow-hidden">
+        <div className="w-full bg-white rounded-10px pb-10px overflow-hidden">
             <div className="flex h-54px w-full  text-14px text-white tracking-tighter"
             style={{ background: 'linear-gradient(to right, #9d3bbb, #5423a0)'}}>
                 <div
@@ -328,7 +328,7 @@ const SportsBetHistoryPanel = ({
                 <div style={{width: isAttached === true ? "58px" : "79px", marginRight:  isAttached === true ? isFullPage ?"20px":"25px" : "6px"}} className="h-full flex items-center justify-center mb-px">결과</div> 
             </div>
 
-            <div className="w-full px-8px pr-10px space-y-10px">
+            <div className="w-full px-8px pr-10px space-y-10px mt-8px">
                 {type === 0 
                 ? <Cards0 />
                 : type === 1 
@@ -390,7 +390,7 @@ const SportsBetHistoryPanel = ({
                                 setAttachedArray && addEntryClick()
                             }} 
                             style={{width:'110px',background:'#8458cd'}}
-                            className="flex items-center justify-center h-73px rounded-6px hover:brightness-125 filter shadow-link" 
+                            className="flex items-center justify-center h-73px rounded-8px hover:brightness-125 filter shadow-panelBtn" 
                         >
                             <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-8px cursor-pointer">
                                 <span className=" tracking-tightest text-14px text-white text-shadow-5">내역올리기</span>
@@ -399,7 +399,7 @@ const SportsBetHistoryPanel = ({
                     )}
                     
                     {(isPopup === false && noButtons === false) && (
-                        <button style={{width:'110px',background:'#646eb6'}} onClick={() => setAttachedArray && handleRemoveItem(id) } className="flex items-center justify-center h-73px rounded-4px bg-gradient-to-t  hover:brightness-125 filter shadow-link">
+                        <button style={{width:'110px',background:'#646eb6'}} onClick={() => setAttachedArray && handleRemoveItem(id) } className="flex items-center justify-center h-73px rounded-8px bg-gradient-to-t  hover:brightness-125 filter shadow-panelBtn">
                             <div style={{width:'110px',height:'71px'}} className="pt-px flex items-center justify-center rounded-8px bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
                                 <span className="tracking-tightest text-14px text-white text-shadow-5">내역삭제</span>
                             </div>
@@ -413,3 +413,4 @@ const SportsBetHistoryPanel = ({
 }
 
 export default SportsBetHistoryPanel
+

@@ -16,7 +16,7 @@ import Sub10 from '../../../images/myPage/betHistory/ARGame/sub10.png'
 import Sub11 from '../../../images/myPage/betHistory/ARGame/sub11.png'
 
 const subTabsArray = [
-    { text: "전체", icon: AllIcon, id: 0 },
+    { text: "전체", icon: AllIcon, id: 0,custom: "mt-3px" },
     { text: "축구", icon: Sub1, id: 1 },
     { text: "경마", icon: Sub2, id: 2 },
     { text: "개경주", icon: Sub3, id: 3 },
@@ -81,7 +81,7 @@ const ARGameBetHistory = ({isState, setState, showSub = true, isPopup = false}) 
     return (
         <div className="w-full">
             {showSub === true && (
-                <div className="mt-10px w-full px-4px py-3px rounded-4px"
+                <div className="mt-10px w-full px-3px py-3px rounded-6px"
                 style={{background:'rgba(52, 34, 103, 0.6)'}}>
                 <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
               </div>
@@ -108,7 +108,7 @@ const ARGameBetHistory = ({isState, setState, showSub = true, isPopup = false}) 
                         onClick={() => allSelectButtonPressed()}
                     >
                         
-                            <span className="tracking-tight text-14px text-white pt-px text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                            <span className="tracking-tight text-13px text-white pt-px text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
                        
                     </button>
                     <button 
@@ -116,13 +116,13 @@ const ARGameBetHistory = ({isState, setState, showSub = true, isPopup = false}) 
                         className="flex items-center justify-center w-88px h-36px rounded-6px hover:filter hover:brightness-125"
                     >
                        
-                            <span className="tracking-tight text-14px text-white pt-px text-shadow-5">선택삭제</span>
+                            <span className="tracking-tight text-13px text-white pt-px text-shadow-5">선택삭제</span>
                        
                     </button>
                 </div>
                 <button style={{width:'158px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}  className="flex items-center justify-center h-36px rounded-6px p-px hover:filter hover:brightness-125 mr-px">
                    
-                        <span className="tracking-tight text-14px text-white pt-px text-shadow-5">게시판에 내역올리기</span>
+                        <span className="tracking-tight text-13px text-white pt-px text-shadow-5">게시판에 내역올리기</span>
                   
                 </button>
             </div>

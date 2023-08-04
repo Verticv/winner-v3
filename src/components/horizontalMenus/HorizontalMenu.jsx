@@ -27,7 +27,7 @@ const HorizontalMenu = ({
               pathname === item.path
               ? "flex-shrink" 
               : "flex-shrink"
-          } relative overflow-hidden h-78px w-full flex items-center rounded-4px p-px shadow-link`} 
+          } relative overflow-hidden h-78px w-full flex items-center rounded-6px p-px shadow-link`} 
           onClick={() => {
               history.push(item.path)
               setSelectedTab(item.id)
@@ -42,14 +42,14 @@ const HorizontalMenu = ({
                 background: pathname === item.path
                   ? 'linear-gradient(to top, #491f9c, #9e3cbc)'
                   :'linear-gradient(to top, #ccc4ff, #ffd8f5)'
-              }} className={`w-full rounded-3px flex flex-col justify-start items-center relative hover:filter hover:brightness-90 h-76px pt-5px pb-6px`}>
+              }} className={`w-full rounded-6px flex flex-col justify-start items-center relative hover:filter hover:brightness-90 h-76px pt-5px pb-6px`}>
               <img className='object-none h-48px w-48px'  src={pathname === item.path ? item.iconHighlight : item.icon} alt="" />
              
               <span className={`${
                   pathname === item.path 
                   ? "text-black"
                 : "text-golden-ccc2b6"} 
-                  text-14px tracking-Stightest mt-px`}
+                  text-13px tracking-Stightest mt-px`}
               style={{
                 color: pathname === item.path
                   ? '#fff'
@@ -59,10 +59,11 @@ const HorizontalMenu = ({
           </div>
           </button>
           {(showSub && selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 5  && selectedTab !== 9 && selectedTab === item.id) && (
-          <div className={`absolute bottom-0 left-40px w-20px -mb-12px overflow-hidden inline-block `}>
-            <div style={{
-              background:'#342267'
-            }} className="h-15px w-15px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
+            <div className={`absolute -bottom-10px left-39px`}
+            style={{borderStyle:"solid",borderWidth:' 0 7px 9px 7px',borderColor:'transparent  transparent  #562a86 transparent '}}>
+            {/* <div style={{
+              background:'#562a86'
+            }} className="h-15px w-15px rotate-45 transform origin-bottom-left"></div> */}
           </div>
         )}
         </div>

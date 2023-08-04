@@ -15,11 +15,11 @@ const SubHorizontalMenu = ({
                 background: isState === item.id ?'linear-gradient( to top, #4f3a7a, #e597ff)':'linear-gradient( to top, #ada8a8, #d0d0d0)',
                 height:'81px'
               }}
-              className={`overflow-hidden w-full rounded-4px flex  border border-black relative p-px`} 
+              className={`overflow-hidden w-full rounded-4px flex  border border-black relative`} 
               onClick={() => setState(item.id)}
           >
             <div style={{
-              }} className={`overflow-hidden w-full flex flex-col items-center justify-start rounded-4px`}>
+              }} className={`overflow-hidden w-full flex flex-col items-center justify-start rounded-4px h-full p-px`}>
               <div
 
                 style={{
@@ -28,16 +28,16 @@ const SubHorizontalMenu = ({
                     : "linear-gradient( to top, #e5e5e5, #ffffff)",
                   height: '79px',
                 }}
-                  className={`w-full rounded-4px flex flex-col items-center justify-end hover:filter hover:brightness-125`}
+                  className={`w-full rounded-4px flex flex-col items-center justify-start hover:filter hover:brightness-125 pt-5px`}
                   >
-                      <img className="mt-8px ml-2px object-none h-43px" src={item.icon} alt="" />
+                <img className="ml-2px object-none h-44px" src={item.icon} alt="" />
                 <span
                   style={{
                     color: isState === item.id
                       ? "#fff"
                       : "#666"
                   }}
-                  className={`text-13px tracking-tight mb-8px mt-1px ${item.custom}`}
+                  className={`text-12px tracking-tight mt-2px ${item.custom}`}
                 >{item.text}</span>
                   </div>
               </div>   

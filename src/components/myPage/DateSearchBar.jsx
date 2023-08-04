@@ -38,7 +38,7 @@ const DateSearchBar = ({
 
     const gameResultButton = (
       <div style={{ width: '138px', height: '42px' }}
-        className="flex items-center justify-between  placeholder-gray-r8c8c8c outline-none rounded-6px border px-10px font-medium text-15px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r666666 bg-white" >
+        className="flex items-center justify-between  placeholder-gray-r8c8c8c outline-none rounded-6px border px-10px font-medium text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r666666 bg-white" >
           <p className="mt-px">{selectedCarrier}</p>
           <img src={ArrowDownGray} alt="" />
         </div>
@@ -77,19 +77,19 @@ const DateSearchBar = ({
 
   return (
       
-    <div className={`h-62px w-full mt-10px flex items-center justify-center space-x-10px rounded-4px`}
+    <div className={`h-62px w-full mt-10px flex items-center justify-center space-x-10px rounded-6px`}
     style={{background:isPopup ? 'rgba(52, 34, 103, 0.6)' : 'rgba(52, 34, 103, 0.6)'}}>
         {isLeagueSearch === true && (
           <div className="space-x-5px">
             <input 
               placeholder="리그선택"
               style={{width:'138px'}}
-              className="pt-px mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-15px tracking-tight border-p682aa7 text-r666666 bg-dark-1a1a1a" 
+              className="pt-px mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-14px tracking-tight border-p682aa7 text-r666666 bg-dark-1a1a1a" 
             />
             <input
               placeholder="팀명검색" 
               style={{width:'138px'}}
-              className="pt-px mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-15px tracking-tight border-p682aa7 text-r666666 bg-dark-1a1a1a" />
+              className="pt-px mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-14px tracking-tight border-p682aa7 text-r666666 bg-dark-1a1a1a" />
               </div>
               
       )}
@@ -99,7 +99,7 @@ const DateSearchBar = ({
             <input
               placeholder="팀명검색" 
               style={{width:'138px'}}
-              className="pt-px mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-15px tracking-tight  border-p682aa7 text-r666666" />
+              className="pt-px mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-14px tracking-tight  border-p682aa7 text-r666666" />
           </div>
         )}
 
@@ -109,7 +109,7 @@ const DateSearchBar = ({
            
             </div>
             <span className="font-medium text-14px text-white" style={{letterSpacing:'-0.13rem'}}>~</span>
-              <div className="relative">
+            <div className="relative">
               <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-6px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666`} />
              
             </div>
@@ -180,7 +180,7 @@ const DateSearchBar = ({
         {hasIdSearch && (
             <div className="flex space-x-5px">
                 <input 
-                    className="w-138px h-42px rounded-6px border outline-none text-15px font-medium tracking-tight px-10px border-p682aa7 text-r666666 bg-dark-1a1a1a" 
+                    className="w-138px h-42px rounded-6px border outline-none text-14px font-medium tracking-tight px-10px border-p682aa7 text-r666666 bg-dark-1a1a1a" 
                     placeholder="아이디" 
                 />
                 <div 
