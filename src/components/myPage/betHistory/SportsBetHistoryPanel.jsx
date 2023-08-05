@@ -160,8 +160,7 @@ const SportsBetHistoryPanel = ({
 
     const Cards0 = ({bet = "right"}) => (
         <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
-            <div className={`flex items-center justify-between h-54px w-full ${isFullPage ? 'px-20px' : ' pl-17px pr-18px'}`}
-                style={{ background: '#6852a7' }}>
+            <div className={`flex items-center justify-between h-54px w-full ${isFullPage ? 'px-20px' : ' pl-17px pr-18px'}`} style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
                     <img src={FootballIcon} alt="" className='ml-px'/>
                     <span className="ml-6px text-20px text-white truncate"
@@ -245,7 +244,7 @@ const SportsBetHistoryPanel = ({
 
     const Cards2 = () => (
         <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
-            <div className="flex items-center justify-between h-54px w-full  px-20px" style={{ background: '#6852a7' }}>
+            <div className={`flex items-center justify-between h-54px w-full ${isFullPage ? 'px-20px' : ' pl-17px pr-18px'}`} style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
                     <img src={FootballIcon} alt="" className='ml-px'/>
                     <span className="ml-6px  text-20px  text-white truncate"
@@ -329,7 +328,7 @@ const SportsBetHistoryPanel = ({
                 <div style={{width: isAttached === true ? "58px" : "70px", marginRight:  isAttached === true ? isFullPage ?"20px":"25px" : "6px"}} className="h-full flex items-center justify-center mb-px pl-4px">결과</div> 
             </div>
 
-            <div className="w-full px-8px pr-10px space-y-10px mt-7px">
+            <div className="w-full px-8px pr-10px space-y-10px mt-8px">
                 {type === 0 
                 ? <Cards0 />
                 : type === 1 
