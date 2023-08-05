@@ -323,13 +323,13 @@ const SportsBetHistoryPanel = ({
                 </div>
                 <div style={{width: isAttached === true ? isFullPage? "312px":"315px" : "286px"}} className="h-full flex items-center justify-center mb-px">승(홈)</div>
                 <div style={{width: isAttached === true ? "139px" : "83px"}} className="h-full flex items-center justify-center mb-px pl-3px">무</div>
-                <div style={{width: isAttached === true ? "317px" : "286px"}} className="h-full flex items-center justify-center mb-px pl-3px">패(원정)</div>
+                <div style={{width: isAttached === true ? "317px" : "286px"}} className="h-full flex items-center justify-center mb-px pl-7px">패(원정)</div>
                 <div style={{width: isAttached === true ? isFullPage? "90px":"85px" : "99px", paddingLeft:  isPopup ? '9px':!isAttached ? '7px':isFullPage?'4px':'5px' ,marginLeft:  isAttached === true ? isFullPage ?"32px":"40px" : "10px"}} className="h-full flex items-center justify-center mb-px">스코어</div>
                 <div style={{width: isAttached === true ? "66px" : "61px"}} className="h-full flex items-center justify-center mb-px">선택</div>
-                <div style={{width: isAttached === true ? "58px" : "70px", marginRight:  isAttached === true ? isFullPage ?"20px":"25px" : "6px"}} className="h-full flex items-center justify-center mb-px pl-3px">결과</div> 
+                <div style={{width: isAttached === true ? "58px" : "70px", marginRight:  isAttached === true ? isFullPage ?"20px":"25px" : "6px"}} className="h-full flex items-center justify-center mb-px pl-4px">결과</div> 
             </div>
 
-            <div className="w-full px-8px pr-10px space-y-10px mt-8px">
+            <div className="w-full px-8px pr-10px space-y-10px mt-7px">
                 {type === 0 
                 ? <Cards0 />
                 : type === 1 

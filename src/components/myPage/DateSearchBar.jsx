@@ -39,8 +39,8 @@ const DateSearchBar = ({
     const gameResultButton = (
       <div style={{ width: '138px', height: '42px' }}
         className="flex items-center justify-between  placeholder-gray-r8c8c8c outline-none rounded-6px border px-10px font-medium text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r666666 bg-white mb-px" >
-          <p className="pb-px">{selectedCarrier}</p>
-          <img src={ArrowDownGray} alt="" />
+          <p className="">{selectedCarrier}</p>
+          <img src={ArrowDownGray} alt="" className='pt-px' />
         </div>
     )
 
