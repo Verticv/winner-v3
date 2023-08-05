@@ -84,7 +84,7 @@ const BetHistory = () => {
             </Route>
             <Route path="/mypage/bet-history/hold'em-game">
                 <>
-                    <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <AllBetHistory />
                     <div className='mt-5px mb-60px'>
                         <Pagination page={page} setPage={setPage} />   
                     </div>

@@ -195,7 +195,7 @@ const SportsBetHistoryPanel = ({
 
     const Cards1 = ({hasUp = true, hasDown = true}) => (
         <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
-            <div className="flex items-center justify-between h-54px w-full px-20px" style={{ background: '#6852a7' }}>
+            <div className={`flex items-center justify-between h-54px w-full ${isFullPage ? 'px-20px' : ' pl-17px pr-18px'}`} style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
                     <img src={FootballIcon} alt="" className='ml-px'/>
                     
@@ -320,12 +320,12 @@ const SportsBetHistoryPanel = ({
                     className="h-full flex items-center justify-center mb-px tracking-tightest">
                       베팅구분
                 </div>
-                <div style={{width: isAttached === true ? isFullPage? "312px":"315px" : "273px"}} className="h-full flex items-center justify-center mb-px">승(홈)</div>
-                <div style={{width: isAttached === true ? "139px" : "115px"}} className="h-full flex items-center justify-center mb-px">무</div>
-                <div style={{width: isAttached === true ? "317px" : "271px"}} className="h-full flex items-center justify-center mb-px">패(원정)</div>
-                <div style={{width: isAttached === true ? isFullPage? "90px":"85px" : "114px", paddingLeft:  isPopup ? '9px':!isAttached ? '7px':isFullPage?'4px':'5px' ,marginLeft:  isAttached === true ? isFullPage ?"32px":"40px" : "0px"}} className="h-full flex items-center justify-center mb-px">스코어</div>
-                <div style={{width: isAttached === true ? "66px" : "53px"}} className="h-full flex items-center justify-center mb-px">선택</div>
-                <div style={{width: isAttached === true ? "58px" : "79px", marginRight:  isAttached === true ? isFullPage ?"20px":"25px" : "6px"}} className="h-full flex items-center justify-center mb-px">결과</div> 
+                <div style={{width: isAttached === true ? isFullPage? "312px":"315px" : "286px"}} className="h-full flex items-center justify-center mb-px">승(홈)</div>
+                <div style={{width: isAttached === true ? "139px" : "83px"}} className="h-full flex items-center justify-center mb-px">무</div>
+                <div style={{width: isAttached === true ? "317px" : "286px"}} className="h-full flex items-center justify-center mb-px">패(원정)</div>
+                <div style={{width: isAttached === true ? isFullPage? "90px":"85px" : "99px", paddingLeft:  isPopup ? '9px':!isAttached ? '7px':isFullPage?'4px':'5px' ,marginLeft:  isAttached === true ? isFullPage ?"32px":"40px" : "10px"}} className="h-full flex items-center justify-center mb-px">스코어</div>
+                <div style={{width: isAttached === true ? "66px" : "61px"}} className="h-full flex items-center justify-center mb-px">선택</div>
+                <div style={{width: isAttached === true ? "58px" : "70px", marginRight:  isAttached === true ? isFullPage ?"20px":"25px" : "6px"}} className="h-full flex items-center justify-center mb-px">결과</div> 
             </div>
 
             <div className="w-full px-8px pr-10px space-y-10px mt-8px">
@@ -356,7 +356,7 @@ const SportsBetHistoryPanel = ({
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "130px"}} className="h-full flex items-center justify-center border-l border-white">베팅금액</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "98px" : "97px" }} className="h-full flex items-center justify-center border-l border-white">배당률</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "165px"}} className="h-full flex items-center justify-center border-l border-white">예상적중금액</div>
-                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "128px" : "178px"}} className="h-full flex items-center justify-center border-l border-white">당첨금</div>
+                        <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "128px" : "179px"}} className="h-full flex items-center justify-center border-l border-white">당첨금</div>
                         
                     </div>
                     <div className={`flex w-auto h-36px  text-14px tracking-tight text-r666666 ${isPopup && "pt-2px"}`}>
@@ -378,7 +378,7 @@ const SportsBetHistoryPanel = ({
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "150px"}} className="h-full flex items-center justify-end  pr-5px">{amount}</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "98px" : "178px"}} className="h-full flex items-center justify-center ">{ratio}</div>
                         <div style={{width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "131px" : "165px"}} className="h-full flex items-center justify-end  pr-5px">{predictedPrice}</div>
-                        <div style={{WebkitTextStroke:winAmount.includes("+") &&"0.2px",width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "128px" : "200px"}} className="h-full flex items-center justify-end  pr-2px"><p className={`${winAmount.includes("+") && "text-red-e65454"}`}>{winAmount}</p><p style={{WebkitTextStroke:"0px"}}>원</p></div>
+                        <div style={{WebkitTextStroke:winAmount.includes("+") &&"0.2px",width: noButtons === true ? "236px" : isAttached === true ? "212px" : isPopup === false ? "128px" : "200px"}} className="h-full flex items-center justify-end  pr-2px"><p style={{color: winAmount.includes("+") && "#f04281"}}>{winAmount}</p><p style={{WebkitTextStroke:"0px"}}>원</p></div>
                     </div>
                 </table>
                 
