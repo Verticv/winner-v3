@@ -13,9 +13,10 @@ const SubHorizontalMenu = ({
               key={item.id} 
               style={{
                 background: isState === item.id ?'linear-gradient( to top, #4f3a7a, #e597ff)':'linear-gradient( to top, #ada8a8, #d0d0d0)',
-                height:'81px'
+                height:'81px',
+                borderRadius:'5px'
               }}
-              className={`overflow-hidden w-full rounded-4px flex  border border-black relative`} 
+              className={`overflow-hidden w-full flex border border-black relative`} 
               onClick={() => setState(item.id)}
           >
             <div style={{

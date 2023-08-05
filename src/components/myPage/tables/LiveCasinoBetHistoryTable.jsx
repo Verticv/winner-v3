@@ -23,7 +23,7 @@ const LiveCasinoBetHistoryTable = ({array, checkedState, setCheckedState, isPopu
         }; 
         return items.map((item,index) => (
           <div className={` text-r666666 text-14px tracking-tight h-56px w-full  flex items-center border-b border-dark-252525 last:border-b-0 pr-14px`}
-            style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd"}}>
+            style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd", height:index === items.length -1 ? "56px" : "55px"}}>
                 <div style={{width: "92px"}} className="flex items-center justify-center text-center">
                     <input
                         type="checkbox"
@@ -31,13 +31,13 @@ const LiveCasinoBetHistoryTable = ({array, checkedState, setCheckedState, isPopu
                         onChange={() => handleOnChange(item.id)}
                     />
                 </div>
-                 <div style={{width: "72px"}} className="font-robotoRegular text-center mt-px">{item.number}</div>
-               <div style={{width: "185px"}} className="font-robotoRegular text-center mt-px">{item.time}</div>
-                 <div style={{width: "140px"}} className="text-center truncate px-10px mt-px">{item.type}</div>
-                <div style={{width: "118px"}} className="text-center truncate mt-px">{item.name}</div>
-                <div style={{width: "126px"}} className="font-robotoRegular text-right pr-10px mt-px">{item.amount}</div>
-                <div style={{width: "128px",  WebkitTextStroke: item.profit.includes("+") && "0.2px", color: item.profit.includes("+") ? "#e9441d" : "#666666"}} className="font-robotoRegular text-right mt-px">{item.profit}</div>
-                <div style={{width: "88px",  WebkitTextStroke: item.status === "승" &&"0.2px" ,color: item.status === "승" ? "#f04281" : "#666666"}} className="text-center mt-px">{item.status}</div>
+                 <div style={{width: "72px"}} className="font-robotoRegular text-center">{item.number}</div>
+               <div style={{width: "185px"}} className="font-robotoRegular text-center">{item.time}</div>
+                 <div style={{width: "140px"}} className="text-center truncate px-10px">{item.type}</div>
+                <div style={{width: "118px"}} className="text-center truncate">{item.name}</div>
+                <div style={{width: "126px"}} className="font-robotoRegular text-right pr-10px">{item.amount}</div>
+                <div style={{width: "128px",  WebkitTextStroke: item.profit.includes("+") && "0.2px", color: item.profit.includes("+") ? "#e9441d" : "#666666"}} className="font-robotoRegular text-right">{item.profit}</div>
+                <div style={{width: "88px",  WebkitTextStroke: item.status === "승" &&"0.2px" ,color: item.status === "승" ? "#f04281" : "#666666"}} className="text-center">{item.status}</div>
                 <div style={{width: "72px"}} className="text-center ml-px">
                     <PopupControls buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                         <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />

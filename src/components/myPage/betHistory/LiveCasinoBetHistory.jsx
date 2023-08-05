@@ -87,7 +87,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fals
         <div className="w-full">
             {showSub === true && (
               <>
-                <div style={{height:'170px',background:'rgba(52, 34, 103, 0.6)'}} className="mt-10px h-88px w-full px-3px py-3px rounded-6px">
+                <div style={{height:'170px',background:'rgba(52, 34, 103, 0.6)'}} className="mt-10px w-full px-3px py-3px rounded-6px">
                   <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
                 </div>
               </>
@@ -115,7 +115,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fals
                     onClick={() => allSelectButtonPressed()}
                 >
                     
-                <span className="tracking-tight text-13px text-white pt-px text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                <span className="tracking-tight text-13px text-white text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
                     
                 </button>
                 <button 
@@ -123,13 +123,13 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fals
                     className="flex items-center justify-center w-88px h-36px rounded-6px  hover:filter hover:brightness-125"
                 >
                     
-                        <span className="tracking-tight text-13px text-white pt-px text-shadow-5">선택삭제</span>
+                        <span className="tracking-tight text-13px text-white text-shadow-5">선택삭제</span>
                 
                 </button>
             </div>
             <button style={{width:'158px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}} className="flex items-center justify-center h-36px rounded-6px hover:filter hover:brightness-125  p-px">
                
-            <span className="tracking-tight text-13px text-white pt-px text-shadow-5">게시판에 내역올리기</span>
+            <span className="tracking-tight text-13px text-white text-shadow-5">게시판에 내역올리기</span>
                
             </button>
         </div>
