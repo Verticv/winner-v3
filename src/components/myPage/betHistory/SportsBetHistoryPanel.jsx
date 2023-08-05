@@ -276,7 +276,7 @@ const SportsBetHistoryPanel = ({
 
     const Cards3 = () => (
         <div className="w-full rounded-4px overflow-hidden shadow-panel border-2" style={{borderColor:'#6852a7',overflow:'inherit'}}>
-            <div className="flex items-center justify-between h-54px w-full  px-20px" style={{ background: '#6852a7' }}>
+            <div className={`flex items-center justify-between h-54px w-full ${isFullPage ? 'px-20px' : ' pl-17px pr-18px'}`} style={{ background: '#6852a7' }}>
                 <div className="flex items-center -mt-3px">
                     <img src={FootballIcon} alt="" className='ml-px'/>
                     <span className="ml-6px  text-20px text-white truncate"
