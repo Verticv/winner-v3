@@ -43,7 +43,7 @@ const Pagination = ({page, setPage}) => {
                     >
                     <div style={{ background: selectedPage === 1 && "linear-gradient(to top, #e5e5e5, #ffffff)" }}
                         className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}>
-                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px pt-2px`}
+                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px`}
                         style={{color: selectedPage === 1 ? '#594e6a': '#eeeeee'}} >1</span>
                         </div>
                     </button>
@@ -54,7 +54,7 @@ const Pagination = ({page, setPage}) => {
                     >
                     <div style={{ background: selectedPage === 2 && "linear-gradient(to top, #e5e5e5, #ffffff)" }}
                         className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}>
-                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px pt-2px`}
+                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px`}
                         style={{color: selectedPage === 2 ? '#594e6a': '#eeeeee'}}>2</span>
                         </div>
                     </button>
@@ -65,7 +65,7 @@ const Pagination = ({page, setPage}) => {
                     >
                     <div style={{ background: selectedPage === 3 && "linear-gradient(to top, #e5e5e5, #ffffff)" }}
                         className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}>
-                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px pt-2px`}
+                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px`}
                         style={{color: selectedPage === 3 ? '#594e6a': '#eeeeee'}}>3</span>
                         </div>
                     </button>
@@ -76,7 +76,7 @@ const Pagination = ({page, setPage}) => {
                         >
                         <div style={{ background: selectedPage === 4 && "linear-gradient(to top, #e5e5e5, #ffffff)" }}
                             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}>
-                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px pt-2px`}
+                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px`}
                         style={{color: selectedPage === 4 ? '#594e6a': '#eeeeee'}}>4</span>
                             </div>
                     </button>
@@ -88,7 +88,7 @@ const Pagination = ({page, setPage}) => {
                     >
                     <div style={{ background: selectedPage === 5 && "linear-gradient(to top, #e5e5e5, #ffffff)" }}
                         className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}>
-                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px pt-2px`}
+                        <span className={`text-gray-activeText font-roboto tracking-tight text-12px`}
                         style={{color: selectedPage === 5 ? '#594e6a': '#eeeeee'}}>5</span>
                         </div>
                     </button>

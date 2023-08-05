@@ -58,7 +58,7 @@ const HorizontalMenu = ({
               }} >{item.text}</span>
           </div>
           </button>
-          {(showSub && selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 5  && selectedTab !== 9 && selectedTab === item.id) && (
+          {(showSub && selectedTab !== 0 && selectedTab !== 2 && selectedTab !== 5  && selectedTab !== 9 && selectedTab === item.id) && (
             <div className={`absolute -bottom-10px left-39px`}
             style={{borderStyle:"solid",borderWidth:' 0 7px 9px 7px',borderColor:'transparent  transparent  #562a86 transparent '}}>
             {/* <div style={{
