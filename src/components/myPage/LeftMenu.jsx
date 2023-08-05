@@ -153,7 +153,7 @@ const LeftMenu = ({
                               {item.text}
                             </label>
                             {item.inboxCount && (
-                            <div className="bg-rf04281 -mt-px h-19px text-white flex items-center justify-center text-12px font-roboto"
+                            <div className="bg-rf04281 -mt-2px h-19px text-white flex items-center justify-center text-12px font-roboto"
                             style={{padding:" 0 6.1px",borderRadius:'100px', marginLeft:'8px'}}>
                                 {item.inboxCount} 
                               </div>

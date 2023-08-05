@@ -23,7 +23,7 @@ const LiveCasinoBetHistoryTable = ({array, checkedState, setCheckedState, isPopu
         }; 
         return items.map((item,index) => (
           <div className={` text-r666666 text-14px tracking-tight h-56px w-full  flex items-center border-b border-dark-252525 last:border-b-0 pr-14px`}
-            style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd", height:index === items.length -1 ? "56px" : "55px"}}>
+            style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd", height:index === items.length -1 ? "55px" : "56px"}}>
                 <div style={{width: "92px"}} className="flex items-center justify-center text-center">
                     <input
                         type="checkbox"

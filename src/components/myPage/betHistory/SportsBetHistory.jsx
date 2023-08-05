@@ -29,7 +29,7 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
             <SportsBetHistoryPanel isPopup={!showSub} type={1} winAmount="+900,000,000" checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
             <SportsBetHistoryPanel isPopup={!showSub} type={2} checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
           </div>
-          <div className="mt-10px h-36px w-full flex items-center justify-between">
+          <div className="mt-20px h-36px w-full flex items-center justify-between">
               <div className="flex space-x-4px ml-px">
                   <button 
                       style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}

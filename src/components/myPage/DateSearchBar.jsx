@@ -38,8 +38,8 @@ const DateSearchBar = ({
 
     const gameResultButton = (
       <div style={{ width: '138px', height: '42px' }}
-        className="flex items-center justify-between  placeholder-gray-r8c8c8c outline-none rounded-6px border px-10px font-medium text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r666666 bg-white" >
-          <p className="">{selectedCarrier}</p>
+        className="flex items-center justify-between  placeholder-gray-r8c8c8c outline-none rounded-6px border px-10px font-medium text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r666666 bg-white mb-px" >
+          <p className="pb-px">{selectedCarrier}</p>
           <img src={ArrowDownGray} alt="" />
         </div>
     )
@@ -99,19 +99,19 @@ const DateSearchBar = ({
             <input
               placeholder="팀명검색" 
               style={{width:'138px'}}
-              className="mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-14px tracking-tight  border-p682aa7 text-r666666" />
+              className="mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-14px tracking-tight  border-p682aa7 text-r666666 pb-px" />
           </div>
         )}
 
         <div style={{width:'304px'}} className="flex space-x-10px items-center h-full">
               <div className="relative">
-              <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 focus:ml-10px pb-px`} />
+              <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 focus:ml-10px pb-2px`} />
            
             </div>
             <div><span className="font-medium text-14px text-white" style={{letterSpacing:'-0.13rem', marginLeft:'-1px'}}>~</span></div>
             
             <div className="relative">
-              <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 pb-px`} />
+              <CustomDatePicker classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 pb-2px`} />
              
             </div>
         </div>

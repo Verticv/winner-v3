@@ -29,9 +29,9 @@ const subTabsArray = [
     { text: "오리엔탈게임", icon: bet8, id: 8 },
     { text: "이주기", icon: bet9, id: 9 },
     { text: "마이크로게이밍", icon: bet10, id: 10 },
-    { text: "마이크로게이밍", icon: bet11, id: 11 },
-    { text: "마이크로게이밍", icon: bet12, id: 12 },
-    { text: "마이크로게이밍", icon: bet13, id: 13 },
+    { text: "베가스라운지", icon: bet11, id: 11 },
+    { text: "비터라이브", icon: bet12, id: 12 },
+    { text: "타이산", icon: bet13, id: 13 },
     { text: "모티베이션", icon: bet14, id: 14 },
 ];
 

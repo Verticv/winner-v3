@@ -267,7 +267,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         <div style={{height:'136px'}} className='relative'>
             <img className='z-10' src={MyPageBanner} alt='' />
             <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex items-center justify-center">
-              <span style={{textShadow: '0 0 4px rgba(0, 0, 0, 0.3)'}} className="leading-none text-white -mt-2px" >마이페이지</span></div>
+              <span style={{textShadow: '0 0 4px rgba(0, 0, 0, 0.6)'}} className="leading-none text-white -mt-2px" >마이페이지</span></div>
         </div>
 
         <div className='flex mt-18px w-default z-30'>
