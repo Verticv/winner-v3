@@ -212,7 +212,7 @@ export default function LiveHorizontalCarousel() {
               naturalSlideWidth={148}
               naturalSlideHeight={410}
               isIntrinsicHeight={true}
-              totalSlides={70}
+              totalSlides={280}
               visibleSlides={4}
               step={1}
               infinite={true}
@@ -239,20 +239,59 @@ export default function LiveHorizontalCarousel() {
                     }}
                     classNameTrayWrap="live_carousel_tray_wrapper"
                   >
-                    {[...list, ...list, ...list, ...list, ...list, ...list, ...list, ...list, ...list, ...list].map(
-                      (item, index) => (
-                        <CustomSlide
-                          Row1Img={item.row1.Img}
-                          row1Caption={item.row1.caption}
-                          row1Game={item.row1.game}
-                          Row2Img={item.row2.Img}
-                          row2Caption={item.row2.caption}
-                          row2Game={item.row2.game}
-                          key={index}
-                          index={index}
-                        />
-                      )
-                    )}
+                    {[
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                      ...list,
+                    ].map((item, index) => (
+                      <CustomSlide
+                        Row1Img={item.row1.Img}
+                        row1Caption={item.row1.caption}
+                        row1Game={item.row1.game}
+                        Row2Img={item.row2.Img}
+                        row2Caption={item.row2.caption}
+                        row2Game={item.row2.game}
+                        key={index}
+                        index={index}
+                      />
+                    ))}
                   </Slider>
                 </div>
                 <CarouselNextButton

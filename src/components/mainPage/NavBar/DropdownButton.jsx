@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import DropDownControls from "components/dropdowns/DropDownControls";
+import { Link } from "react-router-dom";
 
 const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, ButtonActiveIcon, DropdownHeight }) => {
   const [isMyMenuOpen, setIsMyMenuOpen] = useState(false);
   // eslint-disable-next-line no-unused-vars
-  const [myMenuSelectedOption, setMyMenuSelectedOption] = useState("");
   const [hoveredOption, setHoveredOption] = useState("");
 
   const tabClass =
@@ -30,8 +30,9 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
         style={{
           marginBottom: "0px",
           color: isMyMenuOpen ? "#ffffff" : "#5e399a",
+          fontSize: "13px",
         }}
-        className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-3px"
+        className="cursor-pointer font-bold tracking-tight -mt-3px"
       >
         {buttonText}
       </span>
@@ -57,25 +58,24 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
           {optionsArray.map((option) => {
             const isOptionHovered = hoveredOption === option.text;
             return (
-              <button
-                key={option.id}
-                className={dropDownCellClass}
-                style={{
-                  background: isOptionHovered ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
-                  color: isOptionHovered ? "white" : "#666666",
-                  height: "25px",
-                  paddingTop: "1px",
-                  marginBottom: "1px",
-                }}
-                onClick={() => {
-                  setMyMenuSelectedOption(option.text);
-                  setIsMyMenuOpen(false);
-                }}
-                onMouseOver={() => setHoveredOption(option.text)}
-                onMouseLeave={() => setHoveredOption("")}
-              >
-                {option.text}
-              </button>
+              <Link to={option.path}>
+                <button
+                  key={option.id}
+                  className={dropDownCellClass}
+                  style={{
+                    background: isOptionHovered ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                    color: isOptionHovered ? "white" : "#666666",
+                    height: "25px",
+                    paddingTop: "1px",
+                    marginBottom: "1px",
+                  }}
+                  onClick={() => setIsMyMenuOpen(false)}
+                  onMouseOver={() => setHoveredOption(option.text)}
+                  onMouseLeave={() => setHoveredOption("")}
+                >
+                  {option.text}
+                </button>
+              </Link>
             );
           })}
         </div>

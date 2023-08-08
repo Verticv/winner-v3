@@ -16,7 +16,7 @@ const LinkButton = ({ buttonText, ButtonIcon, count, isAuthenticated }) => {
             className="absolute flex items-center justify-center px-8px h-19px top-2px -right-8px text-white font-roboto tracking-tight text-12px bg-rf04281 rounded-9px"
             style={{ width: count < 10 ? "19px" : "30px" }}
           >
-            <p className={`flex items-center justify-center text-white font-roboto tracking-tight text-12px h-10px mt-px`}>
+            <p className={`flex items-center justify-center text-white font-roboto tracking-tight text-12px h-10px`}>
               {count}
             </p>
           </div>
@@ -25,8 +25,8 @@ const LinkButton = ({ buttonText, ButtonIcon, count, isAuthenticated }) => {
         <img className="object-none" src={ButtonIcon} alt="my menu" />
       </div>
       <span
-        style={{ marginBottom: "0px", color: "#5e399a" }}
-        className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-2px"
+        style={{ marginBottom: "0px", color: "#5e399a", fontSize:'13px' }}
+        className="cursor-pointer font-bold text-14px tracking-tight -mt-2px"
       >
         {buttonText}
       </span>
