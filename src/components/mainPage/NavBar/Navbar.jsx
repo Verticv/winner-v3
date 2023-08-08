@@ -63,7 +63,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   const myMenuOptionsArray = [
-    { text: "마이페이지", id: 0 },
+    { text: "마이페이지", id: 0, path: '/mypage/bet-history' },
     { text: "베팅내역", id: 1 },
     { text: "충/환전내역", id: 2 },
     { text: "총판페이지", id: 3 },
@@ -90,10 +90,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           style={{
             color: isSelectedTap ? "#ffffff" : "#2d2834",
             background: isSelectedTap ? "#5323a0" : "none",
-            width: `calc(922px / ${tabsArray.length + 1})`
+            width: `calc(922px / ${tabsArray.length})`,
           }}
           className={`h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
-            items.length - 2 === index ? "mr-10px" : items.length - 1 === index ? "" : "mr-9px"
+            items.length - 2 === index ? "" : items.length - 1 === index ? "" : ""
           }`}
           onClick={() => {
             setSelectedTab(item.id);
@@ -103,18 +103,13 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             setHoveredTab(item.id);
             setSelectedTab(item.id);
           }}
-          // onMouseLeave={() => {
-          //   setHoveredTab(null);
-          //   setSelectedTab(null);
-          //   // TODO: seems there is a bug here with the animation
-          // }}
         >
           <div className="flex justify-center w-48px h-48px -mt-2px flex-shrink-0">
             <img className="object-none" src={isSelectedTap ? item.activeIcon : item.icon} alt={item.text} />
           </div>
           <span
-            style={{ marginBottom: "0px", fontSize: '13px', letterSpacing:'-0.05rem' }}
-            className="cursor-pointer font-spoqaMedium tracking-tightest -mt-3px flex-shrink-0"
+            style={{ marginBottom: "0px", fontSize: "13px" }}
+            className="cursor-pointer font-bold tracking-tight -mt-3px flex-shrink-0"
           >
             {item.text}
           </span>
@@ -139,10 +134,6 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
         className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-20"
       >
         <div className="w-full absolute h-px bottom-0 bg-r9688c7" />
-        <div
-          // onMouseMove={() => setHoveredTab(null)}
-          className="w-full h-full absolute"
-        ></div>
         <div id="menu-wrapper" style={{ width: "1260px" }} className="w-full z-50">
           <div className="">
             <div className="flex justify-start w-full">
@@ -153,17 +144,12 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 <div className="flex items-center flex-shrink-0">
                   <TabsList items={tabsArray} />
                 </div>
-
-                <div
-                  // onMouseMove={() => setHoveredTab(null)}
-                  className="w-full h-full"
-                ></div>
               </div>
               <div
                 className="h-full flex items-center"
                 style={{
                   marginLeft: "11px",
-                  marginRight: "18px",
+                  marginRight: "11px",
                   height: "82px",
                 }}
               >

@@ -15,7 +15,7 @@ const AuthButton = ({
         height: "25px",
         ...style,
       }}
-      className={`w-84px rounded-4px flex mt-2px pt-2px items-center justify-center text-white text-12px font-spoqaMedium hover:brightness-125 filter ${className}`}
+      className={`w-84px rounded-4px flex mt-2px items-center justify-center text-white text-12px font-spoqaMedium hover:brightness-125 filter ${className}`}
       {...buttonProperties}
     >
       {buttonText}

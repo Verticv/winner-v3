@@ -3,7 +3,7 @@ import visual1 from "../../images/carousel/visual.png";
 import visual2 from "../../images/carousel/visual2.png";
 import { useHistory } from "react-router-dom";
 
-const images = [visual1, visual2, visual1, visual1, visual1];
+const images = [visual1, visual2, visual1, visual2, visual1];
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 // images must be an array of urls , if using Next JS this could something like
