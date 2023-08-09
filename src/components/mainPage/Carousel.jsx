@@ -70,10 +70,10 @@ const Carousel = () => {
         bottom: "47px",
         right: "283px",
       }}
-      className="absolute bottom-0 right-0 rounded-full cursor-pointer filter hover:brightness-125"
+      className="absolute bottom-0 right-0 rounded-full cursor-pointer filter hover:brightness-125 flex items-center justify-center"
     >
       <p
-        style={{ fontSize: "15px", marginLeft: "39px", marginTop: "11px" }}
+        style={{ fontSize: "15px" }}
         className="text-white font-spoqaBold flex items-center h-15px"
       >
         게임시작
