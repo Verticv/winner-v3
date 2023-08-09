@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 // import icon from "../../../images/nonLivePage/CenterAccordion/Icon.png";
 // import icon1 from "../../../images/nonLivePage/CenterAccordion/star2.png";
@@ -165,6 +165,7 @@ const CenterAccordion = ({ setEnglandActive }) => {
           return (
             <CenterAccordionButton
               key={index}
+              id={item.id}
               title={item.title}
               date={item.date}
               icon2={item.icon}

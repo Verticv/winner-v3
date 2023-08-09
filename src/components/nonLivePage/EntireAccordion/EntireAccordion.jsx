@@ -7,6 +7,7 @@ import EntireAccordionButton2 from "./EntireAccordionButton2";
 import EntireAccordionButton3 from "./EntireAccordionButton3";
 import EntireAccordionButton0 from "./EntireAccordionButton0";
 import EntireAccordionButton11 from "./EntireAccordionButton_1";
+import "./style.css";
 
 const EntireAccordion = () => {
   const [activeId, setActiveId] = useState(1);
@@ -175,10 +176,12 @@ const EntireAccordion = () => {
           className="items-center "
         >
           <div
-            className="flex items-center ml-4px mt-4px mb-5px"
+            className="scroll-div1 flex items-center ml-4px mt-4px pb-5px"
+            // mb-5px
             style={{
               overflowX: "auto",
-              whiteSpace: "nowrap",
+              overflowY: "hidden",
+              // whiteSpace: "nowrap",
             }}
           >
             <div

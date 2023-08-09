@@ -12,8 +12,8 @@ import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 
 const AccordionButton3 = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [showCard, setShowCard] = useState(true);
-  const [showCard1, setShowCard1] = useState(true);
+  const [showCard, setShowCard] = useState(false);
+  const [showCard1, setShowCard1] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);

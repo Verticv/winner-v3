@@ -555,6 +555,7 @@ const nonLiveSlice = createSlice({
         ],
       },
     ],
+    League: [],
   },
   reducers: {
     setNonLiveData: (_state, action) => ({
@@ -598,6 +599,17 @@ const nonLiveSlice = createSlice({
       bundesliga: [..._state.bundesliga, action.payload.payload.items].filter(
         (item) => item.type === "분데스리가"
       ),
+    }),
+    addToLeague: (_state, action) => ({
+      ..._state,
+      League: [..._state.League, action.payload.payload.title],
+    }),
+    deleteFavoriteLeagueById: (_state, action) => ({
+      ..._state,
+      League: [..._state.League].filter((item) => {
+        console.log("action.payload.id", action.payload.id);
+        return item.id !== action.payload.id;
+      }),
     }),
     deleteAllFavoriteCards: (_state, action) => ({
       ..._state,
@@ -656,9 +668,11 @@ export const {
   addToPreMatchPremierLeague,
   addToFavoriteLaLiga,
   addToBundesliga,
+  addToLeague,
   deleteAllFavoriteCards,
   deleteFavoritePreMatchCardById,
   deleteFavoriteLaLigaCardById,
+  deleteFavoriteLeagueById,
   deleteFavoriteBundesligaCardById,
 } = actions;
 export default reducer;

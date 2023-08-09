@@ -4,7 +4,7 @@ const TabButton = ({ item, isActiveTab, setActiveTab }) => {
   return (
     <div
       style={{
-        borderBottom: isActiveTab === item.id ? "2px solid #ffc900" : "",
+        borderBottom: isActiveTab === item.id ? "3px solid #ffc900" : "",
         width: `${item.width}}`,
       }}
       className="flex items-start z-10 mr-5px "

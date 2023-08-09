@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CenterAccordionContent from "./CenterAccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 import icon1 from "../../../images/nonLivePage/CenterAccordion/star2.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on.png";
 import icon from "../../../images/nonLivePage/CenterAccordion/Icon.png";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addToLeague,
+  deleteFavoriteLeagueById,
+} from "reducers/nonLive-reducer";
 
 // import AccordionContent1 from "./AccordionContent1";
 
 const CenterAccordionButton = ({
+  id,
   title,
   date,
   icon2,
@@ -16,12 +22,45 @@ const CenterAccordionButton = ({
 }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
+  const dispatch = useDispatch();
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
   const lastIndex = cards.length - 1;
   const lastObject = cards[lastIndex];
+
+  const League = useSelector((state) => state?.nonLive?.League);
+
+  useEffect(() => {
+    console.log("League", League);
+    // console.log("action.payload.id1", id);
+  }, [League]);
+
+  useEffect(() => {
+    let card_index = League.findIndex((el) => +el.id === id);
+    if (card_index === -1) {
+      setActiveStar(false);
+    }
+  }, [League, setActiveStar, id]);
+
+  const addFavoriteForLeague = (title, id) => {
+    return dispatch(
+      addToLeague({
+        payload: {
+          title,
+          id,
+        },
+      })
+    );
+  };
+  const deleteFromFavorite = ({ id }) => {
+    dispatch(
+      deleteFavoriteLeagueById({
+        id,
+      })
+    );
+  };
   return (
     <div
       style={{
@@ -84,6 +123,13 @@ const CenterAccordionButton = ({
                 e.stopPropagation();
                 console.log("clicked");
                 setActiveStar((prev) => !prev);
+                if (!activeStar) {
+                  addFavoriteForLeague({ title, id });
+                } else {
+                  deleteFromFavorite({
+                    id,
+                  });
+                }
               }}
               style={{
                 marginTop: activeStar ? "1px" : "",

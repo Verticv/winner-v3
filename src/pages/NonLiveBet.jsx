@@ -83,6 +83,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               flexShrink: 0,
               height: "730px",
+              marginBottom: "90px",
             }}
           >
             <Search />
