@@ -188,7 +188,7 @@ const CustomSlide = ({
               overflow: "hidden",
               width: "165px",
             }}
-            className="font-spoqaBold text-white text-14px h-17px flex items-center tracking-tighter"
+            className="font-bold text-white text-14px h-17px flex items-center tracking-tighter"
           >
             {game.length > 24 ? `${game.slice(0, 24)} ...` : game}
           </p>
@@ -335,7 +335,7 @@ export default function SlotGameHorizontalCarousel() {
       <img src={slotTitleIcon} alt="" />
       <p
         style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-        className="text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-4px"
+        className="text-white text-22px h-22px flex items-center font-bold tracking-tight -mt-4px"
       >
         슬롯게임
       </p>

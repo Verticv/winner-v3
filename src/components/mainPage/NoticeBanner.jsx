@@ -17,7 +17,7 @@ const NoticeBanner = () => {
         <img className="object-none " src={SpeakerIcon} alt="speakerIcon" />
       </div>
       <div className="flex items-center h-28px w-full overflow-x-hidden cursor-default">
-        <span style={{ color: "#eeeeee" }} className="banner font-spoqa text-14px z-10 cursor-default">
+        <span style={{ color: "#eeeeee" }} className="banner font-spoqa text-14px z-10 cursor-default -mt-2px">
           입금하시기전 계좌문의 후 입금해 주시기 바랍니다.
         </span>
       </div>

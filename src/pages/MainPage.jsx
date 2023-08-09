@@ -97,7 +97,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
               <img src={Cube} alt="" className="-ml-4px mr-px" />
               <p
                 style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-                className="text-white text-22px font-spoqaBold tracking-tight mb-2px"
+                className="text-white text-22px font-bold tracking-tight mb-2px"
               >
                 기타게임
               </p>

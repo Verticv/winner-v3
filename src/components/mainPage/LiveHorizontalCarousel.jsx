@@ -176,7 +176,7 @@ export default function LiveHorizontalCarousel() {
         <img className="mb-px" src={Card} alt="" />
         <p
           style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-          className="text-white text-22px font-spoqaBold tracking-tight -mt-4px"
+          className="text-white text-22px font-bold tracking-tight -mt-4px"
         >
           라이브카지노
         </p>

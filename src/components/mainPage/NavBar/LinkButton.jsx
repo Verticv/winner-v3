@@ -10,7 +10,7 @@ const LinkButton = ({ buttonText, ButtonIcon, count, isAuthenticated }) => {
       }}
       className={`w-80px flex-shrink-0 text-r2d2834 relative flex flex-col items-center justify-center cursor-pointer hover:filter hover:brightness-150`}
     >
-      <div className="relative flex justify-center w-48px h-48px -mt-px">
+      <div className="relative flex justify-center w-48px h-48px -mt-2px">
         {isAuthenticated && (
           <div
             className="absolute flex items-center justify-center px-8px h-19px top-2px -right-8px text-white font-roboto tracking-tight text-12px bg-rf04281 rounded-9px"
