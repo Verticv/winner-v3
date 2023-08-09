@@ -104,7 +104,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             setSelectedTab(item.id);
           }}
         >
-          <div className="flex justify-center w-48px h-48px -mt-2px flex-shrink-0">
+          <div className="flex justify-center w-48px h-48px -mt-3px flex-shrink-0">
             <img className="object-none" src={isSelectedTap ? item.activeIcon : item.icon} alt={item.text} />
           </div>
           <span

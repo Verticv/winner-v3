@@ -99,7 +99,7 @@ const LiveRight = () => {
         <img src={Circle} alt="" />
         <p
           style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-          className="text-white text-22px font-spoqaBold tracking-tight -mt-2px ml-px"
+          className="text-white text-22px font-bold tracking-tight -mt-2px ml-px"
         >
           호텔카지노
         </p>

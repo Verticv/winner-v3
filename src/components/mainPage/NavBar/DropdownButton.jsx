@@ -23,7 +23,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
       className={`w-80px z-50 ${isMyMenuOpen ? selectedTabClass : tabClass}`}
       onMouseOver={onMouseOver}
     >
-      <div className="flex justify-center w-48px h-48px ml-px -mt-px">
+      <div className="flex justify-center w-48px h-48px ml-px -mt-2px">
         <img className="object-none" src={isMyMenuOpen ? ButtonActiveIcon : ButtonIcon} alt="my menu" />
       </div>
       <span

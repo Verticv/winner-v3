@@ -202,7 +202,7 @@ export default function SportHorizontalCarousel() {
       <img src={Ball} alt="" />
       <p
         style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-        className="text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-2px"
+        className="text-white text-22px h-22px flex items-center font-bold tracking-tight -mt-2px"
       >
         스포츠
       </p>
