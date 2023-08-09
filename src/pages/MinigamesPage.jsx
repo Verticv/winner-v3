@@ -3,7 +3,7 @@ import Footer from 'components/mainPage/Footer';
 import Navbar from '../components/mainPage/NavBar';
 import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
-import PowerballIcon from '../images/minigames/powerball_v2.png';
+import PowerballIcon from '../images/minigames/powerball.png';
 import PowerLadder from '../images/minigames/powerladder_v2.png';
 import SpeedKino from '../images/minigames/speedkino_v2.png';
 import KinoLadder from '../images/minigames/kinoladder_v2.png';

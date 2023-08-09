@@ -31,7 +31,7 @@ const LinkButton = ({
           // TODO: Add box shadow
           ...style,
         }}
-        className={`flex items-center justify-center text-white text-12px font-spoqaMedium filter hover:brightness-125 ${className}`}
+        className={`flex items-center justify-center text-white text-12px filter hover:brightness-125 pb-px ${className}`}
         {...buttonProperties}
       >
         {buttonText}

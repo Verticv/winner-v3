@@ -27,7 +27,7 @@ const SignedUpPopup = ({ setToLogin }) => {
           <div className="w-full flex justify-center">
             <label
               style={{ color: "#ffffff", marginTop: "22px" }}
-              className="font-spoqaBold text-24px h-24px flex items-center"
+              className="font-bold text-24px h-24px flex items-center"
             >
               회원가입완료
             </label>
@@ -45,16 +45,16 @@ const SignedUpPopup = ({ setToLogin }) => {
               color: "#682aa7",
               letterSpacing: "-0.005em",
             }}
-            className="text-30px h-30px flex items-center font-spoqaBold"
+            className="text-30px h-30px flex items-center font-bold"
           >
             가입 신청이 완료 되었습니다.
           </label>
           <label
             style={{ color: "#666666", letterSpacing: "-0.005em", marginLeft: "12px" }}
-            className="flex font-spoqaMedium text-30px h-30px items-center mt-11px"
+            className="flex font-bold text-30px h-30px items-center mt-11px"
           >
             관리자{" "}
-            <label style={{ color: "#ec1676" }} className="font-spoqaBold pl-7px pr-px">
+            <label style={{ color: "#ec1676" }} className="font-bold pl-7px pr-px">
               승인 대기중
             </label>{" "}
             입니다.

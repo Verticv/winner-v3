@@ -22,7 +22,7 @@ import SportsBetHistory from 'components/myPage/betHistory/SportsBetHistory'
 import HorizontalMenu8 from 'components/horizontalMenus/HorizontalMenu8'
 import SubHorizontalMenu from 'components/myPage/betHistory/SubHorizontalMenu'
 
-import AllIcon from '../../images/myPage/betHistory/all_v2.png'
+import AllIcon from '../../images/myPage/betHistory/all.png'
 import EvoIcon from '../../images/myPage/betHistory/evolution_v2.png'
 import AsiaIcon from '../../images/myPage/betHistory/asia_v2.png'
 import PragIcon from '../../images/myPage/betHistory/pragmatic_v2.png'

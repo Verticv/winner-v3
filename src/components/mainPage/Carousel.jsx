@@ -3,7 +3,7 @@ import visual1 from "../../images/carousel/visual.png";
 import visual2 from "../../images/carousel/visual2.png";
 import { useHistory } from "react-router-dom";
 
-const images = [visual1, visual2, visual1, visual1, visual1];
+const images = [visual1, visual2, visual1, visual2, visual1];
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 // images must be an array of urls , if using Next JS this could something like
@@ -70,10 +70,10 @@ const Carousel = () => {
         bottom: "47px",
         right: "283px",
       }}
-      className="absolute bottom-0 right-0 rounded-full cursor-pointer filter hover:brightness-125"
+      className="absolute bottom-0 right-0 rounded-full cursor-pointer filter hover:brightness-125 flex items-center justify-center"
     >
       <p
-        style={{ fontSize: "15px", marginLeft: "39px", marginTop: "11px" }}
+        style={{ fontSize: "15px" }}
         className="text-white font-spoqaBold flex items-center h-15px"
       >
         게임시작

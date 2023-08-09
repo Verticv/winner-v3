@@ -50,7 +50,7 @@ const HoldemHover = ({ selection }) => {
             }}
             className="absolute z-50 top-20px pt-2px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
-            게임시작
+            {item.imgText.includes("이용가이드") ? "설명보기" : "게임시작"}
           </button>
         )}
         {isHover === item.id && <div className="w-full h-full bg-black opacity-60 z-10 rounded-6px"></div>}

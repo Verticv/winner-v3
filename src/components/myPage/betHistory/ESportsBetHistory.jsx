@@ -9,7 +9,7 @@ const ESportsBetHistory = ({showSub = true, isPopup = false}) => {
                 <DateSearchBar isLeagueSearch={false} isPopup={isPopup}/>
             )}
 
-            <div className="w-full h-full mt-20px">
+            <div className="w-full h-full mt-10px">
                 <EsportsBetHistoryTable />  
             </div>
         </div>

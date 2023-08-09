@@ -22,7 +22,7 @@ const Card = ({ children, HeaderIcon, headerText, headerActionText }) => {
       >
         <div className={`${headerText === "금주의 환전 TOP" && "-ml-px"} flex items-center`}>
           <img src={HeaderIcon} alt="" draggable={false} className={`${headerText === "금주의 환전 TOP" ? "mr-5px" : "mr-4px"} `} />
-          <p className="text-white text-14px h-14px flex items-center font-spoqaBold tracking-tight">{headerText}</p>
+          <p className="text-white text-14px h-14px flex items-center font-spoqaBold tracking-tight -mt-px font-bold">{headerText}</p>
         </div>
         {headerActionText && (
           <div

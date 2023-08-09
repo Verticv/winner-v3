@@ -2,30 +2,37 @@ import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
 import LiveCasinoBetHistoryTable from '../tables/LiveCasinoBetHistoryTable'
-import AllIcon from '../../../images/myPage/betHistory/all_v2.png'
-import EvoIcon from '../../../images/myPage/betHistory/evolution_v2.png'
-import AsiaIcon from '../../../images/myPage/betHistory/asia_v2.png'
-import PragIcon from '../../../images/myPage/betHistory/pragmatic_v2.png'
-import DgIcon from '../../../images/myPage/betHistory/dg_v2.png'
-import SexyIcon from '../../../images/myPage/betHistory/sexy_v2.png'
-import BigIcon from '../../../images/myPage/betHistory/big_v2.png'
-import RoyalIcon from '../../../images/myPage/betHistory/royal_v2.png'
-import OrientalIcon from '../../../images/myPage/betHistory/oriental_v2.png'
-import IzugiIcon from '../../../images/myPage/betHistory/izugi.png'
-import Sub1 from '../../../images/myPage/betHistory/slotGame/sub1.png'
-
+import AllIcon from '../../../images/myPage/betHistory/all.png'
+import bet1 from '../../../images/myPage/betHistory/liveCasino/bet1.png'
+import bet2 from '../../../images/myPage/betHistory/liveCasino/bet2.png'
+import bet3 from '../../../images/myPage/betHistory/liveCasino/bet3.png'
+import bet4 from '../../../images/myPage/betHistory/liveCasino/bet4.png'
+import bet5 from '../../../images/myPage/betHistory/liveCasino/bet5.png'
+import bet6 from '../../../images/myPage/betHistory/liveCasino/bet6.png'
+import bet7 from '../../../images/myPage/betHistory/liveCasino/bet7.png'
+import bet8 from '../../../images/myPage/betHistory/liveCasino/bet8.png'
+import bet9 from '../../../images/myPage/betHistory/liveCasino/bet9.png'
+import bet10 from '../../../images/myPage/betHistory/liveCasino/bet10.png'
+import bet11 from '../../../images/myPage/betHistory/liveCasino/bet11.png'
+import bet12 from '../../../images/myPage/betHistory/liveCasino/bet12.png'
+import bet13 from '../../../images/myPage/betHistory/liveCasino/bet13.png'
+import bet14 from '../../../images/myPage/betHistory/liveCasino/bet14.png'
 const subTabsArray = [
-    { text: "전체", icon: AllIcon, id: 0 },
-    { text: "프레그메틱플레이", icon: PragIcon, id: 3, custom: "mt-8px" },
-    { text: "에볼루션", icon: EvoIcon, id: 1 },
-    { text: "로얄지", icon: RoyalIcon, id: 4 },
-    { text: "아시아게이밍", icon: AsiaIcon, id: 5 },
-    { text: "드림게이밍", icon: DgIcon, id: 6 },
-    { text: "섹시게이밍", icon: SexyIcon, id: 7 },
-    { text: "빅게이밍", icon: BigIcon, id: 8 },
-    { text: "오리엔탈게임", icon: OrientalIcon, id: 9 },
-    { text: "이주기", icon: IzugiIcon, id: 10 },
-    { text: "마이크로게이밍", icon: Sub1, id: 11 },
+    { text: "전체", icon: AllIcon, id: 0},
+    { text: "프레그메틱플레이", icon: bet1, id: 1 },
+    { text: "에볼루션", icon: bet2, id: 2 },
+    { text: "로얄지", icon: bet3, id: 3 },
+    { text: "아시아게이밍", icon: bet5, id: 4 },
+    { text: "드림게이밍", icon: bet4, id: 5 },
+    { text: "섹시게이밍", icon: bet6, id: 6 },
+    { text: "빅게이밍", icon: bet7, id: 7 },
+    { text: "오리엔탈게임", icon: bet8, id: 8 },
+    { text: "이주기", icon: bet9, id: 9 },
+    { text: "마이크로게이밍", icon: bet10, id: 10 },
+    { text: "베가스라운지", icon: bet11, id: 11 },
+    { text: "비터라이브", icon: bet12, id: 12 },
+    { text: "타이산", icon: bet13, id: 13 },
+    { text: "모티베이션", icon: bet14, id: 14 },
 ];
 
 const tableArray = [
@@ -80,10 +87,9 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fals
         <div className="w-full">
             {showSub === true && (
               <>
-                <div style={{height:'172px'}} className="mt-10px h-88px w-full px-4px py-3px rounded-4px bg-gray-323231">
+                <div style={{height:'170px',background:'rgba(52, 34, 103, 0.6)'}} className="mt-10px w-full px-3px py-3px rounded-6px">
                   <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
                 </div>
-                  {/* <DateSearchBar isLeagueSearch={false} /> */}
               </>
 
             )}
@@ -91,7 +97,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fals
             <DateSearchBar isLeagueSearch={false} isPopup={isPopup}/>
 
 
-            <div className="w-full h-full mt-20px">
+            <div className="w-full h-full mt-10px">
                 <LiveCasinoBetHistoryTable 
                     array={tableArray} 
                     checkedState={checkedState} 
@@ -101,43 +107,32 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true, isPopup = fals
                 />   
             </div>
 
-            <div className="mt-40px h-36px w-full flex items-center justify-between">
-              <div className="flex space-x-2px">
+            <div className="mt-20px h-36px w-full flex items-center justify-between">
+              <div className="flex space-x-4px ml-px">
                 <button 
-                    style={{background:'linear-gradient(to bottom, rgba(232,184,136,1) 0%, rgba(75,59,9,1) 98%)'}}
-                    className="flex items-center justify-center w-90px h-36px rounded-4px  hover:filter hover:brightness-125 shadow-link" 
+                     style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                    className="flex items-center justify-center w-88px h-36px rounded-6px  hover:filter hover:brightness-125" 
                     onClick={() => allSelectButtonPressed()}
-                        >
-                            <div 
-                                style={{
-                                    background: "linear-gradient(0deg, rgba(128,96,62,1) 0%, rgba(129,96,64,1) 5%, rgba(165,124,82,1) 97%)",
-                                }}
-                                className="flex items-center justify-center h-34px w-88px rounded-4px cursor-pointer"
-                            >
-                                <span className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                            </div>
-                        </button>
-                        <button 
-                            style={{background:'linear-gradient(to bottom, rgba(232,136,149,1) 0%, rgba(75,9,35,1) 98%)'}}
-                            className="flex items-center justify-center w-90px h-36px rounded-4px  hover:filter hover:brightness-125 shadow-link"
-                        >
-                            <div 
-                                style={{
-                                  background: "linear-gradient(180deg, rgba(224,101,70,1) 0%, rgba(221,98,69,1) 6%, rgba(152,53,30,1) 97%, rgba(152,52,28,1) 100%)",
-                               
-                                }}
-                                className="flex items-center justify-center h-34px w-88px rounded-4px cursor-pointer"
-                            >
-                                <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 pt-px text-shadow-5">선택삭제</span>
-                            </div>
-                        </button>
-                    </div>
-                    <button style={{width:'159px'}} className="flex items-center justify-center h-36px rounded-4px hover:filter hover:brightness-125 bg-gradient-to-b from-blue-88d9e8 to-blue-3d4a8d p-px shadow-link">
-                        <div style={{width:'157px'}} className="flex items-center justify-center h-34px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-shadow-5">게시판에 내역올리기</span>
-                        </div>
-                    </button>
-                </div>
+                >
+                    
+                <span className="tracking-tight text-13px text-white text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                    
+                </button>
+                <button 
+                        style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                    className="flex items-center justify-center w-88px h-36px rounded-6px  hover:filter hover:brightness-125"
+                >
+                    
+                        <span className="tracking-tight text-13px text-white text-shadow-5">선택삭제</span>
+                
+                </button>
+            </div>
+            <button style={{width:'158px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}} className="flex items-center justify-center h-36px rounded-6px hover:filter hover:brightness-125  p-px">
+               
+            <span className="tracking-tight text-13px text-white text-shadow-5">게시판에 내역올리기</span>
+               
+            </button>
+        </div>
         </div>
     )
 }

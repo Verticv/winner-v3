@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
-import HomeIcon from '../../images/myPage/home_icon_v2.png'
+import HomeIcon from '../../images/myPage/home_icon.png'
 import RightArrow from '../../images/myPage/right_arrow.png'
 
 const DirectoryComponent = ({
@@ -53,28 +53,30 @@ const DirectoryComponent = ({
     }
 
     return (
-        <div className="flex items-center h-20px w-default my-20px space-x-10px">
+        <div className="flex items-center h-20px w-default mt-20px mb-11px space-x-10px">
             <img className="object-none cursor-pointer" src={HomeIcon} alt="" onClick={() => history.push("/")} />
             <img className="object-none cursor-none mb-px" src={RightArrow} alt=""/>
             <span 
                 className={`${
                     !branch2 
-                        ? "font-spoqaBold" 
-                        : "font-spoqaMedium"
-                }  text-13px tracking-tight cursor-pointer text-gray-929292 mt-px`}
+                        ? "font-bold" 
+                        : "opacity-60"
+                    } text-13px text-eeeeee tracking-Stightest cursor-pointer`}
+                style={{ marginLeft: '9px'}}
                 onClick={() => {branch1Clicked(branch1)}}
             >
                 {branch1}
             </span>
             {branch2 && (
                 <>
-                    <img className="object-none mb-px" src={RightArrow} alt="" />
-                    <span style={{marginLeft:'8px'}}
+                    <img className="object-none mb-px" style={{marginLeft:'11px'}} src={RightArrow} alt="" />
+                    <span
                         className={`${
                             !branch3 
-                            ? "font-spoqaBold" 
-                            : "font-spoqaMedium"
-                            } text-13px tracking-tight cursor-pointer text-gray-929292 mt-px`}
+                            ? "font-bold" 
+                            : "opacity-60"
+                            } text-13px  text-eeeeee tracking-Stightest cursor-pointer`}
+                        
                         onClick={() => branch2Clicked(mainPath)}
                         >
                             {branch2}
@@ -84,13 +86,13 @@ const DirectoryComponent = ({
             {branch3 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className="font-spoqaBold text-13px text-gray-929292 tracking-tight cursor-pointer">{branch3}</span>
+                    <span className="font-bold text-13px  text-eeeeee tracking-Stightest  cursor-pointer">{branch3}</span>
                 </>
             )}
             {branch4 && (
                 <>
                     <img className="object-none" src={RightArrow} alt="" />
-                    <span className="font-spoqaBold text-13px text-gray-r393e41 tracking-tight">{branch4}</span>
+                    <span className="font-bold text-13px text-gray-r393e41 tracking-Stightest ">{branch4}</span>
                 </>
             )}    
         </div>

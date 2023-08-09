@@ -53,7 +53,7 @@ const Button = ({ number }) => {
           borderRadius: "5px",
         }}
       >
-        <p className="text-white font-robotoRegular text-14px tracking-tight h-14px flex items-center mt-px">
+        <p className="text-white font-robotoRegular text-14px tracking-tight h-14px flex items-center">
           {number}
         </p>
       </div>
@@ -63,7 +63,7 @@ const Button = ({ number }) => {
 
 const Paragraph = ({ text }) => {
   return (
-    <p className="w-61px h-12px flex justify-center items-center text-center text-r666666 font-spoqaMedium text-12px tracking-tight mt-px">
+    <p className="w-61px h-12px flex justify-center items-center text-center text-r666666 font-spoqaMedium text-12px tracking-tight">
       {text}
     </p>
   );
@@ -77,7 +77,7 @@ const Club = ({ text, Icon }) => {
       </div>
       <p
         style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", width: "155px" }}
-        className="text-r666666 font-spoqaBold text-15px tracking-tight ml-4px h-16px flex items-center mt-2px w-full"
+        className="text-r666666 font-spoqaBold text-15px tracking-tight ml-4px h-16px flex items-center w-full"
       >
         {text.length > 10 ? `${text.slice(0, 10)}...` : text}
       </p>
@@ -110,7 +110,7 @@ const Card = ({ item }) => {
             <img className="object-contain ml-4px" src={item.icon} alt="white football" />
             <p
               style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", width: "330px" }}
-              className="text-white font-spoqaBold text-14px h-15px flex items-center tracking-tight ml-3px mt-px"
+              className="text-white font-spoqaBold text-14px h-17px flex items-center tracking-tight ml-3px"
             >
               {item.title.length > 40 ? `${item.title.slice(0, 40)}...` : item.title}
             </p>
@@ -202,7 +202,7 @@ export default function SportHorizontalCarousel() {
       <img src={Ball} alt="" />
       <p
         style={{ textShadow: "0px 2px 5px rgba(0, 0, 0, 0.75)" }}
-        className="text-white text-22px h-22px flex items-center font-spoqaBold tracking-tight -mt-2px"
+        className="text-white text-22px h-22px flex items-center font-bold tracking-tight -mt-2px"
       >
         스포츠
       </p>

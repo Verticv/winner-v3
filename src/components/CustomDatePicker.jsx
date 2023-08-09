@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from "react-datepicker";
 import ko from "date-fns/locale/ko";
-import CalendarIcon from "../images/myPage/betHistory/calendar_v2.png";
+import CalendarIcon from "../images/myPage/betHistory/calendar.png";
 import "../components/myPage/DatePicker.css";
 import { getMonth, getYear } from "date-fns";
 import range from "lodash/range";
@@ -128,7 +128,7 @@ const CustomDatePicker = ({ classes }) => {
             >
               <div
                 style={{ height: "249px" }}
-                className="w-50px mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a"
+                className="w-50px mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a"
               >
                 <div className="w-full mt-2px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c">
                   {months.map((item) => (
@@ -176,7 +176,7 @@ const CustomDatePicker = ({ classes }) => {
         dateFormatCalendar="yyyy년 MM월"
       />
       <img
-        style={{ marginTop: "13px", marginRight: "12px" }}
+        style={{ marginTop: "12px", marginRight: "11px" }}
         src={CalendarIcon}
         alt="img"
         className="absolute top-0 right-0 mt-12px mr-10px"

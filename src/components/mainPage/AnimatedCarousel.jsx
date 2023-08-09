@@ -30,6 +30,13 @@ import { CarouselBackButton, CarouselNextButton } from "./SlotGameHorizontalCaro
 
 const sampleArray = [
   {
+    id: 17,
+    activeIcon: activeImage6,
+    logo: logo6,
+    center: center6,
+    title: "K-홀덤",
+  },
+  {
     id: 0,
     activeIcon: activeImage1,
     logo: logo1,
@@ -147,13 +154,6 @@ const sampleArray = [
     logo: logo5,
     center: center5,
     title: "티비벳",
-  },
-  {
-    id: 17,
-    activeIcon: activeImage6,
-    logo: logo6,
-    center: center6,
-    title: "K-홀덤",
   },
 ];
 

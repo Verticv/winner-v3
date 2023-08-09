@@ -35,6 +35,7 @@ import { useHistory } from "react-router-dom";
 import TopBar from "../TopBar";
 import DropdownButton from "./DropdownButton";
 import LinkButton from "./LinkButton";
+import NoticeBanner from "../NoticeBanner";
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
   const history = useHistory();
@@ -62,7 +63,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   const myMenuOptionsArray = [
-    { text: "마이페이지", id: 0 },
+    { text: "마이페이지", id: 0, path: '/mypage/bet-history' },
     { text: "베팅내역", id: 1 },
     { text: "충/환전내역", id: 2 },
     { text: "총판페이지", id: 3 },
@@ -89,9 +90,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           style={{
             color: isSelectedTap ? "#ffffff" : "#2d2834",
             background: isSelectedTap ? "#5323a0" : "none",
+            width: `calc(922px / ${tabsArray.length})`,
           }}
-          className={`w-83px h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
-            items.length - 2 === index ? "mr-10px" : items.length - 1 === index ? "" : "mr-9px"
+          className={`h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
+            items.length - 2 === index ? "" : items.length - 1 === index ? "" : ""
           }`}
           onClick={() => {
             setSelectedTab(item.id);
@@ -101,18 +103,13 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
             setHoveredTab(item.id);
             setSelectedTab(item.id);
           }}
-          // onMouseLeave={() => {
-          //   setHoveredTab(null);
-          //   setSelectedTab(null);
-          //   // TODO: seems there is a bug here with the animation
-          // }}
         >
-          <div className="flex justify-center w-48px h-48px -mt-2px flex-shrink-0">
+          <div className="flex justify-center w-48px h-48px -mt-3px flex-shrink-0">
             <img className="object-none" src={isSelectedTap ? item.activeIcon : item.icon} alt={item.text} />
           </div>
           <span
-            style={{ marginBottom: "0px" }}
-            className="cursor-pointer font-spoqaMedium text-14px tracking-tight -mt-3px"
+            style={{ marginBottom: "0px", fontSize: "13px" }}
+            className="cursor-pointer font-bold tracking-tight -mt-3px flex-shrink-0"
           >
             {item.text}
           </span>
@@ -134,31 +131,25 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           background: "linear-gradient(to bottom, #f0ecff, #cacdff)",
           boxShadow: "0px 2px 15px 0px rgba(0, 0, 0, 0.5)",
         }}
-        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-10"
+        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-20"
       >
         <div className="w-full absolute h-px bottom-0 bg-r9688c7" />
-        <div
-          // onMouseMove={() => setHoveredTab(null)}
-          className="w-full h-full absolute"
-        ></div>
         <div id="menu-wrapper" style={{ width: "1260px" }} className="w-full z-50">
           <div className="">
             <div className="flex justify-start w-full">
-              <div style={{ height: "82px" }} className="relative flex justify-between flex-row flex-shrink-0">
+              <div
+                style={{ height: "82px", width: "922px" }}
+                className="relative flex justify-between flex-row flex-shrink-0"
+              >
                 <div className="flex items-center flex-shrink-0">
                   <TabsList items={tabsArray} />
                 </div>
-
-                <div
-                  // onMouseMove={() => setHoveredTab(null)}
-                  className="w-full h-full"
-                ></div>
               </div>
               <div
                 className="h-full flex items-center"
                 style={{
                   marginLeft: "11px",
-                  marginRight: "18px",
+                  marginRight: "11px",
                   height: "82px",
                 }}
               >
@@ -198,6 +189,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           </div>
         </div>
         <NavbarHover selection={hoveredTab} setHoveredTab={setHoveredTab} setSelectedTab={setSelectedTab} />
+      </div>
+      <div className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-10">
+        <NoticeBanner />
       </div>
     </>
   );
