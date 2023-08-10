@@ -32,10 +32,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
   const [isHovered3, setIsHovered3] = useState(false);
   const [idSelected, setIdSelected] = useState([]);
 
-  useEffect(() => {
-    console.log("idSelected", idSelected);
-  }, [idSelected, setIdSelected]);
-
   const favoritePreMatch = useSelector(
     (state) => state?.nonLive?.favoritePreMatch
   );

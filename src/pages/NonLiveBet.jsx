@@ -13,7 +13,6 @@ import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandCom
 import EnglandComponent2 from "components/nonLivePage/EnglandComponent/EnglandComponent2";
 import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
 import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
-// import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpComponent";
 
 import Tabs from "components/nonLivePage/Tabs/Tabs";
 import { useSelector } from "react-redux";
@@ -32,7 +31,6 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
       <div
         style={{
           background: "linear-gradient(to right, #b644c4, #351894)",
-          // minHeight: "3000px",
         }}
         className="w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
       >
@@ -72,17 +70,12 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           style={{ background: "linear-gradient(to right, #b644c4, #351894)" }}
           className="relative w-full flex items-start "
         >
-          {/* <div
-            style={{ marginLeft: "717px", marginTop: "130px" }}
-            className="flex items-center justify-center absolute z-50 "
-          >
-            <PoupUpComponent />
-          </div> */}
           <div
             style={{
               overflowY: "auto",
               flexShrink: 0,
               height: "730px",
+              marginBottom: "90px",
             }}
           >
             <Search />
@@ -115,8 +108,6 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
                 </>
               )}
             </div>
-            {/* <CenterComponent />
-            <CenterAccordion /> */}
           </div>
           <div
             style={{

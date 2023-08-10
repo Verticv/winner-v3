@@ -8,12 +8,10 @@ import flag2 from "../../../images/nonLivePage/LeftAccordion/Card/Flag2.png";
 import flag3 from "../../../images/nonLivePage/LeftAccordion/Card/Flag3.png";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 
-// import AccordionContent from "./AccordionContent";
-
 const AccordionButton3 = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [showCard, setShowCard] = useState(true);
-  const [showCard1, setShowCard1] = useState(true);
+  const [showCard, setShowCard] = useState(false);
+  const [showCard1, setShowCard1] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -424,7 +422,6 @@ const AccordionButton3 = ({ icon, title }) => {
             </div>
           </div>
         </div>
-        // </div>
       )}
     </div>
   );

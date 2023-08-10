@@ -31,11 +31,6 @@ const RightComponent = () => {
   const [active, setActive] = useState(false);
 
   const betSlipData = useSelector((state) => state?.nonLive?.betSlip?.data);
-  console.log("RightComponent state :>> ", betSlipData);
-
-  console.log("isPopupOpen :>> ", isPopupOpen);
-
-  console.log("isBetSlipActive :>> ", isBetSlipActive);
 
   const dateFormat = "yyyy-MM-dd";
   const dateFormat1 = "H:mm:ss";

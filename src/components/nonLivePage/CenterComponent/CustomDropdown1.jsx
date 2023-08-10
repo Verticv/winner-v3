@@ -75,7 +75,6 @@ const CustomDropdown1 = () => {
             style={{
               background: "#ffffff",
               width: "77px",
-              // height: "27px",
               borderRadius: "4px",
             }}
             className="hover relative items-center justify-between"

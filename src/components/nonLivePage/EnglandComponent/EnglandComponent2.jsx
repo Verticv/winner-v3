@@ -13,7 +13,6 @@ import { useSelector } from "react-redux";
 const EnglandComponent = ({ englandActive, setEnglandActive }) => {
   const [isOpen, setIsOpen] = useState(false);
   const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
-  console.log("state111 :>> ", liveGameData);
 
   return (
     <>

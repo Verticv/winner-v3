@@ -1,0 +1,19 @@
+/* Scrollbar styles */
+
+.scroll-div1::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+  display: block;
+}
+
+.scroll-div1::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 10px #430674; */
+  background: #430674;
+  border-radius: 10px;
+}
+
+.scroll-div1::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #956df1;
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
+}

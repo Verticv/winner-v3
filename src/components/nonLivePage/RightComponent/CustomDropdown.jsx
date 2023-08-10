@@ -79,7 +79,7 @@ const CustomDropdown = () => {
               {options.map((option) => (
                 <li
                   key={option}
-                  className="py-2 px-2 cursor-pointer"
+                  className="py-2 px-2 text-13px cursor-pointer"
                   onClick={() => handleOptionSelect(option)}
                 >
                   {option}
