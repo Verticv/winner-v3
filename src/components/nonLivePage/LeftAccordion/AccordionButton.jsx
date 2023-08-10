@@ -1,32 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AccordionContent from "./AccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 import { useSelector } from "react-redux";
 
 const AccordionButton = ({ icon, title }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
 
-  const state = useSelector((state) => state);
-  console.log("state :>> ", state);
-  // const card1 = [
-  //   {
-  //     text: "맨체스터유나이티드",
-  //     text2: "맨체스터시티",
-  //     time: "18:30",
-  //     date: "2023-05-14 18:30",
-  //   },
-  //   {
-  //     text: "맨체스터유나이티드",
-  //     text2: "맨체스터시티",
-  //     time: "18:30",
-  //     date: "2023-05-14 18:30",
-  //   },
-  // ];
+  const favoritePreMatch = useSelector(
+    (state) => state?.nonLive?.favoritePreMatch
+  );
+  const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
+  const bundesliga = useSelector((state) => state?.nonLive?.bundesliga);
+  const League = useSelector((state) => state?.nonLive?.League);
 
+  useEffect(() => {
+    if (
+      favoritePreMatch[0]?.id ||
+      favoriteLaLiga[0]?.id ||
+      bundesliga[0]?.id ||
+      League[0]?.id
+    ) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  }, [favoritePreMatch, favoriteLaLiga, bundesliga, League]);
+
+  const state = useSelector((state) => state);
   return (
     <div
       style={{
@@ -96,9 +100,7 @@ const AccordionButton = ({ icon, title }) => {
           className="pt-2px rounded-b-lg pb-2px"
         >
           <div>
-            {/* {preMatch.map((item, index) => ( */}
-            <AccordionContent />
-            {/* ))} */}
+            <AccordionContent setIsOpen={setIsOpen} />
           </div>
         </div>
       )}

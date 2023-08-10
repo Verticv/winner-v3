@@ -33,11 +33,6 @@ const CenterAccordionButton = ({
   const League = useSelector((state) => state?.nonLive?.League);
 
   useEffect(() => {
-    console.log("League", League);
-    // console.log("action.payload.id1", id);
-  }, [League]);
-
-  useEffect(() => {
     let card_index = League.findIndex((el) => +el.id === id);
     if (card_index === -1) {
       setActiveStar(false);
@@ -121,7 +116,6 @@ const CenterAccordionButton = ({
             <img
               onClick={(e) => {
                 e.stopPropagation();
-                console.log("clicked");
                 setActiveStar((prev) => !prev);
                 if (!activeStar) {
                   addFavoriteForLeague({ title, id });

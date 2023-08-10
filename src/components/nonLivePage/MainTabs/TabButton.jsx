@@ -10,13 +10,20 @@ const TabButton = ({ item, isActiveTab, setActiveTab }) => {
       className="flex items-start z-10 mr-5px "
       onClick={() => setActiveTab(item.id)}
     >
-      <img className="ml-15px mt-px" src={item.icon} alt="icon" />
+      <img
+        style={{
+          marginLeft: `${item.marginLeft1}`,
+        }}
+        className="mt-px"
+        src={item.icon}
+        alt="icon"
+      />
       <p
         style={{
           marginLeft: `${item.marginLeft}`,
           marginRight: `${item.marginRight}`,
         }}
-        className="mt-8px mb-14px text-14px tracking-tight text-white font-malgun"
+        className="mt-6px mb-14px text-14px tracking-tight text-white font-malgun"
       >
         {item.text}
       </p>

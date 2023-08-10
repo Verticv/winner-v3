@@ -544,15 +544,7 @@ const nonLiveSlice = createSlice({
     bundesliga: [
       {
         title: "분데스리가",
-        items: [
-          // {
-          //   team1: "FC바르셀로나",
-          //   time: "18:30",
-          //   team2: "아틀레티코",
-          //   dateAndTime: "2023-05-14 18:30",
-          //   type: "프리미어리그",
-          // },
-        ],
+        items: [],
       },
     ],
     League: [],
@@ -607,7 +599,6 @@ const nonLiveSlice = createSlice({
     deleteFavoriteLeagueById: (_state, action) => ({
       ..._state,
       League: [..._state.League].filter((item) => {
-        console.log("action.payload.id", action.payload.id);
         return item.id !== action.payload.id;
       }),
     }),
@@ -616,6 +607,7 @@ const nonLiveSlice = createSlice({
       favoritePreMatch: [],
       favoriteLaLiga: [],
       bundesliga: [],
+      League: [],
     }),
     deleteFavoritePreMatchCardById: (_state, action) => ({
       ..._state,
