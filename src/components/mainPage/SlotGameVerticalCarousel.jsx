@@ -45,7 +45,7 @@ const Card = ({ icon, name, game }) => (
           width: "190px",
           fontSize: "22px",
         }}
-        className="font-bold tracking-tight ml-2px text-left -mt-3px"
+        className="font-bold tracking-tight ml-2px text-left -mt-6px mb-4px"
       >
         {game.length > 16 ? `${game.slice(0, 16)}...` : game}
       </p>
@@ -64,7 +64,7 @@ const Card = ({ icon, name, game }) => (
       </p>
       <p
         style={{ color: "#f5e074", lineHeight: "26px" }}
-        className="font-spoqaBold text-22px flex items-center tracking-tight -mt-4px ml-px"
+        className="font-bold text-22px flex items-center tracking-tight -mt-4px ml-px"
       >
         ₩123,456,789
       </p>
