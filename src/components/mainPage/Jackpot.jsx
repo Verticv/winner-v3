@@ -18,7 +18,7 @@ export default function Jackpot() {
         className="absolute -top-40px -left-18px"
       />
       <img
-        style={{ top: "2.5px", left: "2.5px", borderRadius: "4px" }}
+        style={{ top: "2.4px", left: "2.4px", borderRadius: "4px" }}
         src={JackpotGif}
         alt="jackpot"
         className="absolute object-none rounded-b-lg overflow-hidden"
