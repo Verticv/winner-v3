@@ -30,7 +30,7 @@ const AccordionButton = ({ icon, title }) => {
     }
   }, [favoritePreMatch, favoriteLaLiga, bundesliga, League]);
 
-  const state = useSelector((state) => state);
+  // const state = useSelector((state) => state);
   return (
     <div
       style={{

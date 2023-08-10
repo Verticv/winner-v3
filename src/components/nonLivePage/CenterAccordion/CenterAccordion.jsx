@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import CenterAccordionButton from "./CenterAccordionButton";
 
 const CenterAccordion = ({ setEnglandActive }) => {
   const data = useSelector((state) => state?.nonLive?.data);
-  const state = useSelector((state) => state);
+  // const state = useSelector((state) => state);
 
   return (
     <>

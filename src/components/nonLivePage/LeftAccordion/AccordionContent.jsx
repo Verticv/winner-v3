@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import iconStar from "../../../images/nonLivePage/LeftAccordion/Card/star.png";
-import img1 from "../../../images/nonLivePage/LeftAccordion/content1/1.png";
 import icon from "../../../images/nonLivePage/LeftAccordion/content/Icon.png";
 import AccordionCard from "./AccordionCard";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
-// import AccordionCard1 from "./AccordionCard1";
-// import AccordionCard2 from "./AccordionCard2";
 import { useSelector, useDispatch } from "react-redux";
 import {
   deleteAllFavoriteCards,
