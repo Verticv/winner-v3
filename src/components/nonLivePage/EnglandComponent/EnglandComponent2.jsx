@@ -8,11 +8,11 @@ import img4 from "../../../images/nonLivePage/EnglandComponent/img4.png";
 import img5 from "../../../images/nonLivePage/EnglandComponent/img5.png";
 import group from "../../../images/nonLivePage/EnglandComponent/Group.png";
 import logo from "../../../images/nonLivePage/EnglandComponent/Logo.png";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const EnglandComponent = ({ englandActive, setEnglandActive }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
+  // const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
 
   return (
     <>
