@@ -12,46 +12,49 @@ const PointsTransaction = () => {
         <div className="w-full flex flex-col items-center">
             <MyPageTitle title="포인트전환내역" pointsFor="Louie3" isTransaction={true} />
 
-            <div className="flex mt-20px h-100px space-x-6px">
-                <div style={{width:'202px'}} className="flex items-center justify-center rounded-4px h-100px border-2 border-golden-a47b51 bg-gray-272624">
-                    <div style={{borderRadius:"8px", width:'200px', height:'96px'}} className="bg-gray-272624 pt-21px flex items-center flex-col">
-                        <div className="text-yellow-ad9e8c font-spoqaMedium text-14px tracking-tight h-13px flex items-center">잔여 포인트</div>
-                        <div className="text-27px tracking-tight flex items-center h-23px mt-17px">
-                            <span className="font-spoqaBold text-blue-4c98ff">278</span>
-                            <span className="font-spoqa text-yellow-ad9e8c">P</span>
-                        </div>
+            <div className="w-full flex mt-10px h-100px space-x-6px px-px mb-8px">
+                <div style={{ width: '202px', borderColor: '#631e9a', borderWidth: '3px' }}
+                    className="flex items-center rounded-10px bg-white h-98px border pt-19px pb-20px  flex-col">
+                <div className="text-p594e6a text-14px h-13px flex items-center" style={{letterSpacing:'-0.1em'}}>잔여 포인트</div>
+                <div className="text-30px flex items-center h-23px mt-15px font-bold">
+                    <span className="text-rf04281">278</span>
+                    <span style={{color:'#5e399a'}}>P</span>
+                </div>
+                </div>
+
+                <div style={{ width: '202px', borderColor: '#631e9a', borderWidth: '3px' }}
+                    className="pt-19px pb-20px items-center flex-col flex rounded-10px bg-white h-98px border">
+                    <div className="text-p594e6a text-14px h-13px flex items-center" style={{letterSpacing:'-0.1em'}}>당월 적립포인트</div>
+                   <div className="text-30px flex items-center h-23px mt-15px font-bold" style={{color:'#5e399a'}}>
+                        <span>50</span>
+                        <span>P</span>
                     </div>
                 </div>
 
-                <div style={{width:'202px'}} className="pt-21px items-center flex-col flex rounded-4px h-100px bg-gray-272624 border-2 border-gray-404040 ">
-                    <div className="text-yellow-ad9e8c font-spoqaMedium text-14px tracking-tight h-13px flex items-center">당월 적립포인트</div>
-                    <div className="text-27px tracking-tight flex items-center h-23px mt-17px text-yellow-ad9e8c">
-                        <span className="font-spoqaBold">50</span>
-                        <span className="font-spoqa">P</span>
+                <div style={{ width: '202px', borderColor: '#631e9a', borderWidth: '3px' }}
+                    className="pt-19px pb-20px items-center flex-col flex rounded-10px bg-white h-98px border">
+                    <div className="text-p594e6a text-14px h-13px flex items-center" style={{letterSpacing:'-0.1em'}}>전월 적립포인트</div>
+                    <div className="text-30px flex items-center h-23px mt-15px font-bold" style={{color:'#5e399a'}}>
+                        <span>228</span>
+                        <span>P</span>
                     </div>
                 </div>
 
-                <div style={{width:'202px'}} className="pt-21px items-center flex-col flex rounded-4px h-100px bg-gray-272624 border-2 border-gray-404040">
-                    <div className="text-yellow-ad9e8c font-spoqaMedium text-14px tracking-tight h-13px flex items-center">전월 적립포인트</div>
-                    <div className="text-27px tracking-tight flex items-center h-23px mt-17px text-yellow-ad9e8c">
-                        <span className="font-spoqaBold">228</span>
-                        <span className="font-spoqa">P</span>
+                <div style={{ width: '202px', borderColor: '#631e9a', borderWidth: '3px' }}
+                    className="pt-19px pb-20px items-center flex-col flex rounded-10px bg-white h-98px border">
+                    <div className="text-p594e6a text-14px h-13px flex items-center" style={{letterSpacing:'-0.1em'}}>총 누적포인트</div>
+                    <div className="text-30px flex items-center h-23px mt-15px font-bold" style={{color:'#5e399a'}}>
+                        <span>278</span>
+                        <span>P</span>
                     </div>
                 </div>
 
-                <div style={{width:'202px'}} className="pt-21px items-center flex-col flex rounded-4px h-100px bg-gray-272624 border-2 border-gray-404040">
-                    <div className="text-yellow-ad9e8c font-spoqaMedium text-14px tracking-tight h-13px flex items-center">총 누적포인트</div>
-                    <div className="text-27px tracking-tight flex items-center h-23px mt-17px text-yellow-ad9e8c">
-                        <span className="font-spoqaBold">278</span>
-                        <span className="font-spoqa">P</span>
-                    </div>
-                </div>
-
-                <div style={{width:'202px'}} className="pt-21px items-center flex-col flex rounded-4px h-100px bg-gray-272624 border-2 border-gray-404040">
-                    <div className="text-yellow-ad9e8c font-spoqaMedium text-14px tracking-tight h-13px flex items-center">총 사용포인트</div>
-                    <div className="text-27px tracking-tight flex items-center h-23px mt-17px text-yellow-ad9e8c">
-                        <span className="font-spoqaBold">0</span>
-                        <span className="font-spoqa">P</span>
+                <div style={{ width: '202px', borderColor: '#631e9a', borderWidth: '3px' }}
+                    className="pt-19px pb-20px items-center flex-col flex rounded-10px bg-white h-98px border">
+                    <div className="text-p594e6a text-14px h-13px flex items-center" style={{letterSpacing:'-0.1em'}}>총 사용포인트</div>
+                    <div className="text-30px flex items-center h-23px mt-15px font-bold" style={{color:'#5e399a'}}>
+                        <span>0</span>
+                        <span>P</span>
                     </div>
                 </div>
             </div>

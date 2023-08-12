@@ -118,18 +118,15 @@ const WinLoseTable = ({
     function Cells({ items }) {
         return items.map((item,index) => (
             <tr 
-                className={`${
-                index%2===0
-                  ? "bg-dark-323232" 
-                  : "bg-dark-2e2e2e"
-                } font-spoqa text-14px tracking-tight text-gray-c8c8c8 h-55px  border-b border-dark-252525`}>
+                className={`text-14px tracking-tight text-r666666 h-55px border-b`}
+                style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd"}}>
                 <td className="font-robotoRegular h-55px text-center flex items-center justify-center pt-3px"><RadioButton id={item.id}/></td>
                 <td className="h-55px text-center font-robotoRegular pt-2px">{item.number}</td>
                 <td className="h-55px text-center font-robotoRegular pt-2px">{item.startDate}</td>
                 <td className="h-55px text-center font-robotoRegular pt-2px">{item.endDate}</td>
                 <td className="h-55px text-center pt-2px">{item.type}</td>
                <td 
-                    style={{color: item.amount.includes("+") ? "#e65454" : item.amount.includes("-") ? "#4c98ff" : "#c8c8c8", paddingRight:'82px'}}
+                    style={{color: item.amount.includes("+") ? "#e9441d" : item.amount.includes("-") ? "#33a1e9" : "#666666", paddingRight:'82px'}}
                     className="h-55px text-right font-robotoRegular pt-2px"
                 >
                     {item.amount}
@@ -141,27 +138,29 @@ const WinLoseTable = ({
 
     return (
       <div
-        style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
-          className="rounded-4px shadow-table overflow-hidden p-px flex flex-col">
-            <table className="rounded-3px overflow-hidden rounded-b-none table-auto w-full">
-                <thead className="font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-55px border-b border-dark-252525 bg-dark-2e2e2e ">
+         style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
+          className="rounded-10px shadow-table overflow-hidden p-px flex flex-col">
+            <table className="rounded-10px overflow-hidden rounded-b-none table-auto w-full">
+                <thead className="text-14px tracking-tight h-55px border-b"
+                 style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                     <tr>
                         <td className="text-center pt-2px" style={{width:"96px"}}>선택</td>
                         <td className="text-center pt-2px" style={{width:"67px"}}>번호</td>
                         <td className="text-center pt-2px" style={{width:"176px"}}>정산시작일</td>
                         <td className="text-center pt-2px" style={{width:"122px"}}>정산종료일</td>
                         <td className="text-center pt-2px" style={{width:"288px"}}>분류</td>
-                        <td className="flextext-left pt-2px pl-18px" style={{width:"164px"}}>금액</td>
+                        <td className="text-left pt-2px pl-18px" style={{width:"164px"}}>금액</td>
                        <td className="text-center pt-2px" style={{width:"125px"}}>처리상태</td>
                     </tr>
                 </thead>
-                <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">
+                <tbody className="w-full text-r666666 text-14px tracking-tight">
                     <Cells items={ExampleArray} />
                 </tbody>
             </table>
-            <div className="flex bg-gray-323232 font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-55px rounded-b-3px">
-                <div className="w-full bg-gray-414141 h-55px flex items-center justify-center font-spoqaMedium text-16px tracking-tight text-gray-ccc2b6 border-r border-dark-252525 rounded-b-3px rounded-br-none">합계</div>
-                <div className="w-full h-55px text-center flex items-center justify-center font-roboto tracking-tight text-red-e65454 text-16px rounded-b-3px rounded-tl-none"><span className='flex ml-40px'>+120,718</span></div>
+            <div className="flex  text-14px tracking-tight text-r666666       h-55px rounded-b-3px">
+                <div className="w-full  h-55px flex items-center justify-center text-16px tracking-tight border-r rounded-b-3px rounded-br-none"
+                style={{borderColor:"#dddddd"}}>합계</div>
+                <div className="w-full h-55px text-center flex items-center justify-center font-roboto tracking-tight text-e9441d text-16px rounded-b-3px rounded-tl-none"><span className='flex ml-40px'>+120,718</span></div>
             </div>
         </div>
     )

@@ -98,16 +98,12 @@ const CouponRequestTable = () => {
     function Cells({ items }) {
         return items.map((item,index) => (
             <tr 
-                className={`${
-                index%2===0
-                  ? "bg-dark-323232" 
-                  : "bg-dark-2e2e2e"
-                } font-spoqa text-14px tracking-tight text-gray-c8c8c8 h-56px  border-b border-dark-252525 last:border-b-0`}
-            >
+                className={`text-14px tracking-tight text-r666666 h-56px border-b last:border-b-0`}
+                style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd"}} >
                 <td className="w-full text-center" style={{maxWidth: '350px' }}>
                     <div className='w-full text-center truncate pl-20px pr-15px' style={{maxWidth: '350px' }}>{item.name}</div>
                 </td>
-                <td style={{width:'119px'}} className="text-right text-red-e9441d font-robotoRegular pr-20px">{item.amount}</td>
+                <td style={{width:'119px'}} className="text-right text-e9441d font-robotoRegular pr-20px">{item.amount}</td>
                 <td style={{width:'140px'}} className="text-center"><div style={{width:'140px'}} className='truncate px-10px text-center'>{item.username}</div></td>
                 <td 
                     style={{
@@ -115,10 +111,10 @@ const CouponRequestTable = () => {
                         color: item.state === "사용가능" 
                         ? "#e65454"
                         : item.state ==="사용완료"
-                        ? "#4c98ff"
+                        ? "#33a1e9"
                         : item.state === "회수쿠폰"
                         ? "#4aca68"
-                        : "#c8c8c8"
+                        : "#666666"
                     }} 
                     className="text-center"
                 >
@@ -132,10 +128,11 @@ const CouponRequestTable = () => {
 
     return (
         <div
-          style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
-          className="rounded-4px shadow-table overflow-hidden p-px">
-            <table className="table-fixed rounded-3px overflow-hidden">
-              <thead className="font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-56px  border-b border-dark-252525 bg-dark-2e2e2e ">
+          style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
+          className="rounded-10px shadow-table overflow-hidden p-px">
+            <table className="table-fixed rounded-10px overflow-hidden w-full">
+            <thead className="text-14px tracking-tight text-r666666 h-54px border-b "
+                style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                 <tr>
                   <td style={{width: "350px"}} className="text-center pl-20px pr-15px">쿠폰명</td>
                   <td style={{width: "163px"}} className="text-center">쿠폰금액</td>
@@ -145,7 +142,7 @@ const CouponRequestTable = () => {
                   <td style={{width: "121px"}} className="text-center">만료일</td>
                 </tr>
               </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">
+            <tbody className="w-full text-r666666 text-14px tracking-tight">
                 <Cells items={ExampleArray} />
             </tbody>
           </table> 

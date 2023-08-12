@@ -118,7 +118,7 @@ const Inbox = () => {
 
 
   const searchDropdown = (
-      <div  className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a ">
+       <div className="w-120px h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white">
         <div className="w-full mt-2px h-full overflow-x-hidden border-gray-2c2c2c">
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("제목")
@@ -137,7 +137,7 @@ const Inbox = () => {
     )
 
     const dropdownButton = (
-        <div className="flex w-120px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group ">
+        <div className="flex w-120px h-42px bg-dark-1a1a1a rounded-6px border group border-p682aa7 text-r666666 bg-white mb-px">
             <input  className="w-0 text-16px"/>
             <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight " >
                 <label className="ml-14px cursor-pointer group-hover:text-gray-r8c8c8c">{selectedCarrier}</label>
@@ -147,7 +147,10 @@ const Inbox = () => {
     )
     
     const InboxSearch = (
-        <div className="h-64px w-full bg-gray-2e2e2e rounded-4px flex items-center justify-center space-x-10px">
+        // <div className="h-64px w-full bg-gray-2e2e2e rounded-4px flex items-center justify-center space-x-10px"
+        // >
+        <div className={`h-62px w-full mt-10px flex items-center justify-center space-x-10px rounded-6px`}
+        style={{background:'rgba(52, 34, 103, 0.6)'}}>
             <DropDownControls 
                 buttonChild={dropdownButton} 
                 isDropdownOpen={isDropdownOpen} 
@@ -156,13 +159,15 @@ const Inbox = () => {
                 {searchDropdown}
             </DropDownControls>
 
-            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
+            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-6px  border border-p682aa7 relative">
                 <input 
-                    className="pl-11px  placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+                     className="w-full placeholder-r666666 flex-shrink-0 outline-none h-40px rounded-6px   px-10px font-medium text-14px tracking-tight  text-r666666 bg-dark-1a1a1a" 
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-4px bg-gradient-to-b from-gray-e8b888  to-gray-4b3b09 flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10">
-                  <div className="flex items-center justify-center w-40px  h-40px rounded-4px bg-gradient-to-b from-golden-gradLight  to-golden-gradDark">
+                <button
+                    style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)" }}
+                    className="flex items-center justify-center w-42px h-42px rounded-6px flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10">
+                  <div className="flex items-center justify-center w-40px  h-40px rounded-6px " style={{background: 'linear-gradient(0deg, #6b22ff, #df52ff)'}}>
                     <img src={SearchIcon} alt="" />
                   </div>
                 </button>
@@ -174,38 +179,30 @@ const Inbox = () => {
         <div>
             <MyPageTitle title="쪽지관리" inboxCount="7"/>
 
-            <div className="mt-20px"></div>
+            <div className="w-full mt-10px"></div>
             <InboxTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
 
             <div className="mt-20px h-36px w-full flex items-center justify-between">
                 <div className="flex space-x-2px">
                     <button 
-                        style={{background:'linear-gradient(to bottom, rgba(232,184,136,1) 0%, rgba(75,59,9,1) 98%)'}}
-                            className="flex items-center justify-center w-90px h-36px rounded-4px   hover:filter hover:brightness-125 shadow-link"
-                        onClick={() => AllSelectButtonPressed()}
+                    style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                    className="flex items-center justify-center w-88px h-36px rounded-6px hover:filter hover:brightness-125"
+                    onClick={() => AllSelectButtonPressed()}
                     >
-                        <div style={{
-                          background: "linear-gradient(0deg, rgba(128,96,62,1) 0%, rgba(129,96,64,1) 5%, rgba(165,124,82,1) 97%)",
-                          }}
-                        className="flex items-center justify-center h-34px w-88px rounded-4px cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-golden-highLight text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                        </div>
+                       
+                    <span className="tracking-tight text-13px text-white text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
                     </button>
-                    <button style={{background:'linear-gradient(to bottom, rgba(232,136,149,1) 0%, rgba(75,9,35,1) 98%)'}}
-                            className="flex items-center justify-center w-90px h-36px rounded-4px   hover:filter hover:brightness-125 shadow-link">
-                        <div style={{
-                                  background: "linear-gradient(180deg, rgba(224,101,70,1) 0%, rgba(221,98,69,1) 6%, rgba(152,53,30,1) 97%, rgba(152,52,28,1) 100%)",
-                               
-                                }}
-                                className="flex items-center justify-center h-34px w-88px rounded-4px cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 text-shadow-5">선택삭제</span>
-                        </div>
+                    
+                    <button style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                    className="flex items-center justify-center w-88px h-36px rounded-6px hover:filter hover:brightness-125">
+            
+                     <span className="tracking-tight text-13px text-white text-shadow-5">선택삭제</span>
+                      
                     </button>
                 </div>
-                <button style={{width:'114px'}} className="flex items-center justify-center h-36px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px  hover:filter hover:brightness-125 shadow-link ">
-                    <div style={{width:'157px'}} className="flex items-center justify-center h-34px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff text-shadow-5">전체읽음처리</span>
-                    </div>
+                <button style={{width:'158px',background:'linear-gradient(to right, #15cfee, #3197e5)',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}} className="flex items-center justify-center h-36px rounded-6px p-px hover:filter hover:brightness-125 mr-px">
+                    <span className="tracking-tight text-13px text-white text-shadow-5">전체읽음처리</span>
+                 
                 </button>
             </div>
 

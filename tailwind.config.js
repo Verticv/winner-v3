@@ -166,7 +166,10 @@ module.exports = {
         r2c1137: "#2c1137",
         p682aa7: "#682aa7",
         eeeeee: "#eeeeee",
-        p594e6a: '#594e6a'
+        p594e6a: '#594e6a',
+        e9441d: '#e9441d',
+        aaaaaa: '#aaaaaa',
+        ffd200: '#ffd200'
       },
       fontFamily: {
         // spoqa: ["SpoqaHanSansNeo"],

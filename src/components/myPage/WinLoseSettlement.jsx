@@ -29,62 +29,54 @@ const WinLoseSettlement = () => {
             <MyPageTitle title="윈루즈정산" />
             <DateSearchBar isLeagueSearch={false} has3MonthSearch={true} />
 
-             <div className="flex h-48px w-full mt-20px space-x-12px">
-                <div style={{width:'255px'}} className="h-48px rounded-full border-2 border-gray-635f5b bg-dark-2e2e2e flex items-center justify-center font-spoqaMedium text-16px">
+             <div className="flex h-48px w-full mt-10px space-x-12px">
+                <div style={{ width: '255px', background:'#341d5a', borderColor:'#9361e5' }}
+                    className="h-48px rounded-full border-2 flex items-center justify-center text-16px">
                     <img className="-ml-2px" src={Diamond} alt="" />
-                    <div className="flex items-center space-x-4px pt-2px ml-14px">
+                    <div className="flex items-center space-x-4px ml-14px">
                       <span className="text-white tracking-tight">진행중인 금액 :</span>
-                      <span className="text-yellow-ffd200">78,308</span>
+                      <span className="text-ffd200">78,308</span>
                     </div>
                 </div>
 
-                <div style={{width:'255px'}} className="h-48px rounded-full border-2 border-gray-635f5b bg-dark-2e2e2e flex items-center justify-center font-spoqaMedium text-16px">
+                <div style={{ width: '255px', background:'#341d5a', borderColor: '#9361e5' }}
+                    className="h-48px rounded-full border-2 flex items-center justify-center text-16px">
                     <img className="-ml-2px" src={Diamond} alt="" />
-                    <div className="flex items-center space-x-4px pt-2px ml-14px">
+                    <div className="flex items-center space-x-4px ml-14px">
                         <span className="text-white tracking-tight">정산 총 금액 :</span>
-                        <span className="text-yellow-ffd200">24,393,246</span>
+                        <span className="text-ffd200">24,393,246</span>
                     </div>
                 </div>
 
             </div>
 
-            <div className="mt-20px">
+            <div className="mt-10px">
                 <WinLoseTable checkedState={checkedState} setCheckedState={setCheckedState}/>
             </div>
 
             <div className="mt-20px h-36px w-full flex items-center justify-between">
-                <div className="flex space-x-2px">
-                    <button 
-                        style={{background:'linear-gradient(to bottom, rgba(232,184,136,1) 0%, rgba(75,59,9,1) 98%)'}}
-                        className="flex items-center justify-center w-90px h-36px rounded-4px  hover:filter hover:brightness-125 shadow-link"
+                <div className="flex space-x-4px ml-px">
+                     <button 
+                        style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                        className="flex items-center justify-center w-88px h-36px rounded-6px hover:filter hover:brightness-125"
                         onClick={() => AllSelectButtonPressed()}
                     >
-                        <div 
-                            style={{
-                        background: "linear-gradient(0deg, rgba(128,96,62,1) 0%, rgba(129,96,64,1) 5%, rgba(165,124,82,1) 97%)",
-                      }}
-                        className="flex items-center justify-center h-34px w-88px rounded-4px cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-14px text-golden-highLight text-shadow-5 mt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                        </div>
+                    <span className="tracking-tight text-13px text-white text-shadow-5">{isAllSelected ? "선택해제" : "전체선택"}</span>
+                        
                     </button>
                     <button 
-                       style={{background:'linear-gradient(to bottom, rgba(232,136,149,1) 0%, rgba(75,9,35,1) 98%)'}}
-                    className="flex items-center justify-center w-90px h-36px rounded-4px  hover:filter hover:brightness-125 shadow-link"
+                        style={{background:'#936cee',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+                        className="flex items-center justify-center w-88px h-36px rounded-6px hover:filter hover:brightness-125"
                     >
-                        <div 
-                             style={{
-                          background: "linear-gradient(180deg, rgba(224,101,70,1) 0%, rgba(221,98,69,1) 6%, rgba(152,53,30,1) 97%, rgba(152,52,28,1) 100%)"
-                        }}
-                        className="flex items-center justify-center h-34px w-88px rounded-4px cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 text-shadow-5 mt-px">선택삭제</span>
-                        </div>
+                        
+                    <span className="tracking-tight text-13px text-white text-shadow-5">선택삭제</span>
+                        
                     </button>
+                    
                 </div>
             </div>
 
-            <div className="flex w-full justify-center mt-4px mb-60px">
+            <div className="flex w-full justify-center mt-5px mb-60px">
                 <Pagination page={page} setPage={setPage}/>   
             </div> 
             

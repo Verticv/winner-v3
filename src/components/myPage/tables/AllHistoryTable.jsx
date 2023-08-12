@@ -65,7 +65,7 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
                     <div style={{width: "88px"}} className="text-center">상태</div>
                     <div style={{width: "72px"}} className="text-center ml-px">보기</div>
             </div>
-            <div className="w-full text-585858 text-14px tracking-tight">
+            <div className="w-full text-14px tracking-tight">
                 <Cells items={array} />
             </div>
       </div>  

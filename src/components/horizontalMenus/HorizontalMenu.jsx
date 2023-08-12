@@ -15,7 +15,7 @@ const HorizontalMenu = ({
     console.log('isHover',isHover)
     function TabsList({ items }) {
       return items.map(item => (
-        <div className='relative w-101px'>
+        <div className='relative w-full'>
           <button
           key={item.id}
           style={{
