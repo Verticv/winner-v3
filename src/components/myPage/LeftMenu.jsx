@@ -61,13 +61,10 @@ const LeftMenu = ({
                       isMouseHover === path ?
                         'rgb(157,59,187,30%)' :
                         '', }}
-            onClick={() => {
+             onClick={() => {
                 buttonPressed(path)
                 setPopupOpen(true)
-                
-              }}
-            onMouseEnter={() => mouseHover(path)}
-            onMouseLeave={() => mouseLeave(path)}
+            }}
         >
             <div 
                 className={`

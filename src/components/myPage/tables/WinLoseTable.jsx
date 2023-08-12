@@ -157,10 +157,10 @@ const WinLoseTable = ({
                     <Cells items={ExampleArray} />
                 </tbody>
             </table>
-            <div className="flex  text-14px tracking-tight text-r666666       h-55px rounded-b-3px">
+            <div className="flex  text-14px tracking-tight text-r666666 h-55px rounded-b-3px">
                 <div className="w-full  h-55px flex items-center justify-center text-16px tracking-tight border-r rounded-b-3px rounded-br-none"
-                style={{borderColor:"#dddddd"}}>합계</div>
-                <div className="w-full h-55px text-center flex items-center justify-center font-roboto tracking-tight text-e9441d text-16px rounded-b-3px rounded-tl-none"><span className='flex ml-40px'>+120,718</span></div>
+                style={{borderColor:"#dddddd",background:'#eaeaea'}}>합계</div>
+                <div className="w-full h-55px bg-white text-center flex items-center justify-center font-roboto tracking-tight text-e9441d text-16px rounded-b-3px rounded-tl-none"><span className='flex ml-40px'>+120,718</span></div>
             </div>
         </div>
     )

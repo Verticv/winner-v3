@@ -29,7 +29,7 @@ const WinLoseSettlement = () => {
             <MyPageTitle title="윈루즈정산" />
             <DateSearchBar isLeagueSearch={false} has3MonthSearch={true} />
 
-             <div className="flex h-48px w-full mt-10px space-x-12px">
+             <div className="flex h-48px w-full mt-20px space-x-12px">
                 <div style={{ width: '255px', background:'#341d5a', borderColor:'#9361e5' }}
                     className="h-48px rounded-full border-2 flex items-center justify-center text-16px">
                     <img className="-ml-2px" src={Diamond} alt="" />
@@ -50,7 +50,7 @@ const WinLoseSettlement = () => {
 
             </div>
 
-            <div className="mt-10px">
+            <div className="mt-20px">
                 <WinLoseTable checkedState={checkedState} setCheckedState={setCheckedState}/>
             </div>
 
