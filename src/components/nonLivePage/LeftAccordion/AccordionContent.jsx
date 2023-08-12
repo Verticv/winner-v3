@@ -84,7 +84,8 @@ const AccordionContent = ({ setIsOpen }) => {
           {(favoritePreMatch[0]?.id ||
             favoriteLaLiga[0]?.id ||
             favoriteLaLiga[0]?.id ||
-            bundesliga[0]?.id) && (
+            bundesliga[0]?.id ||
+            League.length !== 0) && (
             <>
               <div
                 style={{
@@ -325,9 +326,9 @@ const AccordionContent = ({ setIsOpen }) => {
                           : ""}
                       </p>
                     </div>
-                    <div className="tooltip1">
+                    <div className="tooltip2">
                       <img
-                        className="mr-6px"
+                        className="mr-6px cursor-pointer"
                         src={iconStar}
                         alt="img"
                         onClick={() => {
@@ -336,7 +337,7 @@ const AccordionContent = ({ setIsOpen }) => {
                           });
                         }}
                       />
-                      <span className="tooltiptext1 items-center justify-center text-10px font-malgun tracking-tight text-white">
+                      <span className="tooltiptext2 items-center justify-center text-10px font-malgun tracking-tight text-white">
                         즐겨찾기에서 제거
                       </span>
                     </div>

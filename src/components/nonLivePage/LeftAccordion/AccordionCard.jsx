@@ -151,7 +151,7 @@ const AccordionCard = ({
           <div className="tooltip mt-8px items-center justify-center">
             <img
               id={id}
-              className="mt-12px ml-px object-none"
+              className="mt-12px ml-px object-none cursor-pointer"
               src={icon}
               alt="img"
               onClick={() => {
