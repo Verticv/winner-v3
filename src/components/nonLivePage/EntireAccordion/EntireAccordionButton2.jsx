@@ -7,7 +7,7 @@ import EntireAccordionContent2 from "./EntireAccordionContent2";
 
 // import AccordionContent1 from "./AccordionContent1";
 
-const EntireAccordionButton2 = ({ icon, title, card }) => {
+const EntireAccordionButton2 = ({ icon, title, card, handleZoomClick4 }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
 
@@ -52,6 +52,7 @@ const EntireAccordionButton2 = ({ icon, title, card }) => {
             onClick={(e) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
+              handleZoomClick4();
             }}
           />
           <img

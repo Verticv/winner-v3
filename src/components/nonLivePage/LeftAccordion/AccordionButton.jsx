@@ -39,15 +39,31 @@ const AccordionButton = ({ icon, title }) => {
         borderRadius: "6px",
         boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
       }}
-      className="p-px mb-5px"
+      className="p-px mb-6px"
     >
       <div
         style={{
           background: "linear-gradient(to top, #6b22ff, #df52ff)",
           width: "278px",
           borderRadius: "5px",
-          borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
-          borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
+          borderBottomRightRadius: `${
+            isOpen &&
+            (favoritePreMatch[0]?.id ||
+              favoriteLaLiga[0]?.id ||
+              bundesliga[0]?.id ||
+              League[0]?.id)
+              ? "0px"
+              : "5px"
+          }`,
+          borderBottomLeftRadius: `${
+            isOpen &&
+            (favoritePreMatch[0]?.id ||
+              favoriteLaLiga[0]?.id ||
+              bundesliga[0]?.id ||
+              League[0]?.id)
+              ? "0px"
+              : "5px"
+          }`,
         }}
         className={`flex items-center justify-between 
           cursor-pointer h-43px`}
@@ -68,7 +84,7 @@ const AccordionButton = ({ icon, title }) => {
               letterSpacing: "-0.031em",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="text-14px text-white ml-5px mt-12px mb-15px font-malgun "
+            className="text-14px text-white ml-5px mt-14px mb-15px font-malgun "
           >
             {title}
           </p>
@@ -94,16 +110,20 @@ const AccordionButton = ({ icon, title }) => {
           />
         </div>
       </div>
-      {isOpen && (
-        <div
-          style={{ background: "#420572" }}
-          className="pt-2px rounded-b-lg pb-2px"
-        >
-          <div>
-            <AccordionContent setIsOpen={setIsOpen} />
+      {isOpen &&
+        (favoritePreMatch[0]?.id ||
+          favoriteLaLiga[0]?.id ||
+          bundesliga[0]?.id ||
+          League[0]?.id) && (
+          <div
+            style={{ background: "#420572" }}
+            className="pt-2px rounded-b-lg pb-2px"
+          >
+            <div>
+              <AccordionContent setIsOpen={setIsOpen} />
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </div>
   );
 };

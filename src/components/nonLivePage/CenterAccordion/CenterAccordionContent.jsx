@@ -413,7 +413,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
               fontSize: "12px",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-8px mb-8px"
+            className=" mr-9px mt-8px mb-10px"
           >
             {card.team2}
           </p>
@@ -445,7 +445,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
             style={{
               fontSize: "12px",
               letterSpacing: "-0.031em",
-              marginRight: "1px",
               marginBottom: "2px",
             }}
           >

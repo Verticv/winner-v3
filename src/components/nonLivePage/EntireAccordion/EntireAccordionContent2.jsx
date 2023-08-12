@@ -109,7 +109,7 @@ const EntireAccordionContent2 = () => {
             color: leftActive ? "#eeeeee" : "#444444",
             ...(isHovered ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px"
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
           onClick={() => setLeftActive((prev) => !prev)}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -151,7 +151,7 @@ const EntireAccordionContent2 = () => {
             color: rightActive ? "#eeeeee" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between"
+          className="flex items-center justify-between cursor-pointer"
           onClick={() => setRightActive((prev) => !prev)}
           onMouseEnter={handleMouseEnter1}
           onMouseLeave={handleMouseLeave1}
@@ -202,7 +202,7 @@ const EntireAccordionContent2 = () => {
             color: leftActive1 ? "#eeeeee" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px"
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
           onClick={() => setLeftActive1((prev) => !prev)}
           onMouseEnter={handleMouseEnter2}
           onMouseLeave={handleMouseLeave2}
@@ -244,7 +244,7 @@ const EntireAccordionContent2 = () => {
             color: rightActive1 ? "#eeeeee" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between"
+          className="flex items-center justify-between cursor-pointer"
           onClick={() => setRightActive1((prev) => !prev)}
           onMouseEnter={handleMouseEnter3}
           onMouseLeave={handleMouseLeave3}
@@ -295,7 +295,7 @@ const EntireAccordionContent2 = () => {
             color: leftActive2 ? "#eeeeee" : "#444444",
             ...(isHovered4 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px"
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
           onClick={() => setLeftActive2((prev) => !prev)}
           onMouseEnter={handleMouseEnter4}
           onMouseLeave={handleMouseLeave4}
@@ -331,7 +331,7 @@ const EntireAccordionContent2 = () => {
             color: rightActive2 ? "#eeeeee" : "#444444",
             ...(isHovered5 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between"
+          className="flex items-center justify-between cursor-pointer"
           onClick={() => setRightActive2((prev) => !prev)}
           onMouseEnter={handleMouseEnter5}
           onMouseLeave={handleMouseLeave5}
@@ -379,7 +379,7 @@ const EntireAccordionContent2 = () => {
             ...(isHovered6 ? hoverStyle : null),
             borderBottomLeftRadius: "4px",
           }}
-          className="flex items-center justify-between border-r h-30px"
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
           onClick={() => setLeftActive3((prev) => !prev)}
           onMouseEnter={handleMouseEnter6}
           onMouseLeave={handleMouseLeave6}
@@ -407,7 +407,7 @@ const EntireAccordionContent2 = () => {
             ...(isHovered7 ? hoverStyle : null),
             borderBottomRightRadius: "4px",
           }}
-          className="flex items-center justify-between"
+          className="flex items-center justify-between cursor-pointer"
           onClick={() => setRightActive3((prev) => !prev)}
           onMouseEnter={handleMouseEnter7}
           onMouseLeave={handleMouseLeave7}

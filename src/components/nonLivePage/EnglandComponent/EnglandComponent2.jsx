@@ -54,7 +54,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
             style={{
               background: "#5e399a",
               width: "632px",
-              height: "606px",
+              height: "100%",
               borderRadius: "1px",
             }}
             className="flex items-center justify-center"
@@ -91,7 +91,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
           style={{
             background: "#936cee",
             width: "640px",
-            height: "614px",
+            minHeight: "614px",
             borderRadius: "6px",
             boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
           }}
@@ -101,7 +101,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
             style={{
               background: "#5e399a",
               width: "632px",
-              height: "606px",
+              minHeight: "606px",
               borderRadius: "2px",
             }}
             className="flex "

@@ -48,7 +48,10 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
         />
       </div>
       <div
-        style={{ top: "125px" }}
+        style={{
+          top: "125px",
+          background: "linear-gradient(to right, #52296b, #2c1c5d)",
+        }}
         className="w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
       >
         <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
@@ -75,7 +78,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               flexShrink: 0,
               height: "730px",
-              marginBottom: "90px",
+              marginBottom: "60px",
             }}
           >
             <Search />
@@ -85,7 +88,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "730px",
+              height: "742px",
             }}
           >
             <Tabs active={active} setActive={setActive} />

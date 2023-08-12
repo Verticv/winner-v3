@@ -76,7 +76,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
               <div className="flex justify-center items-center ml-2px">
                 <p
                   style={{ fontSize: "14px", color: "#666666" }}
-                  className="-ml-5px mt-1px tracking-tight font-MalgunGothicBold"
+                  className="-ml-5px mt-2px tracking-tight font-MalgunGothicBold"
                 >
                   티켓번호
                 </p>

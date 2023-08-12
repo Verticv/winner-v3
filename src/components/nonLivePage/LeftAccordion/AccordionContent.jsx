@@ -8,9 +8,25 @@ import {
   deleteAllFavoriteCards,
   deleteFavoriteLeagueById,
 } from "reducers/nonLive-reducer";
+import "./style.css";
 
 const AccordionContent = ({ setIsOpen }) => {
   const [showCard, setShowCard] = useState(true);
+  const [isOpen1, setIsOpen1] = useState(true);
+  const [isOpen2, setIsOpen2] = useState(true);
+  const [isOpen3, setIsOpen3] = useState(true);
+
+  const toggleAccordion1 = () => {
+    setIsOpen1(!isOpen1);
+  };
+
+  const toggleAccordion2 = () => {
+    setIsOpen2(!isOpen2);
+  };
+
+  const toggleAccordion3 = () => {
+    setIsOpen3(!isOpen3);
+  };
   const [showCard1, setShowCard1] = useState(true);
   const [showCard2, setShowCard2] = useState(true);
   const [isDeleted, setIsDeleted] = useState(true);
@@ -32,14 +48,19 @@ const AccordionContent = ({ setIsOpen }) => {
   };
 
   useEffect(() => {
+    console.log("League.length !== 0", favoriteLaLiga);
+  });
+
+  useEffect(() => {
     if (
       bundesliga[0]?.items?.length !== 0 ||
       favoriteLaLiga[0]?.items?.length !== 0 ||
-      favoritePreMatch[0]?.items?.length !== 0
+      favoritePreMatch[0]?.items?.length !== 0 ||
+      League.length !== 0
     ) {
       setIsDeleted(false);
     }
-  }, [favoritePreMatch, favoriteLaLiga, bundesliga]);
+  }, [favoritePreMatch, favoriteLaLiga, bundesliga, League.length]);
 
   useEffect(() => {
     setShowCard(true);
@@ -54,50 +75,56 @@ const AccordionContent = ({ setIsOpen }) => {
   }, [bundesliga]);
   return (
     <>
-      <div
-        style={{
-          background: "#361550",
-          borderRadius: "6px",
-        }}
-        className="p-px mr-2px ml-2px "
-      >
-        <div
-          style={{
-            background: "#936cee",
-            borderRadius: "5px",
-          }}
-          className="flex items-center justify-center h-34px cursor-pointer hover:filter hover:brightness-150"
-          onClick={() => {
-            dispatch(deleteAllFavoriteCards());
-            setIsDeleted(true);
-            setIsOpen(false);
-          }}
-        >
-          <p
-            className="mb-3px text-13px text-white tracking-tight"
-            style={{ fontFamily: "MalgunGothicBold" }}
-          >
-            모두지우기
-          </p>
-        </div>
-      </div>
+      {/* {!isDeleted && ( */}
+
+      {/* )} */}
 
       {!isDeleted && (
         <>
           {(favoritePreMatch[0]?.id ||
             favoriteLaLiga[0]?.id ||
-            favoriteLaLiga[0]?.id) && (
-            <div className="ml-7px mt-3px mb-6px">
-              <p
+            favoriteLaLiga[0]?.id ||
+            bundesliga[0]?.id) && (
+            <>
+              <div
                 style={{
-                  letterSpacing: "-0.031em",
-                  fontFamily: "MalgunGothicRegular",
+                  background: "#361550",
+                  borderRadius: "6px",
                 }}
-                className="text-10px text-white"
+                className="p-px mr-2px ml-2px "
               >
-                프리매치경기
-              </p>
-            </div>
+                <div
+                  style={{
+                    background: "#936cee",
+                    borderRadius: "5px",
+                  }}
+                  className="flex items-center justify-center h-34px cursor-pointer hover:filter hover:brightness-150"
+                  onClick={() => {
+                    dispatch(deleteAllFavoriteCards());
+                    setIsDeleted(true);
+                    setIsOpen(false);
+                  }}
+                >
+                  <p
+                    className="mb-px text-13px text-white tracking-tight"
+                    style={{ fontFamily: "MalgunGothicBold" }}
+                  >
+                    모두지우기
+                  </p>
+                </div>
+              </div>
+              <div className="ml-7px mt-3px mb-6px">
+                <p
+                  style={{
+                    letterSpacing: "-0.031em",
+                    fontFamily: "MalgunGothicRegular",
+                  }}
+                  className="text-10px text-white"
+                >
+                  프리매치경기
+                </p>
+              </div>
+            </>
           )}
 
           {showCard && favoritePreMatch[0]?.id && (
@@ -107,49 +134,49 @@ const AccordionContent = ({ setIsOpen }) => {
                   background: "#ffffff",
                   borderRadius: "4px",
                 }}
-                className="flex items-center mx-2px h-35px mb-2px"
+                className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
+                onClick={toggleAccordion1}
               >
-                <img className="ml-6px mt-7px mb-6px" src={icon} alt="img" />
+                <img className="ml-6px mt-6px mb-6px" src={icon} alt="img" />
                 <p
                   style={{
                     color: "#444444",
                     letterSpacing: "-0.031em",
                     fontFamily: "MalgunGothicRegular",
                   }}
-                  className="text-12px mt-10px mb-13px ml-5px"
+                  className="text-12px mt-10px mb-12px ml-5px"
                 >
                   프리미어리그
                 </p>
                 <img
                   src={Arrow}
                   alt=""
-                  onClick={() => {
-                    setShowCard((prev) => !prev);
-                  }}
                   style={{ color: "#444444" }}
                   className={`object-none ml-150px cursor-pointer ${
-                    showCard ? "transform rotate-180" : ""
+                    isOpen1 ? "transform rotate-180" : ""
                   }`}
                 />
               </div>
-              <div>
-                {favoritePreMatch?.map((el) => (
-                  <AccordionCard
-                    id={el?.id}
-                    team1={el?.team1}
-                    time={el?.time}
-                    team2={el?.team2}
-                    dateAndTime={el?.dateAndTime}
-                    t1={el?.t1}
-                    t2={el?.t2}
-                    t3={el?.t3}
-                    t4={el?.t4}
-                    t5={el?.t5}
-                    t6={el?.t6}
-                    type={el?.type}
-                  />
-                ))}
-              </div>
+              {isOpen1 && (
+                <div>
+                  {favoritePreMatch?.map((el) => (
+                    <AccordionCard
+                      id={el?.id}
+                      team1={el?.team1}
+                      time={el?.time}
+                      team2={el?.team2}
+                      dateAndTime={el?.dateAndTime}
+                      t1={el?.t1}
+                      t2={el?.t2}
+                      t3={el?.t3}
+                      t4={el?.t4}
+                      t5={el?.t5}
+                      t6={el?.t6}
+                      type={el?.type}
+                    />
+                  ))}
+                </div>
+              )}
               <div>{/* <AccordionCard2 /> */}</div>
             </>
           )}
@@ -166,7 +193,8 @@ const AccordionContent = ({ setIsOpen }) => {
                   background: "#ffffff",
                   borderRadius: "4px",
                 }}
-                className="flex items-center mx-2px rounded-lg h-35px mb-2px"
+                className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer"
+                onClick={toggleAccordion2}
               >
                 <img className="ml-6px" src={icon} alt="img" />
                 <p style={{ color: "#444444" }} className="text-12px ml-5px">
@@ -175,31 +203,35 @@ const AccordionContent = ({ setIsOpen }) => {
                 <img
                   src={Arrow}
                   alt=""
-                  onClick={() => setShowCard1((prev) => !prev)}
+                  // onClick={(e) => {
+                  //   setShowCard1((prev) => !prev);
+                  // }}
                   style={{ color: "#444444" }}
                   className={`object-none ml-184px cursor-pointer ${
-                    showCard1 ? "transform rotate-180" : ""
+                    isOpen2 ? "transform rotate-180" : ""
                   }`}
                 />
               </div>
-              <div>
-                {favoriteLaLiga?.map((el) => (
-                  <AccordionCard
-                    id={el?.id}
-                    team1={el?.team1}
-                    time={el?.time}
-                    team2={el?.team2}
-                    dateAndTime={el?.dateAndTime}
-                    t1={el?.t1}
-                    t2={el?.t2}
-                    t3={el?.t3}
-                    t4={el?.t4}
-                    t5={el?.t5}
-                    t6={el?.t6}
-                    type={el?.type}
-                  />
-                ))}
-              </div>
+              {isOpen2 && (
+                <div>
+                  {favoriteLaLiga?.map((el) => (
+                    <AccordionCard
+                      id={el?.id}
+                      team1={el?.team1}
+                      time={el?.time}
+                      team2={el?.team2}
+                      dateAndTime={el?.dateAndTime}
+                      t1={el?.t1}
+                      t2={el?.t2}
+                      t3={el?.t3}
+                      t4={el?.t4}
+                      t5={el?.t5}
+                      t6={el?.t6}
+                      type={el?.type}
+                    />
+                  ))}
+                </div>
+              )}
             </>
           )}
           {bundesliga[0]?.id && (
@@ -211,7 +243,8 @@ const AccordionContent = ({ setIsOpen }) => {
                       background: "#ffffff",
                       borderRadius: "4px",
                     }}
-                    className="flex items-center mx-2px h-35px mb-2px"
+                    className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
+                    onClick={toggleAccordion3}
                   >
                     <img
                       className="ml-6px mt-7px mb-6px"
@@ -231,37 +264,39 @@ const AccordionContent = ({ setIsOpen }) => {
                     <img
                       src={Arrow}
                       alt=""
-                      onClick={() => setShowCard2((prev) => !prev)}
+                      // onClick={() => setShowCard2((prev) => !prev)}
                       style={{ color: "#444444" }}
                       className={`object-none ml-162px cursor-pointer ${
-                        showCard2 ? "transform rotate-180" : ""
+                        isOpen3 ? "transform rotate-180" : ""
                       }`}
                     />
                   </div>
-                  <div>
-                    {bundesliga?.map((el) => (
-                      <AccordionCard
-                        id={el?.id}
-                        team1={el?.team1}
-                        time={el?.time}
-                        team2={el?.team2}
-                        dateAndTime={el?.dateAndTime}
-                        t1={el?.t1}
-                        t2={el?.t2}
-                        t3={el?.t3}
-                        t4={el?.t4}
-                        t5={el?.t5}
-                        t6={el?.t6}
-                        type={el?.type}
-                      />
-                    ))}
-                  </div>
+                  {isOpen3 && (
+                    <div>
+                      {bundesliga?.map((el) => (
+                        <AccordionCard
+                          id={el?.id}
+                          team1={el?.team1}
+                          time={el?.time}
+                          team2={el?.team2}
+                          dateAndTime={el?.dateAndTime}
+                          t1={el?.t1}
+                          t2={el?.t2}
+                          t3={el?.t3}
+                          t4={el?.t4}
+                          t5={el?.t5}
+                          t6={el?.t6}
+                          type={el?.type}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </>
               )}
             </>
           )}
 
-          {League.length !== 0 && (
+          {!isDeleted && League.length !== 0 && (
             <>
               <div className="ml-7px mt-5px mb-4px">
                 <p className="text-10px text-white">리그</p>
@@ -281,10 +316,16 @@ const AccordionContent = ({ setIsOpen }) => {
                         style={{ color: "#444444", marginBottom: "2px" }}
                         className="text-12px ml-5px"
                       >
-                        {el.title}
+                        {el.title.includes("프리미어리그")
+                          ? "프리미어리그"
+                          : el.title.includes("라리가")
+                          ? "라리가"
+                          : el.title.includes("분데스리가")
+                          ? "분데스리가"
+                          : ""}
                       </p>
                     </div>
-                    <div>
+                    <div className="tooltip1">
                       <img
                         className="mr-6px"
                         src={iconStar}
@@ -295,6 +336,9 @@ const AccordionContent = ({ setIsOpen }) => {
                           });
                         }}
                       />
+                      <span className="tooltiptext1 items-center justify-center text-10px font-malgun tracking-tight text-white">
+                        즐겨찾기에서 제거
+                      </span>
                     </div>
                   </div>
                 </>
