@@ -91,7 +91,7 @@ const RightComponent = () => {
           className="flex items-center"
         >
           <img
-            className="ml-21px"
+            className="ml-21px mb-2px"
             src={isBetSlipActive ? icon1 : icon_1}
             alt="icon"
           />
@@ -100,7 +100,7 @@ const RightComponent = () => {
               color: isBetSlipActive ? "white" : "#5e399a",
               marginLeft: isBetSlipActive ? "2px" : "-2px",
             }}
-            className="-mt-3px text-14px font-MalgunGothicBold tracking-tight"
+            className="-mt-2px text-14px font-MalgunGothicBold tracking-tight"
           >
             베팅슬립
           </p>
@@ -167,7 +167,7 @@ const RightComponent = () => {
               color: isBetSlipActive ? "#5e399a" : "white",
               marginLeft: isBetSlipActive ? "7px" : "3px",
             }}
-            className="-mt-3px text-14px font-MalgunGothicBold tracking-tight"
+            className="-mt-2px text-14px font-MalgunGothicBold tracking-tight"
           >
             베팅내역
           </p>

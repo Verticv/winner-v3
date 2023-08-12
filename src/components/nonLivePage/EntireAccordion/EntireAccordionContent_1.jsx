@@ -51,7 +51,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: `${card.id === 2 ? "4px" : "0px"}`,
         }}
-        className="flex items-center justify-between border-r h-30px"
+        className="flex items-center justify-between border-r h-30px cursor-pointer"
         onClick={() => setLeftActive((prev) => !prev)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -89,7 +89,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           ...(isHovered1 ? hoverStyle : null),
           borderBottomRightRadius: `${card.id === 2 ? "4px" : "0px"}`,
         }}
-        className="flex items-center justify-between"
+        className="flex items-center justify-between cursor-pointer"
         onClick={() => setRightActive((prev) => !prev)}
         onMouseEnter={handleMouseEnter1}
         onMouseLeave={handleMouseLeave1}

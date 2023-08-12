@@ -26,7 +26,7 @@ const CenterComponent = ({ setEnglandActive }) => {
         <div
           style={{
             background: "linear-gradient(to right, #f67700, #f100ff)",
-            width: "315px",
+            width: "323px",
             height: "25px",
           }}
           className="flex items-center rounded-full ml-7px "
@@ -158,7 +158,7 @@ const CenterComponent = ({ setEnglandActive }) => {
           <div
             style={{
               background:
-                active === 0
+                active === 3
                   ? "linear-gradient(to top, #652347, #ff85b1)"
                   : "linear-gradient(to top, #4f3a7a, #e597ff)",
               width: "207px",
@@ -171,7 +171,7 @@ const CenterComponent = ({ setEnglandActive }) => {
             <div
               style={{
                 background:
-                  active === 0
+                  active === 3
                     ? "linear-gradient(to top, #911c5c, #f04281)"
                     : "linear-gradient(to top, #6b22ff, #df52ff)",
                 width: "205px",
@@ -179,7 +179,7 @@ const CenterComponent = ({ setEnglandActive }) => {
                 textShadow: "1px 0.866px 0px rgba(0, 0, 0, 0.5)",
               }}
               className="flex items-center justify-between rounded-lg h-32px cursor-pointer"
-              onClick={() => setActive(0)}
+              onClick={() => setActive(3)}
             >
               <div className="flex ml-12px">
                 <img className="object-none" src={icon1} alt="img" />
@@ -225,7 +225,7 @@ const CenterComponent = ({ setEnglandActive }) => {
             letterSpacing: "-0.031em",
             fontFamily: "MalgunGothicRegular",
           }}
-          className="ml-10px mb-4px text-12px font-malgun"
+          className="ml-10px mb-2px text-12px font-malgun"
         >
           ※ 스포츠 베팅규정은{" "}
           <span
@@ -260,7 +260,8 @@ const CenterComponent = ({ setEnglandActive }) => {
                   : "#936cee",
               width: "88px",
               height: "27px",
-              boxShadow: "0px 1px 2px 0px rgba(0, 0, 0, 0.6)",
+              boxShadow:
+                activeId === 0 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
             className="flex items-center rounded-full mr-5px cursor-pointer"
@@ -273,7 +274,7 @@ const CenterComponent = ({ setEnglandActive }) => {
             />
             <p
               style={{ color: "#ffffff" }}
-              className="-ml-7px mt-5px mb-9px tracking-tight text-12px"
+              className="-ml-7px mt-5px mb-7px tracking-tight text-12px"
             >
               시간순
             </p>
@@ -286,6 +287,8 @@ const CenterComponent = ({ setEnglandActive }) => {
                   : "#936cee",
               width: "88px",
               height: "27px",
+              boxShadow:
+                activeId === 1 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
             className="flex items-center rounded-full mr-6px cursor-pointer"
@@ -304,7 +307,7 @@ const CenterComponent = ({ setEnglandActive }) => {
                 color: "#ffffff",
                 marginLeft: activeId === 1 ? "-6px" : "2px",
               }}
-              className="mt-5px mb-9px tracking-tight text-12px"
+              className="mt-5px mb-7px tracking-tight text-12px"
             >
               인기순
             </p>
@@ -317,6 +320,8 @@ const CenterComponent = ({ setEnglandActive }) => {
                   : "#936cee",
               width: "88px",
               height: "27px",
+              boxShadow:
+                activeId === 2 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
             className="flex items-center rounded-full cursor-pointer"
@@ -336,7 +341,7 @@ const CenterComponent = ({ setEnglandActive }) => {
                 fontFamily: "MalgunGothicRegular",
                 marginLeft: activeId === 2 ? "-6px" : "2px",
               }}
-              className="mt-5px mb-9px tracking-tight text-12px"
+              className="mt-5px mb-7px tracking-tight text-12px"
             >
               리그순
             </p>

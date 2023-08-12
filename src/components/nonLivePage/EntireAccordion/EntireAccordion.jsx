@@ -11,6 +11,35 @@ import "./style.css";
 
 const EntireAccordion = () => {
   const [activeId, setActiveId] = useState(1);
+
+  const [isZoomedOut, setIsZoomedOut] = useState(false);
+  const [isZoomedOut1, setIsZoomedOut1] = useState(false);
+  const [isZoomedOut2, setIsZoomedOut2] = useState(false);
+  const [isZoomedOut3, setIsZoomedOut3] = useState(false);
+  const [isZoomedOut4, setIsZoomedOut4] = useState(false);
+  const [isZoomedOut5, setIsZoomedOut5] = useState(false);
+
+  const handleZoomClick = () => {
+    setIsZoomedOut(!isZoomedOut);
+  };
+
+  const handleZoomClick1 = () => {
+    setIsZoomedOut1(!isZoomedOut1);
+  };
+
+  const handleZoomClick2 = () => {
+    setIsZoomedOut2(!isZoomedOut2);
+  };
+  const handleZoomClick3 = () => {
+    setIsZoomedOut3(!isZoomedOut3);
+  };
+  const handleZoomClick4 = () => {
+    setIsZoomedOut4(!isZoomedOut4);
+  };
+  const handleZoomClick5 = () => {
+    setIsZoomedOut5(!isZoomedOut5);
+  };
+
   const card1 = [
     {
       text: "아스널",
@@ -196,19 +225,25 @@ const EntireAccordion = () => {
               onClick={() => setActiveId(0)}
             >
               <img
-                className="ml-15px mt-2px object-none"
+                className={`ml-15px mt-2px object-none ${
+                  isZoomedOut ? "zoom-out" : ""
+                }
+                   ${isZoomedOut1 ? "zoom-out1" : ""}
+                    ${isZoomedOut2 ? "zoom-out2" : ""} 
+                    ${isZoomedOut3 ? "zoom-out3" : ""} 
+                    ${isZoomedOut4 ? "zoom-out4" : ""} 
+                    ${isZoomedOut5 ? "zoom-out5" : ""}`}
                 src={star}
                 alt="icon"
               />
               <div
                 style={{
-                  width: "28px",
                   height: "19px",
                   background: "#f04281",
                   borderRadius: "9px",
                   zIndex: 10,
                 }}
-                className="flex items-center justify-center absolute ml-29px mb-31px"
+                className="flex items-center justify-center absolute ml-31px mb-15px pl-6px pr-7px"
               >
                 <p className="text-13px tracking-tight font-MalgunGothicBold text-white ">
                   25
@@ -247,31 +282,37 @@ const EntireAccordion = () => {
                 title="승무패 [정규시간]"
                 icon={star1}
                 card={card1}
+                handleZoomClick={handleZoomClick}
               />
               <EntireAccordionButton0
                 title="더블찬스 [정규시간]"
                 icon={star1}
                 card={card2}
+                handleZoomClick1={handleZoomClick1}
               />
               <EntireAccordionButton1
                 title="승패(무X) [정규시간]"
                 icon={star1}
                 card={card3}
+                handleZoomClick2={handleZoomClick2}
               />
               <EntireAccordionButton11
                 title="오버/언더 [정규시간]"
                 icon={star1}
                 card={card4}
+                handleZoomClick3={handleZoomClick3}
               />
               <EntireAccordionButton2
                 title="아시안 핸디캡 [정규시간]"
                 icon={star1}
                 card={card5}
+                handleZoomClick4={handleZoomClick4}
               />
               <EntireAccordionButton3
                 title="핸디캡 승무패 [정규시간]"
                 icon={star1}
                 card={card6}
+                handleZoomClick5={handleZoomClick5}
               />
             </div>
           ) : activeId === 1 ? (
@@ -280,31 +321,37 @@ const EntireAccordion = () => {
                 title="승무패 [정규시간]"
                 icon={star1}
                 card={card1}
+                handleZoomClick={handleZoomClick}
               />
               <EntireAccordionButton0
                 title="더블찬스 [정규시간]"
                 icon={star1}
                 card={card2}
+                handleZoomClick1={handleZoomClick1}
               />
               <EntireAccordionButton1
                 title="승패(무X) [정규시간]"
                 icon={star1}
                 card={card3}
+                handleZoomClick2={handleZoomClick2}
               />
               <EntireAccordionButton11
                 title="오버/언더 [정규시간]"
                 icon={star1}
                 card={card4}
+                handleZoomClick3={handleZoomClick3}
               />
               <EntireAccordionButton2
                 title="아시안 핸디캡 [정규시간]"
                 icon={star1}
                 card={card5}
+                handleZoomClick4={handleZoomClick4}
               />
               <EntireAccordionButton3
                 title="핸디캡 승무패 [정규시간]"
                 icon={star1}
                 card={card6}
+                handleZoomClick5={handleZoomClick5}
               />
             </div>
           ) : (
@@ -313,31 +360,37 @@ const EntireAccordion = () => {
                 title="승무패 [정규시간]"
                 icon={star1}
                 card={card1}
+                handleZoomClick={handleZoomClick}
               />
               <EntireAccordionButton0
                 title="더블찬스 [정규시간]"
                 icon={star1}
                 card={card2}
+                handleZoomClick1={handleZoomClick1}
               />
               <EntireAccordionButton1
                 title="승패(무X) [정규시간]"
                 icon={star1}
                 card={card3}
+                handleZoomClick2={handleZoomClick2}
               />
               <EntireAccordionButton11
                 title="오버/언더 [정규시간]"
                 icon={star1}
                 card={card4}
+                handleZoomClick3={handleZoomClick3}
               />
               <EntireAccordionButton2
                 title="아시안 핸디캡 [정규시간]"
                 icon={star1}
                 card={card5}
+                handleZoomClick4={handleZoomClick4}
               />
               <EntireAccordionButton3
                 title="핸디캡 승무패 [정규시간]"
                 icon={star1}
                 card={card6}
+                handleZoomClick5={handleZoomClick5}
               />
             </div>
           )}

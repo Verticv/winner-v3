@@ -49,7 +49,7 @@ const EntireAccordionContent1 = () => {
           ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: "4px",
         }}
-        className="flex items-center justify-between border-r  h-30px"
+        className="flex items-center justify-between border-r  h-30px cursor-pointer"
         onClick={() => setLeftActive((prev) => !prev)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -86,7 +86,7 @@ const EntireAccordionContent1 = () => {
           ...(isHovered1 ? hoverStyle : null),
           borderBottomRightRadius: "4px",
         }}
-        className="flex items-center justify-between"
+        className="flex items-center justify-between cursor-pointer"
         onClick={() => setRightActive((prev) => !prev)}
         onMouseEnter={handleMouseEnter1}
         onMouseLeave={handleMouseLeave1}

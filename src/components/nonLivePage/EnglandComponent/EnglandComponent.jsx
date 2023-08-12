@@ -58,7 +58,11 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                     className="ml-10px mr-2px mt-4px w-px h-10px"
                   ></div>
                   <p
-                    style={{ color: "#dddddd", letterSpacing: "-0.031em" }}
+                    style={{
+                      color: "#dddddd",
+                      letterSpacing: "-0.031em",
+                      fontWeight: "bold",
+                    }}
                     className="ml-7px mt-3px mr-1px text-12px font-MalgunGothicBold"
                   >
                     아스널
