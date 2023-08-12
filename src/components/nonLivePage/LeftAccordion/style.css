@@ -33,12 +33,12 @@
   visibility: visible;
 }
 
-.tooltip1 {
-  position: absolute;
+.tooltip2 {
+  position: relative;
   display: inline-block;
 }
 
-.tooltip1 .tooltiptext1 {
+.tooltip2 .tooltiptext2 {
   visibility: hidden;
   width: 101px;
   height: 30px;
@@ -49,11 +49,11 @@
   padding-top: 6px;
   position: absolute;
   z-index: 1;
-  bottom: 90%;
-  margin-left: -70px;
+  bottom: 150%;
+  margin-left: -71px;
 }
 
-.tooltip1 .tooltiptext1::after {
+.tooltip2 .tooltiptext2::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -64,6 +64,6 @@
   border-color: #6e3ae6 transparent transparent transparent;
 }
 
-.tooltip1:hover .tooltiptext1 {
+.tooltip2:hover .tooltiptext2 {
   visibility: visible;
 }
