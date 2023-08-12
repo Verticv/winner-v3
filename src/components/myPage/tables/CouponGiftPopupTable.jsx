@@ -18,10 +18,10 @@ const CouponGiftPopupTable = () => {
 
     return (
         <div style={{width:'550px', height:'330px',background: "linear-gradient(to top, #ededeb, #cb78e6)"}} 
-        className="overflow-auto shadow-table rounded-10px">
+        className="overflow-auto shadow-table rounded-10px p-px">
           
             <div className="flex flex-col justify-center rounded-10px">
-                <div className="bg-gray-2b2b2a rounded-t-4px text-14px tracking-tight text-gray-ccc2b6 h-56px border-b  flex items-center"
+                <div className="bg-gray-2b2b2a rounded-t-10px text-14px tracking-tight text-gray-ccc2b6 h-56px border-b  flex items-center"
                 style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                     <div>
                         <td style={{width:'143px'}} className="text-center">선택</td>
@@ -33,7 +33,7 @@ const CouponGiftPopupTable = () => {
                     style={{ height: "280px" }}
                     className="w-full text-585858 text-14px tracking-tight"
                 >
-                <div className="bg-white text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center bg-white">
+                <div className=" text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center bg-white">
                         <td style={{width:'143px'}} className="text-center pt-6px">
                             <RadioButton id={0} />
                         </td>
