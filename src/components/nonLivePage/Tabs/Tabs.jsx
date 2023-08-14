@@ -166,6 +166,7 @@ const Tabs = ({ active, setActive }) => {
         position: "relative",
         marginTop: "10px",
         width: "640px",
+        marginLeft: "1px",
       }}
     >
       <button

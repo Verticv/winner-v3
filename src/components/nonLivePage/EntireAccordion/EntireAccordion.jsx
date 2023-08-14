@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import star from "../../../images/nonLivePage/EntireAccordion/star.png";
 import star1 from "../../../images/nonLivePage/EntireAccordion/star1.png";
 import EntireAccordionButton from "./EntireAccordionButton";
@@ -8,138 +8,18 @@ import EntireAccordionButton3 from "./EntireAccordionButton3";
 import EntireAccordionButton0 from "./EntireAccordionButton0";
 import EntireAccordionButton11 from "./EntireAccordionButton_1";
 import "./style.css";
+import { useSelector } from "react-redux";
 
 const EntireAccordion = () => {
   const [activeId, setActiveId] = useState(1);
+  const data1 = useSelector((state) => state?.nonLive?.data1);
+  const data2 = useSelector((state) => state?.nonLive?.data2);
+  const data3 = useSelector((state) => state?.nonLive?.data3);
+  const data4 = useSelector((state) => state?.nonLive?.data4);
+  const data5 = useSelector((state) => state?.nonLive?.data5);
+  const data6 = useSelector((state) => state?.nonLive?.data6);
 
-  const [isZoomedOut, setIsZoomedOut] = useState(false);
-  const [isZoomedOut1, setIsZoomedOut1] = useState(false);
-  const [isZoomedOut2, setIsZoomedOut2] = useState(false);
-  const [isZoomedOut3, setIsZoomedOut3] = useState(false);
-  const [isZoomedOut4, setIsZoomedOut4] = useState(false);
-  const [isZoomedOut5, setIsZoomedOut5] = useState(false);
-
-  const handleZoomClick = () => {
-    setIsZoomedOut(!isZoomedOut);
-  };
-
-  const handleZoomClick1 = () => {
-    setIsZoomedOut1(!isZoomedOut1);
-  };
-
-  const handleZoomClick2 = () => {
-    setIsZoomedOut2(!isZoomedOut2);
-  };
-  const handleZoomClick3 = () => {
-    setIsZoomedOut3(!isZoomedOut3);
-  };
-  const handleZoomClick4 = () => {
-    setIsZoomedOut4(!isZoomedOut4);
-  };
-  const handleZoomClick5 = () => {
-    setIsZoomedOut5(!isZoomedOut5);
-  };
-
-  const card1 = [
-    {
-      text: "아스널",
-      text1: "1.98",
-      text2: "무승부",
-      text3: "4.20",
-      text4: "리버플",
-      text5: "3.31",
-    },
-  ];
-  const card2 = [
-    {
-      text: "1팀승 또는 무승부",
-      text1: "1.32",
-      text2: "1팀승 또는 2팀승",
-      text3: "1.23",
-      text4: "무승부 또는 2팀승",
-      text5: "1.77",
-    },
-  ];
-  const card3 = [
-    {
-      text: "아스널 (리저브)",
-      text1: "1.52",
-      text2: "리버플 (리저브)",
-      text3: "2.53",
-    },
-  ];
-  const card4 = [
-    {
-      id: 0,
-      text: "오버 (0.5)",
-      text1: "1.05",
-      text2: "언더 (0.5)",
-      text3: "12.80",
-      marginBottom: "2px",
-    },
-    {
-      id: 1,
-      text: "오버 (1)",
-      text1: "1.06",
-      text2: "언더 (1)",
-      text3: "11.50",
-      marginBottom: "2px",
-    },
-    {
-      id: 2,
-      text: "오버 (1.5)",
-      text1: "1.27",
-      text2: "언더 (1.5)",
-      text3: "4.12",
-      marginBottom: "3px",
-    },
-  ];
-  const card5 = [
-    {
-      text: "(-1.75)",
-      text1: "2.75",
-      text2: "(+1.75)",
-      text3: "1.45",
-    },
-    {
-      text: "(-1.25)",
-      text1: "2.09",
-      text2: "(+1.25)",
-      text3: "1.75",
-    },
-    {
-      text: "(-0.75)",
-      text1: "1.67",
-      text2: "(+0.75)",
-      text3: "2.20",
-    },
-    {
-      text: "(-0.25)",
-      text1: "1.40",
-      text2: "(+0.25)",
-      text3: "2.95",
-    },
-  ];
-  const card6 = [
-    {
-      id: 0,
-      text: "(-2)",
-      text1: "4.30",
-      text2: "(+2)",
-      text3: "4.50",
-      text4: "(+2)",
-      text5: "1.56",
-    },
-    {
-      id: 1,
-      text: "(-1)",
-      text1: "2.29",
-      text2: "(+1)",
-      text3: "4.00",
-      text4: "(+1)",
-      text5: "2.41",
-    },
-  ];
+  const [zoomClass, setZoomClass] = useState("");
 
   const buttonContent = [
     {
@@ -183,6 +63,14 @@ const EntireAccordion = () => {
       width: "67px",
     },
   ];
+
+  useEffect(() => {
+    console.log("zoomClass", zoomClass);
+    setTimeout(() => {
+      setZoomClass("");
+    }, 500);
+  }, [zoomClass, setZoomClass]);
+
   return (
     <>
       <div
@@ -226,13 +114,8 @@ const EntireAccordion = () => {
             >
               <img
                 className={`ml-15px mt-2px object-none ${
-                  isZoomedOut ? "zoom-out" : ""
-                }
-                   ${isZoomedOut1 ? "zoom-out1" : ""}
-                    ${isZoomedOut2 ? "zoom-out2" : ""} 
-                    ${isZoomedOut3 ? "zoom-out3" : ""} 
-                    ${isZoomedOut4 ? "zoom-out4" : ""} 
-                    ${isZoomedOut5 ? "zoom-out5" : ""}`}
+                  zoomClass ? zoomClass : ""
+                }`}
                 src={star}
                 alt="icon"
               />
@@ -278,120 +161,192 @@ const EntireAccordion = () => {
           </div>
           {activeId === 0 ? (
             <div className="">
-              <EntireAccordionButton
-                title="승무패 [정규시간]"
-                icon={star1}
-                card={card1}
-                handleZoomClick={handleZoomClick}
-              />
-              <EntireAccordionButton0
-                title="더블찬스 [정규시간]"
-                icon={star1}
-                card={card2}
-                handleZoomClick1={handleZoomClick1}
-              />
-              <EntireAccordionButton1
-                title="승패(무X) [정규시간]"
-                icon={star1}
-                card={card3}
-                handleZoomClick2={handleZoomClick2}
-              />
-              <EntireAccordionButton11
-                title="오버/언더 [정규시간]"
-                icon={star1}
-                card={card4}
-                handleZoomClick3={handleZoomClick3}
-              />
-              <EntireAccordionButton2
-                title="아시안 핸디캡 [정규시간]"
-                icon={star1}
-                card={card5}
-                handleZoomClick4={handleZoomClick4}
-              />
-              <EntireAccordionButton3
-                title="핸디캡 승무패 [정규시간]"
-                icon={star1}
-                card={card6}
-                handleZoomClick5={handleZoomClick5}
-              />
+              {data1?.map((item, index) => {
+                return (
+                  <EntireAccordionButton
+                    title="승무패 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data2?.map((item, index) => {
+                return (
+                  <EntireAccordionButton0
+                    title="더블찬스 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data3?.map((item, index) => {
+                return (
+                  <EntireAccordionButton1
+                    title="승패(무X) [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data4?.map((item, index) => {
+                return (
+                  <EntireAccordionButton11
+                    title="오버/언더 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data5?.map((item, index) => {
+                return (
+                  <EntireAccordionButton2
+                    title="아시안 핸디캡 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data6?.map((item, index) => {
+                return (
+                  <EntireAccordionButton3
+                    title="핸디캡 승무패 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
             </div>
           ) : activeId === 1 ? (
             <div className="">
-              <EntireAccordionButton
-                title="승무패 [정규시간]"
-                icon={star1}
-                card={card1}
-                handleZoomClick={handleZoomClick}
-              />
-              <EntireAccordionButton0
-                title="더블찬스 [정규시간]"
-                icon={star1}
-                card={card2}
-                handleZoomClick1={handleZoomClick1}
-              />
-              <EntireAccordionButton1
-                title="승패(무X) [정규시간]"
-                icon={star1}
-                card={card3}
-                handleZoomClick2={handleZoomClick2}
-              />
-              <EntireAccordionButton11
-                title="오버/언더 [정규시간]"
-                icon={star1}
-                card={card4}
-                handleZoomClick3={handleZoomClick3}
-              />
-              <EntireAccordionButton2
-                title="아시안 핸디캡 [정규시간]"
-                icon={star1}
-                card={card5}
-                handleZoomClick4={handleZoomClick4}
-              />
-              <EntireAccordionButton3
-                title="핸디캡 승무패 [정규시간]"
-                icon={star1}
-                card={card6}
-                handleZoomClick5={handleZoomClick5}
-              />
+              {data1?.map((item, index) => {
+                return (
+                  <EntireAccordionButton
+                    title="승무패 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data2?.map((item, index) => {
+                return (
+                  <EntireAccordionButton0
+                    title="더블찬스 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data3?.map((item, index) => {
+                return (
+                  <EntireAccordionButton1
+                    title="승패(무X) [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data4?.map((item, index) => {
+                return (
+                  <EntireAccordionButton11
+                    title="오버/언더 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data5?.map((item, index) => {
+                return (
+                  <EntireAccordionButton2
+                    title="아시안 핸디캡 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data6?.map((item, index) => {
+                return (
+                  <EntireAccordionButton3
+                    title="핸디캡 승무패 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
             </div>
           ) : (
             <div className="">
-              <EntireAccordionButton
-                title="승무패 [정규시간]"
-                icon={star1}
-                card={card1}
-                handleZoomClick={handleZoomClick}
-              />
-              <EntireAccordionButton0
-                title="더블찬스 [정규시간]"
-                icon={star1}
-                card={card2}
-                handleZoomClick1={handleZoomClick1}
-              />
-              <EntireAccordionButton1
-                title="승패(무X) [정규시간]"
-                icon={star1}
-                card={card3}
-                handleZoomClick2={handleZoomClick2}
-              />
-              <EntireAccordionButton11
-                title="오버/언더 [정규시간]"
-                icon={star1}
-                card={card4}
-                handleZoomClick3={handleZoomClick3}
-              />
-              <EntireAccordionButton2
-                title="아시안 핸디캡 [정규시간]"
-                icon={star1}
-                card={card5}
-                handleZoomClick4={handleZoomClick4}
-              />
-              <EntireAccordionButton3
-                title="핸디캡 승무패 [정규시간]"
-                icon={star1}
-                card={card6}
-                handleZoomClick5={handleZoomClick5}
-              />
+              {data1?.map((item, index) => {
+                return (
+                  <EntireAccordionButton
+                    title="승무패 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data2?.map((item, index) => {
+                return (
+                  <EntireAccordionButton0
+                    title="더블찬스 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data3?.map((item, index) => {
+                return (
+                  <EntireAccordionButton1
+                    title="승패(무X) [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data4?.map((item, index) => {
+                return (
+                  <EntireAccordionButton11
+                    title="오버/언더 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data5?.map((item, index) => {
+                return (
+                  <EntireAccordionButton2
+                    title="아시안 핸디캡 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
+              {data6?.map((item, index) => {
+                return (
+                  <EntireAccordionButton3
+                    title="핸디캡 승무패 [정규시간]"
+                    icon={star1}
+                    cards={item.teams}
+                    handleZoomClick={setZoomClass}
+                  />
+                );
+              })}
             </div>
           )}
         </div>

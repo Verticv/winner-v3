@@ -29,6 +29,7 @@ const RightComponent = () => {
   const [inputValue, setInputValue] = useState("");
   const [showCards, setShowCards] = useState(0);
   const [active, setActive] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
 
   const betSlipData = useSelector((state) => state?.nonLive?.betSlip?.data);
 
@@ -41,6 +42,10 @@ const RightComponent = () => {
       clearInterval(interval);
     };
   }, []);
+
+  useEffect(() => {
+    if (betSlipData.length > 0) setActive(false);
+  }, [setActive, betSlipData]);
 
   // TODO: add the active icons
 
@@ -276,6 +281,7 @@ const RightComponent = () => {
             </div>
           </div>
         </div>
+        {showSettings && <CheckBoxComponent />}
         <div className="flex">
           <BetSlipButton />
           <BettingHistoryButton />
@@ -306,7 +312,6 @@ const RightComponent = () => {
         </div>
       </div> */}
 
-        {showSettings && <CheckBoxComponent />}
         {showCards === 0 ? (
           <>
             <div
@@ -326,7 +331,10 @@ const RightComponent = () => {
                 }}
                 className="flex items-center justify-between p-px ml-4px mt-5px mb-5px"
               >
-                <CustomDropdown />
+                <CustomDropdown
+                  selectedOption={selectedOption}
+                  setSelectedOption={setSelectedOption}
+                />
               </div>
               <div
                 onClick={() => {
@@ -352,13 +360,17 @@ const RightComponent = () => {
                 }}
                 className="pb-px pt-2px"
               >
-                {betSlipData.map((data, index) => (
-                  <RightComponentCard1 teamsData={data} />
-                ))}
+                {selectedOption !== "싱글" ? (
+                  betSlipData.map((data, index) => (
+                    <RightComponentCard1 teamsData={data} />
+                  ))
+                ) : (
+                  <RightComponentCard1 teamsData={betSlipData[0]} />
+                )}
               </div>
             )}
 
-            {active && (
+            {betSlipData.length <= 0 && active && (
               <>
                 <div
                   style={{

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setBetSlipData } from "reducers/nonLive-reducer";
 
 const EntireAccordionContent_1 = ({ card, lastObject }) => {
+  const dispatch = useDispatch();
   const [leftActive, setLeftActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
 
@@ -52,7 +55,14 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           borderBottomLeftRadius: `${card.id === 2 ? "4px" : "0px"}`,
         }}
         className="flex items-center justify-between border-r h-30px cursor-pointer"
-        onClick={() => setLeftActive((prev) => !prev)}
+        onClick={() => {
+          dispatch(
+            setBetSlipData({
+              data: card,
+            })
+          );
+          setLeftActive((prev) => !prev);
+        }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -64,7 +74,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           }}
           className="font-malgun ml-9px"
         >
-          {card.text}
+          {card.team1}
         </p>
         <p
           style={{
@@ -74,7 +84,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           }}
           className="mr-9px mb-2px font-malgun"
         >
-          {card.text1}
+          {card.score1}
         </p>
       </div>
       <div
@@ -90,7 +100,14 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           borderBottomRightRadius: `${card.id === 2 ? "4px" : "0px"}`,
         }}
         className="flex items-center justify-between cursor-pointer"
-        onClick={() => setRightActive((prev) => !prev)}
+        onClick={() => {
+          dispatch(
+            setBetSlipData({
+              data: card,
+            })
+          );
+          setRightActive((prev) => !prev);
+        }}
         onMouseEnter={handleMouseEnter1}
         onMouseLeave={handleMouseLeave1}
       >
@@ -101,7 +118,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           }}
           className="ml-8px mb-2px font-malgun"
         >
-          {card.text2}
+          {card.team2}
         </p>
         <p
           style={{
@@ -111,7 +128,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           }}
           className="mr-9px mb-2px font-malgun"
         >
-          {card.text3}
+          {card.score3}
         </p>
       </div>
     </div>

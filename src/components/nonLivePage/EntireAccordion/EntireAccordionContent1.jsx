@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setBetSlipData } from "reducers/nonLive-reducer";
 
-const EntireAccordionContent1 = () => {
+const EntireAccordionContent1 = ({ card }) => {
+  const dispatch = useDispatch();
   const [leftActive, setLeftActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
 
@@ -50,7 +53,14 @@ const EntireAccordionContent1 = () => {
           borderBottomLeftRadius: "4px",
         }}
         className="flex items-center justify-between border-r  h-30px cursor-pointer"
-        onClick={() => setLeftActive((prev) => !prev)}
+        onClick={() => {
+          dispatch(
+            setBetSlipData({
+              data: card,
+            })
+          );
+          setLeftActive((prev) => !prev);
+        }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -61,7 +71,7 @@ const EntireAccordionContent1 = () => {
           }}
           className="font-malgun -mt-2px ml-8px"
         >
-          아스널 (리저브)
+          {card.team1}
         </p>
         <p
           style={{
@@ -71,7 +81,7 @@ const EntireAccordionContent1 = () => {
           }}
           className="mr-9px font-malgun"
         >
-          1.52
+          {card.score1}
         </p>
       </div>
       <div
@@ -87,7 +97,14 @@ const EntireAccordionContent1 = () => {
           borderBottomRightRadius: "4px",
         }}
         className="flex items-center justify-between cursor-pointer"
-        onClick={() => setRightActive((prev) => !prev)}
+        onClick={() => {
+          dispatch(
+            setBetSlipData({
+              data: card,
+            })
+          );
+          setRightActive((prev) => !prev);
+        }}
         onMouseEnter={handleMouseEnter1}
         onMouseLeave={handleMouseLeave1}
       >
@@ -98,7 +115,7 @@ const EntireAccordionContent1 = () => {
           }}
           className="ml-8px mb-px -mt-2px font-malgun"
         >
-          리버플 (리저브)
+          {card.team2}
         </p>
         <p
           style={{
@@ -108,7 +125,7 @@ const EntireAccordionContent1 = () => {
           }}
           className="mr-9px font-malgun"
         >
-          2.53
+          {card.score3}
         </p>
       </div>
     </div>

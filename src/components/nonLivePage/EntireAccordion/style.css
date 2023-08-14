@@ -21,10 +21,46 @@
 .zoom-out {
   animation: animate-odd 1 0.25s ease-out;
 }
+
+.zoom_out {
+  animation: animate-even1 1 0.25s ease-out;
+}
+@keyframes animate-even1 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    animation-timing-function: ease-in;
+  }
+}
 .zoom-out1 {
   animation: animate-odd1 1 0.25s ease-out;
 }
-
+.zoom-out_1 {
+  animation: animate-even 1 0.25s ease-out;
+}
+@keyframes animate-even {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    animation-timing-function: ease-in;
+  }
+}
 .zoom-out2 {
   animation: animate-odd2 1 0.25s ease-out;
 }
@@ -134,5 +170,23 @@
     opacity: 0;
     transform: scale(2);
     animation-timing-function: ease-in;
+  }
+}
+
+.blink_style1 {
+  -webkit-animation: blink1 2s infinite both;
+  animation: blink1 2s infinite both;
+}
+
+@keyframes blink1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
   }
 }

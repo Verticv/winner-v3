@@ -161,7 +161,10 @@ const AccordionCard = ({
                 });
               }}
             />
-            <span className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white">
+            <span
+              style={{ boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)" }}
+              className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white"
+            >
               즐겨찾기에서 제거
             </span>
           </div>

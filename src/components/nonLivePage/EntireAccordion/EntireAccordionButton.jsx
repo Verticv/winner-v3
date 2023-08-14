@@ -3,17 +3,20 @@ import React, { useState } from "react";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
 import EntireAccordionContent from "./EntireAccordionContent";
+import { useEffect } from "react";
 
 // import AccordionContent1 from "./AccordionContent1";
 
-const EntireAccordionButton = ({ icon, title, card, handleZoomClick }) => {
+const EntireAccordionButton = ({ icon, title, cards, handleZoomClick }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-
+  useEffect(() => {
+    console.log("yyyyyyyyyyt", cards);
+  });
   return (
     <div className="ml-4px mr-5px mb-5px ">
       <div
@@ -51,7 +54,7 @@ const EntireAccordionButton = ({ icon, title, card, handleZoomClick }) => {
             onClick={(e) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
-              handleZoomClick();
+              handleZoomClick("zoom-out");
             }}
           />
           <img
@@ -65,7 +68,7 @@ const EntireAccordionButton = ({ icon, title, card, handleZoomClick }) => {
       </div>
       {isOpen && (
         <div style={{ background: "#420572" }} className="rounded-b-lg">
-          {card.map((item) => (
+          {cards.map((item) => (
             <EntireAccordionContent key={item.id} card={item} />
           ))}
         </div>

@@ -5,15 +5,15 @@ import EntireAccordionContent11 from "./EntireAccordionContent_1";
 
 // import AccordionContent1 from "./AccordionContent1";
 
-const EntireAccordionButton11 = ({ icon, title, card, handleZoomClick3 }) => {
+const EntireAccordionButton11 = ({ icon, title, cards, handleZoomClick }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-  const lastIndex = card.length - 1;
-  const lastObject = card[lastIndex];
+  const lastIndex = cards.length - 1;
+  const lastObject = cards[lastIndex];
   return (
     <div className="ml-4px  mr-5px mb-5px">
       <div
@@ -51,7 +51,7 @@ const EntireAccordionButton11 = ({ icon, title, card, handleZoomClick3 }) => {
             onClick={(e) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
-              handleZoomClick3();
+              handleZoomClick("zoom-out");
             }}
           />
           <img
@@ -66,7 +66,7 @@ const EntireAccordionButton11 = ({ icon, title, card, handleZoomClick3 }) => {
       </div>
       {isOpen && (
         <div style={{ background: "#420572" }} className="rounded-b-lg">
-          {card.map((item) => (
+          {cards.map((item) => (
             <EntireAccordionContent11
               key={item.id}
               card={item}

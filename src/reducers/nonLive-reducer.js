@@ -481,6 +481,142 @@ const nonLiveSlice = createSlice({
         ],
       },
     ],
+
+    data1: [
+      {
+        id: 1,
+        teams: [
+          {
+            id: 1,
+            team1: "아스널",
+            score1: "1.98",
+            team3: "무승부",
+            score2: "4.20",
+            team2: "리버플",
+            score3: "3.31",
+          },
+        ],
+      },
+    ],
+
+    data2: [
+      {
+        id: 1,
+        teams: [
+          {
+            id: 1,
+            team1: "1팀승 또는 무승부",
+            score1: "1.32",
+            team3: "1팀승 또는 2팀승",
+            score2: "1.23",
+            team2: "무승부 또는 2팀승",
+            score3: "1.77",
+          },
+        ],
+      },
+    ],
+
+    data3: [
+      {
+        id: 1,
+        teams: [
+          {
+            id: 1,
+            team1: "아스널 (리저브)",
+            score1: "1.52",
+            team2: "리버플 (리저브)",
+            score3: "2.53",
+          },
+        ],
+      },
+    ],
+
+    data4: [
+      {
+        id: 1,
+        teams: [
+          {
+            id: 0,
+            team1: "오버 (0.5)",
+            score1: "1.05",
+            team2: "언더 (0.5)",
+            score3: "12.80",
+            marginBottom: "2px",
+          },
+          {
+            id: 1,
+            team1: "오버 (1)",
+            score1: "1.06",
+            team2: "언더 (1)",
+            score3: "11.50",
+            marginBottom: "2px",
+          },
+          {
+            id: 2,
+            team1: "오버 (1.5)",
+            score1: "1.27",
+            team2: "언더 (1.5)",
+            score3: "4.12",
+            marginBottom: "3px",
+          },
+        ],
+      },
+    ],
+
+    data5: [
+      {
+        id: 1,
+        teams: [
+          {
+            id: 1,
+            team1: "(-1.75)",
+            score1: "32.75",
+            team2: "(+1.75)",
+            score3: "31.45",
+
+            team3: "(-1.25)",
+            score2: "2.09",
+            team4: "(+1.25)",
+            score4: "1.75",
+
+            team5: "(-0.75)",
+            score5: "1.67",
+            team6: "(+0.75)",
+            score6: "2.20",
+
+            team7: "(-0.25)",
+
+            team8: "(+0.25)",
+          },
+        ],
+      },
+    ],
+
+    data6: [
+      {
+        id: 1,
+        teams: [
+          {
+            id: 0,
+            team1: "(-2)",
+            score1: "4.30",
+            team3: "(+2)",
+            score2: "4.50",
+            team2: "(+2)",
+            score3: "1.56",
+          },
+          {
+            id: 1,
+            team1: "(-1)",
+            score1: "2.29",
+            team3: "(+1)",
+            score2: "4.00",
+            team2: "(+1)",
+            score3: "2.41",
+          },
+        ],
+      },
+    ],
     betSlip: {
       data: [],
       isSingle: true,

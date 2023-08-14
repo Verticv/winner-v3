@@ -20,6 +20,7 @@ const CenterComponent = ({ setEnglandActive }) => {
           width: "640px",
           background: "linear-gradient(to right, #622e8a, #4f2783)",
           borderRadius: "6px",
+          marginLeft: "1px",
         }}
         className="items-center mt-3px pt-7px rounded-lg"
       >
@@ -216,6 +217,7 @@ const CenterComponent = ({ setEnglandActive }) => {
           height: "33px",
           width: "640px",
           borderRadius: "6px",
+          marginLeft: "1px",
         }}
         className=" flex items-center mt-5px rounded-lg"
       >
@@ -248,6 +250,7 @@ const CenterComponent = ({ setEnglandActive }) => {
           height: "43px",
           width: "640px",
           borderRadius: "6px",
+          marginLeft: "1px",
         }}
         className=" flex items-center justify-between mt-5px rounded-lg"
       >
