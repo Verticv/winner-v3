@@ -89,6 +89,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               flexShrink: 0,
               height: "742px",
+              marginRight: "1px",
             }}
           >
             <Tabs active={active} setActive={setActive} />

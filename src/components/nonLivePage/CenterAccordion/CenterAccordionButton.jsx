@@ -63,6 +63,7 @@ const CenterAccordionButton = ({
         width: "640px",
         boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
         borderRadius: "6px",
+        marginLeft: "1px",
       }}
       className="rounded-lg p-px mb-4px"
     >
@@ -107,7 +108,7 @@ const CenterAccordionButton = ({
                 color: "#eeeeee",
                 letterSpacing: "-0.031em",
                 fontFamily: "MalgunGothicRegular",
-                marginRight: activeStar ? "1px" : "",
+                marginRight: activeStar ? "1.2px" : "",
               }}
               className="text-12px mt-5px font-malgun"
             >

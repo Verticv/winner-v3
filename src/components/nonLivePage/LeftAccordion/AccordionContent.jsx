@@ -86,34 +86,39 @@ const AccordionContent = ({ setIsOpen }) => {
             favoriteLaLiga[0]?.id ||
             bundesliga[0]?.id ||
             League.length !== 0) && (
-            <>
+            <div
+              style={{
+                background: "#361550",
+                borderRadius: "6px",
+              }}
+              className="p-px mr-2px ml-2px "
+            >
               <div
                 style={{
-                  background: "#361550",
-                  borderRadius: "6px",
+                  background: "#936cee",
+                  borderRadius: "5px",
                 }}
-                className="p-px mr-2px ml-2px "
+                className="flex items-center justify-center h-34px cursor-pointer hover:filter hover:brightness-150"
+                onClick={() => {
+                  dispatch(deleteAllFavoriteCards());
+                  setIsDeleted(true);
+                  setIsOpen(false);
+                }}
               >
-                <div
-                  style={{
-                    background: "#936cee",
-                    borderRadius: "5px",
-                  }}
-                  className="flex items-center justify-center h-34px cursor-pointer hover:filter hover:brightness-150"
-                  onClick={() => {
-                    dispatch(deleteAllFavoriteCards());
-                    setIsDeleted(true);
-                    setIsOpen(false);
-                  }}
+                <p
+                  className="mb-px text-13px text-white tracking-tight"
+                  style={{ fontFamily: "MalgunGothicBold" }}
                 >
-                  <p
-                    className="mb-px text-13px text-white tracking-tight"
-                    style={{ fontFamily: "MalgunGothicBold" }}
-                  >
-                    모두지우기
-                  </p>
-                </div>
+                  모두지우기
+                </p>
               </div>
+            </div>
+          )}
+          {(favoritePreMatch[0]?.id ||
+            favoriteLaLiga[0]?.id ||
+            favoriteLaLiga[0]?.id ||
+            bundesliga[0]?.id) && (
+            <>
               <div className="ml-7px mt-3px mb-6px">
                 <p
                   style={{
@@ -337,7 +342,12 @@ const AccordionContent = ({ setIsOpen }) => {
                           });
                         }}
                       />
-                      <span className="tooltiptext2 items-center justify-center text-10px font-malgun tracking-tight text-white">
+                      <span
+                        style={{
+                          boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)",
+                        }}
+                        className="tooltiptext2 items-center justify-center text-10px font-malgun tracking-tight text-white"
+                      >
                         즐겨찾기에서 제거
                       </span>
                     </div>
