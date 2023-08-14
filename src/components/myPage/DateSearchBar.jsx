@@ -171,7 +171,7 @@ const DateSearchBar = ({
                   style={{ background: 'linear-gradient(to top, #ada8a8, #d0d0d0)'}}>
                     <div className="flex items-center justify-center h-40px w-73px  rounded-6px cursor-pointer"
                       style={{ background: 'linear-gradient(0deg, #e5e5e5, #ffffff)' }}>
-                        <span className="font-medium tracking-tight text-14px text-r666666 pt-px text-shadow-5">3개월</span>
+                        <span className="font-medium tracking-tight text-14px text-r666666 pt-px">3개월</span>
                     </div>
                 </div>
             )}
