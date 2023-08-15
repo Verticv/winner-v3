@@ -6,6 +6,7 @@
       display: none;
 }
 
+
 ::-webkit-scrollbar-corner {
       background: #1e1e1e;
 }
@@ -28,5 +29,15 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
       background: #999;
+      border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+      background: #5e399a;
+}
+
+::-webkit-scrollbar-thumb {
+      background: #9b6bd4;
       border-radius: 10px;
 }

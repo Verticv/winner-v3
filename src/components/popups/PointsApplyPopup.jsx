@@ -10,38 +10,50 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
     const [inputValue, setInputValue] = useState(null)
 
     return (
-        <div className="flex flex-col rounded-10px overflow-hidden p-px shadow-table"
-            style={{ width: "609px", height:'510px', background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}>
-            <div className="h-full w-full flex flex-col rounded-10px overflow-hidden bg-gray-323231">
-                <div className="relative pt-20px pb-20px h-61px bg-gray-272726 flex items-center justify-center flex-shrink-0 rounded-t-10px">
-                    <label className="font-spoqaBold text-yellow-ad9e8c  text-24px">포인트  전환  신청</label>
-                    <button className="absolute top-21px right-21px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
+        <div className="flex flex-col overflow-hidden shadow-popup relative"
+            style={{
+                width: "609px",
+                height: '519px',
+                borderRadius: "20px",
+                background: "linear-gradient(to right, #b870cd, #9068bf)",
+                paddingTop: "2px", }}>
+            <div
+                style={{
+                    borderRadius: "20px",
+                    background: "linear-gradient(to right, #9b3aba, #5925a2)",
+                }}
+                className="h-full w-full flex flex-col  overflow-hidden ">
+                <div className="relative pt-20px pb-20px h-67px flex items-center justify-center flex-shrink-0 rounded-t-10px">
+                    <label className="font-bold text-white text-24px">포인트  전환  신청</label>
+                    <button className="absolute top-22px right-22px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
                         <img src={CloseIcon} alt="close_icon" />
                     </button>
                 </div>        
-                <div className="w-full h-full pt-39px pl-34px pr-32px pb-38px">
-                    <div className="w-full rounded-4px border border-red-594c49 bg-red-413937 px-19px pt-17px pb-15px">
+                <div className="w-full h-full pt-40px pl-34px pr-32px pb-38px bg-white"
+                style={{background:'#dfdbfa'}}>
+                    <div className="w-full rounded-8px border bg-white px-19px pt-19px pb-15px"
+                    style={{borderColor:'#bbbbbb'}}>
                         <div className="flex items-center h-26px space-x-9px">
                             <img src={AlertIcon} alt="" />
-                            <span className="text-red-e65454 font-spoqaMedium text-20px tracking-tight mt-px" style={{WebkitTextStroke:"0.2px"}}>확인 / 필독사항</span>
+                            <span className="text-20px text-rf04281 tracking-tight mt-px" style={{WebkitTextStroke:"0.2px",letterSpacing: '-0.1em'}}>확인 / 필독사항</span>
                         </div>
-                        <div className="mt-14px flex flex-col space-y-6px text-gray-ccc2b6 tracking-tight font-spoqaMedium text-16px">
+                        <div className="mt-14px flex flex-col space-y-6px text-r666666 tracking-tight  text-16px" style={{letterSpacing:'-0.1em'}}>
                             <span ><span className="font-bold mr-4px">✓</span>  포인트 전환 시 보유머니로 충전됩니다.</span>
                             <span ><span className="font-bold mr-4px">✓</span>  최소 10,000P 이상 신청 가능합니다.</span>
                             <span ><span className="font-bold mr-4px">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
                         </div>
                     </div>
-                    <div className="flex items-center text-16px font-spoqaMedium text-gray-929292 tracking-tight mt-36px">
-                        <span>사용 가능한 포인트 : </span>
-                        <span className="text-blue-2980b9 ml-2px font-spoqaBold">278</span>
-                        <span className="text-gray-ccc2b6">P</span>
+                    <div className="flex items-center text-16px tracking-tight mt-36px">
+                        <span style={{color:'#444444'}}>사용 가능한 포인트 : </span>
+                        <span className="text-rf04281 ml-2px font-bold">278</span>
+                        <span style={{color:'#444444'}}>P</span>
                     </div>
-                    <div className="h-64px w-full bg-gray-252525 rounded-4px mt-14px flex items-center">
-                        <span style={{marginLeft:'65px'}} className="text-14px tracking-tight font-spoqaMedium text-gray-ccc2b6 leading-none">전환포인트 입력</span>
+                    <div className="h-64px w-full rounded-8px mt-14px flex items-center" style={{background:'#5e399a'}}>
+                        <span style={{marginLeft:'65px'}} className="text-14px tracking-tight  text-eeeeee leading-none">전환포인트 입력</span>
                         <input 
                             placeholder="0"
-                            style={{width:'311px'}}
-                            className="flex-shrink-0 outline-none h-42px rounded-2px border border-gray-404040 px-10px font-spoqaMedium text-14px tracking-tight text-gray-828282 bg-dark-1a1a1a ml-9px" 
+                            style={{width:'311px',borderColor:'#682aa7'}}
+                            className="flex-shrink-0 outline-none h-42px rounded-6px border  px-10px  text-14px tracking-tight text-r666666  ml-9px" 
                             value={inputValue !==null ? nf.format(inputValue) : ""}
                             onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
                             onKeyPress={(event) => {
@@ -52,25 +64,19 @@ const PointsApplyPopup = ({setPopupOpen, isQuickMenu = false}) => {
                         />
                     </div>
                     <div className="flex w-full mt-20px space-x-3px">
-                        <button className="flex items-center justify-center h-52px rounded-4px hover:filter hover:brightness-125 shadow-link"
-                            style={{background:"linear-gradient(to bottom, #88d9e8, #3d4a8d)", width:'268px'}} >
-                            <div 
-                                style={{background:"linear-gradient(to top, #396084, #528ccd)", width:'266px'}} 
-                                className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
-                            >
-                                <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff text-shadow-5 pt-2px">포인트전환</span>
-                            </div>
+                        <button className="flex items-center justify-center h-52px rounded-full hover:filter hover:brightness-125 shadow-panelBtn cursor-pointer"
+                            style={{background:"linear-gradient(to right, #df52ff, #6b22ff)", width:'268px'}} >
+                           
+                                <span className=" tracking-tight text-16px text-white text-shadow-5 pt-2px">포인트전환</span>
+                            
                         </button>
                         <button 
-                            className="flex items-center justify-center h-52px rounded-4px  hover:filter hover:brightness-125 shadow-link"
+                            className="flex items-center justify-center h-52px rounded-full  hover:filter hover:brightness-125 shadow-panelBtn cursor-pointer"
                             onClick={() => isQuickMenu ? history.push('/mypage/points/points-apply',setPopupOpen(false)) : history.push('/mypage/points/points-transaction-history',setPopupOpen(false))}
-                            style={{background:"linear-gradient(to bottom, #5f80a4, #223348)", width:'268px'}} >
-                            <div 
-                                style={{background:"linear-gradient(to bottom, #39618e, #27405d)", width:'266px'}} 
-                                className="flex items-center justify-center h-50px rounded-4px cursor-pointer"
-                            >
-                                <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff text-shadow-5 pt-2px">상세내역</span>
-                            </div>
+                            style={{background:"#9d3bbb", width:'268px'}} >
+                            
+                            <span className="tracking-tight text-16px text-white text-shadow-5 pt-2px">상세내역</span>
+                            
                         </button>
                     </div>
                 </div>

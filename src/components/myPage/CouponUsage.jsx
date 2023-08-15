@@ -11,7 +11,7 @@ const CouponUsage = () => {
         <div className="flex flex-col w-full items-center">
             <MyPageTitle title="쿠폰사용" couponCount={32}/>
 
-            <div className="mt-20px">
+            <div className="mt-10px">
                 <CouponUsageTable />
             </div>
 

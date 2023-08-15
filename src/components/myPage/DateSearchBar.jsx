@@ -33,7 +33,7 @@ const DateSearchBar = ({
     // const [endDate, setEndDate] = useState(new Date())
     const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("리그선택")
-
+    const [hoveredOption, setHoveredOption] = useState("");
     const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px"
 
     const gameResultButton = (
@@ -45,14 +45,21 @@ const DateSearchBar = ({
     )
 
     function DropdownCells({ items }) {
-        return items.map(item => (
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier(item.text)
-                setDropdownOpen(false)
-            }}>
-                {item.text}
-            </button>
-        ));
+      return items.map(item => (
+        <button className={dropDownCellClass}
+          style={{
+            background: hoveredOption===item.text ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+            color: hoveredOption===item.text ? "white" : "#666666",
+          }}
+          onClick={() => {
+          setSelectedCarrier(item.text)
+          setDropdownOpen(false)
+          }}
+          onMouseOver={() => setHoveredOption(item.text)}
+          onMouseLeave={() => setHoveredOption("")}>
+          {item.text}
+        </button>
+      ));
     }
 
 
@@ -171,7 +178,7 @@ const DateSearchBar = ({
                   style={{ background: 'linear-gradient(to top, #ada8a8, #d0d0d0)'}}>
                     <div className="flex items-center justify-center h-40px w-73px  rounded-6px cursor-pointer"
                       style={{ background: 'linear-gradient(0deg, #e5e5e5, #ffffff)' }}>
-                        <span className="font-medium tracking-tight text-14px text-r666666 pt-px text-shadow-5">3개월</span>
+                        <span className="font-medium tracking-tight text-14px text-r666666 pt-px">3개월</span>
                     </div>
                 </div>
             )}
@@ -182,7 +189,7 @@ const DateSearchBar = ({
             <div className="flex space-x-5px">
                 <input 
                     className="w-138px h-42px rounded-6px border outline-none text-14px font-medium tracking-tight px-10px border-p682aa7 text-r666666 bg-dark-1a1a1a" 
-                    placeholder="아이디" 
+                    placeholder="아이디 입력" 
                 />
                 <div 
                     style={{

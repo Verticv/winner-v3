@@ -96,8 +96,8 @@ const CouponUsageTable = () => {
     ]
 
     const UseButton = () => (
-        <button style={{height:"29px", width: "73px",background: '#826140',boxShadow: '0px 1px 1px 0px rgba(0, 0, 0, 0.6)'}} 
-                className="rounded-4px text-golden-highLight font-spoqaMedium text-14px tracking-tight pt-2px hover:filter hover:brightness-125">
+        <button style={{height:"30px", width: "72px",background: '#5d659f',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',color:'#ededeb'}} 
+                className="rounded-4px text-13px tracking-tight pt-2px hover:filter hover:brightness-125">
             <span className="">사용하기</span>
         </button>
     )
@@ -105,16 +105,13 @@ const CouponUsageTable = () => {
     function Cells({ items }) {
         return items.map((item,index) => (
             <tr 
-               className={`${
-                index%2===0
-                  ? "bg-dark-323232" 
-                  : "bg-dark-2e2e2e"
-                } font-spoqa text-14px tracking-tight text-gray-c8c8c8 h-56px border-b border-dark-252525 last:border-b-0`}
+               className={`font-spoqa text-14px tracking-tight text-r666666 h-56px border-b  last:border-b-0`}
+                style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd"}}
             >
                     <td style={{width:'313px'}} className="text-center"><div style={{width:'313px'}} className='truncate px-5px'>{item.name}</div></td>
-                    <td style={{width:'172px'}} className="text-right text-red-e9441d pr-20px font-robotoRegular">{item.amount}</td>
+                    <td style={{width:'172px'}} className="text-right text-e9441d pr-20px font-robotoRegular">{item.amount}</td>
                     <td style={{width:'111px'}} className="text-center"><div style={{width:'111px'}} className='truncate px-5px'>{item.username}</div></td>
-                    <td style={{width:'108px'}} className="text-center  text-red-e65454">{item.status}</td>
+                    <td style={{width:'108px'}} className="text-center  text-rf04281">{item.status}</td>
                     <td style={{width:'122px'}} className="text-center font-robotoRegular">{item.date}</td>
                     <td style={{width:'111px'}} className="text-center font-robotoRegular">{item.expireDate}</td>
                     <td style={{width:'103px'}} className="pl-13px"><UseButton /></td>
@@ -125,10 +122,11 @@ const CouponUsageTable = () => {
 
     return (
        <div
-        style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
-          className="rounded-4px shadow-table overflow-hidden p-px">
-            <table className="rounded-3px overflow-hidden">
-                <thead className="font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-56px  border-b border-dark-252525 bg-dark-2e2e2e ">
+        style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
+          className="rounded-10px shadow-table overflow-hidden p-px">
+            <table className="rounded-10px overflow-hidden">
+                <thead className="font-medium text-14px tracking-tight h-54px  border-b "
+                 style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                 <tr>
                     <td style={{width:'313px'}} className="text-center">쿠폰명</td>
                     <td style={{width:'172px'}} className="text-center">쿠폰금액</td>
