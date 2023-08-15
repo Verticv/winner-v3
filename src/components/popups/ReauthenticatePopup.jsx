@@ -15,7 +15,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
         <div style={{
             height: '616px',
             width: '510px',
-            background: "linear-gradient(to right, #b574cc, #9198e5)",
+            background: "linear-gradient(to right, #b870cd, #9068bf)",
             borderRadius: '20px',
         }} className="relative shadow-popup pt-2px">
             <div

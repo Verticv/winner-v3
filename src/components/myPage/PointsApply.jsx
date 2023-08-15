@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import MyPageTitle from './MyPageTitle'
 import AlertIcon from '../../images/myPage/alert.png'
-
+import PointsApplyPopup from 'components/popups/PointsApplyPopup'
+import PopupControls from 'components/popups/PopupControls'
 const PointsApply = () => {
-
+   const [isPopupOpen, setPopupOpen] = useState(true)
     const [inputValue, setInputValue] = useState(null)
     // const [inputClicked, setInputClicked] = useState(false)
     // const [selectedInput, setSelectedInput] = useState()
@@ -35,7 +36,8 @@ const PointsApply = () => {
           className="mt-10px w-full rounded-8px border px-19px pt-17px">
               <div className="flex items-center h-26px space-x-9px">
                   <img src={AlertIcon} alt="" className='mt-px' />
-                  <span className="text-rf04281 text-20px tracking-tight mt-px" style={{WebkitTextStroke:"0.2px"}}>확인 / 필독사항</span>
+                  <span className="text-rf04281 text-20px tracking-tight mt-px"
+                    style={{ WebkitTextStroke: "0.2px", letterSpacing: '-0.1em' }}>확인 / 필독사항</span>
               </div>
               <div className="mt-13px flex flex-col space-y-15px text-r666666 text-16px" style={{letterSpacing:'-0.1em'}}>
                   <span className="h-15px"><span className="font-bold mr-7px">✓</span>  포인트 전환 시 보유머니로 충전됩니다.</span>
@@ -52,9 +54,9 @@ const PointsApply = () => {
               className="w-full rounded-6px flex border">
                 <div style={{marginLeft:'114px',letterSpacing:'-0.13em'}} className="pt-34px flex flex-col">
                 <span className="text-20px h-19px text-white font-bold"
-                style={{letterSpacing:'-0.13em'}}>전환 포인트 입력</span>
+                style={{letterSpacing:'-0.1em'}}>전환 포인트 입력</span>
                     <span className="text-16px text-eeeeee mt-15px" style={{letterSpacing:'-0.07em'}}>
-                        현재 포인트가 보유머니로 전환되며, 최소 
+                        <span style={{letterSpacing:'-0.1em'}}>현재 포인트가 보유머니로 전환되며, 최소 </span>
                         <span className="ml-2px font-bold" style={{color:'#fee300'}}>10,000</span>P
                           부터 신청 가능합니다.</span>
                 </div>
@@ -207,8 +209,10 @@ const PointsApply = () => {
 
             </div>
         </div>
-            <div className="mt-20px mb-60px">
-                {PopupButton}
+        <div className="mt-20px mb-60px">
+          <PopupControls buttonChild={PopupButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+            <PointsApplyPopup setPopupOpen={setPopupOpen} />
+          </PopupControls>
             </div>
         
             

@@ -31,7 +31,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
 
           <div
             style={{width:'107px'}}
-            className="flex justify-center cursor-pointer"
+            className="flex justify-center cursor-pointer ml-px"
             onClick={() => history.push(item.path)}
           >
             <img
@@ -45,7 +45,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
               width: "569px",
               color: item.isRead === true ? "#444444" : "#666666",
             }}
-            className={` group flex items-center space-x-10px cursor-pointer`}
+            className={` group flex items-center cursor-pointer`}
             onClick={() => history.push(item.path)}
           >
             {item.type === "공지" ? (
@@ -66,8 +66,9 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
               ""
             )}
             <p
-              className="group-hover:text-gray-f1e9e9 truncate"
+              className="group-hover:text-gray-f1e9e9 truncate -ml-2px mr-9px"
               style={{
+                letterSpacing:'-0.1em',
                 maxWidth:
                   item.type === "공지" || item.type === "이벤트"
                     ? "487px"
@@ -79,7 +80,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
             
             {item.isRead === false && (
               <div className="bg-rf04281 -mt-2px w-20px h-19px text-white flex items-center justify-center text-12px font-roboto"
-              style={{borderRadius:'100px', marginLeft:'8px'}}>
+              style={{borderRadius:'100%',letterSpacing:'-0.1em'}}>
                   N
                 </div>
               

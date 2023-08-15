@@ -97,6 +97,7 @@ const Inbox = () => {
     const [page, setPage] = useState(0)
     const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
+    const [hoveredOption, setHoveredOption] = useState("");
     const [checkedState, setCheckedState] = useState(
         new Array(inboxArray.length).fill(false)
     );
@@ -113,23 +114,38 @@ const Inbox = () => {
         }
     };
 
-    const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px"
+    const dropDownCellClass = "flex w-full h-30px py-2px  items-center  px-12px"
 
 
 
   const searchDropdown = (
+    
        <div className="w-120px h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white">
         <div className="w-full mt-2px h-full overflow-x-hidden border-gray-2c2c2c">
-            <button className={dropDownCellClass} onClick={() => {
+            <button className={dropDownCellClass}  
+            style={{
+                background: hoveredOption==="제목" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                color: hoveredOption==="제목" ? "white" : "#666666",
+            }}
+            onClick={() => {
                 setSelectedCarrier("제목")
                 setDropdownOpen(false)
-            }}>
+            }}
+            onMouseOver={() => setHoveredOption('제목')}
+            onMouseLeave={() => setHoveredOption("")}>
                 제목
             </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("본문")
-                setDropdownOpen(false)
-            }}>
+            <button className={dropDownCellClass}
+                style={{
+                background: hoveredOption==="본문" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                color: hoveredOption==="본문" ? "white" : "#666666",
+                }}
+                onClick={() => {
+                    setSelectedCarrier("본문")
+                    setDropdownOpen(false)
+                }}
+                onMouseOver={() => setHoveredOption('본문')}
+                onMouseLeave={() => setHoveredOption("")}>
                 본문
             </button>
       </div>

@@ -18,7 +18,7 @@ const CouponGiftPopupTable = () => {
 
     return (
         <div style={{width:'550px', height:'330px',background: "linear-gradient(to top, #ededeb, #cb78e6)"}} 
-        className="overflow-auto shadow-table rounded-10px p-px">
+        className="overflow-auto shadow-table rounded-10px p-px scroll-div">
           
             <div className="flex flex-col justify-center rounded-10px">
                 <div className="bg-gray-2b2b2a rounded-t-10px text-14px tracking-tight text-gray-ccc2b6 h-56px border-b  flex items-center"

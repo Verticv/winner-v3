@@ -135,7 +135,7 @@ module.exports = {
         plain4: "1px 2px 2px 0px rgba(0, 0, 0, 0.25)",
         plain5: "0 4px 4px 0px rgba(0, 0, 0, 0.25)",
         subNavbar: "0 0px 6px 0 rgba(0, 0, 0, 0.2)",
-        popup: "0 6px 10px 4px rgba(0, 0, 0, 0.3)",
+        popup: "0px 0px 20px 0px rgba(0, 0, 0, 0.6)",
         glow: "0 0 3px 2px rgba(0, 0, 0, 0.1)",
         navbar: "0 0px 7px 0 rgba(0,0,0,0.4)",
         link: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
@@ -169,7 +169,8 @@ module.exports = {
         p594e6a: '#594e6a',
         e9441d: '#e9441d',
         aaaaaa: '#aaaaaa',
-        ffd200: '#ffd200'
+        ffd200: '#ffd200',
+        dddddd:'#dddddd'
       },
       fontFamily: {
         // spoqa: ["SpoqaHanSansNeo"],

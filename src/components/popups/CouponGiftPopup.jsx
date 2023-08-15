@@ -14,7 +14,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
           height: "796px",
           width: "609px",
           borderRadius: "20px",
-          background: "linear-gradient(to right, #b574cc, #9198e5)",
+          background: "linear-gradient(to right, #b870cd, #9068bf)",
           paddingTop: "2px",
         }}
         className="relative shadow-popup">

@@ -27,9 +27,9 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
               )}
             </span>
 
-            <span>님의 회원정보를 수정합니다.</span>
+            <span style={{letterSpacing:'-0.1em'}}>님의 회원정보를 수정합니다.</span>
           </div>
-          <div className="flex items-center h-19px">
+          <div className="flex items-center h-19px" style={{letterSpacing:'-0.1em'}}>
             아이디와 비밀번호 보안에 신경써주십시오.
           </div>
         </div>
@@ -276,6 +276,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
             style={{
               width: '212px',
               background: "linear-gradient(to right, #ff7760, #f14a53)",
+              boxShadow: '0 2px 2px rgba(0, 0, 0, 0.3)'
             }} className="flex items-center justify-center h-52px rounded-6px hover:filter hover:brightness-125 panelBtn cursor-pointer">
             <span className="tracking-tight text-16px text-shadow-5 text-white">
               수정하기

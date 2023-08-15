@@ -8,7 +8,7 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
     const username = "WINlouie3" //"WINlouie3asdjakljsdasd"
   return (
       <div 
-        style={{ height: "800px",width: "690px", borderRadius: "20px", background: "linear-gradient(to right, #b574cc, #9198e5)"}}
+        style={{ height: "800px",width: "690px", borderRadius: "20px", background: "linear-gradient(to right, #b870cd, #9068bf)"}}
         className="overflow-hidden pt-2px shadow-popup relative"
         >
         <div 

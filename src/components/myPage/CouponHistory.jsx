@@ -44,7 +44,7 @@ const CouponHistory = () => {
                     <div style={{backgroundColor:"#ebabff"}} className="h-12px w-px mb-2px" />
 
                     <div className="space-x-2px">
-                        <div>기간만료 : <span className="text-r666666 font-bold">0</span>장</div>
+                        <div>기간만료 : <span className=" font-bold" style={{color:'#666666'}}>0</span>장</div>
                     </div>
 
                     <div style={{backgroundColor:"#ebabff"}} className="h-12px w-px mb-2px" />

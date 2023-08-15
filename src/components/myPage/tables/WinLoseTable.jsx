@@ -141,7 +141,7 @@ const WinLoseTable = ({
          style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
           className="rounded-10px shadow-table overflow-hidden p-px flex flex-col">
             <table className="rounded-10px overflow-hidden rounded-b-none table-auto w-full">
-                <thead className="text-14px tracking-tight h-55px border-b"
+                <thead className="text-14px tracking-tight h-54px border-b"
                  style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                     <tr>
                         <td className="text-center pt-2px" style={{width:"96px"}}>선택</td>
