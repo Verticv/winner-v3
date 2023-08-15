@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import icon from "../../../images/nonLivePage/EntireAccordion/Icon.png";
 import Up from "../../../images/nonLivePage/EntireAccordion/Up.png";
 import Dn from "../../../images/nonLivePage/EntireAccordion/Dn.png";
+import { setBetSlipData } from "reducers/nonLive-reducer";
+import { useDispatch } from "react-redux";
+import "./style.css";
 
-const EntireAccordionContent2 = () => {
+const EntireAccordionContent2 = ({ card }) => {
+  const dispatch = useDispatch();
   const [leftActive, setLeftActive] = useState(false);
   const [leftActive1, setLeftActive1] = useState(false);
   const [rightActive, setRightActive] = useState(false);
@@ -109,8 +113,15 @@ const EntireAccordionContent2 = () => {
             color: leftActive ? "#eeeeee" : "#444444",
             ...(isHovered ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px"
-          onClick={() => setLeftActive((prev) => !prev)}
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setLeftActive((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -121,13 +132,13 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px ml-9px"
           >
-            (-1.75)
+            {card.team1}
           </p>
           <img
             style={{ marginLeft: "225px" }}
             src={Up}
             alt="icon"
-            className="mb-px"
+            className="blink_style1 mb-px"
           />
           <p
             style={{
@@ -137,7 +148,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="mr-9px mb-2px font-malgun"
           >
-            32.75
+            {card.score1}
           </p>
         </div>
         <div
@@ -151,8 +162,15 @@ const EntireAccordionContent2 = () => {
             color: rightActive ? "#eeeeee" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between"
-          onClick={() => setRightActive((prev) => !prev)}
+          className="flex items-center justify-between cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setRightActive((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter1}
           onMouseLeave={handleMouseLeave1}
         >
@@ -163,13 +181,13 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px ml-9px"
           >
-            (+1.75)
+            {card.team2}
           </p>
           <img
             style={{ marginLeft: "220px" }}
             src={Dn}
             alt="icon"
-            className="mb-px"
+            className="blink_style1 mb-px"
           />
           <p
             style={{
@@ -179,7 +197,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px mr-9px"
           >
-            31.45
+            {card.score3}
           </p>
         </div>
       </div>
@@ -202,8 +220,15 @@ const EntireAccordionContent2 = () => {
             color: leftActive1 ? "#eeeeee" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px"
-          onClick={() => setLeftActive1((prev) => !prev)}
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setLeftActive1((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter2}
           onMouseLeave={handleMouseLeave2}
         >
@@ -214,13 +239,13 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px ml-9px"
           >
-            (-1.25)
+            {card.team3}
           </p>
           <img
             style={{ marginLeft: "218px" }}
             src={Up}
             alt="icon"
-            className="mb-px"
+            className="blink_style1 mb-px"
           />
           <p
             style={{
@@ -230,7 +255,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="mr-9px mb-2px font-malgun "
           >
-            2.09
+            {card.score2}
           </p>
         </div>
         <div
@@ -244,8 +269,15 @@ const EntireAccordionContent2 = () => {
             color: rightActive1 ? "#eeeeee" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between"
-          onClick={() => setRightActive1((prev) => !prev)}
+          className="flex items-center justify-between cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setRightActive1((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter3}
           onMouseLeave={handleMouseLeave3}
         >
@@ -256,13 +288,13 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px ml-9px"
           >
-            (+1.25)
+            {card.team4}
           </p>
           <img
             style={{ marginLeft: "214px" }}
             src={Dn}
             alt="icon"
-            className="mb-px"
+            className="blink_style1 mb-px"
           />
           <p
             style={{
@@ -272,7 +304,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px mr-9px"
           >
-            1.75
+            {card.score4}
           </p>
         </div>
       </div>
@@ -295,8 +327,15 @@ const EntireAccordionContent2 = () => {
             color: leftActive2 ? "#eeeeee" : "#444444",
             ...(isHovered4 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px"
-          onClick={() => setLeftActive2((prev) => !prev)}
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setLeftActive2((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter4}
           onMouseLeave={handleMouseLeave4}
         >
@@ -307,7 +346,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px ml-9px"
           >
-            (-0.75)
+            {card.team5}
           </p>
           <p
             style={{
@@ -317,7 +356,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="mr-9px mb-2px font-malgun"
           >
-            1.67
+            {card.score5}
           </p>
         </div>
         <div
@@ -331,8 +370,15 @@ const EntireAccordionContent2 = () => {
             color: rightActive2 ? "#eeeeee" : "#444444",
             ...(isHovered5 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between"
-          onClick={() => setRightActive2((prev) => !prev)}
+          className="flex items-center justify-between cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setRightActive2((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter5}
           onMouseLeave={handleMouseLeave5}
         >
@@ -343,7 +389,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px ml-9px"
           >
-            (+0.75)
+            {card.team6}
           </p>
           <p
             style={{
@@ -353,7 +399,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px mr-9px"
           >
-            2.20
+            {card.score6}
           </p>
         </div>
       </div>
@@ -379,8 +425,15 @@ const EntireAccordionContent2 = () => {
             ...(isHovered6 ? hoverStyle : null),
             borderBottomLeftRadius: "4px",
           }}
-          className="flex items-center justify-between border-r h-30px"
-          onClick={() => setLeftActive3((prev) => !prev)}
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setLeftActive3((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter6}
           onMouseLeave={handleMouseLeave6}
         >
@@ -391,7 +444,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px  ml-9px"
           >
-            (-0.25)
+            {card.team7}
           </p>
           <img className="mr-10px mt-px object-none" src={icon} alt="img" />
         </div>
@@ -407,8 +460,15 @@ const EntireAccordionContent2 = () => {
             ...(isHovered7 ? hoverStyle : null),
             borderBottomRightRadius: "4px",
           }}
-          className="flex items-center justify-between"
-          onClick={() => setRightActive3((prev) => !prev)}
+          className="flex items-center justify-between cursor-pointer"
+          onClick={() => {
+            dispatch(
+              setBetSlipData({
+                data: card,
+              })
+            );
+            setRightActive3((prev) => !prev);
+          }}
           onMouseEnter={handleMouseEnter7}
           onMouseLeave={handleMouseLeave7}
         >
@@ -419,7 +479,7 @@ const EntireAccordionContent2 = () => {
             }}
             className="font-malgun mb-2px ml-9px"
           >
-            (+0.25)
+            {card.team8}
           </p>
           <img className="mr-10px mt-px object-none" src={icon} alt="img" />
         </div>

@@ -4,6 +4,7 @@ import Up from "../../../images/nonLivePage/LeftAccordion/Card/Up.png";
 import Dn from "../../../images/nonLivePage/LeftAccordion/Card/Dn.png";
 import icon1 from "../../../images/nonLivePage/CenterAccordion/Icon1.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
+import "./style.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -30,11 +31,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
-  const [idSelected, setIdSelected] = useState([]);
-
-  useEffect(() => {
-    console.log("idSelected", idSelected);
-  }, [idSelected, setIdSelected]);
+  // const [idSelected, setIdSelected] = useState([]);
 
   const favoritePreMatch = useSelector(
     (state) => state?.nonLive?.favoritePreMatch
@@ -267,14 +264,14 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
                 <img
                   src={Up}
                   alt="Up"
-                  className="mr-8px"
+                  className="blink_style mr-8px"
                   // className="ml-50px mt-11px mb-12px"
                 />
               ) : card.score1ArrowDown ? (
                 <img
                   src={Dn}
                   alt="Dn"
-                  className="mr-2px"
+                  className="blink_style mr-2px"
                   // className="ml-50px mt-11px mb-12px"
                 />
               ) : (
@@ -313,7 +310,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
             <img
               src={Up}
               alt="Up"
-              className="-mr-6px mb-px absolute"
+              className="blink_style -mr-6px mb-px absolute"
               style={{ right: "56px" }}
               //  className="ml-10px mt-11px mb-12px"
             />
@@ -321,7 +318,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
             <img
               src={Dn}
               alt="Dn"
-              className="-mr-6px mb-px absolute"
+              className="blink_style -mr-6px mb-px absolute"
               style={{ right: "56px" }}
               //  className="ml-10px mt-11px mb-12px"
             />
@@ -396,14 +393,14 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
                 <img
                   src={Up}
                   alt="Up"
-                  className="ml-2px"
+                  className=" blink_style ml-2px"
                   //  className="mr-104px mt-11px mb-12px"
                 />
               ) : card.score3ArrowDown ? (
                 <img
                   src={Dn}
                   alt="Dn"
-                  className="ml-8px"
+                  className="blink_style ml-8px"
                   // className="mr-104px mt-11px mb-12px"
                 />
               ) : (
@@ -417,7 +414,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
               fontSize: "12px",
               letterSpacing: "-0.031em",
             }}
-            className=" mr-9px mt-8px mb-8px"
+            className=" mr-9px mt-8px mb-10px"
           >
             {card.team2}
           </p>
@@ -449,7 +446,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive }) => {
             style={{
               fontSize: "12px",
               letterSpacing: "-0.031em",
-              marginRight: "1px",
               marginBottom: "2px",
             }}
           >

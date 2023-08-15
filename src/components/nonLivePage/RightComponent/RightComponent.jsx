@@ -29,13 +29,9 @@ const RightComponent = () => {
   const [inputValue, setInputValue] = useState("");
   const [showCards, setShowCards] = useState(0);
   const [active, setActive] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
 
   const betSlipData = useSelector((state) => state?.nonLive?.betSlip?.data);
-  console.log("RightComponent state :>> ", betSlipData);
-
-  console.log("isPopupOpen :>> ", isPopupOpen);
-
-  console.log("isBetSlipActive :>> ", isBetSlipActive);
 
   const dateFormat = "yyyy-MM-dd";
   const dateFormat1 = "H:mm:ss";
@@ -46,6 +42,10 @@ const RightComponent = () => {
       clearInterval(interval);
     };
   }, []);
+
+  useEffect(() => {
+    if (betSlipData.length > 0) setActive(false);
+  }, [setActive, betSlipData]);
 
   // TODO: add the active icons
 
@@ -96,7 +96,7 @@ const RightComponent = () => {
           className="flex items-center"
         >
           <img
-            className="ml-21px"
+            className="ml-21px mb-2px"
             src={isBetSlipActive ? icon1 : icon_1}
             alt="icon"
           />
@@ -105,7 +105,7 @@ const RightComponent = () => {
               color: isBetSlipActive ? "white" : "#5e399a",
               marginLeft: isBetSlipActive ? "2px" : "-2px",
             }}
-            className="-mt-3px text-14px font-MalgunGothicBold tracking-tight"
+            className="-mt-2px text-14px font-MalgunGothicBold tracking-tight"
           >
             베팅슬립
           </p>
@@ -172,7 +172,7 @@ const RightComponent = () => {
               color: isBetSlipActive ? "#5e399a" : "white",
               marginLeft: isBetSlipActive ? "7px" : "3px",
             }}
-            className="-mt-3px text-14px font-MalgunGothicBold tracking-tight"
+            className="-mt-2px text-14px font-MalgunGothicBold tracking-tight"
           >
             베팅내역
           </p>
@@ -281,6 +281,7 @@ const RightComponent = () => {
             </div>
           </div>
         </div>
+        {showSettings && <CheckBoxComponent />}
         <div className="flex">
           <BetSlipButton />
           <BettingHistoryButton />
@@ -311,7 +312,6 @@ const RightComponent = () => {
         </div>
       </div> */}
 
-        {showSettings && <CheckBoxComponent />}
         {showCards === 0 ? (
           <>
             <div
@@ -331,7 +331,10 @@ const RightComponent = () => {
                 }}
                 className="flex items-center justify-between p-px ml-4px mt-5px mb-5px"
               >
-                <CustomDropdown />
+                <CustomDropdown
+                  selectedOption={selectedOption}
+                  setSelectedOption={setSelectedOption}
+                />
               </div>
               <div
                 onClick={() => {
@@ -357,13 +360,17 @@ const RightComponent = () => {
                 }}
                 className="pb-px pt-2px"
               >
-                {betSlipData.map((data, index) => (
-                  <RightComponentCard1 teamsData={data} />
-                ))}
+                {selectedOption !== "싱글" ? (
+                  betSlipData.map((data, index) => (
+                    <RightComponentCard1 teamsData={data} />
+                  ))
+                ) : (
+                  <RightComponentCard1 teamsData={betSlipData[0]} />
+                )}
               </div>
             )}
 
-            {active && (
+            {betSlipData.length <= 0 && active && (
               <>
                 <div
                   style={{

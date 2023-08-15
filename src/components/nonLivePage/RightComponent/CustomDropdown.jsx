@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import img from "../../../images/nonLivePage/RightComponent/Arrow.png";
 import { useSelector } from "react-redux";
 
-const CustomDropdown = () => {
+const CustomDropdown = ({ selectedOption, setSelectedOption }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
+  // const [selectedOption, setSelectedOption] = useState("");
   const isSingle = useSelector((state) => state?.nonLive?.betSlip?.isSingle);
 
   const toggleDropdown = () => {
@@ -22,6 +22,7 @@ const CustomDropdown = () => {
     } else {
       setSelectedOption("멀티");
     }
+    // eslint-disable-next-line
   }, [isSingle]);
 
   const options = ["싱글", "멀티"];
@@ -79,8 +80,10 @@ const CustomDropdown = () => {
               {options.map((option) => (
                 <li
                   key={option}
-                  className="py-2 px-2 cursor-pointer"
-                  onClick={() => handleOptionSelect(option)}
+                  className="py-2 px-2 text-13px cursor-pointer"
+                  onClick={() => {
+                    handleOptionSelect(option);
+                  }}
                 >
                   {option}
                 </li>

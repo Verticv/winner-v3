@@ -21,7 +21,7 @@ import icon7 from "../../../images/nonLivePage/Tabs/Icon7.png";
 import icon8 from "../../../images/nonLivePage/Tabs/Icon8.png";
 import icon9 from "../../../images/nonLivePage/Tabs/Icon9.png";
 import icon10 from "../../../images/nonLivePage/Tabs/Icon10.png";
-// import horizontalsScroll from "./horizontalsScroll.js";
+import horizontalsScroll from "./horizontalsScroll.js";
 // import { ta } from "date-fns/locale";
 
 const tabs = [
@@ -155,9 +155,9 @@ const Tabs = ({ active, setActive }) => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 100;
   };
-  const slideRight1 = () => {
-    var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 100;
+  const slideRight1 = (tab) => {
+    setActive(tab.id);
+    horizontalsScroll(tabs, "tab-", "slider", tab.id);
   };
   return (
     <div
@@ -166,6 +166,7 @@ const Tabs = ({ active, setActive }) => {
         position: "relative",
         marginTop: "10px",
         width: "640px",
+        marginLeft: "1px",
       }}
     >
       <button
@@ -198,6 +199,7 @@ const Tabs = ({ active, setActive }) => {
         <div style={{ display: "flex", height: "48px" }} id="scroll-wrapper">
           {tabs.map((tab, index) => (
             <div
+              id={`tab-${tab.id}`}
               style={{
                 background: `${
                   active === tab.id
@@ -212,7 +214,7 @@ const Tabs = ({ active, setActive }) => {
                 boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
                 flexShrink: 0,
               }}
-              onClick={slideRight1}
+              // onClick={slideRight1}
             >
               <button
                 id="slider1"
@@ -220,7 +222,8 @@ const Tabs = ({ active, setActive }) => {
                 //   setActiveTab({ index, tab });
                 // }}
                 onClick={() => {
-                  setActive(tab.id);
+                  // setActive(tab.id);
+                  slideRight1(tab);
                 }}
                 // id={`t-sub${index}`}
                 style={{

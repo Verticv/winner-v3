@@ -3,17 +3,10 @@ import icon from "../../../images/nonLivePage/EnglandComponent/Icon.png";
 import flag from "../../../images/nonLivePage/EnglandComponent/Flag.png";
 import img from "../../../images/nonLivePage/EnglandComponent/Img.png";
 import img2 from "../../../images/nonLivePage/EnglandComponent/img2.png";
-// import img3 from "../../../images/nonLivePage/EnglandComponent/img3.png";
-// import img4 from "../../../images/nonLivePage/EnglandComponent/img4.png";
-// import img5 from "../../../images/nonLivePage/EnglandComponent/img5.png";
-// import group from "../../../images/nonLivePage/EnglandComponent/Group.png";
-// import logo from "../../../images/nonLivePage/EnglandComponent/Logo.png";
 import { useSelector } from "react-redux";
 
 const EnglandComponent = ({ englandActive, setEnglandActive }) => {
-  // const [isOpen, setIsOpen] = useState(false);
   const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
-  console.log("state111 :>> ", liveGameData);
 
   useEffect(() => {
     if (!englandActive) setEnglandActive(false);
@@ -65,7 +58,11 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                     className="ml-10px mr-2px mt-4px w-px h-10px"
                   ></div>
                   <p
-                    style={{ color: "#dddddd", letterSpacing: "-0.031em" }}
+                    style={{
+                      color: "#dddddd",
+                      letterSpacing: "-0.031em",
+                      fontWeight: "bold",
+                    }}
                     className="ml-7px mt-3px mr-1px text-12px font-MalgunGothicBold"
                   >
                     아스널

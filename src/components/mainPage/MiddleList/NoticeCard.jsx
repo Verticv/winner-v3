@@ -25,7 +25,7 @@ const Item = ({ text, name }) => (
 
 const RightItem = ({ text }) => (
   <div className="flex flex-shrink-0 mr-16px">
-    <img className="mr-4px mb-px object-none" src={noticeItem} alt="" />
+    <img className="mr-4px object-none" src={noticeItem} alt="" />
     <p
       style={{ color: "#666666", textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", maxWidth: "75px" }}
       className="text-13px font-spoqaMedium tracking-tight mt-px text-right"

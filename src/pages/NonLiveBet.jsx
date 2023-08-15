@@ -13,7 +13,6 @@ import EnglandComponent from "components/nonLivePage/EnglandComponent/EnglandCom
 import EnglandComponent2 from "components/nonLivePage/EnglandComponent/EnglandComponent2";
 import EntireAccordion from "components/nonLivePage/EntireAccordion/EntireAccordion";
 import RightComponent from "components/nonLivePage/RightComponent/RightComponent";
-// import PoupUpComponent from "components/nonLivePage/PoupUpComponent/PoupUpComponent";
 
 import Tabs from "components/nonLivePage/Tabs/Tabs";
 import { useSelector } from "react-redux";
@@ -32,7 +31,6 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
       <div
         style={{
           background: "linear-gradient(to right, #b644c4, #351894)",
-          // minHeight: "3000px",
         }}
         className="w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
       >
@@ -50,7 +48,10 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
         />
       </div>
       <div
-        style={{ top: "125px" }}
+        style={{
+          top: "125px",
+          background: "linear-gradient(to right, #52296b, #2c1c5d)",
+        }}
         className="w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
       >
         <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
@@ -72,17 +73,12 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           style={{ background: "linear-gradient(to right, #b644c4, #351894)" }}
           className="relative w-full flex items-start "
         >
-          {/* <div
-            style={{ marginLeft: "717px", marginTop: "130px" }}
-            className="flex items-center justify-center absolute z-50 "
-          >
-            <PoupUpComponent />
-          </div> */}
           <div
             style={{
               overflowY: "auto",
               flexShrink: 0,
               height: "730px",
+              marginBottom: "60px",
             }}
           >
             <Search />
@@ -92,7 +88,8 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "730px",
+              height: "742px",
+              marginRight: "1px",
             }}
           >
             <Tabs active={active} setActive={setActive} />
@@ -115,8 +112,6 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
                 </>
               )}
             </div>
-            {/* <CenterComponent />
-            <CenterAccordion /> */}
           </div>
           <div
             style={{

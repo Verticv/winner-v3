@@ -7,7 +7,7 @@ import EntireAccordionContent3 from "./EntireAccordionContent3";
 
 // import AccordionContent1 from "./AccordionContent1";
 
-const EntireAccordionButton3 = ({ icon, title, card }) => {
+const EntireAccordionButton3 = ({ icon, title, cards, handleZoomClick }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
 
@@ -52,6 +52,7 @@ const EntireAccordionButton3 = ({ icon, title, card }) => {
             onClick={(e) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
+              handleZoomClick("zoom-out");
             }}
           />
           <img
@@ -107,7 +108,7 @@ const EntireAccordionButton3 = ({ icon, title, card }) => {
               </p>
             </div>
           </div>
-          {card.map((item) => (
+          {cards.map((item) => (
             <EntireAccordionContent3 key={item.id} card={item} />
           ))}
         </div>

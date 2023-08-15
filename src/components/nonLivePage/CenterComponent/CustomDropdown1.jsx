@@ -56,7 +56,9 @@ const CustomDropdown1 = () => {
         <img
           src={img}
           alt="img"
-          className={`ml-21px mt-2px transition-transform duration-300 ${
+          // ml-21px mt-2px
+          style={{ top: "10px", right: "10px" }}
+          className={`absolute transition-transform duration-300 ${
             isOpen ? "transform rotate-180" : ""
           }`}
         />
@@ -75,7 +77,6 @@ const CustomDropdown1 = () => {
             style={{
               background: "#ffffff",
               width: "77px",
-              // height: "27px",
               borderRadius: "4px",
             }}
             className="hover relative items-center justify-between"
@@ -84,7 +85,7 @@ const CustomDropdown1 = () => {
               {options.map((option) => (
                 <li
                   key={option}
-                  className="py-2 px-2 cursor-pointer font-malgun"
+                  className="py-2 px-2 text-13px cursor-pointer font-malgun"
                   onClick={() => handleOptionSelect(option)}
                 >
                   {option}

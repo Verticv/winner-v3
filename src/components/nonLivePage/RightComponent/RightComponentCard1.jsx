@@ -35,7 +35,10 @@ const RightComponentCard1 = ({ teamsData }) => {
           <div className="flex items-center mr-7px">
             <div className="tooltip1">
               <img className="mt-13px mb-12px" src={icon6} alt="icon" />
-              <div className="tooltiptext1">
+              <div
+                style={{ boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)" }}
+                className="tooltiptext1"
+              >
                 <div
                   style={{ width: "170px", height: "40px" }}
                   className="flex items-center justify-start ml-10px pb-13px"
@@ -52,6 +55,7 @@ const RightComponentCard1 = ({ teamsData }) => {
                     background: "#ffffff",
                     borderBottomLeftRadius: "4px",
                     borderBottomRightRadius: "4px",
+                    boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)",
                   }}
                   className="-mt-10px items-center"
                 >

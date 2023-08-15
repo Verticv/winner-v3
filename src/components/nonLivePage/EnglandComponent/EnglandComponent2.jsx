@@ -8,12 +8,11 @@ import img4 from "../../../images/nonLivePage/EnglandComponent/img4.png";
 import img5 from "../../../images/nonLivePage/EnglandComponent/img5.png";
 import group from "../../../images/nonLivePage/EnglandComponent/Group.png";
 import logo from "../../../images/nonLivePage/EnglandComponent/Logo.png";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const EnglandComponent = ({ englandActive, setEnglandActive }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
-  console.log("state111 :>> ", liveGameData);
+  // const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
 
   return (
     <>
@@ -55,7 +54,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
             style={{
               background: "#5e399a",
               width: "632px",
-              height: "606px",
+              height: "100%",
               borderRadius: "1px",
             }}
             className="flex items-center justify-center"
@@ -92,7 +91,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
           style={{
             background: "#936cee",
             width: "640px",
-            height: "614px",
+            minHeight: "614px",
             borderRadius: "6px",
             boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
           }}
@@ -102,7 +101,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
             style={{
               background: "#5e399a",
               width: "632px",
-              height: "606px",
+              minHeight: "606px",
               borderRadius: "2px",
             }}
             className="flex "

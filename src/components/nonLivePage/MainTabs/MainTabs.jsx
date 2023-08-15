@@ -13,8 +13,8 @@ const MainTabs = () => {
     {
       id: 0,
       icon: icon1,
+      marginLeft1: "15px",
       text: "조합베팅",
-      // active: true,
       marginLeft: "5px",
       marginRight: "14px",
       width: "107px",
@@ -22,6 +22,7 @@ const MainTabs = () => {
     {
       id: 1,
       icon: icon2,
+      marginLeft1: "15px",
       text: "스페셜베팅",
       marginLeft: "5px",
       marginRight: "14px",
@@ -30,6 +31,7 @@ const MainTabs = () => {
     {
       id: 2,
       icon: icon3,
+      marginLeft1: "15px",
       text: "실시간스포츠",
       marginLeft: "4px",
       marginRight: "13px",
@@ -38,6 +40,7 @@ const MainTabs = () => {
     {
       id: 3,
       icon: icon4,
+      marginLeft1: "15px",
       text: "경기결과",
       marginLeft: "4px",
       width: "114px",
@@ -46,14 +49,16 @@ const MainTabs = () => {
     {
       id: 4,
       icon: icon5,
+      marginLeft1: "15px",
       text: "라이브영상",
-      marginLeft: "5px",
+      marginLeft: "4px",
       marginRight: "15px",
       width: "124px",
     },
     {
       id: 5,
       icon: icon6,
+      marginLeft1: "14px",
       text: "베팅규정",
       marginLeft: "5px",
       width: "108px",

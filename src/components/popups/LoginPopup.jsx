@@ -41,7 +41,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
             <div className="w-full flex justify-center">
               <label
                 style={{ color: "#ffffff", marginTop: "22px", marginLeft: "2px" }}
-                className="font-spoqaBold text-24px h-24px flex items-center"
+                className="font-bold text-24px h-24px flex items-center"
               >
                 로그인
               </label>

@@ -1,7 +1,7 @@
 import React from "react";
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import goldCardImg from "../../images/gold_card_img.png";
+import goldCardImg from "../../images/slotCarousel/test.png";
 import Slot1 from "../../images/slotCarousel/1.png";
 import Slot6 from "../../images/slotCarousel/6.jpg";
 import slotInternalCardBackground from "../../images/slot_internal_card_background.png";
@@ -34,12 +34,7 @@ const Card = ({ icon, name, game }) => (
       <img style={{ borderRadius: "3px" }} src={icon} alt="" className="object-cover w-full h-full" />
     </div>
 
-    <div
-      style={{
-        color: "#6f6f6f",
-      }}
-      className="ml-8px text-14px font-spoqa tracking-tight pt-px pl-2px"
-    >
+    <div style={{ color: "#6f6f6f" }} className="ml-8px text-14px tracking-tight pt-px pl-2px">
       <p
         style={{
           color: "#a5eefe",
@@ -48,8 +43,9 @@ const Card = ({ icon, name, game }) => (
           overflow: "hidden",
           lineHeight: "26px",
           width: "190px",
+          fontSize: "22px",
         }}
-        className="text-20px font-spoqaBold tracking-tight ml-2px text-left"
+        className="font-bold tracking-tight ml-2px text-left -mt-6px mb-4px"
       >
         {game.length > 16 ? `${game.slice(0, 16)}...` : game}
       </p>
@@ -68,7 +64,7 @@ const Card = ({ icon, name, game }) => (
       </p>
       <p
         style={{ color: "#f5e074", lineHeight: "26px" }}
-        className="font-spoqaBold text-22px flex items-center tracking-tight -mt-2px ml-px"
+        className="font-bold text-22px flex items-center tracking-tight -mt-4px ml-px"
       >
         ₩123,456,789
       </p>
@@ -116,7 +112,7 @@ export default function SlotGameVerticalCarousel() {
         <div className="vertical_carousel slot_vertical_carousel flex items-center justify-center w-full h-full p-9px pt-0">
           <CarouselProvider
             visibleSlides={1}
-            totalSlides={100}
+            totalSlides={999}
             step={1}
             interval={5000}
             naturalSlideWidth={294}
@@ -126,7 +122,7 @@ export default function SlotGameVerticalCarousel() {
             dragEnabled={false}
           >
             <Slider classNameTrayWrap="carousel_tray_wrapper_horizontal" className="card_animation">
-              {Array(100)
+              {Array(999)
                 .fill(undefined)
                 .map((_, index) => (
                   <Slide key={index} className="card_animation_slide_horizontal" index={index}>

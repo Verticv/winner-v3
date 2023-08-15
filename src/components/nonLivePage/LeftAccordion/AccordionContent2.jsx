@@ -3,7 +3,6 @@ import icon1 from "../../../images/nonLivePage/LeftAccordion/content/RoundedRect
 
 const AccordionContent2 = ({ card }) => {
   return (
-    // <div className="ml-3px mb-2px mr-3px pt-2px">
     <div
       style={{
         background: "#ffffff",
@@ -44,13 +43,16 @@ const AccordionContent2 = ({ card }) => {
         <img className={card.style} src={card.icon2} alt="icon" />
       </div>
       <p
-        style={{ color: "#444444", letterSpacing: "-0.031em", marginLeft: "-1px" }}
+        style={{
+          color: "#444444",
+          letterSpacing: "-0.031em",
+          marginLeft: "-1px",
+        }}
         className="text-12px mt-18px mb-20px font-malgun"
       >
         {card.text}
       </p>
     </div>
-    // </div>
   );
 };
 

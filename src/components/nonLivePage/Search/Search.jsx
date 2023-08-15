@@ -10,15 +10,14 @@ const Search = () => {
   const [showSearchContent, setShowSearchContent] = useState("");
 
   useEffect(() => {
-    console.log("showSearchContent", showSearchContent.length);
     if (showSearchContent.length === 0) {
       setShowSearchContent("");
     }
   }, [showSearchContent, setShowSearchContent]);
 
   return (
-    <>
-      <div className="items-start mr-10px ml-10px mt-10px">
+    <div className="relative">
+      <div className="items-start mr-9px ml-10px mt-10px">
         <div
           style={{
             background: "#aea9cc",
@@ -107,6 +106,7 @@ const Search = () => {
               background: "#956bde",
               width: "284px",
               borderRadius: "6px",
+              boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
             }}
             className="p-4px mt-4px"
           >
@@ -543,7 +543,7 @@ const Search = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
