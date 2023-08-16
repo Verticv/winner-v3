@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router';
-import ClockIcon from '../../images/minigames/clock_brown.png'
-import ClockIconWhite from '../../images/minigames/clock_gray.png'
-import Reflect from '../../images/myPage/betHistory/Reflect.png'
+import ClockIcon from '../../images/minigames/clock_icon.png'
+import ClockIconGray from '../../images/minigames/clock_gray.png'
 
 const HorizontalMenu3 = ({
     itemsArray, 
@@ -22,11 +21,11 @@ const HorizontalMenu3 = ({
           style={{
             height:"59px",
             background: selectedTab === item.path 
-            ?'linear-gradient( to top, #62553f, #dabe82)'
-            :'linear-gradient( to top, rgb(41,41,41) 0%, rgb(80,80,78) 100%)',
-            boxShadow: '0 5px 5px -2px rgba(0,0,0,0.5)'
+            ?'linear-gradient( to top, #4f3a7a 0%, #a05bf6 50%, #cb78e6 100%)'
+            :'linear-gradient( to top, #4f3a7a 0%, #a05bf6 50%, #f0d3ff 100%)',
+            boxShadow: '0 2px 5px rgba(0,0,0,0.6)'
           }}
-          className={`relative overflow-hidden h-59px w-full flex items-end p-px rounded-4px`} 
+          className={`relative overflow-hidden h-59px w-full flex items-end p-px rounded-6px`} 
           onClick={() => {
             setSelectedTab(item.path)
             setSelectedTab1(0)
@@ -44,45 +43,37 @@ const HorizontalMenu3 = ({
           onMouseOver={() => setHover(item.path)}
           onMouseLeave={() => setHover(null)}
         >
-          <div 
-            style={{
-              height:"56px", 
-              width:"100%", 
-              background: selectedTab === item.path
-              ? 'linear-gradient(to top, #a6926f, #f9f0d3)'
-              : 'linear-gradient(to top, rgb(57,56,53) 0%, rgb(107,104,101) 100%)',
-            }} 
-            className={`flex w-full justify-end items-end absolute top-0 left-0 p-px rounded-4px`}>
+          
             <div 
               style={{
-                height: "54px",
+                height: "57px",
                 background: selectedTab === item.path
-                ? 'linear-gradient(to top, #8d7752, #dabe82)'
-                :isHover === item.path
-                ?'#54544f'
-                : 'linear-gradient( to top, rgb(50,50,49) 0%, rgb(84,84,82) 100%)',
-                boxShadow:selectedTab === item.path?"rgba(255, 240, 214, 15%) 1px 2px 5px 6px inset":''
-              }}
-              className={`w-full rounded-3px flex items-center justify-between pr-20px pt-4px relative hover:filter hover:brightness-90`}>
+                ? 'linear-gradient(to top, #491f9c 0%, #9e3cbc 100%)'
+                : 'linear-gradient( to top, #ccc4ff 0%, #ffd9f5 100%)',
+               
+            }}
+            
+              className={`w-full rounded-6px flex items-center justify-between pr-20px relative hover:filter hover:brightness-90`}>
               <div className={`flex items-center`}>
                 <img 
-                  className={`
+                className={`
+                  mt-px
                   ${
                     item.id === 0 
                     ? "ml-15px"
                     : item.id === 1 
-                    ? "ml-12px"
+                    ? "ml-13px"
                     : item.id === 2
-                    ? "ml-18px"
-                    : "ml-20px"
+                    ? "ml-19px"
+                    : "ml-21px"
                   }`} 
                   src={item.img} 
                   alt="" 
                 />
-                {selectedTab === item.path&&<img className="absolute top-0 left-0" src={Reflect} alt="" />}
+                
                 <span 
-                  style={{color: selectedTab === item.path ? "black" : "#ccc2b6"}} 
-                  className={`
+                  style={{color: selectedTab === item.path ? "#ffffff" : "#5e399a"}} 
+                  className={`-mt-2px
                   ${
                     item.id === 0 
                     ? "ml-4px"
@@ -91,20 +82,19 @@ const HorizontalMenu3 = ({
                     : item.id === 2
                     ? "ml-8px"
                     : "ml-7px"         
-                  } text-20px tracking-tight font-spoqaBold pt-px`}>
+                  } text-20px tracking-tight font-bold pt-px`}>
                     {item.text}
                 </span>
               </div>
               
               <div className="flex items-center pt-px">
-                <img className="mr-4px object-none mb-4px mt-px" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
+                <img className={`${selectedTab === item.path ? 'mr-6px':'mr-4px'} object-none mb-4px mt-px`} src={selectedTab === item.path ? ClockIconGray : ClockIcon} alt="" />
                 <div 
-                  style={{color: selectedTab === item.path ? "#473e35" : "#ad9e8c"}}
-                  className="text-24px tracking-tight font-swagger flex h-24px items-center">
+                  style={{color: selectedTab === item.path ? "#ffffff" : "#5e399a"}}
+                  className="text-24px tracking-tight font-swagger flex h-24px items-center mt-px">
                     {item.time}
                 </div>
               </div>
-            </div>
           </div>
         </button>
       ));

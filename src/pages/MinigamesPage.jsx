@@ -4,9 +4,9 @@ import Navbar from '../components/mainPage/NavBar';
 import QuickMenu from 'components/QuickMenu';
 import React, { useEffect, useState } from 'react';
 import PowerballIcon from '../images/minigames/powerball.png';
-import PowerLadder from '../images/minigames/powerladder_v2.png';
-import SpeedKino from '../images/minigames/speedkino_v2.png';
-import KinoLadder from '../images/minigames/kinoladder_v2.png';
+import PowerLadder from '../images/minigames/powerladder.png';
+import SpeedKino from '../images/minigames/speedkino.png';
+import KinoLadder from '../images/minigames/kinoladder.png';
 import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel';
 import MinigamesPanel from 'components/minigames/MinigamesPanel';
 import { Route, useLocation } from 'react-router';
@@ -60,33 +60,22 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
   useEffect(() => {
     setSelectedTab(0);
   }, [location]);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+ ;
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  
   return (
-    <div className='relative flex flex-col justify-center items-center limit1920:overflow-x-hidden bg-gray-1e1e1e'>
+    <div className='relative flex flex-col justify-center items-center limit1920:overflow-x-hidden'
+    style={{
+          background: "linear-gradient(to right, #b644c4, #351894)"
+      }}>
       <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
-      <div
-        style={{
-          width: '1496px',
-          top: scrollPosition > 200 ? '235px' : '306px',
-        }}
-        className={`fixed z-20 flex justify-end`}
-      >
-        <QuickMenu scrollPosition={scrollPosition} />
+      <div>
+        <QuickMenu />
+        
       </div>
-      <div style={{marginTop:'117px'}} className='w-full flex flex-col items-center'>
+      <div style={{marginTop:'168px'}} className='w-full flex flex-col items-center'>
         <div className='w-default z-30'>
           <Route path='/minigame/powerball'>
             <HorizontalMenu3
@@ -124,19 +113,18 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
               setSelectedTab1={setSelectedTab}
             />
           </Route>
-          {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
 
           <div className='flex w-full mt-8px space-x-7px'>
             <div
               style={{
                 width: '905px',
                 height: '509px',
-                background:
-                  'linear-gradient(to top, #1f1f1e 80%, #343434 100%)',
+                background: '#4d1a6f',
+                borderColor:'rgba(0, 0, 0, 0.6)'
               }}
-              className='rounded-4px shadow-table overflow-hidden p-px'
+              className='rounded-10px overflow-hidden border'
             >
-              <div className='rounded-3px overflow-hidden flex justify-center pl-24px bg-gray-252525'>
+              <div className='overflow-hidden flex justify-center pl-24px '>
                 <Route path='/minigame/powerball'>
                   <iframe
                     src='https://ntry.com/scores/powerball/live.php'
