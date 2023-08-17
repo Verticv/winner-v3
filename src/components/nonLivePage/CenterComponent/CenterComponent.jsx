@@ -12,6 +12,7 @@ import CustomDropdown1 from "./CustomDropdown1";
 const CenterComponent = ({ setEnglandActive }) => {
   const [activeId, setActiveId] = useState(0);
   const [active, setActive] = useState(0);
+  const [hover, setHover] = useState();
   return (
     <>
       <div
@@ -33,16 +34,10 @@ const CenterComponent = ({ setEnglandActive }) => {
           className="flex items-center rounded-full ml-7px "
         >
           <img className="ml-2px" src={icon} alt="img" />
-          <p
-            style={{ color: "#eeeeee", letterSpacing: "-0.1em" }}
-            className="ml-5px text-13px mt-8px mb-7px font-spoqaBold"
-          >
+          <p style={{ color: "#eeeeee", letterSpacing: "-0.1em" }} className="ml-5px text-13px mt-8px mb-7px font-bold">
             다폴더 보너스 추가 배당
           </p>
-          <p
-            style={{ color: "#ffd98b", letterSpacing: "-0.066em" }}
-            className="ml-5px mb-px text-12px font-spoqa"
-          >
+          <p style={{ color: "#ffd98b", letterSpacing: "-0.066em" }} className="ml-5px mb-px text-12px font-spoqa">
             (3, 6, 9) 폴더 이상 조합시 지급
           </p>
         </div>
@@ -50,7 +45,7 @@ const CenterComponent = ({ setEnglandActive }) => {
           <div
             style={{
               background:
-                active === 2
+                active === 2 || hover === 2
                   ? "linear-gradient(to top, #652347, #ff85b1)"
                   : "linear-gradient(to top, #4f3a7a, #e597ff)",
               width: "208px",
@@ -60,11 +55,13 @@ const CenterComponent = ({ setEnglandActive }) => {
             }}
             className="rounded-lg p-px mr-2px cursor-pointer"
             onClick={() => setActive(2)}
+            onMouseEnter={() => setHover(2)}
+            onMouseLeave={() => setHover(null)}
           >
             <div
               style={{
                 background:
-                  active === 2
+                  active === 2 || hover === 2
                     ? "linear-gradient(to top, #911c5c, #f04281)"
                     : "linear-gradient(to top, #6b22ff, #df52ff)",
                 width: "206px",
@@ -106,7 +103,7 @@ const CenterComponent = ({ setEnglandActive }) => {
           <div
             style={{
               background:
-                active === 1
+                active === 1 || hover === 1
                   ? "linear-gradient(to top, #652347, #ff85b1)"
                   : "linear-gradient(to top, #4f3a7a, #e597ff)",
               width: "207px",
@@ -116,11 +113,13 @@ const CenterComponent = ({ setEnglandActive }) => {
             }}
             className="rounded-lg p-px mr-2px cursor-pointer"
             onClick={() => setActive(1)}
+            onMouseEnter={() => setHover(1)}
+            onMouseLeave={() => setHover(null)}
           >
             <div
               style={{
                 background:
-                  active === 1
+                  active === 1 || hover === 1
                     ? "linear-gradient(to top, #911c5c, #f04281)"
                     : "linear-gradient(to top, #6b22ff, #df52ff)",
                 width: "205px",
@@ -159,7 +158,7 @@ const CenterComponent = ({ setEnglandActive }) => {
           <div
             style={{
               background:
-                active === 3
+                active === 3 || hover === 3
                   ? "linear-gradient(to top, #652347, #ff85b1)"
                   : "linear-gradient(to top, #4f3a7a, #e597ff)",
               width: "207px",
@@ -172,7 +171,7 @@ const CenterComponent = ({ setEnglandActive }) => {
             <div
               style={{
                 background:
-                  active === 3
+                  active === 3 || hover === 3
                     ? "linear-gradient(to top, #911c5c, #f04281)"
                     : "linear-gradient(to top, #6b22ff, #df52ff)",
                 width: "205px",
@@ -181,6 +180,8 @@ const CenterComponent = ({ setEnglandActive }) => {
               }}
               className="flex items-center justify-between rounded-lg h-32px cursor-pointer"
               onClick={() => setActive(3)}
+              onMouseEnter={() => setHover(3)}
+              onMouseLeave={() => setHover(null)}
             >
               <div className="flex ml-12px">
                 <img className="object-none" src={icon1} alt="img" />
@@ -257,41 +258,26 @@ const CenterComponent = ({ setEnglandActive }) => {
         <div className="flex ml-7px">
           <div
             style={{
-              background:
-                activeId === 0
-                  ? "linear-gradient(to top, #6b22ff, #df52ff)"
-                  : "#936cee",
+              background: activeId === 0 ? "linear-gradient(to top, #6b22ff, #df52ff)" : "#936cee",
               width: "88px",
               height: "27px",
-              boxShadow:
-                activeId === 0 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
+              boxShadow: activeId === 0 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
             className="flex items-center rounded-full mr-5px cursor-pointer"
             onClick={() => setActiveId(0)}
           >
-            <img
-              className="ml-8px object-none"
-              src={activeId === 0 ? icon2 : icon_2}
-              alt="img"
-            />
-            <p
-              style={{ color: "#ffffff" }}
-              className="-ml-7px mt-5px mb-7px tracking-tight text-12px"
-            >
+            <img className="ml-8px object-none" src={activeId === 0 ? icon2 : icon_2} alt="img" />
+            <p style={{ color: "#ffffff" }} className="-ml-7px mt-5px mb-7px tracking-tight text-12px">
               시간순
             </p>
           </div>
           <div
             style={{
-              background:
-                activeId === 1
-                  ? "linear-gradient(to top, #6b22ff, #df52ff)"
-                  : "#936cee",
+              background: activeId === 1 ? "linear-gradient(to top, #6b22ff, #df52ff)" : "#936cee",
               width: "88px",
               height: "27px",
-              boxShadow:
-                activeId === 1 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
+              boxShadow: activeId === 1 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
             className="flex items-center rounded-full mr-6px cursor-pointer"
@@ -317,14 +303,10 @@ const CenterComponent = ({ setEnglandActive }) => {
           </div>
           <div
             style={{
-              background:
-                activeId === 2
-                  ? "linear-gradient(to top, #6b22ff, #df52ff)"
-                  : "#936cee",
+              background: activeId === 2 ? "linear-gradient(to top, #6b22ff, #df52ff)" : "#936cee",
               width: "88px",
               height: "27px",
-              boxShadow:
-                activeId === 2 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
+              boxShadow: activeId === 2 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
             className="flex items-center rounded-full cursor-pointer"

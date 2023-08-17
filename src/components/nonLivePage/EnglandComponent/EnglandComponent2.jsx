@@ -16,7 +16,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
 
   return (
     <>
-      <div className="flex flex-shrink-0 items-center justify-center mt-5px mb-5px">
+      <div className="flex flex-shrink-0 items-center justify-center mt-5px mb-5px relative">
         <img
           src={img3}
           alt="icon"
@@ -30,10 +30,9 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
             style={{
               color: "#ffffff",
               letterSpacing: "-0.031em",
-              fontFamily: "MalgunGothicBold",
               textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
             }}
-            className="text-18px mb-3px"
+            className="text-18px mb-3px font-bold"
           >
             스포츠 베팅규정 안내
           </p>
@@ -79,7 +78,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                   letterSpacing: "-0.1em",
                   textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
                 }}
-                className="text-16px  text-white MalgunGothicBold -ml-4px"
+                className="text-16px text-white -ml-4px font-bold"
               >
                 베팅규정 안내확인
               </p>
@@ -114,14 +113,14 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                   alt="icon"
                 />
                 <p
-                  style={{ letterSpacing: "-0.094em" }}
-                  className="ml-5px mt-18px text-white text-13px font-malgun"
+                  style={{ letterSpacing: "-0.094em", marginTop:'19px' }}
+                  className="ml-5px text-white text-13px font-malgun"
                 >
                   단폴/두폴/다폴 베팅규정 안내
                 </p>
               </div>
               <p
-                style={{ letterSpacing: "-0.094em" }}
+                style={{ letterSpacing: "-0.094em", marginTop:'11px' }}
                 className="ml-19px mt-10px text-white text-13px font-malgun"
               >
                 단폴 베팅 시에는 배당률 1.31 이상만 시스템에서 허용되며 다른
@@ -157,15 +156,16 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                   style={{
                     color: "#e5bcf7",
                     letterSpacing: "-0.094em",
+                    marginTop:'16px'
                   }}
-                  className="ml-3px mt-15px text-13px font-malgun"
+                  className="ml-3px text-13px font-malgun"
                 >
                   강력 제재사항
                 </p>
               </div>
               <p
-                style={{ color: "#e5bcf7", letterSpacing: "-0.094em" }}
-                className="ml-19px mt-9px text-13px font-malgun"
+                style={{ color: "#e5bcf7", letterSpacing: "-0.094em", marginTop:'10px' }}
+                className="ml-19px text-13px font-malgun"
               >
                 <span style={{ marginRight: "3px" }}>•</span> 오즈포탈 등을
                 활용하여 배당률 하락경기에만 베팅하는 경우
@@ -216,7 +216,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                     height: "169px",
                     borderRadius: "2px",
                   }}
-                  className=""
+                  className="pt-px"
                 >
                   <p
                     style={{ letterSpacing: "-0.094em" }}

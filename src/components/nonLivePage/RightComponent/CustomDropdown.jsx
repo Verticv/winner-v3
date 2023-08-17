@@ -44,7 +44,7 @@ const CustomDropdown = ({ selectedOption, setSelectedOption }) => {
       >
         <p
           style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-13px mt-3px ml-9px font-malgun"
+          className="text-13px mt-4px ml-9px font-malgun"
         >
           {" "}
           {selectedOption || "싱글"}{" "}

@@ -24,7 +24,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
       >
         <p
           style={{ color: "#eeeeee", marginLeft: "202px", fontSize: "24px" }}
-          className=" font-spoqaBold -ml-10px mt-24px mb-24px"
+          className=" font-bold -ml-10px mt-24px mb-24px"
         >
           베팅정보
         </p>
@@ -68,7 +68,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
               <div className="flex justify-center items-center mt-49px">
                 <p
                   style={{ fontSize: "16px", color: "#666666" }}
-                  className="-mt-3px -ml-px tracking-tight font-malgun"
+                  className="-mt-3px -ml-px tracking-tight"
                 >
                   베팅이 수락되었습니다.
                 </p>
@@ -76,13 +76,13 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
               <div className="flex justify-center items-center ml-2px">
                 <p
                   style={{ fontSize: "14px", color: "#666666" }}
-                  className="-ml-5px mt-2px tracking-tight font-MalgunGothicBold"
+                  className="-ml-5px mt-2px tracking-tight font-bold"
                 >
                   티켓번호
                 </p>
                 <p
                   style={{ fontSize: "14px", color: "#0072bc" }}
-                  className="mt-3px ml-4px tracking-tight font-MalgunGothicBold"
+                  className="mt-3px ml-4px tracking-tight font-bold"
                 >
                   4004791
                 </p>

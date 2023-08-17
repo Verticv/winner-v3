@@ -128,7 +128,7 @@ const EntireAccordion = () => {
                 }}
                 className="flex items-center justify-center absolute ml-31px mb-15px pl-6px pr-7px"
               >
-                <p className="text-13px tracking-tight font-MalgunGothicBold text-white ">
+                <p className="text-13px tracking-tight font-bold text-white ">
                   25
                 </p>
               </div>
@@ -139,20 +139,21 @@ const EntireAccordion = () => {
                   background: activeId === content.id ? "#762ead" : "#f3cbff",
                   borderRadius: "4px",
                   flexShrink: 0,
-                  width: content.width,
+                  minWidth: content.width,
+                  width:"max-content",
                   borderBottom:
                     activeId === content.id
                       ? "3px solid #ffc900"
                       : "3px solid #f3cbff",
                 }}
-                className="flex ml-3px w-54px h-36px items-center justify-center align-center cursor-pointer"
+                className="flex ml-3px w-54px h-36px items-center justify-center align-center cursor-pointer px-10px"
                 onClick={() => setActiveId(content.id)}
               >
                 <p
                   style={{
                     color: activeId === content.id ? "#ffffff" : "#5e399a",
                   }}
-                  className="text-13px tracking-tight font-MalgunGothicBold"
+                  className="text-13px tracking-tight font-bold"
                 >
                   {content.text}
                 </p>

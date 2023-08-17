@@ -52,12 +52,9 @@ const RightComponent = () => {
   const increaseCounterButton = (number) => {
     setInputValue((prev) => {
       const newValue = prev?.replaceAll(",", "");
-      const formattedValue = Number(Number(newValue) + number).toLocaleString(
-        undefined,
-        {
-          minimumFractionDigits: 0,
-        }
-      );
+      const formattedValue = Number(Number(newValue) + number).toLocaleString(undefined, {
+        minimumFractionDigits: 0,
+      });
       return formattedValue;
     });
   };
@@ -95,17 +92,13 @@ const RightComponent = () => {
           }}
           className="flex items-center"
         >
-          <img
-            className="ml-21px mb-2px"
-            src={isBetSlipActive ? icon1 : icon_1}
-            alt="icon"
-          />
+          <img className="ml-21px mb-px" src={isBetSlipActive ? icon1 : icon_1} alt="icon" />
           <p
             style={{
               color: isBetSlipActive ? "white" : "#5e399a",
               marginLeft: isBetSlipActive ? "2px" : "-2px",
             }}
-            className="-mt-2px text-14px font-MalgunGothicBold tracking-tight"
+            className="-mt-2px text-14px tracking-tight font-bold"
           >
             베팅슬립
           </p>
@@ -125,9 +118,7 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-center rounded-full"
             >
-              <p className="ml-6px -mt-2px mr-5px text-12px text-white font-MalgunGothicBold">
-                2
-              </p>
+              <p className="ml-6px -mt-2px mr-5px text-12px text-white">2</p>
             </div>
           </div>
         </div>
@@ -172,7 +163,7 @@ const RightComponent = () => {
               color: isBetSlipActive ? "#5e399a" : "white",
               marginLeft: isBetSlipActive ? "7px" : "3px",
             }}
-            className="-mt-2px text-14px font-MalgunGothicBold tracking-tight"
+            className="-mt-2px text-14px font-bold tracking-tight"
           >
             베팅내역
           </p>
@@ -192,9 +183,7 @@ const RightComponent = () => {
               }}
               className="flex items-center rounded-full"
             >
-              <p className="ml-6px -mt-2px mr-6px text-12px text-white font-MalgunGothicBold">
-                2
-              </p>
+              <p className="ml-6px -mt-2px mr-6px text-12px text-white font-MalgunGothicBold">2</p>
             </div>
           </div>
         </div>
@@ -211,7 +200,7 @@ const RightComponent = () => {
         height: "44px",
         borderRadius: "5px",
       }}
-      className="flex items-center justify-center "
+      className="flex items-center justify-center filter hover:brightness-110"
     >
       <img
         style={{ textShadow: "1px 1.732px 3px 0px rgba(0, 0, 0, 0.4)" }}
@@ -249,35 +238,34 @@ const RightComponent = () => {
           className="flex items-center justify-between h-39px "
         >
           <div>
-            <p
-              style={{ color: "#eeeeee" }}
-              className="ml-8px mt-15px mb-14px text-13px font-malgun"
-            >
-              {format(time, dateFormat, { locale: ko })}(월){" "}
-              {format(time, dateFormat1, { locale: ko })}
+            <p style={{ color: "#eeeeee" }} className="ml-8px mt-15px mb-14px text-13px font-malgun">
+              {format(time, dateFormat, { locale: ko })}(월) {format(time, dateFormat1, { locale: ko })}
             </p>
           </div>
           <div
             style={{
-              background:
-                "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
+              background: showSettings
+                ? "linear-gradient(to top, #523c7c, #e094fa)"
+                : "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
               width: "30px",
               borderRadius: "4px",
               boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
             }}
-            className="p-px mr-5px mt-4px mb-5px"
+            className="p-px mr-5px mt-4px mb-5px filter hover:brightness-110"
           >
             <div
               onClick={() => setShowSettings((prev) => !prev)}
               style={{
                 cursor: "pointer",
-                background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
+                background: showSettings
+                  ? "linear-gradient(to top, #6c24f8, #da50ff)"
+                  : "linear-gradient(to top, #ccc4ff, #ffd9f5)",
                 height: "28px",
                 borderRadius: "3px",
               }}
               className="flex items-center justify-center"
             >
-              <img className="mb-px" src={icon} alt="img" />
+              <img style={{filter: showSettings && "brightness(0) invert(1)"}} className="mb-px" src={icon} alt="img" />
             </div>
           </div>
         </div>
@@ -331,21 +319,18 @@ const RightComponent = () => {
                 }}
                 className="flex items-center justify-between p-px ml-4px mt-5px mb-5px"
               >
-                <CustomDropdown
-                  selectedOption={selectedOption}
-                  setSelectedOption={setSelectedOption}
-                />
+                <CustomDropdown selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
               </div>
               <div
                 onClick={() => {
                   dispatch(deleteAllBetSlipCards());
                 }}
-                className="cursor-pointer flex items-center mr-11px"
+                className="cursor-pointer flex items-center mr-11px filter hover:brightness-125"
               >
                 <img className="mr-px" src={icon3} alt="icon" />
                 <p
                   style={{ color: "#666666", letterSpacing: "-0.031em" }}
-                  className="ml-2px -mt-px -mr-px text-12px font-MalgunGothicBold"
+                  className="ml-2px -mt-px -mr-px text-12px font-bold"
                 >
                   전체삭제
                 </p>
@@ -361,9 +346,7 @@ const RightComponent = () => {
                 className="pb-px pt-2px"
               >
                 {selectedOption !== "싱글" ? (
-                  betSlipData.map((data, index) => (
-                    <RightComponentCard1 teamsData={data} />
-                  ))
+                  betSlipData.map((data, index) => <RightComponentCard1 teamsData={data} />)
                 ) : (
                   <RightComponentCard1 teamsData={betSlipData[0]} />
                 )}
@@ -390,8 +373,7 @@ const RightComponent = () => {
                   >
                     <div
                       style={{
-                        background:
-                          "linear-gradient(to right, #df52ff, #6b22ff)",
+                        background: "linear-gradient(to right, #df52ff, #6b22ff)",
                         borderRadius: "4px",
                       }}
                       className="items-center h-64px"
@@ -404,12 +386,7 @@ const RightComponent = () => {
                           </p>
                         </div>
                         <div className="flex mr-7px -mt-4px">
-                          <img
-                            onClick={() => setActive(false)}
-                            className="cursor-pointer"
-                            src={icon7}
-                            alt="icon"
-                          />
+                          <img onClick={() => setActive(false)} className="cursor-pointer" src={icon7} alt="icon" />
                         </div>
                       </div>
                       <div className="flex items-center">
@@ -430,10 +407,7 @@ const RightComponent = () => {
             )}
 
             {betSlipData.length <= 0 && !active && (
-              <div
-                style={{ background: "#5e399a" }}
-                className="flex items-center h-70px "
-              >
+              <div style={{ background: "#5e399a" }} className="flex items-center h-70px ">
                 <div className="items-center mb-4px">
                   <div className="mt-2px -mb-4px">
                     <p
@@ -444,54 +418,35 @@ const RightComponent = () => {
                     </p>
                   </div>
                   <div>
-                    <p
-                      style={{ color: "#ffffff" }}
-                      className="ml-61px tracking-tight text-12px font-malgun"
-                    >
+                    <p style={{ color: "#ffffff" }} className="ml-61px tracking-tight text-12px font-malgun">
                       원하시는 경기의 배당을 선택주세요.
                     </p>
                   </div>
                 </div>
               </div>
             )}
-            <div
-              style={{ background: "#eeeeee", height: "94px" }}
-              className="items-center"
-            >
+            <div style={{ background: "#eeeeee", height: "94px" }} className="items-center">
               <div
                 style={{ height: "48px", borderColor: "#dddddd" }}
                 className="flex items-center justify-between border-b border-t"
               >
-                <p
-                  style={{ color: "#444444" }}
-                  className="ml-9px -mt-2px text-12px font-MalgunGothicBold tracking-tight"
-                >
+                <p style={{ color: "#444444" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
                   보유금액
                 </p>
-                <p
-                  style={{ color: "#33a1e9" }}
-                  className="mr-10px text-13px font-MalgunGothicBold tracking-tight"
-                >
+                <p style={{ color: "#33a1e9" }} className="mr-10px text-13px font-bold tracking-tight">
                   3,522,170
                 </p>
               </div>
-              <div
-                style={{ height: "46px" }}
-                className="flex items-center justify-between"
-              >
+              <div style={{ height: "46px" }} className="flex items-center justify-between">
                 <div>
-                  <p
-                    style={{ color: "#444444" }}
-                    className="ml-9px -mt-2px text-12px font-MalgunGothicBold tracking-tight"
-                  >
+                  <p style={{ color: "#444444" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
                     베팅금액
                   </p>
                 </div>
                 <div className="flex items-center relative">
                   <div
                     style={{
-                      background:
-                        "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
+                      background: "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
                       width: "30px",
                       height: "30px",
                       position: "absolute",
@@ -512,13 +467,9 @@ const RightComponent = () => {
                         background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
                         borderRadius: "3px",
                       }}
-                      className="flex items-center justify-center "
+                      className="flex items-center justify-center filter hover:brightness-110 cursor-pointer"
                     >
-                      <img
-                        className="ml-5px mr-5px mt-4px mb-5px"
-                        src={icon4}
-                        alt="icon"
-                      />
+                      <img className="ml-5px mr-5px mt-4px mb-5px" src={icon4} alt="icon" />
                     </div>
                   </div>
                   <div
@@ -618,13 +569,10 @@ const RightComponent = () => {
                     height: "28px",
                     borderRadius: "0.3rem",
                   }}
-                  className="flex items-center justify-center rounded-md"
+                  className="flex items-center justify-center rounded-md filter hover:brightness-110"
                   onClick={() => increaseCounterButton(10000)}
                 >
-                  <p
-                    style={{ color: "#444444" }}
-                    className="-ml-1px mr-3px mb-2px text-12px tracking-tight font-MalgunGothicBold"
-                  >
+                  <p style={{ color: "#444444" }} className="-ml-1px mr-3px mb-2px text-12px tracking-tight font-bold">
                     +10,000
                   </p>
                 </button>
@@ -647,13 +595,10 @@ const RightComponent = () => {
                     height: "28px",
                     borderRadius: "0.3rem",
                   }}
-                  className="flex items-center justify-center rounded-md"
+                  className="flex items-center justify-center rounded-md filter hover:brightness-110"
                   onClick={() => increaseCounterButton(50000)}
                 >
-                  <p
-                    style={{ color: "#444444" }}
-                    className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-MalgunGothicBold"
-                  >
+                  <p style={{ color: "#444444" }} className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-bold">
                     +50,000
                   </p>
                 </button>
@@ -676,13 +621,10 @@ const RightComponent = () => {
                     height: "28px",
                     borderRadius: "0.3rem",
                   }}
-                  className="flex items-center justify-center rounded-md"
+                  className="flex items-center justify-center rounded-md filter hover:brightness-110"
                   onClick={() => increaseCounterButton(100000)}
                 >
-                  <p
-                    style={{ color: "#444444" }}
-                    className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-MalgunGothicBold"
-                  >
+                  <p style={{ color: "#444444" }} className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-bold">
                     +100,000
                   </p>
                 </button>
@@ -705,7 +647,7 @@ const RightComponent = () => {
                     height: "28px",
                     borderRadius: "0.3rem",
                   }}
-                  className="flex items-center justify-center rounded-md"
+                  className="flex items-center justify-center rounded-md filter hover:brightness-110"
                   onClick={() => console.log("maximum")}
                 >
                   <p
@@ -713,7 +655,7 @@ const RightComponent = () => {
                       color: "#ffffff",
                       textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
                     }}
-                    className="mb-2px ml-px text-12px text-white  tracking-tight font-MalgunGothicBold"
+                    className="mb-2px ml-px text-12px text-white  tracking-tight font-bold"
                   >
                     최대
                   </p>
@@ -729,48 +671,27 @@ const RightComponent = () => {
               className="items-center justify-between border-b"
             >
               <div className="flex items-center justify-between">
-                <p
-                  style={{ color: "#444444" }}
-                  className="ml-9px mt-13px text-12px font-MalgunGothicBold tracking-tight"
-                >
+                <p style={{ color: "#444444" }} className="ml-9px mt-13px text-12px font-bold tracking-tight">
                   총 배당
                 </p>
-                <p
-                  style={{ color: "#e9441d" }}
-                  className="mr-10px mt-15px text-12px font-MalgunGothicBold tracking-tight"
-                >
+                <p style={{ color: "#e9441d" }} className="mr-10px mt-15px text-12px font-bold tracking-tight">
                   1.00
                 </p>
               </div>
               <div className="flex items-center justify-between">
-                <p
-                  style={{ color: "#444444" }}
-                  className="ml-9px mt-15px text-12px font-MalgunGothicBold tracking-tight"
-                >
+                <p style={{ color: "#444444" }} className="ml-9px mt-15px text-12px font-bold tracking-tight">
                   총 베팅금액
                 </p>
-                <p
-                  style={{ color: "#f04281" }}
-                  className="mr-10px -mb-6px mt-10px text-12px font-MalgunGothicBold tracking-tight"
-                >
+                <p style={{ color: "#f04281" }} className="mr-10px -mb-6px mt-10px text-12px font-bold tracking-tight">
                   10,000
                 </p>
               </div>
             </div>
-            <div
-              style={{ height: "46px", background: "#ffffff" }}
-              className="flex items-center justify-between "
-            >
-              <p
-                style={{ color: "#5e399a" }}
-                className="ml-9px mt-18px mb-22px text-12px font-MalgunGothicBold tracking-tight"
-              >
+            <div style={{ height: "46px", background: "#ffffff" }} className="flex items-center justify-between ">
+              <p style={{ color: "#5e399a" }} className="ml-9px mt-18px mb-22px text-12px font-bold tracking-tight">
                 당첨 예상금액
               </p>
-              <p
-                style={{ color: "#33a1e9" }}
-                className="mr-10px mt-16px mb-18px text-12px font-MalgunGothicBold tracking-tight"
-              >
+              <p style={{ color: "#33a1e9" }} className="mr-10px mt-16px mb-18px text-12px font-bold tracking-tight">
                 11,000
               </p>
             </div>
@@ -782,16 +703,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b border-t"
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최소 베팅금액
               </p>
-              <p
-                style={{ color: "#f04281" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#f04281" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 5,000
               </p>
             </div>
@@ -803,16 +718,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b "
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최대 베팅금액
               </p>
-              <p
-                style={{ color: "#666666" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 5,000,000
               </p>
             </div>
@@ -824,16 +733,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최대 당첨금액
               </p>
-              <p
-                style={{ color: "#666666" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 10,000,000
               </p>
             </div>
@@ -845,16 +748,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최대 베팅배당
               </p>
-              <p
-                style={{ color: "#666666" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 300
               </p>
             </div>
@@ -878,11 +775,7 @@ const RightComponent = () => {
                   setPopupOpen={setIsPopupOpen}
                   onClick={() => setIsPopupOpen(true)}
                 >
-                  <PoupUpComponent
-                    setIsPopupOpen={setIsPopupOpen}
-                    active={active}
-                    setActive={setActive}
-                  />
+                  <PoupUpComponent setIsPopupOpen={setIsPopupOpen} active={active} setActive={setActive} />
                 </PopupControls>
               </div>
             </div>

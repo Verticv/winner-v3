@@ -22,8 +22,9 @@ const TabButton = ({ item, isActiveTab, setActiveTab }) => {
         style={{
           marginLeft: `${item.marginLeft}`,
           marginRight: `${item.marginRight}`,
+          marginTop: '7px'
         }}
-        className="mt-6px mb-14px text-14px tracking-tight text-white font-malgun"
+        className="mb-14px text-14px tracking-tight text-white"
       >
         {item.text}
       </p>

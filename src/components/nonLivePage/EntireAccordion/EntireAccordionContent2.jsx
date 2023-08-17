@@ -107,9 +107,7 @@ const EntireAccordionContent2 = ({ card }) => {
           style={{
             borderColor: "#bbbbbb",
             width: "316px",
-            background: leftActive
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: leftActive ? "#eeeeee" : "#444444",
             ...(isHovered ? hoverStyle : null),
           }}
@@ -134,31 +132,27 @@ const EntireAccordionContent2 = ({ card }) => {
           >
             {card.team1}
           </p>
-          <img
-            style={{ marginLeft: "225px" }}
-            src={Up}
-            alt="icon"
-            className="blink_style1 mb-px"
-          />
-          <p
-            style={{
-              fontSize: "12px",
-              color: leftActive || isHovered ? "#eeeeee" : "#f04281",
-              letterSpacing: "-0.031em",
-            }}
-            className="mr-9px mb-2px font-malgun"
-          >
-            {card.score1}
-          </p>
+          <div className="flex items-center">
+            <img src={Up} alt="icon" className="blink_style1 mb-px mr-2px object-none" />
+            <p
+              style={{
+                fontSize: "12px",
+                color: leftActive || isHovered ? "#eeeeee" : "#f04281",
+                letterSpacing: "-0.031em",
+                width: "28px",
+              }}
+              className="mr-9px mb-2px text-right"
+            >
+              {card.score1}
+            </p>
+          </div>
         </div>
         <div
           style={{
             borderColor: "#bbbbbb",
             width: "314px",
             height: "100%",
-            background: rightActive
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: rightActive ? "#eeeeee" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
@@ -183,22 +177,20 @@ const EntireAccordionContent2 = ({ card }) => {
           >
             {card.team2}
           </p>
-          <img
-            style={{ marginLeft: "220px" }}
-            src={Dn}
-            alt="icon"
-            className="blink_style1 mb-px"
-          />
-          <p
-            style={{
-              fontSize: "12px",
-              color: rightActive || isHovered1 ? "#eeeeee" : "#0072bc",
-              letterSpacing: "-0.031em",
-            }}
-            className="font-malgun mb-2px mr-9px"
-          >
-            {card.score3}
-          </p>
+          <div className="flex items-center">
+            <img src={Dn} alt="icon" className="blink_style1 mb-px mr-2px" />
+            <p
+              style={{
+                fontSize: "12px",
+                color: rightActive || isHovered1 ? "#eeeeee" : "#0072bc",
+                letterSpacing: "-0.031em",
+                width: "28px",
+              }}
+              className="font-malgun mb-2px mr-9px text-right"
+            >
+              {card.score3}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -214,9 +206,7 @@ const EntireAccordionContent2 = ({ card }) => {
           style={{
             borderColor: "#bbbbbb",
             width: "316px",
-            background: leftActive1
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: leftActive1 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: leftActive1 ? "#eeeeee" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
@@ -237,35 +227,31 @@ const EntireAccordionContent2 = ({ card }) => {
               fontSize: "12px",
               letterSpacing: "-0.031em",
             }}
-            className="font-malgun mb-2px ml-9px"
+            className="mb-2px ml-9px"
           >
             {card.team3}
           </p>
-          <img
-            style={{ marginLeft: "218px" }}
-            src={Up}
-            alt="icon"
-            className="blink_style1 mb-px"
-          />
-          <p
-            style={{
-              fontSize: "12px",
-              color: leftActive1 || isHovered2 ? "#eeeeee" : "#f04281",
-              letterSpacing: "-0.031em",
-            }}
-            className="mr-9px mb-2px font-malgun "
-          >
-            {card.score2}
-          </p>
+          <div className="flex items-center">
+            <img src={Up} alt="icon" className="blink_style1 mb-px mr-2px" />
+            <p
+              style={{
+                fontSize: "12px",
+                color: leftActive1 || isHovered2 ? "#eeeeee" : "#f04281",
+                letterSpacing: "-0.031em",
+                width: "28px",
+              }}
+              className="mr-9px mb-2px text-right"
+            >
+              {card.score2}
+            </p>
+          </div>
         </div>
         <div
           style={{
             borderColor: "#bbbbbb",
             width: "314px",
             height: "100%",
-            background: rightActive1
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: rightActive1 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: rightActive1 ? "#eeeeee" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
           }}
@@ -290,22 +276,20 @@ const EntireAccordionContent2 = ({ card }) => {
           >
             {card.team4}
           </p>
-          <img
-            style={{ marginLeft: "214px" }}
-            src={Dn}
-            alt="icon"
-            className="blink_style1 mb-px"
-          />
-          <p
-            style={{
-              fontSize: "12px",
-              color: rightActive1 || isHovered3 ? "#eeeeee" : "#0072bc",
-              letterSpacing: "-0.031em",
-            }}
-            className="font-malgun mb-2px mr-9px"
-          >
-            {card.score4}
-          </p>
+          <div className="flex items-center">
+            <img style={{ marginLeft: "214px" }} src={Dn} alt="icon" className="blink_style1 mb-px mr-2px" />
+            <p
+              style={{
+                fontSize: "12px",
+                color: rightActive1 || isHovered3 ? "#eeeeee" : "#0072bc",
+                letterSpacing: "-0.031em",
+                width: "28px",
+              }}
+              className="text-right mb-2px mr-9px"
+            >
+              {card.score4}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -321,9 +305,7 @@ const EntireAccordionContent2 = ({ card }) => {
           style={{
             borderColor: "#bbbbbb",
             width: "316px",
-            background: leftActive2
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: leftActive2 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: leftActive2 ? "#eeeeee" : "#444444",
             ...(isHovered4 ? hoverStyle : null),
           }}
@@ -364,9 +346,7 @@ const EntireAccordionContent2 = ({ card }) => {
             borderColor: "#bbbbbb",
             width: "314px",
             height: "100%",
-            background: rightActive2
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: rightActive2 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: rightActive2 ? "#eeeeee" : "#444444",
             ...(isHovered5 ? hoverStyle : null),
           }}
@@ -418,9 +398,7 @@ const EntireAccordionContent2 = ({ card }) => {
           style={{
             borderColor: "#bbbbbb",
             width: "316px",
-            background: leftActive3
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: leftActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: leftActive3 ? "#eeeeee" : "#444444",
             ...(isHovered6 ? hoverStyle : null),
             borderBottomLeftRadius: "4px",
@@ -453,9 +431,7 @@ const EntireAccordionContent2 = ({ card }) => {
             borderColor: "#bbbbbb",
             width: "314px",
             height: "100%",
-            background: rightActive3
-              ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-              : "#ffffff",
+            background: rightActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: rightActive3 ? "#eeeeee" : "#444444",
             ...(isHovered7 ? hoverStyle : null),
             borderBottomRightRadius: "4px",

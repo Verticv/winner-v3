@@ -36,46 +36,61 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
               className="flex items-center justify-between"
             >
               <div className="ml-13px items-center">
-                <div className="flex items-center">
+                <div className="flex items-center pr-10px">
                   <img className="-ml-px mt-3px" src={icon} alt="icon" />
                   <img className="ml-5px mt-3px" src={flag} alt="icon" />
                   <p
-                    style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                    className="ml-4px mt-10px text-12px font-MalgunGothicBold"
+                    style={{
+                      color: "#eeeeee",
+                      letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      maxWidth: "600px",
+                    }}
+                    className="ml-4px mt-10px text-12px font-bold"
                   >
                     잉글랜드 - 프리미어리그
                   </p>
                 </div>
-                <div className="flex items-center mb-12px -ml-px">
+                <div style={{ maxWidth: "610px" }} className="flex items-center mb-12px -ml-px">
                   <p
                     style={{ color: "#dddddd", letterSpacing: "-0.031em" }}
-                    className="text-12px mt-2px font-MalgunGothicBold"
+                    className="text-12px mt-2px font-bold flex-shrink-0"
                   >
                     2023-03-22 13:00
                   </p>
-                  <div
-                    style={{ background: "#cb78e6" }}
-                    className="ml-10px mr-2px mt-4px w-px h-10px"
-                  ></div>
+                  <div style={{ background: "#cb78e6" }} className="ml-10px mr-2px mt-4px w-px h-10px"></div>
                   <p
                     style={{
                       color: "#dddddd",
                       letterSpacing: "-0.031em",
                       fontWeight: "bold",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      minWidth: "36px",
                     }}
-                    className="ml-7px mt-3px mr-1px text-12px font-MalgunGothicBold"
+                    className="ml-7px mt-3px mr-1px text-12px font-bold"
                   >
                     아스널
                   </p>
                   <p
                     style={{ color: "#ffc900", letterSpacing: "-0.031em" }}
-                    className="ml-7px mr-3px -mb-3px mt-px text-12px font-MalgunGothicBold"
+                    className="ml-7px mr-3px -mb-3px mt-px text-12px font-bold"
                   >
                     VS
                   </p>
                   <p
-                    style={{ color: "#dddddd", letterSpacing: "-0.031em" }}
-                    className="ml-4px mt-3px text-12px font-MalgunGothicBold"
+                    style={{
+                      color: "#dddddd",
+                      letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      minWidth: "36px",
+                    }}
+                    className="ml-4px mt-3px text-12px font-bold"
                   >
                     리버풀
                   </p>

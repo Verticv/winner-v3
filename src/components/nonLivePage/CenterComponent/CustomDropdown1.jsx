@@ -48,7 +48,7 @@ const CustomDropdown1 = () => {
       >
         <p
           style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-13px ml-9px font-malgun"
+          className="text-13px ml-9px mt-px"
         >
           {" "}
           {selectedOption || "전체"}{" "}
@@ -85,7 +85,7 @@ const CustomDropdown1 = () => {
               {options.map((option) => (
                 <li
                   key={option}
-                  className="py-2 px-2 text-13px cursor-pointer font-malgun"
+                  className="py-2 px-2 text-13px cursor-pointer"
                   onClick={() => handleOptionSelect(option)}
                 >
                   {option}

@@ -2,7 +2,6 @@ import Footer from "components/mainPage/Footer";
 import Navbar from "components/mainPage/NavBar";
 import OverlayBackground1 from "../images/overlay_background_1.png";
 import OverlayBackground2 from "../images/overlay_background_2.png";
-import NoticeBanner from "components/mainPage/NoticeBanner";
 import React, { useEffect, useState } from "react";
 import MainTabs from "components/nonLivePage/MainTabs/MainTabs";
 import LeftAccordion from "components/nonLivePage/LeftAccordion/LeftAccordion";
@@ -61,11 +60,10 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           />
         </div>
 
-        <div className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center">
-          <NoticeBanner />
-        </div>
+        <div className="h-28px mt-px" />
 
-        <div className="relative w-full flex flex-col items-start -mt-2px limit:items-center limit1920:items-center h-36px">
+
+        <div className="relative w-full flex flex-col items-start -mt-2px limit:items-center limit1920:items-center h-36px z-40">
           <MainTabs />
           <div className="absolute bottom-0 left-0 h-px w-full bg-r2c1137" />
         </div>
@@ -77,7 +75,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "730px",
+              height: "90vh",
               marginBottom: "60px",
             }}
           >
@@ -88,7 +86,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "742px",
+              height: "90vh",
               marginRight: "1px",
             }}
           >
@@ -117,7 +115,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "730px",
+              height: "90vh",
               marginLeft: englandActive ? "-5px" : "-4px",
               marginRight: englandActive ? "5px" : "",
             }}
@@ -141,7 +139,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "730px",
+              height: "90vh",
             }}
           >
             <RightComponent />

@@ -5,10 +5,7 @@ import icon1 from "../../../images/nonLivePage/CenterAccordion/star2.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on.png";
 import icon from "../../../images/nonLivePage/CenterAccordion/Icon.png";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addToLeague,
-  deleteFavoriteLeagueById,
-} from "reducers/nonLive-reducer";
+import { addToLeague, deleteFavoriteLeagueById } from "reducers/nonLive-reducer";
 
 // import AccordionContent1 from "./AccordionContent1";
 
@@ -19,9 +16,12 @@ const CenterAccordionButton = ({
   icon2,
   cards,
   setEnglandActive,
+  lastItemActive,
+  setLastItemActive,
 }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
+  const [hoverStar, setHoverStar] = useState(null);
   const dispatch = useDispatch();
 
   const toggleAccordion = () => {
@@ -75,42 +75,35 @@ const CenterAccordionButton = ({
           borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
-        className={`flex items-center justify-between ${
-          isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-30px `}
+        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-30px `}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
-          <img
-            className="ml-5px mt-7px mb-8px object-none"
-            src={icon}
-            alt="icon"
-          />
+          <img className="ml-5px mt-7px mb-8px object-none" src={icon} alt="icon" />
           <p
             style={{
               color: "#eeeeee",
               letterSpacing: "-0.031em",
-              fontFamily: "MalgunGothicRegular",
-              marginBottom: "4px",
+              marginBottom: "2px",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              maxWidth: "420px",
             }}
-            className="text-12px ml-4px font-malgun"
+            className="text-12px ml-4px"
           >
             {title}
           </p>
         </div>
         <div className="flex items-center">
-          <div
-            style={{ borderColor: "#533583", height: "30px" }}
-            className="flex border-r"
-          >
+          <div style={{ borderColor: "#533583", height: "30px" }} className="flex border-r">
             <p
               style={{
                 color: "#eeeeee",
                 letterSpacing: "-0.031em",
-                fontFamily: "MalgunGothicRegular",
-                marginRight: activeStar ? "1.2px" : "",
+                marginRight: activeStar || hoverStar ? "1.2px" : "",
               }}
-              className="text-12px mt-5px font-malgun"
+              className="text-12px mt-5px"
             >
               {date}
             </p>
@@ -126,20 +119,19 @@ const CenterAccordionButton = ({
                   });
                 }
               }}
+              onMouseEnter={() => setHoverStar(true)}
+              onMouseLeave={() => setHoverStar(false)}
               style={{
-                marginTop: activeStar ? "1px" : "",
+                marginTop: activeStar || hoverStar ? "1px" : "",
               }}
-              className="-mr-13px -ml-px mb-2px object-none"
-              src={activeStar ? activeStarIcon : icon1}
+              className="-mr-13px -ml-px mb-2px object-none z-10"
+              src={activeStar || hoverStar ? activeStarIcon : icon1}
               // TODO: add the active star icon
               alt="icon1"
             />
             <img className="-mr-2px object-none" src={icon2} alt="icon1" />
           </div>
-          <div
-            style={{ width: "38px" }}
-            className="justify-center items-center flex"
-          >
+          <div style={{ width: "38px" }} className="justify-center items-center flex">
             <img
               src={Arrow}
               alt=""
@@ -167,6 +159,8 @@ const CenterAccordionButton = ({
               card={item}
               lastObject={lastObject}
               setEnglandActive={setEnglandActive}
+              setLastItemActive={setLastItemActive}
+              lastItemActive={lastItemActive}
             />
           ))}
         </div>

@@ -9,28 +9,17 @@ import {
 } from "reducers/nonLive-reducer";
 import { useDispatch } from "react-redux";
 
-const AccordionCard = ({
-  id,
-  team1,
-  time,
-  team2,
-  dateAndTime,
-  t1,
-  t2,
-  t3,
-  t4,
-  t5,
-  t6,
-  type,
-}) => {
+const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5, t6, type }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
+  const [cardHovered, setCardHovered] = useState(false);
+  const [cardSelected, setCardSelected] = useState(false);
 
   const hoverStyle = {
     background: "#936cee",
     color: "#ffffff",
-    borderBottomLeftRadius: "4px",
+    // borderBottomLeftRadius: "4px",
   };
 
   const handleMouseEnter = () => {
@@ -101,82 +90,100 @@ const AccordionCard = ({
   return (
     <div
       style={{
-        background: "#ffffff",
+        background: cardHovered || cardSelected ? "#946cf0" : "#ffffff",
         width: "274px",
         borderRadius: "4px",
       }}
-      className="items-center justify-between mx-2px mb-2px pb-px "
+      className="items-center justify-between mx-2px mb-2px overflow-hidden"
+
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
-      <div className="flex ml-10px justify-between items-center mr-11px">
-        <p
-          style={{
-            color: "#444444",
-            letterSpacing: "-0.031em",
-            fontFamily: "MalgunGothicRegular",
-          }}
-          className="text-12px mt-6px -mb-px"
-        >
-          {team1}
-        </p>
-        <p
-          style={{
-            color: "#f04281",
-            letterSpacing: "-0.031em",
-            fontFamily: "MalgunGothicRegular",
-          }}
-          className="text-12px font-malgun mt-px -mb-6px"
-        >
-          {time}
-        </p>
-      </div>
-      <div className="ml-10px ">
-        <p
-          style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-12px font-malgun mt-px"
-        >
-          {team2}
-        </p>
-      </div>
-      <div className="flex justify-between ml-10px -mt-px">
-        <div className="mt-19px mb-6px">
+      <div
+        onMouseEnter={() => setCardHovered(true)}
+        onMouseLeave={() => setCardHovered(false)}
+        onClick={() => setCardSelected((prev) => !prev)}
+        className="cursor-pointer"
+      >
+        <div className="flex ml-10px justify-between items-center mr-11px">
           <p
-            style={{ color: "#0072bc", letterSpacing: "-0.031em" }}
-            className="text-12px font-malgun"
+            style={{
+              color: cardHovered || cardSelected ? "#ffffff" : "#444444",
+              letterSpacing: "-0.031em",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+              maxWidth: "220px",
+            }}
+            className="text-12px mt-6px -mb-px"
           >
-            {dateAndTime}
+            {team1}
+          </p>
+          <p
+            style={{
+              color: cardHovered || cardSelected ? "#ffffff" : "#f04281",
+              letterSpacing: "-0.031em",
+              fontFamily: "MalgunGothicRegular",
+            }}
+            className="text-12px font-malgun mt-px -mb-6px"
+          >
+            {time}
           </p>
         </div>
-        <div className="flex">
-          <div className="tooltip mt-8px items-center justify-center">
-            <img
-              id={id}
-              className="mt-12px ml-px object-none cursor-pointer"
-              src={icon}
-              alt="img"
-              onClick={() => {
-                deleteFromFavorite({
-                  type,
-                  id,
-                });
-              }}
-            />
-            <span
-              style={{ boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)" }}
-              className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white"
+        <div className="ml-10px ">
+          <p
+            style={{
+              color: cardHovered || cardSelected ? "#ffffff" : "#444444",
+              letterSpacing: "-0.031em",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+              maxWidth: "220px",
+            }}
+            className="text-12px font-malgun mt-px"
+          >
+            {team2}
+          </p>
+        </div>
+        <div className="flex justify-between ml-10px -mt-px mb-px">
+          <div className="mt-19px mb-6px">
+            <p
+              style={{ color: cardHovered || cardSelected ? "#ffffff" : "#0072bc", letterSpacing: "-0.031em" }}
+              className="text-12px font-malgun"
             >
-              즐겨찾기에서 제거
-            </span>
+              {dateAndTime}
+            </p>
           </div>
-          <img
-            src={Arrow}
-            alt=""
-            onClick={toggleAccordion}
-            style={{ color: "#444444" }}
-            className={`object-none mr-11px ml-29px mt-15px ${
-              isOpen ? "transform rotate-180" : ""
-            }`}
-          />
+          <div className="flex">
+            <div className="tooltip mt-8px items-center justify-center">
+              <img
+                id={id}
+                className="mt-12px ml-px object-none cursor-pointer filter hover:brightness-110"
+                src={icon}
+                alt="img"
+                onClick={() => {
+                  deleteFromFavorite({
+                    type,
+                    id,
+                  });
+                }}
+              />
+              <span
+                style={{ boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)" }}
+                className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white"
+              >
+                즐겨찾기에서 제거
+              </span>
+            </div>
+            <img
+              src={Arrow}
+              alt=""
+              onClick={toggleAccordion}
+              style={{ filter: (cardHovered || cardSelected) && "brightness(0) invert(1)", color: "#444444" }}
+              className={`object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
+                isOpen ? "transform rotate-180" : ""
+              }`}
+            />
+          </div>
         </div>
       </div>
       {isOpen && (
@@ -184,10 +191,10 @@ const AccordionCard = ({
           style={{
             background: "#eeeeee",
             borderColor: "#cccccc",
-            borderBottomLeftRadius: "4px",
-            borderBottomRightRadius: "4px",
+            // borderBottomLeftRadius: "4px",
+            // borderBottomRightRadius: "4px",
           }}
-          className="flex border-t border-solid h-31px items-center "
+          className="flex border-t border-solid h-30px items-center overflow-hidden cursor-pointer"
         >
           <div
             style={{
@@ -233,6 +240,7 @@ const AccordionCard = ({
               style={{
                 color: isHovered1 ? "#ffffff" : "#444444",
                 letterSpacing: "-0.031em",
+                marginBottom: t3 ? "4px" : "2px",
               }}
               className="ml-7px text-12px font-malgun mb-4px"
             >
