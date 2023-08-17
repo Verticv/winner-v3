@@ -131,7 +131,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           background: "linear-gradient(to bottom, #f0ecff, #cacdff)",
           boxShadow: "0px 2px 15px 0px rgba(0, 0, 0, 0.5)",
         }}
-        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-20"
+        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-50  bg-red-500"
       >
         <div className="w-full absolute h-px bottom-0 bg-r9688c7" />
         <div id="menu-wrapper" style={{ width: "1260px" }} className="w-full z-50">

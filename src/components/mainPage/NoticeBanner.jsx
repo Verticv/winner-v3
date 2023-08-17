@@ -4,15 +4,22 @@ import Bg from "../../images/notice_bg.png";
 import "./NoticeBanner.css";
 
 const NoticeBanner = () => {
+  const pathname = window.location.pathname;
   return (
     <div
       style={{
         width: "1452px",
-        borderRadius: '0% 0% 10% 10% / 0% 0% 100% 100%',
+        borderRadius: "0% 0% 10% 10% / 0% 0% 100% 100%",
+        height: "28px",
       }}
       className="flex items-center h-28px w-full overflow-x-hidden flex-shrink-0 wrap cursor-default mt-px"
     >
-      <img src={Bg} alt="" className="absolute object-none -ml-12px" />
+      <img
+        style={{ width: pathname === "/bet-combination" && "1482px" }}
+        src={Bg}
+        alt=""
+        className={`absolute object-none -ml-12px  ${pathname === "/bet-combination" && "h-30px"}`}
+      />
       <div style={{ paddingLeft: "96px" }} className="z-20 pr-15px flex -mt-4px flex-shrink-0">
         <img className="object-none " src={SpeakerIcon} alt="speakerIcon" />
       </div>

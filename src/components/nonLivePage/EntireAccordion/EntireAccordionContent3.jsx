@@ -54,9 +54,7 @@ const EntireAccordionContent3 = ({ card }) => {
         style={{
           borderColor: "#bbbbbb",
           width: "210px",
-          background: leftActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive ? "#eeeeee" : "#444444",
           ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: `${card.id !== 0 ? "4px" : "0px"}`,
@@ -77,6 +75,9 @@ const EntireAccordionContent3 = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="-mt-2px font-malgun ml-9px"
         >
@@ -97,9 +98,7 @@ const EntireAccordionContent3 = ({ card }) => {
         style={{
           borderColor: "#bbbbbb",
           width: "209px",
-          background: centerActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: centerActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: centerActive ? "#eeeeee" : "#444444",
           ...(isHovered1 ? hoverStyle : null),
         }}
@@ -119,6 +118,9 @@ const EntireAccordionContent3 = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="ml-10px mb-2px font-malgun"
         >
@@ -139,9 +141,7 @@ const EntireAccordionContent3 = ({ card }) => {
         style={{
           width: "211px",
           height: "100%",
-          background: rightActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#eeeeee" : "#444444",
           ...(isHovered2 ? hoverStyle : null),
           borderBottomRightRadius: `${card.id !== 0 ? "4px" : "0px"}`,
@@ -162,6 +162,9 @@ const EntireAccordionContent3 = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="ml-11px mb-2px font-malgun"
         >

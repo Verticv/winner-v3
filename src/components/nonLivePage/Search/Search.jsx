@@ -32,7 +32,7 @@ const Search = () => {
               width: "278px",
               borderRadius: "5px",
             }}
-            className="flex items-center justify-end h-44px px-4px py-5px rounded-lg cursor-pointer relative"
+            className="flex items-center justify-end h-44px px-4px py-5px rounded-lg relative"
           >
             <div
               style={{
@@ -58,12 +58,12 @@ const Search = () => {
                   setValue(e.target.value);
                   setShowSearchContent(e.target.value);
                 }}
-                className="bg-white w-full rounded-lg pl-9px pt-2px text-13 font-malgun "
+                className="bg-white w-full rounded-lg pl-9px pt-2px text-13"
                 type="text"
                 value={value}
               />
             </div>
-            <div
+            <button
               onClick={() => {
                 if (value) {
                   setValue("");
@@ -80,10 +80,10 @@ const Search = () => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-              className="mr-4px mt-3px mb-3px rounded-lg cursor-pointer"
+              className="mr-4px mt-3px mb-3px hover:brightness-110 filter"
             >
               <img src={!value ? icon : icon1} alt="" />
-            </div>
+            </button>
             {/* <div
             style={{
               position: "absolute",
@@ -135,14 +135,16 @@ const Search = () => {
                     borderRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-35px mb-4px"
+                  className="flex items-center mx-4px h-35px mb-4px pr-10px"
                 >
                   <img className="ml-6px mt-7px mb-6px" src={icon2} alt="img" />
                   <p
                     style={{
                       color: "#444444",
                       letterSpacing: "-0.031em",
-                      fontFamily: "MalgunGothicRegular",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="text-12px mt-10px mb-13px ml-5px"
                   >
@@ -158,12 +160,15 @@ const Search = () => {
                     borderTopRightRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -176,12 +181,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -194,12 +202,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -212,12 +223,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -232,16 +246,19 @@ const Search = () => {
                     borderBottomRightRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b mb-4px"
+                  className="flex items-center mx-4px h-38px border-b mb-4px pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
-                    잉글랜드 - 프리미어 리그
+                    잉글랜드 - 프리미어 리그 asdiajsdoasjdasjd asdijasod
                   </p>
                 </div>
 
@@ -251,14 +268,16 @@ const Search = () => {
                     borderRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-35px mb-4px"
+                  className="flex items-center mx-4px h-35px mb-4px pr-10px"
                 >
                   <img className="ml-6px mt-7px mb-6px" src={icon3} alt="img" />
                   <p
                     style={{
                       color: "#444444",
                       letterSpacing: "-0.031em",
-                      fontFamily: "MalgunGothicRegular",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="text-12px mt-10px mb-13px ml-5px"
                   >
@@ -274,12 +293,15 @@ const Search = () => {
                     borderTopRightRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -292,12 +314,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -310,12 +335,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -336,6 +364,9 @@ const Search = () => {
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -372,12 +403,15 @@ const Search = () => {
                     borderTopRightRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -390,12 +424,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -408,12 +445,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -434,6 +474,9 @@ const Search = () => {
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun "
                   >
@@ -470,12 +513,15 @@ const Search = () => {
                     borderTopRightRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -488,12 +534,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -506,12 +555,15 @@ const Search = () => {
                     background: "#eeeeee",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >
@@ -526,12 +578,15 @@ const Search = () => {
                     borderBottomRightRadius: "4px",
                     width: "259px",
                   }}
-                  className="flex items-center mx-4px h-38px border-b"
+                  className="flex items-center mx-4px h-38px border-b pr-10px"
                 >
                   <p
                     style={{
                       background: "444444",
                       letterSpacing: "-0.031em",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                     className="ml-13px mt-13px mb-16px text-12px font-malgun"
                   >

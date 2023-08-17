@@ -27,15 +27,20 @@ const EntireAccordionButton = ({ icon, title, cards, handleZoomClick }) => {
           borderBottomRightRadius: `${isOpen ? "0px" : "4px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "4px"}`,
         }}
-        className={`flex items-center justify-between ${
-          isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-31px`}
+        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-31px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
           <p
-            style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-            className="text-12px ml-10px font-MalgunGothicBold"
+            style={{
+              color: "#eeeeee",
+              letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              maxWidth: "540px",
+            }}
+            className="text-12px ml-10px font-bold"
           >
             {title}
           </p>
@@ -60,9 +65,7 @@ const EntireAccordionButton = ({ icon, title, cards, handleZoomClick }) => {
           <img
             src={Arrow}
             alt="img"
-            className={`object-none text-white ml-14px mr-14px ${
-              isOpen ? "transform rotate-180" : ""
-            }`}
+            className={`object-none text-white ml-14px mr-14px ${isOpen ? "transform rotate-180" : ""}`}
           />
         </div>
       </div>

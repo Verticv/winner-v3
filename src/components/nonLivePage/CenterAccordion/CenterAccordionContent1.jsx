@@ -25,6 +25,9 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className="font-malgun ml-8px mt-10px mb-9px"
           >
@@ -77,16 +80,16 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className=" mr-9px mt-10px mb-8px font-malgun"
           >
             SC프라이부르크
           </p>
         </div>
-        <div
-          style={{ width: "39px" }}
-          className="flex items-center justify-center"
-        >
+        <div style={{ width: "39px" }} className="flex items-center justify-center">
           <p
             style={{
               fontSize: "12px",
@@ -120,6 +123,9 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className="font-malgun ml-8px mt-10px mb-9px"
           >
@@ -172,16 +178,16 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className=" mr-9px mt-10px mb-8px font-malgun"
           >
             바이에른뮌헨
           </p>
         </div>
-        <div
-          style={{ width: "39px" }}
-          className="flex items-center justify-center"
-        >
+        <div style={{ width: "39px" }} className="flex items-center justify-center">
           <p
             style={{
               fontSize: "12px",
@@ -213,6 +219,9 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className="font-malgun ml-10px mt-10px mb-9px"
           >
@@ -262,16 +271,16 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className=" mr-9px mt-10px mb-8px font-malgun"
           >
             FC샬케04
           </p>
         </div>
-        <div
-          style={{ width: "39px" }}
-          className="flex items-center justify-center"
-        >
+        <div style={{ width: "39px" }} className="flex items-center justify-center">
           <p
             style={{
               fontSize: "12px",
@@ -298,6 +307,9 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className="font-malgun ml-9px mt-10px mb-9px"
           >
@@ -318,16 +330,16 @@ const CenterAccordionContent1 = () => {
               fontSize: "12px",
               color: "#444444",
               letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             }}
             className=" mr-9px mt-10px mb-8px font-malgun"
           >
             FSV마인츠05
           </p>
         </div>
-        <div
-          style={{ width: "39px" }}
-          className="flex items-center justify-center "
-        >
+        <div style={{ width: "39px" }} className="flex items-center justify-center ">
           <p
             style={{
               fontSize: "12px",

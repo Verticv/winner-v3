@@ -51,14 +51,13 @@ const EntireAccordionContent = ({ card }) => {
     >
       <div
         style={{
-          borderColor: "#bbbbbb",
+          // borderColor: "#bbbbbb",
+          borderColor: leftActive ? "#6227a5" : "#bbbbbb",
           width: "211px",
-          background: leftActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive || isHovered ? "#eeeeee" : "#444444",
           ...(isHovered ? hoverStyle : null),
-          borderBottomLeftRadius: "4px",
+          borderBottomLeftRadius: "3px",
         }}
         className="flex items-center justify-between border-r  h-30px cursor-pointer"
         onClick={() => {
@@ -76,6 +75,9 @@ const EntireAccordionContent = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="font-malgun ml-8px"
         >
@@ -94,11 +96,9 @@ const EntireAccordionContent = ({ card }) => {
       </div>
       <div
         style={{
-          borderColor: "#bbbbbb",
+          borderColor: centerActive ? "#6227a5" : "#bbbbbb",
           width: "210px",
-          background: centerActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: centerActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: centerActive ? "#eeeeee" : "#444444",
           ...(isHovered1 ? hoverStyle : null),
         }}
@@ -118,6 +118,9 @@ const EntireAccordionContent = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="ml-10px -mt-2px font-malgun"
         >
@@ -138,12 +141,10 @@ const EntireAccordionContent = ({ card }) => {
         style={{
           width: "209px",
           height: "100%",
-          background: rightActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#eeeeee" : "#444444",
           ...(isHovered2 ? hoverStyle : null),
-          borderBottomRightRadius: "4px",
+          borderBottomRightRadius: "3px",
         }}
         className="flex items-center justify-between cursor-pointer"
         onClick={() => {
@@ -161,6 +162,9 @@ const EntireAccordionContent = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="ml-8px font-malgun"
         >

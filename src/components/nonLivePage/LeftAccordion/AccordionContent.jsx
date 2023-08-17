@@ -4,10 +4,7 @@ import icon from "../../../images/nonLivePage/LeftAccordion/content/Icon.png";
 import AccordionCard from "./AccordionCard";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  deleteAllFavoriteCards,
-  deleteFavoriteLeagueById,
-} from "reducers/nonLive-reducer";
+import { deleteAllFavoriteCards, deleteFavoriteLeagueById } from "reducers/nonLive-reducer";
 import "./style.css";
 
 const AccordionContent = ({ setIsOpen }) => {
@@ -15,6 +12,7 @@ const AccordionContent = ({ setIsOpen }) => {
   const [isOpen1, setIsOpen1] = useState(true);
   const [isOpen2, setIsOpen2] = useState(true);
   const [isOpen3, setIsOpen3] = useState(true);
+  const [isHovered, setHovered] = useState(null);
 
   const toggleAccordion1 = () => {
     setIsOpen1(!isOpen1);
@@ -32,9 +30,7 @@ const AccordionContent = ({ setIsOpen }) => {
   const [isDeleted, setIsDeleted] = useState(true);
   const dispatch = useDispatch();
 
-  const favoritePreMatch = useSelector(
-    (state) => state?.nonLive?.favoritePreMatch
-  );
+  const favoritePreMatch = useSelector((state) => state?.nonLive?.favoritePreMatch);
   const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
   const bundesliga = useSelector((state) => state?.nonLive?.bundesliga);
   const League = useSelector((state) => state?.nonLive?.League);
@@ -105,19 +101,13 @@ const AccordionContent = ({ setIsOpen }) => {
                   setIsOpen(false);
                 }}
               >
-                <p
-                  className="mb-px text-13px text-white tracking-tight"
-                  style={{ fontFamily: "MalgunGothicBold" }}
-                >
+                <p className="mb-px text-13px text-white tracking-tight" style={{ fontFamily: "MalgunGothicBold" }}>
                   모두지우기
                 </p>
               </div>
             </div>
           )}
-          {(favoritePreMatch[0]?.id ||
-            favoriteLaLiga[0]?.id ||
-            favoriteLaLiga[0]?.id ||
-            bundesliga[0]?.id) && (
+          {(favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id) && (
             <>
               <div className="ml-7px mt-3px mb-6px">
                 <p
@@ -137,28 +127,42 @@ const AccordionContent = ({ setIsOpen }) => {
             <>
               <div
                 style={{
-                  background: "#ffffff",
+                  background: isHovered === 1 ? "#946cf0" : "#ffffff",
                   borderRadius: "4px",
                 }}
-                className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
+                className="flex items-center justify-between mx-2px h-35px mb-2px cursor-pointer"
                 onClick={toggleAccordion1}
+                onMouseEnter={() => setHovered(1)}
+                onMouseLeave={() => setHovered(null)}
               >
-                <img className="ml-6px mt-6px mb-6px" src={icon} alt="img" />
-                <p
-                  style={{
-                    color: "#444444",
-                    letterSpacing: "-0.031em",
-                    fontFamily: "MalgunGothicRegular",
-                  }}
-                  className="text-12px mt-10px mb-12px ml-5px"
-                >
-                  프리미어리그
-                </p>
+                <div className="flex items-center">
+                  <img
+                    style={{ filter: isHovered === 1 && "brightness(0) invert(1)" }}
+                    className="ml-6px mt-6px mb-6px"
+                    src={icon}
+                    alt="img"
+                  />
+                  <p
+                    style={{
+                      color: isHovered === 1 ? "#fff" : "#444444",
+                      letterSpacing: "-0.031em",
+                      fontFamily: "MalgunGothicRegular",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      maxWidth: "210px",
+                    }}
+                    className="text-12px mt-10px mb-12px ml-5px"
+                  >
+                    프리미어리그
+                  </p>
+                </div>
+
                 <img
                   src={Arrow}
                   alt=""
-                  style={{ color: "#444444" }}
-                  className={`object-none ml-150px cursor-pointer ${
+                  style={{ color: "#444444", filter: isHovered === 1 && "brightness(0) invert(1)" }}
+                  className={`object-none cursor-pointer mr-11px filter hover:opacity-75 ${
                     isOpen1 ? "transform rotate-180" : ""
                   }`}
                 />
@@ -196,26 +200,43 @@ const AccordionContent = ({ setIsOpen }) => {
             <>
               <div
                 style={{
-                  background: "#ffffff",
+                  background: isHovered === 2 ? "#946cf0" : "#ffffff",
                   borderRadius: "4px",
                 }}
-                className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer"
+                className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer justify-between"
                 onClick={toggleAccordion2}
+                onMouseEnter={() => setHovered(2)}
+                onMouseLeave={() => setHovered(null)}
               >
-                <img className="ml-6px" src={icon} alt="img" />
-                <p style={{ color: "#444444" }} className="text-12px ml-5px">
-                  라리가
-                </p>
+                <div className="flex items-center">
+                  <img
+                    style={{ filter: isHovered === 2 && "brightness(0) invert(1)" }}
+                    className="ml-6px"
+                    src={icon}
+                    alt="img"
+                  />
+                  <p
+                    style={{
+                      color: isHovered === 2 ? "#fff" : "#444444",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      maxWidth: "210px",
+                    }}
+                    className="text-12px ml-5px"
+                  >
+                    라리가
+                  </p>
+                </div>
+
                 <img
                   src={Arrow}
                   alt=""
                   // onClick={(e) => {
                   //   setShowCard1((prev) => !prev);
                   // }}
-                  style={{ color: "#444444" }}
-                  className={`object-none ml-184px cursor-pointer ${
-                    isOpen2 ? "transform rotate-180" : ""
-                  }`}
+                  style={{ color: "#444444", filter: isHovered === 2 && "brightness(0) invert(1)" }}
+                  className={`object-none mr-11px cursor-pointer ${isOpen2 ? "transform rotate-180" : ""}`}
                 />
               </div>
               {isOpen2 && (
@@ -246,35 +267,42 @@ const AccordionContent = ({ setIsOpen }) => {
                 <>
                   <div
                     style={{
-                      background: "#ffffff",
+                      background: isHovered === 3 ? "#946cf0" : "#ffffff",
                       borderRadius: "4px",
                     }}
-                    className="flex items-center mx-2px h-35px mb-2px cursor-pointer"
+                    className="flex items-center mx-2px h-35px mb-2px cursor-pointer justify-between"
                     onClick={toggleAccordion3}
+                    onMouseEnter={() => setHovered(3)}
+                    onMouseLeave={() => setHovered(null)}
                   >
-                    <img
-                      className="ml-6px mt-7px mb-6px"
-                      src={icon}
-                      alt="img"
-                    />
-                    <p
-                      style={{
-                        color: "#444444",
-                        letterSpacing: "-0.031em",
-                        fontFamily: "MalgunGothicRegular",
-                      }}
-                      className="text-12px mt-10px mb-13px ml-5px"
-                    >
-                      분데스리가
-                    </p>
+                    <div className="flex items-center">
+                      <img
+                        style={{ filter: isHovered === 3 && "brightness(0) invert(1)" }}
+                        className="ml-6px mt-7px mb-6px"
+                        src={icon}
+                        alt="img"
+                      />
+                      <p
+                        style={{
+                          color: isHovered === 3 ? "#fff" : "#444444",
+                          letterSpacing: "-0.031em",
+                          fontFamily: "MalgunGothicRegular",
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          maxWidth: "210px",
+                        }}
+                        className="text-12px mt-10px mb-13px ml-5px"
+                      >
+                        분데스리가
+                      </p>
+                    </div>
                     <img
                       src={Arrow}
                       alt=""
                       // onClick={() => setShowCard2((prev) => !prev)}
-                      style={{ color: "#444444" }}
-                      className={`object-none ml-162px cursor-pointer ${
-                        isOpen3 ? "transform rotate-180" : ""
-                      }`}
+                      style={{ color: "#444444", filter: isHovered === 3 && "brightness(0) invert(1)" }}
+                      className={`object-none mr-11px cursor-pointer ${isOpen3 ? "transform rotate-180" : ""}`}
                     />
                   </div>
                   {isOpen3 && (
@@ -318,10 +346,7 @@ const AccordionContent = ({ setIsOpen }) => {
                   >
                     <div className="flex items-center">
                       <img className="ml-6px" src={icon} alt="img" />
-                      <p
-                        style={{ color: "#444444", marginBottom: "2px" }}
-                        className="text-12px ml-5px"
-                      >
+                      <p style={{ color: "#444444", marginBottom: "2px" }} className="text-12px ml-5px">
                         {el.title.includes("프리미어리그")
                           ? "프리미어리그"
                           : el.title.includes("라리가")
@@ -333,7 +358,7 @@ const AccordionContent = ({ setIsOpen }) => {
                     </div>
                     <div className="tooltip2">
                       <img
-                        className="mr-6px cursor-pointer"
+                        className="mr-6px cursor-pointer filter hover:brightness-110"
                         src={iconStar}
                         alt="img"
                         onClick={() => {

@@ -47,9 +47,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
         style={{
           borderColor: "#cccccc",
           width: "316px",
-          background: leftActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive ? "#eeeeee" : "#444444",
           ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: `${card.id === 2 ? "4px" : "0px"}`,
@@ -71,6 +69,9 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
             fontSize: "12px",
             letterSpacing: "-0.031em",
             marginBottom: `${card.marginBottom}`,
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="font-malgun ml-9px"
         >
@@ -92,9 +93,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           borderColor: "#bbbbbb",
           width: "314px",
           height: "100%",
-          background: rightActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#eeeeee" : "#444444",
           ...(isHovered1 ? hoverStyle : null),
           borderBottomRightRadius: `${card.id === 2 ? "4px" : "0px"}`,
@@ -115,6 +114,9 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="ml-8px mb-2px font-malgun"
         >
@@ -125,6 +127,9 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
             fontSize: "13px",
             color: rightActive || isHovered1 ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="mr-9px mb-2px font-malgun"
         >

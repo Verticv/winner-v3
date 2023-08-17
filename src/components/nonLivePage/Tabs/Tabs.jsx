@@ -170,7 +170,7 @@ const Tabs = ({ active, setActive }) => {
       }}
     >
       <button
-        className="leftArrow"
+        className="leftArrow hover:brightness-110 filter"
         style={{
           background: "#edd9f2",
           width: "25px",
@@ -241,6 +241,7 @@ const Tabs = ({ active, setActive }) => {
                   overflowX: "auto",
                   whiteSpace: "nowrap",
                 }}
+                className="hover:brightness-110 filter"
               >
                 <img
                   src={active === tab.id ? tab.activeIcon : tab.icon}
@@ -259,7 +260,6 @@ const Tabs = ({ active, setActive }) => {
                 <span
                   style={{
                     color: `${active === tab.id ? "#fff" : "#2d2834"}`,
-                    fontFamily: "MalgunGothicBold",
                     fontSize: "13px",
                     marginRight: `${tab.marginRight}`,
                     marginBottom: "2px",
@@ -270,7 +270,6 @@ const Tabs = ({ active, setActive }) => {
                 </span>
                 <div
                   style={{
-                    fontFamily: "MalgunGothicRegular",
                     color: "#fff",
                     fontSize: "12px",
                     padding: "0 5px",
@@ -310,7 +309,7 @@ const Tabs = ({ active, setActive }) => {
         </div>
       </div>
       <button
-        className="rightArrow"
+        className="rightArrow hover:brightness-110 filter"
         style={{
           background: "#edd9f2",
           width: "25px",

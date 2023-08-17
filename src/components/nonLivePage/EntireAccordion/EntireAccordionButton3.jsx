@@ -25,15 +25,20 @@ const EntireAccordionButton3 = ({ icon, title, cards, handleZoomClick }) => {
           borderBottomRightRadius: `${isOpen ? "0px" : "4px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "4px"}`,
         }}
-        className={`flex items-center justify-between ${
-          isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-31px`}
+        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-31px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
           <p
-            style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-            className="text-13px ml-10px mb-px font-MalgunGothicBold"
+            style={{
+              color: "#eeeeee",
+              letterSpacing: "-0.031em",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              maxWidth: "540px",
+            }}
+            className="text-13px ml-10px mb-px font-bold"
           >
             {title}
           </p>
@@ -59,48 +64,53 @@ const EntireAccordionButton3 = ({ icon, title, cards, handleZoomClick }) => {
             src={Arrow}
             alt="img"
             style={{ marginBottom: "1px" }}
-            className={`object-none text-white ml-14px mr-14px ${
-              isOpen ? "transform rotate-180" : ""
-            }`}
+            className={`object-none text-white ml-14px mr-14px ${isOpen ? "transform rotate-180" : ""}`}
           />
         </div>
       </div>
       {isOpen && (
         <div style={{ background: "#420572" }} className="rounded-b-lg">
-          <div
-            style={{ background: "#eeeeee", width: "630px" }}
-            className="flex items-center justify-between h-28px "
-          >
-            <div style={{ marginLeft: "90px" }}>
+          <div style={{ background: "#eeeeee", width: "630px" }} className="flex items-center justify-between h-28px ">
+            <div style={{ width: "210px" }} className="flex justify-center px-10px">
               <p
                 style={{
                   color: "444444",
                   letterSpacing: "-0.031em",
                   fontSize: "12px",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
                 className="font-malgun -mt-2px"
               >
                 아스널
+
               </p>
             </div>
-            <div style={{ marginRight: "5px" }}>
+            <div style={{ width: "210px" }} className="flex justify-center px-10px">
               <p
                 style={{
                   color: "444444",
                   letterSpacing: "-0.031em",
                   fontSize: "12px",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
                 className="font-malgun -mt-2px ml-3px"
               >
                 무 : 리버플
               </p>
             </div>
-            <div style={{ marginRight: "89px" }}>
+            <div style={{ width: "210px" }} className="flex justify-center px-10px">
               <p
                 style={{
                   color: "444444",
                   letterSpacing: "-0.031em",
                   fontSize: "12px",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
                 className="font-malgun -mt-2px"
               >

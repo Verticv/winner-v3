@@ -45,9 +45,7 @@ const EntireAccordionContent1 = ({ card }) => {
         style={{
           borderColor: "#bbbbbb",
           width: "316px",
-          background: leftActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive ? "#eeeeee" : "#444444",
           ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: "4px",
@@ -68,6 +66,9 @@ const EntireAccordionContent1 = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="font-malgun -mt-2px ml-8px"
         >
@@ -89,9 +90,7 @@ const EntireAccordionContent1 = ({ card }) => {
           borderColor: "#bbbbbb",
           width: "314px",
           height: "100%",
-          background: rightActive
-            ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))"
-            : "#ffffff",
+          background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#eeeeee" : "#444444",
           ...(isHovered1 ? hoverStyle : null),
           borderBottomRightRadius: "4px",
@@ -112,6 +111,9 @@ const EntireAccordionContent1 = ({ card }) => {
           style={{
             fontSize: "12px",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="ml-8px mb-px -mt-2px font-malgun"
         >
@@ -122,6 +124,9 @@ const EntireAccordionContent1 = ({ card }) => {
             fontSize: "13px",
             color: rightActive || isHovered1 ? "#eeeeee" : "#682aa7",
             letterSpacing: "-0.031em",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
           className="mr-9px font-malgun"
         >

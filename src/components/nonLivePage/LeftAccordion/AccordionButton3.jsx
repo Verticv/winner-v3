@@ -12,6 +12,7 @@ const AccordionButton3 = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [showCard, setShowCard] = useState(false);
   const [showCard1, setShowCard1] = useState(false);
+  const [hover, setHover] = useState(null);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -35,9 +36,7 @@ const AccordionButton3 = ({ icon, title }) => {
           borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
-        className={`flex items-center justify-between ${
-          isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-43px`}
+        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-43px`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
@@ -69,17 +68,13 @@ const AccordionButton3 = ({ icon, title }) => {
           }}
           className="flex items-center justify-center"
         >
-          <p className="text-13px mb-px text-white tracking-tight font-malgun ">
-            1000
-          </p>
+          <p className="text-13px mb-px text-white tracking-tight font-malgun ">1000</p>
         </div>
         <div>
           <img
             src={Arrow}
             alt=""
-            className={`object-none text-white mr-10px mt-17px mb-18px ${
-              isOpen ? "transform rotate-180" : ""
-            }`}
+            className={`object-none text-white mr-10px mt-17px mb-18px ${isOpen ? "transform rotate-180" : ""}`}
           />
         </div>
       </div>
@@ -95,32 +90,45 @@ const AccordionButton3 = ({ icon, title }) => {
           <div
             onClick={() => setShowCard((prev) => !prev)}
             style={{
-              background: "#ffffff",
+              background: hover === 1 ? "#946cf0" : "#ffffff",
               borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px h-37px cursor-pointer"
+            className="flex items-center ml-2px mb-2px mr-2px h-37px cursor-pointer justify-between"
+            onMouseEnter={() => setHover(1)}
+            onMouseLeave={() => setHover(null)}
           >
-            <img className="ml-6px mt-8px mb-8px" src={icon1} alt="img" />
-            <p
-              style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-5px mt-12px mb-13px font-malgun"
-            >
-              축구
-            </p>
+            <div className="flex items-center">
+              <img
+                style={{ filter: hover === 1 && "brightness(0) invert(1)" }}
+                className="ml-6px mt-8px mb-8px"
+                src={icon1}
+                alt="img"
+              />
+              <p
+                style={{
+                  color: hover === 1 ? "#ffffff" : "#444444",
+                  letterSpacing: "-0.031em",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textOverflow: "ellipsis",
+                  maxWidth: "190px",
+                }}
+                className="text-13px ml-5px mt-12px mb-13px font-malgun"
+              >
+                축구
+              </p>
+            </div>
             <div
               style={{
                 background: "#6b22ff",
                 width: "36px",
                 height: "19px",
-                marginLeft: "176px",
+                marginRight: "6px",
                 borderRadius: "4px",
               }}
               className="flex items-center justify-center"
             >
-              <p
-                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px font-malgun mb-px"
-              >
+              <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px font-malgun mb-px">
                 1000
               </p>
             </div>
@@ -129,42 +137,52 @@ const AccordionButton3 = ({ icon, title }) => {
             <>
               <div
                 style={{
-                  background: "#eeeeee",
+                  background: hover === 2 ? "#946cf0" : "#eeeeee",
                   borderRadius: "4px",
                 }}
-                className="items-center ml-2px mb-2px mr-2px "
+                className="items-center ml-2px mb-2px mr-2px"
               >
                 <div
                   onClick={() => setShowCard1((prev) => !prev)}
-                  className="flex items-center h-37px cursor-pointer"
+                  onMouseEnter={() => setHover(2)}
+                  onMouseLeave={() => setHover(null)}
+                  className="flex items-center h-37px cursor-pointer justify-between"
                 >
-                  <p
-                    style={{ background: "444444", letterSpacing: "-0.031em" }}
-                    className="ml-15px mt-12px mb-19px text-13px"
-                  >
-                    L
-                  </p>
-                  <img className="ml-10px" src={flag1} alt="img" />
-                  <p
-                    style={{ background: "444444", letterSpacing: "-0.031em" }}
-                    className="ml-4px mt-13px mb-14px text-13px font-malgun"
-                  >
-                    잉글랜드
-                  </p>
+                  <div className="flex items-center">
+                    <p
+                      style={{ background: "444444", letterSpacing: "-0.031em" }}
+                      className="ml-15px mt-12px mb-19px text-13px"
+                    >
+                      L
+                    </p>
+                    <img className="ml-10px" src={flag1} alt="img" />
+                    <p
+                      style={{
+                        background: "444444",
+                        letterSpacing: "-0.031em",
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                        maxWidth: "160px",
+                        color: hover === 2 ? "#ffffff" : "#000000",
+                      }}
+                      className="ml-4px mt-13px mb-14px text-13px font-malgun"
+                    >
+                      잉글랜드
+                    </p>
+                  </div>
+
                   <div
                     style={{
                       background: "#666666",
                       width: "36px",
                       height: "19px",
-                      marginLeft: "118px",
+                      marginRight: "6px",
                       borderRadius: "4px",
                     }}
                     className="flex items-center justify-center "
                   >
-                    <p
-                      style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                      className="text-12px font-malgun mb-px"
-                    >
+                    <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px font-malgun mb-px">
                       1000
                     </p>
                   </div>
@@ -172,33 +190,44 @@ const AccordionButton3 = ({ icon, title }) => {
                 {showCard1 && (
                   <>
                     <div
-                      style={{ borderColor: "#cccccc", background: "#dddddd" }}
-                      className="flex items-center h-38px border-t"
+                      style={{ borderColor: "#cccccc", background: hover === 3 ? "#946cf0" : "#dddddd" }}
+                      className="flex items-center h-38px border-t justify-between cursor-pointer"
+                      onMouseEnter={() => setHover(3)}
+                      onMouseLeave={() => setHover(null)}
                     >
-                      <p
-                        style={{
-                          background: "444444",
-                          letterSpacing: "-0.031em",
-                        }}
-                        className="ml-45px mt-11px mb-20px text-13px"
-                      >
-                        L
-                      </p>
-                      <p
-                        style={{
-                          background: "444444",
-                          letterSpacing: "-0.031em",
-                        }}
-                        className="ml-13px mt-13px mb-16px text-12px font-malgun"
-                      >
-                        프리미어리그
-                      </p>
+                      <div className="flex items-center">
+                        <p
+                          style={{
+                            background: "444444",
+                            letterSpacing: "-0.031em",
+                          }}
+                          className="ml-45px mt-11px mb-20px text-13px"
+                        >
+                          L
+                        </p>
+                        <p
+                          style={{
+                            background: "444444",
+                            letterSpacing: "-0.031em",
+                            overflow: "hidden",
+                            whiteSpace: "nowrap",
+                            textOverflow: "ellipsis",
+                            maxWidth: "160px",
+
+                            color: hover === 3 ? "#ffffff" : "#000000",
+                          }}
+                          className="ml-13px mt-13px mb-16px text-12px font-malgun"
+                        >
+                          프리미어리그
+                        </p>
+                      </div>
+
                       <div
                         style={{
                           background: "#666666",
                           width: "16px",
                           height: "19px",
-                          marginLeft: "118px",
+                          marginRight: "6px",
                           borderRadius: "4px",
                         }}
                         className="flex items-center justify-center "
@@ -215,33 +244,42 @@ const AccordionButton3 = ({ icon, title }) => {
                       </div>
                     </div>
                     <div
-                      style={{ borderColor: "#cccccc", background: "#dddddd" }}
-                      className="flex items-center h-38px border-t"
+                      style={{ borderColor: "#cccccc", background: hover === 4 ? "#946cf0" : "#dddddd" }}
+                      className="flex items-center h-38px border-t justify-between cursor-pointer"
+                      onMouseEnter={() => setHover(4)}
+                      onMouseLeave={() => setHover(null)}
                     >
-                      <p
-                        style={{
-                          background: "444444",
-                          letterSpacing: "-0.031em",
-                        }}
-                        className="ml-45px mt-11px mb-20px text-13px"
-                      >
-                        L
-                      </p>
-                      <p
-                        style={{
-                          background: "444444",
-                          letterSpacing: "-0.031em",
-                        }}
-                        className="ml-13px mt-13px mb-16px text-12px font-malgun"
-                      >
-                        챔피언쉽
-                      </p>
+                      <div className="flex items-center">
+                        <p
+                          style={{
+                            background: "444444",
+                            letterSpacing: "-0.031em",
+                          }}
+                          className="ml-45px mt-11px mb-20px text-13px"
+                        >
+                          L
+                        </p>
+                        <p
+                          style={{
+                            background: "444444",
+                            letterSpacing: "-0.031em",
+                            overflow: "hidden",
+                            whiteSpace: "nowrap",
+                            textOverflow: "ellipsis",
+                            maxWidth: "160px",
+                            color: hover === 4 ? "#ffffff" : "#000000",
+                          }}
+                          className="ml-13px mt-13px mb-16px text-12px font-malgun"
+                        >
+                          챔피언쉽
+                        </p>
+                      </div>
                       <div
                         style={{
                           background: "#666666",
                           width: "16px",
                           height: "19px",
-                          marginLeft: "142px",
+                          marginRight: "6px",
                           borderRadius: "4px",
                         }}
                         className="flex items-center justify-center"
@@ -260,30 +298,39 @@ const AccordionButton3 = ({ icon, title }) => {
                   </>
                 )}
                 <div
-                  style={{ borderColor: "#cccccc", background: "#eeeeee" }}
-                  className="flex items-center h-38px border-t"
+                  style={{ borderColor: "#cccccc", background: hover === 5 ? "#946cf0" : "#eeeeee" }}
+                  className="flex items-center h-38px border-t justify-between cursor-pointer"
+                  onMouseEnter={() => setHover(5)}
+                  onMouseLeave={() => setHover(null)}
                 >
-                  <img className="ml-31px" src={flag2} alt="img" />
-                  <p
-                    style={{ background: "444444", letterSpacing: "-0.031em" }}
-                    className="ml-4px mt-14px mb-15px text-13px font-malgun"
-                  >
-                    이탈리아
-                  </p>
+                  <div className="flex items-center">
+                    <img className="ml-31px" src={flag2} alt="img" />
+                    <p
+                      style={{
+                        background: "444444",
+                        letterSpacing: "-0.031em",
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                        maxWidth: "160px",
+                        color: hover === 5 ? "#ffffff" : "",
+                      }}
+                      className="ml-4px mt-14px mb-15px text-13px font-malgun"
+                    >
+                      이탈리아
+                    </p>
+                  </div>
                   <div
                     style={{
                       background: "#666666",
                       width: "29px",
                       height: "19px",
-                      marginLeft: "125px",
+                      marginRight: "6px",
                       borderRadius: "4px",
                     }}
                     className="flex items-center justify-center"
                   >
-                    <p
-                      style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                      className="text-12px  font-malgun mb-px"
-                    >
+                    <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                       100
                     </p>
                   </div>
@@ -291,33 +338,42 @@ const AccordionButton3 = ({ icon, title }) => {
                 <div
                   style={{
                     borderColor: "#dddddd",
-                    background: "#eeeeee",
+                    background: hover === 6 ? "#946cf0" : "#eeeeee",
                     borderBottomRightRadius: "4px",
                     borderBottomLeftRadius: "4px",
                   }}
-                  className="flex items-center h-38px border-t"
+                  className="flex items-center h-38px border-t justify-between cursor-pointer"
+                  onMouseEnter={() => setHover(6)}
+                  onMouseLeave={() => setHover(null)}
                 >
-                  <img className="ml-31px" src={flag3} alt="img" />
-                  <p
-                    style={{ background: "444444", letterSpacing: "-0.031em" }}
-                    className="ml-4px mt-14px mb-15px text-13px font-malgun"
-                  >
-                    스페인
-                  </p>
+                  <div className="flex items-center">
+                    <img className="ml-31px" src={flag3} alt="img" />
+                    <p
+                      style={{
+                        background: "444444",
+                        letterSpacing: "-0.031em",
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                        maxWidth: "160px",
+                        color: hover === 6 && "#ffffff",
+                      }}
+                      className="ml-4px mt-14px mb-15px text-13px font-malgun"
+                    >
+                      스페인
+                    </p>
+                  </div>
                   <div
                     style={{
                       background: "#666666",
                       width: "29px",
                       height: "19px",
-                      marginLeft: "137px",
+                      marginRight: "6px",
                       borderRadius: "4px",
                     }}
                     className="flex items-center justify-center"
                   >
-                    <p
-                      style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                      className="text-12px  font-malgun mb-px"
-                    >
+                    <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                       100
                     </p>
                   </div>
@@ -327,96 +383,120 @@ const AccordionButton3 = ({ icon, title }) => {
           )}
           <div
             style={{
-              background: "#ffffff",
+              background: hover === 7 ? "#946cf0" : "#ffffff",
               borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px h-37px"
+            className="flex items-center ml-2px mb-2px mr-2px h-37px justify-between cursor-pointer"
+            onMouseEnter={() => setHover(7)}
+            onMouseLeave={() => setHover(null)}
           >
-            <img className="ml-6px" src={img3} alt="img" />
-            <p
-              style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-5px mt-13px mb-14px font-malgun"
-            >
-              농구
-            </p>
+            <div className="flex items-center">
+              <img style={{ filter: hover === 7 && "brightness(0) invert(1)" }} className="ml-6px" src={img3} alt="img" />
+              <p
+                style={{
+                  color: hover === 7 ? "#ffffff" : "#444444",
+                  letterSpacing: "-0.031em",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textOverflow: "ellipsis",
+                  maxWidth: "190px",
+                }}
+                className="text-13px ml-5px mt-13px mb-14px font-malgun"
+              >
+                농구
+              </p>
+            </div>
             <div
               style={{
                 background: "#6b22ff",
                 width: "29px",
                 height: "19px",
-                marginLeft: "183px",
+                marginRight: "6px",
                 borderRadius: "4px",
               }}
               className="flex items-center justify-center"
             >
-              <p
-                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px  font-malgun mb-px"
-              >
+              <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                 100
               </p>
             </div>
           </div>
           <div
             style={{
-              background: "#ffffff",
+              background: hover === 8 ? "#946cf0" : "#ffffff",
               borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px h-37px"
+            className="flex items-center ml-2px mb-2px mr-2px h-37px justify-between cursor-pointer"
+            onMouseEnter={() => setHover(8)}
+            onMouseLeave={() => setHover(null)}
           >
-            <img className="ml-6px" src={img1} alt="img" />
-            <p
-              style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-5px mt-13px mb-14px font-malgun"
-            >
-              야구
-            </p>
+            <div className="flex items-center">
+              <img style={{ filter: hover === 8 && "brightness(0) invert(1)" }} className="ml-6px" src={img1} alt="img" />
+              <p
+                style={{
+                  color: hover === 8 ? "#ffffff" : "#444444",
+                  letterSpacing: "-0.031em",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textOverflow: "ellipsis",
+                  maxWidth: "190px",
+                }}
+                className="text-13px ml-5px mt-13px mb-14px font-malgun"
+              >
+                야구
+              </p>
+            </div>
             <div
               style={{
                 background: "#6b22ff",
                 width: "29px",
                 height: "19px",
-                marginLeft: "183px",
+                marginRight: "6px",
                 borderRadius: "4px",
               }}
-              className="flex items-center justify-center "
+              className="flex items-center justify-center"
             >
-              <p
-                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px font-malgun mb-px"
-              >
+              <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                 100
               </p>
             </div>
           </div>
           <div
             style={{
-              background: "#ffffff",
+              background: hover === 9 ? "#946cf0" : "#ffffff",
               borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mr-2px h-37px"
+            className="flex items-center ml-2px mb-2px mr-2px h-37px justify-between cursor-pointer"
+            onMouseEnter={() => setHover(9)}
+            onMouseLeave={() => setHover(null)}
           >
-            <img className="ml-7px" src={img4} alt="img" />
-            <p
-              style={{ color: "#444444", letterSpacing: "-0.031em" }}
-              className="text-13px ml-6px mt-13px mb-14px font-malgun"
-            >
-              격투기
-            </p>
+            <div className="flex items-center">
+              <img style={{ filter: hover === 9 && "brightness(0) invert(1)" }} className="ml-6px" src={img4} alt="img" />
+              <p
+                style={{
+                  color: hover === 9 ? "#ffffff" : "#444444",
+                  letterSpacing: "-0.031em",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textOverflow: "ellipsis",
+                  maxWidth: "190px",
+                }}
+                className="text-13px ml-5px mt-13px mb-14px font-malgun"
+              >
+                격투기
+              </p>
+            </div>
             <div
               style={{
                 background: "#6b22ff",
                 width: "29px",
                 height: "19px",
-                marginLeft: "170px",
+                marginRight: "6px",
                 borderRadius: "4px",
               }}
               className="flex items-center justify-center"
             >
-              <p
-                style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
-                className="text-12px font-malgun mb-px"
-              >
+              <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                 100
               </p>
             </div>
