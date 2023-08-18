@@ -219,7 +219,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
 
     return (
         <div 
-            style={{height: "289px"}}
+            style={{height: "205px"}}
             className="flex w-full px-7px pb-7px"
         >
             <div className="w-full flex flex-col">
