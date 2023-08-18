@@ -75,7 +75,7 @@ const Search = () => {
 
   return (
     <div className="relative">
-      <div className="items-start ml-10px mt-10px">
+      <div className="items-start mr-4px ml-10px mt-10px">
         <div
           style={{
             background: "#aea9cc",

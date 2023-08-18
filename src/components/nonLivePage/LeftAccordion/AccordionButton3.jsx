@@ -85,8 +85,9 @@ const AccordionButton3 = ({ icon, title }) => {
             background: "#420572",
             borderBottomRightRadius: "5px",
             borderBottomLeftRadius: "5px",
+            paddingBottom: "0.1px",
           }}
-          className="pt-2px  pb-2px"
+          className="pt-2px"
         >
           <div
             onClick={() => setShowCard((prev) => !prev)}

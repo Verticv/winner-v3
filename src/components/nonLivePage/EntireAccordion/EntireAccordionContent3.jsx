@@ -86,7 +86,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: leftActive || isHovered ? "#eeeeee" : "#682aa7",
+            color: leftActive || isHovered ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="mr-8px mb-2px font-malgun"
@@ -129,7 +129,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: centerActive || isHovered1 ? "#eeeeee" : "#682aa7",
+            color: centerActive || isHovered1 ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className=" mr-7px mb-2px font-malgun"
@@ -173,7 +173,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: rightActive || isHovered2 ? "#eeeeee" : "#682aa7",
+            color: rightActive || isHovered2 ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="font-malgun mb-2px mr-9px"

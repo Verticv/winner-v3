@@ -79,9 +79,7 @@ const AccordionButton = ({ icon, title }) => {
             style={{ background: "#5423a0", borderRadius: "4px" }}
             className="flex items-center justify-center w-18px h-19px rounded-lg mt-11px mb-12px"
           >
-            <p className="text-13px text-white">
-              5
-            </p>
+            <p className="text-13px text-white">5</p>
           </div>
           <img
             src={Arrow}
@@ -91,10 +89,8 @@ const AccordionButton = ({ icon, title }) => {
         </div>
       </div>
       {isOpen && (favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id || League[0]?.id) && (
-        <div style={{ background: "#420572" }} className="pt-2px rounded-b-lg pb-2px">
-          <div>
-            <AccordionContent setIsOpen={setIsOpen} />
-          </div>
+        <div style={{ background: "#420572", borderBottomLeftRadius:'6px', borderBottomRightRadius: '6px', paddingBottom:'0.1px' }} className="pt-2px rounded-b-lg">
+          <AccordionContent setIsOpen={setIsOpen} />
         </div>
       )}
     </div>
