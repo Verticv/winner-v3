@@ -12,9 +12,9 @@ import TitleIcon from '../../../images/minigames/title_icon.png'
 const PowerballGame = ({state, setChosen, setSelectedOption}) => {
 
     const PanelTitle = ({title}) => (
-        <div className="w-full h-30px flex items-center pl-3px space-x-5px">
-            <img className="z-10 object-none -ml-px" src={TitleIcon} alt="" />
-            <p className=" text-14px tracking-tight pt-2px text-r666666">{title}</p>
+        <div className="w-full h-29px flex items-center pl-3px space-x-5px">
+            <img className="z-10 object-none -ml-px -mt-px" src={TitleIcon} alt="" />
+            <p className=" text-14px tracking-tight text-r666666 -mt-px">{title}</p>
         </div>
     )
 

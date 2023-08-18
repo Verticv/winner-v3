@@ -14,9 +14,9 @@ const PowerLadderGame = ({setSelectedOption}) => {
     const [state, setstate] = useState("")
 
     const PanelTitle = ({title}) => (
-        <div className="w-full h-30px flex items-center pl-3px space-x-5px">
-          <img className="z-10 object-none -ml-px" src={TitleIcon} alt="" />
-          <p style={{color:"#666666"}} className=" text-14px tracking-tight pt-2px">{title}</p>
+        <div className="w-full h-29px flex items-center pl-3px space-x-5px">
+          <img className="z-10 object-none -ml-px -mt-px" src={TitleIcon} alt="" />
+          <p style={{color:"#666666"}} className=" text-14px tracking-tight -mt-px">{title}</p>
         </div>
     )
 
@@ -61,8 +61,8 @@ const PowerLadderGame = ({setSelectedOption}) => {
                             style={{height:"36px", background: titleBg}} 
                             className="flex-shrink-0 shadow-plain2 w-38px rounded-4px ml-2px flex flex-col items-center justify-center text-12px tracking-tight text-white -space-y-4px"
                         >
-                            <p className="font-spoqaMedium">{titleNumber}</p>
-                            <p className="font-spoqa">게임</p>
+                            <p className="font-spoqaMedium -mt-px">{titleNumber}</p>
+                            <p className="font-spoqa -mt-px">게임</p>
                         </div>
 
                         <div className="w-full h-full flex flex-col items-center justify-center">
@@ -95,13 +95,13 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             setSelectedOption([{type:"파워사다리", name:"줄갯수", selection: "3줄", buttonType: "blue_sq"}])
                                         }
                                     }} 
-                                    style={{width:"121px", height:"127px", marginTop:"14px"}} 
+                                    style={{width:"121px", height:"127px", marginTop:"13px"}} 
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
-                                        className="z-20 font-swagger text-white"
+                                        className="z-20 font-swagger text-white mt-2px"
                                     >
                                         {titleNumber === 1 ? "홀" : titleNumber === 2 ? "좌" : "3줄"}
                                     </p>
@@ -121,13 +121,13 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             setSelectedOption([{type:"파워사다리", name:"줄갯수", selection: "4줄", buttonType: "red_sq"}])
                                         }
                                     }} 
-                                    style={{width:"121px", height:"127px", marginTop: "14px"}} 
+                                    style={{width:"121px", height:"127px", marginTop: "13px"}} 
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
-                                        className="z-20 font-swagger text-white text-20px"
+                                        className="z-20 font-swagger text-white text-20px mt-2px"
                                     >
                                         {titleNumber === 1 ? "짝" : titleNumber === 2 ? "우" : "4줄"}
                                     </p>
@@ -137,7 +137,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                         </div>
                     ) : titleNumber === 4 ? (
                         <div className="flex flex-col items-center w-full h-full">
-                            <div className="flex space-x-18px pt-7px"> 
+                            <div className="flex space-x-18px pt-6px -ml-2px"> 
                                 <div className="flex flex-col items-center">
                                     <div 
                                         onClick={() => {
@@ -173,7 +173,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                     <div className="text-12px font-robotoRegular tracking-tight  h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.80</div>
                                 </div>
                             </div>
-                            <div className="flex space-x-18px mt-10px"> 
+                            <div className="flex space-x-18px mt-9px -ml-2px"> 
                                 <div className="flex flex-col items-center">
                                     <div 
                                         onClick={() => {
@@ -219,7 +219,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
 
     return (
         <div 
-            style={{height: "205px"}}
+            style={{height: "289px"}}
             className="flex w-full px-7px pb-7px"
         >
             <div className="w-full flex flex-col">

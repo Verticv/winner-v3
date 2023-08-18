@@ -23,7 +23,7 @@ const PowerBallResults = ({array}) => {
     return (
         
         <table>
-            <thead className="rounded-10px text-14px tracking-tight text-eeeeee h-55px border-b border-dddddd"
+            <thead className="rounded-10px text-14px tracking-tight text-eeeeee h-54px border-b border-dddddd"
             style={{background:'linear-gradient(to right, #9d3bbb, #5423a0)'}}>
             <tr>
                 <td style={{width: "156px"}} className="text-center">회차</td>

@@ -16,16 +16,16 @@ const HorizontalMenu4 = ({
                 background: selectedTab === item.id
                   ? 'linear-gradient(to top, #4f3a7a 0%, #a05bf6 50%, #cb78e6 100%)'
                       : 'linear-gradient(to top, #4f3a7a 0%, #a05bf6 50%, #f0d3ff 100%)',
-                  boxShadow: "0 8px 0 rgba(0, 0, 0, 0.5)"
+                  boxShadow: "0 0 8px rgba(0, 0, 0, 0.5)"
               }} 
-                className={`relative overflow-hidden h-41px w-full rounded-t-4px flex justify-center p-px`} 
+                className={`relative overflow-hidden h-41px w-full rounded-t-6px flex justify-center p-px`} 
                 onClick={() => setSelectedTab(item.id)}
                 onMouseOver={() => setHover(item.id)}
                 onMouseLeave={() => setHover(null)}
             >
                 <div 
                   style={{
-                    height: "39px",
+                    height: "43px",
                     background: selectedTab === item.id 
                     ? "linear-gradient(to top, #491f9c, #9e3cbc)" 
                     :'linear-gradient(to top, #ccc4ff, #ffd9f5)',

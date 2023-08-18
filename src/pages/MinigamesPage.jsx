@@ -119,8 +119,8 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
               style={{
                 width: '905px',
                 height: '509px',
-                background: '#4d1a6f',
-                borderColor:'rgba(0, 0, 0, 0.6)'
+                background: 'rgba(20, 3, 59, 0.6)',
+                borderColor:'#42194c'
               }}
               className='rounded-10px overflow-hidden border'
             >
@@ -129,12 +129,12 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
                   <iframe
                     src='https://ntry.com/scores/powerball/live.php'
                     width='860'
-                    height='640'
+                    height='642'
                     scrolling='yes'
                     frameborder='0'
                     style={{
                       WebkitTransform: 'scale(0.77)',
-                      marginTop: '-66px',
+                      marginTop: '-68px',
                     }}
                     title='powerball'
                   ></iframe>
@@ -143,12 +143,12 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
                   <iframe
                     src='https://ntry.com/scores/power_ladder/live.php'
                     width='860'
-                    height='640'
+                    height='642'
                     scrolling='yes'
                     frameborder='0'
                     style={{
                       WebkitTransform: 'scale(0.77)',
-                      marginTop: '-66px',
+                      marginTop: '-68px',
                     }}
                     title='powerball'
                   ></iframe>
@@ -157,12 +157,12 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
                   <iframe
                     src='https://ntry.com/scores/speedkeno/live.php'
                     width='860'
-                    height='640'
+                    height='642'
                     scrolling='yes'
                     frameborder='0'
                     style={{
                       WebkitTransform: 'scale(0.77)',
-                      marginTop: '-66px',
+                      marginTop: '-68px',
                     }}
                     title='powerball'
                   ></iframe>
@@ -171,12 +171,12 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
                   <iframe
                     src='https://ntry.com/scores/keno_ladder/live.php'
                     width='860'
-                    height='640'
+                    height='642'
                     scrolling='yes'
                     frameborder='0'
                     style={{
                       WebkitTransform: 'scale(0.77)',
-                      marginTop: '-66px',
+                      marginTop: '-68px',
                     }}
                     title='kinoladder'
                   ></iframe>
@@ -189,7 +189,7 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
             />
           </div>
 
-          <div className='mt-8px'>
+          <div className='mt-7px'>
             <MinigamesPanel
               selectedGame={selectedGame}
               setSelectedGame={setSelectedGame}

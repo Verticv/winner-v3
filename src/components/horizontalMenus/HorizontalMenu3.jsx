@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router';
 import ClockIcon from '../../images/minigames/clock_icon.png'
 import ClockIconGray from '../../images/minigames/clock_gray.png'
@@ -12,13 +12,14 @@ const HorizontalMenu3 = ({
 }) => {
 
     const history = useHistory();
-    const [isHover, setHover] = useState(null)
+   // const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
       return items.map(item => (
         <button 
           key={item.id} 
           style={{
+            width: item.id === 0 || item.id === 1 ? '313px' : '314px',
             height:"59px",
             background: selectedTab === item.path 
             ?'linear-gradient( to top, #4f3a7a 0%, #a05bf6 50%, #cb78e6 100%)'
@@ -40,8 +41,8 @@ const HorizontalMenu3 = ({
               }
             ])
           }}
-          onMouseOver={() => setHover(item.path)}
-          onMouseLeave={() => setHover(null)}
+          // onMouseOver={() => setHover(item.path)}
+          // onMouseLeave={() => setHover(null)}
         >
           
             <div 
@@ -53,7 +54,7 @@ const HorizontalMenu3 = ({
                
             }}
             
-              className={`w-full rounded-6px flex items-center justify-between pr-20px relative hover:filter hover:brightness-90`}>
+              className={` ${selectedTab === item.path?'pr-21px':'pr-20px'} w-full rounded-6px flex items-center justify-between relative hover:filter hover:brightness-90`}>
               <div className={`flex items-center`}>
                 <img 
                 className={`
@@ -82,13 +83,13 @@ const HorizontalMenu3 = ({
                     : item.id === 2
                     ? "ml-8px"
                     : "ml-7px"         
-                  } text-20px tracking-tight font-bold pt-px`}>
+                  } text-20px tracking-Stightest font-bold pt-px`}>
                     {item.text}
                 </span>
               </div>
               
               <div className="flex items-center pt-px">
-                <img className={`${selectedTab === item.path ? 'mr-6px':'mr-4px'} object-none mb-4px mt-px`} src={selectedTab === item.path ? ClockIconGray : ClockIcon} alt="" />
+                <img className={` mr-4px object-none mb-4px mt-px`} src={selectedTab === item.path ? ClockIconGray : ClockIcon} alt="" />
                 <div 
                   style={{color: selectedTab === item.path ? "#ffffff" : "#5e399a"}}
                   className="text-24px tracking-tight font-swagger flex h-24px items-center mt-px">
