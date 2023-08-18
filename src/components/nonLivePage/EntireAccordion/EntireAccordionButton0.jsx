@@ -10,6 +10,7 @@ import EntireAccordionContent0 from "./EntireAccordionContent0";
 const EntireAccordionButton0 = ({ icon, title, cards, handleZoomClick }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [activeStar, setActiveStar] = useState(false);
+  const [hoverStar, setHoverStar] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -48,18 +49,20 @@ const EntireAccordionButton0 = ({ icon, title, cards, handleZoomClick }) => {
           <img
             style={{
               borderColor: "#764cbb",
-              height: activeStar ? "33px" : "31px",
-              paddingRight: activeStar ? "1px" : "2px",
-              marginTop: activeStar ? "2px" : "",
+              height: activeStar || hoverStar ? "33px" : "31px",
+              paddingRight: activeStar || hoverStar ? "1px" : "2px",
+              marginTop: activeStar || hoverStar ? "2px" : "",
             }}
             className="border-r mb-px -mr-px object-none"
-            src={activeStar ? activeStarIcon : icon}
+            src={activeStar || hoverStar ? activeStarIcon : icon}
             alt="icon"
             onClick={(e) => {
               e.stopPropagation();
               setActiveStar((prev) => !prev);
               handleZoomClick("zoom-out");
             }}
+            onMouseEnter={() => setHoverStar(true)}
+            onMouseLeave={() => setHoverStar(false)}
           />
           <img
             src={Arrow}

@@ -80,8 +80,8 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               flexShrink: 0,
               height: "90vh",
               marginRight: "1px",
-              width: "659px",
-              paddingLeft: "9px",
+              width: "650px",
+              paddingLeft: "4px",
             }}
           >
             <Tabs active={active} setActive={setActive} />

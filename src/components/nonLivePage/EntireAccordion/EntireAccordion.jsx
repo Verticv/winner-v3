@@ -153,7 +153,7 @@ const EntireAccordion = () => {
                   style={{
                     color: activeId === content.id ? "#ffffff" : "#5e399a",
                   }}
-                  className="text-13px tracking-tight font-bold mt-px"
+                  className="text-13px tracking-tight font-bold mt-2px"
                 >
                   {content.text}
                 </p>

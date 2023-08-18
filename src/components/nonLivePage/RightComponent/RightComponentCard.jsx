@@ -48,7 +48,7 @@ const RightComponentCard = () => {
                     style={{
                       background: "#d60447",
                       borderRadius: "4px",
-                      height: "20px",
+                      height: "19px",
                     }}
                     className="flex items-center"
                   >
@@ -69,13 +69,13 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-7px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px pt-9px text-12px font-malgun tracking-tight">
                 아스널 VS 리버풀
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px  text-12px font-malgun tracking-tight">
                 승무패[정규시간]
               </p>
-              <div className="flex items-center justify-between mb-13px mt-2px">
+              <div className="flex items-center justify-between mb-9px mt-2px">
                 <p
                   style={{ color: "#5e399a", marginTop: "1px", maxWidth: "240px" }}
                   className="ml-6px text-12px font-bold tracking-tight"
@@ -99,13 +99,13 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-7px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px pt-9px text-12px font-malgun tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight">
                 승무패[정규시간]
               </p>
-              <div className="flex items-center justify-between mb-13px mt-2px">
+              <div className="flex items-center justify-between mb-9px mt-2px">
                 <p
                   style={{ color: "#5e399a", maxWidth: "240px" }}
                   className="ml-6px mt-3px text-12px font-bold tracking-tight"
@@ -222,7 +222,7 @@ const RightComponentCard = () => {
                     style={{
                       background: "#461e96",
                       borderRadius: "4px",
-                      height: "20px",
+                      height: "19px",
                     }}
                     className="flex items-center"
                   >
@@ -243,13 +243,13 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-7px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px pt-9px text-12px font-malgun tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight ">
                 승무패[정규시간]
               </p>
-              <div className="flex items-center justify-between mb-13px mt-2px">
+              <div className="flex items-center justify-between mb-9px mt-2px">
                 <p
                   style={{ color: "#5e399a", maxWidth: "240px" }}
                   className="ml-6px mt-3px text-12px font-bold tracking-tight"

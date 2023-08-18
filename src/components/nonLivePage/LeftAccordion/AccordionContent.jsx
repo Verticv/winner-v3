@@ -71,10 +71,6 @@ const AccordionContent = ({ setIsOpen }) => {
   }, [bundesliga]);
   return (
     <>
-      {/* {!isDeleted && ( */}
-
-      {/* )} */}
-
       {!isDeleted && (
         <>
           {(favoritePreMatch[0]?.id ||
@@ -192,7 +188,6 @@ const AccordionContent = ({ setIsOpen }) => {
         </>
       )}
 
-      {/* </div> */}
       {!isDeleted && (
         <>
           {showCard1 && favoriteLaLiga[0]?.id && (
@@ -382,27 +377,6 @@ const AccordionContent = ({ setIsOpen }) => {
           )}
         </>
       )}
-
-      {/* <div
-        style={{
-          background: "#ffffff",
-          borderRadius: "4px",
-        }}
-        className="flex items-center justify-between mx-2px rounded-lg h-33px mb-1px"
-      >
-        <div className="flex items-center">
-          <img className="ml-6px" src={img1} alt="img" />
-          <p
-            style={{ color: "#444444", marginBottom: "2px" }}
-            className="text-12px ml-5px"
-          >
-            메이저리그 (MLB)
-          </p>
-        </div>
-        <div>
-          <img className="mr-6px" src={iconStar} alt="img" />
-        </div>
-      </div> */}
     </>
   );
 };

@@ -395,12 +395,12 @@ const RightComponent = () => {
                         </div>
                       </div>
                       <div className="flex items-center">
-                        <p className="text-12px text-white mr-px mb-10px ml-6px font-MalgunGothicBold tracking-tight">
+                        <p className="text-12px text-white mr-px mb-10px ml-6px font-bold tracking-tight">
                           티켓번호
                         </p>
                         <p
                           style={{ color: "#ffd98b" }}
-                          className="text-12px mb-14px mt-5px ml-4px font-MalgunGothicBold tracking-tight"
+                          className="text-12px mb-14px mt-5px ml-4px font-bold tracking-tight"
                         >
                           4004791
                         </p>

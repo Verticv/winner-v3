@@ -28,16 +28,16 @@ const CenterComponent = ({ setEnglandActive }) => {
         <div
           style={{
             background: "linear-gradient(to right, #f67700, #f100ff)",
-            width: "323px",
+            width: "315px",
             height: "25px",
           }}
           className="flex items-center rounded-full ml-7px "
         >
           <img className="ml-2px" src={icon} alt="img" />
-          <p style={{ color: "#eeeeee", letterSpacing: "-0.1em" }} className="ml-5px text-13px mt-8px mb-7px font-bold">
+          <p style={{ color: "#eeeeee", letterSpacing: "-0.13em" }} className="ml-5px text-13px mt-8px mb-7px font-bold">
             다폴더 보너스 추가 배당
           </p>
-          <p style={{ color: "#ffd98b", letterSpacing: "-0.066em" }} className="ml-5px mb-px text-12px font-spoqa">
+          <p style={{ color: "#ffd98b", letterSpacing: "-0.08em" }} className="ml-5px mb-px text-12px font-spoqa">
             (3, 6, 9) 폴더 이상 조합시 지급
           </p>
         </div>
@@ -80,7 +80,7 @@ const CenterComponent = ({ setEnglandActive }) => {
                   }}
                 />
                 <p
-                  style={{ color: "#eeeeee", letterSpacing: "-0.031em" }}
+                  style={{ color: "#eeeeee", letterSpacing: "-0.1em" }}
                   className="mt-12px mb-12px text-13px font-spoqaMedium"
                 >
                   3폴더 이상
@@ -133,7 +133,7 @@ const CenterComponent = ({ setEnglandActive }) => {
                 <p
                   style={{
                     color: "#eeeeee",
-                    letterSpacing: "-0.031em",
+                    letterSpacing: "-0.1em",
                     marginLeft: "1.5px",
                   }}
                   className="ml-2px mt-12px mb-12px text-13px font-spoqaMedium"
@@ -188,7 +188,7 @@ const CenterComponent = ({ setEnglandActive }) => {
                 <p
                   style={{
                     color: "#eeeeee",
-                    letterSpacing: "-0.031em",
+                    letterSpacing: "-0.1em",
                     marginLeft: "1.5px",
                   }}
                   className="ml-2px mt-12px mb-12px text-13px font-spoqaMedium"

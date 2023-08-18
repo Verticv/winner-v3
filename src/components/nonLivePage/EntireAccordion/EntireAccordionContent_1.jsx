@@ -117,10 +117,11 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
+            maxWidth:'260px'
           }}
           className="ml-8px mb-2px font-malgun"
         >
-          {card.team2}
+          {card.team2}asjdasiojdoais daijodaiojdajiosdaojisd asjiod aojidajosd ajiosdajiosdajiosda
         </p>
         <p
           style={{
