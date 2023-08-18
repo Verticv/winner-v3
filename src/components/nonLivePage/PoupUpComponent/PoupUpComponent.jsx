@@ -82,7 +82,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
                 </p>
                 <p
                   style={{ fontSize: "14px", color: "#0072bc" }}
-                  className="mt-3px ml-4px tracking-tight font-bold"
+                  className="mt-2px ml-4px tracking-tight font-bold"
                 >
                   4004791
                 </p>

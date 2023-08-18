@@ -224,7 +224,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             height: "30px",
             fontFamily: "MalgunGothicRegular",
             background: leftActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: leftActive ? "#eeeeee" : "#444444",
+            color: leftActive ? "#eeeeee" : "#111111",
             ...(isHovered ? hoverStyle : null),
           }}
           onMouseEnter={handleMouseEnter}
@@ -238,7 +238,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               whiteSpace: "nowrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
-              // maxWidth: "420px",
+              maxWidth: "190px",
             }}
             className="ml-9px mt-10px mb-12px"
           >
@@ -251,7 +251,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               color: card.score1ArrowUp ? "#f04281" : card.score1ArrowDown ? "#0072bc" : "",
               letterSpacing: "-0.031em",
             }}
-            className="flex items-center mr-10px mt-10px mb-12px"
+            className="flex items-center mr-9px mt-10px mb-12px flex-shrink-0"
           >
             <span>
               {card.score1ArrowUp ? (
@@ -273,11 +273,11 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               )}
             </span>
             {card.score1 ? (
-              <p style={{ width: "28px" }} className="text-right flex justify-end">
+              <p style={{ width: "28px"}} className="text-right flex justify-end">
                 {card.score1}
               </p>
             ) : (
-              <img src={icon1} alt="icon1" className="mr-4px mt-2px" />
+              <img src={icon1} alt="icon1" className="mr-5px mt-2px" />
             )}
           </p>
         </div>
@@ -365,14 +365,14 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               color: card.score1ArrowUp ? "#0072bc" : card.score1ArrowDown ? "#f04281" : "",
               letterSpacing: "-0.031em",
             }}
-            className="flex items-center ml-10px mt-10px mb-12px"
+            className="flex items-center ml-9px mt-10px mb-12px flex-shrink-0"
           >
             {card.score3 ? (
               <p style={{ width: "28px" }} className="text-left">
                 {card.score3}
               </p>
             ) : (
-              <img src={icon1} alt="icon1" className="ml-4px mt-2px" />
+              <img src={icon1} alt="icon1" className="ml-5px mt-2px" />
             )}
             <span>
               {card.score3ArrowUp ? (
@@ -402,6 +402,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               whiteSpace: "nowrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
+              maxWidth: "185px",
             }}
             className=" mr-9px mt-8px mb-10px"
           >
@@ -416,7 +417,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             background: lastItemActive === card ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: lastItemActive === card ? "#eeeeee" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
-            borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "5px"}`,
+            borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "4px"}`,
           }}
           onMouseEnter={handleMouseEnter3}
           onMouseLeave={handleMouseLeave3}

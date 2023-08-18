@@ -23,13 +23,14 @@ const AccordionButton1 = ({ icon, title, card }) => {
         style={{
           background: "linear-gradient(to top, #6b22ff, #df52ff)",
           width: "278px",
+          height: "44px",
           borderRadius: "5px",
           borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
         className={`flex items-center justify-between ${
           isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer h-43px`}
+        } cursor-pointer`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">

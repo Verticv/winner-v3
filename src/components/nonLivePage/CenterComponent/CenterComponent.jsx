@@ -264,7 +264,9 @@ const CenterComponent = ({ setEnglandActive }) => {
               boxShadow: activeId === 0 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="flex items-center rounded-full mr-5px cursor-pointer"
+            className={`${
+              activeId !== 0 && "filter hover:brightness-110"
+            } flex items-center rounded-full mr-5px cursor-pointer`}
             onClick={() => setActiveId(0)}
           >
             <img className="ml-8px object-none" src={activeId === 0 ? icon2 : icon_2} alt="img" />
@@ -280,7 +282,9 @@ const CenterComponent = ({ setEnglandActive }) => {
               boxShadow: activeId === 1 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="flex items-center rounded-full mr-6px cursor-pointer"
+            className={`${
+              activeId !== 1 && "filter hover:brightness-110"
+            } flex items-center rounded-full mr-6px cursor-pointer`}
             onClick={() => setActiveId(1)}
           >
             <img
@@ -296,7 +300,7 @@ const CenterComponent = ({ setEnglandActive }) => {
                 color: "#ffffff",
                 marginLeft: activeId === 1 ? "-6px" : "2px",
               }}
-              className="mt-5px mb-7px tracking-tight text-12px"
+              className={`mt-5px mb-7px tracking-tight text-12px`}
             >
               인기순
             </p>
@@ -309,7 +313,9 @@ const CenterComponent = ({ setEnglandActive }) => {
               boxShadow: activeId === 2 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
               fontFamily: "MalgunGothicRegular",
             }}
-            className="flex items-center rounded-full cursor-pointer"
+            className={`${
+              activeId !== 2 && "filter hover:brightness-110"
+            } flex items-center rounded-full cursor-pointer`}
             onClick={() => setActiveId(2)}
           >
             <img

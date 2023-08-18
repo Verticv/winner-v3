@@ -33,7 +33,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                 height: "57px",
                 borderRadius: "8px",
               }}
-              className="flex items-center justify-between"
+              className="flex items-center justify-between relative"
             >
               <div className="ml-13px items-center">
                 <div className="flex items-center pr-10px">
@@ -48,7 +48,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                       textOverflow: "ellipsis",
                       maxWidth: "600px",
                     }}
-                    className="ml-4px mt-10px text-12px font-bold"
+                    className="ml-4px mt-11px text-12px font-bold"
                   >
                     잉글랜드 - 프리미어리그
                   </p>
@@ -77,7 +77,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                   </p>
                   <p
                     style={{ color: "#ffc900", letterSpacing: "-0.031em" }}
-                    className="ml-7px mr-3px -mb-3px mt-px text-12px font-bold"
+                    className="ml-7px mr-3px -mb-3px text-12px font-bold"
                   >
                     VS
                   </p>
@@ -96,7 +96,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive }) => {
                   </p>
                 </div>
               </div>
-              <div className="mr-13px mt-2px">
+              <div className="absolute mr-13px mt-2px right-0 top-0">
                 <img src={img} alt="icon" />
               </div>
             </div>

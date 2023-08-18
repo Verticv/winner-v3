@@ -51,8 +51,8 @@ const EntireAccordionContent = ({ card }) => {
     >
       <div
         style={{
-          // borderColor: "#bbbbbb",
-          borderColor: leftActive ? "#6227a5" : "#bbbbbb",
+          // borderColor: "#cccccc",
+          borderColor: leftActive ? "#6227a5" : "#cccccc",
           width: "211px",
           background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive || isHovered ? "#eeeeee" : "#444444",
@@ -86,7 +86,7 @@ const EntireAccordionContent = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: leftActive || isHovered ? "#eeeeee" : "#682aa7",
+            color: leftActive || isHovered ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="text-12 mr-9px font-malgun"
@@ -96,7 +96,7 @@ const EntireAccordionContent = ({ card }) => {
       </div>
       <div
         style={{
-          borderColor: centerActive ? "#6227a5" : "#bbbbbb",
+          borderColor: centerActive ? "#6227a5" : "#cccccc",
           width: "210px",
           background: centerActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: centerActive ? "#eeeeee" : "#444444",
@@ -129,7 +129,7 @@ const EntireAccordionContent = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: centerActive || isHovered1 ? "#eeeeee" : "#682aa7",
+            color: centerActive || isHovered1 ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="text-12  mr-9px font-malgun"
@@ -173,7 +173,7 @@ const EntireAccordionContent = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: rightActive || isHovered2 ? "#eeeeee" : "#682aa7",
+            color: rightActive || isHovered2 ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="text-12 mr-9px font-malgun"
