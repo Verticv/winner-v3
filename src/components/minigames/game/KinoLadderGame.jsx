@@ -219,7 +219,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
 
     return (
         <div 
-            style={{height: "289px"}}
+            style={{height: "205px"}}
             className="flex w-full"
         >
             <div className="w-full flex flex-col px-7px pb-7px">
