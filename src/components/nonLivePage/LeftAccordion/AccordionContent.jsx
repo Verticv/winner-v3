@@ -109,11 +109,10 @@ const AccordionContent = ({ setIsOpen }) => {
           )}
           {(favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id) && (
             <>
-              <div className="ml-7px mt-3px mb-6px">
+              <div className="ml-7px mt-4px mb-5px">
                 <p
                   style={{
                     letterSpacing: "-0.031em",
-                    fontFamily: "MalgunGothicRegular",
                   }}
                   className="text-10px text-white"
                 >

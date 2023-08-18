@@ -7,7 +7,7 @@ const RightComponentCard = () => {
         style={{
           background: "#eeeeee",
           width: "308px",
-          height: "595px",
+          // height: "595px",
           borderRadius: "4px",
         }}
         className=""
@@ -48,10 +48,11 @@ const RightComponentCard = () => {
                     style={{
                       background: "#d60447",
                       borderRadius: "4px",
+                      height: "20px",
                     }}
-                    className="flex items-center h-19px "
+                    className="flex items-center"
                   >
-                    <p className="ml-4px text-11px text-white font-bold tracking-tight">대기중</p>
+                    <p className="ml-4px text-11px text-white font-bold tracking-tight pt-px">대기중</p>
                   </div>
                 </div>
               </div>
@@ -221,10 +222,11 @@ const RightComponentCard = () => {
                     style={{
                       background: "#461e96",
                       borderRadius: "4px",
+                      height: "20px",
                     }}
-                    className="flex items-center h-19px"
+                    className="flex items-center"
                   >
-                    <p className="ml-10px text-11px text-white font-bold tracking-tight">수락</p>
+                    <p className="ml-10px text-11px text-white font-bold tracking-tight pt-px">수락</p>
                   </div>
                 </div>
               </div>

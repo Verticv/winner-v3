@@ -34,7 +34,7 @@ const EntireAccordionContent1 = ({ card }) => {
     <div
       style={{
         background: "#ffffff",
-        borderColor: "#bbbbbb",
+        borderColor: "#cccccc",
         width: "630px",
         borderBottomLeftRadius: "4px",
         borderBottomRightRadius: "4px",
@@ -43,12 +43,12 @@ const EntireAccordionContent1 = ({ card }) => {
     >
       <div
         style={{
-          borderColor: "#bbbbbb",
+          borderColor: leftActive ? "#6227a5" : "#cccccc",
           width: "316px",
           background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive ? "#eeeeee" : "#444444",
           ...(isHovered ? hoverStyle : null),
-          borderBottomLeftRadius: "4px",
+          borderBottomLeftRadius: "3px",
         }}
         className="flex items-center justify-between border-r  h-30px cursor-pointer"
         onClick={() => {
@@ -77,7 +77,7 @@ const EntireAccordionContent1 = ({ card }) => {
         <p
           style={{
             fontSize: "13px",
-            color: leftActive || isHovered ? "#eeeeee" : "#682aa7",
+            color: leftActive || isHovered ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="mr-9px font-malgun"
@@ -87,13 +87,13 @@ const EntireAccordionContent1 = ({ card }) => {
       </div>
       <div
         style={{
-          borderColor: "#bbbbbb",
+          borderColor: rightActive ? "#6227a5" : "#cccccc",
           width: "314px",
           height: "100%",
           background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#eeeeee" : "#444444",
           ...(isHovered1 ? hoverStyle : null),
-          borderBottomRightRadius: "4px",
+          borderBottomRightRadius: "3px",
         }}
         className="flex items-center justify-between cursor-pointer"
         onClick={() => {
@@ -114,6 +114,7 @@ const EntireAccordionContent1 = ({ card }) => {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
+            maxWidth: "260px",
           }}
           className="ml-8px mb-px -mt-2px font-malgun"
         >
@@ -122,7 +123,7 @@ const EntireAccordionContent1 = ({ card }) => {
         <p
           style={{
             fontSize: "13px",
-            color: rightActive || isHovered1 ? "#eeeeee" : "#682aa7",
+            color: rightActive || isHovered1 ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
             whiteSpace: "nowrap",
             overflow: "hidden",

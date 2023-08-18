@@ -170,7 +170,7 @@ const Tabs = ({ active, setActive }) => {
       }}
     >
       <button
-        className="leftArrow hover:brightness-110 filter"
+        className="leftArrow hover:brightness-110 filter flex-shrink-0"
         style={{
           background: "#edd9f2",
           width: "25px",
@@ -206,7 +206,7 @@ const Tabs = ({ active, setActive }) => {
                     ? "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #cb78e6 100%)"
                     : "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff 100%)"
                 }`,
-                width: `${tab.width}`,
+                minWidth: `${tab.width}`,
                 height: "44px",
                 padding: "1px",
                 borderRadius: "6px",
@@ -218,9 +218,6 @@ const Tabs = ({ active, setActive }) => {
             >
               <button
                 id="slider1"
-                // onPointerUp={() => {
-                //   setActiveTab({ index, tab });
-                // }}
                 onClick={() => {
                   // setActive(tab.id);
                   slideRight1(tab);
@@ -241,7 +238,7 @@ const Tabs = ({ active, setActive }) => {
                   overflowX: "auto",
                   whiteSpace: "nowrap",
                 }}
-                className="hover:brightness-110 filter"
+                className="hover:brightness-110 filter pr-10px"
               >
                 <img
                   src={active === tab.id ? tab.activeIcon : tab.icon}
@@ -251,10 +248,7 @@ const Tabs = ({ active, setActive }) => {
                     marginLeft: `${tab.marginLeftIcon}`,
                     marginBottom: `${tab.marginBottom}`,
                     // webkitFilter: 'drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5))',
-                    filter:
-                      active === tab.id
-                        ? "drop-shadow(1px 1px 3px #d478ff)"
-                        : "",
+                    filter: active === tab.id ? "drop-shadow(1px 1px 3px #d478ff)" : "",
                   }}
                 />
                 <span
@@ -262,9 +256,10 @@ const Tabs = ({ active, setActive }) => {
                     color: `${active === tab.id ? "#fff" : "#2d2834"}`,
                     fontSize: "13px",
                     marginRight: `${tab.marginRight}`,
-                    marginBottom: "2px",
+                    marginBottom: "1px",
                     marginLeft: `${tab.marginLeft}`,
                   }}
+                  className="font-bold"
                 >
                   {tab.name}
                 </span>
@@ -288,28 +283,29 @@ const Tabs = ({ active, setActive }) => {
                   </p>
                 </div>
               </button>
-              <div
-                className="shadow1"
-                style={{
-                  height: "47px",
-                  width: "0",
-                  position: "absolute",
-                  //   background: "#191920",
-                  top: "-3px",
-                  right: "23px",
-                  //   boxShadow: "rgb(25, 25, 28) 2.4875px 0px 7px 4px",
-                  boxShadow: "rgb(120,47,173) 4.4875px 0px 15px 2px",
-                  // boxShadow: "rgb(120, 47, 173) 0.4875px -3px 9px 5px",
-
-                  transform: "rotate(180deg)",
-                }}
-              ></div>
             </div>
           ))}
+          <div style={{ width: "6px" }} className="flex-shrink-0"></div>
         </div>
       </div>
+      <div
+        style={{ position: "absolute", top: "0", right: "0px", height: "44px", width: "40px" }}
+        className="overflow-hidden flex justify-end"
+      >
+        <div
+          className="shadow1"
+          style={{
+            height: "44px",
+            width: "12px",
+            background:'transparent',
+            boxShadow: "rgb(120,47,173, 1) 13px 0px 8px 8px",
+            transform: "rotate(180deg)",
+          }}
+        ></div>
+      </div>
+
       <button
-        className="rightArrow hover:brightness-110 filter"
+        className="rightArrow hover:brightness-110 filter flex-shrink-0"
         style={{
           background: "#edd9f2",
           width: "25px",
@@ -319,7 +315,7 @@ const Tabs = ({ active, setActive }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          zIndex: "10",
+          zIndex: "40",
           marginLeft: "-4px",
         }}
         onClick={slideRight}

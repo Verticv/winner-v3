@@ -14,7 +14,7 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
   const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
   const [cardHovered, setCardHovered] = useState(false);
-  const [cardSelected, setCardSelected] = useState(false);
+  const [cardSelected,] = useState(false);
 
   const hoverStyle = {
     background: "#936cee",
@@ -101,7 +101,7 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
       <div
         onMouseEnter={() => setCardHovered(true)}
         onMouseLeave={() => setCardHovered(false)}
-        onClick={() => setCardSelected((prev) => !prev)}
+        // onClick={() => setCardSelected((prev) => !prev)}
         className="cursor-pointer"
       >
         <div className="flex ml-10px justify-between items-center mr-11px">
@@ -144,7 +144,7 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
             {team2}
           </p>
         </div>
-        <div className="flex justify-between ml-10px -mt-px mb-px">
+        <div className="flex justify-between ml-10px -mt-px">
           <div className="mt-19px mb-6px">
             <p
               style={{ color: cardHovered || cardSelected ? "#ffffff" : "#0072bc", letterSpacing: "-0.031em" }}

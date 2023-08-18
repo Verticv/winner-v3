@@ -32,11 +32,12 @@ const AccordionButton3 = ({ icon, title }) => {
         style={{
           background: "linear-gradient(to top, #6b22ff, #df52ff)",
           width: "278px",
+          height: "44px",
           borderRadius: "5px",
           borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
-        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-43px`}
+        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
@@ -391,7 +392,12 @@ const AccordionButton3 = ({ icon, title }) => {
             onMouseLeave={() => setHover(null)}
           >
             <div className="flex items-center">
-              <img style={{ filter: hover === 7 && "brightness(0) invert(1)" }} className="ml-6px" src={img3} alt="img" />
+              <img
+                style={{ filter: hover === 7 && "brightness(0) invert(1)" }}
+                className="ml-6px"
+                src={img3}
+                alt="img"
+              />
               <p
                 style={{
                   color: hover === 7 ? "#ffffff" : "#444444",
@@ -431,7 +437,12 @@ const AccordionButton3 = ({ icon, title }) => {
             onMouseLeave={() => setHover(null)}
           >
             <div className="flex items-center">
-              <img style={{ filter: hover === 8 && "brightness(0) invert(1)" }} className="ml-6px" src={img1} alt="img" />
+              <img
+                style={{ filter: hover === 8 && "brightness(0) invert(1)" }}
+                className="ml-6px"
+                src={img1}
+                alt="img"
+              />
               <p
                 style={{
                   color: hover === 8 ? "#ffffff" : "#444444",
@@ -471,7 +482,12 @@ const AccordionButton3 = ({ icon, title }) => {
             onMouseLeave={() => setHover(null)}
           >
             <div className="flex items-center">
-              <img style={{ filter: hover === 9 && "brightness(0) invert(1)" }} className="ml-6px" src={img4} alt="img" />
+              <img
+                style={{ filter: hover === 9 && "brightness(0) invert(1)" }}
+                className="ml-6px"
+                src={img4}
+                alt="img"
+              />
               <p
                 style={{
                   color: hover === 9 ? "#ffffff" : "#444444",

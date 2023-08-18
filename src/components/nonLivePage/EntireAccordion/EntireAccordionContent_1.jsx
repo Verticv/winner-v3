@@ -45,12 +45,12 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
     >
       <div
         style={{
-          borderColor: "#cccccc",
+          borderColor: leftActive ? "#6227a5" : "#cccccc",
           width: "316px",
           background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive ? "#eeeeee" : "#444444",
           ...(isHovered ? hoverStyle : null),
-          borderBottomLeftRadius: `${card.id === 2 ? "4px" : "0px"}`,
+          borderBottomLeftRadius: `${card.id === 2 ? "3px" : "0px"}`,
         }}
         className="flex items-center justify-between border-r h-30px cursor-pointer"
         onClick={() => {
@@ -80,7 +80,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
         <p
           style={{
             fontSize: "13px",
-            color: leftActive || isHovered ? "#eeeeee" : "#682aa7",
+            color: leftActive || isHovered ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="mr-9px mb-2px font-malgun"
@@ -90,13 +90,13 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
       </div>
       <div
         style={{
-          borderColor: "#bbbbbb",
+          borderColor: "#cccccc",
           width: "314px",
           height: "100%",
           background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#eeeeee" : "#444444",
           ...(isHovered1 ? hoverStyle : null),
-          borderBottomRightRadius: `${card.id === 2 ? "4px" : "0px"}`,
+          borderBottomRightRadius: `${card.id === 2 ? "3px" : "0px"}`,
         }}
         className="flex items-center justify-between cursor-pointer"
         onClick={() => {
@@ -125,7 +125,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
         <p
           style={{
             fontSize: "13px",
-            color: rightActive || isHovered1 ? "#eeeeee" : "#682aa7",
+            color: rightActive || isHovered1 ? "#eeeeee" : "#111111",
             letterSpacing: "-0.031em",
             whiteSpace: "nowrap",
             overflow: "hidden",

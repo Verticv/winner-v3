@@ -90,7 +90,7 @@ const card3 = [
 
 const LeftAccordion = () => {
   return (
-    <div className="h-full items-start mr-9px ml-10px mt-5px mx-auto relative">
+    <div className="h-full items-start  ml-10px mt-5px mx-auto relative">
       <AccordionButton icon={icon1} title="즐겨찾기" />
       <AccordionButton1 icon={icon2} title="인기경기" card={card2} />
       <AccordionButton2 icon={icon3} title="인기리그" card={card3} />

@@ -83,7 +83,7 @@ const CheckBoxComponent = () => {
 
           <div
             style={{
-              height: "34px",
+              minHeight: "34px",
               borderColor: "#cccccc",
               background: "#dddddd",
             }}
@@ -104,7 +104,7 @@ const CheckBoxComponent = () => {
 
           <div
             style={{
-              height: "34px",
+              minHeight: "34px",
               borderColor: "#cccccc",
               background: "#dddddd",
             }}
@@ -122,7 +122,6 @@ const CheckBoxComponent = () => {
               변경되는 배당 거절
             </p>
           </div>
-          
         </>
       )}
       {/* </div> */}

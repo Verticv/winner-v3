@@ -33,12 +33,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
         }}
         className="w-full relative flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
       >
-        <img
-          style={{ top: "124px" }}
-          src={OverlayBackground1}
-          alt="overlay background"
-          className="absolute w-full"
-        />
+        <img style={{ top: "124px" }} src={OverlayBackground1} alt="overlay background" className="absolute w-full" />
         <img
           style={{ top: "956px" }}
           src={OverlayBackground2}
@@ -54,14 +49,10 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
         className="w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
       >
         <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
-          <Navbar
-            isAuthenticated={isAuthenticated}
-            setAuth={setAuthenticated}
-          />
+          <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
         </div>
 
         <div className="h-28px mt-px" />
-
 
         <div className="relative w-full flex flex-col items-start -mt-2px limit:items-center limit1920:items-center h-36px z-40">
           <MainTabs />
@@ -85,30 +76,19 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           <div
             style={{
               overflowY: "auto",
+              overflowX: "visible",
               flexShrink: 0,
               height: "90vh",
               marginRight: "1px",
+              width: "659px",
+              paddingLeft: "9px",
             }}
           >
             <Tabs active={active} setActive={setActive} />
             {/*  */}
-            <div style={{ width: "650px" }}>
-              {active === 0 ? (
-                <>
-                  <CenterComponent setEnglandActive={setEnglandActive} />
-                  <CenterAccordion setEnglandActive={setEnglandActive} />
-                </>
-              ) : active === 1 ? (
-                <>
-                  <CenterComponent setEnglandActive={setEnglandActive} />
-                  <CenterAccordion setEnglandActive={setEnglandActive} />
-                </>
-              ) : (
-                <>
-                  <CenterComponent setEnglandActive={setEnglandActive} />
-                  <CenterAccordion setEnglandActive={setEnglandActive} />
-                </>
-              )}
+            <div style={{}}>
+              <CenterComponent setEnglandActive={setEnglandActive} />
+              <CenterAccordion setEnglandActive={setEnglandActive} />
             </div>
           </div>
           <div
@@ -121,16 +101,10 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             }}
           >
             {englandActive ? (
-              <EnglandComponent2
-                englandActive={englandActive}
-                setEnglandActive={setEnglandActive}
-              />
+              <EnglandComponent2 englandActive={englandActive} setEnglandActive={setEnglandActive} />
             ) : (
               <>
-                <EnglandComponent
-                  englandActive={englandActive}
-                  setEnglandActive={setEnglandActive}
-                />
+                <EnglandComponent englandActive={englandActive} setEnglandActive={setEnglandActive} />
                 {liveGameData.length > 0 && <EntireAccordion />}
               </>
             )}
@@ -138,8 +112,11 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           <div
             style={{
               overflowY: "auto",
+              overflowX: "visible",
               flexShrink: 0,
               height: "90vh",
+              paddingLeft: "10px",
+              marginLeft: "-10px",
             }}
           >
             <RightComponent />

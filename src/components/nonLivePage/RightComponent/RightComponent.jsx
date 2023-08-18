@@ -26,7 +26,7 @@ const RightComponent = () => {
   const [isBetSlipActive, setIsBetSlipActive] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("0");
   const [showCards, setShowCards] = useState(0);
   const [active, setActive] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
@@ -79,7 +79,7 @@ const RightComponent = () => {
           width: "156px",
           height: "46px",
         }}
-        className="p-px -ml-px"
+        className={`${!isBetSlipActive && "filter hover:brightness-110"} p-px -ml-px`}
       >
         <div
           onClick={() => setShowCards(0)}
@@ -138,7 +138,7 @@ const RightComponent = () => {
           width: "155px",
           height: "46px",
         }}
-        className="p-px -ml-px z-10"
+        className={`${isBetSlipActive && "filter hover:brightness-110"} p-px -ml-px z-10`}
       >
         <div
           onClick={() => setShowCards(1)}
@@ -213,7 +213,7 @@ const RightComponent = () => {
           color: "#ffffff",
           textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
         }}
-        className="mb-2px mr-1px mt-4px font-MalgunGothicBold tracking-tight  text-15px"
+        className="mb-2px mr-1px mt-5px font-bold tracking-tight  text-15px"
       >
         베팅하기
       </p>
@@ -265,7 +265,12 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-center"
             >
-              <img style={{filter: showSettings && "brightness(0) invert(1)"}} className="mb-px" src={icon} alt="img" />
+              <img
+                style={{ filter: showSettings && "brightness(0) invert(1)" }}
+                className="mb-px"
+                src={icon}
+                alt="img"
+              />
             </div>
           </div>
         </div>
@@ -395,7 +400,7 @@ const RightComponent = () => {
                         </p>
                         <p
                           style={{ color: "#ffd98b" }}
-                          className="text-12px mb-14px mt-6px ml-4px font-MalgunGothicBold tracking-tight"
+                          className="text-12px mb-14px mt-5px ml-4px font-MalgunGothicBold tracking-tight"
                         >
                           4004791
                         </p>
@@ -498,7 +503,7 @@ const RightComponent = () => {
                           fontSize: "12px",
                           outline: "0px",
                         }}
-                        className="bg-white w-full tracking-tight font-MalgunGothicBold -mt-2px pr-8px"
+                        className="bg-white w-full tracking-tight font-bold -mt-2px pr-8px"
                         type="text"
                         onChange={onChangeHandler}
                         value={inputValue}
