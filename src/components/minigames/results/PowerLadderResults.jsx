@@ -7,11 +7,12 @@ const PowerLadderResults = ({array}) => {
             <div 
                 style={{
                     width:"61px",
-                    backgroundColor: item.id % 2 === 0 ? "#2e2e2e" : "#2e2e2e",
+                    backgroundColor: item.id % 2 === 0 ? "#fff" : "#f7f7f7",
+                    borderColor:"#dddddd"
                 }}
-                className="border-r border-gray-252525 flex-shrink-0"
+                className="border-r flex-shrink-0"
             >
-                <div  className="flex items-center justify-center h-56px border-b border-gray-252525">
+                <div  className="flex items-center justify-center h-56px border-b " style={{borderColor:"#dddddd"}}>
                     <p 
                         className="text-14px tracking-tight font-spoqaMedium"
                         style={{color: item.id % 2 === 0 ? "#e65454" : "#4c98ff"}}
@@ -21,7 +22,7 @@ const PowerLadderResults = ({array}) => {
                 </div>
 
                 <div 
-                    style={{height:"62px", backgroundColor: "#323232"}} 
+                    style={{height:"62px", backgroundColor: "#fff"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row1 && (
@@ -38,7 +39,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#2e2e2e"}} 
+                    style={{height:"62px", backgroundColor: "#f7f7f7"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row2 && (
@@ -55,7 +56,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#323232"}} 
+                    style={{height:"62px", backgroundColor: "#fff"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row3 && (
@@ -72,7 +73,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#2e2e2e"}} 
+                    style={{height:"62px", backgroundColor: "#f7f7f7"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row4 && (
@@ -89,7 +90,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#323232"}} 
+                    style={{height:"62px", backgroundColor: "#fff"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row5 && (
@@ -106,7 +107,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#2e2e2e"}} 
+                    style={{height:"62px", backgroundColor: "#f7f7f7"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row6 && (
@@ -123,7 +124,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#323232"}} 
+                    style={{height:"62px", backgroundColor: "#fff"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row7 && (
@@ -140,7 +141,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#2e2e2e"}} 
+                    style={{height:"62px", backgroundColor: "#f7f7f7"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row8 && (
@@ -157,7 +158,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#323232"}} 
+                    style={{height:"62px", backgroundColor: "#fff"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row9 && (
@@ -174,7 +175,7 @@ const PowerLadderResults = ({array}) => {
                     )}
                 </div>
                 <div 
-                    style={{height:"62px", backgroundColor: "#2e2e2e"}} 
+                    style={{height:"62px", backgroundColor: "#f7f7f7"}} 
                     className="flex items-center justify-center border-b border-gray-252525"
                 >
                     {item.row10 && (

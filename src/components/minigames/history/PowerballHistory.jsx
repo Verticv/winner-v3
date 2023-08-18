@@ -12,8 +12,8 @@ const PowerballHistory = ({array, checkedState, setCheckedState}) => {
     function InboxList({ items }) {
         return items.map(item => (
             <div 
-                style={{height: "62px", backgroundColor: item.id % 2 === 0 ? "#323232" : "#2e2e2e" }} 
-                className="flex items-center justify-start font-spoqa text-14px tracking-tight text-gray-c8c8c8 border-b border-gray-252525 last:border-b-0"
+                style={{height: "62px", backgroundColor: item.id % 2 === 0 ? "#ffffff" : "#f7f7f7" ,color:'#444444'}} 
+                className="flex items-center justify-start  text-14px tracking-tight border-b border-dddddd last:border-b-0"
             >        
                 <div style={{width: "60px"}} className="flex justify-center ml-28px">
                     <input
@@ -40,7 +40,7 @@ const PowerballHistory = ({array, checkedState, setCheckedState}) => {
                             ? "#2e6dd5"
                             : ""
                         }} 
-                        className="h-44px w-44px rounded-full bg-black text-white flex items-center justify-center text-14px font-spoqaMedium tracking-tight pt-2px"
+                        className="h-44px w-44px rounded-full bg-black text-white flex items-center justify-center text-14px  tracking-tight pt-2px"
                     >
                         {
                         item.historyType === 0 
@@ -67,8 +67,8 @@ const PowerballHistory = ({array, checkedState, setCheckedState}) => {
                 </div> 
                 <div style={{width: "126px"}} className="flex justify-center">{item.percentage}</div>
                 <div style={{width: "112px"}} className="flex justify-end">{item.betAmount}</div>
-                <div style={{width: "121px", color: item.profit.includes("+") ? "#e65454" : "#c8c8c8"}} className="flex justify-end">{item.profit}</div>
-                <div style={{width: "107px", color: item.win ? "#e65454" : "#c8c8c8"}} className="flex justify-center">{item.win === true ? "승" : "패"}</div>
+                <div style={{width: "121px", color: item.profit.includes("+") ? "#f04281" : "#444444"}} className="flex justify-end">{item.profit}</div>
+                <div style={{width: "107px", color: item.win ? "#f04281" : "#444444"}} className="flex justify-center">{item.win === true ? "승" : "패"}</div>
             </div>
         ));
     }
@@ -76,7 +76,8 @@ const PowerballHistory = ({array, checkedState, setCheckedState}) => {
     return (
         <div className="w-full ">
 
-            <div className="flex items-center justify-start bg-gray-2e2e2e font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-56px border-b border-gray-252525">        
+            <div className="flex items-center justify-start text-14px tracking-tight text-white h-55px border-b border-dddddd"
+            style={{background:'linear-gradient(to right, #9d3bbb, #5423a0)'}}>        
                 <div style={{width: "60px"}} className="flex justify-center ml-28px">선택</div>
                 <div style={{width: "117px"}} className="flex justify-center">번호</div>
                 <div style={{width: "147px"}} className="flex justify-center">회차</div>
