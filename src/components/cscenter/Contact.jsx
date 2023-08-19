@@ -1,13 +1,13 @@
 import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu';
 import MyPageTitle from 'components/myPage/MyPageTitle';
 import React, { useState } from 'react'
-import Icon1 from '../../images/myPage/betHistory/ico_1_v2.png'
-import Icon2 from '../../images/myPage/betHistory/ico_2_v2.png'
-import Icon3 from '../../images/myPage/betHistory/ico_3_v2.png'
-import Icon4 from '../../images/myPage/betHistory/ico_4_v2.png'
-import Icon5 from '../../images/myPage/betHistory/ico_5_v2.png'
-import Icon6 from '../../images/myPage/betHistory/ico_6_v2.png'
-import Icon7 from '../../images/myPage/betHistory/ico_7_v2.png'
+import Icon1 from '../../images/cscenter/ico_1.png'
+import Icon2 from '../../images/cscenter/ico_2.png'
+import Icon3 from '../../images/cscenter/ico_3.png'
+import Icon4 from '../../images/cscenter/ico_4.png'
+import Icon5 from '../../images/cscenter/ico_5.png'
+import Icon6 from '../../images/cscenter/ico_6.png'
+import Icon7 from '../../images/cscenter/ico_7.png'
 import Icon8 from '../../images/cscenter/ico_8.png'
 import Icon9 from '../../images/cscenter/ico_9.png'
 import Icon10 from '../../images/cscenter/ico_10.png'
@@ -142,29 +142,50 @@ const Contact = () => {
     const [page, setPage] = useState(0)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
     const [isDropdownOpen, setDropdownOpen] = useState(true)
+    const [hoveredOption, setHoveredOption] = useState("");
     const history = useHistory();
 
-    const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px"
+    const dropDownCellClass = "flex w-full h-30px py-2px items-center px-12px"
 
     const searchDropdown = (
-        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden bg-dark-1a1a1a  rounded-2px border border-gray-404040 shadow-plain5 text-gray-ccc2b6 font-spoqaMedium text-14px tracking-tight">
+        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden   rounded-2px border border-gray-404040 shadow-plain5 text-gray-ccc2b6  text-14px tracking-tight bg-white">
             <div className="w-full mt-2px h-full overflow-x-hidden border-gray-2c2c2c">
-            <button className={dropDownCellClass} onClick={() => {
+                <button className={dropDownCellClass}
+                style={{
+                background: hoveredOption==="제목" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                color: hoveredOption==="제목" ? "white" : "#666666",
+                }}
+                onClick={() => {
                 setSelectedCarrier("제목")
                 setDropdownOpen(false)
-            }}>
+                }}
+                onMouseOver={() => setHoveredOption('제목')}
+                onMouseLeave={() => setHoveredOption("")}>
                 제목
-            </button>
-            <button className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("본문")
+                </button>
+                <button className={dropDownCellClass}
+                style={{
+                    background: hoveredOption==="본문" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                    color: hoveredOption==="본문" ? "white" : "#666666",
+                }}        onClick={() => {
+                setSelectedCarrier("제목")
                 setDropdownOpen(false)
-            }}>
+                    }}
+                onMouseOver={() => setHoveredOption('본문')}
+                onMouseLeave={() => setHoveredOption("")}>
                 본문
             </button>
-            <button className={dropDownCellClass} onClick={() => {
+            <button className={dropDownCellClass}
+                style={{
+                background: hoveredOption==="작성자" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                color: hoveredOption==="작성자" ? "white" : "#666666",
+                }}
+                onClick={() => {
                 setSelectedCarrier("작성자")
                 setDropdownOpen(false)
-            }}>
+                }}
+            onMouseOver={() => setHoveredOption('작성자')}
+            OnMouseLeave={() => setHoveredOption("")}>
                 작성자
             </button>
             </div>
@@ -172,7 +193,7 @@ const Contact = () => {
     )
 
     const dropdownButton = (
-        <div style={{width:'120px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group">
+        <div style={{width:'120px'}} className="flex h-42px bg-dark-1a1a1a rounded-6px border border-p682aa7 text-r666666 bg-white mb-px">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
@@ -184,7 +205,8 @@ const Contact = () => {
     )
 
     const InboxSearch = (
-        <div className="h-64px w-full bg-gray-2e2e2e rounded-4px  flex items-center justify-center space-x-10px">
+        <div className="h-62px w-full rounded-6px flex items-center justify-center space-x-10px"
+        style={{background:'rgba(52, 34, 103, 0.6)'}}>
             <DropDownControls
                 buttonChild={dropdownButton} 
                 isDropdownOpen={isDropdownOpen} 
@@ -193,13 +215,15 @@ const Contact = () => {
                 {searchDropdown}
             </DropDownControls>
 
-            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
+            <div style={{width:'381px'}} className="flex h-42px  rounded-6px border border-p682aa7 relative">
                 <input 
-                    className="pl-11px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+                    className="pl-11px placeholder-r666666 w-full text-r666666 text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-4px bg-gradient-to-b from-gray-e8b888  to-gray-4b3b09 flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10">
-                  <div className="flex items-center justify-center w-40px  h-40px rounded-4px bg-gradient-to-b from-golden-gradLight  to-golden-gradDark">
+                <button
+                    style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)" }}className="flex items-center justify-center w-42px h-42px rounded-6px  flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10">
+                    <div className="flex items-center justify-center w-40px  h-40px rounded-6px "
+                    style={{background: 'linear-gradient(0deg, #6b22ff, #df52ff)'}}>
                     <img src={SearchIcon} alt="" />
                   </div>
                 </button>
@@ -212,7 +236,7 @@ const Contact = () => {
 
             <MyPageTitle title="문의하기" />
 
-            <div className="relative w-full mt-20px">
+            <div className="relative w-full mt-12px">
             <HorizontalMenu itemsArray={tabsArray} hasRows={true} setSelectedTab={setSelectedTab} showSub={false} />
 
                 <div className="mt-20px"></div>
@@ -220,19 +244,21 @@ const Contact = () => {
                 <ContactTable array={inboxArray}/>
   
 
-                <div className="mt-20px h-36px w-full flex items-center justify-end space-x-2px">
-                    <button className="flex items-center justify-center w-90px h-36px  rounded-2px  bg-gradient-to-t from-red-4b0923 to-red-e88895  hover:filter hover:brightness-125 shadow-link">
-                        <div className="flex items-center justify-center h-34px w-88px rounded-2px bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 text-shadow-5">계좌문의</span>
-                        </div>
+                <div className="mt-20px h-36px w-full flex items-center justify-end space-x-4px">
+                    <button className="flex items-center justify-center w-88px h-36px  rounded-6px  hover:filter hover:brightness-125 cursor-pointer"
+                    style={{background: "linear-gradient(to right, #ff7760, #f14a53)",boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}>
+                        
+                      
+                    <span className=" tracking-tight text-14px text-white text-shadow-5">계좌문의</span>
+                       
                     </button>
                     <button 
-                        className="flex items-center justify-center h-36px w-90px rounded-2px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link"
+                        className="flex items-center justify-center h-36px w-88px rounded-6px  p-px hover:filter hover:brightness-125 cursor-pointer mr-px"
                         onClick={() => history.push('/cscenter/contact/compose')}
+                        style={{background: "linear-gradient(to right, #15cfee, #3197e5)",boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
                     >
-                        <div className="flex items-center justify-center h-34px w-88px rounded-2px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff text-shadow-5">문의작성</span>
-                        </div>
+                            <span className="tracking-tight text-14px text-white text-shadow-5">문의작성</span>
+                        
                     </button>
                 </div>
 

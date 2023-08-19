@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
-import MailIcon from "../../../images/myPage/mail_v2.png";
-import MailOpenedIcon from "../../../images/myPage/mail_opened_v2.png";
+import MailIcon from "../../../images/myPage/mail.png";
+import MailOpenedIcon from "../../../images/myPage/mail_opened.png";
 
 const ContactTable = ({ array }) => {
   const history = useHistory();
@@ -10,15 +10,20 @@ const ContactTable = ({ array }) => {
     return items.map((item) => (
       <div
         key={item.id}
-        className={`${
-          item.isRead === false
-            ? "bg-brown-r3d3934"
+        style={{
+          background:
+            item.isRead === false
+            ? "#ecd7fa"
             : item.id % 2 === 0
-            ? "bg-gray-323232"
-            : "bg-gray-2e2e2e"
-        } font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 h-56px w-full border-b border-gray-252525 last:border-b-0 group pt-px`}
+            ? "#ffffff"
+                : "#f7f7f7",
+          color: item.isRead === false ?
+            "#444444":"#666666"
+        }}
+        className={`text-14px tracking-tight h-56px w-full  group pt-px`
+      }
       >
-        <div className="flex items-center font-spoqaBold text-14px tracking-tight text-gray-c8c8c8 h-56px border-b border-gray-252525 px-54px">
+        <div className="flex items-center font-bold text-14px tracking-tight  h-56px border-b border-dddddd px-54px">
           <div
             className="w-54px flex justify-center cursor-pointer h-full items-center"
             onClick={() => history.push(item.path)}
@@ -38,10 +43,9 @@ const ContactTable = ({ array }) => {
             <div
               style={{
                 maxWidth: "92px",
-                backgroundColor: item.isRead === true ? "#494745" : "#7e7564",
-                color: item.isRead === true ? "#c8c8c8" : "#f1e7d5",
+                backgroundColor: item.isRead === true ? "#999999" : "#702caa"
               }}
-              className={`px-8px h-29px rounded-full font-spoqaMedium text-14px tracking-tight flex items-center justify-center pt-px cursor-pointer`}
+              className={`px-8px h-29px rounded-full text-white text-14px tracking-tight flex items-center justify-center pt-px cursor-pointer`}
             >
               <p
                 style={{
@@ -57,11 +61,9 @@ const ContactTable = ({ array }) => {
           </div>
 
           <div
-            className={`${
-              item.isRead === true ? "text-gray-929292" : "text-gray-c8c8c8"
-            } font-spoqaMedium w-120px  flex justify-center cursor-pointer h-full items-center `}
+            className={`  w-120px  flex justify-center cursor-pointer h-full items-center `}
             onClick={() => history.push(item.path)}
-            style={{ color: item.isRead === true ? "#a0a0a0" : "#eeeeee" }}
+            style={{ color: item.isRead === true ? "#666666" : "#444444" }}
           >
             {item.category}
           </div>
@@ -69,15 +71,11 @@ const ContactTable = ({ array }) => {
           <div
             style={{
               width: "420px",
-              color: item.isRead === true ? "#a0a0a0" : "#eeeeee",
+              color: item.isRead === true ?  "#666666" : "#444444",
             }}
-            className={`${
-              item.isRead === true
-                ? "text-gray-929292"
-                : "text-gray-c8c8c8 group"
-            } ${
+            className={` ${
               item.text.length > 30 ? "" : "space-x-10px"
-            } font-spoqaMedium flex items-center cursor-pointer h-full ml-23px`}
+            }  flex items-center cursor-pointer h-full ml-23px`}
             onClick={() => history.push(item.path)}
           >
             <p
@@ -87,26 +85,25 @@ const ContactTable = ({ array }) => {
               {item.text}
             </p>
             {item.isRead === false && (
-              <div className="w-17px h-17px bg-red-e9441d rounded-4px text-12px text-white flex items-center justify-center font-roboto flex-shrink-0">
+              <div className="w-20px h-19px bg-rf04281 rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0">
                 <p className="flex items-center h-12px -ml-px">N</p>
               </div>
             )}
           </div>
 
+
           <div
-            className={`${
-              item.isRead === true ? "text-gray-929292" : "text-gray-c8c8c8"
-            } flex font-spoqa justify-center text-center cursor-pointer h-full items-center pr-5px`}
-            style={{ color: item.isRead === true ? "#a0a0a0" : "#eeeeee", width:'138px' }}
+            className={` flex justify-center text-center cursor-pointer h-full items-center pr-5px`}
+            style={{ color: item.isRead === true ?  "#666666" : "#444444", width:'138px' }}
             onClick={() => history.push(item.path)}
           >
             {item.time}
           </div>
           <div className="ml-33px w-70px flex items-center justify-center">
             <button
-              className={`${
-                item.isRead === true ? "bg-gray-5c5c5c" : "bg-red-c65337"
-              } w-49px h-29px flex justify-center rounded-4px text-white font-spoqaMedium items-center pt-2px filter hover:brightness-125 shadow-plain10`}
+              className={` w-49px h-30px flex justify-center rounded-4px text-white  items-center pt-2px filter hover:brightness-125 shadow-plain10`
+              }
+              style={{background:'#8458cd',boxShadow:'0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
             >
               삭제
             </button>
@@ -118,13 +115,12 @@ const ContactTable = ({ array }) => {
 
   return (
     <div
-      className="shadow-table w-full overflow-hidden rounded-4px p-px"
-      style={{
-        background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)",
-      }}
+      className="shadow-table w-full overflow-hidden rounded-10px p-px"
+      style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
     >
-      <div className="w-full bg-gray-323232 rounded-4px overflow-hidden">
-        <div className="flex items-center bg-gray-2e2e2e font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-55px border-b border-gray-252525 px-52px pt-px">
+      <div className="w-full rounded-10px overflow-hidden">
+        <div className="flex items-center  text-14px tracking-tight h-55px border-b px-52px pt-px"
+        style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
           <div style={{width:'57px'}} className="flex justify-center">확인</div>
           <div style={{width:'92px'}} className="flex justify-center">상태</div>
           <div style={{width:'124px'}} className="flex justify-center">구분</div>

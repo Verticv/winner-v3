@@ -78,7 +78,7 @@ const HorizontalMenu = ({
           <TabsList items={itemsArray} />
       </div>
     ) : (
-      <div className="grid grid-cols-8 gap-3px justify-between w-full pl-4px pr-5px">
+      <div className="grid grid-cols-10 gap-3px justify-between w-full pl-4px pr-5px">
           <TabsList items={itemsArray} />
       </div>
     )}
