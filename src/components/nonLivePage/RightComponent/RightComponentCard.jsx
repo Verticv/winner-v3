@@ -69,7 +69,7 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-9px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px pt-8px text-12px font-malgun tracking-tight">
                 아스널 VS 리버풀
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px  text-12px font-malgun tracking-tight">
@@ -99,7 +99,7 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-9px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px pt-8px text-12px font-malgun tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight">
@@ -193,7 +193,7 @@ const RightComponentCard = () => {
               width: "304px",
               borderRadius: "4px",
             }}
-            className="p-px ml-2px  mb-3px mr-2px"
+            className="p-px ml-2px mb-2px mr-2px"
           >
             <div
               style={{

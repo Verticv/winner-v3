@@ -7,7 +7,7 @@ const TabButton = ({ item, isActiveTab, setActiveTab }) => {
         borderBottom: isActiveTab === item.id ? "3px solid #ffc900" : "",
         width: `${item.width}}`,
       }}
-      className="flex items-start z-10 mr-5px "
+      className={`flex items-start z-10 mr-5px ${isActiveTab === item.id ? "opacity-100" : "opacity-70"}`}
       onClick={() => setActiveTab(item.id)}
     >
       <img

@@ -80,6 +80,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               flexShrink: 0,
               height: "90vh",
               marginRight: "1px",
+              marginLeft: "1px",
               width: "650px",
               paddingLeft: "4px",
             }}
@@ -96,7 +97,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               flexShrink: 0,
               height: "90vh",
-              marginLeft: englandActive ? "-5px" : "-4px",
+              marginLeft: englandActive ? "0" : "0",
               marginRight: englandActive ? "5px" : "",
             }}
           >

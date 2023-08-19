@@ -180,7 +180,7 @@ const Search = () => {
                 <Content id={1} title="이집트 - 프리미어 리그" />
                 <Content id={2} title="아일랜드 프리미어 디비전" />
                 <Content id={3} title="카자흐스탄 - 프리미어 리그" />
-                <Content id={4} last title="잉글랜드 - 프리미어 리그 asdiajsdoasjdasjd asdijasod" />
+                <Content id={4} last title="잉글랜드 - 프리미어 리그" />
 
                 <Title title={"배구"} icon={icon3} />
                 <Content id={5} first title="축구 / 잉글랜드 - 프리미어리그" />

@@ -109,7 +109,7 @@ const EntireAccordion = () => {
                 borderBottom:
                   activeId === 0 ? "3px solid #ffc900" : "3px solid #f3cbff",
               }}
-              className="flex w-54px h-36px items-center cursor-pointer relative"
+              className="flex w-54px h-36px items-center cursor-pointer relative filter hover:brightness-110"
               onClick={() => setActiveId(0)}
             >
               <img
@@ -146,7 +146,7 @@ const EntireAccordion = () => {
                       ? "3px solid #ffc900"
                       : "3px solid #f3cbff",
                 }}
-                className="flex ml-3px w-54px h-36px items-center justify-center align-center cursor-pointer px-10px"
+                className="flex ml-3px w-54px h-36px items-center justify-center align-center cursor-pointer px-10px filter hover:brightness-110"
                 onClick={() => setActiveId(content.id)}
               >
                 <p
