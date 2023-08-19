@@ -248,7 +248,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
           <p
             style={{
               fontSize: "12px",
-              color: card.score1ArrowUp ? "#f04281" : card.score1ArrowDown ? "#0072bc" : "",
+              color: card.score1ArrowUp ? "#f04281" : card.score1ArrowDown ? "#0072bc" : leftActive || isHovered ? "#ffffff" : "#111111",
               letterSpacing: "-0.031em",
             }}
             className="flex items-center mr-9px mt-10px mb-12px flex-shrink-0"
@@ -274,7 +274,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             </span>
             {card.score1 ? (
               <p
-                style={{ width: "28px", color: leftActive || isHovered ? "#ffffff" : "#111111" }}
+                style={{ width: "28px" }}
                 className="text-right flex justify-end"
               >
                 {card.score1}

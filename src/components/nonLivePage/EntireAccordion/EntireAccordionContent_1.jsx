@@ -121,7 +121,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           }}
           className="ml-8px mb-2px font-malgun"
         >
-          {card.team2}asjdasiojdoais daijodaiojdajiosdaojisd asjiod aojidajosd ajiosdajiosdajiosda
+          {card.team2}
         </p>
         <p
           style={{

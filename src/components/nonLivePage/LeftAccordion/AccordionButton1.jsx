@@ -28,9 +28,7 @@ const AccordionButton1 = ({ icon, title, card }) => {
           borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
-        className={`flex items-center justify-between ${
-          isOpen ? "rounded-t-lg" : "rounded-lg"
-        } cursor-pointer`}
+        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer`}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
@@ -57,17 +55,12 @@ const AccordionButton1 = ({ icon, title, card }) => {
           <img
             src={Arrow}
             alt=""
-            className={`object-none text-white mr-10px mt-16px mb-18px ${
-              isOpen ? "transform rotate-180" : ""
-            }`}
+            className={`object-none text-white mr-10px mt-16px mb-18px ${isOpen ? "transform rotate-180" : ""}`}
           />
         </div>
       </div>
       {isOpen && (
-        <div
-          style={{ background: "#420572" }}
-          className="pt-2px rounded-b-lg"
-        >
+        <div style={{ background: "#420572", paddingBottom: "0.1px" }} className="pt-2px rounded-b-lg">
           {card.map((item) => (
             <AccordionContent1 key={item.id} card={item} />
           ))}
