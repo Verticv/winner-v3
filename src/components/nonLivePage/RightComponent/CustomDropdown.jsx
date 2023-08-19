@@ -80,6 +80,7 @@ const CustomDropdown = ({ selectedOption, setSelectedOption }) => {
               {options.map((option) => (
                 <li
                   key={option}
+                  style={{ paddingTop: "0.2rem", paddingBottom: "0.2rem" }}
                   className="py-2 px-2 text-13px cursor-pointer"
                   onClick={() => {
                     handleOptionSelect(option);
