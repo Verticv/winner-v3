@@ -46,10 +46,7 @@ const CustomDropdown1 = () => {
         style={{ paddingTop: "3px" }}
         onClick={toggleDropdown}
       >
-        <p
-          style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-13px ml-9px mt-px"
-        >
+        <p style={{ color: "#444444", letterSpacing: "-0.031em" }} className="text-13px ml-9px mt-px">
           {" "}
           {selectedOption || "전체"}{" "}
         </p>
@@ -58,9 +55,7 @@ const CustomDropdown1 = () => {
           alt="img"
           // ml-21px mt-2px
           style={{ top: "10px", right: "10px" }}
-          className={`absolute transition-transform duration-300 ${
-            isOpen ? "transform rotate-180" : ""
-          }`}
+          className={`absolute transition-transform duration-300 ${isOpen ? "transform rotate-180" : ""}`}
         />
       </button>
 
@@ -85,6 +80,7 @@ const CustomDropdown1 = () => {
               {options.map((option) => (
                 <li
                   key={option}
+                  style={{ paddingTop: "0.2rem", paddingBottom: "0.2rem" }}
                   className="py-2 px-2 text-13px cursor-pointer"
                   onClick={() => handleOptionSelect(option)}
                 >
