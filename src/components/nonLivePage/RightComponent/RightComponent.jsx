@@ -347,6 +347,7 @@ const RightComponent = () => {
                   background: "#ffffff",
                   width: "308px",
                   height: "auto",
+                  paddingBottom: '0.1px'
                 }}
                 className="pb-px pt-2px"
               >
