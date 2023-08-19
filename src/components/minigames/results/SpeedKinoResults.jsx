@@ -20,9 +20,9 @@ const SpeedKinoResults = ({array}) => {
                 }}
                 className="border-r flex-shrink-0"
             >
-                <div style={{borderColor:"#dddddd"}} className="flex items-center justify-center h-56px border-b">
+                <div style={{borderColor:"#dddddd",backgroundColor: "#f7f7f7"}} className="flex items-center justify-center h-56px border-b">
                     <p 
-                        className="text-14px tracking-tight font-spoqaMedium"
+                        className="text-14px tracking-tight"
                         style={{color: item.id % 2 === 0 ? "#e65454" : "#4c98ff"}}
                     >
                         {subTab === 0 ? (

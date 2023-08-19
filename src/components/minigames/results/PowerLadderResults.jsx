@@ -12,7 +12,7 @@ const PowerLadderResults = ({array}) => {
                 }}
                 className="border-r flex-shrink-0"
             >
-                <div  className="flex items-center justify-center h-56px border-b " style={{borderColor:"#dddddd"}}>
+                <div  className="flex items-center justify-center h-56px border-b " style={{borderColor:"#dddddd",backgroundColor: "#f7f7f7"}}>
                     <p 
                         className="text-14px tracking-tight font-spoqaMedium"
                         style={{color: item.id % 2 === 0 ? "#e65454" : "#4c98ff"}}
