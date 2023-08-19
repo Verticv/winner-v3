@@ -69,7 +69,7 @@ const AccordionButton = ({ icon, title }) => {
             style={{
               letterSpacing: "-0.031em",
             }}
-            className="text-14px text-white ml-5px mt-12px mb-17px"
+            className="text-14px text-white ml-5px mt-14px mb-15px"
           >
             {title}
           </p>
@@ -79,7 +79,7 @@ const AccordionButton = ({ icon, title }) => {
             style={{ background: "#5423a0", borderRadius: "4px" }}
             className="flex items-center justify-center h-19px rounded-lg mt-11px mb-12px px-5px"
           >
-            <p className="text-13px text-white">5</p>
+            <p className="text-13px text-white pb-px">5</p>
           </div>
           <img
             src={Arrow}
