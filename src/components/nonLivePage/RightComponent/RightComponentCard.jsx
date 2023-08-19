@@ -112,7 +112,7 @@ const RightComponentCard = () => {
                 >
                   FC바르셀로나
                 </p>
-                <p style={{ color: "#f04281" }} className="mr-7px -mb-3px text-12px font-bold tracking-tight">
+                <p style={{ color: "#f04281" }} className="mr-7px -mb-4px text-12px font-bold tracking-tight">
                   2.26
                 </p>
               </div>
@@ -256,7 +256,7 @@ const RightComponentCard = () => {
                 >
                   FC바르셀로나
                 </p>
-                <p style={{ color: "#f04281" }} className="mr-7px -mb-3px text-12px font-bold tracking-tight">
+                <p style={{ color: "#f04281" }} className="mr-7px -mb-4px text-12px font-bold tracking-tight">
                   2.26
                 </p>
               </div>
