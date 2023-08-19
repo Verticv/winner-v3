@@ -69,7 +69,7 @@ const AccordionButton = ({ icon, title }) => {
             style={{
               letterSpacing: "-0.031em",
             }}
-            className="text-14px text-white ml-5px mt-13px mb-16px"
+            className="text-14px text-white ml-5px mt-12px mb-17px"
           >
             {title}
           </p>
