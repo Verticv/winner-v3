@@ -28,7 +28,7 @@ const RightComponentCard1 = ({ teamsData }) => {
           className="flex items-center justify-between"
         >
           <div style={{ maxWidth: "240px" }} className="flex items-center ml-6px">
-            <p className="text-12px text-white mt-13px mb-15px font-bold tracking-tight">
+            <p className="text-12px text-white mt-11px mb-11px font-bold tracking-tight">
               {teamsData?.team1} VS {teamsData?.team2}
             </p>
           </div>
@@ -93,7 +93,7 @@ const RightComponentCard1 = ({ teamsData }) => {
             borderBottomLeftRadius: "4px",
             borderBottomRightRadius: "4px",
           }}
-          className="items-center justify-between pb-10px"
+          className="items-center justify-between pb-9px"
         >
           <div className="flex items-center justify-between">
             <div className="ml-6px mb-2px">
@@ -105,19 +105,35 @@ const RightComponentCard1 = ({ teamsData }) => {
               </p>
             </div>
             <div className="mr-7px mt-4px">
-              <del style={{ color: "#666666" }} className="text-12px mt-7px font-MalgunGothicBold tracking-tight">
+              <del style={{ color: "#666666" }} className="text-12px mt-7px font-bold tracking-tight">
                 {teamsData?.score3 > teamsData?.score1 ? teamsData?.score1 : teamsData?.score3}
               </del>
             </div>
           </div>
           <div className="flex items-center justify-between">
             <div className="ml-6px -mt-px">
-              <p style={{ color: "#5e399a", maxWidth: "240px" }} className="text-12px mt-1px font-MalgunGothicBold tracking-tight">
-                리버풀 
+              <p style={{ color: "#5e399a", maxWidth: "240px" }} className="text-12px mt-2px font-bold tracking-tight">
+                {teamsData?.team1 === "아스널" ||
+                    teamsData?.team1 === "리버풀" ||
+                    teamsData?.team1 === "첼시" ||
+                    teamsData?.team1 === "토트넘" ? "FC바르셀로나" :
+                    "리버풀"}
               </p>
             </div>
             <div className="mr-7px -mt-px">
-              <p style={{ color: "#0072bc", maxWidth: "240px" }} className="text-12px mt-2px font-MalgunGothicBold tracking-tight ">
+              <p
+                style={{
+                  color:
+                    teamsData?.team1 === "아스널" ||
+                    teamsData?.team1 === "리버풀" ||
+                    teamsData?.team1 === "첼시" ||
+                    teamsData?.team1 === "토트넘"
+                      ? "#f04281"
+                      : "#0072bc",
+                  maxWidth: "240px",
+                }}
+                className="text-12px mt-2px font-bold tracking-tight "
+              >
                 {teamsData?.score3 > teamsData?.score1 ? teamsData?.score3 : teamsData?.score1}
               </p>
             </div>

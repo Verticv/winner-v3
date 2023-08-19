@@ -84,7 +84,7 @@ const RightComponentCard = () => {
                 </p>
                 <p
                   style={{ color: "#0072bc", marginTop: "1px" }}
-                  className="mr-7px -mb-4px text-12px font-bold tracking-tight"
+                  className="mr-7px -mb-2px text-12px font-bold tracking-tight"
                 >
                   3.47
                 </p>
@@ -112,7 +112,7 @@ const RightComponentCard = () => {
                 >
                   FC바르셀로나
                 </p>
-                <p style={{ color: "#f04281" }} className="mr-7px -mb-6px text-12px font-bold tracking-tight">
+                <p style={{ color: "#f04281" }} className="mr-7px -mb-4px text-12px font-bold tracking-tight">
                   2.26
                 </p>
               </div>
@@ -126,10 +126,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-15px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-13px mb-14px text-12px font-bold tracking-tight">
                 총 배당
               </p>
-              <p style={{ color: "#e9441d" }} className="mr-7px mt-12px mb-13px text-12px font-bold tracking-tight">
+              <p style={{ color: "#e9441d" }} className="mr-7px mt-13px mb-12px text-12px font-bold tracking-tight">
                 10.00
               </p>
             </div>
@@ -142,10 +142,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
                 총 베팅금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-9px mb-11px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="mr-7px mt-10px mb-10px text-12px font-bold tracking-tight">
                 5,000
               </p>
             </div>
@@ -158,10 +158,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-10px mb-13px text-12px font-bold tracking-tight">
                 당첨 예상금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-10px mb-11px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="mr-7px mt-11px mb-10px text-12px font-bold tracking-tight">
                 50,000
               </p>
             </div>
@@ -176,10 +176,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-10px mb-15px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
                 티켓번호
               </p>
-              <p style={{ color: "#0072bc" }} className="mr-7px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#0072bc" }} className="mr-7px mt-12px mb-13px text-12px font-bold tracking-tight">
                 4004791
               </p>
             </div>
@@ -226,7 +226,7 @@ const RightComponentCard = () => {
                     }}
                     className="flex items-center"
                   >
-                    <p className="ml-10px text-11px text-white font-bold tracking-tight pt-px">수락</p>
+                    <p className="ml-9px text-11px text-white font-bold tracking-tight pt-px">수락</p>
                   </div>
                 </div>
               </div>
@@ -256,7 +256,7 @@ const RightComponentCard = () => {
                 >
                   FC바르셀로나
                 </p>
-                <p style={{ color: "#f04281" }} className="mr-7px -mb-6px text-12px font-bold tracking-tight">
+                <p style={{ color: "#f04281" }} className="mr-7px -mb-4px text-12px font-bold tracking-tight">
                   2.26
                 </p>
               </div>
@@ -270,10 +270,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-15px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-13px mb-14px text-12px font-bold tracking-tight">
                 총 배당
               </p>
-              <p style={{ color: "#e9441d" }} className="mr-7px mt-12px mb-13px text-12px font-bold tracking-tight">
+              <p style={{ color: "#e9441d" }} className="mr-7px mt-13px mb-12px text-12px font-bold tracking-tight">
                 2.26
               </p>
             </div>
@@ -286,10 +286,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
                 총 베팅금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-9px mb-11px text-12px font-bold tracking-tight ">
+              <p style={{ color: "#666666" }} className="mr-7px mt-10px mb-10px text-12px font-bold tracking-tight ">
                 5,000
               </p>
             </div>
@@ -302,10 +302,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
                 당첨 예상금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-10px mb-11px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="mr-7px mt-11px mb-10px text-12px font-bold tracking-tight">
                 11,300
               </p>
             </div>
@@ -320,10 +320,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-10px mb-15px text-12px font-bold tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
                 티켓번호
               </p>
-              <p style={{ color: "#0072bc" }} className="mr-7px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#0072bc" }} className="mr-7px mt-12px mb-13px text-12px font-bold tracking-tight">
                 4004791
               </p>
             </div>
