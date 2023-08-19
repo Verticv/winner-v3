@@ -59,19 +59,20 @@ const AccordionButton3 = ({ icon, title }) => {
             {title}
           </p>
         </div>
-        <div
-          style={{
-            background: "#5423a0",
-            width: "39px",
-            height: "19px",
-            marginLeft: "111px",
-            borderRadius: "4px",
-          }}
-          className="flex items-center justify-center"
-        >
-          <p className="text-13px mb-px text-white tracking-tight font-malgun ">1000</p>
-        </div>
-        <div>
+
+        <div className="flex items-center">
+          <div
+            style={{
+              background: "#5423a0",
+              // width: "39px",
+              height: "19px",
+              // marginLeft: "111px",
+              borderRadius: "4px",
+            }}
+            className="flex items-center justify-center mr-6px px-5px"
+          >
+            <p className="text-13px mb-px text-white tracking-tight font-malgun ">1000</p>
+          </div>
           <img
             src={Arrow}
             alt=""
@@ -123,12 +124,12 @@ const AccordionButton3 = ({ icon, title }) => {
             <div
               style={{
                 background: "#6b22ff",
-                width: "36px",
+                // width: "36px",
                 height: "19px",
                 marginRight: "6px",
                 borderRadius: "4px",
               }}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center px-5px"
             >
               <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px font-malgun mb-px">
                 1000
@@ -177,13 +178,13 @@ const AccordionButton3 = ({ icon, title }) => {
                   <div
                     style={{
                       background: "#666666",
-                      width: "36px",
+                      // width: "36px",
                       height: "19px",
                       marginRight: "6px",
                       borderRadius: "4px",
                     }}
-                    className="flex items-center justify-center "
-                  >
+                    className="flex items-center justify-center px-5px"
+                    >
                     <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px font-malgun mb-px">
                       1000
                     </p>
@@ -227,12 +228,12 @@ const AccordionButton3 = ({ icon, title }) => {
                       <div
                         style={{
                           background: "#666666",
-                          width: "16px",
+                          // width: "16px",
                           height: "19px",
                           marginRight: "6px",
                           borderRadius: "4px",
                         }}
-                        className="flex items-center justify-center "
+                        className="flex items-center justify-center px-5px"
                       >
                         <p
                           style={{
@@ -279,12 +280,12 @@ const AccordionButton3 = ({ icon, title }) => {
                       <div
                         style={{
                           background: "#666666",
-                          width: "16px",
+                          // width: "16px",
                           height: "19px",
                           marginRight: "6px",
                           borderRadius: "4px",
                         }}
-                        className="flex items-center justify-center"
+                        className="flex items-center justify-center px-5px"
                       >
                         <p
                           style={{
@@ -325,12 +326,12 @@ const AccordionButton3 = ({ icon, title }) => {
                   <div
                     style={{
                       background: "#666666",
-                      width: "29px",
+                      // width: "29px",
                       height: "19px",
                       marginRight: "6px",
                       borderRadius: "4px",
                     }}
-                    className="flex items-center justify-center"
+                    className="flex items-center justify-center px-5px"
                   >
                     <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                       100
@@ -368,12 +369,12 @@ const AccordionButton3 = ({ icon, title }) => {
                   <div
                     style={{
                       background: "#666666",
-                      width: "29px",
+                      // width: "29px",
                       height: "19px",
                       marginRight: "6px",
                       borderRadius: "4px",
                     }}
-                    className="flex items-center justify-center"
+                    className="flex items-center justify-center px-5px"
                   >
                     <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                       100
@@ -416,12 +417,12 @@ const AccordionButton3 = ({ icon, title }) => {
             <div
               style={{
                 background: "#6b22ff",
-                width: "29px",
+                // width: "29px",
                 height: "19px",
                 marginRight: "6px",
                 borderRadius: "4px",
               }}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center px-5px"
             >
               <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                 100
@@ -461,12 +462,12 @@ const AccordionButton3 = ({ icon, title }) => {
             <div
               style={{
                 background: "#6b22ff",
-                width: "29px",
+                // width: "29px",
                 height: "19px",
                 marginRight: "6px",
                 borderRadius: "4px",
               }}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center px-5px"
             >
               <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                 100
@@ -506,12 +507,12 @@ const AccordionButton3 = ({ icon, title }) => {
             <div
               style={{
                 background: "#6b22ff",
-                width: "29px",
+                // width: "29px",
                 height: "19px",
                 marginRight: "6px",
                 borderRadius: "4px",
               }}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center px-5px"
             >
               <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                 100
