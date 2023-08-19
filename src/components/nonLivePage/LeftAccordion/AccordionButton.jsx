@@ -77,7 +77,7 @@ const AccordionButton = ({ icon, title }) => {
         <div className="flex items-center">
           <div
             style={{ background: "#5423a0", borderRadius: "4px" }}
-            className="flex items-center justify-center w-18px h-19px rounded-lg mt-11px mb-12px"
+            className="flex items-center justify-center h-19px rounded-lg mt-11px mb-12px px-5px"
           >
             <p className="text-13px text-white">5</p>
           </div>
