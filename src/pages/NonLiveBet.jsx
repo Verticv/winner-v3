@@ -97,7 +97,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               flexShrink: 0,
               height: "90vh",
-              marginLeft: englandActive ? "0" : "0",
+              marginLeft: englandActive ? "-1px" : "0",
               marginRight: englandActive ? "5px" : "",
             }}
           >
