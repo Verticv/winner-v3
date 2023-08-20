@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router';
-import Reflect from '../../images/myPage/betHistory/Reflect.png'
 
 const HorizontalMenu7 = ({
     itemsArray, 
@@ -8,58 +7,45 @@ const HorizontalMenu7 = ({
 
     const history = useHistory();
     const pathname = window.location.pathname
-    const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
         return items.map(item => (
             <button 
                 key={item.id} 
-                className={`relative overflow-hidden w-full rounded-4px flex items-end p-px`} 
+                className={`relative overflow-hidden w-full rounded-6px flex items-end p-px`} 
                 style={{
                     height:"78px",
                     background: pathname === item.path 
-                    ?'linear-gradient( to top, #62553f, #dabe82)'
-                    :'linear-gradient( to top, rgb(41,41,41) 0%, rgb(80,80,78) 100%)',
-                    boxShadow: '0 5px 5px -2px rgba(0,0,0,0.5)'
+                    ?'linear-gradient( to top, #4f3a7a 0, #a05bf6 50%, #cb78e6 100%)'
+                    :'linear-gradient( to top, #4f3a7a 0, #a05bf6 50%, #f0d3ff 100%)',
+                    boxShadow: '0 2px 5px 0px rgba(0,0,0,0.6)'
                 }}
                 onClick={() => {
                     history.push(item.path)
                 }}
-                onMouseOver={() => setHover(item.id)}
-                onMouseLeave={() => setHover(null)}
             >
-                <div 
-                    style={{
-                        height:"75px", 
-                        width:"100%", 
-                        background: pathname === item.path
-                        ? 'linear-gradient(to top, #a6926f, #f9f0d3)'
-                        : 'linear-gradient(to top, rgb(57,56,53) 0%, rgb(107,104,101) 100%)'
-                    }} 
-                    className={`flex w-full justify-end items-end absolute top-0 p-px rounded-4px `}
-                >
+               
                     <div 
                         style={{
                           background: pathname === item.path
-                          ? 'linear-gradient(to top, #8d7752, #dabe82)'
-                          :isHover === item.id
-                          ?'#54544f'
-                          :'linear-gradient( to top, rgb(50,50,49) 0%, rgb(84,84,82) 100%)'
+                          ? 'linear-gradient( to top, #491f9c 0%, #9e3cbc 100%)'
+                          :'linear-gradient( to top, #ccc4ff 0%, #ffd9f5 100%)'
                         }}
-                        className={`w-full rounded-4px flex flex-col justify-end items-center pb-3px h-73px relative hover:filter hover:brightness-90`}  
+                        className={`w-full rounded-6px flex flex-col justify-end items-center h-76px relative hover:filter hover:brightness-90`}  
                         
                     >
-                      <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
-                      {pathname === item.path&&<img className="absolute top-0 left-0" src={Reflect} alt="" />}
-                        <span 
-                            className={`${
-                                pathname === item.path
-                                ? "text-black"
-                                : "text-golden-ccc2b6" }
-                                text-14px font-spoqaMedium tracking-tight  flex items-center mt-4px`}
-                        >{item.text}</span>
+                    <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
+                    <span 
+                        style={{
+                            color: 
+                            pathname === item.path
+                            ? '#ffffff'
+                            : '#2d2834'
+                        }}
+                        className={` text-14px tracking-tight  flex items-center mt-4px`}
+                    >{item.text}</span>
                     </div>
-                </div>
+                
             </button>
         ));
     }

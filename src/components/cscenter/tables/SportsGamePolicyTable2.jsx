@@ -4,8 +4,8 @@ const SportsGamePolicyTable2 = ({array}) => {
 
     function Cells({ items }) {     
         return items.map(item => (
-            <tr className="bg-gray-323232 font-spoqa text-14px tracking-tight text-gray-c8c8c8 h-56px w-full border-b border-gray-252525 pt-2px last:border-b-0">
-                <td style={{width: "248px"}} className="font-spoqaMedium h-54px text-center pl-20px flex justify-around items-center">
+            <tr className=" text-14px tracking-tight h-56px w-full border-b border-dddddd pt-2px last:border-b-0 bg-white">
+                <td style={{width: "248px"}} className=" h-54px text-center pl-20px flex justify-around items-center">
                     <p style={{color: item.color}}>{item.title}</p>
                     {item.title2 && (
                         <p style={{color: '#929292'}}>{item.title2}</p>
@@ -21,17 +21,17 @@ const SportsGamePolicyTable2 = ({array}) => {
 
     
     return (
-        <div className="shadow-table w-full overflow-hidden rounded-4px p-px"
-          style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)"}}
+        <div className="shadow-table w-full overflow-hidden rounded-10px p-px"
+          style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
         >
-          <table className="w-full bg-gray-323232 rounded-4px overflow-hidden">
-              <thead className="bg-gray-2e2e2e font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-56px border-b border-gray-252525 pt-px">
+          <table className="w-full bg-gray-323232 rounded-10px overflow-hidden">
+              <thead className=" text-14px tracking-tight  h-56px border-b  pt-px" style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                   <tr>
                       <td style={{width: "248px"}} className="text-center pl-20px">타입 및 경기시간</td>
                       <td style={{width: "792px"}} className="text-center">결과적용기준</td>
                   </tr>
               </thead>
-              <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">
+              <tbody className="w-full text-r666666 text-14px tracking-tight">
                   <Cells items={array} />
               </tbody>
           </table>     

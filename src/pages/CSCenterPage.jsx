@@ -4,7 +4,7 @@ import LeftMenu from 'components/myPage/LeftMenu';
 import Navbar from '../components/mainPage/NavBar';
 import QuickMenu from 'components/QuickMenu';
 // import NoticeBanner from 'components/mainPage/NoticeBanner'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, useLocation } from 'react-router';
 import Icon1 from '../images/cscenter/leftMenu/icon_1.png';
 import Icon2 from '../images/cscenter/leftMenu/icon_2.png';
@@ -88,18 +88,9 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
   const location = useLocation();
   const [selectedTab, setSelectedTab] = useState(location.pathname);
   const [selectedSubTab, setSelectedSubTab] = useState(location.pathname);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+ 
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+ 
   return (
       <div className='relative flex flex-col justify-center items-center limit1920:overflow-x-hidden'
       style={{
