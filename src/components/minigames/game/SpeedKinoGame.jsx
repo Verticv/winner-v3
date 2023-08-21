@@ -202,7 +202,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
             style={{height: "203px"}}
             className="flex w-full"
         >
-            <div className="w-full flex flex-col px-7px pb-5px">
+            <div className="w-full flex flex-col px-7px pb-6px">
                 <PanelTitle title="스피드키노" />
                 <div className="flex space-x-2px">
                     <BetOptions width={414} titleNumber={1} subText="홀짝" />

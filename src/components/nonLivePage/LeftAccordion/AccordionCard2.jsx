@@ -217,8 +217,7 @@ const AccordionCard2 = ({
               alt=""
               onClick={toggleAccordion}
               style={{
-                filter:
-                  (cardHovered || cardSelected) && "brightness(0) invert(1)",
+                filter: (cardHovered || cardSelected) && "brightness(0) invert(1)",
                 color: "#444444",
               }}
               className={`object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
@@ -266,25 +265,19 @@ const AccordionCard2 = ({
             >
               {t1 || "1"}
             </p>
-            <img
-              className="blink_style ml-25px object-none mt-12px mb-13px"
-              src={score1ArrowUp ? Up : Dn}
-              alt="img"
-            />
-            <p
-              style={{
-                color:
-                  isHovered || leftActive
-                    ? "#ffffff"
-                    : score1ArrowUp
-                    ? "#f04281"
-                    : "#0072bc",
-                letterSpacing: "-0.031em",
-              }}
-              className="mr-8px text-12px font-malgun mb-2px"
-            >
-              {score1 === "icon" ? "" : score1 || "2.12"}
-            </p>
+            <div className="flex items-center">
+              <img className="blink_style mr-2px object-none mt-12px mb-13px" src={score1ArrowUp ? Up : Dn} alt="img" />
+              <p
+                style={{
+                  color: isHovered || leftActive ? "#ffffff" : score1ArrowUp ? "#f04281" : "#0072bc",
+                  letterSpacing: "-0.031em",
+                  width: "28px",
+                }}
+                className="mr-8px text-12px mb-2px text-right flex justify-end"
+              >
+                {score1 === "icon" ? "" : score1 || "2.12"}
+              </p>
+            </div>
           </div>
           <div
             style={{
@@ -316,25 +309,19 @@ const AccordionCard2 = ({
             >
               {t3 || "무"}
             </p>
-            <img
-              className=" blink_style mr-8px object-none mt-12px mb-13px"
-              src={score2ArrowUp ? Up : Dn}
-              alt="img"
-            />
-            <p
-              style={{
-                color:
-                  isHovered1 || centerActive
-                    ? "#ffffff"
-                    : score2ArrowUp
-                    ? "#f04281"
-                    : "#0072bc",
-                letterSpacing: "-0.031em",
-              }}
-              className="mr-7px text-12px font-malgun mb-2px"
-            >
-              {t4 || "3.59"}
-            </p>
+            <div className="flex items-center">
+              <img className="blink_style mr-2px object-none mt-12px mb-13px" src={score2ArrowUp ? Up : Dn} alt="img" />
+              <p
+                style={{
+                  color: isHovered1 || centerActive ? "#ffffff" : score2ArrowUp ? "#f04281" : "#0072bc",
+                  letterSpacing: "-0.031em",
+                  width: "28px",
+                }}
+                className="mr-7px text-12px text-right flex justify-end mb-2px"
+              >
+                {t4 || "3.59"}
+              </p>
+            </div>
           </div>
           <div
             style={{
@@ -364,25 +351,19 @@ const AccordionCard2 = ({
             >
               {t5 || "2"}
             </p>
-            <img
-              className="blink_style ml-23px object-none mt-12px mb-13px"
-              src={score3ArrowUp ? Up : Dn}
-              alt="img"
-            />
-            <p
-              style={{
-                color:
-                  isHovered2 || rightActive
-                    ? "#ffffff"
-                    : score3ArrowUp
-                    ? "#f04281"
-                    : "#0072bc",
-                letterSpacing: "-0.031em",
-              }}
-              className="mr-8px mt-8px mb-10px text-12px"
-            >
-              {score3 || "3.62"}
-            </p>
+            <div className="flex items-center">
+              <img className="blink_style mr-2px object-none mt-12px mb-13px" src={score3ArrowUp ? Up : Dn} alt="img" />
+              <p
+                style={{
+                  color: isHovered2 || rightActive ? "#ffffff" : score3ArrowUp ? "#f04281" : "#0072bc",
+                  letterSpacing: "-0.031em",
+                  width: "28px",
+                }}
+                className="mr-8px mt-8px mb-10px text-12px text-right flex justify-end"
+              >
+                {score3 || "3.62"}
+              </p>
+            </div>
           </div>
         </div>
       )}

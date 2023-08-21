@@ -136,7 +136,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
-                                    <div className="flex flex-col items-center -space-y-8px">
+                                    <div className="flex flex-col items-center -space-y-8px -mt-2px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">언더</p>
                                         <p style={{fontSize:"10px",}} className="z-20 font-spoqa text-white tracking-tight">
                                             {titleNumber === 2 ? "4.5" : "72.5"}
@@ -159,7 +159,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
-                                    <div className="flex flex-col items-center -space-y-6px">
+                                    <div className="flex flex-col items-center -space-y-8px -mt-2px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">오버</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {titleNumber === 2 ? "4.5" : "72.5"}
@@ -185,7 +185,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
-                                    <div className="flex flex-col items-center -space-y-8px">
+                                    <div className="flex flex-col items-center -space-y-8px -mt-2px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀언더</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {titleNumber === 3 ? "4.5" : "72.5"}
@@ -208,7 +208,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? BlueButtonPressed : BlueButton} alt="" />
-                                    <div className="flex flex-col items-center -space-y-8px">
+                                    <div className="flex flex-col items-center -space-y-8px -mt-2px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀오버</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {titleNumber === 3 ? "4.5" : "72.5"}
@@ -231,7 +231,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-3` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-3` ? RedButtonPressed : RedButton} alt="" />
-                                    <div className="flex flex-col items-center -space-y-8px">
+                                    <div className="flex flex-col items-center -space-y-8px -mt-2px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝언더</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {titleNumber === 3 ? "4.5" : "72.5"}
@@ -254,7 +254,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-4` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-4` ? RedButtonPressed : RedButton} alt="" />
-                                    <div className="flex flex-col items-center -space-y-8px">
+                                    <div className="flex flex-col items-center -space-y-8px -mt-2px">
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝오버</p>
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {titleNumber === 3 ? "4.5" : "72.5"}
@@ -652,7 +652,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
     return (
         <div 
             style={{width:"1260px" ,height: "288px"}}
-            className="flex px-7px pb-5px space-x-6px w-full"
+            className="flex px-7px pb-6px space-x-6px w-full"
         >
             <div className="w-full flex flex-col">
                 <PanelTitle title="파워볼" />

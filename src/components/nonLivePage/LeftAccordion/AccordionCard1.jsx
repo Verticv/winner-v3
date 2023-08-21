@@ -10,21 +10,7 @@ import {
 } from "reducers/nonLive-reducer";
 import { useDispatch } from "react-redux";
 
-const AccordionCard1 = ({
-  id,
-  team1,
-  time,
-  team2,
-  dateAndTime,
-  t1,
-  score1,
-  t3,
-  t4,
-  t5,
-  score3,
-  card,
-  type,
-}) => {
+const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t4, t5, score3, card, type }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
@@ -196,8 +182,7 @@ const AccordionCard1 = ({
               alt=""
               onClick={toggleAccordion}
               style={{
-                filter:
-                  (cardHovered || cardSelected) && "brightness(0) invert(1)",
+                filter: (cardHovered || cardSelected) && "brightness(0) invert(1)",
                 color: "#444444",
               }}
               className={`object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
@@ -215,7 +200,7 @@ const AccordionCard1 = ({
             borderBottomLeftRadius: "4px",
             borderBottomRightRadius: "4px",
           }}
-          className="flex border-t border-solid h-31px items-center"
+          className="flex border-t border-solid h-31px items-center cursor-pointer"
         >
           <div
             style={{
@@ -247,6 +232,7 @@ const AccordionCard1 = ({
             </p>
             <img
               className="mr-8px mb-8px mt-7px object-none"
+              style={{ filter: (isHovered || leftActive) && "brightness(0) invert(1)" }}
               src={icon1}
               alt="img"
             />
@@ -283,6 +269,7 @@ const AccordionCard1 = ({
             </p>
             <img
               className="mr-8px mb-8px mt-7px object-none"
+              style={{ filter: (isHovered1 || centerActive) && "brightness(0) invert(1)" }}
               src={icon1}
               alt="img"
             />
@@ -317,6 +304,7 @@ const AccordionCard1 = ({
             </p>
             <img
               className="mr-8px mb-8px mt-7px object-none"
+              style={{ filter: (isHovered2 || rightActive) && "brightness(0) invert(1)" }}
               src={icon1}
               alt="img"
             />
