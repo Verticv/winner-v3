@@ -19,13 +19,7 @@ import {
 } from "reducers/nonLive-reducer";
 import arrowActive from "../../../images/nonLivePage/CenterAccordion/ArrowActive.png";
 
-const CenterAccordionContent = ({
-  card,
-  lastObject,
-  setEnglandActive,
-  lastItemActive,
-  setLastItemActive,
-}) => {
+const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemActive, setLastItemActive }) => {
   const dispatch = useDispatch();
   const [leftActive, setLeftActive] = useState(false);
   const [centerActive, setCenterActive] = useState(false);
@@ -44,9 +38,7 @@ const CenterAccordionContent = ({
     console.log("item.teamsitem.teams", card);
   });
 
-  const favoritePreMatch = useSelector(
-    (state) => state?.nonLive?.favoritePreMatch
-  );
+  const favoritePreMatch = useSelector((state) => state?.nonLive?.favoritePreMatch);
 
   const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
 
@@ -189,15 +181,10 @@ const CenterAccordionContent = ({
         //   }
         //    h-31px  `}
         // >
-        className={`flex items-center ${
-          lastObject.id !== card.id ? "border-b h-31px" : "h-30px"
-        }
+        className={`flex items-center ${lastObject.id !== card.id ? "border-b h-31px" : "h-30px"}
         `}
       >
-        <div
-          className="items-center ml-6px mt-6px mb-8px"
-          style={{ width: "23px" }}
-        >
+        <div className="items-center ml-6px mt-6px mb-8px" style={{ width: "23px" }}>
           <img
             id={card.id}
             src={activeStar || hoverStar ? activeStarIcon : icon}
@@ -252,9 +239,7 @@ const CenterAccordionContent = ({
             width: "252px",
             height: "30px",
             fontFamily: "MalgunGothicRegular",
-            background: leftActive
-              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
-              : "",
+            background: leftActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: leftActive ? "#eeeeee" : "#111111",
             ...(isHovered ? hoverStyle : null),
           }}
@@ -279,13 +264,15 @@ const CenterAccordionContent = ({
           <p
             style={{
               fontSize: "12px",
-              color: card.score1ArrowUp
-                ? "#f04281"
-                : card.score1ArrowDown
-                ? "#0072bc"
-                : leftActive || isHovered
-                ? "#ffffff"
-                : "#111111",
+              color:
+                leftActive || isHovered
+                  ? "#ffffff"
+                  : card.score1ArrowUp
+                  ? "#f04281"
+                  : card.score1ArrowDown
+                  ? "#0072bc"
+                  : "#111111",
+
               letterSpacing: "-0.031em",
             }}
             className="flex items-center mr-9px mt-10px mb-12px flex-shrink-0"
@@ -310,14 +297,16 @@ const CenterAccordionContent = ({
               )}
             </span>
             {card.score1 ? (
-              <p
-                style={{ width: "28px" }}
-                className="text-right flex justify-end"
-              >
+              <p style={{ width: "28px" }} className="text-right flex justify-end">
                 {card.score1}
               </p>
             ) : (
-              <img src={icon1} alt="icon1" className="mr-5px mt-2px" />
+              <img
+                src={icon1}
+                alt="icon1"
+                style={{ filter: (leftActive || isHovered) && "brightness(0) invert(1)" }}
+                className="mr-5px mt-2px"
+              />
             )}
           </p>
         </div>
@@ -332,9 +321,7 @@ const CenterAccordionContent = ({
           }}
           style={{
             height: "100%",
-            background: centerActive
-              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
-              : "",
+            background: centerActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: centerActive ? "#eeeeee" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
@@ -364,13 +351,14 @@ const CenterAccordionContent = ({
           <p
             style={{
               fontSize: "12px",
-              color: card.score1ArrowUp
-                ? "#f04281"
-                : card.score1ArrowDown
-                ? "#0072bc"
-                : centerActive || isHovered1
-                ? "#ffffff"
-                : "#111111",
+              color:
+                centerActive || isHovered1
+                  ? "#ffffff"
+                  : card.score1ArrowUp
+                  ? "#f04281"
+                  : card.score1ArrowDown
+                  ? "#0072bc"
+                  : "#111111",
               letterSpacing: "-0.031em",
               width: "100%",
               textAlign: "center",
@@ -381,7 +369,12 @@ const CenterAccordionContent = ({
               card.score2
             ) : (
               <span className="flex justify-center">
-                <img src={icon1} alt="icon1" className="mt-2px" />
+                <img
+                  src={icon1}
+                  alt="icon1"
+                  style={{ filter: (centerActive || isHovered1) && "brightness(0) invert(1)" }}
+                  className="mt-2px"
+                />
               </span>
             )}
           </p>
@@ -399,9 +392,7 @@ const CenterAccordionContent = ({
             borderColor: rightActive ? "#6227a5" : "#cccccc",
             width: "252px",
             height: "30px",
-            background: rightActive
-              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
-              : "",
+            background: rightActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: rightActive ? "#eeeeee" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
@@ -412,13 +403,14 @@ const CenterAccordionContent = ({
           <p
             style={{
               fontSize: "12px",
-              color: card.score1ArrowUp
-                ? "#0072bc"
-                : card.score1ArrowDown
-                ? "#f04281"
-                : rightActive || isHovered2
-                ? "#ffffff"
-                : "#111111",
+              color:
+                rightActive || isHovered2
+                  ? "#ffffff"
+                  : card.score1ArrowUp
+                  ? "#0072bc"
+                  : card.score1ArrowDown
+                  ? "#f04281"
+                  : "#111111",
               letterSpacing: "-0.031em",
             }}
             className="flex items-center ml-9px mt-10px mb-12px flex-shrink-0"
@@ -428,7 +420,12 @@ const CenterAccordionContent = ({
                 {card.score3}
               </p>
             ) : (
-              <img src={icon1} alt="icon1" className="ml-5px mt-2px" />
+              <img
+                src={icon1}
+                alt="icon1"
+                style={{ filter: (rightActive || isHovered2) && "brightness(0) invert(1)" }}
+                className="ml-5px mt-2px"
+              />
             )}
             <span>
               {card.score3ArrowUp ? (
@@ -470,15 +467,10 @@ const CenterAccordionContent = ({
             width: "39px",
             height: "100%",
             borderRight: lastItemActive === card ? "1px solid #6227a5" : "",
-            background:
-              lastItemActive === card
-                ? `linear-gradient(to top, #5423a0, #9d3bbb)`
-                : "",
+            background: lastItemActive === card ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: lastItemActive === card ? "#eeeeee" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
-            borderBottomRightRadius: `${
-              lastObject.id !== card.id ? "0px" : "4px"
-            }`,
+            borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "4px"}`,
           }}
           onMouseEnter={handleMouseEnter3}
           onMouseLeave={handleMouseLeave3}
@@ -500,11 +492,7 @@ const CenterAccordionContent = ({
           >
             {card.difference}
           </p>
-          {lastItemActive === card ? (
-            <img className=" object-none ml-3px" src={arrowActive} alt="" />
-          ) : (
-            ""
-          )}
+          {lastItemActive === card ? <img className=" object-none ml-3px" src={arrowActive} alt="" /> : ""}
         </div>
       </button>
     </>

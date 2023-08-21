@@ -23,27 +23,28 @@ const ARHover = ({ selection }) => {
       background: AugBanner,
       logo: AugBannerLogo,
       imgText: "파워볼",
+      path: "/minigame/powerball",
     },
     {
       id: 1,
       background: AugBanner3,
       logo: AugBannerLogo3,
       imgText: "파워사다리",
-      path: "/esports/single",
+      path: "/minigame/powerladder",
     },
     {
       id: 2,
       background: AugBanner2,
       logo: AugBannerLogo2,
       imgText: "스피드키노",
-      path: "/esports/structure",
+      path: "/minigame/speedkino",
     },
     {
       id: 3,
       background: AugBanner4,
       logo: AugBannerLogo4,
       imgText: "키노사다리",
-      path: "/esports/multi",
+      path: "/minigame/kinoladder",
     },
   ];
 

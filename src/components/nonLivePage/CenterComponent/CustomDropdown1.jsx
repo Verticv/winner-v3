@@ -38,13 +38,13 @@ const CustomDropdown1 = () => {
         height: "27px",
         borderRadius: "4px",
       }}
-      className="relative items-center justify-between rounded-lg "
+      className="relative items-center justify-between rounded-lg cursor-pointer"
+      onClick={toggleDropdown}
     >
       <button
         type="button"
         className="flex items-center justify-between focus:outline-none"
         style={{ paddingTop: "3px" }}
-        onClick={toggleDropdown}
       >
         <p style={{ color: "#444444", letterSpacing: "-0.031em" }} className="text-13px ml-9px mt-px">
           {" "}

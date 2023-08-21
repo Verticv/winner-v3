@@ -108,7 +108,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                         style={{ textShadow: "2px 2px 2px #00000050", fontSize: "48px" }}
                                         className="z-20 font-swagger text-white text-20px mt-2px"
                                     >
-                                         3 <span style={{fontSize: "40px"}}>줄</span>
+                                         3 <span style={{fontSize: "40px", marginLeft:'-10px'}}>줄</span>
                                     </p>)}
                                 </div>
                                 <div className="text-12px font-robotoRegular tracking-tight mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</div>
@@ -139,7 +139,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                         style={{ textShadow: "2px 2px 2px #00000050", fontSize: "48px" }}
                                         className="z-20 font-swagger text-white text-20px mt-2px"
                                     >
-                                         4 <span style={{fontSize: "40px"}}>줄</span>
+                                         4 <span style={{fontSize: "40px", marginLeft:'-10px'}}>줄</span>
                                     </p>)}
                                 </div>
                                 <p className="text-12px font-robotoRegular tracking-tight  mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
@@ -230,7 +230,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
     return (
         <div 
             style={{height: "205=3px"}}
-            className="flex w-full px-7px pb-5px"
+            className="flex w-full px-7px pb-6px"
         >
             <div className="w-full flex flex-col">
                 <PanelTitle title="파워사다리" />
