@@ -33,7 +33,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row1}
                             <div className={`${
                                 item.row1Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row1Sub}</div>
                         </div>
                     )}
@@ -50,7 +50,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row2}
                             <div className={`${
                                 item.row2Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row2Sub}</div>
                         </div>
                     )}
@@ -67,7 +67,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row3}
                             <div className={`${
                                 item.row3Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row3Sub}</div>
                         </div>
                     )}
@@ -84,7 +84,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row4}
                             <div className={`${
                                 item.row4Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row4Sub}</div>
                         </div>
                     )}
@@ -101,7 +101,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row5}
                             <div className={`${
                                 item.row5Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row5Sub}</div>
                         </div>
                     )}
@@ -118,7 +118,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row6}
                             <div className={`${
                                 item.row6Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row6Sub}</div>
                         </div>
                     )}
@@ -135,7 +135,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row7}
                             <div className={`${
                                 item.row7Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row7Sub}</div>
                         </div>
                     )}
@@ -152,7 +152,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row8}
                             <div className={`${
                                 item.row8Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row8Sub}</div>
                         </div>
                     )}
@@ -169,7 +169,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row9}
                             <div className={`${
                                 item.row9Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row9Sub}</div>
                         </div>
                     )}
@@ -186,7 +186,7 @@ const PowerLadderResults = ({array}) => {
                             {item.row10}
                             <div className={`${
                                 item.row10Direction === "right" ? "-right-5px" : "-left-5px"
-                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center pt-2px pr-2px -top-5px`}
+                                } absolute rounded-full h-22px w-22px bg-black flex items-center justify-center -top-5px`}
                             >{item.row10Sub}</div>
                         </div>
                     )}
