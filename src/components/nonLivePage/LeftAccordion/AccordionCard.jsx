@@ -6,15 +6,34 @@ import {
   deleteFavoritePreMatchCardById,
   deleteFavoriteLaLigaCardById,
   deleteFavoriteBundesligaCardById,
+  setBetSlipData,
 } from "reducers/nonLive-reducer";
 import { useDispatch } from "react-redux";
 
-const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5, t6, type }) => {
+const AccordionCard = ({
+  id,
+  team1,
+  time,
+  team2,
+  dateAndTime,
+  t1,
+  score1,
+  t3,
+  t4,
+  t5,
+  score3,
+  type,
+  card,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
   const [cardHovered, setCardHovered] = useState(false);
-  const [cardSelected,] = useState(false);
+  const [cardSelected] = useState(false);
+
+  const [leftActive, setLeftActive] = useState(false);
+  const [centerActive, setCenterActive] = useState(false);
+  const [rightActive, setRightActive] = useState(false);
 
   const hoverStyle = {
     background: "#936cee",
@@ -147,7 +166,10 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
         <div className="flex justify-between ml-10px -mt-px">
           <div className="mt-19px mb-6px">
             <p
-              style={{ color: cardHovered || cardSelected ? "#ffffff" : "#0072bc", letterSpacing: "-0.031em" }}
+              style={{
+                color: cardHovered || cardSelected ? "#ffffff" : "#0072bc",
+                letterSpacing: "-0.031em",
+              }}
               className="text-12px font-malgun"
             >
               {dateAndTime}
@@ -178,7 +200,11 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
               src={Arrow}
               alt=""
               onClick={toggleAccordion}
-              style={{ filter: (cardHovered || cardSelected) && "brightness(0) invert(1)", color: "#444444" }}
+              style={{
+                filter:
+                  (cardHovered || cardSelected) && "brightness(0) invert(1)",
+                color: "#444444",
+              }}
               className={`object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
                 isOpen ? "transform rotate-180" : ""
               }`}
@@ -200,15 +226,24 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
             style={{
               width: "91px",
               height: "30px",
+              background: leftActive ? "#936cee" : "",
               ...(isHovered ? hoverStyle : null),
             }}
             className="flex items-center justify-between"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={() => {
+              dispatch(
+                setBetSlipData({
+                  data: card,
+                })
+              );
+              setLeftActive((prev) => !prev);
+            }}
           >
             <p
               style={{
-                color: isHovered ? "#ffffff" : "#444444",
+                color: isHovered || leftActive ? "#ffffff" : "#444444",
                 letterSpacing: "-0.031em",
               }}
               className="ml-6px mt-9px mb-11px text-12px font-malgun"
@@ -217,12 +252,12 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
             </p>
             <p
               style={{
-                color: isHovered ? "#ffffff" : "#682aa7",
+                color: isHovered || leftActive ? "#ffffff" : "#682aa7",
                 letterSpacing: "-0.031em",
               }}
               className="mr-7px text-12px font-malgun mb-2px"
             >
-              {t2 === "icon" ? "" : t2 || "2.12"}
+              {score1 === "icon" ? "" : score1 || "2.12"}
             </p>
           </div>
           <div
@@ -230,15 +265,24 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
               borderColor: "#cccccc",
               width: "93px",
               height: "30px",
+              background: centerActive ? "#936cee" : "",
               ...(isHovered1 ? hoverStyle1 : null),
             }}
             className="flex items-center justify-between  border-l border-r border-solid"
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
+            onClick={() => {
+              dispatch(
+                setBetSlipData({
+                  data: card,
+                })
+              );
+              setCenterActive((prev) => !prev);
+            }}
           >
             <p
               style={{
-                color: isHovered1 ? "#ffffff" : "#444444",
+                color: isHovered1 || centerActive ? "#ffffff" : "#444444",
                 letterSpacing: "-0.031em",
                 marginBottom: t3 ? "4px" : "2px",
               }}
@@ -248,7 +292,7 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
             </p>
             <p
               style={{
-                color: isHovered1 ? "#ffffff" : "#682aa7",
+                color: isHovered1 || centerActive ? "#ffffff" : "#682aa7",
                 letterSpacing: "-0.031em",
               }}
               className="mr-7px text-12px font-malgun mb-2px"
@@ -260,15 +304,24 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
             style={{
               width: "90px",
               height: "30px",
+              background: rightActive ? "#936cee" : "",
               ...(isHovered2 ? hoverStyle2 : null),
             }}
             className="flex items-center justify-between"
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}
+            onClick={() => {
+              dispatch(
+                setBetSlipData({
+                  data: card,
+                })
+              );
+              setRightActive((prev) => !prev);
+            }}
           >
             <p
               style={{
-                color: isHovered2 ? "#ffffff" : "#444444",
+                color: isHovered2 || rightActive ? "#ffffff" : "#444444",
                 letterSpacing: "-0.031em",
               }}
               className="ml-8px mt-10px mb-12px text-12px font-malgun"
@@ -277,12 +330,12 @@ const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, t2, t3, t4, t5
             </p>
             <p
               style={{
-                color: isHovered2 ? "#ffffff" : "#682aa7",
+                color: isHovered2 || rightActive ? "#ffffff" : "#682aa7",
                 letterSpacing: "-0.031em",
               }}
               className="mr-7px mt-8px mb-10px text-12px"
             >
-              {t6 || "3.62"}
+              {score3 || "3.62"}
             </p>
           </div>
         </div>

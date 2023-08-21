@@ -5,7 +5,10 @@ import icon1 from "../../../images/nonLivePage/CenterAccordion/star2.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on.png";
 import icon from "../../../images/nonLivePage/CenterAccordion/Icon.png";
 import { useDispatch, useSelector } from "react-redux";
-import { addToLeague, deleteFavoriteLeagueById } from "reducers/nonLive-reducer";
+import {
+  addToLeague,
+  deleteFavoriteLeagueById,
+} from "reducers/nonLive-reducer";
 
 // import AccordionContent1 from "./AccordionContent1";
 
@@ -75,11 +78,17 @@ const CenterAccordionButton = ({
           borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
           borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
-        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-30px `}
+        className={`flex items-center justify-between ${
+          isOpen ? "rounded-t-lg" : "rounded-lg"
+        } cursor-pointer h-30px `}
         onClick={toggleAccordion}
       >
         <div className="flex items-center">
-          <img className="ml-5px mt-7px mb-8px object-none" src={icon} alt="icon" />
+          <img
+            className="ml-5px mt-7px mb-8px object-none"
+            src={icon}
+            alt="icon"
+          />
           <p
             style={{
               color: "#eeeeee",
@@ -96,7 +105,10 @@ const CenterAccordionButton = ({
           </p>
         </div>
         <div className="flex items-center">
-          <div style={{ borderColor: "#533583", height: "30px" }} className="flex border-r">
+          <div
+            style={{ borderColor: "#533583", height: "30px" }}
+            className="flex border-r"
+          >
             <p
               style={{
                 color: "#eeeeee",
@@ -131,7 +143,10 @@ const CenterAccordionButton = ({
             />
             <img className="-mr-2px object-none" src={icon2} alt="icon1" />
           </div>
-          <div style={{ width: "38px" }} className="justify-center items-center flex">
+          <div
+            style={{ width: "38px" }}
+            className="justify-center items-center flex"
+          >
             <img
               src={Arrow}
               alt=""
