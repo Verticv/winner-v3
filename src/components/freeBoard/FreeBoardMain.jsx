@@ -2,7 +2,7 @@ import DropDownControls from "components/dropdowns/DropDownControls";
 import Pagination from "components/myPage/Pagination";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import DownArrowIcon from "../../images/arrows/arrow_down_gray.png";
+import DownArrowIcon from "../../images/arrows/arrow1.png";
 import SearchIcon from "../../images/myPage/search.png";
 import PurpleSpeaker from "../../images/freeBoard/purple_speaker.png";
 import BlueSpeaker from "../../images/freeBoard/blue_speaker_v3.png";
@@ -332,21 +332,17 @@ const FreeBoardMain = () => {
   const dropdownButton = (
     <div
       style={{ backgroundColor: "#ffffff", borderColor: "#682aa7" }}
-      className="flex w-120px h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group"
+      className="flex w-120px h-42px bg-dark-1a1a1a rounded-6px border border-gray-404040 group"
     >
       <input className="w-0 text-16px" />
       <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
         <label
           style={{ color: "#666666" }}
-          className="ml-14px cursor-pointer group-hover:text-gray-r8c8c8c"
+          className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c"
         >
           {selectedCarrier}
         </label>
-        <img
-          className="w-10px h-6px object-contain mr-10px"
-          src={DownArrowIcon}
-          alt="arrow"
-        />
+        <img className="object-none mr-9px" src={DownArrowIcon} alt="arrow" />
       </div>
     </div>
   );
@@ -354,10 +350,11 @@ const FreeBoardMain = () => {
   const InboxSearch = (
     <div
       style={{
-        height: "102px",
+        height: "82px",
         background: "linear-gradient(to right, #622d8a, #3b207b)",
+        borderRadius: "6px",
       }}
-      className="w-full bg-gray-2e2e2e rounded-4px flex items-center justify-center space-x-10px"
+      className="w-full bg-gray-2e2e2e flex items-center justify-center space-x-10px"
     >
       <DropDownControls
         buttonChild={dropdownButton}
@@ -372,7 +369,7 @@ const FreeBoardMain = () => {
         className="flex h-42px bg-dark-1a1a1a rounded-6px border border-gray-404040 relative"
       >
         <input
-          className="rounded-6px pl-11px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+          className="rounded-6px pl-9px pb-px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button
@@ -380,11 +377,11 @@ const FreeBoardMain = () => {
             background: "linear-gradient(to top, #4f3a7a, #e597ff)",
             boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
           }}
-          className="flex items-center justify-center w-42px h-42px rounded-4px bg-gradient-to-b from-gray-e8b888  to-gray-4b3b09 flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10"
+          className="flex items-center justify-center w-42px h-42px rounded-6px bg-gradient-to-b from-gray-e8b888  to-gray-4b3b09 flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10"
         >
           <div
             style={{ background: "linear-gradient(to top, #6b22ff, #df52ff)" }}
-            className="flex items-center justify-center w-40px  h-40px rounded-4px bg-gradient-to-b from-golden-gradLight  to-golden-gradDark"
+            className="flex items-center justify-center w-40px  h-40px rounded-6px bg-gradient-to-b from-golden-gradLight  to-golden-gradDark"
           >
             <img src={SearchIcon} alt="" />
           </div>
@@ -411,6 +408,7 @@ const FreeBoardMain = () => {
                 ? "#f7f7f7"
                 : "#ffffff",
             borderBottomWidth: index === items.length - 1 ? 0 : 1,
+            borderColor: "#dddddd",
           }}
           className="flex items-center font-spoqaMedium text-14px  text-gray-c8c8c8 h-56px border-b border-gray-252525"
         >
@@ -419,9 +417,9 @@ const FreeBoardMain = () => {
             className="font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 flex items-center justify-center"
           >
             {item.type === "공지" ? (
-              <img src={PurpleSpeaker} alt="" />
+              <img className="ml-2px mt-px" src={PurpleSpeaker} alt="" />
             ) : item.type === "이벤트" ? (
-              <img src={BlueSpeaker} alt="" />
+              <img className="ml-2px mt-px" src={BlueSpeaker} alt="" />
             ) : (
               <span className="mt-px">{item.id}</span>
             )}
@@ -433,15 +431,25 @@ const FreeBoardMain = () => {
           >
             {item.type === "공지" ? (
               <div
-                style={{ maxWidth: "92px", backgroundColor: "#9c3bbb" }}
-                className="px-10px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px mr-14px flex-shrink-0"
+                style={{
+                  maxWidth: "92px",
+                  minWidth: "45px",
+                  marginTop: "1px",
+                  backgroundColor: "#9c3bbb",
+                }}
+                className="px-10px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px mr-14px flex-shrink-0 "
               >
                 공지
               </div>
             ) : item.type === "이벤트" ? (
               <div
-                style={{ maxWidth: "92px", backgroundColor: "#714ce8" }}
-                className="px-10px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0"
+                style={{
+                  maxWidth: "92px",
+                  minWidth: "53px",
+                  marginTop: "1px",
+                  backgroundColor: "#714ce8",
+                }}
+                className="pl-10px pr-8px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
               >
                 이벤트
               </div>
@@ -451,12 +459,13 @@ const FreeBoardMain = () => {
             <p
               className={`${
                 item.type === "공지"
-                  ? "text-blue-6cbbe9 group-hover:text-blue-87eaff mr-11px"
+                  ? "text-blue-6cbbe9 group-hover:text-blue-87eaff mr-5px -ml-px mt-2px"
                   : item.type === "이벤트"
-                  ? "text-yellow-d2b28f group-hover:text-yellow-ffdeb3 mr-9px"
-                  : "group-hover:text-gray-fafafa mr-9px"
-              }  mt-2px truncate text-left`}
+                  ? "text-yellow-d2b28f group-hover:text-yellow-ffdeb3 mr-4px mt-3px"
+                  : "group-hover:text-gray-fafafa mr-9px -ml-px mt-px"
+              } truncate text-left `}
               style={{
+                letterSpacing: "-0.090em",
                 maxWidth: "680px",
                 color:
                   item.type === "공지"
@@ -471,7 +480,7 @@ const FreeBoardMain = () => {
             {item.replies && (
               <div
                 style={{ backgroundColor: "#f04281" }}
-                className="h-17px pl-4px pr-5px rounded-full flex items-center justify-center text-white font-roboto text-12px bg-red-e9441d mr-10px ml-px flex-shrink-0"
+                className="h-19px mt-px pl-7px pr-7px rounded-full flex items-center justify-center text-white font-roboto text-12px bg-red-e9441d mr-10px -ml-4px flex-shrink-0"
               >
                 <p className="h-12px flex items-center">{item.replies}</p>
               </div>
@@ -479,7 +488,7 @@ const FreeBoardMain = () => {
             {item.isBetHistory === true && (
               <div
                 style={{ backgroundColor: "#936cee", maxWidth: "92px" }}
-                className="h-25px px-10px rounded-full flex items-center justify-center text-white font-spoqaMedium text-12px flex-shrink-0"
+                className="h-25px pl-10px pr-9px mt-px rounded-full flex items-center justify-center text-white font-spoqaMedium text-12px flex-shrink-0"
               >
                 베팅내역
               </div>
@@ -487,7 +496,7 @@ const FreeBoardMain = () => {
             {item.isRead === false && (
               <div
                 style={{ backgroundColor: "#f04281" }}
-                className="w-17px h-17px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0"
+                className="w-20px h-19px mt-px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0"
               >
                 <p className="flex items-center h-12px -ml-px">N</p>
               </div>
@@ -502,20 +511,20 @@ const FreeBoardMain = () => {
               <img
                 src={WinnerLogo}
                 alt=""
-                className="-mt-5px -ml-3px flex-shrink-0"
+                className="-mt-3px -ml-3px flex-shrink-0"
               />
             ) : (
-              <div className="flex space-x-4px flex-shrink-0">
+              <div className="flex space-x-4px flex-shrink-0 ml-3px">
                 {item.level === 1 ? (
-                  <img src={Rank1} alt="" />
+                  <img className="object-none" src={Rank1} alt="" />
                 ) : item.level === 2 ? (
-                  <img src={Rank2} alt="" />
+                  <img className="object-none" src={Rank2} alt="" />
                 ) : item.level === 3 ? (
-                  <img src={Rank3} alt="" />
+                  <img className="object-none" src={Rank3} alt="" />
                 ) : item.level === 4 ? (
-                  <img src={Rank4} alt="" />
+                  <img className="object-none" src={Rank4} alt="" />
                 ) : (
-                  <img src={Rank5} alt="" />
+                  <img className="object-none" src={Rank5} alt="" />
                 )}
                 <p style={{ maxWidth: "120px" }} className="mt-2px truncate">
                   {item.author}
@@ -525,7 +534,7 @@ const FreeBoardMain = () => {
           </div>
           <div
             style={{ width: "190px" }}
-            className="flex items-center justify-center text-gray-c8c8c8 font-spoqa"
+            className="flex items-center justify-center text-gray-c8c8c8 font-spoqa -ml-10px mt-px"
           >
             {item.type !== "일반" ? (
               ""
@@ -541,44 +550,45 @@ const FreeBoardMain = () => {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-5px">
       <div
         className="shadow-table w-full overflow-hidden rounded-4px p-px "
         style={{
-          background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)",
+          background: "linear-gradient(to top, #ededeb, #cb78e6)",
+          borderRadius: "10px",
         }}
       >
         <div
-          style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
-          className="p-px w-full rounded-4px bg-gray-323232 overflow-hidden"
+          style={{ borderRadius: "10px" }}
+          className="w-full rounded-4px bg-gray-323232 overflow-hidden"
         >
           <div
             style={{
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             }}
-            className="h-56px bg-gray-2e2e2e w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-ccc2b6 rounded-t-4px  border-b border-gray-252525"
+            className="h-55px bg-gray-2e2e2e w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-ccc2b6 rounded-t-4px  border-b border-gray-252525"
           >
             <div
               style={{ width: "124px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px tracking-tight text-14px"
+              className="flex items-center justify-center mt-px ml-px mb-2px"
             >
               번호
             </div>
             <div
               style={{ width: "798px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px"
+              className="flex items-center justify-center mt-px mb-2px"
             >
               제목
             </div>
             <div
               style={{ width: "135px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px"
+              className="flex items-center justify-center mt-px mb-2px"
             >
               닉네임
             </div>
             <div
               style={{ width: "190px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px"
+              className="flex items-center justify-center mt-px mb-2px"
             >
               등록일시
             </div>
@@ -589,30 +599,34 @@ const FreeBoardMain = () => {
         </div>
       </div>
 
-      <div className="mt-19px flex justify-end">
+      <div className="mt-20px flex justify-end">
         <button
           onClick={() => history.push("/freeboard/compose")}
-          className="flex items-center justify-center h-36px w-90px  rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 p-px hover:filter hover:brightness-125 shadow-link"
+          className="flex items-center justify-center h-36px w-118px mr-px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 hover:filter hover:brightness-125 shadow-link"
         >
           <div
             style={{
               background: "linear-gradient(to right, #15cfee, #3197e5)",
               boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
+              borderRadius: "6px",
             }}
-            className="flex items-center justify-center h-34px w-88px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer"
+            className="flex items-center justify-center h-36px w-118px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer"
           >
-            <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-2px text-white">
+            <span
+              style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
+              className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-2px text-white mb-3px ml-2px"
+            >
               작성하기
             </span>
           </div>
         </button>
       </div>
 
-      <div className="flex w-full justify-center mt-5px mb-60px">
+      <div className="flex w-full justify-center mt-4px mb-60px">
         <Pagination page={page} setPage={setPage} />
       </div>
 
-      <div className="-mt-30px mb-60px">{InboxSearch}</div>
+      <div className="-mt-29px mb-60px mr-px">{InboxSearch}</div>
     </div>
   );
 };

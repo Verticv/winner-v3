@@ -19,7 +19,13 @@ import {
 } from "reducers/nonLive-reducer";
 import arrowActive from "../../../images/nonLivePage/CenterAccordion/ArrowActive.png";
 
-const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemActive, setLastItemActive }) => {
+const CenterAccordionContent = ({
+  card,
+  lastObject,
+  setEnglandActive,
+  lastItemActive,
+  setLastItemActive,
+}) => {
   const dispatch = useDispatch();
   const [leftActive, setLeftActive] = useState(false);
   const [centerActive, setCenterActive] = useState(false);
@@ -34,7 +40,13 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
   const [isHovered3, setIsHovered3] = useState(false);
   // const [idSelected, setIdSelected] = useState([]);
 
-  const favoritePreMatch = useSelector((state) => state?.nonLive?.favoritePreMatch);
+  useEffect(() => {
+    console.log("item.teamsitem.teams", card);
+  });
+
+  const favoritePreMatch = useSelector(
+    (state) => state?.nonLive?.favoritePreMatch
+  );
 
   const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
 
@@ -49,6 +61,9 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
     }
   }, [favoritePreMatch, setActiveStar, card.id, card.type]);
 
+  useEffect(() => {
+    console.log("card20", card);
+  });
   useEffect(() => {
     if (card.type === "라리가") {
       let card_index = favoriteLaLiga.findIndex((el) => +el.id === card.id);
@@ -174,10 +189,15 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
         //   }
         //    h-31px  `}
         // >
-        className={`flex items-center ${lastObject.id !== card.id ? "border-b h-31px" : "h-30px"}
+        className={`flex items-center ${
+          lastObject.id !== card.id ? "border-b h-31px" : "h-30px"
+        }
         `}
       >
-        <div className="items-center ml-6px mt-6px mb-8px" style={{ width: "23px" }}>
+        <div
+          className="items-center ml-6px mt-6px mb-8px"
+          style={{ width: "23px" }}
+        >
           <img
             id={card.id}
             src={activeStar || hoverStar ? activeStarIcon : icon}
@@ -197,6 +217,15 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
                   team2: card.team2,
                   dateAndTime: "2023-05-14 18:30",
                   type: card.type,
+                  score1: card.score1,
+                  t4: card.score2,
+                  score3: card.score3,
+                  score1ArrowDown: card?.score1ArrowDown,
+                  score1ArrowUp: card?.score1ArrowUp,
+                  score2ArrowDown: card?.score2ArrowDown,
+                  score2ArrowUp: card?.score2ArrowUp,
+                  score3ArrowDown: card?.score3ArrowDown,
+                  score3ArrowUp: card?.score3ArrowUp,
                 });
               } else {
                 deleteFromFavorite({
@@ -223,7 +252,9 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             width: "252px",
             height: "30px",
             fontFamily: "MalgunGothicRegular",
-            background: leftActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
+            background: leftActive
+              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+              : "",
             color: leftActive ? "#eeeeee" : "#111111",
             ...(isHovered ? hoverStyle : null),
           }}
@@ -248,7 +279,13 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
           <p
             style={{
               fontSize: "12px",
-              color: card.score1ArrowUp ? "#f04281" : card.score1ArrowDown ? "#0072bc" : leftActive || isHovered ? "#ffffff" : "#111111",
+              color: card.score1ArrowUp
+                ? "#f04281"
+                : card.score1ArrowDown
+                ? "#0072bc"
+                : leftActive || isHovered
+                ? "#ffffff"
+                : "#111111",
               letterSpacing: "-0.031em",
             }}
             className="flex items-center mr-9px mt-10px mb-12px flex-shrink-0"
@@ -295,7 +332,9 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
           }}
           style={{
             height: "100%",
-            background: centerActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
+            background: centerActive
+              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+              : "",
             color: centerActive ? "#eeeeee" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
@@ -360,7 +399,9 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             borderColor: rightActive ? "#6227a5" : "#cccccc",
             width: "252px",
             height: "30px",
-            background: rightActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
+            background: rightActive
+              ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+              : "",
             color: rightActive ? "#eeeeee" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
@@ -375,7 +416,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
                 ? "#0072bc"
                 : card.score1ArrowDown
                 ? "#f04281"
-                : (rightActive || isHovered2)
+                : rightActive || isHovered2
                 ? "#ffffff"
                 : "#111111",
               letterSpacing: "-0.031em",
@@ -429,10 +470,15 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             width: "39px",
             height: "100%",
             borderRight: lastItemActive === card ? "1px solid #6227a5" : "",
-            background: lastItemActive === card ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
+            background:
+              lastItemActive === card
+                ? `linear-gradient(to top, #5423a0, #9d3bbb)`
+                : "",
             color: lastItemActive === card ? "#eeeeee" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
-            borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "4px"}`,
+            borderBottomRightRadius: `${
+              lastObject.id !== card.id ? "0px" : "4px"
+            }`,
           }}
           onMouseEnter={handleMouseEnter3}
           onMouseLeave={handleMouseLeave3}
@@ -454,7 +500,11 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
           >
             {card.difference}
           </p>
-          {lastItemActive === card ? <img className=" object-none ml-3px" src={arrowActive} alt="" /> : ""}
+          {lastItemActive === card ? (
+            <img className=" object-none ml-3px" src={arrowActive} alt="" />
+          ) : (
+            ""
+          )}
         </div>
       </button>
     </>

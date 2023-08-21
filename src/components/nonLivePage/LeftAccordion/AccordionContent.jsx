@@ -4,8 +4,13 @@ import icon from "../../../images/nonLivePage/LeftAccordion/content/Icon.png";
 import AccordionCard from "./AccordionCard";
 import Arrow from "../../../images/nonLivePage/LeftAccordion/Card/Arrow.png";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteAllFavoriteCards, deleteFavoriteLeagueById } from "reducers/nonLive-reducer";
+import {
+  deleteAllFavoriteCards,
+  deleteFavoriteLeagueById,
+} from "reducers/nonLive-reducer";
 import "./style.css";
+import AccordionCard2 from "./AccordionCard2";
+import AccordionCard1 from "./AccordionCard1";
 
 const AccordionContent = ({ setIsOpen }) => {
   const [showCard, setShowCard] = useState(true);
@@ -30,11 +35,23 @@ const AccordionContent = ({ setIsOpen }) => {
   const [isDeleted, setIsDeleted] = useState(true);
   const dispatch = useDispatch();
 
-  const favoritePreMatch = useSelector((state) => state?.nonLive?.favoritePreMatch);
+  const favoritePreMatch = useSelector(
+    (state) => state?.nonLive?.favoritePreMatch
+  );
   const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
   const bundesliga = useSelector((state) => state?.nonLive?.bundesliga);
   const League = useSelector((state) => state?.nonLive?.League);
 
+  useEffect(() => {
+    console.log(
+      "favoritePreMatch13",
+      favoritePreMatch,
+      "favoriteLaLiga",
+      favoriteLaLiga,
+      "bundesliga",
+      bundesliga
+    );
+  });
   const deleteFromFavorite = ({ id }) => {
     dispatch(
       deleteFavoriteLeagueById({
@@ -97,13 +114,19 @@ const AccordionContent = ({ setIsOpen }) => {
                   setIsOpen(false);
                 }}
               >
-                <p className="mb-px text-13px text-white tracking-tight" style={{ fontFamily: "MalgunGothicBold" }}>
+                <p
+                  className="mb-px text-13px text-white tracking-tight"
+                  style={{ fontFamily: "MalgunGothicBold" }}
+                >
                   모두지우기
                 </p>
               </div>
             </div>
           )}
-          {(favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id) && (
+          {(favoritePreMatch[0]?.id ||
+            favoriteLaLiga[0]?.id ||
+            favoriteLaLiga[0]?.id ||
+            bundesliga[0]?.id) && (
             <>
               <div className="ml-7px mt-4px mb-5px">
                 <p
@@ -132,7 +155,9 @@ const AccordionContent = ({ setIsOpen }) => {
               >
                 <div className="flex items-center">
                   <img
-                    style={{ filter: isHovered === 1 && "brightness(0) invert(1)" }}
+                    style={{
+                      filter: isHovered === 1 && "brightness(0) invert(1)",
+                    }}
                     className="ml-6px mt-6px mb-6px"
                     src={icon}
                     alt="img"
@@ -156,7 +181,10 @@ const AccordionContent = ({ setIsOpen }) => {
                 <img
                   src={Arrow}
                   alt=""
-                  style={{ color: "#444444", filter: isHovered === 1 && "brightness(0) invert(1)" }}
+                  style={{
+                    color: "#444444",
+                    filter: isHovered === 1 && "brightness(0) invert(1)",
+                  }}
                   className={`object-none cursor-pointer mr-11px filter hover:opacity-75 ${
                     isOpen1 ? "transform rotate-180" : ""
                   }`}
@@ -172,17 +200,17 @@ const AccordionContent = ({ setIsOpen }) => {
                       team2={el?.team2}
                       dateAndTime={el?.dateAndTime}
                       t1={el?.t1}
-                      t2={el?.t2}
+                      score1={el?.score1}
                       t3={el?.t3}
                       t4={el?.t4}
                       t5={el?.t5}
-                      t6={el?.t6}
+                      score3={el?.score3}
+                      card={el}
                       type={el?.type}
                     />
                   ))}
                 </div>
               )}
-              <div>{/* <AccordionCard2 /> */}</div>
             </>
           )}
         </>
@@ -204,7 +232,9 @@ const AccordionContent = ({ setIsOpen }) => {
               >
                 <div className="flex items-center">
                   <img
-                    style={{ filter: isHovered === 2 && "brightness(0) invert(1)" }}
+                    style={{
+                      filter: isHovered === 2 && "brightness(0) invert(1)",
+                    }}
                     className="ml-6px"
                     src={icon}
                     alt="img"
@@ -229,8 +259,13 @@ const AccordionContent = ({ setIsOpen }) => {
                   // onClick={(e) => {
                   //   setShowCard1((prev) => !prev);
                   // }}
-                  style={{ color: "#444444", filter: isHovered === 2 && "brightness(0) invert(1)" }}
-                  className={`object-none mr-11px cursor-pointer ${isOpen2 ? "transform rotate-180" : ""}`}
+                  style={{
+                    color: "#444444",
+                    filter: isHovered === 2 && "brightness(0) invert(1)",
+                  }}
+                  className={`object-none mr-11px cursor-pointer ${
+                    isOpen2 ? "transform rotate-180" : ""
+                  }`}
                 />
               </div>
               {isOpen2 && (
@@ -243,11 +278,12 @@ const AccordionContent = ({ setIsOpen }) => {
                       team2={el?.team2}
                       dateAndTime={el?.dateAndTime}
                       t1={el?.t1}
-                      t2={el?.t2}
+                      score1={el?.score1}
                       t3={el?.t3}
                       t4={el?.t4}
                       t5={el?.t5}
-                      t6={el?.t6}
+                      score3={el?.score3}
+                      card={el}
                       type={el?.type}
                     />
                   ))}
@@ -271,7 +307,9 @@ const AccordionContent = ({ setIsOpen }) => {
                   >
                     <div className="flex items-center">
                       <img
-                        style={{ filter: isHovered === 3 && "brightness(0) invert(1)" }}
+                        style={{
+                          filter: isHovered === 3 && "brightness(0) invert(1)",
+                        }}
                         className="ml-6px mt-7px mb-6px"
                         src={icon}
                         alt="img"
@@ -295,27 +333,82 @@ const AccordionContent = ({ setIsOpen }) => {
                       src={Arrow}
                       alt=""
                       // onClick={() => setShowCard2((prev) => !prev)}
-                      style={{ color: "#444444", filter: isHovered === 3 && "brightness(0) invert(1)" }}
-                      className={`object-none mr-11px cursor-pointer ${isOpen3 ? "transform rotate-180" : ""}`}
+                      style={{
+                        color: "#444444",
+                        filter: isHovered === 3 && "brightness(0) invert(1)",
+                      }}
+                      className={`object-none mr-11px cursor-pointer ${
+                        isOpen3 ? "transform rotate-180" : ""
+                      }`}
                     />
                   </div>
                   {isOpen3 && (
                     <div>
                       {bundesliga?.map((el) => (
-                        <AccordionCard
-                          id={el?.id}
-                          team1={el?.team1}
-                          time={el?.time}
-                          team2={el?.team2}
-                          dateAndTime={el?.dateAndTime}
-                          t1={el?.t1}
-                          t2={el?.t2}
-                          t3={el?.t3}
-                          t4={el?.t4}
-                          t5={el?.t5}
-                          t6={el?.t6}
-                          type={el?.type}
-                        />
+                        <div>
+                          {el.score1ArrowUp ||
+                          el.score1ArrowDown ||
+                          el.score2ArrowUp ||
+                          el.score2ArrowDown ||
+                          el.score3ArrowUp ||
+                          el.score3ArrowDown ? (
+                            <AccordionCard2
+                              id={el?.id}
+                              team1={el?.team1}
+                              time={el?.time}
+                              team2={el?.team2}
+                              dateAndTime={el?.dateAndTime}
+                              t1={el?.t1}
+                              score1={el?.score1}
+                              t3={el?.t3}
+                              t4={el?.t4}
+                              t5={el?.t5}
+                              score3={el?.score3}
+                              score1ArrowUp={el?.score1ArrowUp}
+                              score2ArrowUp={el?.score2ArrowUp}
+                              score3ArrowUp={el?.score3ArrowUp}
+                              score1ArrowDown={el?.score1ArrowDown}
+                              card={el}
+                              type={el?.type}
+                            />
+                          ) : (
+                            <>
+                              {!el.score1 ? (
+                                <AccordionCard1
+                                  id={el?.id}
+                                  team1={el?.team1}
+                                  time={el?.time}
+                                  team2={el?.team2}
+                                  dateAndTime={el?.dateAndTime}
+                                  t1={el?.t1}
+                                  score1={el?.score1}
+                                  t3={el?.t3}
+                                  t4={el?.t4}
+                                  t5={el?.t5}
+                                  score3={el?.score3}
+                                  card={el}
+                                  type={el?.type}
+                                />
+                              ) : (
+                                <AccordionCard
+                                  id={el?.id}
+                                  team1={el?.team1}
+                                  time={el?.time}
+                                  team2={el?.team2}
+                                  dateAndTime={el?.dateAndTime}
+                                  t1={el?.t1}
+                                  score1={el?.score1}
+                                  t3={el?.t3}
+                                  t4={el?.t4}
+                                  t5={el?.t5}
+                                  score3={el?.score3}
+                                  card={el}
+                                  type={el?.type}
+                                />
+                              )}
+                            </>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}
@@ -340,7 +433,10 @@ const AccordionContent = ({ setIsOpen }) => {
                   >
                     <div className="flex items-center">
                       <img className="ml-6px" src={icon} alt="img" />
-                      <p style={{ color: "#444444", marginBottom: "2px" }} className="text-12px ml-5px">
+                      <p
+                        style={{ color: "#444444", marginBottom: "2px" }}
+                        className="text-12px ml-5px"
+                      >
                         {el.title.includes("프리미어리그")
                           ? "프리미어리그"
                           : el.title.includes("라리가")

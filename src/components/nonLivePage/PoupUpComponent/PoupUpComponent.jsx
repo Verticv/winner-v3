@@ -1,6 +1,9 @@
 import React from "react";
 import icon from "../../../images/nonLivePage/PoupUpComponent/X.png";
+import { deleteAllBetSlipCards } from "reducers/nonLive-reducer";
+import { useDispatch } from "react-redux";
 const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
+  const dispatch = useDispatch();
   return (
     <div
       style={{
@@ -94,6 +97,8 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
           onClick={() => {
             setActive(true);
             setIsPopupOpen(false);
+
+            dispatch(deleteAllBetSlipCards());
           }}
           style={{
             height: "52px",
