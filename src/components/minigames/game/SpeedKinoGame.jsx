@@ -100,7 +100,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         {titleNumber === 1 ? "홀" :"언더"}
                                     </p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-4px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -124,7 +124,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         {titleNumber === 1 ? "짝" : "오버"}
                                     </p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-4px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
                             </div>
                         </div>
                     ) : titleNumber === 3 ? (
@@ -142,7 +142,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀언더</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.75</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.75</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -156,7 +156,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">홀오버</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.75</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.75</div>
                                 </div>
                             </div>
                             <div className="flex space-x-18px mt-9px"> 
@@ -172,7 +172,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         <img className={`absolute  ${state === `${titleNumber}-3` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝언더</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.75</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.75</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -186,7 +186,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                         <img className={`absolute  ${state === `${titleNumber}-4` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">짝오버</p>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.75</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.75</div>
                                 </div>
                             </div>
                         </div>
@@ -199,10 +199,10 @@ const SpeedKinoGame = ({setSelectedOption}) => {
 
     return (
         <div 
-            style={{height: "205px"}}
+            style={{height: "203px"}}
             className="flex w-full"
         >
-            <div className="w-full flex flex-col px-7px pb-7px">
+            <div className="w-full flex flex-col px-7px pb-5px">
                 <PanelTitle title="스피드키노" />
                 <div className="flex space-x-2px">
                     <BetOptions width={414} titleNumber={1} subText="홀짝" />

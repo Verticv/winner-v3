@@ -24,7 +24,7 @@ const PowerBallResults = ({array}) => {
         
         <table>
             <thead className="rounded-10px text-14px tracking-tight text-eeeeee h-54px border-b border-dddddd"
-            style={{backgroundColor: "#f7f7f7"}}>
+            style={{background:'linear-gradient(to right, #9d3bbb, #5423a0)'}}>
             <tr>
                 <td style={{width: "156px"}} className="text-center">회차</td>
                 <td style={{width: "225px"}} className="text-center">당첨번호결과</td>

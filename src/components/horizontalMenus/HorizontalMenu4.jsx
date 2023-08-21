@@ -18,7 +18,7 @@ const HorizontalMenu4 = ({
                       : 'linear-gradient(to top, #4f3a7a 0%, #a05bf6 50%, #f0d3ff 100%)',
                   boxShadow: "0 0 8px rgba(0, 0, 0, 0.5)"
               }} 
-                className={`relative overflow-hidden h-41px w-full rounded-t-6px flex justify-center p-px`} 
+                className={`relative overflow-hidden h-43px w-full rounded-t-6px flex justify-center p-px`} 
                 onClick={() => setSelectedTab(item.id)}
                 onMouseOver={() => setHover(item.id)}
                 onMouseLeave={() => setHover(null)}
@@ -35,7 +35,7 @@ const HorizontalMenu4 = ({
                     <div className="flex items-center">
                         <div 
                             style={{color: selectedTab === item.id ? "#ffff" : "#2d2834"}}
-                            className="text-16px tracking-tight flex h-16px items-center pt-5px"
+                            className="text-16px tracking-tight flex h-16px items-center pt-5px font-bold"
                         >
                             {item.text}
                         </div>
@@ -46,7 +46,7 @@ const HorizontalMenu4 = ({
     }
 
     return (
-        <div className="flex w-full h-41px space-x-3px">
+        <div className="flex w-full h-43px space-x-3px">
             <TabsList items={itemsArray} />
         </div>
     )

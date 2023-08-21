@@ -99,14 +99,19 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
-                                    <p 
+                                    {titleNumber === 1 || titleNumber === 2 ? (<p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white mt-2px"
                                     >
                                         {titleNumber === 1 ? "홀" : titleNumber === 2 ? "좌" : "3줄"}
-                                    </p>
+                                     </p>):(<p
+                                        style={{ textShadow: "2px 2px 2px #00000050", fontSize: "48px" }}
+                                        className="z-20 font-swagger text-white text-20px mt-2px"
+                                    >
+                                         3 <span style={{fontSize: "40px"}}>줄</span>
+                                    </p>)}
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-4px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -125,14 +130,19 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
-                                    <p 
+                                    {titleNumber === 1 || titleNumber === 2 ? (<p 
                                         style={{textShadow: "2px 2px 2px #00000050", fontSize: "48px"}} 
                                         className="z-20 font-swagger text-white text-20px mt-2px"
                                     >
                                         {titleNumber === 1 ? "짝" : titleNumber === 2 ? "우" : "4줄"}
-                                    </p>
+                                     </p>):(<p
+                                        style={{ textShadow: "2px 2px 2px #00000050", fontSize: "48px" }}
+                                        className="z-20 font-swagger text-white text-20px mt-2px"
+                                    >
+                                         4 <span style={{fontSize: "40px"}}>줄</span>
+                                    </p>)}
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-4px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-robotoRegular tracking-tight text-white mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
                             </div>
                         </div>
                     ) : titleNumber === 4 ? (
@@ -153,7 +163,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -170,7 +180,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
                                 </div>
                             </div>
                             <div className="flex space-x-18px mt-9px -ml-2px"> 
@@ -189,7 +199,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -206,7 +216,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-robotoRegular tracking-tight text-white h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
                                 </div>
                             </div>
                         </div>
@@ -219,10 +229,10 @@ const KinoLadderGame = ({setSelectedOption}) => {
 
     return (
         <div 
-            style={{height: "205px"}}
+            style={{height: "203px"}}
             className="flex w-full"
         >
-            <div className="w-full flex flex-col px-7px pb-7px">
+            <div className="w-full flex flex-col px-7px pb-5px">
                 <PanelTitle title="키노사다리" />
                 <div className="flex justify-center space-x-2px">
                     <div className="flex space-x-2px">
