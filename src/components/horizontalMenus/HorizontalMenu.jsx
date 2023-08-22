@@ -4,8 +4,9 @@ const HorizontalMenu = ({
     itemsArray, 
     setSelectedSubTab = null,
     showSub = true,
-  hasRows = false,
-      
+    hasRows = false,
+    h_space = 3,
+    v_space = 3,
 }) => {
 
     const history = useHistory();
@@ -15,7 +16,7 @@ const HorizontalMenu = ({
     console.log('isHover',isHover)
     function TabsList({ items }) {
       return items.map(item => (
-        <div className='relative w-full'>
+        <div className={`relative w-full`}>
           <button
           key={item.id}
           style={{
@@ -73,12 +74,12 @@ const HorizontalMenu = ({
 
   return (
     <>
-    {!hasRows ? (
-      <div className="flex justify-start w-full h-78px space-x-2px pl-4px pr-5px">
+      {!hasRows ? (
+        <div className="flex justify-start w-full h-78px space-x-2px pl-4px pr-5px">
           <TabsList items={itemsArray} />
-      </div>
-    ) : (
-      <div className="grid grid-cols-8 gap-3px justify-between w-full pl-4px pr-5px">
+        </div>
+      ) : (
+        <div className={`grid grid-cols-10 gap-x-${h_space}px gap-y-${v_space}px justify-between w-full pl-3px pr-3px`}>
           <TabsList items={itemsArray} />
       </div>
     )}

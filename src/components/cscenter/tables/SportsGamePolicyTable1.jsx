@@ -9,12 +9,12 @@ const SportsGamePolicyTable1 = ({array}) => {
         ruleText, 
         ruleText2 = null
     }) => (
-        <tr className={`${ruleText2 ? "h-73px" : "h-56px"} bg-gray-323232 font-spoqa text-14px tracking-tight text-gray-c8c8c8  w-full border-b border-gray-252525 last:border-b-0 pt-px`}>
-            <td style={{width: "162px", color: typeColor}} className="font-spoqaMedium h-56px text-center">{type}</td>
-            <td style={{width: "86px", color: overtime === null ? "#ffcc00" : overtime === true ? "#dbae00" : "#929292"}} className="font-spoqaMedium h-56px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
+        <tr className={`${ruleText2 ? "h-73px" : "h-56px"}   text-14px tracking-tight text-r666666  w-full border-b border-dddddd last:border-b-0 pt-px bg-white`}>
+            <td style={{width: "162px", color: typeColor}} className="f h-55px text-center">{type}</td>
+            <td style={{width: "86px", color: overtime === null ? "#ffcc00" : overtime === true ? "#dbae00" : "#929292"}} className=" h-55px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
             <td style={{width: "792px"}} className={`${ruleText2 ? "-space-y-4px" : ""} h-56px pl-20px`}>
-                <p>{ruleText}</p>
-                <p>{ruleText2}</p>
+                <p style={{letterSpacing:'-0.1em'}}>{ruleText}</p>
+                <p style={{letterSpacing:'-0.1em'}}>{ruleText2}</p>
             </td>
         </tr>
     )
@@ -26,18 +26,19 @@ const SportsGamePolicyTable1 = ({array}) => {
     )}
 
   return (
-      <div className="shadow-table w-full overflow-hidden rounded-4px p-px"
-          style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)"}}
+      <div className="shadow-table w-full overflow-hidden rounded-10px p-px"
+          style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
         >
-        <table className="w-full bg-gray-323232 rounded-4px overflow-hidden">
-            <thead className="bg-gray-2e2e2e font-spoqaMedium text-14px tracking-tight text-gray-ccc2b6 h-55px border-b border-gray-252525 pt-px mt-px">
+        <table className="w-full rounded-10px overflow-hidden">
+              <thead className="text-14px tracking-tight  h-54px border-b  pt-px mt-px"
+              style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                 <tr>
                     <td style={{width: "162px"}} className="text-center">베팅타입</td>
                     <td style={{width: "86px"}} className="text-center">적용시간</td>
                     <td style={{width: "772px"}} className="text-center"><span className='-ml-17px'>베팅룰</span></td>
                 </tr>
             </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">       
+            <tbody className="w-full text-r666666 text-14px tracking-tight">       
                                      
                 <Cells items={array} />        
 

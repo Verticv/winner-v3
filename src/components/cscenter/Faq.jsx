@@ -1,33 +1,33 @@
 import MyPageTitle from 'components/myPage/MyPageTitle'
 import React, { useState } from 'react'
-import Icon1 from '../../images/myPage/betHistory/ico_1_v2.png'
-import Icon2 from '../../images/myPage/betHistory/ico_2_v2.png'
-import Icon3 from '../../images/myPage/betHistory/ico_3_v2.png'
-import Icon4 from '../../images/myPage/betHistory/ico_4_v2.png'
-import Icon5 from '../../images/myPage/betHistory/ico_5_v2.png'
-import Icon6 from '../../images/myPage/betHistory/ico_6_v2.png'
-import Icon7 from '../../images/myPage/betHistory/ico_7_v2.png'
-import Icon8 from '../../images/cscenter/ico_8.png'
-import Icon9 from '../../images/cscenter/ico_9.png'
+import Icon1 from '../../images/myPage/betHistory/icon_1.png'
+import Icon2 from '../../images/myPage/betHistory/icon_2.png'
+import Icon3 from '../../images/myPage/betHistory/icon_3.png'
+import Icon4 from '../../images/myPage/betHistory/icon_4.png'
+import Icon5 from '../../images/myPage/betHistory/icon_5.png'
+import Icon6 from '../../images/myPage/betHistory/icon_7.png'
+import Icon7 from '../../images/myPage/betHistory/icon_8.png'
+import Icon8 from '../../images/myPage/betHistory/icon_9.png'
+import Icon9 from '../../images/myPage/betHistory/icon_10.png'
 import Icon10 from '../../images/cscenter/ico_10.png'
 import Icon11 from '../../images/cscenter/ico_11.png'
-import Icon12 from '../../images/cscenter/ico_12.png'
+import Icon12 from '../../images/myPage/betHistory/icon_6.png'
 import Icon13 from '../../images/cscenter/ico_13.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
 import IconHighlight4 from '../../images/myPage/betHistory/Icon4_On.png'
 import IconHighlight5 from '../../images/myPage/betHistory/Icon5_On.png'
-import IconHighlight6 from '../../images/myPage/betHistory/Icon6_On.png'
-import IconHighlight7 from '../../images/myPage/betHistory/Icon7_On.png'
-import IconHighlight8 from '../../images/myPage/betHistory/Icon8_On.png'
-import IconHighlight9 from '../../images/myPage/betHistory/Icon9_On.png'
-import IconHighlight10 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight6 from '../../images/myPage/betHistory/Icon7_On.png'
+import IconHighlight7 from '../../images/myPage/betHistory/Icon8_On.png'
+import IconHighlight8 from '../../images/myPage/betHistory/Icon9_On.png'
+import IconHighlight9 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight10 from '../../images/myPage/betHistory/Icon11_On.png'
 import IconHighlight11 from '../../images/cscenter/Icon11_On.png'
-import IconHighlight12 from '../../images/cscenter/Icon12_On.png'
+import IconHighlight12 from '../../images/myPage/betHistory/Icon6_On.png'
 import IconHighlight13 from '../../images/cscenter/Icon13_On.png'
 import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
-import ArrowDown from '../../images/myPage/leftMenu/arr_down_v2.png'
+import ArrowDown from '../../images/myPage/leftMenu/arr_down.png'
 import QIcon from '../../images/cscenter/q.png'
 import AIcon from '../../images/cscenter/a.png'
 
@@ -70,8 +70,8 @@ const Faq = () => {
     const QuestionCell = ({type, text, cellId}) => (
       <>
             <button 
-                style={{zIndex: 2,background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)"}}
-                className="relative rounded-4px shadow-table w-full  flex items-start p-px  mb-11px  z-20 group hover:shadow-table hover:brightness-125 filter" 
+                style={{zIndex: 2,background: "#ffffff",boxShadow: " 0px 2px 3px 0px rgba(0, 0, 0, 0.3)"}}
+                className="relative rounded-10px  w-full  flex items-start p-px  mb-8px  z-20 group hover:shadow-table hover:brightness-125 filter" 
 
                 onClick={() => {
                     if (openedCell === cellId) {
@@ -81,63 +81,64 @@ const Faq = () => {
                     }
                 }}>
                 <div  className="w-full bg-gray-2e2e2e rounded-4px overflow-hidden  flex items-start px-19px justify-between pt-11px pb-10px">
-                  <img className="object-none relative top-4px" src={QIcon} alt="" />
-                  <div className="w-full h-full px-18px flex items-start space-x-7px self-start"> 
+                  <img className="object-none relative top-3px" src={QIcon} alt="" />
+                  <div className="w-full h-full px-17px flex items-start space-x-8px self-start"> 
 
                       <div 
-                          style={{backgroundColor: "#494745", minWidth: "100px"}} 
-                          className="h-29px rounded-full flex items-center justify-center text-gray-ccc2b6 text-14px font-spoqaMedium tracking-tight mt-2px pt-2px px-12px flex-shrink-0"
+                          style={{backgroundColor: "#702caa", minWidth: "89px"}} 
+                          className="h-29px rounded-full flex items-center justify-center text-white text-14px  tracking-tight mt-2px px-6px flex-shrink-0"
                       > 
-                        <p style={{ }}>{type}</p>
+                        <p className='-mt-px' style={{letterSpacing:'-0.1em'}}>{type}</p>
                       </div>
-                      <p className="font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8  mt-7px text-left">{text}</p>
+                        <p className=" text-14px tracking-tight mt-6px text-left"
+                        style={{color:'#444444',letterSpacing:'-0.07rem'}}>{text}</p>
                   </div>
-                  <img className={`${openedCell === cellId && "transform rotate-180"} self-center`} src={openedCell === cellId ? ArrowDown : ArrowDown} alt="" />
+                  <img className={`${openedCell === cellId && "transform rotate-180"} self-center  mr-px`} src={openedCell === cellId ? ArrowDown : ArrowDown} alt="" />
               </div>    
             </button>
             {openedCell === cellId && (
                 <div 
-                    style={{ zIndex: 1, backgroundColor: "#252525" }} 
-                    className="flex h-full items-start justify-start w-full rounded-4px -mt-64px z-0 mb-14px border border-black pb-30px pr-42px"
+                    style={{ zIndex: 1, backgroundColor: "#f6f6f6",boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.5)" }} 
+                    className="flex h-full items-start justify-start w-full rounded-10px -mt-64px z-0 mb-14px border  pb-32px pr-42px"
                 >
                     <img 
-                        style={{marginTop: "68px"}} 
-                        className="ml-30px object-none" 
+                        style={{marginTop: "66px"}} 
+                        className="ml-29px object-none" 
                         src={AIcon} 
                         alt="" 
                     />
-                    <div className="w-full flex flex-col">
-                        <div style={{marginTop: "82px",color:'#c1c1c1'}} className=" ml-15px  flex items-center text-16px font-spoqaMedium tracking-tight ">
-                            <p style={{color: "#4a90f0"}} className="self-start mr-3px" >
+                    <div className="w-full flex flex-col text-r666666" >
+                        <div style={{marginTop: "76px",letterSpacing:'-0.07rem'}} className=" ml-15px  flex items-center text-16px">
+                            <p style={{color: "#4a90f0 "}} className="self-start mr-3px" >
                                 No.1
                             </p> 
                             그 이상.! 최고를 넘어선 『 Winner 』입니다.
                             {/* ☞ 첫, 매충 10% 포인트를 받지 않을시 모든게 */}
                         </div>
 
-                        <div style={{color:'#c1c1c1'}} className="font-spoqaMedium text-14px tracking-tight  space-y-10px mt-34px ml-14px">
+                        <div style={{letterSpacing:'-0.07rem'}} className="text-14px space-y-3px mt-27px ml-14px">
                             {BodyText1.split('\n').map((item, i) => 
                                 <p key={i} className={`flex items-center`}>{item}</p>
                             )}
                         </div>
-                        <div style={{color:'#c1c1c1'}} className="font-spoqaMedium text-14px tracking-tight  space-y-10px mt-10px flex items-center ml-14px">
+                        <div style={{letterSpacing:'-0.07rem'}} className="text-14px mt-3px flex items-center ml-14px">
                             - 스포츠 : <p style={{color: "#e65454"}} className="mx-3px">두폴더 이상 </p> 롤링 100% 최대 30만원 
                         </div>
-                        <div style={{color:'#c1c1c1'}} className="font-spoqaMedium text-14px tracking-tight  space-y-10px mt-10px flex items-center ml-14px">
+                        <div style={{letterSpacing:'-0.07rem'}} className="text-14px  mt-3px flex items-center ml-14px">
                             - 스포츠단폴더, 가상게임, 미니게임, 카지노 : <p style={{color: "#e65454"}} className="mx-3px">이용불가</p>
                         </div>
-                        <div style={{color:'#c1c1c1'}} className="font-spoqaMedium text-14px tracking-tight  space-y-10px mt-10px flex items-center ml-14px">
-                            - 스포츠 2폴더 이상 100% 롤링 후 이용 가능 스포츠 단폴더, 타 게임 이용 가능하며, 스포츠 2폴더 100% 롤링 전 타게임 이용시 보유금 <p style={{color: "#e65454"}} className="mx-3px">전액 몰수처리</p>
+                        <div style={{letterSpacing:'-0.07rem'}} className="text-14px mt-3px flex items-center ml-14px">
+                            - 스포츠 2폴더 이상 100% 롤링 후 이용 가능 스포츠 단폴더, 타 게임 이용 가능하며, 스포츠 2폴더 100% 롤링 전 타게임 이용시 보유금 <p className="mx-3px">전액 몰수처리</p>
                         </div>
                            
-                        <div style={{color:'#c1c1c1'}} className="font-spoqaMedium text-14px tracking-tight  space-y-10px mt-34px flex items-center ml-14px">
+                        <div style={{letterSpacing:'-0.07rem'}} className="text-14px mt-27px flex items-center ml-14px">
                             ※ 모든게임의 롤링적용시점은 게임이 끝나서 마감처리된 때입니다. 이후에 출금신청해주셔야 처리가능합니다.
                         </div>
 
-                        <div style={{color:'#c1c1c1'}} className="font-spoqaMedium text-14px tracking-tight  space-y-10px mt-34px flex items-center ml-14px">
+                        <div style={{letterSpacing:'-0.07rem'}} className="text-14px mt-27px flex items-center ml-14px">
                             언제나 고객에게 최상의 서비스 제공을 할 수 있도록 노력하는 『 Winner 』가 되겠습니다.
                         </div>
-                        <div style={{color:'#c1c1c1'}} className="font-spoqaMedium text-14px tracking-tight  space-y-10px mt-10px flex items-center ml-14px">
+                        <div style={{letterSpacing:'-0.07rem'}} className="text-14px mt-3px flex items-center ml-14px">
                             감사합니다.
                         </div>
                     </div>
@@ -158,8 +159,8 @@ const Faq = () => {
         <div>
             <MyPageTitle title="자주묻는질문" />
 
-            <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray}  hasRows={true} setSelectedTab={setSelectedTab} showSub={false} />
+            <div className="relative w-full mt-12px">
+                <HorizontalMenu itemsArray={tabsArray}  hasRows={true} setSelectedTab={setSelectedTab} showSub={false} h_space={2} v_space={3}/>
             </div>
 
             <div className="mt-20px mb-90px">

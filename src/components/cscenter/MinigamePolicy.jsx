@@ -7,7 +7,7 @@ import Icon2 from '../../images/cscenter/minigame/2.png'
 import Icon3 from '../../images/cscenter/minigame/3.png'
 import Icon4 from '../../images/cscenter/minigame/4.png'
 import PowerballPolicy from '../../images/cscenter/minigame/powerball_policy_v2.png'
-import PowerladderPolicy from '../../images/cscenter/minigame/powerladder_policy_v2.png'
+import PowerladderPolicy from '../../images/cscenter/minigame/powerladder_policy.png'
 import SpeedKinoPolicy from '../../images/cscenter/minigame/speedkino_policy.png'
 
 const MinigamePolicy = () => {
@@ -24,16 +24,16 @@ const MinigamePolicy = () => {
             <MyPageTitle title="미니게임" />
 
 
-            <div className="mt-20px" />
+            <div className="mt-12px" />
             <HorizontalMenu7 itemsArray={tabsArray} />
 
             
 
            
-            <div className="shadow-table w-full overflow-hidden rounded-4px p-px mt-28px"
-              style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
+            <div className=" w-full overflow-hidden rounded-10px p-px mt-28px"
+              style={{ background: "linear-gradient(to top, #4f3a7a 0% ,#a05bf6 50%, #f0d3ff 100%)" }}
               >
-                <div  style={{paddingTop:"41px", paddingBottom:"41px", paddingLeft:"42px"}} className="w-full bg-gray-323232 rounded-4px overflow-hidden">
+                <div  style={{paddingTop:"41px", paddingBottom:"41px", paddingLeft:"42px", background:'#dfdbfa'}} className="w-full  rounded-10px overflow-hidden">
                   <Route path="/cscenter/policy/minigame/powerball">
                       <img src={PowerballPolicy} alt="" />
                   </Route>

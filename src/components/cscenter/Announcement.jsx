@@ -6,31 +6,31 @@ import React, { useState } from 'react'
 import DownArrowIcon from '../../images/down_arrow_icon.png'
 import SearchIcon from '../../images/myPage/search.png'
 import AnnouncementTable from './tables/AnnouncementTable'
-import Icon1 from '../../images/myPage/betHistory/ico_1_v2.png'
-import Icon2 from '../../images/myPage/betHistory/ico_2_v2.png'
-import Icon3 from '../../images/myPage/betHistory/ico_3_v2.png'
-import Icon4 from '../../images/myPage/betHistory/ico_4_v2.png'
-import Icon5 from '../../images/myPage/betHistory/ico_5_v2.png'
-import Icon6 from '../../images/myPage/betHistory/ico_6_v2.png'
-import Icon7 from '../../images/myPage/betHistory/ico_7_v2.png'
-import Icon8 from '../../images/cscenter/ico_8.png'
-import Icon9 from '../../images/cscenter/ico_9.png'
+import Icon1 from '../../images/myPage/betHistory/icon_1.png'
+import Icon2 from '../../images/myPage/betHistory/icon_2.png'
+import Icon3 from '../../images/myPage/betHistory/icon_3.png'
+import Icon4 from '../../images/myPage/betHistory/icon_4.png'
+import Icon5 from '../../images/myPage/betHistory/icon_5.png'
+import Icon6 from '../../images/myPage/betHistory/icon_7.png'
+import Icon7 from '../../images/myPage/betHistory/icon_8.png'
+import Icon8 from '../../images/myPage/betHistory/icon_9.png'
+import Icon9 from '../../images/myPage/betHistory/icon_10.png'
 import Icon10 from '../../images/cscenter/ico_10.png'
 import Icon11 from '../../images/cscenter/ico_11.png'
-import Icon12 from '../../images/cscenter/ico_12.png'
+import Icon12 from '../../images/myPage/betHistory/icon_6.png'
 import Icon13 from '../../images/cscenter/ico_13.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
 import IconHighlight4 from '../../images/myPage/betHistory/Icon4_On.png'
 import IconHighlight5 from '../../images/myPage/betHistory/Icon5_On.png'
-import IconHighlight6 from '../../images/myPage/betHistory/Icon6_On.png'
-import IconHighlight7 from '../../images/myPage/betHistory/Icon7_On.png'
-import IconHighlight8 from '../../images/myPage/betHistory/Icon8_On.png'
-import IconHighlight9 from '../../images/myPage/betHistory/Icon9_On.png'
-import IconHighlight10 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight6 from '../../images/myPage/betHistory/Icon7_On.png'
+import IconHighlight7 from '../../images/myPage/betHistory/Icon8_On.png'
+import IconHighlight8 from '../../images/myPage/betHistory/Icon9_On.png'
+import IconHighlight9 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight10 from '../../images/myPage/betHistory/Icon11_On.png'
 import IconHighlight11 from '../../images/cscenter/Icon11_On.png'
-import IconHighlight12 from '../../images/cscenter/Icon12_On.png'
+import IconHighlight12 from '../../images/myPage/betHistory/Icon6_On.png'
 import IconHighlight13 from '../../images/cscenter/Icon13_On.png'
 
 const Announcement = () => {
@@ -53,29 +53,41 @@ const Announcement = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
 
-    const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px"
-
+    const dropDownCellClass = "flex w-full h-30px py-2px  items-center  px-12px"
+    const [hoveredOption, setHoveredOption] = useState("");
 
 
     const searchDropdown = (
-        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a ">
-            <button className={dropDownCellClass} onClick={() => {
+        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border   text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white ">
+            <button className={dropDownCellClass}
+                style={{
+                background: hoveredOption==="제목" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                color: hoveredOption==="제목" ? "white" : "#666666",
+                }}    onClick={() => {
                 setSelectedCarrier("제목")
                 setDropdownOpen(false)
-            }}>
+                }}
+                onMouseOver={() => setHoveredOption('제목')}
+                onMouseLeave={() => setHoveredOption("")}>
                 제목
             </button>
-            <button className={dropDownCellClass} onClick={() => {
+            <button className={dropDownCellClass}
+            style={{
+                background: hoveredOption==="본문" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+                color: hoveredOption==="본문" ? "white" : "#666666",
+                }}    onClick={() => {
                 setSelectedCarrier("본문")
                 setDropdownOpen(false)
-            }}>
+                }}
+                onMouseOver={() => setHoveredOption('본문')}
+                onMouseLeave={() => setHoveredOption("")}>>
                 본문
             </button>
         </div>
     )
 
     const dropdownButton = (
-        <div style={{width:'120px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 group">
+        <div style={{width:'120px'}} className="flex h-42px bg-dark-1a1a1a rounded-6px border border-p682aa7 text-r666666 bg-white mb-px group">
             <input className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
@@ -87,7 +99,7 @@ const Announcement = () => {
     )
 
     const InboxSearch = (
-        <div className="h-64px w-full bg-gray-2e2e2e rounded-4px  flex items-center justify-center space-x-10px">
+        <div className="h-62px w-full rounded-6px  flex items-center justify-center space-x-10px" style={{background:'rgba(52, 34, 103, 0.6)'}}>
             <DropDownControls 
                 buttonChild={dropdownButton} 
                 isDropdownOpen={isDropdownOpen} 
@@ -96,13 +108,16 @@ const Announcement = () => {
                 {searchDropdown}
             </DropDownControls>
 
-            <div style={{width:'381px'}} className="flex h-42px bg-dark-1a1a1a rounded-4px border border-gray-404040 relative">
+            <div style={{width:'381px'}} className="flex h-42px  rounded-6px border border-p682aa7 relative">
                 <input 
-                    className="pl-11px rounded-md placeholder-gray-r7c7c7c w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a text-gray-c8c8c8"
+                    className="pl-11px rounded-md placeholder-r666666 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight  text-r666666"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-4px bg-gradient-to-b from-gray-e8b888  to-gray-4b3b09 flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10">
-                  <div className="flex items-center justify-center w-40px  h-40px rounded-4px bg-gradient-to-b from-golden-gradLight  to-golden-gradDark">
+                <button
+                    style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)" }}
+                    className="flex items-center justify-center w-42px h-42px rounded-6px  flex-shrink-0  filter hover:brightness-125 shadow-btn absolute -right-px -top-px z-10">
+                    <div className="flex items-center justify-center w-40px  h-40px rounded-6px "
+                    style={{background: 'linear-gradient(0deg, #6b22ff, #df52ff)'}}>
                     <img src={SearchIcon} alt="" />
                   </div>
                 </button>
@@ -113,8 +128,8 @@ const Announcement = () => {
     return (
         <div>
             <MyPageTitle title="공지사항" />
-            <div className="mt-20px"></div>
-            <HorizontalMenu itemsArray={tabsArray} hasRows={true}  showSub={false} />
+            <div className="mt-12px"></div>
+            <HorizontalMenu itemsArray={tabsArray} hasRows={true}  showSub={false} h_space={2} v_space={3}/>
             <div className="mt-20px" />
             <AnnouncementTable />
 
@@ -122,7 +137,7 @@ const Announcement = () => {
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 
-            <div className="-mt-30px mb-60px">
+            <div className="-mt-29px mb-60px">
                 {InboxSearch}
             </div>
 

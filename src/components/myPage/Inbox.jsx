@@ -120,7 +120,7 @@ const Inbox = () => {
 
   const searchDropdown = (
     
-       <div className="w-120px h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white">
+       <div style={{width:'120px'}}  className=" h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white">
         <div className="w-full mt-2px h-full overflow-x-hidden border-gray-2c2c2c">
             <button className={dropDownCellClass}  
             style={{
