@@ -44,7 +44,7 @@ const MinigamesRightPanel = ({
             background:  buttonClicked === amount ? "linear-gradient(to top, #ccc4ff, #ffd9f5)" : "linear-gradient(to top, #ccc4ff, #ffd9f5)",
           }} 
             className="flex items-center justify-center h-42px rounded-6px cursor-pointer pt-px">
-            <span className="font-roboto tracking-tight text-16px font-bold " style={{color:'#444444'}}>{nf.format(amount)}</span>
+            <span className="font-roboto tracking-tight text-16px font-bold -mt-px" style={{color:'#444444'}}>{nf.format(amount)}</span>
         </div>
       </button>
   )
@@ -122,7 +122,7 @@ const MinigamesRightPanel = ({
               <img className="-mt-px" src={CheckIcon} alt="" />
               <p style={{color:"#5e399a"}} className="text-16px tracking-Stightest font-bold">게임선택</p>
             </div>
-            <div style={{width:"107px"}} className=" flex h-full z-20 items-center justify-center pr-8px flex-col space-y-4px flex-shrink-0 -mt-3px">
+            <div style={{width:"107px"}} className=" flex h-full z-20 items-center justify-center pr-8px flex-col space-y-4px flex-shrink-0 -mt-4px">
                 {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
                     <p  className="text-r666666 text-12px tracking-Stightest flex items-center h-12px">{selectedOption[0].type}</p>
                 )}
