@@ -1,31 +1,31 @@
 import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu';
 import MyPageTitle from 'components/myPage/MyPageTitle';
 import React, { useState } from 'react'
-import Icon1 from '../../images/cscenter/ico_1.png'
-import Icon2 from '../../images/cscenter/ico_2.png'
-import Icon3 from '../../images/cscenter/ico_3.png'
-import Icon4 from '../../images/cscenter/ico_4.png'
-import Icon5 from '../../images/cscenter/ico_5.png'
-import Icon6 from '../../images/cscenter/ico_6.png'
-import Icon7 from '../../images/cscenter/ico_7.png'
-import Icon8 from '../../images/cscenter/ico_8.png'
-import Icon9 from '../../images/cscenter/ico_9.png'
+import Icon1 from '../../images/myPage/betHistory/icon_1.png'
+import Icon2 from '../../images/myPage/betHistory/icon_2.png'
+import Icon3 from '../../images/myPage/betHistory/icon_3.png'
+import Icon4 from '../../images/myPage/betHistory/icon_4.png'
+import Icon5 from '../../images/myPage/betHistory/icon_5.png'
+import Icon6 from '../../images/myPage/betHistory/icon_7.png'
+import Icon7 from '../../images/myPage/betHistory/icon_8.png'
+import Icon8 from '../../images/myPage/betHistory/icon_9.png'
+import Icon9 from '../../images/myPage/betHistory/icon_10.png'
 import Icon10 from '../../images/cscenter/ico_10.png'
 import Icon11 from '../../images/cscenter/ico_11.png'
-import Icon12 from '../../images/cscenter/ico_12.png'
+import Icon12 from '../../images/myPage/betHistory/icon_6.png'
 import Icon13 from '../../images/cscenter/ico_13.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
 import IconHighlight4 from '../../images/myPage/betHistory/Icon4_On.png'
 import IconHighlight5 from '../../images/myPage/betHistory/Icon5_On.png'
-import IconHighlight6 from '../../images/myPage/betHistory/Icon6_On.png'
-import IconHighlight7 from '../../images/myPage/betHistory/Icon7_On.png'
-import IconHighlight8 from '../../images/myPage/betHistory/Icon8_On.png'
-import IconHighlight9 from '../../images/myPage/betHistory/Icon9_On.png'
-import IconHighlight10 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight6 from '../../images/myPage/betHistory/Icon7_On.png'
+import IconHighlight7 from '../../images/myPage/betHistory/Icon8_On.png'
+import IconHighlight8 from '../../images/myPage/betHistory/Icon9_On.png'
+import IconHighlight9 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight10 from '../../images/myPage/betHistory/Icon11_On.png'
 import IconHighlight11 from '../../images/cscenter/Icon11_On.png'
-import IconHighlight12 from '../../images/cscenter/Icon12_On.png'
+import IconHighlight12 from '../../images/myPage/betHistory/Icon6_On.png'
 import IconHighlight13 from '../../images/cscenter/Icon13_On.png'
 import ContactTable from './tables/ContactTable';
 import Pagination from 'components/myPage/Pagination';
@@ -217,7 +217,7 @@ const Contact = () => {
 
             <div style={{width:'381px'}} className="flex h-42px  rounded-6px border border-p682aa7 relative">
                 <input 
-                    className="pl-11px placeholder-r666666 w-full text-r666666 text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+                    className="pl-11px placeholder-r666666 w-full text-r666666 text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a rounded-6px"
                     placeholder="검색어를 입력해 주세요"
                 />
                 <button
@@ -237,7 +237,7 @@ const Contact = () => {
             <MyPageTitle title="문의하기" />
 
             <div className="relative w-full mt-12px">
-            <HorizontalMenu itemsArray={tabsArray} hasRows={true} setSelectedTab={setSelectedTab} showSub={false} />
+                <HorizontalMenu itemsArray={tabsArray} hasRows={true} setSelectedTab={setSelectedTab} showSub={false} h_space={2} v_space={3}  />
 
                 <div className="mt-20px"></div>
 
@@ -249,7 +249,7 @@ const Contact = () => {
                     style={{background: "linear-gradient(to right, #ff7760, #f14a53)",boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}>
                         
                       
-                    <span className=" tracking-tight text-14px text-white text-shadow-5">계좌문의</span>
+                    <span className=" tracking-tight text-14px text-white text-shadow-5 -mt-px">계좌문의</span>
                        
                     </button>
                     <button 
@@ -257,7 +257,7 @@ const Contact = () => {
                         onClick={() => history.push('/cscenter/contact/compose')}
                         style={{background: "linear-gradient(to right, #15cfee, #3197e5)",boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
                     >
-                            <span className="tracking-tight text-14px text-white text-shadow-5">문의작성</span>
+                            <span className="tracking-tight text-14px text-white text-shadow-5 -mt-px">문의작성</span>
                         
                     </button>
                 </div>
@@ -266,7 +266,7 @@ const Contact = () => {
                     <Pagination page={page} setPage={setPage}/>   
                 </div>
 
-                <div className="-mt-30px mb-60px">
+                <div className="-mt-29px mb-60px">
                     {InboxSearch}
                 </div>
             </div>

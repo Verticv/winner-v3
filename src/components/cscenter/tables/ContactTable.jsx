@@ -20,16 +20,16 @@ const ContactTable = ({ array }) => {
           color: item.isRead === false ?
             "#444444":"#666666"
         }}
-        className={`text-14px tracking-tight h-56px w-full  group pt-px`
+        className={`text-14px tracking-tight h-56px w-full group border-b border-dddddd`
       }
       >
-        <div className="flex items-center font-bold text-14px tracking-tight  h-56px border-b border-dddddd px-54px">
+        <div className="flex items-center font-bold text-14px tracking-tight  h-56px  px-54px">
           <div
             className="w-54px flex justify-center cursor-pointer h-full items-center"
             onClick={() => history.push(item.path)}
           >
             <img
-              className="object-none"
+              className={`object-none ${item.isRead === true?'-mt-4px':''}`}
               src={item.isRead === true ? MailOpenedIcon : MailIcon}
               alt=""
             />
@@ -45,7 +45,7 @@ const ContactTable = ({ array }) => {
                 maxWidth: "92px",
                 backgroundColor: item.isRead === true ? "#999999" : "#702caa"
               }}
-              className={`px-8px h-29px rounded-full text-white text-14px tracking-tight flex items-center justify-center pt-px cursor-pointer`}
+              className={`px-8px h-29px rounded-full text-white text-14px tracking-tight flex items-center justify-center cursor-pointer`}
             >
               <p
                 style={{
@@ -54,7 +54,7 @@ const ContactTable = ({ array }) => {
                   overflow: "hidden",
                   whiteSpace: "nowrap",
                 }}
-              >
+              className="-mt-2px">
                 {item.isRead === true ? "답변완료" : "답변대기"}
               </p>
             </div>
@@ -119,21 +119,21 @@ const ContactTable = ({ array }) => {
       style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
     >
       <div className="w-full rounded-10px overflow-hidden">
-        <div className="flex items-center  text-14px tracking-tight h-55px border-b px-52px pt-px"
+        <div className="flex items-center  text-14px tracking-tight h-55px border-b px-52px"
         style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
-          <div style={{width:'57px'}} className="flex justify-center">확인</div>
-          <div style={{width:'92px'}} className="flex justify-center">상태</div>
-          <div style={{width:'124px'}} className="flex justify-center">구분</div>
-          <div style={{ width: "416px" }} className="flex justify-center">
+          <div style={{width:'57px'}} className="flex justify-center -mt-px">확인</div>
+          <div style={{width:'92px'}} className="flex justify-center -mt-px">상태</div>
+          <div style={{width:'124px'}} className="flex justify-center -mt-px">구분</div>
+          <div style={{ width: "416px" }} className="flex justify-center -mt-px">
             제목
           </div>
           <div
             style={{ width: "142px" }}
-            className="flex justify-center ml-5px"
+            className="flex justify-center ml-5px -mt-px"
           >
             등록일시
           </div>
-          <div className="ml-33px w-70px flex justify-center">삭제</div>
+          <div className="ml-33px w-70px flex justify-center -mt-px">삭제</div>
         </div>
 
         <InboxList items={array} />

@@ -9,12 +9,12 @@ const SportsGamePolicyTable1 = ({array}) => {
         ruleText, 
         ruleText2 = null
     }) => (
-        <tr className={`${ruleText2 ? "h-73px" : "h-56px"}   text-14px tracking-tight text-gray-c8c8c8  w-full border-b border-dddddd last:border-b-0 pt-px bg-white`}>
-            <td style={{width: "162px", color: typeColor}} className="f h-56px text-center">{type}</td>
-            <td style={{width: "86px", color: overtime === null ? "#ffcc00" : overtime === true ? "#dbae00" : "#929292"}} className=" h-56px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
+        <tr className={`${ruleText2 ? "h-73px" : "h-56px"}   text-14px tracking-tight text-r666666  w-full border-b border-dddddd last:border-b-0 pt-px bg-white`}>
+            <td style={{width: "162px", color: typeColor}} className="f h-55px text-center">{type}</td>
+            <td style={{width: "86px", color: overtime === null ? "#ffcc00" : overtime === true ? "#dbae00" : "#929292"}} className=" h-55px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
             <td style={{width: "792px"}} className={`${ruleText2 ? "-space-y-4px" : ""} h-56px pl-20px`}>
-                <p>{ruleText}</p>
-                <p>{ruleText2}</p>
+                <p style={{letterSpacing:'-0.1em'}}>{ruleText}</p>
+                <p style={{letterSpacing:'-0.1em'}}>{ruleText2}</p>
             </td>
         </tr>
     )
@@ -30,7 +30,7 @@ const SportsGamePolicyTable1 = ({array}) => {
           style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
         >
         <table className="w-full rounded-10px overflow-hidden">
-              <thead className="text-14px tracking-tight  h-55px border-b  pt-px mt-px"
+              <thead className="text-14px tracking-tight  h-54px border-b  pt-px mt-px"
               style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                 <tr>
                     <td style={{width: "162px"}} className="text-center">베팅타입</td>

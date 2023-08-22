@@ -6,31 +6,31 @@ import React, { useState } from 'react'
 import DownArrowIcon from '../../images/down_arrow_icon.png'
 import SearchIcon from '../../images/myPage/search.png'
 import AnnouncementTable from './tables/AnnouncementTable'
-import Icon1 from '../../images/cscenter/ico_1.png'
-import Icon2 from '../../images/cscenter/ico_2.png'
-import Icon3 from '../../images/cscenter/ico_3.png'
-import Icon4 from '../../images/cscenter/ico_4.png'
-import Icon5 from '../../images/cscenter/ico_5.png'
-import Icon6 from '../../images/cscenter/ico_6.png'
-import Icon7 from '../../images/cscenter/ico_7.png'
-import Icon8 from '../../images/cscenter/ico_8.png'
-import Icon9 from '../../images/cscenter/ico_9.png'
+import Icon1 from '../../images/myPage/betHistory/icon_1.png'
+import Icon2 from '../../images/myPage/betHistory/icon_2.png'
+import Icon3 from '../../images/myPage/betHistory/icon_3.png'
+import Icon4 from '../../images/myPage/betHistory/icon_4.png'
+import Icon5 from '../../images/myPage/betHistory/icon_5.png'
+import Icon6 from '../../images/myPage/betHistory/icon_7.png'
+import Icon7 from '../../images/myPage/betHistory/icon_8.png'
+import Icon8 from '../../images/myPage/betHistory/icon_9.png'
+import Icon9 from '../../images/myPage/betHistory/icon_10.png'
 import Icon10 from '../../images/cscenter/ico_10.png'
 import Icon11 from '../../images/cscenter/ico_11.png'
-import Icon12 from '../../images/cscenter/ico_12.png'
+import Icon12 from '../../images/myPage/betHistory/icon_6.png'
 import Icon13 from '../../images/cscenter/ico_13.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
 import IconHighlight4 from '../../images/myPage/betHistory/Icon4_On.png'
 import IconHighlight5 from '../../images/myPage/betHistory/Icon5_On.png'
-import IconHighlight6 from '../../images/myPage/betHistory/Icon6_On.png'
-import IconHighlight7 from '../../images/myPage/betHistory/Icon7_On.png'
-import IconHighlight8 from '../../images/myPage/betHistory/Icon8_On.png'
-import IconHighlight9 from '../../images/myPage/betHistory/Icon9_On.png'
-import IconHighlight10 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight6 from '../../images/myPage/betHistory/Icon7_On.png'
+import IconHighlight7 from '../../images/myPage/betHistory/Icon8_On.png'
+import IconHighlight8 from '../../images/myPage/betHistory/Icon9_On.png'
+import IconHighlight9 from '../../images/myPage/betHistory/Icon10_On.png'
+import IconHighlight10 from '../../images/myPage/betHistory/Icon11_On.png'
 import IconHighlight11 from '../../images/cscenter/Icon11_On.png'
-import IconHighlight12 from '../../images/cscenter/Icon12_On.png'
+import IconHighlight12 from '../../images/myPage/betHistory/Icon6_On.png'
 import IconHighlight13 from '../../images/cscenter/Icon13_On.png'
 
 const Announcement = () => {
@@ -128,8 +128,8 @@ const Announcement = () => {
     return (
         <div>
             <MyPageTitle title="공지사항" />
-            <div className="mt-20px"></div>
-            <HorizontalMenu itemsArray={tabsArray} hasRows={true}  showSub={false} />
+            <div className="mt-12px"></div>
+            <HorizontalMenu itemsArray={tabsArray} hasRows={true}  showSub={false} h_space={2} v_space={3}/>
             <div className="mt-20px" />
             <AnnouncementTable />
 
@@ -137,7 +137,7 @@ const Announcement = () => {
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 
-            <div className="-mt-30px mb-60px">
+            <div className="-mt-29px mb-60px">
                 {InboxSearch}
             </div>
 

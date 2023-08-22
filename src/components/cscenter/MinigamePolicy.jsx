@@ -24,7 +24,7 @@ const MinigamePolicy = () => {
             <MyPageTitle title="미니게임" />
 
 
-            <div className="mt-20px" />
+            <div className="mt-12px" />
             <HorizontalMenu7 itemsArray={tabsArray} />
 
             
