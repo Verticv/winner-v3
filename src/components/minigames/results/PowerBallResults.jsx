@@ -26,14 +26,14 @@ const PowerBallResults = ({array}) => {
             <thead className="rounded-10px text-14px tracking-tight text-eeeeee h-54px border-b border-dddddd"
             style={{background:'linear-gradient(to right, #9d3bbb, #5423a0)'}}>
             <tr>
-                <td style={{width: "156px"}} className="text-center">회차</td>
-                <td style={{width: "225px"}} className="text-center">당첨번호결과</td>
-                <td style={{width: "127px"}} className="text-center">숫자 합</td>
-                <td style={{width: "173px"}} className="text-center">홀/짝</td>
-                <td style={{width: "110px"}} className="text-center">파워볼</td>
-                <td style={{width: "174px"}} className="text-center">파워볼 홀/짝</td>
-                <td style={{width: "132px"}} className="text-center">대/중/소</td>
-                <td style={{width: "172px"}} className="text-left pl-46px">파워볼 구간</td>
+                <td style={{width: "156px"}} className="text-center"><p className='-mb-px'>회차</p></td>
+                <td style={{width: "225px"}} className="text-center"><p className='-mb-px'>당첨번호결과</p></td>
+                <td style={{width: "127px"}} className="text-center"><p className='-mb-px'>숫자 합</p></td>
+                <td style={{width: "173px"}} className="text-center"><p className='-mb-px'>홀/짝</p></td>
+                <td style={{width: "110px"}} className="text-center"><p className='-mb-px'>파워볼</p></td>
+                <td style={{width: "174px"}} className="text-center"><p className='-mb-px'>파워볼 홀/짝</p></td>
+                <td style={{width: "132px"}} className="text-center"><p className='-mb-px'>대/중/소</p></td>
+                <td style={{width: "172px"}} className="text-left pl-46px"><p className='-mb-px'>파워볼 구간</p></td>
             </tr>
         </thead>
         <tbody className="w-full text-r666666 text-14px tracking-tight">

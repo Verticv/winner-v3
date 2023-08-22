@@ -32,7 +32,7 @@ const HorizontalMenu5 = ({
                     
                     <div 
                         style={{color: selectedTab === item.id ? "#ffff" : "#5e399a"}}
-                        className="text-14px tracking-tight  flex h-14px items-center"
+                        className="text-14px tracking-tight  flex h-14px items-center font-bold"
                     >
                         {item.text}
                     </div>

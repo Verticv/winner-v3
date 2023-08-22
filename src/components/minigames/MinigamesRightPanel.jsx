@@ -44,7 +44,7 @@ const MinigamesRightPanel = ({
             background:  buttonClicked === amount ? "linear-gradient(to top, #ccc4ff, #ffd9f5)" : "linear-gradient(to top, #ccc4ff, #ffd9f5)",
           }} 
             className="flex items-center justify-center h-42px rounded-6px cursor-pointer pt-px">
-            <span className="font-roboto tracking-tight text-16px pt-px font-bold " style={{color:'#444444'}}>{nf.format(amount)}</span>
+            <span className="font-roboto tracking-tight text-16px font-bold " style={{color:'#444444'}}>{nf.format(amount)}</span>
         </div>
       </button>
   )
@@ -64,7 +64,7 @@ const MinigamesRightPanel = ({
                   width:"106px", 
                   background: "linear-gradient(to top, #6b22ff, #df52ff)",
               }} 
-              className="flex items-center justify-center h-42px cursor-pointer rounded-6px pt-px">
+              className="flex items-center justify-center h-42px cursor-pointer rounded-6px">
               <span style={{textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)"}} className="tracking-tight text-16px text-white font-bold">{text}</span>
           </div>
       </button>
@@ -122,7 +122,7 @@ const MinigamesRightPanel = ({
               <img className="-mt-px" src={CheckIcon} alt="" />
               <p style={{color:"#5e399a"}} className="text-16px tracking-Stightest font-bold">게임선택</p>
             </div>
-            <div style={{width:"107px"}} className=" flex h-full z-20 items-center justify-center pr-8px flex-col space-y-4px flex-shrink-0 -mt-2px">
+            <div style={{width:"107px"}} className=" flex h-full z-20 items-center justify-center pr-8px flex-col space-y-4px flex-shrink-0 -mt-3px">
                 {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
                     <p  className="text-r666666 text-12px tracking-Stightest flex items-center h-12px">{selectedOption[0].type}</p>
                 )}
@@ -157,7 +157,7 @@ const MinigamesRightPanel = ({
                             } 
                             alt="" 
                         />
-                        <div className="flex flex-col items-center -space-y-8px">
+                        <div className="flex flex-col items-center -space-y-8px -mt-px">
                             <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
                             {selectedOption[0].subtitle && (
                                 <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
@@ -232,7 +232,7 @@ const MinigamesRightPanel = ({
 
             <button style={{width:"331px",background: "linear-gradient(to top, #921d5c, #ff85b1)",boxShadow:'0px 2px 3px 0px rgba(0, 0, 0, 0.6)'}} className="mt-6px flex items-center justify-center h-46px rounded-6px  p-px hover:filter hover:brightness-125">
                 <div style={{width:"329px",background: "linear-gradient(to top, #911c5c, #f04281)",}} className="flex items-center justify-center h-44px rounded-6px cursor-pointer pt-px">
-                    <img src={BetIcon} alt="" className='-mb-px' />
+                    <img src={BetIcon} alt="" className='-mb-2px' />
                     <span style={{textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)"}} className="ml-2px tracking-tight text-16px text-white font-bold">베팅하기</span>
                 </div>
             </button>
