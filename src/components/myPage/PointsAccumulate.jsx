@@ -12,7 +12,7 @@ const PointsAccumulate = () => {
         <div className="w-full flex flex-col items-center">
             <MyPageTitle title="포인트적립내역" pointsFor="Louie3" />
 
-            <div className="w-full flex mt-10px h-100px space-x-6px px-px mb-8px">
+            <div className="w-full flex mt-10px h-100px space-x-7px px-px mb-8px">
                 <div style={{ width: '202px', borderColor: '#631e9a', borderWidth: '3px' }}
                     className="flex items-center rounded-10px bg-white h-98px border pt-19px pb-20px  flex-col">
                     <div className="text-p594e6a text-14px h-13px flex items-center" style={{letterSpacing:'-0.1em'}}>잔여 포인트</div>

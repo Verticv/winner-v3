@@ -271,7 +271,7 @@ const PointsApply = () => {
               onClick={() => setInputValue(null)}
             >
               <div
-                className="flex items-center justify-center h-40px w-73px  rounded-5px cursor-pointer hover:filter hover:brightness-125"
+                className="flex items-center justify-center h-40px w-73px  rounded-5px cursor-pointer hover:filter hover:brightness-125 text-shadow-5"
                 style={{ background: "linear-gradient(to top, #6b22ff, #df52ff)" }}
               >
                 <span className="tracking-tight text-14px text-white">정정</span>

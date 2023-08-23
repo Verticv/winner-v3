@@ -49,7 +49,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span className="text-16px tracking-tighter text-r666666 pt-3px">선물로 보낼 쿠폰을 확인하세요.</span>
                 </div>
 
-                 <div className="mt-26px h-64px w-full rounded-8px flex items-center  text-14px tracking-Stightest" style={{background:'#772fad'}}>
+                 <div className="mt-26px h-64px w-full rounded-8px flex items-center  text-14px tracking-Stightest" style={{background:'#5e399a'}}>
                     <span style={{marginLeft:'76px'}} className="text-eeeeee leading-none">선물할 쿠폰</span>
                     <div style={{width:'311px',borderColor:'#a088d7'}} className="h-42px ml-13px bg-white border  rounded-6px flex items-center">
                       <span className="text-r666666 ml-11px leading-none">쿠폰테스트</span>

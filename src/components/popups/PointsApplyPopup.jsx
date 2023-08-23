@@ -63,7 +63,7 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
           </div>
           <div className="flex items-center text-16px tracking-tight mt-36px font-bold">
             <span style={{ color: "#444444" }}>사용 가능한 포인트 : </span>
-            <span className="text-rf04281 ml-2px font-bold">278</span>
+            <span className="text-rf04281 ml-4px font-bold">278</span>
             <span style={{ color: "#444444" }}>P</span>
           </div>
           <div className="h-64px w-full rounded-8px mt-14px flex items-center" style={{ background: "#5e399a" }}>
