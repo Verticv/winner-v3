@@ -112,7 +112,7 @@ const LeftMenu = ({
                         pathname.includes(item.mainPath)
                         ? "shadow-btn" 
                         :''
-                        } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941`} 
+                        } flex w-full items-center h-48px rounded-3px hover:bg-gray-4e4941 z-30`} 
                         style={{
                             background:
                                 pathname.includes(item.mainPath) ?
@@ -177,7 +177,7 @@ const LeftMenu = ({
                             && isExpanded !== item.path + "closed" 
                             && isExpanded !== item.path2 + "closed"
                             && isExpanded !== item.path3 + "closed" 
-                            ? item.sub1||item.sub2||item.sub3||item.sub4?'mt-px pb-px':'' : "hidden"
+                            ? item.sub1||item.sub2||item.sub3||item.sub4?'pb-px':'' : "hidden"
                             } w-full font-medium text-16px cursor-pointer tracking-Stightest rounded-b-4px overflow-hidden bg-white`} 
                            
                         >

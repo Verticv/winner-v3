@@ -120,13 +120,13 @@ const WinLoseTable = ({
             <tr 
                 className={`text-14px tracking-tight text-r666666 h-55px border-b`}
                 style={{background: index%2===0? '#fff':'#f7f7f7',borderColor:"#dddddd"}}>
-                <td className="font-robotoRegular h-55px text-center flex items-center justify-center pt-3px"><RadioButton id={item.id}/></td>
+                <td className="font-robotoRegular h-55px text-center flex items-center justify-center pt-2px"><RadioButton id={item.id}/></td>
                 <td className="h-55px text-center font-robotoRegular pt-2px">{item.number}</td>
                 <td className="h-55px text-center font-robotoRegular pt-2px">{item.startDate}</td>
                 <td className="h-55px text-center font-robotoRegular pt-2px">{item.endDate}</td>
                 <td className="h-55px text-center pt-2px">{item.type}</td>
                <td 
-                    style={{color: item.amount.includes("+") ? "#e9441d" : item.amount.includes("-") ? "#33a1e9" : "#666666", paddingRight:'82px'}}
+                    style={{color: item.amount.includes("+") ? "#e9441d" : item.amount.includes("-") ? "#0072bc" : "#666666", paddingRight:'82px'}}
                     className="h-55px text-right font-robotoRegular pt-2px"
                 >
                     {item.amount}
@@ -158,9 +158,9 @@ const WinLoseTable = ({
                 </tbody>
             </table>
             <div className="flex  text-14px tracking-tight text-r666666 h-55px rounded-b-3px">
-                <div className="w-full  h-55px flex items-center justify-center text-16px tracking-tight border-r rounded-b-3px rounded-br-none"
+                <div className="w-full  h-55px flex items-center justify-center text-16px tracking-tight border-r rounded-b-3px rounded-br-none font-bold"
                 style={{borderColor:"#dddddd",background:'#eaeaea'}}>합계</div>
-                <div className="w-full h-55px bg-white text-center flex items-center justify-center font-roboto tracking-tight text-e9441d text-16px rounded-b-3px rounded-tl-none"><span className='flex ml-40px'>+120,718</span></div>
+                <div className="w-full h-55px bg-white text-center flex items-center justify-center font-roboto tracking-tight text-e9441d text-16px rounded-b-3px rounded-tl-none"><span className='flex ml-40px font-bold'>+120,718</span></div>
             </div>
         </div>
     )

@@ -32,7 +32,7 @@ const CouponHistory = () => {
                 <div className="flex items-center space-x-10px text-16px tracking-tight text-eeeeee">
                     
                     <div className="space-x-2px">
-                        <div>사용가능 : <span className="font-bold" style={{color:'#e65454'}}>32</span>장</div>
+                        <div>사용가능 : <span className="font-bold" style={{color:'#ff6ea3'}}>32</span>장</div>
                     </div>
 
                     <div style={{backgroundColor:"#ebabff"}} className="h-12px w-px mb-2px" />
@@ -44,13 +44,13 @@ const CouponHistory = () => {
                     <div style={{backgroundColor:"#ebabff"}} className="h-12px w-px mb-2px" />
 
                     <div className="space-x-2px">
-                        <div>기간만료 : <span className=" font-bold" style={{color:'#666666'}}>0</span>장</div>
+                        <div>기간만료 : <span className=" font-bold" style={{color:'#aaaaaa'}}>0</span>장</div>
                     </div>
 
                     <div style={{backgroundColor:"#ebabff"}} className="h-12px w-px mb-2px" />
 
                     <div className="space-x-2px">
-                        <div>회수된쿠폰 : <span className="font-bold" style={{color:'#4aca68'}}>0</span>장</div>
+                        <div>회수된쿠폰 : <span className="font-bold" style={{color:'#00a651'}}>0</span>장</div>
                     </div>
                 </div>
             </div>

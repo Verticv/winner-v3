@@ -26,7 +26,7 @@ const CouponHistoryTable = () => {
                     <td style={{width:'119px'}} className="text-right text-e9441d font-robotoRegular pr-10px">10,000</td>
                     <td style={{width:'140px'}} className="text-center"><div style={{width:'140px'}} className='truncate px-10px'>eric123</div></td>
                     <td style={{width:'137px'}} className="text-center font-robotoRegular">2021-06-29 15:45:41</td>
-                    <td style={{color:"#e16eff", width:'141px'}} className="text-center">선물완료</td>
+                    <td style={{color:"#b14ce3", width:'141px'}} className="text-center">선물완료</td>
                     <td style={{width:'88px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width:'124px'}} className="text-center font-robotoRegular">2021-07-29</td>
                 </tr>
@@ -37,7 +37,7 @@ const CouponHistoryTable = () => {
                     <td style={{width:'119px'}} className="text-right text-e9441d font-robotoRegular pr-10px">10,000</td>
                     <td style={{width:'140px'}} className="text-center"><div style={{width:'140px'}} className='truncate px-10px'>eric123</div></td>
                     <td style={{width:'137px'}} className="text-center font-robotoRegular">2021-06-29 15:45:41</td>
-                    <td style={{color:"#e16eff", width:'141px'}} className="text-center">선물완료</td>
+                    <td style={{color:"#b14ce3", width:'141px'}} className="text-center">선물완료</td>
                     <td style={{width:'88px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width:'124px'}} className="text-center font-robotoRegular">2021-07-29</td>
                 </tr>
@@ -48,7 +48,7 @@ const CouponHistoryTable = () => {
                     <td style={{width:'119px'}} className="text-right text-e9441d font-robotoRegular pr-10px">10,000</td>
                     <td style={{width:'140px'}} className="text-center"><div style={{width:'140px'}} className='truncate px-10px'>eric123</div></td>
                     <td style={{width:'137px'}} className="text-center font-robotoRegular">2021-06-29 15:45:41</td>
-                    <td style={{color:"#e16eff", width:'141px'}} className="text-center">선물완료</td>
+                    <td style={{color:"#b14ce3", width:'141px'}} className="text-center">선물완료</td>
                     <td style={{width:'88px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width:'124px'}} className="text-center font-robotoRegular">2021-07-29</td>
                 </tr>
