@@ -54,7 +54,9 @@ const Search = () => {
         width: "259px",
         marginBottom: last && "4px",
       }}
-      className={`${!last && "border-b"} flex items-center mx-4px h-38px pr-10px`}
+      className={`${
+        !last && "border-b"
+      } flex items-center mx-4px h-38px pr-10px`}
       onMouseEnter={() => setHover(id)}
       onMouseLeave={() => setHover(null)}
     >
@@ -176,7 +178,11 @@ const Search = () => {
                 className="scroll-div items-center cursor-pointer relative"
               >
                 <Title title={"축구"} icon={icon2} />
-                <Content id={0} first title="호주 - 노던 테리토리 프리미어 리그" />
+                <Content
+                  id={0}
+                  first
+                  title="호주 - 노던 테리토리 프리미어 리그"
+                />
                 <Content id={1} title="이집트 - 프리미어 리그" />
                 <Content id={2} title="아일랜드 프리미어 디비전" />
                 <Content id={3} title="카자흐스탄 - 프리미어 리그" />
