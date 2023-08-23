@@ -63,21 +63,21 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   const myMenuOptionsArray = [
-    { text: "마이페이지", id: 0, path: '/mypage/bet-history' },
-    { text: "베팅내역", id: 1 },
-    { text: "충/환전내역", id: 2 },
-    { text: "총판페이지", id: 3 },
-    { text: "회원정보수정", id: 4 },
-    { text: "출석부", id: 5 },
-    { text: "로그아웃", id: 6 },
+    { text: "마이페이지", id: 0, path: "/mypage/bet-history" },
+    { text: "베팅내역", id: 1, path: "/mypage/bet-history" },
+    { text: "충/환전내역", id: 2, path: "/mypage/transaction/charge-history" },
+    { text: "총판페이지", id: 3, path: "/distributor-page" },
+    { text: "회원정보수정", id: 4, path: "/mypage/edit-info" },
+    { text: "출석부", id: 5, path: "/attendance" },
+    { text: "로그아웃", id: 6, action: () => window.location.reload() },
   ];
 
   const contactOptionsArray = [
-    { text: "문의하기", id: 0 },
-    { text: "공지사항", id: 1 },
-    { text: "자주묻는질문", id: 2 },
-    { text: "계좌문의", id: 3 },
-    { text: "베팅규정", id: 4 },
+    { text: "문의하기", id: 0, path: "/cscenter/contact/all" },
+    { text: "공지사항", id: 1, path: "/cscenter/announcement/all" },
+    { text: "자주묻는질문", id: 2, path: "/cscenter/faq/all" },
+    { text: "계좌문의", id: 3, path: "/cscenter/inquiry" },
+    { text: "베팅규정", id: 4, path: "/cscenter/policy/sportsgame/soccer" },
   ];
 
   function TabsList({ items }) {
