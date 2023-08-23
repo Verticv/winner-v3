@@ -81,7 +81,7 @@ const DateSearchBar = ({
   return (
     <div
       className={`h-62px w-full flex items-center justify-center space-x-10px rounded-6px`}
-      style={{ background: isPopup ? "rgba(52, 34, 103, 0.6)" : "rgba(52, 34, 103, 0.6)", marginTop: "11px" }}
+      style={{ background: isPopup ? "rgba(52, 34, 103, 0.6)" : "rgba(52, 34, 103, 0.6)", marginTop: "10px" }}
     >
       {isLeagueSearch === true && (
         <div className="space-x-5px">

@@ -175,7 +175,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               paddingRight: innerTable ? "30px" : 0,
               color: "#ffffff",
               background: "#5d4386",
-              borderColor: "#dddddd", boxShadow: "inset -10px 4px 5px #00000030"
+              borderColor: "#dddddd",
             }}
             className="pr-30px flex h-56px border-b items-center text-14px tracking-tight flex-shrink-0"
           >
@@ -347,8 +347,8 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
     <>
       <div className="w-full flex">
         <div className="w-39px mt-10px flex justify-center items-start"></div>
-        <div className="w-full flex flex-col overflow-x-auto bg-white scroll-div" >
-          <div className="flex h-55px items-center bg-eeeeee w-full" style={{boxShadow: "inset -10px 4px 5px #00000030", width:'3240px'}}>
+        <div className="w-full flex flex-col overflow-x-auto bg-white scroll-div">
+          <div className="flex h-55px items-center bg-eeeeee w-full" style={{ width: "3238px" }}>
             <div
               style={{ width: "235px", background: "#6852a7" }}
               className="-mt-px ml-8px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
@@ -900,7 +900,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                 <div className=" w-full flex flex-col flex-shrink-0">
                   {/* === Header === */}
                   <div
-                    style={{ height: "69px", background: "#5d4386", boxShadow: "inset -10px 4px 5px #00000030" }}
+                    style={{ height: "69px", background: "#5d4386" }}
                     className=" flex items-center justify-start text-14px text-white tracking-tight"
                   >
                     <div className="h-full flex items-center justify-center" style={{ width: "138px" }}>

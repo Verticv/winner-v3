@@ -44,7 +44,7 @@ const HorizontalMenu = ({
                   ? "linear-gradient(to top, #491f9c, #9e3cbc)"
                   : "linear-gradient(to top, #ccc4ff, #ffd8f5)",
             }}
-            className={`w-full rounded-6px flex flex-col justify-start items-center relative hover:filter hover:brightness-90 h-76px pt-5px pb-6px`}
+            className={`w-full rounded-6px flex flex-col justify-start items-center relative hover:filter hover:brightness-110 h-76px pt-5px pb-6px`}
           >
             <img
               className="object-none h-48px w-48px"
@@ -70,6 +70,7 @@ const HorizontalMenu = ({
           selectedTab !== 5 &&
           selectedTab !== 9 &&
           selectedTab !== 11 &&
+          selectedTab !== 10 &&
           selectedTab === item.id && (
             <div
               className={`absolute -bottom-10px left-39px`}
@@ -77,6 +78,7 @@ const HorizontalMenu = ({
                 borderStyle: "solid",
                 borderWidth: " 0 7px 9px 7px",
                 borderColor: "transparent  transparent  #562a86 transparent ",
+                left: "35px",
               }}
             >
               {/* <div style={{
