@@ -50,7 +50,7 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
               className="mt-14px flex flex-col space-y-6px text-r666666 tracking-tight  text-16px"
               style={{ letterSpacing: "-0.1em" }}
             >
-              <span className="font-bold" style={{ color: "#f04281" }}>
+              <span className="font-bold">
                 <span className="font-bold mr-4px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
               </span>
               <span className="font-bold">

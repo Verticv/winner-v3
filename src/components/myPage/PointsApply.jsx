@@ -46,7 +46,7 @@ const PointsApply = () => {
           </span>
         </div>
         <div className="mt-13px flex flex-col space-y-15px text-r666666 text-16px" style={{ letterSpacing: "-0.1em" }}>
-          <span className="h-15px font-bold" style={{ color: "#f04281" }}>
+          <span className="h-15px font-bold">
             <span className="font-bold mr-7px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
           </span>
           <span className="h-15px font-bold">
