@@ -27,13 +27,14 @@ const WinLoseSettlement = () => {
     return (
         <div className="flex flex-col items-center w-full">
             <MyPageTitle title="윈루즈정산" />
+            <div className='h-px' />
             <DateSearchBar isLeagueSearch={false} has3MonthSearch={true} />
 
              <div className="flex h-48px w-full mt-20px space-x-12px">
                 <div style={{ width: '255px', background:'#341d5a', borderColor:'#9361e5' }}
                     className="h-48px rounded-full border-2 flex items-center justify-center text-16px">
                     <img src={Diamond} alt="" />
-                    <div className="flex items-center space-x-4px ml-8px">
+                    <div className="flex items-center space-x-4px ml-8px font-bold">
                       <span className="text-white tracking-tight">진행중인 금액 :</span>
                       <span className="text-ffd200">78,308</span>
                     </div>
@@ -42,7 +43,7 @@ const WinLoseSettlement = () => {
                 <div style={{ width: '255px', background:'#341d5a', borderColor: '#9361e5' }}
                     className="h-48px rounded-full border-2 flex items-center justify-center text-16px">
                     <img src={Diamond} alt="" />
-                    <div className="flex items-center space-x-4px ml-10px">
+                    <div className="flex items-center space-x-4px ml-10px font-bold">
                         <span className="text-white tracking-tight">정산 총 금액 :</span>
                         <span className="text-ffd200">24,393,246</span>
                     </div>

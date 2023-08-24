@@ -69,7 +69,10 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
                     paddingTop: "1px",
                     marginBottom: "1px",
                   }}
-                  onClick={() => setIsMyMenuOpen(false)}
+                  onClick={() => {
+                    setIsMyMenuOpen(false);
+                    option.action && option.action()
+                  }}
                   onMouseOver={() => setHoveredOption(option.text)}
                   onMouseLeave={() => setHoveredOption("")}
                 >

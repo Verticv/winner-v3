@@ -11,6 +11,7 @@ import Icon8 from '../../images/myPage/betHistory/icon_8.png'
 import Icon9 from '../../images/myPage/betHistory/icon_9.png'
 import Icon10 from '../../images/myPage/betHistory/icon_10.png'
 import Icon11 from '../../images/myPage/betHistory/icon_11.png'
+import Icon12 from '../../images/myPage/betHistory/icon_12.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
@@ -22,6 +23,7 @@ import IconHighlight8 from '../../images/myPage/betHistory/Icon8_On.png'
 import IconHighlight9 from '../../images/myPage/betHistory/Icon9_On.png'
 import IconHighlight10 from '../../images/myPage/betHistory/Icon10_On.png'
 import IconHighlight11 from '../../images/myPage/betHistory/Icon11_On.png'
+import IconHighlight12 from '../../images/myPage/betHistory/Icon12_On.png'
 import Pagination from './Pagination'
 import MyPageTitle from './MyPageTitle'
 import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
@@ -38,6 +40,7 @@ const tabsArray = [
     { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history" },
     { text: "라이브카지노", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/mypage/bet-history/live-casino" },
     { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/mypage/bet-history/slot-game" },
+    { text: "실시간스포츠", icon: Icon12, iconHighlight: IconHighlight12, id: 11, path: "/mypage/bet-history/live-sport" },
     { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/bet-history/sports" },
     { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/mypage/bet-history/hotel-casino" },
     { text: "홀덤게임", icon: Icon6, iconHighlight: IconHighlight6, id: 10, path: "/mypage/bet-history/hold'em-game" },
@@ -93,6 +96,14 @@ const BetHistory = () => {
             <Route path="/mypage/bet-history/sports">
                 <>
                     <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <div className='mt-5px mb-60px'>
+                        <Pagination page={page} setPage={setPage} />   
+                    </div>
+                </>
+            </Route>
+            <Route path="/mypage/bet-history/live-sport">
+                <>
+                <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
                     <div className='mt-5px mb-60px'>
                         <Pagination page={page} setPage={setPage} />   
                     </div>

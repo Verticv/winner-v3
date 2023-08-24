@@ -32,13 +32,13 @@ const MinigameBetHistoryTable = ({array, checkedState, setCheckedState, isPopupO
                         onChange={() => handleOnChange(item.id)}
                     />
                 </div>
-                <div style={{width: "86px"}} className="font-robotoRegular text-center">{item.number}</div>
-                <div style={{width: "111px"}} className="font-robotoRegular text-center">{item.time}</div>
-                <div style={{width: "98px"}} className="text-center">{item.type}</div>
-                <div style={{width: "119px"}} className="text-center">{item.name}</div>
-                <div style={{width: "84px"}} className="text-center">{item.history}</div>
-                <div style={{width: "108px"}} className="font-robotoRegular text-right">{item.amount}</div>
-                <div style={{width: "79px"}} className="text-center">{item.percentage}</div>
+                <div style={{color:"#666666", width: "86px"}} className="font-robotoRegular text-center">{item.number}</div>
+                <div style={{color:"#666666", width: "111px"}} className="font-robotoRegular text-center">{item.time}</div>
+                <div style={{color:"#666666", width: "98px"}} className="text-center">{item.type}</div>
+                <div style={{color:"#666666", width: "119px"}} className="text-center">{item.name}</div>
+                <div style={{color:"#666666", width: "84px"}} className="text-center">{item.history}</div>
+                <div style={{color:"#666666", width: "108px"}} className="font-robotoRegular text-right">{item.amount}</div>
+                <div style={{color:"#666666", width: "79px"}} className="text-center">{item.percentage}</div>
                 <div style={{width: "123px",  WebkitTextStroke:item.status === "승"&&"0.2px",color: item.profit.includes("+") ? "#e9441d" : "#666666"}} className="font-robotoRegular text-right">{item.profit}</div>
                 <div style={{width: "80px",  WebkitTextStroke:item.status === "승"&&"0.2px",color: item.status === "승" ? "#f04281" : "#666666"}} className="text-center">{item.status}</div>
                 <div style={{width: "90px"}} className="text-center pr-18px">

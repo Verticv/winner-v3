@@ -57,7 +57,7 @@ const MyPageTitle = ({
                         <span className="">쪽지 보관은 최장</span>
                         <span className="font-bold ml-4px" style={{color:'#ffd98b'}}>14</span>
                         <span className="">일</span>
-                        <span className="ml-2px">최대</span>
+                        <span className="ml-4px">최대</span>
                         <span className="font-bold ml-4px" style={{color:'#ffd98b'}}>20</span>
                         <span className="">개입니다.</span>
                     </div>

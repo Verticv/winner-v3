@@ -7,7 +7,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
   const Title = ({ text }) => (
     <div style={{ width: '140px', background: '#9b6bd4' }}
       className="space-y-14px flex-shrink-0 h-44px pl-10px flex items-center rounded-4px">
-      <label className="text-white text-16px tracking-Stightest">
+      <label className="text-white text-16px tracking-Stightest font-bold">
         {text}
       </label>
     </div>
@@ -112,7 +112,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                       backgroundColor:
                         selectedInput === 1 ? "#732dab" : "#ffffff00",
                     }}
-                    className={`absolute bottom-0 w-full h-2px`}
+                    className={`absolute bottom-0 w-full h-3px`}
                   />
                 </div>
               </div>

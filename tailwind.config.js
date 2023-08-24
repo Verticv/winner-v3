@@ -166,6 +166,7 @@ module.exports = {
         rf04281: "#f04281", // Red circle
         r666666: "#666666", // Text
         r2c1137: "#2c1137",
+        r9d3bbb30: "rgb(157,59,187,30%)",
         p682aa7: "#682aa7",
         eeeeee: "#eeeeee",
         p594e6a: "#594e6a",
@@ -173,6 +174,7 @@ module.exports = {
         aaaaaa: "#aaaaaa",
         ffd200: "#ffd200",
         dddddd: "#dddddd",
+        
       },
       fontFamily: {
         // spoqa: ["SpoqaHanSansNeo"],

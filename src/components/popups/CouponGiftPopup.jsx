@@ -3,9 +3,7 @@ import React from 'react'
 import CloseIcon from '../../images/popups/close_icon.png'
 import Step1 from '../../images/popups/step1.png'
 import Step2 from '../../images/popups/step2.png'
-
-
-
+import SearchIcon from '../../images/myPage/search.png'
 
 const CouponGiftPopup = ({setPopupOpen}) => {
   return (
@@ -51,7 +49,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span className="text-16px tracking-tighter text-r666666 pt-3px">선물로 보낼 쿠폰을 확인하세요.</span>
                 </div>
 
-                 <div className="mt-26px h-64px w-full rounded-8px flex items-center  text-14px tracking-Stightest" style={{background:'rgb(94, 57, 154)'}}>
+                 <div className="mt-26px h-64px w-full rounded-8px flex items-center  text-14px tracking-Stightest" style={{background:'#5e399a'}}>
                     <span style={{marginLeft:'76px'}} className="text-eeeeee leading-none">선물할 쿠폰</span>
                     <div style={{width:'311px',borderColor:'#a088d7'}} className="h-42px ml-13px bg-white border  rounded-6px flex items-center">
                       <span className="text-r666666 ml-11px leading-none">쿠폰테스트</span>
@@ -63,14 +61,19 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span className=" text-16px tracking-tighter text-r666666 pt-3px">쿠폰받을 회원을 선택하세요.</span>
                 </div>
 
-                <div className="mt-17px h-64px w-full rounded-8px flex items-center  text-14px tracking-Stightest" style={{background:'rgb(94, 57, 154)'}}>
-                <span style={{marginLeft:'63px'}} className="text-eeeeee leading-none">쿠폰받을 회원</span>
-                <div style={{width:'311px',borderColor:'#682aa7'}} className="h-42px ml-14px bg-white border  rounded-6px flex items-center">
-                    <span className=" ml-11px leading-none" style={{color:'#aaaaaa'}}>아이디를 입력해 주세요.</span>
-                </div>
+                <div className="mt-17px h-64px w-full rounded-8px flex items-center  text-14px tracking-Stightest relative" style={{background:'#772fad'}}>
+                  <span style={{marginLeft:'63px'}} className="text-eeeeee leading-none">쿠폰받을 회원</span>
+                  <input style={{width:'311px',borderColor:'#682aa7'}} className="h-42px ml-14px bg-white border  rounded-6px flex items-center pl-11px pr-50px leading-none outline-none placeholder-aaaaaa" placeholder='아이디를 입력해 주세요.'/>
+                  <button
+                      style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)", top:'11px', right: "75px" }}
+                      className="flex items-center justify-center w-42px h-42px rounded-6px flex-shrink-0  filter hover:brightness-125 shadow-btn absolute z-10">
+                    <div className="flex items-center justify-center w-40px  h-40px rounded-6px " style={{background: 'linear-gradient(0deg, #6b22ff, #df52ff)'}}>
+                      <img src={SearchIcon} alt="" />
+                    </div>
+                  </button>
                 </div>
                   
-               <div style={{height:'337px', width:'550px'}} className="mt-7px items-center flex justify-center">
+               <div style={{height:'337px', width:'550px'}} className="mt-7px items-center">
                     <CouponGiftPopupTable />
                 </div>
 

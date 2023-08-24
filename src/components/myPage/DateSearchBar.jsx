@@ -70,7 +70,7 @@ const DateSearchBar = ({
       style={{ height: "249px", width: "138px" }}
       className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white"
     >
-      <div className="w-full mt-2px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c">
+      <div className="w-full pt-2px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c">
         <DropdownCells items={LeagueExampleArray} />
       </div>
     </div>
@@ -217,6 +217,16 @@ const DateSearchBar = ({
                 3개월
               </span>
             </div>
+          </div>
+        )}
+
+        {window.location.pathname ===
+          "/mypage/points/points-accumulate-history" && (
+          <div className="pl-5px">
+            <input
+              placeholder="아이디 입력"
+              className={`bg-white flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666`}
+            />
           </div>
         )}
 

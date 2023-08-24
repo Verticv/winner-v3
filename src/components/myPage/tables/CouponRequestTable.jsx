@@ -109,12 +109,12 @@ const CouponRequestTable = () => {
                     style={{
                         width:'141px',
                         color: item.state === "사용가능" 
-                        ? "#e65454"
+                        ? "#f04281"
                         : item.state ==="사용완료"
-                        ? "#33a1e9"
+                        ? "#1c92df"
                         : item.state === "회수쿠폰"
-                        ? "#4aca68"
-                        : "#666666"
+                        ? "#00a651"
+                        : "#999999"
                     }} 
                     className="text-center"
                 >
