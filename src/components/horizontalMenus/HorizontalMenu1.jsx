@@ -15,59 +15,55 @@ const HorizontalMenu1 = ({
                 key={item.id} 
                 style={{
                   background: isState === item.id
-                  ? 'linear-gradient( to top, #62553f, #dabe82)'
-                  : 'linear-gradient( to top, rgb(41,41,41) 0%, rgb(80,80,78) 100%)',
-                  boxShadow: '0 5px 5px -2px rgba(0,0,0,0.5)',
-                  height:'98px'
+                  ? 'linear-gradient( to top, #4f3a7a 0%, #a05bf6 50%, #cb78e6 100%)'
+                  : 'linear-gradient( to top, #4f3a7a 0%, #a05bf6 50%, #f0d3ff 100%)',
+                  boxShadow: '0 2px 5px 0px rgba(0,0,0,0.6)',
+                  height:'99px'
                 }}
-                className='w-full flex items-end  relative overflow-hidden rounded-4px' 
+                className='w-full flex items-end  relative overflow-hidden rounded-6px p-px' 
                 onClick={() => setState(item.id)}
                 onMouseOver={() => setHover(item.id)}
                 onMouseLeave={() => setHover(null)}
             >
-                <div 
+                {/* <div 
                     style={{
-                        height:"95px", 
+                        height:"97px", 
                         background: isState === item.id
                         ? 'linear-gradient(to top, #a6926f, #f9f0d3)'
                         : 'linear-gradient(to top, rgb(57,56,53) 0%, rgb(107,104,101) 100%)',
                         // height:'98px'
                     }} 
-                     className={`w-full flex absolute top-0 p-px rounded-4px`}>
+                     className={`w-full flex absolute top-0 p-px rounded-4px`}> */}
                     
                     <div 
                         style={{
-                            height: "93px",
-                             background: isState === item.id
-                          ? 'linear-gradient(to top, #8d7752, #dabe82)'
-                          :isHover === item.id
-                          ?'#54544f'
-                          :'linear-gradient( to top, rgb(50,50,49) 0%, rgb(84,84,82) 100%)'
+                            height: "97px",
+                            background: isState === item.id
+                          ? 'linear-gradient(to top, #491f9c, #9e3cbc)'
+                          :'linear-gradient( to top, #ccc4ff, #ffd9f5 100%)'
                         }}
-                        className={`w-full rounded-3px flex flex-col items-center`}>
-                          <img className="mt-6px ml-px object-none" src={item.icon} alt="" />
-                          {isState === item.id&&<img className="absolute top-0 left-0" src={Reflect} alt="" />}
+                        className={`w-full rounded-6px flex flex-col items-center justify-end pb-8px`}>
+                          <img className="ml-px object-none" src={item.icon} alt="" />
                         <div 
-                            className={`${
-                                isState === item.id
-                                ? "text-gray-252525"
-                                : "text-golden-ccc2b6"} 
-                                text-14px font-spoqaMedium tracking-tight h-14px flex items-center mt-3px`}
+                        style={{ color: isState === item.id? '#fff':'32d2834'}}
+                            className={` 
+                                text-14px tracking-tight h-14px flex items-center mt-5px`}
                         >
                             {item.text}
                         </div>
                         <div 
                             style={{
                                 backgroundColor: isState === item.id 
-                                ? "#4b3f2b"
-                                : "#1a1a1a"
+                                ? "#281d45"
+                                : "#69637f",
+
                             }}
-                            className={`text-white text-12px font-roboto tracking-tight px-9px mt-8px h-17px rounded-full flex items-center justify-center`}
+                            className={`text-white text-12px font-roboto tracking-tight px-9px mt-9px h-17px rounded-full flex items-center justify-center`}
                         >
                             {item.number}
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </button>
         ));
     }
