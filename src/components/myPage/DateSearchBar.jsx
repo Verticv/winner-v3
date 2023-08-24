@@ -29,11 +29,12 @@ const DateSearchBar = ({
   const [isDropdownOpen, setDropdownOpen] = useState(true);
   const [selectedCarrier, setSelectedCarrier] = useState("리그선택");
   const [hoveredOption, setHoveredOption] = useState("");
-  const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px";
+  const dropDownCellClass =
+    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px";
 
   const gameResultButton = (
     <div
-      style={{ width: "138px", height: "42px" }}
+      style={{ width: "138px", height: "42px", borderColor: "#a088d7" }}
       className="flex items-center justify-between  placeholder-gray-r8c8c8c outline-none rounded-6px border px-10px font-medium text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r666666 bg-white mb-px"
     >
       <p className="">{selectedCarrier}</p>
@@ -46,7 +47,10 @@ const DateSearchBar = ({
       <button
         className={dropDownCellClass}
         style={{
-          background: hoveredOption === item.text ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
+          background:
+            hoveredOption === item.text
+              ? "linear-gradient(to right, #9d3bbb, #5423a0)"
+              : "",
           color: hoveredOption === item.text ? "white" : "#666666",
         }}
         onClick={() => {
@@ -66,22 +70,29 @@ const DateSearchBar = ({
       style={{ height: "249px", width: "138px" }}
       className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white"
     >
-      <div className="w-full pt-2px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c scroll-div2">
+      <div className="w-full pt-2px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c">
         <DropdownCells items={LeagueExampleArray} />
       </div>
     </div>
   );
 
   const InboxSearch = (
-    <DropDownControls buttonChild={gameResultButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
+    <DropDownControls
+      buttonChild={gameResultButton}
+      isDropdownOpen={isDropdownOpen}
+      setDropdownOpen={setDropdownOpen}
+    >
       {searchDropdown}
     </DropDownControls>
   );
 
   return (
     <div
-      className={`h-62px w-full flex items-center justify-center space-x-10px rounded-6px`}
-      style={{ background: isPopup ? "rgba(52, 34, 103, 0.6)" : "rgba(52, 34, 103, 0.6)", marginTop: "10px" }}
+      className={`h-64px mt-15px flex items-center justify-center space-x-10px rounded-6px ml-3px`}
+      style={{
+        background: isPopup ? "#5e399a" : "#5e399a",
+        width: "1040px",
+      }}
     >
       {isLeagueSearch === true && (
         <div className="space-x-5px">
@@ -102,20 +113,26 @@ const DateSearchBar = ({
           <div className="pt-px">{InboxSearch}</div>
           <input
             placeholder="팀명검색"
-            style={{ width: "138px" }}
+            style={{ width: "138px", borderColor: "#a088d7" }}
             className="mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-14px tracking-tight  border-p682aa7 text-r666666 pb-px"
           />
         </div>
       )}
 
-      <div style={{ width: "304px" }} className="flex space-x-10px items-center h-full">
+      <div
+        style={{ width: "304px" }}
+        className="flex space-x-10px items-center h-full"
+      >
         <div className="relative">
           <CustomDatePicker
-            classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 focus:ml-10px pb-2px`}
+            classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 focus:ml-10px pb-2px `}
           />
         </div>
         <div>
-          <span className="font-medium text-14px text-white" style={{ letterSpacing: "-0.13rem", marginLeft: "-1px" }}>
+          <span
+            className="font-medium text-14px text-white"
+            style={{ letterSpacing: "-0.13rem", marginLeft: "-1px" }}
+          >
             ~
           </span>
         </div>
@@ -126,7 +143,10 @@ const DateSearchBar = ({
           />
         </div>
       </div>
-      <div className="flex h-full space-x-5px items-center" style={{ marginLeft: "9px" }}>
+      <div
+        className="flex h-full space-x-5px items-center"
+        style={{ marginLeft: "9px" }}
+      >
         <div
           className="flex items-center justify-center h-42px w-75px rounded-6px p-px shadow-link hover:filter hover:brightness-125"
           style={{ background: "linear-gradient(to top, #ada8a8, #d0d0d0)" }}
@@ -135,7 +155,9 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px  cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">오늘</span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
+              오늘
+            </span>
           </div>
         </div>
 
@@ -147,7 +169,9 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">1주일</span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
+              1주일
+            </span>
           </div>
         </div>
 
@@ -159,7 +183,9 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">15일</span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
+              15일
+            </span>
           </div>
         </div>
 
@@ -171,7 +197,9 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">1개월</span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
+              1개월
+            </span>
           </div>
         </div>
 
@@ -184,15 +212,19 @@ const DateSearchBar = ({
               className="flex items-center justify-center h-40px w-73px  rounded-6px cursor-pointer"
               style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
             >
-              <span className="font-medium tracking-tight text-14px pt-px text-r666666"> 3개월</span>
+              <span className="font-medium tracking-tight text-14px pt-px text-r666666">
+                {" "}
+                3개월
+              </span>
             </div>
           </div>
         )}
 
-        {window.location.pathname === "/mypage/points/points-accumulate-history" && (
+        {window.location.pathname ===
+          "/mypage/points/points-accumulate-history" && (
           <div className="pl-5px">
             <input
-            placeholder="아이디 입력"
+              placeholder="아이디 입력"
               className={`bg-white flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666`}
             />
           </div>
@@ -207,7 +239,9 @@ const DateSearchBar = ({
               className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
               style={{ background: "linear-gradient(0deg, #6b22ff, #df52ff)" }}
             >
-              <span className="font-medium tracking-tight text-14px  pt-px text-white text-shadow-5">검색</span>
+              <span className="font-medium tracking-tight text-14px  pt-px text-white text-shadow-5">
+                검색
+              </span>
             </div>
           </div>
         ) : (
@@ -219,7 +253,9 @@ const DateSearchBar = ({
               className="flex items-center justify-center h-40px w-73px  rounded-6px cursor-pointer"
               style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
             >
-              <span className="font-medium tracking-tight text-14px text-r666666 pt-px">3개월</span>
+              <span className="font-medium tracking-tight text-14px text-r666666 pt-px">
+                3개월
+              </span>
             </div>
           </div>
         )}
@@ -237,7 +273,7 @@ const DateSearchBar = ({
               height: "42px",
               background: "linear-gradient(to top, #4f3a7a, #e597ff)",
             }}
-            className="flex items-center justify-center rounded-6px shadow-link hover:filter hover:brightness-125"
+            className="flex items-center justify-center rounded-6px  hover:opacity-75 shadow-link hover:filter hover:brightness-125"
           >
             <div
               style={{
@@ -247,7 +283,9 @@ const DateSearchBar = ({
               }}
               className="flex items-center justify-center rounded-6px  cursor-pointer"
             >
-              <span className="font-medium tracking-tight text-14px text-white text-shadow-5">검색</span>
+              <span className="font-medium tracking-tight text-14px text-white text-shadow-5">
+                검색
+              </span>
             </div>
           </div>
         </div>

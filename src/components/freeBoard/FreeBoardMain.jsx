@@ -14,6 +14,50 @@ import Rank4 from "../../images/freeBoard/4_v3.png";
 import Rank5 from "../../images/freeBoard/5_v3.png";
 
 const FreeBoardMain = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const hoverStyle = {
+    background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+    color: "#eeeeee",
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const [isHovered1, setIsHovered1] = useState(false);
+
+  const hoverStyle1 = {
+    background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+    color: "#eeeeee",
+  };
+
+  const handleMouseEnter1 = () => {
+    setIsHovered1(true);
+  };
+
+  const handleMouseLeave1 = () => {
+    setIsHovered1(false);
+  };
+
+  const [isHovered2, setIsHovered2] = useState(false);
+
+  const hoverStyle2 = {
+    background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+    color: "#eeeeee",
+  };
+
+  const handleMouseEnter2 = () => {
+    setIsHovered2(true);
+  };
+
+  const handleMouseLeave2 = () => {
+    setIsHovered2(false);
+  };
   const cellArray = [
     {
       id: 0,
@@ -296,10 +340,16 @@ const FreeBoardMain = () => {
     "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px";
 
   const searchDropdown = (
-    <div className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a ">
+    <div
+      style={{ backgroundColor: "white" }}
+      className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a "
+    >
       <div className="w-full mt-2px h-full overflow-x-hidden border-gray-2c2c2c">
         <button
           className={dropDownCellClass}
+          style={{ ...(isHovered ? hoverStyle : null) }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           onClick={() => {
             setSelectedCarrier("제목");
             setDropdownOpen(false);
@@ -309,6 +359,9 @@ const FreeBoardMain = () => {
         </button>
         <button
           className={dropDownCellClass}
+          style={{ ...(isHovered1 ? hoverStyle1 : null) }}
+          onMouseEnter={handleMouseEnter1}
+          onMouseLeave={handleMouseLeave1}
           onClick={() => {
             setSelectedCarrier("본문");
             setDropdownOpen(false);
@@ -318,6 +371,9 @@ const FreeBoardMain = () => {
         </button>
         <button
           className={dropDownCellClass}
+          style={{ ...(isHovered2 ? hoverStyle2 : null) }}
+          onMouseEnter={handleMouseEnter2}
+          onMouseLeave={handleMouseLeave2}
           onClick={() => {
             setSelectedCarrier("작성자");
             setDropdownOpen(false);
