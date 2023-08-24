@@ -237,7 +237,7 @@ const DateSearchBar = ({
               height: "42px",
               background: "linear-gradient(to top, #4f3a7a, #e597ff)",
             }}
-            className="flex items-center justify-center rounded-6px  hover:opacity-75 shadow-link hover:filter hover:brightness-125"
+            className="flex items-center justify-center rounded-6px shadow-link hover:filter hover:brightness-125"
           >
             <div
               style={{
