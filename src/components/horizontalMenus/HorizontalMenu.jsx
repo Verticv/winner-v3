@@ -85,9 +85,9 @@ const HorizontalMenu = ({
                     : selectedTab === 4
                     ? "transparent transparent #4c2682 transparent"
                     : selectedTab === 6
-                    ? "transparent transparent #43237f transparent"
+                    ? "transparent transparent #452480 transparent"
                     : selectedTab === 7
-                    ? "transparent transparent #552986 transparent"
+                    ? "transparent transparent #43237f transparent"
                     : selectedTab === 8
                     ? "transparent transparent #41227e transparent"
                     : "transparent  transparent  #562a86 transparent ",
