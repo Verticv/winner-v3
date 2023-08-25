@@ -68,9 +68,9 @@ const DateSearchBar = ({
   const searchDropdown = (
     <div
       style={{ height: "249px", width: "138px" }}
-      className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white"
+      className="mt-3px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white"
     >
-      <div className="w-full pt-2px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c">
+      <div className="w-full pt-2px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c scroll-div3">
         <DropdownCells items={LeagueExampleArray} />
       </div>
     </div>
@@ -88,9 +88,9 @@ const DateSearchBar = ({
 
   return (
     <div
-      className={`h-64px mt-15px flex items-center justify-center space-x-10px rounded-6px ml-3px`}
+      className={`h-64px mt-15px flex items-center justify-center space-x-10px rounded-6px`}
       style={{
-        background: isPopup ? "#5e399a" : "#5e399a",
+        background: isPopup ? "#5e399a" : "rgba(52, 34, 103, 0.6)",
         width: "1040px",
       }}
     >

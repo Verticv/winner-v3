@@ -29,7 +29,7 @@ const SportsBetHistory = ({
 
       <div
         style={{ width: "1040px" }}
-        className="ml-3px h-full mt-20px rounded-4px"
+        className="h-full mt-20px rounded-4px"
       >
         <div className="space-y-15px">
           <SportsBetHistoryPanel

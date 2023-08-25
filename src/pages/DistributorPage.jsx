@@ -164,6 +164,55 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
     </div>
   );
 
+  const games = [
+    { title1: "스포츠", title2: "" },
+    { title1: "미니게임", title2: "" },
+    { title1: "프레그메틱", title2: "플레이" },
+    { title1: "에볼루션", title2: "" },
+    { title1: "로얄지", title2: "" },
+    { title1: "아시아", title2: "게이밍" },
+    { title1: "드림", title2: "게이밍" },
+    { title1: "섹시", title2: "게이밍" },
+    { title1: "빅게이밍", title2: "" },
+    { title1: "오리엔탈", title2: "게임" },
+    { title1: "마이크로", title2: "게이밍" },
+    { title1: "베가스", title2: "라운지" },
+    { title1: "비터라이브", title2: "" },
+    { title1: "타이산", title2: "" },
+    { title1: "모티베이션", title2: "" },
+    { title1: "프레그메틱", title2: "플레이" },
+    { title1: "씨큐나인", title2: "" },
+    { title1: "월드매치", title2: "" },
+    { title1: "하바네로", title2: "" },
+    { title1: "플레이앤고", title2: "" },
+    { title1: "스페이드", title2: "" },
+    { title1: "분고", title2: "" },
+    { title1: "레드타이거", title2: "" },
+    { title1: "엘리시움", title2: "" },
+    { title1: "빅타임", title2: "플레이" },
+    { title1: "YL게이밍", title2: "" },
+    { title1: "넷엔트", title2: "" },
+    { title1: "드라군", title2: "소프트" },
+    { title1: "YGG드라실", title2: "" },
+    { title1: "플레이슨", title2: "" },
+    { title1: "플레이텍", title2: "" },
+    { title1: "스카이윈드", title2: "" },
+    { title1: "와즈단", title2: "" },
+    { title1: "PG소프트", title2: "" },
+    { title1: "로얄슬롯", title2: "게이밍" },
+    { title1: "노리미트", title2: "시티" },
+    { title1: "CC88", title2: "" },
+    { title1: "패스트스핀", title2: "" },
+    { title1: "나가게임즈", title2: "" },
+    { title1: "두원카지노", title2: "" },
+    { title1: "보타카지노", title2: "" },
+    { title1: "홀덤게임", title2: "" },
+    { title1: "e-스포츠", title2: "" },
+    { title1: "키론", title2: "가상게임" },
+    { title1: "피싱게임", title2: "" },
+    { title1: "티비벳", title2: "" },
+  ];
+
   const PercentageCell = ({ innerTable = false }) => (
     <>
       <div className="w-full flex">
@@ -174,97 +223,27 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               width: "fit-content",
               paddingRight: innerTable ? "30px" : 0,
               color: "#ffffff",
-              background: "#5d4386",
+              background: "#513d71",
               borderColor: "#dddddd",
             }}
-            className="pr-30px flex h-56px border-b items-center text-14px tracking-tight flex-shrink-0"
+            className="flex h-56px border-b items-center text-14px tracking-tight flex-shrink-0"
           >
             <div style={{ backgroundColor: "#3f2a5f" }} className="w-85px h-full flex items-center justify-center">
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 구분
               </div>
             </div>
-            <div className="w-81px h-full flex items-center justify-center">스포츠</div>
-            <div className="w-81px h-full flex items-center justify-center">미니게임</div>
-
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>프레그메틱</span>
-              <span>플레이</span>
-            </div>
-            <div className="w-81px h-full flex items-center justify-center">에볼루션</div>
-            <div className="w-81px h-full flex items-center justify-center">로얄지</div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>아시아</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>드림</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>섹시</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-81px h-full flex items-center justify-center">빅게이밍</div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>오리엔탈</span>
-              <span>게임</span>
-            </div>
-            <div className="w-81px h-full flex items-center justify-center">이주기</div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>마이크로</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>YGG</span>
-              <span>드라실</span>
-            </div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>드라군</span>
-              <span>소프트</span>
-            </div>
-
-            <div className="w-81px h-full flex items-center justify-center">분고</div>
-            <div className="w-81px h-full flex items-center justify-center">플레이슨</div>
-            <div className="w-81px h-full flex items-center justify-center">넷엔트</div>
-            <div className="w-81px h-full flex items-center justify-center">퀵스핀</div>
-            <div className="w-81px h-full flex items-center justify-center">스페이드</div>
-            <div className="w-81px h-full flex items-center justify-center">하바네로</div>
-            <div className="w-81px h-full flex items-center justify-center">월드매치</div>
-            <div className="w-81px h-full flex items-center justify-center">엘리시움</div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>플레이</span>
-              <span>엔고</span>
-            </div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>YL</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>레드</span>
-              <span>타이거</span>
-            </div>
-            <div className="w-81px h-full flex items-center justify-center">플레이텍</div>
-            <div className="w-81px h-full flex items-center justify-center">스카이윈드</div>
-            <div className="w-81px h-full flex items-center justify-center">씨큐나인</div>
-            <div className="w-81px h-full flex items-center justify-center">올웨이스핀</div>
-            <div className="w-81px h-full flex items-center justify-center">와즈단</div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>PG</span>
-              <span>소프트</span>
-            </div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>로얄슬롯</span>
-              <span>게이밍</span>
-            </div>
-
-            <div className="w-81px h-full flex items-center justify-center">두윈카지노</div>
-            <div className="w-81px h-full flex items-center justify-center">보타카지노</div>
-            <div className="w-81px h-full flex items-center justify-center">e-스포츠</div>
-            <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px mr-2px">
-              <span>키론</span>
-              <span>가상게임</span>
-            </div>
+            {games.map((item) => {
+              if (!item.title2)
+                return <div className="w-81px h-full flex items-center justify-center">{item.title1}</div>;
+              else
+                return (
+                  <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
+                    <span>{item.title1}</span>
+                    <span>{item.title2}</span>
+                  </div>
+                );
+            })}
             <div className="w-100px h-full flex items-center justify-center pr-3px">관리</div>
           </div>
           <div
@@ -272,53 +251,19 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               width: "fit-content",
               paddingRight: innerTable ? "30px" : 0,
               color: "#585858",
-              background: "#ffffff",
+              background: "#f3f3f3",
             }}
-            className="pr-30px flex h-54px items-center text-14px tracking-tight font-roboto flex-shrink-0 bg-white"
+            className="flex h-54px items-center text-14px tracking-tight font-roboto flex-shrink-0 bg-white"
           >
-            <div style={{ backgroundColor: "#f8f9f9" }} className="w-85px h-full flex items-center justify-center">
+            <div style={{ backgroundColor: "#e8e8e8" }} className="w-85px h-full flex items-center justify-center">
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 변경
               </div>
             </div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-            <div className="w-81px h-full flex items-center justify-center ">0.00%</div>
-
-            <div className="w-100px h-full flex items-center justify-center mr-4px">
+            {games.map((item) => {
+              return <div className="w-81px h-full flex items-center justify-center ">0.00%</div>;
+            })}
+            <div className="w-100px h-full flex items-center justify-center">
               <button
                 style={{
                   width: "65px",
@@ -348,7 +293,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
       <div className="w-full flex">
         <div className="w-39px mt-10px flex justify-center items-start"></div>
         <div className="w-full flex flex-col overflow-x-auto bg-white scroll-div">
-          <div className="flex h-55px items-center bg-eeeeee w-full" style={{ width: "3238px" }}>
+          <div className="flex h-55px items-center bg-eeeeee w-full" style={{ width: `${games.length * 85 + 178}px` }}>
             <div
               style={{ width: "235px", background: "#6852a7" }}
               className="-mt-px ml-8px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
@@ -394,87 +339,30 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                 구분
               </div>
             </div>
-            <div className="w-85px h-full flex items-center justify-center">스포츠</div>
-            <div className="w-85px h-full flex items-center justify-center">미니게임</div>
+            {games.map((item, index) => {
+              if (!item.title2)
+                return (
+                  <div
+                    className={`w-85px h-full flex items-center justify-center ${
+                      index === games.length - 1 && "mr-8px"
+                    }`}
+                  >
+                    {item.title1}
+                  </div>
+                );
+              else
+                return (
+                  <div
+                    className={`w-85px h-full flex flex-col items-center justify-center -space-y-4px ${
+                      index === games.length - 1 && "mr-8px"
+                    }`}
+                  >
+                    <span>{item.title1}</span>
+                    <span>{item.title2}</span>
+                  </div>
+                );
+            })}
 
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>프레그메틱</span>
-              <span>플레이</span>
-            </div>
-            <div className="w-85px h-full flex items-center justify-center">에볼루션</div>
-            <div className="w-85px h-full flex items-center justify-center">로얄지</div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>아시아</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>드림</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>섹시</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-85px h-full flex items-center justify-center">빅게이밍</div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>오리엔탈</span>
-              <span>게임</span>
-            </div>
-            <div className="w-85px h-full flex items-center justify-center">이주기</div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>마이크로</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>YGG</span>
-              <span>드라실</span>
-            </div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>드라군</span>
-              <span>소프트</span>
-            </div>
-
-            <div className="w-85px h-full flex items-center justify-center">분고</div>
-            <div className="w-85px h-full flex items-center justify-center">플레이슨</div>
-            <div className="w-85px h-full flex items-center justify-center">넷엔트</div>
-            <div className="w-85px h-full flex items-center justify-center">퀵스핀</div>
-            <div className="w-85px h-full flex items-center justify-center">스페이드</div>
-            <div className="w-85px h-full flex items-center justify-center">하바네로</div>
-            <div className="w-85px h-full flex items-center justify-center">월드매치</div>
-            <div className="w-85px h-full flex items-center justify-center">엘리시움</div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>플레이</span>
-              <span>엔고</span>
-            </div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>YL</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>레드</span>
-              <span>타이거</span>
-            </div>
-            <div className="w-85px h-full flex items-center justify-center">플레이텍</div>
-            <div className="w-85px h-full flex items-center justify-center">스카이윈드</div>
-            <div className="w-85px h-full flex items-center justify-center">씨큐나인</div>
-            <div className="w-85px h-full flex items-center justify-center">올웨이스핀</div>
-            <div className="w-85px h-full flex items-center justify-center">와즈단</div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>PG</span>
-              <span>소프트</span>
-            </div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px">
-              <span>로얄슬롯</span>
-              <span>게이밍</span>
-            </div>
-            <div className="w-85px h-full flex items-center justify-center">두윈카지노</div>
-            <div className="w-85px h-full flex items-center justify-center">보타카지노</div>
-
-            <div className="w-85px h-full flex items-center justify-center">e-스포츠</div>
-            <div className="w-85px h-full flex flex-col items-center justify-center -space-y-4px mr-8px">
-              <span>키론</span>
-              <span>가상게임</span>
-            </div>
             <div
               style={{ backgroundColor: "#391d66" }}
               className="w-85px text-center h-full flex items-center justify-center"
@@ -486,55 +374,31 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               width: "fit-content",
               paddingRight: innerTable ? "0px" : 0,
-              backgroundColor: "rgba(255,255,254)",
+              backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
             className="flex h-55px items-center text-14px tracking-tight font-roboto text-r666666 bg-white border-b border-dddddd"
           >
             <div
-              style={{ backgroundColor: "#f2f2f2" }}
+              style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
               className="w-85px h-full flex items-center justify-center text-r666666 "
             >
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 베팅금
               </div>
             </div>
-            <div className="w-85px h-full flex items-center justify-end">1.09M</div>
-            <div className="w-85px h-full flex items-center justify-end">33K</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end mr-8px">0</div>
-            <div style={{ backgroundColor: "#f2f2f2" }} className="w-85px h-full flex items-center justify-end pr-8px">
+            {games.map((item, index) => {
+              return (
+                <div
+                  className={`w-85px h-full flex items-center justify-end ${index === games.length - 1 && "mr-8px"}`}
+                >
+                  {index === 0 ? "1.09M" : index === 1 ? "33K" : 0}
+                </div>
+              );
+            })}
+            <div
+              style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
+              className="w-85px h-full flex items-center justify-end pr-8px"
+            >
               7.14M
             </div>
           </div>
@@ -542,110 +406,62 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               width: "fit-content",
               paddingRight: innerTable ? "0px" : 0,
-              background: "#f7f7f7",
+              backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
             className="flex h-55px items-center text-14px tracking-tight font-roboto text-r666666 bg-white border-b border-dddddd"
           >
             <div
-              style={{ backgroundColor: "#eaeaea" }}
+              style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
               className="w-85px h-full flex items-center justify-center  text-r666666"
             >
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 승패
               </div>
             </div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end mr-8px">0</div>
-            <div style={{ backgroundColor: "#eaeaea" }} className="w-85px h-full flex items-center justify-end pr-8px">
+            {games.map((item, index) => {
+              return (
+                <div
+                  className={`w-85px h-full flex items-center justify-end ${index === games.length - 1 && "mr-8px"}`}
+                >
+                  0
+                </div>
+              );
+            })}
+            <div
+              style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
+              className="w-85px h-full flex items-center justify-end pr-8px"
+            >
               0
             </div>
           </div>
           <div
             style={{
               width: "fit-content",
-              paddingRight: innerTable ? "0px" : 0,
+              backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
             className="flex h-56px items-center text-14px tracking-tight font-roboto border-b border-dddddd bg-white text-r666666"
           >
             <div
-              style={{ backgroundColor: "#f2f2f2" }}
+              style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
               className="w-85px h-full flex items-center justify-center  text-r666666"
             >
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 정산금액
               </div>
             </div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end">0</div>
-            <div className="w-85px h-full flex items-center justify-end mr-8px">0</div>
-            <div style={{ backgroundColor: "#f2f2f2" }} className="w-85px h-full flex items-center justify-end pr-8px">
+            {games.map((item, index) => {
+              return (
+                <div
+                  className={`w-85px h-full flex items-center justify-end ${index === games.length - 1 && "mr-8px"}`}
+                >
+                  0
+                </div>
+              );
+            })}
+            <div
+              style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
+              className="w-85px h-full flex items-center justify-end pr-8px"
+            >
               0
             </div>
           </div>
@@ -672,10 +488,14 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
         <div
           style={{
             height: "67px",
-            background: item.id % 2 === 1 ? "#f7f7f7" : "#ffffff",
+            background:
+              isUserCountOpen[item.id] === true && item.hasSubArray === true
+                ? "#f8f8f8"
+                : item.id % 2 === 1
+                ? "#f7f7f7"
+                : "#ffffff",
           }}
-          className={`
-           w-full flex items-center justify-start font-roboto text-14px text-r666666 tracking-tight`}
+          className={`w-full flex items-center justify-start font-roboto text-14px text-r666666 tracking-tight`}
         >
           <div className={`${item.name ? "w-90px pr-5px" : "w-138px"}  h-full flex items-center justify-center`}>
             {item.number}
@@ -1170,138 +990,23 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               <table className="w-full overflow-hidden rounded-3px bg-white">
                 <thead className="h-55px w-full text-14px text-eeeeee tracking-tight" style={{ background: "#472480" }}>
                   <tr className="flex items-center h-55px w-full">
-                    <td className="w-72px text-center">스포츠</td>
-                    <td className="w-72px text-center">미니게임</td>
-                    <td className="w-80px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>프레그메틱</span>
-                      <span>플레이</span>
-                    </td>
-                    <td className="w-72px text-center">에볼루션</td>
-                    <td className="w-72px text-center">로얄지</td>
-                    <td className="w-73px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>아시아</span>
-                      <span>게이밍</span>
-                    </td>
-                    <td className="w-73px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>드림</span>
-                      <span>게이밍</span>
-                    </td>
-                    <td className="w-73px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>섹시</span>
-                      <span>게이밍</span>
-                    </td>
-                    <td className="w-72px text-center">빅게이밍</td>
-                    <td className="w-73px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>오리엔탈</span>
-                      <span>게임</span>
-                    </td>
-                    <td className="w-72px text-center">이주기</td>
-                    <td className="w-73px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>마이크로</span>
-                      <span>게이밍</span>
-                    </td>
-                    <td className="w-73px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>YGG</span>
-                      <span>드라실</span>
-                    </td>
-                    <td className="w-73px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>드라군</span>
-                      <span>소프트</span>
-                    </td>
-                    <td className="w-72px text-center">분고</td>
-                    <td className="w-72px text-center">플레이슨</td>
-                    <td className="w-72px text-center">넷엔트</td>
-                    <td className="w-72px text-center">퀵스핀</td>
-
-                    <td className="w-72px text-center">스페이드</td>
-                    <td className="w-72px text-center">하바네로</td>
-                    <td className="w-72px text-center">월드매치</td>
-                    <td className="w-72px text-center">엘리시움</td>
-
-                    <td className="w-70px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>플레이</span>
-                      <span>엔고</span>
-                    </td>
-                    <td className="w-70px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>YL</span>
-                      <span>게이밍</span>
-                    </td>
-                    <td className="w-70px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>레드</span>
-                      <span>타이거</span>
-                    </td>
-                    <td className="w-78px text-center">플레이텍</td>
-                    <td className="w-78px text-center">스카이윈드</td>
-
-                    <td className="w-72px text-center">씨큐나인</td>
-                    <td style={{ width: "77px" }} className="text-center">
-                      올웨이스핀
-                    </td>
-                    <td className="w-72px text-center">와즈단</td>
-                    <td className="w-85px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>PG</span>
-                      <span>소프트</span>
-                    </td>
-                    <td className="w-85px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>로얄슬롯</span>
-                      <span>게이밍</span>
-                    </td>
-
-                    <td className="w-85px text-center">두윈카지노</td>
-                    <td className="w-85px text-center">보타카지노</td>
-                    <td className="w-72px text-center">e-스포츠 </td>
-                    <td className="w-100px text-center flex flex-col pt-2px -space-y-4px">
-                      <span>키론</span>
-                      <span>가상게임</span>
-                    </td>
-                    {/* <td className="w-72px text-center">합계</td> */}
+                    {games.map((item) => {
+                      if (!item.title2) return <td className="w-75px text-center">{item.title1}</td>;
+                      else
+                        return (
+                          <td className="w-75px text-center flex flex-col pt-2px -space-y-4px">
+                            <span>{item.title1}</span>
+                            <span>{item.title2}</span>
+                          </td>
+                        );
+                    })}
                   </tr>
                 </thead>
                 <tbody className="w-full text-r666666 text-14px tracking-tight">
                   <tr className="flex items-center text-14px tracking-tight text-gray-c8c8c8 h-54px w-full">
-                    <td className="w-72px text-center">0.70%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-80px text-center">0.70%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-73px text-center">0.00%</td>
-                    <td className="w-73px text-center">0.00%</td>
-                    <td className="w-73px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-73px text-center">0.00%</td>
-                    <td className="w-73px text-center">0.00%</td>
-                    <td className="w-73px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-
-                    <td className="w-70px text-center">0.00%</td>
-                    <td className="w-70px text-center">0.00%</td>
-                    <td className="w-70px text-center">0.00%</td>
-                    <td className="w-78px text-center">0.00%</td>
-                    <td className="w-78px text-center">0.00%</td>
-
-                    <td className="w-72px text-center">0.00%</td>
-                    <td style={{ width: "77px" }} className="text-center">
-                      0.00%
-                    </td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-85px text-center">0.00%</td>
-                    <td className="w-85px text-center">0.00%</td>
-                    <td className="w-85px text-center">0.00%</td>
-
-                    <td className="w-85px text-center">0.00%</td>
-                    <td className="w-72px text-center">0.00%</td>
-                    <td className="w-100px text-center">0.00%</td>
-                    {/* <td className="w-72px text-center">0.00%</td> */}
+                    {games.map((item, index) => {
+                      return <td className="w-75px text-center">{index === 0 ? "0.70%" : "0.00%"}</td>;
+                    })}
                   </tr>
                 </tbody>
               </table>
@@ -1385,89 +1090,16 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                         >
                           구분
                         </td>
-                        <td className="w-83px text-center">스포츠</td>
-                        <td className="w-81px text-center ml-4px">미니게임</td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>프레그메틱</span>
-                          <span>플레이</span>
-                        </td>
-                        <td className="w-85px text-center">에볼루션</td>
-                        <td className="w-83px text-center">로얄지</td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>아시아</span>
-                          <span>게이밍</span>
-                        </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>드림</span>
-                          <span>게이밍</span>
-                        </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>섹시</span>
-                          <span>게이밍</span>
-                        </td>
-                        <td className="w-83px text-center">빅게이밍</td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>오리엔탈</span>
-                          <span>게임</span>
-                        </td>
-                        <td className="w-83px text-center">이주기</td>
-
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>마이크로</span>
-                          <span>게이밍</span>
-                        </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>YGG</span>
-                          <span>드라실</span>
-                        </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>드라군</span>
-                          <span>소프트</span>
-                        </td>
-                        <td className="w-83px text-center">분고</td>
-                        <td className="w-83px text-center">플레이슨</td>
-                        <td className="w-83px text-center">넷엔트</td>
-                        <td className="w-83px text-center">퀵스핀</td>
-
-                        <td className="w-83px text-center">스페이드</td>
-                        <td className="w-83px text-center">하바네로</td>
-                        <td className="w-83px text-center">월드매치</td>
-                        <td className="w-83px text-center">엘리시움</td>
-
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>플레이</span>
-                          <span>엔고</span>
-                        </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>YL</span>
-                          <span>게이밍</span>
-                        </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>레드</span>
-                          <span>타이거</span>
-                        </td>
-                        <td className="w-83px text-center">플레이텍</td>
-                        <td className="w-83px text-center">스카이윈드</td>
-
-                        <td className="w-83px text-center">씨큐나인</td>
-                        <td className="w-83px text-center">올웨이스핀</td>
-                        <td className="w-83px text-center">와즈단</td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>PG</span>
-                          <span>소프트</span>
-                        </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>로얄슬롯</span>
-                          <span>게이밍</span>
-                        </td>
-
-                        <td className="w-83px text-center">두윈카지노</td>
-                        <td className="w-83px text-center">보타카지노</td>
-                        <td className="w-83px text-center">e-스포츠 </td>
-                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
-                          <span>키론</span>
-                          <span>가상게임</span>
-                        </td>
+                        {games.map((item) => {
+                          if (!item.title2) return <td className="w-83px text-center">{item.title1}</td>;
+                          else
+                            return (
+                              <td className="w-83px text-center flex flex-col pt-2px -space-y-4px">
+                                <span>{item.title1}</span>
+                                <span>{item.title2}</span>
+                              </td>
+                            );
+                        })}
                         <td
                           style={{ backgroundColor: "#391d66" }}
                           className="w-70px text-center h-full flex items-center justify-center"
@@ -1487,42 +1119,11 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                         >
                           베팅금
                         </td>
-                        <td className="w-83px text-right pr-5px">1.09M</td>
-                        <td className="w-83px text-right pr-4px">33K</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-85px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-2px">0</td>
-                        <td className="w-83px text-right pr-2px">0</td>
-                        <td className="w-83px text-right pr-7px">0</td>
-                        <td className="w-83px text-right pr-2px">0</td>
-                        <td className="w-83px text-right pr-6px">0</td>
-                        <td className="w-83px text-right">3.06M</td>
-                        <td className="w-83px text-right pr-10px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-85px text-right pr-4px">0</td>
-                        <td className="w-85px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
+                        {games.map((item, index) => (
+                          <td className="w-83px text-right pr-5px">
+                            {index === 0 ? "1.09M" : index === 1 ? "33K" : 0}
+                          </td>
+                        ))}
                         <td
                           style={{ backgroundColor: "#f2f2f2" }}
                           className="w-70px text-right pr-10px h-full flex items-center justify-end"
@@ -1540,42 +1141,11 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                         >
                           승패
                         </td>
-                        <td className="w-83px text-right pr-5px">1.09M</td>
-                        <td className="w-83px text-right pr-4px">33K</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-85px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-2px">0</td>
-                        <td className="w-83px text-right pr-7px">0</td>
-                        <td className="w-83px text-right pr-2px">0</td>
-                        <td className="w-83px text-right pr-6px">0</td>
-                        <td className="w-83px text-right">3.06M</td>
-                        <td className="w-83px text-right pr-10px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-85px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
+                        {games.map((item, index) => (
+                          <td className="w-83px text-right pr-5px">
+                            {index === 0 ? "1.09M" : index === 1 ? "33K" : 0}
+                          </td>
+                        ))}
 
                         <td
                           style={{ backgroundColor: "#f2f2f2" }}
@@ -1591,42 +1161,11 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                         >
                           정산금액
                         </td>
-                        <td className="w-83px text-right pr-5px">1.09M</td>
-                        <td className="w-83px text-right pr-4px">33K</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-85px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-2px">0</td>
-                        <td className="w-83px text-right pr-7px">0</td>
-                        <td className="w-83px text-right pr-2px">0</td>
-                        <td className="w-83px text-right pr-6px">0</td>
-                        <td className="w-83px text-right">3.06M</td>
-                        <td className="w-83px text-right pr-10px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-4px">0</td>
-                        <td className="w-85px text-right pr-4px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-3px">0</td>
-                        <td className="w-83px text-right pr-5px">0</td>
+                        {games.map((item, index) => (
+                          <td className="w-83px text-right pr-5px">
+                            {index === 0 ? "1.09M" : index === 1 ? "33K" : 0}
+                          </td>
+                        ))}
                         <td
                           style={{ backgroundColor: "#f2f2f2" }}
                           className="w-70px  text-right pr-10px h-full flex items-center justify-end"
