@@ -90,18 +90,11 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                 color: "#000",
                 borderRadius: "4px",
               }}
-              className="text-20px outline-none w-full h-full px-18px placeholder-r797979 pt-3px"
+              className="text-20px outline-none w-full h-full pl-18px placeholder-r797979 pt-3px bg-white"
               disabled
-              placeholder={"louie3"}
+              placeholder={"louie3asdaspdjkaopsdkjaposdkpaoksdpakosd"}
             />
-            <img src={Username} alt="" className="mr-19px opacity-0" />
-
-            <div
-              style={{
-                backgroundColor: selectedInput === 0 ? "#732dab" : "#ffffff00",
-              }}
-              className={`absolute bottom-0 w-full h-3px`}
-            />
+            <img src={Username} alt="" className="mr-4px opacity-0" />
           </div>
           <div
             style={{
