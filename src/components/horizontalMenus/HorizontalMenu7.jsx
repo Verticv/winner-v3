@@ -31,7 +31,7 @@ const HorizontalMenu7 = ({
                           ? 'linear-gradient( to top, #491f9c 0%, #9e3cbc 100%)'
                           :'linear-gradient( to top, #ccc4ff 0%, #ffd9f5 100%)'
                         }}
-                        className={`w-full rounded-6px flex flex-col justify-end items-center h-76px relative hover:filter hover:brightness-90`}  
+                        className={`w-full rounded-6px flex flex-col justify-end items-center h-76px relative hover:filter hover:brightness-90 pb-4px`}  
                         
                     >
                     <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />
@@ -42,7 +42,7 @@ const HorizontalMenu7 = ({
                             ? '#ffffff'
                             : '#2d2834'
                         }}
-                        className={` text-14px tracking-tight  flex items-center mt-4px`}
+                        className={` text-14px tracking-tight  flex items-center mt-6px`}
                     >{item.text}</span>
                     </div>
                 
