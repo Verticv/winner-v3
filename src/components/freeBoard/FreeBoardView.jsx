@@ -25,7 +25,7 @@ const FreeBoardView = () => {
         <div className="self-start pt-6px flex items-start pr-10px">
           <img className="object-none mt-5px" src={ReplyArrow} alt="" />
           <img
-            className="pl-13px"
+            className="pl-14px mt-px"
             src={
               rank === 1
                 ? Rank1
@@ -97,9 +97,12 @@ const FreeBoardView = () => {
           </button>
         )}
       </div>
-      <div className="pl-48px">
-        <div className="w-full rounded-4px bg-gray-252525 flex items-start px-20px  pt-17px pb-14px justify-between text-gray-c8c8c8 mt-px">
-          <div className="text-14px font-spoqa tracking-tight ">
+      <div className="pl-48px -mt-px">
+        <div
+          style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
+          className="w-full rounded-4px bg-gray-252525 flex items-start px-20px  pt-17px pb-14px justify-between text-gray-c8c8c8 mt-px"
+        >
+          <div className="text-14px font-spoqa tracking-tight -mt-2px">
             {tag && (
               <span className={`text-blue-2980b9 mr-10px font-spoqaMedium`}>
                 @{tag.length > 8 ? tag.substring(0, 8) : tag}{" "}
@@ -108,7 +111,7 @@ const FreeBoardView = () => {
                 )}
               </span>
             )}
-            <span className=" text-gray-c8c8c8">{text}</span>
+            <span className=" text-gray-c8c8c8 -ml-px">{text}</span>
           </div>
           <p className="text-gray-c8c8c8  tracking-tight font-spoqa text-14px flex flex-shrink-0 ml-7px">
             2021.06.28 15:36
@@ -119,7 +122,7 @@ const FreeBoardView = () => {
   );
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-5px">
       <div
         className="w-full overflow-hidden rounded-10px p-px"
         style={{
@@ -133,7 +136,7 @@ const FreeBoardView = () => {
         >
           <div
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
-            className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px"
+            className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px h-55px"
           >
             <div
               style={{ backgroundColor: "#0469a3", maxWidth: "92px" }}
@@ -147,7 +150,7 @@ const FreeBoardView = () => {
             >
               이벤트
             </div>
-            <div className="text-15px font-spoqaMedium tracking-tight text-gray-c8c8c8 mt-2px">
+            <div className="text-15px font-spoqaMedium tracking-tight text-gray-c8c8c8 -ml-px mt-px">
               메신져 고객센터 사칭주의
             </div>
           </div>
@@ -166,7 +169,7 @@ const FreeBoardView = () => {
             </div>
             <div
               style={{ backgroundColor: "#f04281" }}
-              className="pl-7px pr-7px h-19px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0 "
+              className="pl-7px pr-7px h-20px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0 pt-px"
             >
               <p className="flex items-center h-12px -ml-px">2</p>
             </div>
@@ -237,7 +240,7 @@ const FreeBoardView = () => {
         </div>
       </div>
 
-      <div className="flex space-x-4px my-20px justify-end">
+      <div className="flex space-x-4px mb-20px mt-19px justify-end">
         <button
           style={{
             background: "linear-gradient(to right, #15cfee, #3197e5)",
@@ -281,22 +284,25 @@ const FreeBoardView = () => {
       >
         <div
           style={{ backgroundColor: "#dfdbfa" }}
-          className="w-full bg-gray-323232 rounded-10px pl-18px pr-19px pb-19px"
+          className="w-full bg-gray-323232 rounded-10px pl-18px pr-19px pb-21px"
         >
           <div className="pt-16px pb-18px flex items-start space-x-9px">
-            <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">
+            <p
+              style={{ letterSpacing: "-0.091em" }}
+              className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -ml-px"
+            >
               댓글 작성하기
             </p>
             <div
               style={{ backgroundColor: "#f04281" }}
               className="w-20px h-19px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0 mt-2px"
             >
-              <p className="flex items-center h-12px -ml-px">2</p>
+              <p className="flex items-center h-12px mb-px">2</p>
             </div>
           </div>
           <div
             style={{ height: "93px" }}
-            className="relative flex w-full rounded-6px bg-gray-252525"
+            className="relative flex w-full rounded-6px bg-gray-252525 -mt-px"
           >
             <textarea
               style={{
@@ -304,7 +310,7 @@ const FreeBoardView = () => {
                 resize: "none",
                 boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5)",
               }}
-              className="outline-none w-full px-19px py-17px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 bg-gray-252525 rounded-6px text-gray-c8c8c8"
+              className="outline-none w-full px-19px pb-17px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 bg-gray-252525 rounded-6px text-gray-c8c8c8"
               placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
             />
 
@@ -338,15 +344,15 @@ const FreeBoardView = () => {
       >
         <div
           style={{ backgroundColor: "#dfdbfa" }}
-          className="w-full bg-gray-323232 rounded-10px pb-20px"
+          className="w-full bg-gray-323232 rounded-10px pb-21px"
         >
           <div
             style={{ borderColor: "#b5afdd" }}
-            className="border-b border-gray-252525 pl-20px pr-18px"
+            className="border-b border-gray-252525 pl-20px pr-19px"
           >
             <div className="py-9px w-full flex items-center justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
-                <img src={Rank2} alt="" className="-mt-2px" />
+                <img src={Rank2} alt="" className="mt-2px ml-px" />
                 <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">
                   신풍사우나
                 </p>
@@ -389,9 +395,9 @@ const FreeBoardView = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-              className="rounded-6px border border-solid bg-gray-252525 w-full  flex items-start px-19px pt-17px pb-14px justify-between text-gray-c8c8c8 mb-10px mt-px"
+              className="rounded-6px border border-solid bg-gray-252525 w-full  flex items-start px-19px pt-17px pb-13px justify-between text-gray-c8c8c8 mb-10px mt-px"
             >
-              <p className="text-15px font-spoqa tracking-tight pr-7px">
+              <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-2px">
                 두개의 이벤트 모두 참여하였습니다
               </p>
               <p className="text-14px tracking-tight font-spoqa flex-shrink-0 mt-px">
@@ -428,8 +434,8 @@ const FreeBoardView = () => {
           >
             <div className="py-9px w-full flex items-center  justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
-                <img src={Rank2} alt="" className="-mt-2px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">
+                <img src={Rank2} alt="" className="mt-px ml-2px" />
+                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">
                   신풍사우나
                 </p>
               </div>
@@ -471,9 +477,9 @@ const FreeBoardView = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-              className="rounded-6px border border-solid bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-14px justify-between text-gray-c8c8c8 mb-10px mt-px"
+              className="h-54px rounded-6px border border-solid bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-14px justify-between text-gray-c8c8c8 mb-10px mt-px"
             >
-              <p className="text-15px font-spoqa tracking-tight pr-7px">
+              <p className="text-15px font-spoqa tracking-tight pr-7px -mt-2px -ml-px">
                 두개의 이벤트 모두 참여하였습니다
               </p>
               <p className="text-14px tracking-tight font-spoqa flex-shrink-0 mt-px">
@@ -481,7 +487,7 @@ const FreeBoardView = () => {
               </p>
             </div>
           </div>
-          <div style={{ height: "115px" }} className="px-20px py-11px">
+          <div style={{ height: "114px" }} className="px-20px pb-10px pt-10px">
             <div
               style={{ height: "93px" }}
               className="rounded-4px bg-gray-252525 relative flex w-full"
@@ -492,11 +498,11 @@ const FreeBoardView = () => {
                   resize: "none",
                   boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="outline-none w-full px-19px py-18px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 bg-gray-252525 rounded-6px text-gray-c8c8c8"
+                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 bg-gray-252525 rounded-6px text-gray-c8c8c8"
                 placeholder="두개의 이벤트 모두 참여하였습니다."
               />
               <button
-                className="rounded-6px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125"
+                className="rounded-6px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125 -mr-px"
                 style={{
                   background: "#5d659f",
                   height: "93px",
@@ -517,7 +523,7 @@ const FreeBoardView = () => {
         </div>
       </div>
       <div
-        className="w-full overflow-hidden rounded-10px p-px mt-20px"
+        className="w-full overflow-hidden rounded-10px p-px mt-22px"
         style={{
           background: "linear-gradient(to top, #4f3a7a, #f0d3ff)",
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
@@ -533,8 +539,8 @@ const FreeBoardView = () => {
           >
             <div className="py-9px w-full flex items-center  justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
-                <img src={Rank2} alt="" className="-mt-2px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">
+                <img src={Rank2} alt="" className="mt-px ml-2px" />
+                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">
                   신풍사우나
                 </p>
               </div>
@@ -548,7 +554,7 @@ const FreeBoardView = () => {
                 <div className="flex items-center justify-center cursor-pointer">
                   <span
                     style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-                    className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-2px text-white"
+                    className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff mb-px text-white"
                   >
                     답글달기
                   </span>
@@ -558,9 +564,9 @@ const FreeBoardView = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-              className="rounded-6px bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-14px justify-between text-gray-c8c8c8 mb-10px mt-px"
+              className="h-54px rounded-6px bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-14px justify-between text-gray-c8c8c8 mb-10px mt-px"
             >
-              <p className="text-15px font-spoqa tracking-tight pr-7px">
+              <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-2px">
                 두개의 이벤트 모두 참여하였습니다
               </p>
               <p className="text-14px tracking-tight font-spoqa flex-shrink-0 mt-px">
@@ -568,7 +574,7 @@ const FreeBoardView = () => {
               </p>
             </div>
           </div>
-          <div style={{ height: "115px" }} className="px-20px py-11px">
+          <div style={{ height: "114px" }} className="px-20px pb-11px pt-10px">
             <div
               style={{ height: "93px" }}
               className="relative flex w-full rounded-4px bg-gray-252525"
@@ -579,26 +585,19 @@ const FreeBoardView = () => {
                   resize: "none",
                   boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="outline-none w-full px-19px py-18px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 bg-gray-252525 rounded-6px text-gray-c8c8c8"
+                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 bg-gray-252525 rounded-6px text-gray-c8c8c8"
                 placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
               />
 
               <button
-                className="rounded-6px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125"
+                className="-mr-px rounded-6px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125"
                 style={{
                   background: "#5d659f",
                   height: "93px",
                   boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
                 }}
               >
-                <div
-                  className="flex items-center justify-center cursor-pointer"
-                  style={{
-                    width: "118px",
-                    height: "91px",
-                    background: "linear-gradient(to bottom, #39618e, #27405d)",
-                  }}
-                >
+                <div className="flex items-center justify-center cursor-pointer">
                   <span
                     style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
                     className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff pt-px text-white"
@@ -612,7 +611,7 @@ const FreeBoardView = () => {
         </div>
       </div>
 
-      <div className="mt-20px mb-60px flex items-start justify-between">
+      <div className="mt-22px mb-65px flex items-start justify-between">
         <button
           className="flex items-center justify-center h-36px w-90px p-px rounded-6px hover:filter hover:brightness-125"
           style={{
@@ -623,7 +622,7 @@ const FreeBoardView = () => {
           <div className="flex items-center justify-center cursor-pointer">
             <span
               style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white"
+              className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white mb-2px"
             >
               이전
             </span>
@@ -642,7 +641,7 @@ const FreeBoardView = () => {
           <div className="flex items-center justify-center cursor-pointer">
             <span
               style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-spoqaMedium tracking-tight text-16px text-golden-highLight pt-px text-white"
+              className="font-spoqaMedium tracking-tight text-16px text-golden-highLight pt-px text-white mb-3px"
             >
               목록보기
             </span>
@@ -660,7 +659,7 @@ const FreeBoardView = () => {
           <div className="flex items-center justify-center cursor-pointer">
             <span
               style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white"
+              className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white mb-2px"
             >
               다음
             </span>

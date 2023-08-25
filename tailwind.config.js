@@ -70,6 +70,7 @@ module.exports = {
         "62px": "62px",
         "63px": "63px",
         "64px": "64px",
+        "65px": "65px",
         "67px": "67px",
         "68px": "68px",
         "69px": "69px",
@@ -174,7 +175,6 @@ module.exports = {
         aaaaaa: "#aaaaaa",
         ffd200: "#ffd200",
         dddddd: "#dddddd",
-        
       },
       fontFamily: {
         // spoqa: ["SpoqaHanSansNeo"],
