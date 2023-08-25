@@ -51,7 +51,7 @@ const HorizontalMenu7 = ({
     }
 
     return (
-        <div className="flex w-full h-80px space-x-3px px-4px">
+        <div className="flex w-full h-80px space-x-3px  pl-4px pr-3px">
             <TabsList items={itemsArray} />
         </div>
     )
