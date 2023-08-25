@@ -427,10 +427,10 @@ const SportsBetHistoryPanel = ({
 
   return (
     <div
-      className="w-full shadow-table p-px rounded-10px"
+      className="w-full shadow-table p-px rounded-10px -ml-2px"
       style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
     >
-      <div className="w-full bg-white rounded-10px pb-6px overflow-hidden">
+      <div className="w-full bg-white rounded-10px pb-10px overflow-hidden">
         <div
           className="flex h-54px w-full  text-14px text-white tracking-tighter"
           style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
@@ -510,7 +510,7 @@ const SportsBetHistoryPanel = ({
           </div>
         </div>
 
-        <div className="w-full px-8px pr-10px space-y-10px mt-8px">
+        <div className="w-full px-8px space-y-10px mt-9px">
           {type === 0 ? (
             <Cards0 />
           ) : type === 1 ? (
