@@ -99,7 +99,7 @@ const Faq = () => {
             {openedCell === cellId && (
                 <div 
                     style={{ zIndex: 1, backgroundColor: "#f6f6f6",boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.5)" }} 
-                    className="flex h-full items-start justify-start w-full rounded-10px -mt-64px z-0 mb-14px border  pb-32px pr-42px"
+                    className="flex h-full items-start justify-start w-full rounded-10px -mt-60px z-0 mb-14px border  pb-32px pr-42px"
                 >
                     <img 
                         style={{marginTop: "66px"}} 

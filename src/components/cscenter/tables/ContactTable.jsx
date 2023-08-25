@@ -23,13 +23,13 @@ const ContactTable = ({ array }) => {
         className={`text-14px tracking-tight h-56px w-full group border-b border-dddddd`
       }
       >
-        <div className="flex items-center font-bold text-14px tracking-tight  h-56px  px-54px">
+        <div className="flex items-center  text-14px tracking-tight  h-56px  px-54px">
           <div
             className="w-54px flex justify-center cursor-pointer h-full items-center"
             onClick={() => history.push(item.path)}
           >
             <img
-              className={`object-none ${item.isRead === true?'-mt-4px':''}`}
+              className={`object-none ${item.isRead === true?'-mt-5px':''}`}
               src={item.isRead === true ? MailOpenedIcon : MailIcon}
               alt=""
             />
@@ -37,7 +37,7 @@ const ContactTable = ({ array }) => {
 
           <div
             style={{width:'102px'}}
-            className="flex justify-center cursor-pointer h-full items-center -mt-px"
+            className="flex justify-center cursor-pointer h-full items-center -mt-px ml-px"
             onClick={() => history.push(item.path)}
           >
             <div
@@ -45,7 +45,7 @@ const ContactTable = ({ array }) => {
                 maxWidth: "92px",
                 backgroundColor: item.isRead === true ? "#999999" : "#702caa"
               }}
-              className={`px-8px h-29px rounded-full text-white text-14px tracking-tight flex items-center justify-center cursor-pointer`}
+              className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
             >
               <p
                 style={{
@@ -61,7 +61,7 @@ const ContactTable = ({ array }) => {
           </div>
 
           <div
-            className={`  w-120px  flex justify-center cursor-pointer h-full items-center `}
+            className={`  w-120px  flex justify-center cursor-pointer h-full items-center tracking-Stightest `}
             onClick={() => history.push(item.path)}
             style={{ color: item.isRead === true ? "#666666" : "#444444" }}
           >
@@ -74,19 +74,19 @@ const ContactTable = ({ array }) => {
               color: item.isRead === true ?  "#666666" : "#444444",
             }}
             className={` ${
-              item.text.length > 30 ? "" : "space-x-10px"
+              item.text.length > 30 ? "" : "space-x-11px"
             }  flex items-center cursor-pointer h-full ml-23px`}
             onClick={() => history.push(item.path)}
           >
             <p
               style={{ maxWidth: "370px" }}
-              className="group-hover:text-gray-f1e9e9 truncate"
+              className="group-hover:text-gray-f1e9e9 truncate tracking-Stightest"
             >
               {item.text}
             </p>
             {item.isRead === false && (
-              <div className="w-20px h-19px bg-rf04281 rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0">
-                <p className="flex items-center h-12px -ml-px">N</p>
+              <div className="w-20px h-19px bg-rf04281 rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0 ml-px">
+                <p className="flex items-center text-white ">N</p>
               </div>
             )}
           </div>
@@ -101,7 +101,7 @@ const ContactTable = ({ array }) => {
           </div>
           <div className="ml-33px w-70px flex items-center justify-center">
             <button
-              className={` w-49px h-30px flex justify-center rounded-4px text-white  items-center pt-2px filter hover:brightness-125 shadow-plain10`
+              className={` w-49px h-30px flex justify-center rounded-4px text-white  items-center pt-px filter hover:brightness-125 shadow-plain10`
               }
               style={{background:'#8458cd',boxShadow:'0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
             >
