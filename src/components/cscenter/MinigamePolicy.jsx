@@ -31,7 +31,7 @@ const MinigamePolicy = () => {
 
            
             <div className=" w-full overflow-hidden rounded-10px p-px mt-28px mr-px ml-px"
-              style={{ background: "linear-gradient(to top, #4f3a7a 0% ,#a05bf6 50%, #f0d3ff 100%)" }}
+              style={{ background: "linear-gradient(to top, #4f3a7a 0% ,#a05bf6 50%, #f0d3ff 100%)" ,boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)"}}
               >
                 <div  style={{paddingTop:"39px", paddingBottom:"41px", paddingLeft:"40px", background:'#dfdbfa'}} className="w-full  rounded-10px overflow-hidden">
                   <Route path="/cscenter/policy/minigame/powerball">
