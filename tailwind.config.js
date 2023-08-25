@@ -124,6 +124,7 @@ module.exports = {
         "262px": "262px",
         "403px": "403px",
         "410px": "410px",
+        "900px": "900px",
         "1260px": "1260px",
         "1836px": "1836px",
       },
@@ -139,7 +140,7 @@ module.exports = {
         popup: "0px 0px 20px 0px rgba(0, 0, 0, 0.6)",
         glow: "0 0 3px 2px rgba(0, 0, 0, 0.1)",
         navbar: "0 0px 7px 0 rgba(0,0,0,0.4)",
-        link: "0px 2px 2px 0px rgba(0, 0, 0, 0.6)",
+        link: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
         btn: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)",
         table: "0 0px 6px 1px rgba(0,0,0,0.4)",
         card: "5px 5px 2px 0 rgba(0,0,0,0.75)",
@@ -165,6 +166,7 @@ module.exports = {
         rf04281: "#f04281", // Red circle
         r666666: "#666666", // Text
         r2c1137: "#2c1137",
+        r9d3bbb30: "rgb(157,59,187,30%)",
         p682aa7: "#682aa7",
         eeeeee: "#eeeeee",
         p594e6a: "#594e6a",
@@ -172,6 +174,7 @@ module.exports = {
         aaaaaa: "#aaaaaa",
         ffd200: "#ffd200",
         dddddd: "#dddddd",
+        
       },
       fontFamily: {
         // spoqa: ["SpoqaHanSansNeo"],

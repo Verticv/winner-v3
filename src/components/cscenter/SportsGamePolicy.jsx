@@ -2,7 +2,7 @@ import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu';
 import MyPageTitle from 'components/myPage/MyPageTitle'
 import React from 'react'
 import { Route } from 'react-router';
-import Icon1 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_01.png'
+import Icon1 from '../../images/myPage/betHistory/icon_3.png'
 import Icon2 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_02.png'
 import Icon3 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_03.png'
 import Icon4 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_04.png'
@@ -10,8 +10,8 @@ import Icon5 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_05.png'
 import Icon6 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_06.png'
 import Icon7 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_07.png'
 import Icon8 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_08.png'
-import Icon9 from '../../images/cscenter/sportsPolicy/tabs/cs_icon_09.png'
-import Icon1_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_01_on.png'
+import Icon9 from '../../images/myPage/betHistory/icon_7.png'
+import Icon1_on from '../../images/myPage/betHistory/Icon3_On.png'
 import Icon2_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_02_on.png'
 import Icon3_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_03_on.png'
 import Icon4_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_04_on.png'
@@ -19,7 +19,7 @@ import Icon5_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_05_on.png'
 import Icon6_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_06_on.png'
 import Icon7_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_07_on.png'
 import Icon8_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_08_on.png'
-import Icon9_on from '../../images/cscenter/sportsPolicy/tabs/cs_icon_09_on.png'
+import Icon9_on from '../../images/myPage/betHistory/Icon7_On.png'
 import SportsGamePolicyTable1 from './tables/SportsGamePolicyTable1';
 import SportsGamePolicyTable2 from './tables/SportsGamePolicyTable2';
 

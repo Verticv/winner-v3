@@ -112,7 +112,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                       backgroundColor:
                         selectedInput === 1 ? "#732dab" : "#ffffff00",
                     }}
-                    className={`absolute bottom-0 w-full h-2px`}
+                    className={`absolute bottom-0 w-full h-3px`}
                   />
                 </div>
               </div>

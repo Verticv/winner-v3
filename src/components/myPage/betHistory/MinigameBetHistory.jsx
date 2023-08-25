@@ -14,7 +14,7 @@ const subTabsArray = [
     { text: "전체", icon: AllIcon, id: 0 },
     { text: "파워볼", icon: Sub1, id: 1 },
     { text: "파워사다리", icon: Sub2, id: 2 },
-    { text: "스피드키노", icon: Sub3, id: 3, custom: "mt-8px" },
+    { text: "스피드키노", icon: Sub3, id: 3 },
     { text: "키노사다리", icon: Sub4, id: 4 },
 ];
 

@@ -50,7 +50,7 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
               className="mt-14px flex flex-col space-y-6px text-r666666 tracking-tight  text-16px"
               style={{ letterSpacing: "-0.1em" }}
             >
-              <span className="font-bold" style={{ color: "#f04281" }}>
+              <span className="font-bold">
                 <span className="font-bold mr-4px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
               </span>
               <span className="font-bold">
@@ -63,7 +63,7 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
           </div>
           <div className="flex items-center text-16px tracking-tight mt-36px font-bold">
             <span style={{ color: "#444444" }}>사용 가능한 포인트 : </span>
-            <span className="text-rf04281 ml-2px font-bold">278</span>
+            <span className="text-rf04281 ml-4px font-bold">278</span>
             <span style={{ color: "#444444" }}>P</span>
           </div>
           <div className="h-64px w-full rounded-8px mt-14px flex items-center" style={{ background: "#5e399a" }}>

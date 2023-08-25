@@ -19,7 +19,7 @@ const CouponGiftPopupTable = () => {
         background: "linear-gradient(to top, #ededeb, #cb78e6)",
         borderTopRightRadius: "10px",
       }}
-      className="overflow-auto shadow-table rounded-10px pl-px py-px scroll-div"
+      className="overflow-y-auto shadow-table rounded-10px pl-px py-px mt-10px scroll-div"
     >
       <div className="flex flex-col justify-center rounded-10px">
         <div
@@ -42,7 +42,7 @@ const CouponGiftPopupTable = () => {
             </td>
           </div>
         </div>
-        <div style={{ height: "280px" }} className="w-full text-585858 text-14px tracking-tight">
+        <div className="w-full text-585858 text-14px tracking-tight">
           <div className=" text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center bg-white">
             <td style={{ width: "143px" }} className="text-center pt-6px">
               <RadioButton id={0} />
@@ -62,123 +62,27 @@ const CouponGiftPopupTable = () => {
               </p>
             </td>
           </div>
-          <div
-            style={{ background: "#f7f7f7" }}
-            className="text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center"
-          >
-            <td style={{ width: "143px" }} className="text-center pt-6px">
-              <RadioButton id={1} />
-            </td>
-            <td style={{ width: "198px" }} className="text-center flex justify-center">
-              <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {username.length > 16 ? `${username.slice(0, 16)}...` : username}
-              </p>
-            </td>
-            <td style={{ width: "199px" }} className="text-center flex justify-center">
-              <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
-              </p>
-            </td>
-          </div>
-          <div className="bg-white text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center">
-            <td style={{ width: "143px" }} className="text-center pt-6px">
-              <RadioButton id={2} />
-            </td>
-            <td style={{ width: "198px" }} className="text-center flex justify-center">
-              <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {username.length > 16 ? `${username.slice(0, 16)}...` : username}
-              </p>
-            </td>
-            <td style={{ width: "199px" }} className="text-center flex justify-center">
-              <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
-              </p>
-            </td>
-          </div>
-          <div
-            style={{ background: "#f7f7f7" }}
-            className="text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center"
-          >
-            <td style={{ width: "143px" }} className="text-center pt-6px">
-              <RadioButton id={3} />
-            </td>
-            <td style={{ width: "198px" }} className="text-center flex justify-center">
-              <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {username.length > 16 ? `${username.slice(0, 16)}...` : username}
-              </p>
-            </td>
-            <td style={{ width: "199px" }} className="text-center flex justify-center">
-              <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
-              </p>
-            </td>
-          </div>
-          <div className="bg-white text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center">
-            <td style={{ width: "143px" }} className="text-center pt-6px">
-              <RadioButton id={4} />
-            </td>
-            <td style={{ width: "198px" }} className="text-center flex justify-center">
-              <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {username.length > 16 ? `${username.slice(0, 16)}...` : username}
-              </p>
-            </td>
-            <td style={{ width: "199px" }} className="text-center flex justify-center">
-              <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
-              </p>
-            </td>
-          </div>
-          <div
-            style={{ background: "#f7f7f7" }}
-            className="text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center"
-          >
-            <td style={{ width: "143px" }} className="text-center pt-6px">
-              <RadioButton id={5} />
-            </td>
-            <td style={{ width: "198px" }} className="text-center flex justify-center">
-              <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {username.length > 16 ? `${username.slice(0, 16)}...` : username}
-              </p>
-            </td>
-            <td style={{ width: "199px" }} className="text-center flex justify-center">
-              <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
-              </p>
-            </td>
-          </div>
-          <div className="bg-white text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center">
-            <td style={{ width: "143px" }} className="text-center pt-6px">
-              <RadioButton id={6} />
-            </td>
-            <td style={{ width: "198px" }} className="text-center flex justify-center">
-              <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {username.length > 16 ? `${username.slice(0, 16)}...` : username}
-              </p>
-            </td>
-            <td style={{ width: "199px" }} className="text-center flex justify-center">
-              <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
-              </p>
-            </td>
-          </div>
-          <div
-            style={{ background: "#f7f7f7" }}
-            className="text-14px tracking-tight text-r666666 h-56px w-full flex items-center"
-          >
-            <td style={{ width: "143px" }} className="text-center pt-6px">
-              <RadioButton id={7} />
-            </td>
-            <td style={{ width: "198px" }} className="text-center flex justify-center">
-              <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {username.length > 16 ? `${username.slice(0, 16)}...` : username}
-              </p>
-            </td>
-            <td style={{ width: "199px" }} className="text-center flex justify-center">
-              <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
-              </p>
-            </td>
-          </div>
+
+          {new Array(6).fill(0).map((item, index) => (
+            <div
+              style={{ backgroundColor: index % 2 === 0 ? "#f7f7f7" : "#ffffff" }}
+              className={`text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center`}
+            >
+              <td style={{ width: "143px" }} className="text-center pt-6px">
+                <RadioButton id={index + 1} />
+              </td>
+              <td style={{ width: "198px" }} className="text-center flex justify-center">
+                <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
+                  {username.length > 16 ? `${username.slice(0, 16)}...` : username}
+                </p>
+              </td>
+              <td style={{ width: "199px" }} className="text-center flex justify-center">
+                <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
+                  {nickname.length > 12 ? `${nickname.slice(0, 12)}...` : nickname}
+                </p>
+              </td>
+            </div>
+          ))}
         </div>
       </div>
     </div>

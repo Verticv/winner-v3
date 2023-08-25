@@ -61,7 +61,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
               ""
             )}
             <p
-              className="group-hover:text-gray-f1e9e9 truncate -ml-2px mr-9px"
+              className={`group-hover:text-gray-f1e9e9 truncate -ml-2px mr-9px ${!item.isRead && "font-bold"}`}
               style={{
                 letterSpacing: "-0.1em",
                 maxWidth: item.type === "공지" || item.type === "이벤트" ? "487px" : "550px",
@@ -81,10 +81,10 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
           </div>
 
           <div
-            className={` flex justify-center text-center`}
+            className={` flex justify-center text-center ${!item.isRead && "font-bold"}`}
             style={{
               width: "160px",
-              color: item.isRead === true ? "#444444" : "#666666",
+              color: item.isRead === true ? "#666666" : "#444444",
             }}
           >
             {item.time}
