@@ -180,3 +180,9 @@ body {
   
   table-layout: fixed;
 }
+.gap-x-2px {
+  column-gap: 2px;
+}
+.gap-y-3px {
+  row-gap: 3px;
+}
