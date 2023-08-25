@@ -189,7 +189,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
     { title1: "분고", title2: "" },
     { title1: "레드타이거", title2: "" },
     { title1: "엘리시움", title2: "" },
-    { title1: "빅타임", title2: "플레이" },
+    { title1: "빅타임", title2: "게이밍" },
     { title1: "YL게이밍", title2: "" },
     { title1: "넷엔트", title2: "" },
     { title1: "드라군", title2: "소프트" },
@@ -204,7 +204,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
     { title1: "CC88", title2: "" },
     { title1: "패스트스핀", title2: "" },
     { title1: "나가게임즈", title2: "" },
-    { title1: "두원카지노", title2: "" },
+    { title1: "두윈카지노", title2: "" },
     { title1: "보타카지노", title2: "" },
     { title1: "홀덤게임", title2: "" },
     { title1: "e-스포츠", title2: "" },
@@ -223,7 +223,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               width: "fit-content",
               paddingRight: innerTable ? "30px" : 0,
               color: "#ffffff",
-              background: "#513d71",
+              background: innerTable ? "#513d71" : "#5d4386",
               borderColor: "#dddddd",
             }}
             className="flex h-56px border-b items-center text-14px tracking-tight flex-shrink-0"
@@ -255,7 +255,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
             }}
             className="flex h-54px items-center text-14px tracking-tight font-roboto flex-shrink-0 bg-white"
           >
-            <div style={{ backgroundColor: "#e8e8e8" }} className="w-85px h-full flex items-center justify-center">
+            <div
+              style={{ backgroundColor: innerTable ? "#e8e8e8" : "#f8f8f8" }}
+              className="w-85px h-full flex items-center justify-center"
+            >
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 변경
               </div>
@@ -330,7 +333,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               width: "fit-content",
               paddingRight: innerTable2 ? "40px" : 0,
-              background: "#5d4386",
+              background: innerTable2 ? "#513d71" : "#5d4386",
             }}
             className="flex h-55px border-b border-eeeeee items-center text-white  text-14px tracking-tight "
           >
@@ -994,7 +997,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                       if (!item.title2) return <td className="w-75px text-center">{item.title1}</td>;
                       else
                         return (
-                          <td className="w-75px text-center flex flex-col pt-2px -space-y-4px">
+                          <td className="w-75px text-center flex flex-col items-center pt-2px -space-y-4px">
                             <span>{item.title1}</span>
                             <span>{item.title2}</span>
                           </td>
@@ -1157,7 +1160,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                       <tr className="flex items-center text-14px tracking-tight h-55px w-full">
                         <td
                           style={{ backgroundColor: "#f2f2f2" }}
-                          className="w-83px bg-gray-16181a h-full flex items-center justify-center text-14px tracking-tight"
+                          className="w-84px bg-gray-16181a h-full flex items-center justify-center text-14px tracking-tight"
                         >
                           정산금액
                         </td>
