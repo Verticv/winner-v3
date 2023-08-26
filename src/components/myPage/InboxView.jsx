@@ -16,7 +16,7 @@ const InboxView = () => {
   const NewLabel = (
     <div
       className="bg-rf04281 w-20px h-19px text-white flex items-center justify-center text-12px pb-px pr-px"
-      style={{ borderRadius: "100%", letterSpacing: "-0.1em" }}
+      style={{ borderRadius: "100%" }}
     >
       N
     </div>
