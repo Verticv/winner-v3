@@ -15,7 +15,7 @@ const InboxView = () => {
 
   const NewLabel = (
     <div
-      className="bg-rf04281 w-20px h-19px text-white flex items-center justify-center text-12px"
+      className="bg-rf04281 w-20px h-19px text-white flex items-center justify-center text-12px pb-px"
       style={{ borderRadius: "100%", letterSpacing: "-0.1em" }}
     >
       N
@@ -50,7 +50,7 @@ const InboxView = () => {
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
             className="bg-gray-2e2e2e h-56px border-b border-gray-252525 flex items-center px-19px space-x-10px"
           >
-            <img className="mb-px h-15px" src={WinnerSmall} alt="" />
+            <img className="mb-2px h-17px w-72px object-contain" src={WinnerSmall} alt="" />
             <div className="w-px h-10px ml-8px mt-px" style={{ background: "#ccc" }} />
             <div className="font-spoqaMedium text-14px tracking-tight text-gray-929292 mt-px">{PostedTime}</div>
           </div>
