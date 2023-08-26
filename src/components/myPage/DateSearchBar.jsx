@@ -88,7 +88,7 @@ const DateSearchBar = ({
 
   return (
     <div
-      className={`h-64px mt-15px flex items-center justify-center space-x-10px rounded-6px`}
+      className={`h-64px mt-10px flex items-center justify-center space-x-10px rounded-6px`}
       style={{
         background: isPopup ? "#5e399a" : "rgba(52, 34, 103, 0.6)",
         width: "1040px",

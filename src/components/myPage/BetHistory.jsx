@@ -61,7 +61,7 @@ const BetHistory = () => {
     );
  
     return (
-        <div className="flex flex-col items-center -ml-px">
+        <div className="flex flex-col items-center">
             
             <MyPageTitle title="베팅내역" />
             
