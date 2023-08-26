@@ -71,7 +71,7 @@ const Faq = () => {
       <>
             <button 
                 style={{zIndex: 2,background: "#ffffff",boxShadow: " 0px 2px 3px 0px rgba(0, 0, 0, 0.3)"}}
-                className="relative rounded-10px  w-full  flex items-start p-px  mb-8px  z-20 group hover:shadow-table hover:brightness-125 filter" 
+                className="relative rounded-10px  w-full  flex items-start p-px  mb-5px  z-20 group hover:shadow-table hover:brightness-125 filter" 
 
                 onClick={() => {
                     if (openedCell === cellId) {

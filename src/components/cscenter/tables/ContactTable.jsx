@@ -11,17 +11,10 @@ const ContactTable = ({ array }) => {
       <div
         key={item.id}
         style={{
-          background:
-            item.isRead === false
-            ? "#ecd7fa"
-            : item.id % 2 === 0
-            ? "#ffffff"
-                : "#f7f7f7",
-          color: item.isRead === false ?
-            "#444444":"#666666"
+          background: item.isRead === false ? "#ecd7fa" : item.id % 2 === 0 ? "#ffffff" : "#f7f7f7",
+          color: item.isRead === false ? "#444444" : "#666666",
         }}
-        className={`text-14px tracking-tight h-56px w-full group border-b border-dddddd`
-      }
+        className={`text-14px tracking-tight h-56px w-full group border-b border-dddddd`}
       >
         <div className="flex items-center  text-14px tracking-tight  h-56px  px-54px">
           <div
@@ -29,21 +22,21 @@ const ContactTable = ({ array }) => {
             onClick={() => history.push(item.path)}
           >
             <img
-              className={`object-none ${item.isRead === true?'-mt-5px':''}`}
+              className={`object-none ${item.isRead === true ? "-mt-5px" : ""}`}
               src={item.isRead === true ? MailOpenedIcon : MailIcon}
               alt=""
             />
           </div>
 
           <div
-            style={{width:'102px'}}
+            style={{ width: "102px" }}
             className="flex justify-center cursor-pointer h-full items-center -mt-px ml-px"
             onClick={() => history.push(item.path)}
           >
             <div
               style={{
                 maxWidth: "92px",
-                backgroundColor: item.isRead === true ? "#999999" : "#702caa"
+                backgroundColor: item.isRead === true ? "#999999" : "#702caa",
               }}
               className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
             >
@@ -54,14 +47,17 @@ const ContactTable = ({ array }) => {
                   overflow: "hidden",
                   whiteSpace: "nowrap",
                 }}
-              className="-mt-2px">
+                className="-mt-px"
+              >
                 {item.isRead === true ? "답변완료" : "답변대기"}
               </p>
             </div>
           </div>
 
           <div
-            className={`  w-120px  flex justify-center cursor-pointer h-full items-center tracking-Stightest `}
+            className={`${
+              item.isRead === false && "font-bold"
+            }  w-120px  flex justify-center cursor-pointer h-full items-center tracking-Stightest `}
             onClick={() => history.push(item.path)}
             style={{ color: item.isRead === true ? "#666666" : "#444444" }}
           >
@@ -71,7 +67,7 @@ const ContactTable = ({ array }) => {
           <div
             style={{
               width: "420px",
-              color: item.isRead === true ?  "#666666" : "#444444",
+              color: item.isRead === true ? "#666666" : "#444444",
             }}
             className={` ${
               item.text.length > 30 ? "" : "space-x-11px"
@@ -80,7 +76,9 @@ const ContactTable = ({ array }) => {
           >
             <p
               style={{ maxWidth: "370px" }}
-              className="group-hover:text-gray-f1e9e9 truncate tracking-Stightest"
+              className={`${
+                item.isRead === false && "font-bold"
+              } group-hover:text-gray-f1e9e9 truncate tracking-Stightest`}
             >
               {item.text}
             </p>
@@ -91,19 +89,17 @@ const ContactTable = ({ array }) => {
             )}
           </div>
 
-
           <div
-            className={` flex justify-center text-center cursor-pointer h-full items-center pr-5px`}
-            style={{ color: item.isRead === true ?  "#666666" : "#444444", width:'138px' }}
+            className={`${item.isRead === false && "font-bold"} flex justify-center text-center cursor-pointer h-full items-center pr-5px`}
+            style={{ color: item.isRead === true ? "#666666" : "#444444", width: "138px" }}
             onClick={() => history.push(item.path)}
           >
             {item.time}
           </div>
           <div className="ml-33px w-70px flex items-center justify-center">
             <button
-              className={` w-49px h-30px flex justify-center rounded-4px text-white  items-center pt-px filter hover:brightness-125 shadow-plain10`
-              }
-              style={{background:'#8458cd',boxShadow:'0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
+              className={` w-49px h-30px flex justify-center rounded-4px text-white  items-center pt-px filter hover:brightness-125 shadow-plain10`}
+              style={{ background: "#8458cd", boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)" }}
             >
               삭제
             </button>
@@ -119,18 +115,27 @@ const ContactTable = ({ array }) => {
       style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
     >
       <div className="w-full rounded-10px overflow-hidden">
-        <div className="flex items-center  text-14px tracking-tight h-55px border-b px-52px"
-        style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
-          <div style={{width:'57px'}} className="flex justify-center -mt-px">확인</div>
-          <div style={{width:'92px'}} className="flex justify-center -mt-px">상태</div>
-          <div style={{width:'124px'}} className="flex justify-center -mt-px">구분</div>
+        <div
+          className="flex items-center  text-14px tracking-tight h-55px border-b px-52px"
+          style={{
+            background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+            color: "#eeeeee",
+            borderColor: "#dddddd",
+          }}
+        >
+          <div style={{ width: "57px" }} className="flex justify-center -mt-px">
+            확인
+          </div>
+          <div style={{ width: "92px" }} className="flex justify-center -mt-px">
+            상태
+          </div>
+          <div style={{ width: "124px" }} className="flex justify-center -mt-px">
+            구분
+          </div>
           <div style={{ width: "416px" }} className="flex justify-center -mt-px">
             제목
           </div>
-          <div
-            style={{ width: "142px" }}
-            className="flex justify-center ml-5px -mt-px"
-          >
+          <div style={{ width: "142px" }} className="flex justify-center ml-5px -mt-px">
             등록일시
           </div>
           <div className="ml-33px w-70px flex justify-center -mt-px">삭제</div>
