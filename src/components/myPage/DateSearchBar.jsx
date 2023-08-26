@@ -10,6 +10,7 @@ const DateSearchBar = ({
   has3MonthSearch = false,
   isGameResultsSearch = false,
   isPopup = false,
+  isSports = false,
 }) => {
   const LeagueExampleArray = [
     { id: 0, text: "League1" },
@@ -29,8 +30,7 @@ const DateSearchBar = ({
   const [isDropdownOpen, setDropdownOpen] = useState(true);
   const [selectedCarrier, setSelectedCarrier] = useState("리그선택");
   const [hoveredOption, setHoveredOption] = useState("");
-  const dropDownCellClass =
-    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px";
+  const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px";
 
   const gameResultButton = (
     <div
@@ -47,10 +47,7 @@ const DateSearchBar = ({
       <button
         className={dropDownCellClass}
         style={{
-          background:
-            hoveredOption === item.text
-              ? "linear-gradient(to right, #9d3bbb, #5423a0)"
-              : "",
+          background: hoveredOption === item.text ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
           color: hoveredOption === item.text ? "white" : "#666666",
         }}
         onClick={() => {
@@ -77,11 +74,7 @@ const DateSearchBar = ({
   );
 
   const InboxSearch = (
-    <DropDownControls
-      buttonChild={gameResultButton}
-      isDropdownOpen={isDropdownOpen}
-      setDropdownOpen={setDropdownOpen}
-    >
+    <DropDownControls buttonChild={gameResultButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
       {searchDropdown}
     </DropDownControls>
   );
@@ -91,8 +84,8 @@ const DateSearchBar = ({
       className={`h-62px mt-10px flex items-center justify-center space-x-10px rounded-6px`}
       style={{
         background: isPopup ? "#5e399a" : "rgba(52, 34, 103, 0.6)",
-        width: "1041px",
-        paddingRight:'0.5px'
+        width: !isSports && "1041px",
+        paddingRight: !isSports && "0.5px",
       }}
     >
       {isLeagueSearch === true && (
@@ -120,20 +113,14 @@ const DateSearchBar = ({
         </div>
       )}
 
-      <div
-        style={{ width: "304px" }}
-        className="flex space-x-10px items-center h-full"
-      >
+      <div style={{ width: "304px" }} className="flex space-x-10px items-center h-full">
         <div className="relative">
           <CustomDatePicker
             classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 focus:ml-10px pb-2px `}
           />
         </div>
         <div>
-          <span
-            className="font-medium text-14px text-white"
-            style={{ letterSpacing: "-0.13rem", marginLeft: "-1px" }}
-          >
+          <span className="font-medium text-14px text-white" style={{ letterSpacing: "-0.13rem", marginLeft: "-1px" }}>
             ~
           </span>
         </div>
@@ -144,10 +131,7 @@ const DateSearchBar = ({
           />
         </div>
       </div>
-      <div
-        className="flex h-full space-x-5px items-center"
-        style={{ marginLeft: "9px" }}
-      >
+      <div className="flex h-full space-x-5px items-center" style={{ marginLeft: "9px" }}>
         <div
           className="flex items-center justify-center h-42px w-75px rounded-6px p-px shadow-link hover:filter hover:brightness-125"
           style={{ background: "linear-gradient(to top, #ada8a8, #d0d0d0)" }}
@@ -156,9 +140,7 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px  cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
-              오늘
-            </span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">오늘</span>
           </div>
         </div>
 
@@ -170,9 +152,7 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
-              1주일
-            </span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">1주일</span>
           </div>
         </div>
 
@@ -184,9 +164,7 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
-              15일
-            </span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">15일</span>
           </div>
         </div>
 
@@ -198,9 +176,7 @@ const DateSearchBar = ({
             className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
             style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
           >
-            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">
-              1개월
-            </span>
+            <span className="font-medium tracking-tight text-14px  pt-px text-r666666">1개월</span>
           </div>
         </div>
 
@@ -213,16 +189,12 @@ const DateSearchBar = ({
               className="flex items-center justify-center h-40px w-73px  rounded-6px cursor-pointer"
               style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
             >
-              <span className="font-medium tracking-tight text-14px pt-px text-r666666">
-                {" "}
-                3개월
-              </span>
+              <span className="font-medium tracking-tight text-14px pt-px text-r666666"> 3개월</span>
             </div>
           </div>
         )}
 
-        {window.location.pathname ===
-          "/mypage/points/points-accumulate-history" && (
+        {window.location.pathname === "/mypage/points/points-accumulate-history" && (
           <div className="pl-5px">
             <input
               placeholder="아이디 입력"
@@ -240,9 +212,7 @@ const DateSearchBar = ({
               className="flex items-center justify-center h-40px w-73px rounded-6px cursor-pointer"
               style={{ background: "linear-gradient(0deg, #6b22ff, #df52ff)" }}
             >
-              <span className="font-medium tracking-tight text-14px  pt-px text-white text-shadow-5">
-                검색
-              </span>
+              <span className="font-medium tracking-tight text-14px  pt-px text-white text-shadow-5">검색</span>
             </div>
           </div>
         ) : (
@@ -254,9 +224,7 @@ const DateSearchBar = ({
               className="flex items-center justify-center h-40px w-73px  rounded-6px cursor-pointer"
               style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
             >
-              <span className="font-medium tracking-tight text-14px text-r666666 pt-px">
-                3개월
-              </span>
+              <span className="font-medium tracking-tight text-14px text-r666666 pt-px">3개월</span>
             </div>
           </div>
         )}
@@ -284,9 +252,7 @@ const DateSearchBar = ({
               }}
               className="flex items-center justify-center rounded-6px  cursor-pointer"
             >
-              <span className="font-medium tracking-tight text-14px text-white text-shadow-5">
-                검색
-              </span>
+              <span className="font-medium tracking-tight text-14px text-white text-shadow-5">검색</span>
             </div>
           </div>
         </div>
