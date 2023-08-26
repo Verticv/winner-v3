@@ -89,10 +89,13 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
               style={{
                 color: "#000",
                 borderRadius: "4px",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
               }}
               className="text-20px outline-none w-full h-full pl-18px placeholder-r797979 pt-3px bg-white"
               disabled
-              placeholder={"louie3asdaspdjkaopsdkjaposdkpaoksdpakosd"}
+              placeholder={"louie3"}
             />
             <img src={Username} alt="" className="mr-4px opacity-0" />
           </div>

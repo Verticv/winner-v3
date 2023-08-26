@@ -54,7 +54,7 @@ const AllBetHistory = ({ isPopup = false}) => {
     }
 
     return (
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full">
             <DateSearchBar isLeagueSearch={false} isPopup={isPopup}/>
             <div className="w-full h-full mt-10px">
                 <AllHistoryTable 

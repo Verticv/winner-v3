@@ -25,7 +25,7 @@ const SportsBetHistory = ({
 
   return (
     <div className="w-full">
-      <DateSearchBar isGameResultsSearch={true} isPopup={isPopup} />
+      <DateSearchBar isGameResultsSearch={true} isPopup={isPopup} isSports={true}/>
 
       <div
         style={{ width: "1040px" }}

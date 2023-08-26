@@ -1,7 +1,7 @@
 import React from "react";
 import MyPageTitle from "./MyPageTitle";
 import { useHistory } from "react-router";
-import WinnerSmall from "../../images/freeBoard/winner_logo_v3.png";
+import WinnerSmall from "../../images/freeBoard/winner_logo_v4.png";
 
 const InboxView = () => {
   const TitleText = "서버 점검 안내";
@@ -14,8 +14,11 @@ const InboxView = () => {
   const history = useHistory();
 
   const NewLabel = (
-    <div className="w-17px h-17px bg-red-e9441d rounded-4px text-12px text-white flex items-center justify-center font-roboto flex-shrink-0 mt-2px pt-px">
-      <p className="flex items-center h-12px -ml-px">N</p>
+    <div
+      className="bg-rf04281 w-20px h-19px text-white flex items-center justify-center text-12px pb-px pr-px"
+      style={{ borderRadius: "100%" }}
+    >
+      N
     </div>
   );
 
@@ -24,7 +27,7 @@ const InboxView = () => {
       <MyPageTitle title="쪽지관리" />
 
       <div
-        className="w-full overflow-hidden rounded-10px p-px mt-20px"
+        className="w-full overflow-hidden rounded-10px p-px mt-10px"
         style={{
           background: "linear-gradient(to top, #ededeb, #cb78e6)",
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
@@ -36,10 +39,9 @@ const InboxView = () => {
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
             className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px"
           >
-            {/* <div className="px-12px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px font-spoqaMedium flex-shrink-0 mt-px" style={{ maxWidth: '92px' }}>안내</div> */}
-            <div className="text-15px font-spoqaMedium tracking-tight text-gray-c8c8c8 mt-2px">
+            <div className="text-15px font-spoqaMedium tracking-tight text-r666666 mt-2px">
               <h1 className="align-top">
-                {TitleText} <span className="inline-block align-top ml-10px">{NewLabel}</span>
+                {TitleText} <span className="inline-block align-top ml-10px pt-2px">{NewLabel}</span>
               </h1>
             </div>
           </div>
@@ -48,20 +50,20 @@ const InboxView = () => {
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
             className="bg-gray-2e2e2e h-56px border-b border-gray-252525 flex items-center px-19px space-x-10px"
           >
-            <img className="mb-px h-15px" src={WinnerSmall} alt="" />
-            <div className="w-px h-10px ml-8px mt-px" style={{ background: "#4c4c4c" }} />
-            <div className="font-spoqaMedium text-14px tracking-tight text-gray-929292 mt-px">{PostedTime}</div>
+            <img className="mb-2px h-17px w-72px object-contain" src={WinnerSmall} alt="" />
+            <div className="w-px h-10px ml-8px mt-px" style={{ background: "#ccc" }} />
+            <div className="font-spoqaMedium text-14px tracking-tight text-r666666 mt-px">{PostedTime}</div>
           </div>
           <div className="w-full bg-gray-323232 flex flex-col px-19px border-b border-gray-252525 py-18px ">
-            <p className="font-spoqaMedium text-15px tracking-tight text-gray-c8c8c8">{SubtitleText}</p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 space-y-34px mt-39px">
+            <p className="font-spoqaMedium text-15px tracking-tight text-r666666">{SubtitleText}</p>
+            <p className="font-spoqaMedium text-14px tracking-tight text-r666666 space-y-34px mt-39px">
               {BodyText.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}
                 </p>
               ))}
             </p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 mt-34px space-y-11px">
+            <p className="font-spoqaMedium text-14px tracking-tight text-r666666 mt-34px space-y-11px">
               {FooterText.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}

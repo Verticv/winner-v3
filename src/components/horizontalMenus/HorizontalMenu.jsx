@@ -106,11 +106,7 @@ const HorizontalMenu = ({
   return (
     <>
       {!hasRows ? (
-        <div
-          className={`flex justify-start w-full h-78px space-x-2px ${
-            !pathname.includes("/mypage") && "pl-4px pr-5px"
-          } `}
-        >
+        <div className={`flex justify-start w-full h-78px space-x-2px px-5px`}>
           <TabsList items={itemsArray} />
         </div>
       ) : (

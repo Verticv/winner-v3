@@ -9,7 +9,7 @@ const AllHistoryTable = ({array, checkedState, setCheckedState, isPopupOpen, set
         const detailButton = (
             <button 
                 style={{height:"30px", width: "72px",background: '#5d659f',boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)',color:'#ededeb'}} 
-                className="rounded-4px font-medium text-13px tracking-tight pt-2px flex-shrink-0 hover:filter hover:brightness-125"
+                className="rounded-4px font-medium text-13px tracking-tight flex-shrink-0 hover:filter hover:brightness-125"
             >
                 상세보기
             </button>
