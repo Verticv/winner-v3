@@ -77,21 +77,22 @@ const HorizontalMenu = ({
               style={{
                 borderStyle: "solid",
                 borderWidth: " 0 7px 9px 7px",
-                borderColor:
-                  selectedTab === 1
-                    ? "transparent transparent #552986 transparent"
-                    : selectedTab === 3
-                    ? "transparent transparent #4f2783 transparent"
-                    : selectedTab === 4
-                    ? "transparent transparent #4c2682 transparent"
-                    : selectedTab === 6
-                    ? "transparent transparent #452480 transparent"
-                    : selectedTab === 7
-                    ? "transparent transparent #43237f transparent"
-                    : selectedTab === 8
-                    ? "transparent transparent #41227e transparent"
-                    : "transparent  transparent  #562a86 transparent ",
-                left: "35px",
+                borderColor: setSelectedTabPopup
+                  ? "transparent transparent #5e399a transparent"
+                  : selectedTab === 1
+                  ? "transparent transparent #552986 transparent"
+                  : selectedTab === 3
+                  ? "transparent transparent #4f2783 transparent"
+                  : selectedTab === 4
+                  ? "transparent transparent #4c2682 transparent"
+                  : selectedTab === 6
+                  ? "transparent transparent #452480 transparent"
+                  : selectedTab === 7
+                  ? "transparent transparent #43237f transparent"
+                  : selectedTab === 8
+                  ? "transparent transparent #41227e transparent"
+                  : "transparent  transparent  #562a86 transparent ",
+                left: setSelectedTabPopup ? "41px" : "35px",
                 marginBottom: setSelectedTabPopup && "-10px",
               }}
             >

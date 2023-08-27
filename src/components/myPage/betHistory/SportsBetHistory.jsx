@@ -25,10 +25,14 @@ const SportsBetHistory = ({
 
   return (
     <div className="w-full">
-      <DateSearchBar isGameResultsSearch={true} isPopup={isPopup} isSports={true}/>
+      <DateSearchBar isGameResultsSearch={true} isPopup={isPopup} isSports={true} />
 
       <div
-        style={{ width: "1040px" }}
+        style={{
+          width: isPopup ? "1041px" : "1040px",
+          marginLeft: isPopup && "2px",
+          marginTop: isPopup ? "10px" : "20px",
+        }}
         className="h-full mt-20px rounded-4px"
       >
         <div className="space-y-15px">
@@ -82,9 +86,7 @@ const SportsBetHistory = ({
               }}
               className="flex items-center justify-center w-88px h-36px rounded-6px  hover:filter hover:brightness-125"
             >
-              <span className="tracking-tight text-13px text-white text-shadow-5">
-                선택삭제
-              </span>
+              <span className="tracking-tight text-13px text-white text-shadow-5">선택삭제</span>
             </button>
           </div>
           <button
@@ -95,9 +97,7 @@ const SportsBetHistory = ({
             }}
             className="flex items-center justify-center h-36px rounded-6px  p-px hover:filter hover:brightness-125 mr-px"
           >
-            <span className="tracking-tight text-13px text-white text-shadow-5">
-              게시판에 내역올리기
-            </span>
+            <span className="tracking-tight text-13px text-white text-shadow-5">게시판에 내역올리기</span>
           </button>
         </div>
       </div>

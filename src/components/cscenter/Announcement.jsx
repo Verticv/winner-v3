@@ -65,7 +65,7 @@ const Announcement = () => {
 
 
     const searchDropdown = (
-        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border   text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white ">
+        <div style={{width:'120px'}} className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border p-px  text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white ">
             <button className={dropDownCellClass}
                 style={{
                 background: hoveredOption==="제목" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
@@ -87,7 +87,7 @@ const Announcement = () => {
                 setDropdownOpen(false)
                 }}
                 onMouseOver={() => setHoveredOption('본문')}
-                onMouseLeave={() => setHoveredOption("")}>>
+                onMouseLeave={() => setHoveredOption("")}>
                 본문
             </button>
         </div>
