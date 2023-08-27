@@ -17,8 +17,10 @@ import Icon8 from '../../images/myPage/betHistory/icon_9.png'
 import Icon9 from '../../images/myPage/betHistory/icon_10.png'
 import Icon10 from '../../images/cscenter/ico_10.png'
 import Icon11 from '../../images/cscenter/ico_11.png'
-import Icon12 from '../../images/myPage/betHistory/icon_6.png'
 import Icon13 from '../../images/cscenter/ico_13.png'
+import Icon14 from '../../images/myPage/betHistory/icon_12.png'
+import Icon15 from '../../images/myPage/betHistory/icon_6.png'
+import Icon16 from '../../images/cscenter/ico_14.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
@@ -30,25 +32,30 @@ import IconHighlight8 from '../../images/myPage/betHistory/Icon9_On.png'
 import IconHighlight9 from '../../images/myPage/betHistory/Icon10_On.png'
 import IconHighlight10 from '../../images/myPage/betHistory/Icon11_On.png'
 import IconHighlight11 from '../../images/cscenter/Icon11_On.png'
-import IconHighlight12 from '../../images/myPage/betHistory/Icon6_On.png'
 import IconHighlight13 from '../../images/cscenter/Icon13_On.png'
+import IconHighlight14 from '../../images/myPage/betHistory/Icon12_On.png'
+import IconHighlight15 from '../../images/myPage/betHistory/Icon6_On.png'
+import IconHighlight16 from '../../images/cscenter/Icon14_On.png'
 
 const Announcement = () => {
     const tabsArray = [
         { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/announcement/all" },
         { text: "라이브카지노", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/cscenter/announcement/all/live-casino" },
-        { text: "슬롯게임", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/announcement/all/slot" },
-        { text: "스포츠", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/announcement/all/sports" },
+        { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/announcement/all/slot" },
+        { text: "실시간스포츠", icon: Icon14, iconHighlight: IconHighlight14, id: 14, path: "/cscenter/announcement/all/live-sport" },
+        { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/announcement/all/sports" },
         { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/cscenter/announcement/all/hotel-casino" },
+        { text: "홀덤게임", icon: Icon15, iconHighlight: IconHighlight15, id: 15, path: "/cscenter/announcement/all/holdem" },
         { text: "e-스포츠", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/cscenter/announcement/all/e-sports" },
         { text: "미니게임", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/cscenter/announcement/all/minigame" },
         { text: "키론가상게임", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/cscenter/announcement/all/ar-game" },
         { text: "피싱게임", icon: Icon9, iconHighlight: IconHighlight9, id: 8, path: "/cscenter/announcement/all/phishing-game" },
         { text: "티비벳", icon: Icon10, iconHighlight: IconHighlight10, id: 9, path: "/cscenter/announcement/all/bet" },
         { text: "충전/환전", icon: Icon11, iconHighlight: IconHighlight11, id: 10, path: "/cscenter/announcement/all/transaction" },
-        { text: "베팅관련", icon: Icon12, iconHighlight: IconHighlight12, id: 11, path: "/cscenter/announcement/all/about-betting" },
+        { text: "베팅관련", icon: Icon16, iconHighlight: IconHighlight16, id: 11, path: "/cscenter/announcement/all/about-betting" },
         { text: "기타", icon: Icon13, iconHighlight: IconHighlight13, id: 12, path: "/cscenter/announcement/all/other" },
     ];
+
     const [page, setPage] = useState(0)
     const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("제목")
@@ -110,7 +117,7 @@ const Announcement = () => {
 
             <div style={{width:'381px'}} className="flex h-42px  rounded-6px border border-p682aa7 relative">
                 <input 
-                    className="pl-11px rounded-md placeholder-r666666 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight  text-r666666"
+                    className="pl-11px rounded-md pb-px placeholder-aaaaaa w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight  text-r666666"
                     placeholder="검색어를 입력해 주세요"
                 />
                 <button
