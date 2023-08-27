@@ -57,12 +57,12 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
         <div style={{ height: "136px" }} className="relative">
           <img className="z-10" src={FreeBoardBanner} alt="" />
           <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex items-center justify-center">
-            <span style={{ textShadow: "0 0 4px rgba(0, 0, 0, 0.6)" }} className="leading-none text-white -mt-10px">
+            <span style={{ textShadow: "0 0 4px rgba(0, 0, 0, 0.6)" }} className="leading-none text-white -mt-6px">
               게시판
             </span>
           </div>
         </div>
-        <div className="mt-20px w-default z-30">
+        <div className="mt-13px w-default z-30">
           <Route exact path="/freeboard">
             <FreeBoardMain />
           </Route>

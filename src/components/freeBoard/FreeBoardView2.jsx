@@ -210,10 +210,10 @@ const FreeBoardView2 = () => {
           style={{ backgroundColor: "#dfdbfa" }}
           className="w-full bg-gray-323232 rounded-10px pl-18px pr-19px pb-21px"
         >
-          <div className="pt-16px pb-18px flex items-start space-x-9px">
+          <div className="pt-16px pb-18px flex items-start space-x-5px">
             <p
               style={{ letterSpacing: "-0.091em" }}
-              className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -ml-px"
+              className="text-15px font-spoqaMedium tracking-tight text-r666666 -ml-px"
             >
               댓글 작성하기
             </p>
@@ -263,12 +263,12 @@ const FreeBoardView2 = () => {
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div style={{ backgroundColor: "#dfdbfa" }} className="w-full bg-gray-323232 rounded-10px pb-21px">
+        <div style={{ backgroundColor: "#dfdbfa" }} className="w-full bg-gray-323232 rounded-10px pb-29px">
           <div style={{ borderColor: "#b5afdd" }} className="border-b border-gray-252525 pl-20px pr-19px">
             <div className="py-9px w-full flex items-center justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
                 <img src={Rank2} alt="" className="mt-2px ml-px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">신풍사우나</p>
+                <p className="text-15px font-spoqaMedium tracking-tight text-r666666">신풍사우나</p>
               </div>
               <div className="self-start flex space-x-4px items-start justify-end">
                 <button
@@ -308,9 +308,9 @@ const FreeBoardView2 = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-              className="rounded-6px border border-solid bg-gray-252525 w-full  flex items-start px-19px pt-17px pb-13px justify-between text-r666666 mb-10px mt-px"
+              className="rounded-6px border border-solid bg-gray-252525 w-full flex items-start px-19px pt-17px pb-15px justify-between text-r666666 mb-10px mt-px"
             >
-              <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-2px">
+              <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-px">
                 두개의 이벤트 모두 참여하였습니다
               </p>
               <p className="text-14px tracking-tight font-spoqa flex-shrink-0 -mt-2px">2021.06.28 15:36</p>
@@ -340,7 +340,7 @@ const FreeBoardView2 = () => {
             <div className="py-9px w-full flex items-center  justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
                 <img src={Rank2} alt="" className="mt-px ml-2px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">신풍사우나</p>
+                <p className="text-15px font-spoqaMedium tracking-tight text-r666666 -mt-px">신풍사우나</p>
               </div>
               <div className="self-start flex space-x-4px justify-end">
                 <button
@@ -380,7 +380,7 @@ const FreeBoardView2 = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-              className="h-54px rounded-6px border border-solid bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-14px justify-between text-r666666 mb-10px mt-px"
+              className="h-54px rounded-6px border border-solid bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-15px justify-between text-r666666 mb-10px mt-px"
             >
               <p className="text-15px font-spoqa tracking-tight pr-7px -mt-2px -ml-px">
                 두개의 이벤트 모두 참여하였습니다
@@ -432,7 +432,7 @@ const FreeBoardView2 = () => {
             <div className="py-9px w-full flex items-center  justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
                 <img src={Rank2} alt="" className="mt-px ml-2px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">신풍사우나</p>
+                <p className="text-15px font-spoqaMedium tracking-tight text-r666666 -mt-px">신풍사우나</p>
               </div>
               <button
                 style={{
@@ -454,7 +454,7 @@ const FreeBoardView2 = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-              className="h-54px rounded-6px bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-14px justify-between text-r666666 mb-10px mt-px"
+              className="h-54px rounded-6px border w-full  flex items-start px-19px pt-17px pb-15px justify-between text-r666666 mb-10px mt-px"
             >
               <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-2px">
                 두개의 이벤트 모두 참여하였습니다
@@ -463,7 +463,7 @@ const FreeBoardView2 = () => {
             </div>
           </div>
           <div style={{ height: "114px" }} className="px-20px pb-11px pt-10px">
-            <div style={{ height: "93px" }} className="relative flex w-full rounded-4px bg-gray-252525">
+            <div style={{ height: "93px" }} className="relative flex w-full rounded-4px">
               <textarea
                 style={{
                   width: "1130px",
@@ -495,6 +495,7 @@ const FreeBoardView2 = () => {
           </div>
         </div>
       </div>
+
       <div className="mt-22px mb-65px flex items-start justify-between">
         <button
           className="flex items-center justify-center h-36px w-90px p-px rounded-6px hover:filter hover:brightness-125"

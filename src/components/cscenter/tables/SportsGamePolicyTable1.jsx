@@ -11,7 +11,7 @@ const SportsGamePolicyTable1 = ({array}) => {
     }) => (
         <tr className={`${ruleText2 ? "h-73px" : "h-56px"}   text-14px tracking-tight text-r666666  w-full border-b border-dddddd last:border-b-0 pt-px bg-white`}>
             <td style={{width: "162px", color: typeColor}} className="f h-55px text-center">{type}</td>
-            <td style={{width: "86px", color: overtime === null ? "#ffcc00" : overtime === true ? "#dbae00" : "#929292"}} className=" h-55px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
+            <td style={{width: "86px", color: overtime === null ? "#cb694b" : overtime === true ? "#dbae00" : "#929292"}} className=" h-55px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
             <td style={{width: "792px"}} className={`${ruleText2 ? "-space-y-4px" : ""} h-56px pl-20px`}>
                 <p style={{letterSpacing:'-0.1em'}}>{ruleText}</p>
                 <p style={{letterSpacing:'-0.1em'}}>{ruleText2}</p>

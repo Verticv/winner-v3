@@ -85,10 +85,10 @@ const DateSearchBar = ({
     <div
       className={`h-62px ${
         !pathname.includes("/freeboard/compose") && "mt-10px"
-      } flex items-center justify-center space-x-10px rounded-6px`}
+      } flex items-center justify-center space-x-10px rounded-6px w-full`}
       style={{
         background: isPopup ? "#5e399a" : "rgba(52, 34, 103, 0.6)",
-        width: !isSports && "1041px",
+        maxWidth: !isSports && "1041px",
         paddingRight: !isSports && "0.5px",
       }}
     >
