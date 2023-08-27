@@ -40,42 +40,27 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
-      <div
-        style={{ marginTop: "154px" }}
-        className="flex flex-col items-start limit:items-center w-full h-full"
-      >
+      <div style={{ marginTop: "154px" }} className="flex flex-col items-start limit:items-center w-full h-full">
         <Route exact path="/freeboard">
           <DirectoryComponent branch1="게시판" mainPath="/freeboard" />
         </Route>
         <Route path="/freeboard/view">
-          <DirectoryComponent
-            branch1="게시판"
-            branch2="뷰"
-            mainPath="/freeboard/view"
-          />
+          <DirectoryComponent branch1="게시판" branch2="뷰" mainPath="/freeboard/view" />
         </Route>
         <Route path="/freeboard/view2">
-          <DirectoryComponent
-            branch1="게시판"
-            branch2="뷰"
-            mainPath="/freeboard/view"
-          />
+          <DirectoryComponent branch1="게시판" branch2="뷰" mainPath="/freeboard/view" />
         </Route>
         <Route path="/freeboard/compose">
-          <DirectoryComponent
-            branch1="게시판"
-            branch2="작성하기"
-            mainPath="/freeboard/compose"
-          />
+          <DirectoryComponent branch1="게시판" branch2="작성하기" mainPath="/freeboard/compose" />
         </Route>
-        <div style={{ height: "125px" }} className="relative mt-4px">
-          <img className="z-10 mt-px" src={FreeBoardBanner} alt="" />
-          {/* <div
-            className="font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center"
-            style={{ color: "#ffdfbd" }}
-          >
-            <span className="leading-none mt-2px">게시판</span>
-          </div> */}
+
+        <div style={{ height: "136px" }} className="relative">
+          <img className="z-10" src={FreeBoardBanner} alt="" />
+          <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex items-center justify-center">
+            <span style={{ textShadow: "0 0 4px rgba(0, 0, 0, 0.6)" }} className="leading-none text-white -mt-10px">
+              게시판
+            </span>
+          </div>
         </div>
         <div className="mt-20px w-default z-30">
           <Route exact path="/freeboard">

@@ -6,8 +6,10 @@ import DoubleRightIcon from "../../images/myPage/betHistory/double_right.png";
 import "./Pagination.css";
 
 const Pagination = ({ page, setPage }) => {
+  const path = window.location.pathname;
   const LeftArrow = () => (
     <button
+      style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
       className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 mr-12px"
       onClick={() => selectedPage !== 1 && setSelectedPage(selectedPage - 1)}
     >
@@ -16,6 +18,7 @@ const Pagination = ({ page, setPage }) => {
   );
   const RightArrow = () => (
     <button
+      style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
       className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 ml-12px"
       onClick={() => selectedPage !== 5 && setSelectedPage(selectedPage + 1)}
     >
@@ -28,21 +31,17 @@ const Pagination = ({ page, setPage }) => {
   return (
     <div className="relative flex h-32px items-center justify-center">
       <button
+        style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
         className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 mr-px"
         onClick={() => setSelectedPage(1)}
       >
-        <img
-          className="cursor-pointer h-32px object-none hover:bg-blend-darken"
-          src={DoubleLeftIcon}
-          alt=""
-        />
+        <img className="cursor-pointer h-32px object-none hover:bg-blend-darken" src={DoubleLeftIcon} alt="" />
       </button>
       <LeftArrow />
       <div className="space-x-px flex items-center -ml-2px">
         <button
           style={{
-            background:
-              selectedPage === 1 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
+            background: selectedPage === 1 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
           }}
           className={`${
             selectedPage === 1 ? "shadow-link" : ""
@@ -51,15 +50,15 @@ const Pagination = ({ page, setPage }) => {
         >
           <div
             style={{
-              background:
-                selectedPage === 1 &&
-                "linear-gradient(to top, #e5e5e5, #ffffff)",
+              background: selectedPage === 1 && "linear-gradient(to top, #e5e5e5, #ffffff)",
             }}
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px`}
-              style={{ color: selectedPage === 1 ? "#594e6a" : "#eeeeee" }}
+              style={{
+                color: selectedPage === 1 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+              }}
             >
               1
             </span>
@@ -67,8 +66,7 @@ const Pagination = ({ page, setPage }) => {
         </button>
         <button
           style={{
-            background:
-              selectedPage === 2 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
+            background: selectedPage === 2 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
           }}
           className={`${
             selectedPage === 2 ? "shadow-link" : ""
@@ -77,15 +75,15 @@ const Pagination = ({ page, setPage }) => {
         >
           <div
             style={{
-              background:
-                selectedPage === 2 &&
-                "linear-gradient(to top, #e5e5e5, #ffffff)",
+              background: selectedPage === 2 && "linear-gradient(to top, #e5e5e5, #ffffff)",
             }}
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px`}
-              style={{ color: selectedPage === 2 ? "#594e6a" : "#eeeeee" }}
+              style={{
+                color: selectedPage === 2 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+              }}
             >
               2
             </span>
@@ -93,8 +91,7 @@ const Pagination = ({ page, setPage }) => {
         </button>
         <button
           style={{
-            background:
-              selectedPage === 3 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
+            background: selectedPage === 3 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
           }}
           className={`${
             selectedPage === 3 ? "shadow-link" : ""
@@ -103,15 +100,15 @@ const Pagination = ({ page, setPage }) => {
         >
           <div
             style={{
-              background:
-                selectedPage === 3 &&
-                "linear-gradient(to top, #e5e5e5, #ffffff)",
+              background: selectedPage === 3 && "linear-gradient(to top, #e5e5e5, #ffffff)",
             }}
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px`}
-              style={{ color: selectedPage === 3 ? "#594e6a" : "#eeeeee" }}
+              style={{
+                color: selectedPage === 3 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+              }}
             >
               3
             </span>
@@ -119,8 +116,7 @@ const Pagination = ({ page, setPage }) => {
         </button>
         <button
           style={{
-            background:
-              selectedPage === 4 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
+            background: selectedPage === 4 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
           }}
           className={`${
             selectedPage === 4 ? "shadow-link" : ""
@@ -129,15 +125,15 @@ const Pagination = ({ page, setPage }) => {
         >
           <div
             style={{
-              background:
-                selectedPage === 4 &&
-                "linear-gradient(to top, #e5e5e5, #ffffff)",
+              background: selectedPage === 4 && "linear-gradient(to top, #e5e5e5, #ffffff)",
             }}
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px`}
-              style={{ color: selectedPage === 4 ? "#594e6a" : "#eeeeee" }}
+              style={{
+                color: selectedPage === 4 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+              }}
             >
               4
             </span>
@@ -146,8 +142,7 @@ const Pagination = ({ page, setPage }) => {
 
         <button
           style={{
-            background:
-              selectedPage === 5 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
+            background: selectedPage === 5 && "linear-gradient(to top, #ada8a8, #d0d0d0)",
           }}
           className={`${
             selectedPage === 5 ? "shadow-link" : ""
@@ -156,15 +151,15 @@ const Pagination = ({ page, setPage }) => {
         >
           <div
             style={{
-              background:
-                selectedPage === 5 &&
-                "linear-gradient(to top, #e5e5e5, #ffffff)",
+              background: selectedPage === 5 && "linear-gradient(to top, #e5e5e5, #ffffff)",
             }}
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px`}
-              style={{ color: selectedPage === 5 ? "#594e6a" : "#eeeeee" }}
+              style={{
+                color: selectedPage === 5 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+              }}
             >
               5
             </span>
@@ -174,14 +169,11 @@ const Pagination = ({ page, setPage }) => {
 
       <RightArrow />
       <button
+        style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
         className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 ml-px"
         onClick={() => setSelectedPage(5)}
       >
-        <img
-          className="cursor-pointer h-32px object-none hover:bg-blend-darken"
-          src={DoubleRightIcon}
-          alt=""
-        />
+        <img className="cursor-pointer h-32px object-none hover:bg-blend-darken" src={DoubleRightIcon} alt="" />
       </button>
     </div>
   );

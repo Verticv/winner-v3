@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 const HorizontalMenu = ({
   itemsArray,
   setSelectedSubTab = null,
+  setSelectedTabPopup,
   showSub = true,
   hasRows = false,
   h_space = 3,
@@ -30,6 +31,7 @@ const HorizontalMenu = ({
           onClick={() => {
             history.push(item.path);
             setSelectedTab(item.id);
+            setSelectedTabPopup(item.path);
             if (setSelectedSubTab !== null) {
               setSelectedSubTab(0);
             }
@@ -73,7 +75,7 @@ const HorizontalMenu = ({
           selectedTab !== 10 &&
           selectedTab === item.id && (
             <div
-              className={`absolute -bottom-10px left-39px`}
+              className={` absolute -bottom-10px left-39px`}
               style={{
                 borderStyle: "solid",
                 borderWidth: " 0 7px 9px 7px",
@@ -92,6 +94,7 @@ const HorizontalMenu = ({
                     ? "transparent transparent #41227e transparent"
                     : "transparent  transparent  #562a86 transparent ",
                 left: "35px",
+                marginBottom: setSelectedTabPopup && "-10px",
               }}
             >
               {/* <div style={{
