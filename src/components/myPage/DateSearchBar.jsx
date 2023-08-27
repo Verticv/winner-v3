@@ -25,6 +25,8 @@ const DateSearchBar = ({
     { id: 9, text: "League10" },
   ];
 
+  const pathname = window.location.pathname;
+
   // const [startDate, setStartDate] = useState(new Date())
   // const [endDate, setEndDate] = useState(new Date())
   const [isDropdownOpen, setDropdownOpen] = useState(true);
@@ -81,7 +83,9 @@ const DateSearchBar = ({
 
   return (
     <div
-      className={`h-62px mt-10px flex items-center justify-center space-x-10px rounded-6px`}
+      className={`h-62px ${
+        !pathname.includes("/freeboard/compose") && "mt-10px"
+      } flex items-center justify-center space-x-10px rounded-6px`}
       style={{
         background: isPopup ? "#5e399a" : "rgba(52, 34, 103, 0.6)",
         width: !isSports && "1041px",

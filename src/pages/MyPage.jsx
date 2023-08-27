@@ -126,10 +126,6 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const [selectedSubTab, setSelectedSubTab] = useState(location.pathname);
   console.log('selectedTab', selectedTab, selectedSubTab);
   
-
- 
-
-
   return (
     <div className='relative flex flex-col justify-center items-center'
       style={{

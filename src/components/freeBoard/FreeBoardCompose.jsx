@@ -16,7 +16,7 @@ const FreeBoardCompose = () => {
         backgroundColor: "#5d659f",
         boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
       }}
-      className="flex items-center justify-center rounded-6px text-golden-highLight text-15px tracking-tight font-spoqaMedium pt-px hover:brightness-125 filter text-white"
+      className="flex items-center justify-center rounded-6px text-golden-highLight text-13px tracking-tight font-spoqaMedium pt-px hover:brightness-125 filter text-white"
     >
       베팅내역첨부
     </button>

@@ -425,7 +425,7 @@ const FreeBoardMain = () => {
         className="flex h-42px bg-dark-1a1a1a rounded-6px border border-gray-404040 relative"
       >
         <input
-          className="rounded-6px pl-9px pb-px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+          className="rounded-6px pl-9px pb-2px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button
@@ -483,7 +483,7 @@ const FreeBoardMain = () => {
 
           <div
             style={{ width: "796px" }}
-            className={`flex items-center font-spoqaMedium text-gray-c8c8c8 group ml-px tracking-tight`}
+            className={`flex items-center font-spoqaMedium text-gray-c8c8c8 group ml-px tracking-tight mt-px`}
           >
             {item.type === "공지" ? (
               <div
@@ -505,7 +505,7 @@ const FreeBoardMain = () => {
                   marginTop: "1px",
                   backgroundColor: "#714ce8",
                 }}
-                className="pl-10px pr-8px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
+                className="px-10px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
               >
                 이벤트
               </div>
@@ -515,10 +515,10 @@ const FreeBoardMain = () => {
             <p
               className={`${
                 item.type === "공지"
-                  ? "text-blue-6cbbe9 group-hover:text-blue-87eaff mr-5px -ml-px mt-2px"
+                  ? "text-blue-6cbbe9 group-hover:text-blue-87eaff mr-5px -ml-px"
                   : item.type === "이벤트"
-                  ? "text-yellow-d2b28f group-hover:text-yellow-ffdeb3 mr-4px mt-3px"
-                  : "group-hover:text-gray-fafafa mr-9px -ml-px mt-px"
+                  ? "text-yellow-d2b28f group-hover:text-yellow-ffdeb3 mr-4px"
+                  : "group-hover:text-gray-fafafa mr-9px -ml-px"
               } truncate text-left `}
               style={{
                 letterSpacing: "-0.090em",
@@ -657,7 +657,7 @@ const FreeBoardMain = () => {
 
       <div className="mt-20px flex justify-end">
         <button
-          onClick={() => history.push("/freeboard/compose")}
+          onClick={() => history.push("/freeboard/compose/all")}
           className="flex items-center justify-center h-36px w-118px mr-px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 hover:filter hover:brightness-125 shadow-link"
         >
           <div
