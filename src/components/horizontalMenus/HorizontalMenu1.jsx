@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Reflect from '../../images/myPage/betHistory/Reflect.png'
 
 const HorizontalMenu1 = ({
     itemsArray, 
@@ -7,7 +6,7 @@ const HorizontalMenu1 = ({
     setState
 }) => {
 
-    const [isHover, setHover] = useState(null)
+    const [, setHover] = useState(null)
 
     function TabsList({ items }) {
         return items.map(item => (
@@ -42,12 +41,13 @@ const HorizontalMenu1 = ({
                           ? 'linear-gradient(to top, #491f9c, #9e3cbc)'
                           :'linear-gradient( to top, #ccc4ff, #ffd9f5 100%)'
                         }}
-                        className={`w-full rounded-6px flex flex-col items-center justify-end pb-8px`}>
-                          <img className="ml-px object-none" src={item.icon} alt="" />
+                        className={`w-full rounded-6px flex flex-col items-center`}>
+                    <img className="ml-px object-none mt-5px" src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
+                    
                         <div 
                         style={{ color: isState === item.id? '#fff':'32d2834'}}
                             className={` 
-                                text-14px tracking-tight h-14px flex items-center mt-5px`}
+                                text-14px tracking-tight h-14px flex items-center -mt-4px`}
                         >
                             {item.text}
                         </div>
@@ -69,7 +69,7 @@ const HorizontalMenu1 = ({
     }
 
     return (
-        <div style={{height:'98px'}} className="flex w-full space-x-3px px-4px ">
+        <div style={{height:'98px'}} className="flex w-full space-x-3px px-3px ">
             <TabsList items={itemsArray} />
         </div>
     )

@@ -3,7 +3,7 @@ import DirectoryComponent from 'components/myPage/DirectoryComponent';
 import LeftMenu from 'components/myPage/LeftMenu';
 import Navbar from '../components/mainPage/NavBar';
 import QuickMenu from 'components/QuickMenu';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, useLocation } from 'react-router';
 import Icon1 from '../images/gameResults/leftMenu/icon_1.png';
 import Icon2 from '../images/gameResults/leftMenu/icon_2.png';
