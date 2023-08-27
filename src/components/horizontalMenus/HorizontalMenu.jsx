@@ -11,9 +11,7 @@ const HorizontalMenu = ({
 }) => {
   const history = useHistory();
   const pathname = window.location.pathname;
-  const [isHover, setHover] = useState(null);
   const [selectedTab, setSelectedTab] = useState(0);
-  console.log("isHover", isHover);
   function TabsList({ items }) {
     return items.map((item) => (
       <div className={`relative w-full`}>
@@ -31,13 +29,13 @@ const HorizontalMenu = ({
           onClick={() => {
             history.push(item.path);
             setSelectedTab(item.id);
-            setSelectedTabPopup(item.path);
+            if (setSelectedTabPopup) {
+              setSelectedTabPopup(item.path);
+            }
             if (setSelectedSubTab !== null) {
               setSelectedSubTab(0);
             }
           }}
-          onMouseOver={() => setHover(item.id)}
-          onMouseLeave={() => setHover(null)}
         >
           <div
             style={{
