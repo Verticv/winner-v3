@@ -11,8 +11,10 @@ import Icon8 from '../../images/myPage/betHistory/icon_9.png'
 import Icon9 from '../../images/myPage/betHistory/icon_10.png'
 import Icon10 from '../../images/cscenter/ico_10.png'
 import Icon11 from '../../images/cscenter/ico_11.png'
-import Icon12 from '../../images/myPage/betHistory/icon_6.png'
 import Icon13 from '../../images/cscenter/ico_13.png'
+import Icon14 from '../../images/myPage/betHistory/icon_12.png'
+import Icon15 from '../../images/myPage/betHistory/icon_6.png'
+import Icon16 from '../../images/cscenter/ico_14.png'
 import IconHighlight1 from '../../images/myPage/betHistory/Icon1_On.png'
 import IconHighlight2 from '../../images/myPage/betHistory/Icon2_On.png'
 import IconHighlight3 from '../../images/myPage/betHistory/Icon3_On.png'
@@ -24,8 +26,10 @@ import IconHighlight8 from '../../images/myPage/betHistory/Icon9_On.png'
 import IconHighlight9 from '../../images/myPage/betHistory/Icon10_On.png'
 import IconHighlight10 from '../../images/myPage/betHistory/Icon11_On.png'
 import IconHighlight11 from '../../images/cscenter/Icon11_On.png'
-import IconHighlight12 from '../../images/myPage/betHistory/Icon6_On.png'
 import IconHighlight13 from '../../images/cscenter/Icon13_On.png'
+import IconHighlight14 from '../../images/myPage/betHistory/Icon12_On.png'
+import IconHighlight15 from '../../images/myPage/betHistory/Icon6_On.png'
+import IconHighlight16 from '../../images/cscenter/Icon14_On.png'
 import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
 import ArrowDown from '../../images/myPage/leftMenu/arr_down.png'
 import QIcon from '../../images/cscenter/q.png'
@@ -33,20 +37,23 @@ import AIcon from '../../images/cscenter/a.png'
 
 const Faq = () => {
     const tabsArray = [
-        { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/faq/all" },
-        { text: "라이브카지노", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/cscenter/faq/all/live-casino" },
-        { text: "슬롯게임", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/faq/all/slot" },
-        { text: "스포츠", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/faq/all/sports" },
-        { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/cscenter/faq/all/hotel-casino" },
-        { text: "e-스포츠", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/cscenter/faq/all/e-sports" },
-        { text: "미니게임", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/cscenter/faq/all/minigame" },
-        { text: "키론가상게임", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/cscenter/faq/all/ar-game" },
-        { text: "피싱게임", icon: Icon9, iconHighlight: IconHighlight9, id: 8, path: "/cscenter/faq/all/phishing-game" },
-        { text: "티비벳", icon: Icon10, iconHighlight: IconHighlight10, id: 9, path: "/cscenter/faq/all/bet" },
-        { text: "충전/환전", icon: Icon11, iconHighlight: IconHighlight11, id: 10, path: "/cscenter/faq/all/transaction" },
-        { text: "베팅관련", icon: Icon12, iconHighlight: IconHighlight12, id: 11, path: "/cscenter/faq/all/about-betting" },
-        { text: "기타", icon: Icon13, iconHighlight: IconHighlight13, id: 12, path: "/cscenter/faq/all/other" },
+        { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/contact/all" },
+        { text: "라이브카지노", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/cscenter/contact/all/live-casino" },
+        { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/contact/all/slot" },
+        { text: "실시간스포츠", icon: Icon14, iconHighlight: IconHighlight14, id: 14, path: "/cscenter/contact/all/live-sport" },
+        { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/contact/all/sports" },
+        { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/cscenter/contact/all/hotel-casino" },
+        { text: "홀덤게임", icon: Icon15, iconHighlight: IconHighlight15, id: 15, path: "/cscenter/contact/all/holdem" },
+        { text: "e-스포츠", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/cscenter/contact/all/e-sports" },
+        { text: "미니게임", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/cscenter/contact/all/minigame" },
+        { text: "키론가상게임", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/cscenter/contact/all/ar-game" },
+        { text: "피싱게임", icon: Icon9, iconHighlight: IconHighlight9, id: 8, path: "/cscenter/contact/all/phishing-game" },
+        { text: "티비벳", icon: Icon10, iconHighlight: IconHighlight10, id: 9, path: "/cscenter/contact/all/bet" },
+        { text: "충전/환전", icon: Icon11, iconHighlight: IconHighlight11, id: 10, path: "/cscenter/contact/all/transaction" },
+        { text: "베팅관련", icon: Icon16, iconHighlight: IconHighlight16, id: 11, path: "/cscenter/contact/all/about-betting" },
+        { text: "기타", icon: Icon13, iconHighlight: IconHighlight13, id: 12, path: "/cscenter/contact/all/other" },
     ];
+
 
     const questionArray = [
         { id: 0, type: "충전/환전", text: "첫, 매충 10% 포인트를 받으면 롤링을 어떻게 해야 환전가능한가요?" },
@@ -71,7 +78,7 @@ const Faq = () => {
       <>
             <button 
                 style={{zIndex: 2,background: "#ffffff",boxShadow: " 0px 2px 3px 0px rgba(0, 0, 0, 0.3)"}}
-                className="relative rounded-10px  w-full  flex items-start p-px  mb-5px  z-20 group hover:shadow-table hover:brightness-125 filter" 
+                className="relative rounded-10px  w-full  flex items-start p-px  mb-8px  z-20 group hover:shadow-table hover:brightness-125 filter" 
 
                 onClick={() => {
                     if (openedCell === cellId) {
@@ -99,7 +106,7 @@ const Faq = () => {
             {openedCell === cellId && (
                 <div 
                     style={{ zIndex: 1, backgroundColor: "#f6f6f6",boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.5)" }} 
-                    className="flex h-full items-start justify-start w-full rounded-10px -mt-60px z-0 mb-14px border  pb-32px pr-42px"
+                    className="flex h-full items-start justify-start w-full rounded-10px -mt-60px z-0 mb-8px border  pb-32px pr-42px"
                 >
                     <img 
                         style={{marginTop: "66px"}} 

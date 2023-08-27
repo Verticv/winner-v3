@@ -224,7 +224,7 @@ const Contact = () => {
 
             <div style={{width:'381px'}} className="flex h-42px  rounded-6px border border-p682aa7 relative">
                 <input 
-                    className="pl-11px placeholder-aaaaaa pb-px w-full text-r666666 text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a rounded-6px"
+                    className="pl-11px placeholder-aaaaaa pb-2px w-full text-r666666 text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a rounded-6px"
                     placeholder="검색어를 입력해 주세요"
                 />
                 <button

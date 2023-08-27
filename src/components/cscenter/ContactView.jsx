@@ -25,20 +25,47 @@ const ContactView = () => {
         <div style={{ backgroundColor: "#ffffff" }} className="w-full bg-gray-323232 rounded-10px overflow-hidden">
           <div
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
-            className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px h-55px"
+            className="bg-gray-2e2e2e border-b border-gray-252525 flex items-center px-19px py-15px space-x-10px h-55px"
           >
             <div
-              style={{ backgroundColor: "#999999", maxWidth: "92px" }}
-              className="rounded-full flex items-center justify-center px-12px h-24px font-spoqaMedium text-12px tracking-tight text-white pt-px flex-shrink-0 truncate"
+              style={{
+                maxWidth: "92px",
+                backgroundColor: "#999999",
+              }}
+              className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
             >
-              답변완료
+              <p
+                style={{
+                  maxWidth: "75px",
+                  textOverflow: "unset",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                }}
+                className="-mt-px"
+              >
+                답변완료
+              </p>
             </div>
             <div
-              style={{ backgroundColor: "#40915f", maxWidth: "92px" }}
-              className="rounded-full flex items-center justify-center px-12px h-24px font-spoqaMedium text-12px tracking-tight text-white pt-px flex-shrink-0 truncate"
+              style={{
+                maxWidth: "92px",
+                backgroundColor: "#40915f",
+              }}
+              className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
             >
-              스포츠
+              <p
+                style={{
+                  maxWidth: "75px",
+                  textOverflow: "unset",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                }}
+                className="-mt-px"
+              >
+                스포츠
+              </p>
             </div>
+
             <div className="text-15px font-spoqaMedium tracking-tight text-r666666 -ml-px mt-px">스포츠북 문의</div>
           </div>
 
@@ -49,7 +76,7 @@ const ContactView = () => {
             <img src={Rank1Icon} alt="" />
             <p className="ml-3px text-r666666 text-14px">마이마이프로틴화이팅</p>
             <div className="w-px h-10px ml-8px mt-px" style={{ background: "#ccc" }} />
-            <div className="font-spoqaMedium text-14px tracking-tight text-r666666 mt-px">2021.06.28 15:49</div>
+            <div className="font-spoqaMedium text-14px tracking-tight text-r666666">2021.06.28 15:49</div>
           </div>
 
           <div className="w-full bg-gray-323232 py-22px px-16px">

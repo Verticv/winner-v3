@@ -117,7 +117,7 @@ const Announcement = () => {
 
             <div style={{width:'381px'}} className="flex h-42px  rounded-6px border border-p682aa7 relative">
                 <input 
-                    className="pl-11px rounded-md pb-px placeholder-aaaaaa w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight  text-r666666"
+                    className="pl-11px rounded-md pb-2px placeholder-aaaaaa w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight  text-r666666"
                     placeholder="검색어를 입력해 주세요"
                 />
                 <button
