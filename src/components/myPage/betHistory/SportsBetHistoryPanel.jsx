@@ -175,7 +175,7 @@ const SportsBetHistoryPanel = ({
         </div>
         <div
           style={{ width: isAttached ? "63px" : "61px" }}
-          className="text-r666666 pl-4px"
+          className="text-r666666 pl-3px"
         >
           {choice === "home" ? "홈팀 승" : "원정팀 승"}
         </div>

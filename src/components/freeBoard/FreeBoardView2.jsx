@@ -15,22 +15,22 @@ const FreeBoardView2 = () => {
     <div className="w-full pr-19px">
       <div className="py-10px ml-22px flex items-center justify-between">
         <div className="self-start pt-6px flex items-start pr-10px">
-          <img className="object-none mt-5px flex-shrink-0" src={ReplyArrow} alt="" />
+          <img className="object-none mt-5px" src={ReplyArrow} alt="" />
           <img
-            className="pl-14px flex flex-shrink-0 mt-px"
+            className="pl-14px mt-px"
             src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5}
             alt=""
           />
           <p className="ml-5px mt-px text-15px font-spoqaMedium tracking-tight text-r666666">{username}</p>
         </div>
         {isEdit === true ? (
-          <div className="self-start flex space-x-4px justify-end">
+          <div className="flex self-start items-start space-x-4px justify-end">
             <button
               style={{
                 background: "linear-gradient(to right, #15cfee, #3197e5)",
                 boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
               }}
-              className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125"
+              className="flex items-center justify-center w-90px h-36px rounded-6px hover:filter hover:brightness-125"
             >
               <div className="flex items-center justify-center cursor-pointer">
                 <span
@@ -69,7 +69,7 @@ const FreeBoardView2 = () => {
             <div className="flex items-center justify-center cursor-pointer">
               <span
                 style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-                className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-2px text-white"
+                className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff mb-px text-white"
               >
                 답글달기
               </span>
@@ -80,17 +80,20 @@ const FreeBoardView2 = () => {
       <div className="pl-48px -mt-px">
         <div
           style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-          className="w-full rounded-6px border border-solid bg-gray-252525 flex items-start px-20px  pt-17px pb-14px justify-between text-r666666 mt-px"
+          className="w-full border rounded-4px bg-gray-252525 flex items-start px-20px  pt-17px pb-15px justify-between text-r666666 mt-px"
         >
           <div className="text-14px font-spoqa tracking-tight -mt-2px">
             {tag && (
-              <span className="text-blue-2980b9 mr-10px font-spoqaMedium">
-                @{tag.length > 8 ? tag.substring(0, 8) : tag} {tag.length > 8 && <span className="-mt-5px">...</span>}
+              <span style={{ color: "#2980b9" }} className={`mr-10px font-spoqaMedium`}>
+                @{tag.length > 8 ? tag.substring(0, 8) : tag}{" "}
+                {tag.length > 8 && <span className="-mt-5px inline-block">...</span>}
               </span>
             )}
-            <span className="text-r666666 -ml-px">{text}</span>
+            <span className=" text-r666666 -ml-px">{text}</span>
           </div>
-          <p className="text-r666666 text-14px tracking-tight font-spoqa flex-shrink-0 ml-7px">2021.06.28 15:36</p>
+          <p className="text-r666666  tracking-tight font-spoqa text-14px flex flex-shrink-0 ml-7px  -mt-2px">
+            2021.06.28 15:36
+          </p>
         </div>
       </div>
     </div>
@@ -110,10 +113,7 @@ const FreeBoardView2 = () => {
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
             className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px h-55px"
           >
-            <div
-              style={{ fontSize: "15px" }}
-              className="text-15px font-spoqaMedium tracking-tight text-r666666 -ml-px mt-px font-bold"
-            >
+            <div style={{ fontSize: "15px" }} className="text-15px tracking-tight text-r666666 -ml-px mt-px font-bold">
               이벤트 신청합니다.
             </div>
           </div>
