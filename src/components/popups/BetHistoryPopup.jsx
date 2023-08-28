@@ -346,7 +346,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/slot-game") || selectedTab.includes("/live-sport") ? (
-                <div style={{ width: "1041px" }} className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <SportsBetHistory
                     checkedState={checkedState}
                     setCheckedState={setCheckedState}
@@ -356,7 +356,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                     setPopupOpen={setPopupOpen}
                     isPopup={true}
                   />
-                  <div className="mt-4px">
+                  <div className="-mt-12px">
                     <Pagination page={page} setPage={setPage} />
                   </div>
                 </div>

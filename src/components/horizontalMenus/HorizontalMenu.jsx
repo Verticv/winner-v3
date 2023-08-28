@@ -11,7 +11,8 @@ const HorizontalMenu = ({
 }) => {
   const history = useHistory();
   const pathname = window.location.pathname;
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(setSelectedTabPopup ? 1 : 0);
+
   function TabsList({ items }) {
     return items.map((item) => (
       <div className={`relative w-full`}>
