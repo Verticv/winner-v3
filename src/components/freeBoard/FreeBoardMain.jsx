@@ -450,7 +450,7 @@ const FreeBoardMain = () => {
     return items.map((item, index) => (
       <button
         key={item.id}
-        className={`font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 h-56px w-full  group`}
+        className={`font-spoqaMedium text-14px tracking-tight text-r666666 h-56px w-full  group`}
         onClick={() => history.push(item.path)}
       >
         <div
@@ -466,11 +466,11 @@ const FreeBoardMain = () => {
             borderBottomWidth: index === items.length - 1 ? 0 : 1,
             borderColor: "#dddddd",
           }}
-          className="flex items-center font-spoqaMedium text-14px  text-gray-c8c8c8 h-56px border-b border-gray-252525"
+          className="flex items-center font-spoqaMedium text-14px  text-r666666 h-56px border-b border-gray-252525"
         >
           <div
             style={{ width: "126px" }}
-            className="font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 flex items-center justify-center"
+            className="font-spoqaMedium text-14px tracking-tight text-r666666 flex items-center justify-center"
           >
             {item.type === "공지" ? (
               <img className="ml-2px mt-px" src={PurpleSpeaker} alt="" />
@@ -483,7 +483,7 @@ const FreeBoardMain = () => {
 
           <div
             style={{ width: "796px" }}
-            className={`flex items-center font-spoqaMedium text-gray-c8c8c8 group ml-px tracking-tight`}
+            className={`flex items-center font-spoqaMedium text-r666666 group ml-px tracking-tight`}
           >
             {item.type === "공지" ? (
               <div
@@ -561,7 +561,7 @@ const FreeBoardMain = () => {
 
           <div
             style={{ width: "135px" }}
-            className={`flex justify-center items-center font-spoqaMedium tracking-tight text-gray-c8c8c8 text-center`}
+            className={`flex justify-center items-center font-spoqaMedium tracking-tight text-r666666 text-center`}
           >
             {item.type !== "일반" ? (
               <img
@@ -582,7 +582,7 @@ const FreeBoardMain = () => {
                 ) : (
                   <img className="object-none" src={Rank5} alt="" />
                 )}
-                <p style={{ maxWidth: "120px" }} className="mt-2px truncate">
+                <p style={{ maxWidth: "120px" }} className="mt-px truncate">
                   {item.author}
                 </p>
               </div>
@@ -590,7 +590,7 @@ const FreeBoardMain = () => {
           </div>
           <div
             style={{ width: "190px" }}
-            className="flex items-center justify-center text-gray-c8c8c8 font-spoqa -ml-10px mt-px"
+            className="flex items-center justify-center text-r666666 font-spoqa -ml-10px"
           >
             {item.type !== "일반" ? (
               ""
