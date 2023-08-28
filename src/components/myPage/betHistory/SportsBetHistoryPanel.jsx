@@ -57,7 +57,7 @@ const SportsBetHistoryPanel = ({
     hasDown = false,
   }) => (
     <div
-      className="flex items-center w-full h-54px"
+      className="flex items-center w-full h-54px pr-px"
       style={{ background: "#f7f7f7" }}
     >
       <div
@@ -66,7 +66,7 @@ const SportsBetHistoryPanel = ({
           marginLeft: isAttached ? "16px" : "0px",
           letterSpacing: "-0.06rem",
         }}
-        className="-space-y-4px flex flex-col items-center justify-center h-54px text-14px text-r666666 pr-2px"
+        className="-space-y-4px flex flex-col items-center justify-center h-54px text-14px text-r666666 pr-px"
       >
         <span>승무패</span>
         <span>(연장포함)</span>
@@ -213,7 +213,7 @@ const SportsBetHistoryPanel = ({
     >
       <div
         className={`flex items-center justify-between h-54px w-full ${
-          isFullPage ? "px-20px" : " pl-17px pr-17px"
+          isFullPage ? "px-20px" : " pl-17px pr-18px"
         }`}
         style={{ background: "#6852a7" }}
       >
@@ -263,7 +263,7 @@ const SportsBetHistoryPanel = ({
     >
       <div
         className={`flex items-center justify-between h-54px w-full ${
-          isFullPage ? "px-20px" : " pl-17px pr-17px"
+          isFullPage ? "px-20px" : " pl-17px pr-18px"
         }`}
         style={{ background: "#6852a7" }}
       >
@@ -332,7 +332,7 @@ const SportsBetHistoryPanel = ({
     >
       <div
         className={`flex items-center justify-between h-54px w-full ${
-          isFullPage ? "px-20px" : " pl-17px pr-17px"
+          isFullPage ? "px-20px" : " pl-17px pr-18px"
         }`}
         style={{ background: "#6852a7" }}
       >
@@ -382,7 +382,7 @@ const SportsBetHistoryPanel = ({
     >
       <div
         className={`flex items-center justify-between h-54px w-full ${
-          isFullPage ? "px-20px" : " pl-17px pr-17px"
+          isFullPage ? "px-20px" : " pl-17px pr-18px"
         }`}
         style={{ background: "#6852a7" }}
       >
@@ -510,7 +510,7 @@ const SportsBetHistoryPanel = ({
           </div>
         </div>
 
-        <div className="w-full px-8px space-y-10px mt-9px -ml-px">
+        <div className="w-full px-8px pr-7px space-y-10px mt-9px -ml-px">
           {type === 0 ? (
             <Cards0 />
           ) : type === 1 ? (
@@ -533,7 +533,7 @@ const SportsBetHistoryPanel = ({
         </div>
 
         <div
-          className={`flex justify-between px-8px ${
+          className={`flex justify-between pl-6px px-8px ${
             isPopup ? "mt-11px" : "mt-10px"
           } space-x-10px`}
         >
@@ -564,7 +564,7 @@ const SportsBetHistoryPanel = ({
                 style={{
                   width:
                     noButtons === true
-                      ? "236px"
+                      ? "238px"
                       : isAttached === true
                       ? "212px"
                       : isPopup === false
@@ -672,7 +672,7 @@ const SportsBetHistoryPanel = ({
                 style={{
                   width:
                     noButtons === true
-                      ? "236px"
+                      ? "238px"
                       : isAttached === true
                       ? "212px"
                       : isPopup === false

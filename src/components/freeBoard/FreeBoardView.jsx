@@ -82,7 +82,7 @@ const FreeBoardView = () => {
       <div className="pl-48px -mt-px">
         <div
           style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
-          className="w-full border rounded-4px bg-gray-252525 flex items-start px-20px  pt-17px pb-15px justify-between text-r666666 mt-px"
+          className="w-full border rounded-4px bg-gray-252525 flex items-start px-20px  pt-17px pb-16px justify-between text-r666666 mt-px"
         >
           <div className="text-14px font-spoqa tracking-tight -mt-2px">
             {tag && (
@@ -424,7 +424,7 @@ const FreeBoardView = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff", minHeight: "54px" }}
-              className="rounded-6px border border-solid bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-15px justify-between text-r666666 mb-10px mt-px"
+              className="rounded-6px border border-solid bg-gray-252525  w-full  flex items-start px-19px pt-17px pb-14px justify-between text-r666666 mb-10px mt-px"
             >
               <p className="text-15px font-spoqa tracking-tight pr-7px -mt-2px -ml-px">
                 두개의 이벤트 모두 참여하였습니다
