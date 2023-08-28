@@ -12,7 +12,7 @@ const HorizontalMenu7 = ({
         return items.map(item => (
             <button 
                 key={item.id} 
-                className={`relative overflow-hidden w-full rounded-6px flex items-end p-px`} 
+                className={`relative overflow-hidden w-full rounded-6px flex items-end p-px filter hover:brightness-110`} 
                 style={{
                     height:"78px",
                     background: pathname === item.path 
@@ -31,7 +31,7 @@ const HorizontalMenu7 = ({
                           ? 'linear-gradient( to top, #491f9c 0%, #9e3cbc 100%)'
                           :'linear-gradient( to top, #ccc4ff 0%, #ffd9f5 100%)'
                         }}
-                        className={`w-full rounded-6px flex flex-col justify-end items-center h-76px relative hover:filter hover:brightness-90 pb-4px`}  
+                        className={`w-full rounded-6px flex flex-col justify-end items-center h-76px relative hover:filter pb-4px`}  
                         
                     >
                     <img className="mt-8px ml-2px object-none" src={item.icon} alt="" />

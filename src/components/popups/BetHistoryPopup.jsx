@@ -356,7 +356,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                     setPopupOpen={setPopupOpen}
                     isPopup={true}
                   />
-                  <div className="-mt-12px">
+                  <div className="mt-4px">
                     <Pagination page={page} setPage={setPage} />
                   </div>
                 </div>
