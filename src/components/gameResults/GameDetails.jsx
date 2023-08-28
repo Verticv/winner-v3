@@ -51,7 +51,7 @@ const GameDetails = () => {
               bet === "middle"
                 ? "linear-gradient(to top, #5423a0, #9d3bbb )"
                 : "",
-          borderColor: bet === "middle" ? '#6852a7' : '#bbbbbb',
+          borderColor: bet === "middle" ? '#5523a0' : '#bbbbbb',
           boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
         }}
         className={`flex group items-center justify-center w-83px h-38px rounded-5px border`}
@@ -105,8 +105,8 @@ const GameDetails = () => {
 
   const SingleCard = () => (
     <div
-      style={{ borderColor:'#6852a7' }}
-      className="w-full rounded-4px overflow-hidden shadow-plain11 border-2"
+      style={{ borderColor:'#6852a7',boxShadow: '0 2px 2px rgba(0, 0, 0, 0.4)' }}
+      className="w-full rounded-4px overflow-hidden border-2"
     >
       <div
         className="flex items-center justify-between h-54px w-full px-18px"
@@ -135,7 +135,7 @@ const GameDetails = () => {
         >
           2021-06-29 15:45
         </div>
-        <div className="w-80px flex items-center justify-center font-spoqaMedium text-14px text-r666666">
+        <div className="w-80px flex items-center justify-center text-14px text-r666666">
           축구
         </div>
 
@@ -146,7 +146,7 @@ const GameDetails = () => {
         <div className="w-56px ml-17px font-roboto text-14px text-r666666 text-center">
           4 : 4
         </div>
-        <div className="w-63px font-spoqaMedium text-14px text-center" style={{color:'#00a651'}}>
+        <div className="w-63px text-14px text-center" style={{color:'#00a651'}}>
           무
         </div>
       </div>
@@ -155,8 +155,8 @@ const GameDetails = () => {
 
   const DoubleCard = () => (
     <div
-      className="w-full h-168px rounded-4px overflow-hidden shadow-plain11 border-2 "
-      style={{ borderColor:'#6852a7' }}
+      className="w-full rounded-4px overflow-hidden border-2 "
+      style={{ borderColor:'#6852a7', boxShadow: '0 2px 2px rgba(0, 0, 0, 0.4)' }}
     >
       <div className="flex items-center justify-between h-54px w-full px-18px"
       style={{
@@ -177,14 +177,14 @@ const GameDetails = () => {
         </div>
       </div>
 
-      <div className="w-full h-54px bg-gray-323231 border-b border-gray-252525 flex items-center tracking-tight pt-px">
+      <div className="w-full h-56px border-b border-gray-dddddd flex items-center tracking-tight">
         <div
           style={{ marginLeft: "25px", width: "114px" }}
           className="flex items-center pt-px justify-center font-roboto text-14px text-r666666 tracking-tight mt-3px"
         >
           2021-06-29 15:45
         </div>
-        <div className="w-80px flex items-center justify-center font-spoqaMedium text-14px text-r666666 pt-px">
+        <div className="w-80px flex items-center justify-center text-14px text-r666666">
           축구
         </div>
         <div style={{ marginLeft: "0px" }}>
@@ -209,14 +209,14 @@ const GameDetails = () => {
         </div>
       </div>
 
-      <div className="w-full h-55px flex items-center tracking-tight pt-px">
+      <div className="w-full h-54px flex items-center tracking-tight pt-px">
         <div
           style={{ marginLeft: "25px", width: "114px" }}
           className="flex items-center justify-center font-roboto text-14px text-r666666 tracking-tight mt-3px"
         >
           2021-06-29 15:45
         </div>
-        <div className="w-80px flex items-center justify-center font-spoqaMedium text-14px text-r666666 pt-px">
+        <div className="w-80px flex items-center justify-center font-spoqaMedium text-14px text-r666666">
           축구
         </div>
 
@@ -234,7 +234,7 @@ const GameDetails = () => {
         <div className="w-56px ml-17px font-roboto text-14px text-r666666 text-center truncate">
           222 : 222
         </div>
-        <div className="w-63px text-center font-spoqaMedium text-14px text-r666666">
+        <div className="w-63px text-center text-14px text-r666666">
           패
         </div>
       </div>
@@ -293,7 +293,7 @@ const GameDetails = () => {
           </div>
         </div>
 
-        <div className="px-9px pb-10px space-y-9px pt-8px">
+        <div className="px-9px pb-9px space-y-10px pt-8px">
           <SingleCard />
           <DoubleCard />
         </div>

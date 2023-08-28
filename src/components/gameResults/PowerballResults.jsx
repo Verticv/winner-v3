@@ -32,7 +32,7 @@ const PowerballResults = () => {
     const Table = ({count}) => (
       <div
         style={{ borderColor: '#6852a7' }}
-        className="flex flex-col rounded-4px shadow-plain11 border-2 overflow-hidden">
+        className="flex flex-col rounded-4px shadow-panel border-2 overflow-hidden">
         <div
           style={{
             background:'#6852a7',

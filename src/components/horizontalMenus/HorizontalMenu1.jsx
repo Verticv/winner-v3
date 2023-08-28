@@ -24,46 +24,36 @@ const HorizontalMenu1 = ({
                 onMouseOver={() => setHover(item.id)}
                 onMouseLeave={() => setHover(null)}
             >
-                {/* <div 
-                    style={{
-                        height:"97px", 
-                        background: isState === item.id
-                        ? 'linear-gradient(to top, #a6926f, #f9f0d3)'
-                        : 'linear-gradient(to top, rgb(57,56,53) 0%, rgb(107,104,101) 100%)',
-                        // height:'98px'
-                    }} 
-                     className={`w-full flex absolute top-0 p-px rounded-4px`}> */}
                     
+                <div 
+                    style={{
+                        height: "97px",
+                        background: isState === item.id
+                        ? 'linear-gradient(to top, #491f9c, #9e3cbc)'
+                        :'linear-gradient( to top, #ccc4ff, #ffd9f5 100%)'
+                    }}
+                    className={`w-full rounded-6px flex flex-col items-center`}>
+                    <img className="ml-px object-none mt-4px" src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
+                
+                    <div 
+                    style={{ color: isState === item.id? '#fff':'32d2834'}}
+                        className={` 
+                            text-14px tracking-tight h-14px flex items-center -mt-3px`}
+                    >
+                        {item.text}
+                    </div>
                     <div 
                         style={{
-                            height: "97px",
-                            background: isState === item.id
-                          ? 'linear-gradient(to top, #491f9c, #9e3cbc)'
-                          :'linear-gradient( to top, #ccc4ff, #ffd9f5 100%)'
-                        }}
-                        className={`w-full rounded-6px flex flex-col items-center`}>
-                    <img className="ml-px object-none mt-5px" src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
-                    
-                        <div 
-                        style={{ color: isState === item.id? '#fff':'32d2834'}}
-                            className={` 
-                                text-14px tracking-tight h-14px flex items-center -mt-4px`}
-                        >
-                            {item.text}
-                        </div>
-                        <div 
-                            style={{
-                                backgroundColor: isState === item.id 
-                                ? "#281d45"
-                                : "#69637f",
+                            backgroundColor: isState === item.id 
+                            ? "#281d45"
+                            : "#69637f",
 
-                            }}
-                            className={`text-white text-12px font-roboto tracking-tight px-9px mt-9px h-17px rounded-full flex items-center justify-center`}
-                        >
-                            {item.number}
-                        </div>
+                        }}
+                        className={`text-white text-12px font-roboto tracking-tight px-9px mt-9px h-17px rounded-full flex items-center justify-center`}
+                    >
+                        {item.number}
                     </div>
-                {/* </div> */}
+                </div>
             </button>
         ));
     }

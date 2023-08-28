@@ -143,7 +143,7 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                 style={{
                     background:'#6852a7',
                 }}
-                className="h-54px flex items-center justify-between pr-18px">    
+                className="h-54px flex items-center justify-between pr-19px">    
                 <div className="flex items-center -mt-3px">
                     <img src={icon} alt="" className="ml-16px object-none" />
                     <span className="text-white font-spoqaMedium text-20px ml-3px pt-3px truncate" style={{maxWidth: "790px"}}>{title}</span>
@@ -153,7 +153,7 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                 <div className="flex items-center flex-shrink-0 -mt-3px">
                     <img src={ClockIcon} alt="" />
                     <span 
-                        className="ml-6px  text-16px text-white"
+                        className="ml-5px text-16px text-white pt-px"
                         style={{ letterSpacing: "0.02rem" }}
                     >
                         2021-06-29 15:45
