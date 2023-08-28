@@ -21,7 +21,7 @@ const FreeBoardView2 = () => {
             src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5}
             alt=""
           />
-          <p className="ml-5px mt-px text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">{username}</p>
+          <p className="ml-5px mt-px text-15px font-spoqaMedium tracking-tight text-r666666">{username}</p>
         </div>
         {isEdit === true ? (
           <div className="self-start flex space-x-4px justify-end">
