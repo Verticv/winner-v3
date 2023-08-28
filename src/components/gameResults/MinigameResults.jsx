@@ -1,4 +1,4 @@
-import HorizontalMenu10 from 'components/horizontalMenus/HorizontalMenu10';
+import HorizontalMenu7 from 'components/horizontalMenus/HorizontalMenu7';
 import DateSearchBar2 from 'components/myPage/DateSearchBar2';
 import MyPageTitle from 'components/myPage/MyPageTitle'
 import Pagination from 'components/myPage/Pagination';
@@ -29,7 +29,7 @@ const MinigameResults = ({pageTitle = "미니게임"}) => {
         <div>
             <MyPageTitle title={pageTitle} />
             <div className="relative w-full mt-20px">
-              <HorizontalMenu10 itemsArray={tabsArray}  />
+              <HorizontalMenu7 itemsArray={tabsArray}  />
             </div>
 
             <DateSearchBar2 />

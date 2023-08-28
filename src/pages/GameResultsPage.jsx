@@ -3,11 +3,13 @@ import DirectoryComponent from 'components/myPage/DirectoryComponent';
 import LeftMenu from 'components/myPage/LeftMenu';
 import Navbar from '../components/mainPage/NavBar';
 import QuickMenu from 'components/QuickMenu';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, useLocation } from 'react-router';
-import Icon1 from '../images/gameResults/leftMenu/icon_1_v2.png';
-import Icon2 from '../images/gameResults/leftMenu/icon_2_v2.png';
-import GameResultsBanner from '../images/gameResults/game_results_banner_v2.png';
+import Icon1 from '../images/gameResults/leftMenu/icon_1.png';
+import Icon2 from '../images/gameResults/leftMenu/icon_2.png';
+import Icon1Highlight from '../images/gameResults/leftMenu/icon_1_highlight.png';
+import Icon2Highlight from '../images/gameResults/leftMenu/icon_2_highlight.png';
+import GameResultsBanner from '../images/gameResults/game_results_banner.png';
 import WinDrawLose from 'components/gameResults/WinDrawLose';
 import MinigameResults from 'components/gameResults/MinigameResults';
 
@@ -16,7 +18,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '스포츠',
       icon: Icon1,
-      iconHighlight: Icon1,
+      iconHighlight: Icon1Highlight,
       id: 0,
       path: '/gameresults/sports/win-draw-lose',
       sub1: '승무패',
@@ -31,7 +33,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
     {
       text: '미니게임',
       icon: Icon2,
-      iconHighlight: Icon2,
+      iconHighlight: Icon2Highlight,
       id: 1,
       path: '/gameresults/minigame/powerball',
       mainPath: '/gameresults/minigame',
@@ -41,32 +43,24 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
   const location = useLocation();
   const [selectedTab, setSelectedTab] = useState(location.pathname);
   const [selectedSubTab, setSelectedSubTab] = useState(location.pathname);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+ 
+ 
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+ 
 
   return (
-    <div className='relative flex flex-col justify-center items-center limit1920:overflow-x-hidden bg-gray-1e1e1e'>
-      <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
+    <div className='relative flex flex-col justify-center items-center limit1920:overflow-x-hidden'
+      style={{
+        background: "linear-gradient(to right, #b644c4, #351894)"
+      }}>
+      
+        
+      
+
+      <div style={{ marginTop: '153px' }} className='flex flex-col items-start limit:items-center w-full h-full'>
+        <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
-      <div
-        style={{ width: '1496px', top: scrollPosition > 200 ? '235px' : '428px'}}
-        className={`fixed z-20 flex justify-end`}
-      >
-        <QuickMenu scrollPosition={scrollPosition} />
-      </div>
-
-      <div style={{marginTop:'104px'}} className='flex flex-col items-start limit:items-center w-full h-full'>
         <Route exact path='/gameresults/sports/win-draw-lose'>
           <DirectoryComponent
             branch1='경기결과'
@@ -118,17 +112,14 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
           />
         </Route>
 
-        <div style={{height:'125px'}} className='relative w-default'>
+        <div style={{height:'136px'}} className='relative'>
           <img className='z-10' src={GameResultsBanner} alt='' />
-          <div
-            className='font-spoqaMedium z-20 absolute top-0 text-28px w-full h-full flex items-center justify-center'
-            style={{ color: '#ffdfbd' }}
-          >
-            <span className='leading-none mt-2px'>경기결과</span>
-          </div>
+          
+          <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex items-center justify-center">
+              <span style={{textShadow: '0 0 4px rgba(0, 0, 0, 0.6)'}} className="leading-none text-white -mt-2px" >경기결과</span></div>
         </div>
 
-        <div className='flex mt-20px w-default z-30'>
+        <div className='flex mt-18px w-default z-30'>
           <div>
             <LeftMenu
               selectedTab={selectedTab}
@@ -162,6 +153,9 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
 
         <div>
           <Footer />
+        </div>
+        <div>
+          <QuickMenu />
         </div>
       </div>
     </div>
