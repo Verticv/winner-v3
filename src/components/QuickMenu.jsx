@@ -15,11 +15,11 @@ import Tiktok from "../images/sideMenu/tiktok.png";
 import Contact from "../images/sideMenu/contact.png";
 import LeftIcon from "../images/sideMenu/left.png";
 
-const Button = ({ text, img }) => {
+const Button = ({ text, img, path }) => {
   const history = useHistory();
   return (
     <div
-      onClick={() => history.push("#")}
+      onClick={() => history.push(path)}
       style={{
         boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
         borderRadius: "5px",
@@ -114,16 +114,16 @@ const QuickMenu = () => {
         className="w-175px h-full rounded-8px rounded-r-none p-10px"
       >
         <div style={{ height: "360px" }} className="grid gap-5px grid-cols-2 mb-10px">
-          <Button text="출석부" img={Quick1} />
-          <Button text="게시판" img={Quick2} />
-          <Button text="경기결과" img={Quick3} />
-          <Button text="베팅규정" img={Quick4} />
-          <Button text="문의하기" img={Quick5} />
-          <Button text="계좌문의" img={Quick6} />
-          <Button text="베팅내역" img={Quick7} />
-          <Button text="충/환전내역" img={Quick8} />
+          <Button text="출석부" img={Quick1} path="/attendance" />
+          <Button text="게시판" img={Quick2} path="/freeboard" />
+          <Button text="경기결과" img={Quick3} path="/gameresults/sports/win-draw-lose" />
+          <Button text="베팅규정" img={Quick4} path="/esports/structure" />
+          <Button text="문의하기" img={Quick5} path="/cscenter/contact/all" />
+          <Button text="계좌문의" img={Quick6} path="/cscenter/inquiry" />
+          <Button text="베팅내역" img={Quick7} path="/mypage/bet-history" />
+          <Button text="충/환전내역" img={Quick8} path="/mypage/transaction/charge-history" />
           <Button text="라이브영상" img={Quick9} />
-          <Button text="비번변경" img={Quick10} />
+          <Button text="비번변경" img={Quick10} path="/mypage/edit-info" />
         </div>
         <div style={{ backgroundColor: "#b8aadd" }} className="h-px w-full mb-10px" />
         <div style={{ backgroundColor: "#f9f8fe", width: "155px" }} className="h-240px flex flex-col rounded-4px">
