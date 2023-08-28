@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CloseIcon from "../../images/popups/close_icon.png";
 import Icon2 from "../../images/myPage/betHistory/icon_2.png";
 import Icon3 from "../../images/myPage/betHistory/icon_3.png";
@@ -100,6 +100,7 @@ import Slot25 from "../../images/myPage/betHistory/slotGame/slot25.png";
 
 const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
   const history = useHistory();
+  const scrollRef = useRef();
 
   useEffect(() => {
     return () => {
@@ -215,6 +216,15 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     { text: "티비벳", icon: Icon11, iconHighlight: IconHighlight11, id: 9, path: "/freeboard/compose/bet" },
   ];
 
+  useEffect(() => {
+    scrollRef.current.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    return () => {};
+  }, [selectedTab]);
+
   return (
     <div
       className="w-full overflow-hidden rounded-20px pt-2px"
@@ -291,13 +301,12 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
 
           <div className={`w-full px-26px`}>
             <div
+              ref={scrollRef}
               style={{
                 height:
-                  selectedTab.includes("/all") || selectedTab.includes("/live-casino") || selectedTab.includes("/bet")
+                  selectedTab.includes("/all") || selectedTab.includes("/live-casino")
                     ? "400px"
-                    : selectedTab.includes("bet")
-                    ? "650px"
-                    : selectedTab.includes("hold'em-game")
+                    : selectedTab.includes("hold'em-game") || selectedTab.includes("/bet")
                     ? "580px"
                     : selectedTab.includes("/slot-game") || selectedTab.includes("/live-sport")
                     ? "580px"
@@ -337,7 +346,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/slot-game") || selectedTab.includes("/live-sport") ? (
-                <div style={{ width: "1041px" }} className="space-y-20px">
+                <div style={{ width: "1041px" }} className="">
                   <SportsBetHistory
                     checkedState={checkedState}
                     setCheckedState={setCheckedState}

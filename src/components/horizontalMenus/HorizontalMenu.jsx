@@ -92,7 +92,7 @@ const HorizontalMenu = ({
                   : selectedTab === 8
                   ? "transparent transparent #41227e transparent"
                   : "transparent  transparent  #562a86 transparent ",
-                left: setSelectedTabPopup ? "41px" : "35px",
+                left: setSelectedTabPopup ? "39px" : "35px",
                 marginBottom: setSelectedTabPopup && "-10px",
               }}
             >

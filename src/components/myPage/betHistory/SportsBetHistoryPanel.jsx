@@ -166,16 +166,16 @@ const SportsBetHistoryPanel = ({
         </button>
       </div>
 
-      <div className="flex ml-10px  tracking-tight text-14px text-center">
+      <div className="flex ml-8px tracking-tight text-14px text-center">
         <div
           style={{ width: isAttached ? "90px" : "99px" }}
-          className="font-roboto text-r666666"
+          className="font-roboto text-r666666 pl-4px"
         >
           {score}
         </div>
         <div
-          style={{ width: isAttached ? "59px" : "61px" }}
-          className="text-r666666"
+          style={{ width: isAttached ? "61px" : "61px" }}
+          className="text-r666666 pl-2px"
         >
           {choice === "home" ? "홈팀 승" : "원정팀 승"}
         </div>
