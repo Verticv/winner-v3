@@ -134,7 +134,6 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
           <Route path="/esports/hold'emGame">
             <HoldemGame />
           </Route>
-
           <Route path="*"></Route>
         </div>
 
