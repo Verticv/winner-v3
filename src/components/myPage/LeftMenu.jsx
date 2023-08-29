@@ -74,7 +74,7 @@ const LeftMenu = ({
         <div className="w-full flex mr-18px ml-9px justify-between items-center">
           <div className="flex items-center">
             <label
-              className={`font-bold text-16px cursor-pointer tracking-Stightest -mt-3px`}
+              className={`font-bold text-16px cursor-pointer tracking-Stightest`}
               style={{ color: pathname.includes(path) ? "#fff" : "#594e6a" }}
             >
               {text}
@@ -139,7 +139,7 @@ const LeftMenu = ({
                         : isMouseHover === item.path
                         ? "text-golden-594e6a"
                         : "text-golden-594e6a"
-                    }  font-bold text-16px cursor-pointer tracking-Stightest -mt-3px`}
+                    }  font-bold text-16px cursor-pointer tracking-Stightest`}
                     style={{ color: pathname.includes(item.mainPath) ? "#fff" : "#594e6a" }}
                   >
                     {item.text}
