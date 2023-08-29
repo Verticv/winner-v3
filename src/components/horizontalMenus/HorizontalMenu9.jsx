@@ -10,7 +10,7 @@ const HorizontalMenu9 = ({
   const history = useHistory();
   const pathname = window.location.pathname;
   const [isHover, setHover] = useState(null);
-  console.log(isHover);
+  console.log(isHover + "");
 
   console.log(pathname);
 
