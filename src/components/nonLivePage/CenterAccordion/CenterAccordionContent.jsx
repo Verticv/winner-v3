@@ -227,12 +227,12 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
         </div>
         <div
           onClick={() => {
-            dispatch(
+            card.score1 && dispatch(
               setBetSlipData({
                 data: card,
               })
             );
-            setLeftActive((prev) => !prev);
+            card.score1 && setLeftActive((prev) => !prev);
           }}
           style={{
             borderColor: leftActive ? "#6227a5" : "#cccccc",
@@ -243,8 +243,8 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             color: leftActive ? "#eeeeee" : "#111111",
             ...(isHovered ? hoverStyle : null),
           }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={card.score1 && handleMouseEnter}
+          onMouseLeave={card.score1 && handleMouseLeave}
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -312,12 +312,12 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
         </div>
         <div
           onClick={() => {
-            dispatch(
+            card.score2 && dispatch(
               setBetSlipData({
                 data: card,
               })
             );
-            setCenterActive((prev) => !prev);
+            card.score2 && setCenterActive((prev) => !prev);
           }}
           style={{
             height: "100%",
@@ -325,8 +325,8 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             color: centerActive ? "#eeeeee" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
-          onMouseEnter={handleMouseEnter1}
-          onMouseLeave={handleMouseLeave1}
+          onMouseEnter={card.score2 && handleMouseEnter1}
+          onMouseLeave={card.score2 && handleMouseLeave1}
           className="flex items-center relative w-68px justify-center"
         >
           {card.score2ArrowUp ? (
@@ -381,12 +381,12 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
         </div>
         <div
           onClick={() => {
-            dispatch(
+            card.score3 && dispatch(
               setBetSlipData({
                 data: card,
               })
             );
-            setRightActive((prev) => !prev);
+            card.score3 && setRightActive((prev) => !prev);
           }}
           style={{
             borderColor: rightActive ? "#6227a5" : "#cccccc",
@@ -396,8 +396,8 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             color: rightActive ? "#eeeeee" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
-          onMouseEnter={handleMouseEnter2}
-          onMouseLeave={handleMouseLeave2}
+          onMouseEnter={card.score3 && handleMouseEnter2}
+          onMouseLeave={card.score3 && handleMouseLeave2}
           className="flex items-center justify-between border-l border-r"
         >
           <p

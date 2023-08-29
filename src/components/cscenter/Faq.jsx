@@ -78,7 +78,7 @@ const Faq = () => {
       <>
             <button 
                 style={{zIndex: 2,background: "#ffffff",boxShadow: " 0px 2px 3px 0px rgba(0, 0, 0, 0.3)"}}
-                className="relative rounded-10px  w-full  flex items-start p-px  mb-8px  z-20 group hover:shadow-table hover:brightness-125 filter" 
+                className="relative rounded-10px  w-full  flex items-start p-px  mb-11px  z-20 group hover:shadow-table hover:brightness-125 filter" 
 
                 onClick={() => {
                     if (openedCell === cellId) {
@@ -92,7 +92,7 @@ const Faq = () => {
                   <div className="w-full h-full px-17px flex items-start space-x-8px self-start"> 
 
                       <div 
-                          style={{backgroundColor: "#702caa", minWidth: "89px"}} 
+                          style={{backgroundColor: "#702caa", minWidth: "95px"}} 
                           className="h-29px rounded-full flex items-center justify-center text-white text-14px  tracking-tight mt-2px px-6px flex-shrink-0"
                       > 
                         <p className='-mt-px' style={{letterSpacing:'-0.1em'}}>{type}</p>
@@ -106,7 +106,7 @@ const Faq = () => {
             {openedCell === cellId && (
                 <div 
                     style={{ zIndex: 1, backgroundColor: "#f6f6f6",boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.5)" }} 
-                    className="flex h-full items-start justify-start w-full rounded-10px -mt-60px z-0 mb-8px border  pb-32px pr-42px"
+                    className="flex h-full items-start justify-start w-full rounded-10px -mt-60px z-0 mb-11px border  pb-32px pr-42px"
                 >
                     <img 
                         style={{marginTop: "66px"}} 

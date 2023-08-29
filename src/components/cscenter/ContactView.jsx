@@ -32,7 +32,7 @@ const ContactView = () => {
                 maxWidth: "92px",
                 backgroundColor: "#999999",
               }}
-              className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
+              className={`px-12px h-26px rounded-full text-white text-12px flex items-center justify-center cursor-pointer`}
             >
               <p
                 style={{
@@ -41,32 +41,29 @@ const ContactView = () => {
                   overflow: "hidden",
                   whiteSpace: "nowrap",
                 }}
-                className="-mt-px"
               >
                 답변완료
               </p>
             </div>
             <div
               style={{
-                maxWidth: "92px",
+                maxWidth: "101px",
                 backgroundColor: "#40915f",
               }}
-              className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
+              className={`px-12px h-26px rounded-full text-white text-12px flex items-center justify-center cursor-pointer`}
             >
               <p
                 style={{
-                  maxWidth: "75px",
                   textOverflow: "unset",
                   overflow: "hidden",
                   whiteSpace: "nowrap",
                 }}
-                className="-mt-px"
               >
                 스포츠
               </p>
             </div>
 
-            <div className="text-15px font-spoqaMedium tracking-tight text-r666666 -ml-px mt-px">스포츠북 문의</div>
+            <div className="text-15px tracking-tight text-r666666 -ml-px mt-px font-bold">스포츠북 문의</div>
           </div>
 
           <div
@@ -80,11 +77,14 @@ const ContactView = () => {
           </div>
 
           <div className="w-full bg-gray-323232 py-22px px-16px">
-            <div className="rounded-4px  py-15px  flex items-start px-21px font-spoqa text-14px tracking-tight text-r666666 bg-gray-252525">
+            <div style={{borderColor:"#dddddd"}} className="rounded-4px  py-15px  flex items-start px-21px font-spoqa text-14px tracking-tight text-r666666 bg-gray-252525 border">
               스포츠북 문의 입니다.
             </div>
 
-            <div className="bg-gray-414141 rounded-4px pt-20px pb-17px  px-22px mt-21px font-spoqaMedium text-14px tracking-tight text-r666666 space-y-35px">
+            <div
+              style={{ backgroundColor: "#eeeeee" }}
+              className="rounded-4px pt-20px pb-17px  px-22px mt-21px font-spoqaMedium text-14px tracking-tight text-r666666 space-y-35px"
+            >
               <div className="space-y-10px">
                 {BodyText1.split("\n").map((item, i) => (
                   <p key={i} className="flex items-center">

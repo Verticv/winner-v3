@@ -20,7 +20,6 @@ const LeftMenu = ({
   const [isExpanded, setExpanded] = useState(window.location.pathname);
   const [isMouseHover, setMouseHover] = useState("");
 
-  console.log(pathname);
   function buttonPressed(text, path) {
     if (text === "총판페이지") {
       window.open("/distributor-page");
@@ -75,7 +74,7 @@ const LeftMenu = ({
         <div className="w-full flex mr-18px ml-9px justify-between items-center">
           <div className="flex items-center">
             <label
-              className={`font-bold text-16px cursor-pointer tracking-Stightest -mt-3px`}
+              className={`font-bold text-16px cursor-pointer tracking-Stightest`}
               style={{ color: pathname.includes(path) ? "#fff" : "#594e6a" }}
             >
               {text}
@@ -140,7 +139,7 @@ const LeftMenu = ({
                         : isMouseHover === item.path
                         ? "text-golden-594e6a"
                         : "text-golden-594e6a"
-                    }  font-bold text-16px cursor-pointer tracking-Stightest -mt-3px`}
+                    }  font-bold text-16px cursor-pointer tracking-Stightest`}
                     style={{ color: pathname.includes(item.mainPath) ? "#fff" : "#594e6a" }}
                   >
                     {item.text}
@@ -158,7 +157,9 @@ const LeftMenu = ({
                 {item.sub1 && (
                   <img
                     className={
-                      isExpanded !== item.path + "closed" && pathname.includes(item.mainPath) && "transform rotate-180"
+                      isExpanded !== item.path + "closed" && pathname.includes(item.mainPath)
+                        ? "transform rotate-180"
+                        : ""
                     }
                     src={pathname.includes(item.mainPath) ? ArrowOn : ArrowDown}
                     alt=""

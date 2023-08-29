@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LebronBanner from "../../images/navbarHover/3_1.png";
+import FootballLogo from "../../images/navbarHover/football_logo.png";
 import LebronBannerLogo from "../../images/navbarHover/3_1_logo.png";
 import Expand from "react-expand-animated";
 import useNavButtonPosition from "hooks/useNavButtonPosition";
@@ -16,15 +17,21 @@ const SportsHover = ({ selection }) => {
       background: LebronBanner,
       logo: LebronBannerLogo,
       imgText: "실시간스포츠",
-      path: "/bet-combination",
+      path: "#",
+    },
+    {
+      id: 1,
+      background: FootballLogo,
+      logo: LebronBannerLogo,
+      imgText: "이용가이드",
+      path: "#",
     },
   ];
 
   function GamesList({ items }) {
     return items.map((item) => (
-      <Link to={item.path}>
+      <Link key={item.id} to={item.path}>
         <div
-          key={item.id}
           className={`relative group cursor-pointer flex items-center flex-shrink-0 h-68px rounded-6px`}
           style={{
             width: "210px",
@@ -43,7 +50,7 @@ const SportsHover = ({ selection }) => {
               }}
               className="absolute z-50 top-20px pt-2px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
             >
-              게임시작
+              {item.imgText === "이용가이드" ? "설명보기" : "게임시작"}
             </button>
           )}
           {isHover === item.id && <div className="w-full h-full bg-black opacity-60 z-10 rounded-6px"></div>}
@@ -66,8 +73,8 @@ const SportsHover = ({ selection }) => {
       open={selection === 2}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
-        close: { left: hoverMenuPosition },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#ededeb" },
+        close: { left: hoverMenuPosition, backgroundColor: "#ededeb" },
       }}
       className="rounded-8px absolute w-auto m-auto h-98px bg-white"
     >

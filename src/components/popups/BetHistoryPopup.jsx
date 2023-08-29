@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CloseIcon from "../../images/popups/close_icon.png";
-import Icon1 from "../../images/myPage/betHistory/icon_1.png";
 import Icon2 from "../../images/myPage/betHistory/icon_2.png";
 import Icon3 from "../../images/myPage/betHistory/icon_3.png";
 import Icon4 from "../../images/myPage/betHistory/icon_4.png";
@@ -12,7 +11,6 @@ import Icon9 from "../../images/myPage/betHistory/icon_9.png";
 import Icon10 from "../../images/myPage/betHistory/icon_10.png";
 import Icon11 from "../../images/myPage/betHistory/icon_11.png";
 import Icon12 from "../../images/myPage/betHistory/icon_12.png";
-import IconHighlight1 from "../../images/myPage/betHistory/Icon1_On.png";
 import IconHighlight2 from "../../images/myPage/betHistory/Icon2_On.png";
 import IconHighlight3 from "../../images/myPage/betHistory/Icon3_On.png";
 import IconHighlight4 from "../../images/myPage/betHistory/Icon4_On.png";
@@ -102,10 +100,11 @@ import Slot25 from "../../images/myPage/betHistory/slotGame/slot25.png";
 
 const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
   const history = useHistory();
+  const scrollRef = useRef();
 
   useEffect(() => {
     return () => {
-      history.push("/freeboard/compose/all");
+      history.push("/freeboard/compose/live-casino");
     };
   }, [history]);
 
@@ -184,14 +183,14 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     { text: "보타카지노", icon: HIcon2, id: 1 },
     { text: "준비중", icon: HIcon3, id: 4 },
   ];
-  const [selectedTab, setSelectedTab] = useState("/freeboard/compose/all");
+  const [selectedTab, setSelectedTab] = useState("/freeboard/compose/live-casino");
   const [selectedSubTab, setSelectedSubTab] = useState(0);
   const [page, setPage] = useState(0);
 
   const [checkedState, setCheckedState] = useState(new Array(3).fill(false));
 
   const tabsArray = [
-    { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/freeboard/compose/all" },
+    // { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/freeboard/compose/all" },
     {
       text: "라이브카지노",
       icon: Icon2,
@@ -217,6 +216,15 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     { text: "티비벳", icon: Icon11, iconHighlight: IconHighlight11, id: 9, path: "/freeboard/compose/bet" },
   ];
 
+  useEffect(() => {
+    scrollRef.current.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    return () => {};
+  }, [selectedTab]);
+
   return (
     <div
       className="w-full overflow-hidden rounded-20px pt-2px"
@@ -233,7 +241,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
           style={{ background: "linear-gradient(to right,  #9d3bbb, #5423a0)" }}
           className="relative h-60px bg-gray-272726 flex items-center justify-center flex-shrink-0"
         >
-          <label className="font-spoqaMedium text-yellow-ad9e8c tracking-tight text-24px text-white ml-2px mb-3px">
+          <label className="font-spoqaMedium text-yellow-ad9e8c tracking-tight text-24px text-white font-bold">
             베팅내역
           </label>
           <button className="absolute right-0 mr-22px cursor-pointer z-20 mb-2px" onClick={() => setPopupOpen(false)}>
@@ -261,7 +269,11 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
               selectedTab !== "/freeboard/compose/e-sports" &&
               selectedTab !== "/freeboard/compose/bet" && (
                 <div
-                  style={{ background: "#5e399a", width: "1041px" }}
+                  style={{
+                    background: "#5e399a",
+                    width: "1041px",
+                    paddingBottom: (selectedTab.includes("/hotel-casino") || selectedTab.includes("/minigame")) && "4px",
+                  }}
                   className="mt-10px w-full px-3px py-3px rounded-6px"
                 >
                   <SubHorizontalMenu
@@ -287,43 +299,30 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
               )}
           </div>
 
-          <div
-            style={{
-              paddingRight:
-                selectedTab.includes("/all") ||
-                selectedTab.includes("/live-casino") ||
-                selectedTab.includes("hold'em-game") ||
-                selectedTab.includes("/bet")
-                  ? "26px"
-                  : selectedTab.includes("/slot-game") || selectedTab.includes("/live-sport")
-                  ? "19px"
-                  : selectedTab.includes("/sports")
-                  ? "19px"
-                  : "26px",
-            }}
-            className={`w-full px-26px`}
-          >
+          <div className={`w-full px-26px`}>
             <div
+              ref={scrollRef}
               style={{
                 height:
-                  selectedTab.includes("/all") ||
-                  selectedTab.includes("/live-casino") ||
-                  selectedTab.includes("hold'em-game") ||
-                  selectedTab.includes("/bet")
-                    ? "560px"
+                  selectedTab.includes("/all") || selectedTab.includes("/live-casino")
+                    ? "400px"
+                    : selectedTab.includes("hold'em-game") || selectedTab.includes("/bet")
+                    ? "580px"
                     : selectedTab.includes("/slot-game") || selectedTab.includes("/live-sport")
                     ? "580px"
-                    : selectedTab.includes("/sports")
+                    : selectedTab.includes("/hotel-casino")
+                    ? "480px"
+                    : selectedTab.includes("/sports") || selectedTab.includes("/fishing-game")
                     ? "234px"
                     : "400px",
               }}
-              className="scroll-div2 overflow-y-auto px-6px mt-10px"
+              className="scroll-div2 overflow-y-auto overflow-x-hidden px-6px mt-10px"
             >
               {selectedTab.includes("/all") ||
               selectedTab.includes("/live-casino") ||
               selectedTab.includes("hold'em-game") ||
               selectedTab.includes("/bet") ? (
-                <div className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <LiveCasinoBetHistory
                     isState={selectedSubTab}
                     setState={setSelectedSubTab}
@@ -335,7 +334,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/sports") ? (
-                <div className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <SlotBetHistory
                     isState={selectedSubTab}
                     setState={setSelectedSubTab}
@@ -347,7 +346,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/slot-game") || selectedTab.includes("/live-sport") ? (
-                <div className="space-y-20px">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <SportsBetHistory
                     checkedState={checkedState}
                     setCheckedState={setCheckedState}
@@ -362,7 +361,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/hotel-casino") ? (
-                <div className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <HotelCasinoBetHistory
                     isState={selectedSubTab}
                     setState={setSelectedSubTab}
@@ -374,11 +373,11 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/e-sports") ? (
-                <div className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <ESportsBetHistory isPopup={true} />
                 </div>
               ) : selectedTab.includes("/minigame") ? (
-                <div className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <MinigameBetHistory
                     isState={selectedSubTab}
                     setState={setSelectedSubTab}
@@ -393,7 +392,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/ar-game") ? (
-                <div className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <ARGameBetHistory
                     isState={selectedSubTab}
                     setState={setSelectedSubTab}
@@ -405,7 +404,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   </div>
                 </div>
               ) : selectedTab.includes("/fishing-game") ? (
-                <div className="">
+                <div style={{ width: "1041px" }} className="pb-10px">
                   <SlotBetHistory
                     isState={selectedSubTab}
                     setState={setSelectedSubTab}

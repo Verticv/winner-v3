@@ -48,14 +48,14 @@ const AnnouncementView = () => {
             className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px"
           >
             <p
-              className="text-14px font-spoqaMedium tracking-tight flex flex-shrink-0 mt-2px"
+              className="text-14px font-spoqaMedium tracking-tight flex flex-shrink-0 mt-3px"
               style={{ color: "#4a90f0" }}
             >
               스포츠북
             </p>
-            <div className="text-15px font-spoqaMedium tracking-tight text-r666666 mt-2px">
+            <div className="text-15px font-bold tracking-tight text-r666666 mt-2px">
               <h1 className="align-top">
-                {TitleText} <span className="inline-block align-top ml-10px pt-2px">{NewLabel}</span>
+                {TitleText} <span className="inline-block align-top ml-6px pt-2px font-normal">{NewLabel}</span>
               </h1>
             </div>
           </div>

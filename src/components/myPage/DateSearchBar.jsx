@@ -85,10 +85,10 @@ const DateSearchBar = ({
     <div
       className={`h-62px ${
         !pathname.includes("/freeboard/compose") && "mt-10px"
-      } flex items-center justify-center space-x-10px rounded-6px`}
+      } flex items-center justify-center space-x-10px rounded-6px w-full`}
       style={{
         background: isPopup ? "#5e399a" : "rgba(52, 34, 103, 0.6)",
-        width: !isSports && "1041px",
+        maxWidth: !isSports && "1041px",
         paddingRight: !isSports && "0.5px",
       }}
     >
@@ -111,7 +111,7 @@ const DateSearchBar = ({
           <div className="pt-px">{InboxSearch}</div>
           <input
             placeholder="팀명검색"
-            style={{ width: "138px", borderColor: "#a088d7" }}
+            style={{ width: "138px"}}
             className="mt-px placeholder-r666666 flex-shrink-0 outline-none h-42px rounded-6px border  px-10px font-medium text-14px tracking-tight  border-p682aa7 text-r666666 pb-px"
           />
         </div>

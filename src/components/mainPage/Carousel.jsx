@@ -23,7 +23,7 @@ const Carousel = () => {
     <div className="absolute z-10 w-full flex justify-start bottom-10px left-10px space-x-3px">
       {images.map((img, i) => (
         <button
-          key={i}
+          key={i + `${img}`}
           className={`${
             currentImage === i ? "bg-white rounded-5px w-29px h-12px" : "bg-white opacity-30 rounded-full w-12px h-12px"
           } p-3px`}
@@ -46,10 +46,10 @@ const Carousel = () => {
     <>
       {images.map((img, i) => (
         <img
-          onClick={() => (currentImage === i ? history.push("/live-casino") : history.push("/bet-combination"))}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          key={i}
+          onClick={() => (currentImage % 2 === 1 ? history.push("/live-casino") : history.push("/bet-combination"))}
+          key={i + `${img}`}
           src={images[i]}
           className={`${
             currentImage === i ? "opacity-100" : "opacity-0"
@@ -71,11 +71,9 @@ const Carousel = () => {
         right: "283px",
       }}
       className="absolute bottom-0 right-0 rounded-full cursor-pointer filter hover:brightness-125 flex items-center justify-center"
+      onClick={() => (currentImage % 2 === 1 ? history.push("/live-casino") : history.push("/bet-combination"))}
     >
-      <p
-        style={{ fontSize: "15px" }}
-        className="text-white font-spoqaBold flex items-center h-15px"
-      >
+      <p style={{ fontSize: "15px" }} className="text-white font-bold flex items-center h-15px">
         게임시작
       </p>
     </div>

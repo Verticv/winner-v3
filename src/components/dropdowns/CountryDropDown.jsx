@@ -50,7 +50,7 @@ const CountryDropDown = ({ setCountry, country }) => {
   return (
     <div
       style={{ height: "70px", width: "70px", borderRadius: "6px", backgroundColor: "#ededeb", overflow: "hidden" }}
-      className="flex flex-col shadow-plain -mt-13px -mr-2px"
+      className="flex flex-col shadow-plain -mt-13px -mr-2px z-50"
     >
       <CountriesList items={countriesArray} />
     </div>

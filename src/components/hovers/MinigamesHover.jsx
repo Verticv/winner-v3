@@ -26,14 +26,14 @@ const MinigamesHover = ({ selection }) => {
       background: Speedkino,
       logo: PowerballLogo,
       imgText: "화면구성설명",
-      path: "/esports/single",
+      path: "/esports/structure",
     },
     {
       id: 2,
       background: PowerLadder,
       logo: PowerballLogo,
       imgText: "단폴더베팅방법",
-      path: "/esports/structure",
+      path: "/esports/single",
     },
     {
       id: 3,
@@ -88,8 +88,8 @@ const MinigamesHover = ({ selection }) => {
       open={selection === 6}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
-        close: { left: hoverMenuPosition },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#ededeb" },
+        close: { left: hoverMenuPosition, backgroundColor: "#ededeb" },
       }}
       className="rounded-8px absolute w-auto m-auto h-262px bg-white"
     >

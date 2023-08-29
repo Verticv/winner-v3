@@ -39,6 +39,7 @@ import NoticeBanner from "../NoticeBanner";
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
   const history = useHistory();
+  const location = window.location.pathname;
 
   const [selectedTab, setSelectedTab] = useState();
   const [hoveredTab, setHoveredTab] = useState();
@@ -63,20 +64,20 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   const myMenuOptionsArray = [
-    { text: "마이페이지", id: 0, path: "/mypage/bet-history" },
+    // { text: "마이페이지", id: 0, path: "/mypage/bet-history" },
     { text: "베팅내역", id: 1, path: "/mypage/bet-history" },
     { text: "충/환전내역", id: 2, path: "/mypage/transaction/charge-history" },
     { text: "총판페이지", id: 3, path: "/distributor-page" },
-    { text: "회원정보수정", id: 4, path: "/mypage/edit-info" },
+    { text: "회원정보수정", id: 4, path: location === "/" ? "/reauth" : `${location}/reauth` },
     { text: "출석부", id: 5, path: "/attendance" },
-    { text: "로그아웃", id: 6, action: () => window.location.reload() },
+    { text: "로그아웃", id: 6, action: () => window.location.reload(), path: "#" },
   ];
 
   const contactOptionsArray = [
     { text: "문의하기", id: 0, path: "/cscenter/contact/all" },
     { text: "공지사항", id: 1, path: "/cscenter/announcement/all" },
     { text: "자주묻는질문", id: 2, path: "/cscenter/faq/all" },
-    { text: "계좌문의", id: 3, path: "/cscenter/inquiry" },
+    { text: "계좌문의", id: 3, path: "#" },
     { text: "베팅규정", id: 4, path: "/cscenter/policy/sportsgame/soccer" },
   ];
 
@@ -131,7 +132,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           background: "linear-gradient(to bottom, #f0ecff, #cacdff)",
           boxShadow: "0px 2px 15px 0px rgba(0, 0, 0, 0.5)",
         }}
-        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-50  bg-red-500"
+        className="relative w-full flex flex-col items-start limit:items-center limit1920:items-center z-40  bg-red-500"
       >
         <div className="w-full absolute h-px bottom-0 bg-r9688c7" />
         <div id="menu-wrapper" style={{ width: "1260px" }} className="w-full z-50">
@@ -170,7 +171,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 buttonText="마이메뉴"
                 ButtonIcon={MyMenuIcon}
                 ButtonActiveIcon={MyMenuActiveIcon}
-                DropdownHeight={"193px"}
+                DropdownHeight={"167px"}
               />
               <LinkButton ButtonIcon={MessageIcon} buttonText="쪽지" count={25} isAuthenticated={isAuthenticated} />
               <LinkButton ButtonIcon={CouponIcon} buttonText="쿠폰" count={5} isAuthenticated={isAuthenticated} />

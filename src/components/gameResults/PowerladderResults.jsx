@@ -1,5 +1,5 @@
 import React from 'react'
-import ClockIcon from '../../images/myPage/betHistory/clock_v2.png'
+import ClockIcon from '../../images/myPage/betHistory/clock.png'
 
 const PowerladderResults = ({title="파워사다리", icon}) => {
 
@@ -46,50 +46,66 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                   style={{
                     width: "424px",
                     textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
-                    background:"linear-gradient(to bottom, #4f4a41, #2f2c28)"
+                        borderColor: bet === "left" ? '#5523a0' : '#bbbbbb',
+                    boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
                   }} 
-                  className="flex items-center justify-center h-36px rounded-4px shadow-btn p-px"
+                  className="flex items-center justify-center h-36px rounded-4px border"
                 >
                   <div 
                   style={{
                     width: "422px",
-                    background: bet === "left" 
-                    ? "linear-gradient(to bottom, #987959, #634d38 )":""}}
-                    className={`${
-                      bet === "left" 
-                      ? "text-golden-highLight" 
-                      : "bg-dark-252525 text-gray-c8c8c8"} 
+                    color: bet === "left" ? '#fff' : '#444444',
+                    background:  bet === "left"
+                        ? "linear-gradient(to top, #5423a0, #9d3bbb )"
+                        : "#fff"}}
+                    className={`
+                     
                       flex items-center justify-between h-34px rounded-3px px-8px pt-px`
                   }>
                       <span className="truncate w-323px text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
                       <div className="flex items-center space-x-5px">
-                          <span className="font-roboto tracking-tight text-14px pt-2px">{stat1}</span>
+                          <span className="font-roboto tracking-tight text-14px">{stat1}</span>
                       </div>
                   </div>
                 </button>
 
                 <button
-                    style={{textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",background:"linear-gradient(to bottom, #4f4a41, #2f2c28)", width:'82px'}} 
-                    className={`flex group items-center justify-center h-36px rounded-4px shadow-btn `}
+                    style={{
+                        textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
+                        borderColor:bet === "middle" ? '#6852a7':'#bbbbbb',
+                    boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+                    }} 
+                    className={`flex group items-center justify-center h-36px rounded-4px  border`}
                 >
                   <div
-                    style={{background: bet === "middle" ? "linear-gradient(to bottom, #987959, #634d38 )" : ""}}
-                    className={`${
-                      bet === "middle" 
-                      ? "text-golden-highLight" 
-                      : "bg-dark-252525 text-gray-c8c8c8"}
+                    style={{
+                        background:
+                        bet === "middle"
+                        ? "linear-gradient(to top, #5423a0, #9d3bbb )"
+                                    : "",
+                        color:bet === "middle"?'#fff':'#444444'}}
+                    className={`
                       pt-px flex items-center justify-center h-34px w-80px rounded-3px cursor-pointer`}
                     >
-                        <span className="font-spoqaMedium  tracking-tight text-14px">VS</span>
+                        <span className="font-spoqaMedium  tracking-tight text-14px pt-2px">VS</span>
                     </div>
                 </button>
 
-                <button style={{width: "424px",background:"linear-gradient(to bottom, #4f4a41, #2f2c28)"}} className={`flex group items-center justify-center h-36px rounded-4px shadow-btn`}>
+                <button
+                    style={{
+                        width: "424px",
+                        textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
+                        borderColor:bet === "right" ? '#5523a0':'#bbbbbb',
+                        boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+                    }}
+                    className={`flex group items-center justify-center h-36px rounded-4px border`}>
                     <div
                     style={{
                         width: "422px",
-                        textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
-                        background: bet === "right" ? "linear-gradient(to bottom, #987959, #634d38 )":""
+                        color: bet === "right" ? '#fff' : '#444444',
+                        background:  bet === "right"
+                        ? "linear-gradient(to top, #5423a0, #9d3bbb )"
+                        : "#fff",
                     }} 
                     className={`${
                         bet === "right" 
@@ -98,7 +114,7 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                         pt-px flex items-center justify-between h-34px rounded-3px cursor-pointer px-8px pl-9px`}
                     >
                         <div className="flex items-center space-x-5px">
-                            <span className="font-roboto tracking-tight text-14px pt-2px">{stat3}</span>
+                            <span className="font-roboto tracking-tight text-14px">{stat3}</span>
                         </div>
                         <span className="truncate w-323px font-spoqaMedium tracking-tight text-14px text-right">{team2}</span>
                     </div>
@@ -111,8 +127,8 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
         return items.map(item => (
             <div 
                 key={item.id} 
-                style={{background: item.id % 2 === 0 ? "#323231" : "#2e2e2e"}} 
-                className="flex items-center   text-gray-c8c8c8 h-55px w-full border-b border-gray-252525 text-14px font-roboto tracking-tight "
+                style={{background: item.id % 2 === 0 ? "#fff" : "#f7f7f7",borderColor: "#dddddd"}} 
+                className="flex items-center text-r666666 h-55px w-full border-b  text-14px font-roboto tracking-tight "
             >
                 <CardContent bet={item.bet} team1={item.team1} team2={item.team2} />
             </div>
@@ -120,18 +136,25 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
     }
 
     const Table = ({array}) => (
-        <div className="flex flex-col rounded-4px shadow-plain11 border-2 border-gray-473b35 overflow-hidden">
-            <div style={{background:"linear-gradient( to right, rgb(108,85,62) 0%, rgb(71,59,53) 100%)"}} className="h-54px flex items-center justify-between pr-20px">    
-                <div className="flex items-center -mt-px">
+        <div
+            style={{ borderColor: '#6852a7' }}
+            className="flex flex-col rounded-4px shadow-plain11 border-2 overflow-hidden">
+            <div
+                style={{
+                    background:'#6852a7',
+                }}
+                className="h-54px flex items-center justify-between pr-19px">    
+                <div className="flex items-center -mt-3px">
                     <img src={icon} alt="" className="ml-16px object-none" />
-                    <span className="text-golden-highLight font-spoqaMedium text-20px ml-3px pt-3px truncate" style={{maxWidth: "790px"}}>{title}</span>
+                    <span className="text-white font-spoqaMedium text-20px ml-3px pt-3px truncate" style={{maxWidth: "790px"}}>{title}</span>
                 </div>
                 
 
-                <div className="flex items-center flex-shrink-0">
-                    <img src={ClockIcon} alt="" className='-mt-2px' />
+                <div className="flex items-center flex-shrink-0 -mt-3px">
+                    <img src={ClockIcon} alt="" />
                     <span 
-                        className="ml-5px font-spoqa text-16px tracking-tight text-golden-highLight"
+                        className="ml-5px text-16px text-white pt-px"
+                        style={{ letterSpacing: "0.02rem" }}
                     >
                         2021-06-29 15:45
                     </span>
@@ -143,16 +166,21 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
 
     return (
       <div
-        style={{ background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
-        className="rounded-4px shadow-table overflow-hidden p-px">
-        <div className="w-full rounded-4px bg-gray-2b2b2a overflow-hidden">
-            <div style={{height:"54px"}} className="px-11px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-ccc2b6">
+        style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
+        className="rounded-10px shadow-table overflow-hidden p-px">
+        <div className="w-full rounded-10px bg-white overflow-hidden">
+                <div
+                    style={{
+                        height: "54px",
+                        background: 'linear-gradient(to right, #9d3bbb, #5423a0)'
+                    }}
+                    className="px-11px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-eeeeee">
                 <div style={{width:"75px",marginLeft:"0"}} className='flex justify-center'>회차</div>
                 <div style={{width:"424px",marginLeft:"0"}} className='flex justify-center'>승(홈)</div>
                 <div style={{width:"82px",marginLeft:"4px"}} className='flex justify-center'>VS</div>
                 <div style={{width:"424px",marginLeft:"4px"}} className='flex justify-center'>패(원정)</div>
             </div>
-            <div className="px-9px space-y-10px pb-12px -mt-px">
+            <div className="px-9px space-y-10px pb-12px mt-8px">
                 <Table array={title === "스피드키노" ? ExampleArray4 : ExampleArray} />
                 <Table array={title === "스피드키노" ? ExampleArray5 : ExampleArray2} />
                 <Table array={title === "스피드키노" ? ExampleArray6 : ExampleArray3} />

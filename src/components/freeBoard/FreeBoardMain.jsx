@@ -337,14 +337,14 @@ const FreeBoardMain = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(true);
 
   const dropDownCellClass =
-    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px";
+    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px text-r666666";
 
   const searchDropdown = (
     <div
       style={{ backgroundColor: "white" }}
       className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a "
     >
-      <div className="w-full mt-2px h-full overflow-x-hidden border-gray-2c2c2c">
+      <div className="w-full p-px h-full overflow-x-hidden border-gray-2c2c2c">
         <button
           className={dropDownCellClass}
           style={{ ...(isHovered ? hoverStyle : null) }}
@@ -392,10 +392,7 @@ const FreeBoardMain = () => {
     >
       <input className="w-0 text-16px" />
       <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
-        <label
-          style={{ color: "#666666" }}
-          className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c"
-        >
+        <label style={{ color: "#666666" }} className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c">
           {selectedCarrier}
         </label>
         <img className="object-none mr-9px" src={DownArrowIcon} alt="arrow" />
@@ -412,11 +409,7 @@ const FreeBoardMain = () => {
       }}
       className="w-full bg-gray-2e2e2e flex items-center justify-center space-x-10px"
     >
-      <DropDownControls
-        buttonChild={dropdownButton}
-        isDropdownOpen={isDropdownOpen}
-        setDropdownOpen={setDropdownOpen}
-      >
+      <DropDownControls buttonChild={dropdownButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
         {searchDropdown}
       </DropDownControls>
 
@@ -425,7 +418,7 @@ const FreeBoardMain = () => {
         className="flex h-42px bg-dark-1a1a1a rounded-6px border border-gray-404040 relative"
       >
         <input
-          className="rounded-6px pl-9px pb-2px placeholder-gray-r7c7c7c w-full text-gray-c8c8c8 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+          className="rounded-6px pl-9px pb-2px placeholder-gray-r7c7c7c w-full text-r666666 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button
@@ -450,7 +443,7 @@ const FreeBoardMain = () => {
     return items.map((item, index) => (
       <button
         key={item.id}
-        className={`font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 h-56px w-full  group`}
+        className={`font-spoqaMedium text-14px tracking-tight text-r666666 h-56px w-full  group`}
         onClick={() => history.push(item.path)}
       >
         <div
@@ -466,11 +459,11 @@ const FreeBoardMain = () => {
             borderBottomWidth: index === items.length - 1 ? 0 : 1,
             borderColor: "#dddddd",
           }}
-          className="flex items-center font-spoqaMedium text-14px  text-gray-c8c8c8 h-56px border-b border-gray-252525"
+          className="flex items-center font-spoqaMedium text-14px  text-r666666 h-56px border-b border-gray-252525"
         >
           <div
             style={{ width: "126px" }}
-            className="font-spoqaMedium text-14px tracking-tight text-gray-c8c8c8 flex items-center justify-center"
+            className="font-spoqaMedium text-14px tracking-tight text-r666666 flex items-center justify-center"
           >
             {item.type === "공지" ? (
               <img className="ml-2px mt-px" src={PurpleSpeaker} alt="" />
@@ -483,7 +476,7 @@ const FreeBoardMain = () => {
 
           <div
             style={{ width: "796px" }}
-            className={`flex items-center font-spoqaMedium text-gray-c8c8c8 group ml-px tracking-tight mt-px`}
+            className={`flex items-center font-spoqaMedium text-r666666 group ml-px tracking-tight`}
           >
             {item.type === "공지" ? (
               <div
@@ -515,20 +508,15 @@ const FreeBoardMain = () => {
             <p
               className={`${
                 item.type === "공지"
-                  ? "text-blue-6cbbe9 group-hover:text-blue-87eaff mr-5px -ml-px"
+                  ? "text-blue-6cbbe9 mr-5px -ml-px"
                   : item.type === "이벤트"
-                  ? "text-yellow-d2b28f group-hover:text-yellow-ffdeb3 mr-4px"
-                  : "group-hover:text-gray-fafafa mr-9px -ml-px"
-              } truncate text-left `}
+                  ? "mr-4px"
+                  : "mr-9px -ml-px"
+              } truncate text-left group-hover:opacity-60`}
               style={{
                 letterSpacing: "-0.090em",
                 maxWidth: "680px",
-                color:
-                  item.type === "공지"
-                    ? "#3b2461"
-                    : item.type === "이벤트"
-                    ? "#3c3096"
-                    : "#666666",
+                color: item.type === "공지" ? "#3b2461" : item.type === "이벤트" ? "#3c3096" : "#666666",
               }}
             >
               {item.text}
@@ -554,21 +542,17 @@ const FreeBoardMain = () => {
                 style={{ backgroundColor: "#f04281" }}
                 className="w-20px h-19px mt-px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0"
               >
-                <p className="flex items-center h-12px -ml-px">N</p>
+                <p className="flex items-center h-12px -ml-px -mt-px">N</p>
               </div>
             )}
           </div>
 
           <div
             style={{ width: "135px" }}
-            className={`flex justify-center items-center font-spoqaMedium tracking-tight text-gray-c8c8c8 text-center`}
+            className={`flex justify-center items-center font-spoqaMedium tracking-tight text-r666666 text-center`}
           >
             {item.type !== "일반" ? (
-              <img
-                src={WinnerLogo}
-                alt=""
-                className="-mt-3px -ml-3px flex-shrink-0"
-              />
+              <img src={WinnerLogo} alt="" className="-mt-3px -ml-3px flex-shrink-0" />
             ) : (
               <div className="flex space-x-4px flex-shrink-0 ml-3px">
                 {item.level === 1 ? (
@@ -582,16 +566,13 @@ const FreeBoardMain = () => {
                 ) : (
                   <img className="object-none" src={Rank5} alt="" />
                 )}
-                <p style={{ maxWidth: "120px" }} className="mt-2px truncate">
+                <p style={{ maxWidth: "120px" }} className="truncate">
                   {item.author}
                 </p>
               </div>
             )}
           </div>
-          <div
-            style={{ width: "190px" }}
-            className="flex items-center justify-center text-gray-c8c8c8 font-spoqa -ml-10px mt-px"
-          >
+          <div style={{ width: "190px" }} className="flex items-center justify-center text-r666666 font-spoqa -ml-10px">
             {item.type !== "일반" ? (
               ""
             ) : (
@@ -614,10 +595,7 @@ const FreeBoardMain = () => {
           borderRadius: "10px",
         }}
       >
-        <div
-          style={{ borderRadius: "10px" }}
-          className="w-full rounded-4px bg-gray-323232 overflow-hidden"
-        >
+        <div style={{ borderRadius: "10px" }} className="w-full rounded-4px bg-gray-323232 overflow-hidden">
           <div
             style={{
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
@@ -630,22 +608,13 @@ const FreeBoardMain = () => {
             >
               번호
             </div>
-            <div
-              style={{ width: "798px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px mb-2px"
-            >
+            <div style={{ width: "798px", color: "#eeeeee" }} className="flex items-center justify-center mt-px mb-2px">
               제목
             </div>
-            <div
-              style={{ width: "135px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px mb-2px"
-            >
+            <div style={{ width: "135px", color: "#eeeeee" }} className="flex items-center justify-center mt-px mb-2px">
               닉네임
             </div>
-            <div
-              style={{ width: "190px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px mb-2px"
-            >
+            <div style={{ width: "190px", color: "#eeeeee" }} className="flex items-center justify-center mt-px mb-2px">
               등록일시
             </div>
           </div>
@@ -657,7 +626,7 @@ const FreeBoardMain = () => {
 
       <div className="mt-20px flex justify-end">
         <button
-          onClick={() => history.push("/freeboard/compose/all")}
+          onClick={() => history.push("/freeboard/compose/live-casino")}
           className="flex items-center justify-center h-36px w-118px mr-px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 hover:filter hover:brightness-125 shadow-link"
         >
           <div
