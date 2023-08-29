@@ -3,24 +3,27 @@ import Card from "./Card";
 import Notice from "../../../images/middleList/notice.png";
 import announcementItems from "../../../images/middleList/announcement_item.png";
 import noticeItem from "../../../images/middleList/notice_item.png";
+import { Link } from "react-router-dom";
 
 const Item = ({ text, name }) => (
-  <div className="flex h-14px items-center hover:filter hover:brightness-125 cursor-pointer transition">
-    <img className="ml-15px mr-9px object-none" src={announcementItems} alt="" />
-    <p
-      style={{
-        display: "block",
-        color: "#666666",
-        whiteSpace: "nowrap",
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-      }}
-      className="text-14px flex items-center font-spoqaMedium tracking-tight w-full -ml-px"
-    >
-      {text}
-    </p>
-    <RightItem text={name} />
-  </div>
+  <Link to="/freeboard/view/0">
+    <div className="flex h-14px items-center hover:filter hover:brightness-125 cursor-pointer transition">
+      <img className="ml-15px mr-9px object-none" src={announcementItems} alt="" />
+      <p
+        style={{
+          display: "block",
+          color: "#666666",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+        }}
+        className="text-14px flex items-center font-spoqaMedium tracking-tight w-full -ml-px"
+      >
+        {text}
+      </p>
+      <RightItem text={name} />
+    </div>
+  </Link>
 );
 
 const RightItem = ({ text }) => (

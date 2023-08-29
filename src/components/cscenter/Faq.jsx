@@ -92,7 +92,7 @@ const Faq = () => {
                   <div className="w-full h-full px-17px flex items-start space-x-8px self-start"> 
 
                       <div 
-                          style={{backgroundColor: "#702caa", minWidth: "89px"}} 
+                          style={{backgroundColor: "#702caa", minWidth: "95px"}} 
                           className="h-29px rounded-full flex items-center justify-center text-white text-14px  tracking-tight mt-2px px-6px flex-shrink-0"
                       > 
                         <p className='-mt-px' style={{letterSpacing:'-0.1em'}}>{type}</p>

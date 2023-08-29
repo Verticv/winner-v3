@@ -27,7 +27,7 @@ const TopBar = ({ isAuthenticated, setAuth }) => {
               </Link>
             </div>
 
-            <div className="flex justify-end flex-shrink-0">
+            <div className="flex justify-end flex-shrink-0 z-50">
               {isAuthenticated ? (
                 <div>
                   <LoggedInHeader setAuth={setAuth} />

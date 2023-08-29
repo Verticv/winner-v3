@@ -120,10 +120,10 @@ const FreeBoardView2 = () => {
 
           <div
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
-            className="py-16px w-full border-b border-gray-252525 px-19px flex items-start text-14px font-spoqaMedium tracking-tight text-r666666"
+            className="py-16px pb-17px w-full border-b border-gray-252525 px-19px flex items-start text-14px font-spoqaMedium tracking-tight text-r666666"
           >
-            <img className="mt-2px ml-px" src={Rank1} alt="" />
-            <p className="ml-4px mt-2px text-14px tracking-tight">
+            <img className="mt-px ml-px" src={Rank1} alt="" />
+            <p className="ml-4px mt-px text-14px tracking-tight">
               하이도1207
               <div className="inline-block">
                 <div className="inline-block w-px h-10px mx-10px mt-px" style={{ background: "#ccc" }} />

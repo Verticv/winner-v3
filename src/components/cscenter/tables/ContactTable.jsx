@@ -71,14 +71,14 @@ const ContactTable = ({ array }) => {
             }}
             className={` ${
               item.text.length > 30 ? "" : "space-x-11px"
-            }  flex items-center cursor-pointer h-full ml-23px`}
+            }  flex items-center cursor-pointer h-full ml-23px group-hover:opacity-60`}
             onClick={() => history.push(item.path)}
           >
             <p
               style={{ maxWidth: "370px" }}
               className={`${
                 item.isRead === false && "font-bold"
-              } group-hover:text-gray-f1e9e9 truncate tracking-Stightest`}
+              } truncate tracking-Stightest `}
             >
               {item.text}
             </p>

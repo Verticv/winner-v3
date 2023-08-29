@@ -20,6 +20,7 @@ import Best from "../../images/live/best.png";
 import Card from "../../images/slotCarousel/card.png";
 
 import { CarouselBackButton, CarouselNextButton } from "./SlotGameHorizontalCarousel";
+import { Link } from "react-router-dom";
 
 const list = [
   {
@@ -109,52 +110,54 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
     const [isHover, setHover] = useState(null);
 
     return (
-      <div className="flex w-full justify-center">
-        <div
-          style={{
-            width: "148px",
-            height: "200px",
-          }}
-          className="flex flex-shrink-0 relative w-full rounded-6px overflow-hidden"
-          onMouseOver={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          {row2Game === "준비중" && isRow2 && (
-            <div className="w-full h-full absolute bg-black z-20 bg-opacity-60">
+      <Link to={!(row2Game === "준비중" && isRow2) && "/live-casino"}>
+        <div className="flex w-full justify-center">
+          <div
+            style={{
+              width: "148px",
+              height: "200px",
+            }}
+            className="flex flex-shrink-0 relative w-full rounded-6px overflow-hidden"
+            onMouseOver={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
+            {row2Game === "준비중" && isRow2 && (
+              <div className="w-full h-full absolute bg-black z-20 bg-opacity-60">
+                <button
+                  style={{
+                    boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+                    background: "linear-gradient(to right, #7e7e7e, #505050)",
+                  }}
+                  className="absolute z-30 top-83px left-25px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-default font-spoqaMedium text-14px tracking-tight"
+                >
+                  점검중
+                </button>
+              </div>
+            )}
+
+            <img src={Img} alt={alt} className="object-none object-center w-full rounded-6px" />
+            <div className="absolute bottom-4px ml-10px">
+              <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter mb-px">
+                {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
+              </p>
+            </div>
+            {isHover && game !== "점검중" && game !== "준비중" && (
               <button
+                className="absolute z-30 top-83px left-25px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight"
                 style={{
                   boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
-                  background: "linear-gradient(to right, #7e7e7e, #505050)",
+                  background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
                 }}
-                className="absolute z-30 top-83px left-25px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-default font-spoqaMedium text-14px tracking-tight"
               >
-                점검중
+                게임시작
               </button>
-            </div>
-          )}
-
-          <img src={Img} alt={alt} className="object-none object-center w-full rounded-6px" />
-          <div className="absolute bottom-4px ml-10px">
-            <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter mb-px">
-              {game.length > 19 ? `${game.slice(0, 19)} ...` : game}
-            </p>
+            )}
+            {isHover && game !== "점검중" && game !== "준비중" && (
+              <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px flex items-center justify-center"></div>
+            )}
           </div>
-          {isHover && game !== "점검중" && game !== "준비중" && (
-            <button
-              className="absolute z-30 top-83px left-25px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight"
-              style={{
-                boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
-                background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
-              }}
-            >
-              게임시작
-            </button>
-          )}
-          {isHover && game !== "점검중" && game !== "준비중" && (
-            <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px flex items-center justify-center"></div>
-          )}
         </div>
-      </div>
+      </Link>
     );
   };
 
@@ -191,19 +194,21 @@ export default function LiveHorizontalCarousel() {
         }}
       >
         <img src={Best} style={{ left: "10px", top: "22px" }} alt="" className="absolute z-30" />
-        <div style={{ minWidth: "193px" }} className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px">
-          <img
-            src={Left}
-            alt="left"
-            // style={{ width: '193px', height: '410px' }}
-            className="object-cover rounded-6px"
-          />
-          <div className="absolute bottom-5px ml-10px">
-            <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter">
-              프레그메틱플레이
-            </p>
+        <Link to="live-casino">
+          <div style={{ minWidth: "193px" }} className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px">
+            <img
+              src={Left}
+              alt="left"
+              // style={{ width: '193px', height: '410px' }}
+              className="object-cover rounded-6px"
+            />
+            <div className="absolute bottom-5px ml-10px">
+              <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter">
+                프레그메틱플레이
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
         {/* Start Carousel */}
         <div className="container mx-auto">
           <div className="animated_carousel-multiple flex items-center justify-center w-full h-full">

@@ -90,7 +90,7 @@ const LoggedInHeader = ({ setAuth }) => {
       <div className='space-x-5px flex items-center'>
         <LinkButton
           buttonText='충전신청'
-          linkProps={{ href: '/distributor-page' }} // TODO: add the correct link (Recharge application)
+          linkProps={{ href: '/money/charge' }} // TODO: add the correct link (Recharge application)
           buttonProps={{
             style: {
               background: 'linear-gradient(to right, #ff7760, #f14a53)',
@@ -99,7 +99,7 @@ const LoggedInHeader = ({ setAuth }) => {
         />
         <LinkButton
           buttonText='환전신청'
-          linkProps={{ href: '/distributor-page' }} // TODO: add the correct link (Exchange request)
+          linkProps={{ href: '/money/exchange' }} // TODO: add the correct link (Exchange request)
           buttonProps={{
             style: {
               background: 'linear-gradient(to right, #14c9e7, #3197e5)',
@@ -108,7 +108,7 @@ const LoggedInHeader = ({ setAuth }) => {
         />
         <LinkButton
           buttonText='포인트전환'
-          linkProps={{ href: '/distributor-page' }} // TODO: add the correct link (point conversion)
+          linkProps={{ href: '/mypage/points/points-apply' }} // TODO: add the correct link (point conversion)
           buttonProps={{
             style: {
               background: 'linear-gradient(to right, #f5c665, #fab072)',

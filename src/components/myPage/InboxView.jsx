@@ -40,8 +40,8 @@ const InboxView = () => {
             className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px"
           >
             <div className="text-15px font-spoqaMedium tracking-tight text-r666666 mt-2px">
-              <h1 className="align-top">
-                {TitleText} <span className="inline-block align-top ml-10px pt-2px">{NewLabel}</span>
+              <h1 className="align-top font-bold">
+                {TitleText} <span className="inline-block align-top ml-10px pt-2px font-normal">{NewLabel}</span>
               </h1>
             </div>
           </div>

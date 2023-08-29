@@ -9,9 +9,20 @@ export default function PopupControls({
   buttonChild,
   isPopupOpen,
   setPopupOpen,
+  forceOpen,
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef();
+
+  useEffect(() => {
+    if (forceOpen && forceOpen === true) {
+      setOpen(true);
+    } else if (forceOpen && forceOpen === false) {
+      setOpen(false);
+    }
+    return () => {};
+  }, [forceOpen]);
+
   const handler = useCallback(() => {
     if (open) {
       setOpen(false);

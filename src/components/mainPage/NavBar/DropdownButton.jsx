@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import DropDownControls from "components/dropdowns/DropDownControls";
 import { Link } from "react-router-dom";
 
-const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, ButtonActiveIcon, DropdownHeight }) => {
+const DropdownButton = ({
+  onMouseOver,
+  optionsArray,
+  buttonText,
+  ButtonIcon,
+  ButtonActiveIcon,
+  DropdownHeight,
+  setPopupOpen,
+}) => {
   const [isMyMenuOpen, setIsMyMenuOpen] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [hoveredOption, setHoveredOption] = useState("");
@@ -58,7 +66,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
           {optionsArray.map((option) => {
             const isOptionHovered = hoveredOption === option.text;
             return (
-              <Link to={option.path}>
+              <Link to={option.text !== "회원정보수정" && option.path} target={option.path === "/distributor-page" && "_blank"}>
                 <button
                   key={option.id}
                   className={dropDownCellClass}
@@ -70,8 +78,8 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
                     marginBottom: "1px",
                   }}
                   onClick={() => {
+                    option.text === "회원정보수정" && setPopupOpen(true)
                     setIsMyMenuOpen(false);
-                    option.action && option.action()
                   }}
                   onMouseOver={() => setHoveredOption(option.text)}
                   onMouseLeave={() => setHoveredOption("")}

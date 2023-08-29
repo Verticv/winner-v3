@@ -68,8 +68,8 @@ const HotelCasinoHover = ({ selection }) => {
       open={selection === 3}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
-        close: { left: hoverMenuPosition },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#edeedeb" },
+        close: { left: hoverMenuPosition, backgroundColor: "#edeedeb" },
       }}
       className="rounded-8px absolute w-auto m-auto h-98px bg-white"
     >

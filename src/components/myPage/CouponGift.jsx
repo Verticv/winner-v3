@@ -22,7 +22,7 @@ const CouponGift = () => {
         <div className="flex flex-col w-full items-center">
             <div className="w-full flex justify-between">
                 <MyPageTitle title="쿠폰선물"  couponCount={32} couponText="선물 가능한 쿠폰 : "/>
-                <div className=" text-16px w-full text-right text-eeeeee space-x-4px h-16px" style={{letterSpacing:'-0.1em'}}>
+                <div className=" text-16px w-full text-right text-eeeeee space-x-4px h-16px mt-px" style={{letterSpacing:'-0.1em'}}>
                     <span className="font-bold mt-px" style={{color:'#ffd98b'}}>쿠폰선물하기</span>
                     <span className='mt-px'>버튼을 클릭하여 쿠폰받을 회원을 선택하세요.</span>
                 </div>

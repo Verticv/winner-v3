@@ -392,10 +392,7 @@ const FreeBoardMain = () => {
     >
       <input className="w-0 text-16px" />
       <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
-        <label
-          style={{ color: "#666666" }}
-          className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c"
-        >
+        <label style={{ color: "#666666" }} className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c">
           {selectedCarrier}
         </label>
         <img className="object-none mr-9px" src={DownArrowIcon} alt="arrow" />
@@ -412,11 +409,7 @@ const FreeBoardMain = () => {
       }}
       className="w-full bg-gray-2e2e2e flex items-center justify-center space-x-10px"
     >
-      <DropDownControls
-        buttonChild={dropdownButton}
-        isDropdownOpen={isDropdownOpen}
-        setDropdownOpen={setDropdownOpen}
-      >
+      <DropDownControls buttonChild={dropdownButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
         {searchDropdown}
       </DropDownControls>
 
@@ -515,20 +508,15 @@ const FreeBoardMain = () => {
             <p
               className={`${
                 item.type === "공지"
-                  ? "text-blue-6cbbe9 group-hover:text-blue-87eaff mr-5px -ml-px"
+                  ? "text-blue-6cbbe9 mr-5px -ml-px"
                   : item.type === "이벤트"
-                  ? "text-yellow-d2b28f group-hover:text-yellow-ffdeb3 mr-4px"
-                  : "group-hover:text-gray-fafafa mr-9px -ml-px"
-              } truncate text-left `}
+                  ? "mr-4px"
+                  : "mr-9px -ml-px"
+              } truncate text-left group-hover:opacity-60`}
               style={{
                 letterSpacing: "-0.090em",
                 maxWidth: "680px",
-                color:
-                  item.type === "공지"
-                    ? "#3b2461"
-                    : item.type === "이벤트"
-                    ? "#3c3096"
-                    : "#666666",
+                color: item.type === "공지" ? "#3b2461" : item.type === "이벤트" ? "#3c3096" : "#666666",
               }}
             >
               {item.text}
@@ -564,11 +552,7 @@ const FreeBoardMain = () => {
             className={`flex justify-center items-center font-spoqaMedium tracking-tight text-r666666 text-center`}
           >
             {item.type !== "일반" ? (
-              <img
-                src={WinnerLogo}
-                alt=""
-                className="-mt-3px -ml-3px flex-shrink-0"
-              />
+              <img src={WinnerLogo} alt="" className="-mt-3px -ml-3px flex-shrink-0" />
             ) : (
               <div className="flex space-x-4px flex-shrink-0 ml-3px">
                 {item.level === 1 ? (
@@ -588,10 +572,7 @@ const FreeBoardMain = () => {
               </div>
             )}
           </div>
-          <div
-            style={{ width: "190px" }}
-            className="flex items-center justify-center text-r666666 font-spoqa -ml-10px"
-          >
+          <div style={{ width: "190px" }} className="flex items-center justify-center text-r666666 font-spoqa -ml-10px">
             {item.type !== "일반" ? (
               ""
             ) : (
@@ -614,10 +595,7 @@ const FreeBoardMain = () => {
           borderRadius: "10px",
         }}
       >
-        <div
-          style={{ borderRadius: "10px" }}
-          className="w-full rounded-4px bg-gray-323232 overflow-hidden"
-        >
+        <div style={{ borderRadius: "10px" }} className="w-full rounded-4px bg-gray-323232 overflow-hidden">
           <div
             style={{
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
@@ -630,22 +608,13 @@ const FreeBoardMain = () => {
             >
               번호
             </div>
-            <div
-              style={{ width: "798px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px mb-2px"
-            >
+            <div style={{ width: "798px", color: "#eeeeee" }} className="flex items-center justify-center mt-px mb-2px">
               제목
             </div>
-            <div
-              style={{ width: "135px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px mb-2px"
-            >
+            <div style={{ width: "135px", color: "#eeeeee" }} className="flex items-center justify-center mt-px mb-2px">
               닉네임
             </div>
-            <div
-              style={{ width: "190px", color: "#eeeeee" }}
-              className="flex items-center justify-center mt-px mb-2px"
-            >
+            <div style={{ width: "190px", color: "#eeeeee" }} className="flex items-center justify-center mt-px mb-2px">
               등록일시
             </div>
           </div>

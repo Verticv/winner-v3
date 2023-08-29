@@ -11,6 +11,7 @@ import Ball from "../../images/slotCarousel/ball.png";
 import { CarouselProvider, Slide, Slider } from "pure-react-carousel";
 import { CarouselBackButton, CarouselNextButton } from "./SlotGameHorizontalCarousel";
 import TabsComponent from "./TabsComponent";
+import { Link } from "react-router-dom";
 
 const sampleArray = [
   {
@@ -53,9 +54,7 @@ const Button = ({ number }) => {
           borderRadius: "5px",
         }}
       >
-        <p className="text-white font-robotoRegular text-14px tracking-tight h-14px flex items-center">
-          {number}
-        </p>
+        <p className="text-white font-robotoRegular text-14px tracking-tight h-14px flex items-center">{number}</p>
       </div>
     </button>
   );
@@ -210,17 +209,19 @@ export default function SportHorizontalCarousel() {
   );
 
   const HeaderRightComponent = (
-    <button
-      style={{
-        background: "#936cee",
-        boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
-        height: "28px",
-        width: "83px",
-      }}
-      className="ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px"
-    >
-      <p className="text-14px h-14px flex items-center mt-px">더보기</p>
-    </button>
+    <Link to="/bet-combination">
+      <button
+        style={{
+          background: "#936cee",
+          boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
+          height: "28px",
+          width: "83px",
+        }}
+        className="ml-5px flex items-center justify-center text-white text-14px font-spoqaMedium filter hover:brightness-125 rounded-13px"
+      >
+        <p className="text-14px h-14px flex items-center mt-px">더보기</p>
+      </button>
+    </Link>
   );
 
   return (

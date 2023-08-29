@@ -30,8 +30,8 @@ const SportsBetHistory = ({
       <div
         style={{
           width: isPopup ? "1041px" : "1040px",
-          marginLeft: isPopup && "2px",
-          marginTop: isPopup ? "10px" : "20px",
+          marginLeft: "2px",
+          marginTop: isPopup ? "10px" : "10px",
         }}
         className="h-full mt-20px rounded-4px"
       >

@@ -272,7 +272,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                   style={{
                     background: "#5e399a",
                     width: "1041px",
-                    paddingBottom: selectedTab.includes("/hotel-casino") && "4px",
+                    paddingBottom: (selectedTab.includes("/hotel-casino") || selectedTab.includes("/minigame")) && "4px",
                   }}
                   className="mt-10px w-full px-3px py-3px rounded-6px"
                 >

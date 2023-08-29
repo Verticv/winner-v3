@@ -20,23 +20,23 @@ const Footer = ({ fullWidth = false }) => {
       items: [
         {
           text: "프레그메틱플레이",
-          link: "/live-casino/pragmatic-play",
+          link: "/live-casino",
         },
         {
           text: "에볼루션",
-          link: "/live-casino/pragmatic-play",
+          link: "/live-casino",
         },
         {
           text: "로얄지",
-          link: "/live-casino/pragmatic-play",
+          link: "/live-casino",
         },
         {
           text: "아시아게이밍",
-          link: "/live-casino/pragmatic-play",
+          link: "/live-casino",
         },
         {
           text: "드림게이밍",
-          link: "/live-casino/pragmatic-play",
+          link: "/live-casino",
         },
       ],
     },
@@ -45,15 +45,15 @@ const Footer = ({ fullWidth = false }) => {
       items: [
         {
           text: "조합베팅",
-          link: "/live-casino/pragmatic-play",
+          link: "/bet-combination",
         },
         {
           text: "스페셜베팅",
-          link: "/live-casino/pragmatic-play",
+          link: "/bet-combination",
         },
         {
           text: "실시간스포츠",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
       ],
     },
@@ -71,11 +71,11 @@ const Footer = ({ fullWidth = false }) => {
       items: [
         {
           text: "두윈카지노",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
         {
           text: "보타카지노",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
       ],
     },
@@ -84,23 +84,23 @@ const Footer = ({ fullWidth = false }) => {
       items: [
         {
           text: "K-홀덤",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
         {
           text: "e-스포츠",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
         {
           text: "미니게임",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
         {
           text: "키론가상게임",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
         {
           text: "피싱게임",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
       ],
     },
@@ -109,19 +109,19 @@ const Footer = ({ fullWidth = false }) => {
       items: [
         {
           text: "문의하기",
-          link: "/live-casino/pragmatic-play",
+          link: "/cscenter/contact/all",
         },
         {
           text: "공지사항",
-          link: "/live-casino/pragmatic-play",
+          link: "/cscenter/announcement/all",
         },
         {
           text: "자주묻는질문",
-          link: "/live-casino/pragmatic-play",
+          link: "/cscenter/faq/all",
         },
         {
           text: "베팅규정",
-          link: "/live-casino/pragmatic-play",
+          link: "/cscenter/policy/sportsgame/soccer",
         },
       ],
     },

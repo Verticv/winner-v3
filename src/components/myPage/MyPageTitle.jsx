@@ -18,8 +18,8 @@ const MyPageTitle = ({
                 {couponCount && (
                     <>
                         <div className="ml-21px h-21px flex items-center space-x-20px mt-px">
-                            <div style={{backgroundColor:"#ebabff"}} className="h-11px w-px mt-px" />
-                            <div className="font-medium tracking-tight text-eeeeee space-x-px" style={{letterSpacing:'-0.1em'}}>
+                            <div style={{backgroundColor:"#ebabff"}} className="h-11px w-px mt-2px" />
+                            <div className="font-medium tracking-tight text-eeeeee space-x-px mt-px" style={{letterSpacing:'-0.1em'}}>
                                 <span>{couponText}</span>
                                 <span style={{color: "#ff6ea3"}} className="font-bold">{couponCount}</span>
                                 <span>장</span>

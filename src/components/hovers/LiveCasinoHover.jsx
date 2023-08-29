@@ -50,27 +50,28 @@ const LiveCasinoHover = ({ selection }) => {
       background: Img1_1,
       logo: Img1_1_logo,
       imgText: "프레그메틱플레이",
+      path: "/live-casino",
     },
     {
       id: 1,
       background: Img1_2,
       logo: Img1_2_logo,
       imgText: "에볼루션",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 2,
       background: Img1_3,
       logo: Img1_3_logo,
       imgText: "로얄지",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 3,
       background: Img1_4,
       logo: Img1_4_logo,
       imgText: "아시아게이밍",
-      path: "/esports/structure",
+      path: "/live-casino",
     },
     {
       id: 4,
@@ -78,21 +79,21 @@ const LiveCasinoHover = ({ selection }) => {
       logo: Img1_5_logo,
 
       imgText: "드림게이밍",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 5,
       background: Img1_6,
       logo: Img1_6_logo,
       imgText: "섹시게이밍",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 6,
       background: Img1_7,
       logo: Img1_7_logo,
       imgText: "빅게이밍",
-      path: "/esports/single",
+      path: "/live-casino",
     },
     {
       id: 7,
@@ -100,56 +101,56 @@ const LiveCasinoHover = ({ selection }) => {
       logo: Img1_9_logo,
 
       imgText: "오리엔탈게임",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 8,
       background: Img1_10,
       logo: Img1_10_logo,
       imgText: "이주기",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 9,
       background: Img1_11,
       logo: Img1_11_logo,
       imgText: "마이크로게이밍",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 10,
       background: Img1_12,
       logo: Img1_12_logo,
       imgText: "베가스라운지",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 11,
       background: Img1_13,
       logo: Img1_13_logo,
       imgText: "비터라이브",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 12,
       background: Img1_14,
       logo: Img1_14_logo,
       imgText: "타이산",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 13,
       background: Img1_16,
       logo: Img1_16_logo,
       imgText: "모티베이션",
-      path: "/esports/multi",
+      path: "/live-casino",
     },
     {
       id: 14,
       background: Img1_15,
       logo: Img1_15_logo,
       imgText: "준비중",
-      path: "/",
+      path: "#",
     },
   ];
 
@@ -229,8 +230,8 @@ const LiveCasinoHover = ({ selection }) => {
       open={selection === 0}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
-        close: { left: hoverMenuPosition },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#edeedeb" },
+        close: { left: hoverMenuPosition, backgroundColor: "#edeedeb" },
       }}
       className="rounded-8px absolute w-auto m-auto h-262px bg-white"
     >

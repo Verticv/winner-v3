@@ -145,32 +145,15 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
               background: "linear-gradient(to right, #df52ff, #6f2afd)",
             }}
             className="text-20px tracking-tighter text-white filter hover:brightness-125 mt-40px flex-shrink-0 rounded-full"
-            onClick={() => {
+            onClick={e => {
               history.push("/mypage/edit-info");
               setSelectedTab("/mypage/edit-info");
+              e.stopPropagation();
             }}
           >
             <p className="text-20px h-20px flex items-center justify-center mt-px">확인</p>
           </button>
         </div>
-
-        {/* <div style={{paddingTop:'110px'}} className="w-full h-full flex flex-col items-center space-y-40px">
-
-               
-
-              
-               
-                <button
-                    style={{ height: '58px', width: '390px', borderRadius: '2px', boxShadow: "0 2px 6px #00000090", textShadow: "0 0 6px #000000", color: '#ffdfbd', background: 'linear-gradient(to bottom, #a67c52, #80603f)' }}
-                    className="text-20px tracking-tighter font-spoqaMedium text-white hover:opacity-75 mt-40px flex-shrink-0"
-                    onClick={() => {
-                        history.push("/mypage/edit-info")
-                        setSelectedTab("/mypage/edit-info")
-                    }}
-                >
-                    확인
-                </button>
-            </div> */}
       </div>
     </div>
   );

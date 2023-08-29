@@ -18,13 +18,14 @@ const SlotGameHover = ({ selection }) => {
       background: KslotBanner,
       logo: KslotBannerLogo,
       imgText: "조합베팅",
+      path: "/bet-combination",
     },
     {
       id: 1,
       background: KslotBanner1,
       logo: KslotBannerLogo,
       imgText: "스페셜베팅",
-      path: "/esports/structure",
+      path: "/bet-combination",
     },
   ];
 
@@ -72,8 +73,8 @@ const SlotGameHover = ({ selection }) => {
       open={selection === 1}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050" },
-        close: { left: hoverMenuPosition },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#edeedeb" },
+        close: { left: hoverMenuPosition, backgroundColor: "#edeedeb" },
       }}
       className="rounded-8px absolute w-auto m-auto h-176px bg-white"
     >

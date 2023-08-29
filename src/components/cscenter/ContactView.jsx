@@ -32,7 +32,7 @@ const ContactView = () => {
                 maxWidth: "92px",
                 backgroundColor: "#999999",
               }}
-              className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
+              className={`px-12px h-29px rounded-full text-white text-12px flex items-center justify-center cursor-pointer`}
             >
               <p
                 style={{
@@ -50,7 +50,7 @@ const ContactView = () => {
                 maxWidth: "101px",
                 backgroundColor: "#40915f",
               }}
-              className={`px-8px h-29px rounded-full text-white text-14px flex items-center justify-center cursor-pointer`}
+              className={`px-12px h-29px rounded-full text-white text-12px flex items-center justify-center cursor-pointer`}
             >
               <p
                 style={{
@@ -63,7 +63,7 @@ const ContactView = () => {
               </p>
             </div>
 
-            <div className="text-15px font-spoqaMedium tracking-tight text-r666666 -ml-px mt-px">스포츠북 문의</div>
+            <div className="text-15px tracking-tight text-r666666 -ml-px mt-px font-bold">스포츠북 문의</div>
           </div>
 
           <div

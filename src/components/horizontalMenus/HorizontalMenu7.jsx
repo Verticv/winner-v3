@@ -18,7 +18,7 @@ const HorizontalMenu7 = ({
                     background: pathname === item.path 
                     ?'linear-gradient( to top, #4f3a7a 0, #a05bf6 50%, #cb78e6 100%)'
                     :'linear-gradient( to top, #4f3a7a 0, #a05bf6 50%, #f0d3ff 100%)',
-                    boxShadow: '0 2px 5px 0px rgba(0,0,0,0.6)'
+                    boxShadow: '0 2px 2px 0px rgba(0,0,0,0.4)'
                 }}
                 onClick={() => {
                     history.push(item.path)

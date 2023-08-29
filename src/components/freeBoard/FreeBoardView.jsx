@@ -121,7 +121,7 @@ const FreeBoardView = () => {
                 minWidth: "45px",
                 backgroundColor: "#9c3bbb",
               }}
-              className="px-10px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px flex-shrink-0"
+              className="px-12px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px flex-shrink-0"
             >
               공지
             </div>
@@ -131,7 +131,7 @@ const FreeBoardView = () => {
                 minWidth: "53px",
                 backgroundColor: "#714ce8",
               }}
-              className="px-10px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
+              className="px-12px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
             >
               이벤트
             </div>
@@ -146,7 +146,7 @@ const FreeBoardView = () => {
           >
             <img className="mb-2px h-17px w-72px object-contain mr-10px" src={WinnerSmall} alt="" />
             <div className="w-px h-10px mt-px mr-10px" style={{ background: "#ccc" }} />
-            <div className="font-spoqaMedium text-14px tracking-tight text-r666666 mt-px mr-6px">댓글</div>
+            <div className="font-spoqaMedium text-14px tracking-tight text-r666666 mr-6px">댓글</div>
             <div
               style={{ backgroundColor: "#f04281" }}
               className="pl-7px pr-7px h-20px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0 pt-px"

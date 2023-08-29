@@ -157,10 +157,7 @@ const SportsBetHistoryPanel = ({
         >
           {score}
         </div>
-        <div
-          style={{ width: isAttached ? "63px" : "61px", paddingLeft: isAttached && "3px" }}
-          className="text-r666666"
-        >
+        <div style={{ width: isAttached ? "63px" : "61px", paddingLeft: isAttached && "3px" }} className="text-r666666">
           {choice === "home" ? "홈팀 승" : "원정팀 승"}
         </div>
         <div
@@ -176,7 +173,7 @@ const SportsBetHistoryPanel = ({
                 ? "#33a1e9"
                 : "#666666",
           }}
-          className={`${isPopup ? "w-63px" : "w-70px"} pl-13px`}
+          className={`${isPopup ? "w-63px pl-17px" : "w-70px pl-13px"}`}
         >
           {result === "win" ? "승" : result === "lose" ? "패" : result === "cancel" ? "취소" : "결과없음"}
         </div>
@@ -252,8 +249,8 @@ const SportsBetHistoryPanel = ({
           </span>
         </div>
         <div className="flex items-center -mt-px">
-          <img src={ClockIcon} alt="" className="-mt-2px" />
-          <span className="ml-6px text-16px text-white mb-2px" style={{ letterSpacing: "0.02rem" }}>
+          <img src={ClockIcon} alt="" />
+          <span className="ml-6px text-16px text-white " style={{ letterSpacing: "0.02rem" }}>
             2021-06-29 15:45
           </span>
           <img className="ml-10px mb-3px" src={UKFlagIcon} alt="" />
@@ -312,8 +309,8 @@ const SportsBetHistoryPanel = ({
           </span>
         </div>
         <div className="flex items-center">
-          <img src={ClockIcon} alt="" className="-mt-2px" />
-          <span className="ml-6px text-16px text-white" style={{ letterSpacing: "0.02rem" }}>
+          <img src={ClockIcon} alt="" />
+          <span className="ml-6px text-16px text-white " style={{ letterSpacing: "0.02rem" }}>
             2021-06-29 15:45
           </span>
           <img className="ml-10px" src={UKFlagIcon} alt="" />
@@ -357,8 +354,8 @@ const SportsBetHistoryPanel = ({
           </span>
         </div>
         <div className="flex items-center">
-          <img src={ClockIcon} alt="" className="-mt-2px" />
-          <span className="ml-6px text-16px text-white" style={{ letterSpacing: "0.02rem" }}>
+          <img src={ClockIcon} alt="" />
+          <span className="ml-6px text-16px text-white " style={{ letterSpacing: "0.02rem" }}>
             2021-06-29 15:45
           </span>
           <img className="ml-10px" src={SpainFlagIcon} alt="" />
