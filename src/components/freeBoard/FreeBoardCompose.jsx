@@ -61,7 +61,7 @@ const FreeBoardCompose = () => {
           </div>
 
           {attachedArray.map((id) => (
-            <div className="py-20px border-b border-gray-252525 px-30px space-y-28px">
+            <div className="py-20px border-b border-gray-252525 px-30px space-y-28px bg-white">
               <SportsBetHistory
                 type={id}
                 id={id}

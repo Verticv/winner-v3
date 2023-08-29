@@ -116,7 +116,7 @@ const GameDetails = () => {
           <img className="ml-px -mt-2px" src={USFlagIcon} alt="" />
         </div>
       </div>
-      <div className="w-full h-54px  flex items-center tracking-tight pt-px">
+      <div style={{ backgroundColor: "#f7f7f7" }} className="w-full h-54px  flex items-center tracking-tight pt-px">
         <div
           style={{ marginLeft: "25px", width: "114px" }}
           className="flex items-center justify-center font-roboto text-14px text-r666666 tracking-tight"
@@ -212,7 +212,7 @@ const GameDetails = () => {
           style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
         >
           <div style={{ marginLeft: "25px", width: "114px" }} className="h-14px flex justify-center items-center">
-            <p className="-ml-4px">경기일시</p>
+            <p className="-ml-8px">경기일시</p>
           </div>
           <div style={{ marginLeft: "0" }} className="w-80px h-14px flex justify-center items-center">
             종목

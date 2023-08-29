@@ -28,7 +28,7 @@ const MinigameResults = ({pageTitle = "미니게임"}) => {
     return (
         <div>
             <MyPageTitle title={pageTitle} />
-            <div className="relative w-full mt-20px">
+            <div className="relative w-full mt-10px">
               <HorizontalMenu7 itemsArray={tabsArray}  />
             </div>
 

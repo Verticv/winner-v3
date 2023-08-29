@@ -337,7 +337,7 @@ const FreeBoardMain = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(true);
 
   const dropDownCellClass =
-    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px";
+    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px text-r666666";
 
   const searchDropdown = (
     <div
