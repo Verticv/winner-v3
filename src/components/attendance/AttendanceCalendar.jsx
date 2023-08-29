@@ -10,10 +10,11 @@ import {
     addMonths,
     subMonths
 } from 'date-fns'
-import Arrow from '../../images/arrows/chevron_right_v2.png'
-// import Arrow2 from '../../images/arrows/chevron_left_v2.png'
+import Arrow from '../../images/arrows/calender_arrow.png'
 import AttendanceEmpty from '../../images/attendance/attendance_empty.png'
 import AttendanceFilled from '../../images/attendance/attendance_filled.png'
+import AttendanceBanner from '../../images/attendance/attendance_banner1.png'
+import Check from '../../images/attendance/check.png'
 
 class Calendar extends React.Component {
   state = {
@@ -29,13 +30,13 @@ class Calendar extends React.Component {
     const dateFormat2 = "MM";
 
     return (
-        <div className="flex items-center w-full justify-center h-23px space-x-30px mt-10px mb-30px">
+        <div className="flex items-center w-full justify-center h-23px space-x-30px mt-10px mb-31px">
             <img className={`cursor-pointer transform rotate-180 hover:opacity-75`} onClick={this.prevMonth} src={Arrow} alt="" />
-            <div className="flex items-center h-23px text-blue-4c98ff">
+            <div className="flex items-center h-23px text-white -mt-3px">
                 <div className="flex items-center font-roboto text-32px h-23px">{format(this.state.currentMonth, dateFormat1)}</div>
-                <div className="flex items-center font-spoqaMedium text-25px h-23px pt-2px ml-px">년</div>
+                <div className="flex items-center text-25px h-23px pt-2px ml-px">년</div>
                 <div className="flex items-center font-roboto text-32px h-23px ml-6px">{format(this.state.currentMonth, dateFormat2)}</div>
-                <div className="flex items-center font-spoqaMedium text-25px h-23px pt-2px ml-px">월</div>
+                <div className="flex items-center text-25px h-23px pt-2px ml-px">월</div>
             </div>
             <img className={`${this.state.currentMonth < this.state.today ? "opacity-100 hover:opacity-75" : "opacity-20"} cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
 
@@ -45,8 +46,12 @@ class Calendar extends React.Component {
 
     renderDays() {
         return (
-            <div className="text-21px font-spoqaBold text-gray-c8c8c8 flex h-50px border-l rounded-t-lg border-gray-252525">
-                <div className="w-full flex items-center justify-center text-red-e65454">일</div>
+          <div className="text-21px font-bold text-eeeeee flex h-50px border-l rounded-t-10px border-eeeeee"
+          style={{
+              background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+            }}>
+            <div className="w-full flex items-center justify-center text-red-e65454"
+            style={{color:'#ff7f7f'}}>일</div>
                 <div className="w-full flex items-center justify-center">월</div>
                 <div className="w-full flex items-center justify-center">화</div>
                 <div className="w-full flex items-center justify-center">수</div>
@@ -80,14 +85,11 @@ class Calendar extends React.Component {
               days.push(
                     <div
                         style={{height:"130px"}}
-                        className="bg-gray-2b2b2a relative w-full border-t border-l border-gray-252525 flex items-center justify-center"
+                        className="relative w-full border-t border-l border-eeeeee flex items-center justify-center"
                         key={day}
                     >
-                        <div className={`${
-                            i === 0 
-                            ? " text-red-e65454"
-                            : " text-gray-c8c8c8"} 
-                            text-21px font-roboto mt-19px ml-18px h-full w-full flex items-start justify-start`}
+                        <div className={`
+                           text-r666666 text-21px font-roboto mt-19px ml-18px h-full w-full flex items-start justify-start`}
                         >
                             <p>{isSameMonth(day, monthStart) && formattedDate}</p>
                         </div>
@@ -137,36 +139,81 @@ class Calendar extends React.Component {
       })
   }
 
+
   render() {
     return (
       <div className="w-full flex flex-col items-center">
         {this.renderHeader()}
         <div
-        style={{ width:"1260px", background: "linear-gradient(to top, #1f1f1e 80%, #343434 100%)" }}
-          className="rounded-4px shadow-table overflow-hidden p-px">
+        style={{ width:"1260px",
+          background: "linear-gradient(to top, #ededeb, #cb78e6)",
+          boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
+        }}
+          className="rounded-10px overflow-hidden p-px">
+         
           <div  
-              className="w-full relative bg-gray-323232 rounded-4px  p-72px flex justify-center"
+            className="w-full relative rounded-10px p-73px"
+            style={{background:'#f7f7f7',paddingTop:'74px',paddingBottom:'74px'}}
           >
-              <div className="bg-gray-252525 rounded-lg border-t border-b border-r border-gray-252525 overflow-hidden shadow-table">
-                  {this.renderDays()}
-                  {this.renderCells()}
+            <div
+              className="w-full bg-white rounded-8px border mb-15px flex pt-15px pb-26px relative"
+              style={{ borderColor: '#cccccc' }}>
+                <div style={{width:'171px'}} className="flex items-center justify-center pt-11px">
+                  <img src={AttendanceFilled} alt="" className="w-98px h-98px"/>
+                </div>
+              
+              <div className="w-full">
+                <div className="flex space-x-8px text-r666666 items-center">
+                  <img src={Check} alt="" className='w-23px h-23px flex-shrink-0'/>
+                  <span className="text-20px">출석체크 이벤트 </span>
+                </div>
+                <div className="mt-12px flex flex-col space-y-16px text-r666666 tracking-tight text-16px ml-2px"
+                  >
+                  <span className="h-14px space-y-4px">
+                    <span className="mr-5px font-bold">✓</span>
+                    일주일(7일) 연속 출석 시.
+                    <span className="font-bold" style={{ color: "#f04281" }}>1만 포인트</span>
+                    지급
+                  </span>
+                  <span className="h-14px space-y-4px">
+                    <span className="mr-5px font-bold">✓</span>
+                    매일 3만원 이상 충전, 일주일(7일) 출석 시
+                    <span className="font-bold" style={{ color: "#f04281" }}>3만 포인트</span>
+                    지급
+                  </span>
+                  <span className="h-14px space-y-4px">
+                    <span className="mr-5px font-bold">✓</span>
+                    매일 3만원 이상 충전, 한달 출석 시
+                    <span className="font-bold" style={{ color: "#f04281" }}>10만 포인트</span>
+                    지급
+                  </span>
+                </div>
+                <img src={AttendanceBanner} alt="" className='absolute right-10px bottom-7px'/>
               </div>
-          
-              <div className="absolute bottom-0 h-19px flex items-center text-20px font-spoqaMedium mb-26px text-gray-c8c8c8 tracking-tight">
+                
+            </div>
+            <div className="rounded-10px border border-eeeeee">
+              <div className=" rounded-10px border-t border-b border-r border-eeeeee overflow-hidden">
+                
+                    {this.renderDays()}
+                    {this.renderCells()}
+              </div>
+            </div>
+              <div className="flex absolute bottom-3px left-0 right-0 h-19px justify-center items-center text-20px mb-26px text-r666666 tracking-tight">
                   2021년 07월은 총 
-                  <p className="mx-4px font-spoqaBold text-blue-4c98ff">7일</p>
+                  <p className="mx-4px font-bold" style={{color:'#33a1e9'}}>7일</p>
                   출석 하였습니다
               </div>
           </div>
         </div>
         <button 
-          className="flex items-center justify-center h-52px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 mt-20px mb-63px p-px hover:filter hover:brightness-125 shadow-link"
-          style={{width:'192px'}}
+          className="flex items-center justify-center h-52px rounded-6px  mt-20px mb-63px p-px hover:filter hover:brightness-125 shadow-link cursor-pointer"
+          style={{width:'192px',background: "linear-gradient(to right, #15cfee, #3197e5)",boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.3)'}}
           onClick={this.checkAttendance}
         >
-            <div style={{width:'190px'}} className="flex items-center justify-center h-50px rounded-4px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer">
-                <span className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff text-shadow-5 mt-px">출석체크하기</span>
-            </div>
+          
+          <span className="font-spoqaMedium tracking-tight text-16px text-white text-shadow-5 -mt-px">출석체크하기</span>
+           
         </button>
 
       </div>
