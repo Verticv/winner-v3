@@ -8,7 +8,7 @@ const EsportsBetHistoryTable = () => {
     >
       <div className="rounded-10px overflow-hidden">
         <div
-          className="text-14px tracking-tight text-gray-ccc2b6 h-55px flex items-center pt-px border-b pr-14px"
+          className="font-medium text-14px tracking-tight h-55px flex items-center border-b "
           style={{
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
