@@ -49,7 +49,7 @@ const WinDrawLose = ({pageTitle = "승무패"}) => {
             <div className="relative w-full mt-11px">
                 <HorizontalMenu1 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
             </div>
-            <div className='mt-20px'>
+            <div className='mt-21px'>
                 <DateSearchBar isGameResultsSearch={true} />
             </div>
 

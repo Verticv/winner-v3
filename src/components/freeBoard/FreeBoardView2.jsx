@@ -396,7 +396,7 @@ const FreeBoardView2 = () => {
                   resize: "none",
                   boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-aaaaaa bg-gray-252525 rounded-6px text-r666666"
+                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-aaaaaa bg-gray-252525 rounded-6px text-r666666 -ml-px"
                 placeholder="두개의 이벤트 모두 참여하였습니다."
               />
               <button
@@ -454,7 +454,7 @@ const FreeBoardView2 = () => {
 
             <div
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff", minHeight: "54px" }}
-              className="rounded-6px border w-full  flex items-start px-19px pt-17px pb-15px justify-between text-r666666 mb-10px mt-px"
+              className="rounded-6px border w-full  flex items-start px-19px pt-17px pb-14px justify-between text-r666666 mb-10px mt-px"
             >
               <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-2px">
                 두개의 이벤트 모두 참여하였습니다
@@ -470,7 +470,7 @@ const FreeBoardView2 = () => {
                   resize: "none",
                   boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-aaaaaa bg-gray-252525 rounded-6px text-r666666 bg-scroll scroll-div"
+                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-aaaaaa bg-gray-252525 rounded-6px text-r666666 bg-scroll scroll-div -ml-px"
                 placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
               />
 

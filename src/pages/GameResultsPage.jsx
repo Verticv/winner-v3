@@ -51,7 +51,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
         background: "linear-gradient(to right, #b644c4, #351894)",
       }}
     >
-      <div style={{ marginTop: "154px" }} className="flex flex-col items-start limit:items-center w-full h-full">
+      <div style={{ marginTop: "155px" }} className="flex flex-col items-start limit:items-center w-full h-full">
         <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
           <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
         </div>
