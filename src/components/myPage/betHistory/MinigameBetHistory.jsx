@@ -76,7 +76,7 @@ const MinigameBetHistory = ({isState, setState, showSub = true, attachedArray, s
         <div className="w-full">
             {showSub === true && (
           <div className="mt-10px h-88px w-full px-3px py-3px rounded-6px"
-          style={{background:'rgba(52, 34, 103, 0.6)'}}>
+          style={{background:'rgba(52, 34, 103, 0.6)', paddingBottom:isPopup && "4px"}}>
             <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
             </div>
           )}
