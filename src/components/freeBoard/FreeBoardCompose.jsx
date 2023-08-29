@@ -73,10 +73,13 @@ const FreeBoardCompose = () => {
             </div>
           ))}
 
-          <div style={{ height: "401px" }} className="w-full bg-gray-323232">
+          <div
+            style={{ height: "401px", backgroundColor: "#ffffff" }}
+            className="w-full bg-gray-323232"
+          >
             <textarea
               style={{ resize: "none", backgroundColor: "#ffffff" }}
-              className="bg-gray-323232 outline-none w-full h-full  px-19px pb-19px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-gray-c8c8c8"
+              className="scroll-div2 bg-gray-323232 outline-none w-full h-full  px-19px pb-19px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-gray-c8c8c8"
               placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
             />
           </div>
