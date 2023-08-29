@@ -284,7 +284,7 @@ const MoneyCharge = () => {
                         <div className="flex space-x-10px mt-15px h-44px items-center">
                             
                             <div >
-                                <Title text="보너스 혜택" />
+                                <Title text="보너스 받기" />
                             </div>
                             
                             <div className="flex space-x-5px w-full flex-col justify-center">
