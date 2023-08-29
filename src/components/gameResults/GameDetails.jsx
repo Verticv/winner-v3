@@ -121,7 +121,7 @@ const GameDetails = () => {
           style={{ marginLeft: "25px", width: "114px" }}
           className="flex items-center justify-center font-roboto text-14px text-r666666 tracking-tight"
         >
-          <p className="-ml-4px">2021-06-29 15:45</p>
+          <p className="-ml-6px">2021-06-29 15:45</p>
         </div>
         <div className="w-80px flex items-center justify-center text-14px text-r666666">축구</div>
 

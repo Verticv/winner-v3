@@ -190,7 +190,7 @@ const SportsBetHistoryPanel = ({
       style={{ borderColor: "#6852a7", overflow: "inherit" }}
     >
       <div
-        className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : " pl-17px pr-18px"}`}
+        className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : " pl-17px pr-17px"}`}
         style={{ background: "#6852a7" }}
       >
         <div className="flex items-center -mt-3px">
@@ -210,7 +210,7 @@ const SportsBetHistoryPanel = ({
           <span className="ml-6px text-16px text-white " style={{ letterSpacing: "0.02rem" }}>
             2021-06-29 15:45
           </span>
-          <img className="ml-10px mb-3px" src={USFlagIcon} alt="" />
+          <img className="ml-11px mb-3px" src={USFlagIcon} alt="" />
         </div>
       </div>
       <div className="flex flex-col w-full " style={{ background: "#fff" }}>
