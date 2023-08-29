@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LinkButton = ({
   buttonText,
+  path,
   linkProps: {
     style: linkStyle,
     className: linkClassName,
@@ -16,10 +18,10 @@ const LinkButton = ({
   },
 }) => {
   return (
-    <a
-      target='_blank'
+    <Link
       style={linkStyle}
       className={linkClassName}
+      to={path}
       {...linkProperties}
     >
       <button
@@ -36,7 +38,7 @@ const LinkButton = ({
       >
         {buttonText}
       </button>
-    </a>
+    </Link>
   );
 };
 

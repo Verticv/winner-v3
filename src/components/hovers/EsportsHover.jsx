@@ -37,7 +37,7 @@ const EsportsHover = ({ selection }) => {
       background: OverwatchBanner,
       logo: SuddenAttackBannerLogo,
       imgText: "보타카지노",
-      path: "#",
+      path: "/",
     },
     {
       id: 3,
@@ -100,7 +100,7 @@ const EsportsHover = ({ selection }) => {
           className="absolute flex flex-col justify-end items-center h-full right-0 bottom-0 z-0"
         >
           <p className="text-white text-12px tracking-tighter font-spoqa mb-7px flex">
-            {item.imgText} {item.path === "/" && <p style={{ color: "#ebabff" }}>(준비중)</p>}
+            {item.imgText} {item.path === "#" && <p style={{ color: "#ebabff" }}>(준비중)</p>}
           </p>
         </div>
       </div>
@@ -112,8 +112,8 @@ const EsportsHover = ({ selection }) => {
       open={selection === 4}
       duration={200}
       styles={{
-        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#edeedeb" },
-        close: { left: hoverMenuPosition, backgroundColor: "#edeedeb" },
+        open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#ededeb" },
+        close: { left: hoverMenuPosition, backgroundColor: "#ededeb" },
       }}
       className="rounded-8px absolute w-auto m-auto h-262px bg-white"
     >

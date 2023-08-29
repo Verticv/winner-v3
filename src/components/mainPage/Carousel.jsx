@@ -48,6 +48,7 @@ const Carousel = () => {
         <img
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
+          onClick={() => (currentImage % 2 === 1 ? history.push("/live-casino") : history.push("/bet-combination"))}
           key={i + `${img}`}
           src={images[i]}
           className={`${
@@ -72,7 +73,7 @@ const Carousel = () => {
       className="absolute bottom-0 right-0 rounded-full cursor-pointer filter hover:brightness-125 flex items-center justify-center"
       onClick={() => (currentImage % 2 === 1 ? history.push("/live-casino") : history.push("/bet-combination"))}
     >
-      <p style={{ fontSize: "15px" }} className="text-white font-spoqaBold flex items-center h-15px">
+      <p style={{ fontSize: "15px" }} className="text-white font-bold flex items-center h-15px">
         게임시작
       </p>
     </div>

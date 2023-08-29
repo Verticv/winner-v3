@@ -6,20 +6,19 @@ import {
   deleteFavoritePreMatchCardById,
   deleteFavoriteLaLigaCardById,
   deleteFavoriteBundesligaCardById,
-  setBetSlipData,
 } from "reducers/nonLive-reducer";
 import { useDispatch } from "react-redux";
 
 const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t4, t5, score3, card, type }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered] = useState(false);
   const [cardHovered, setCardHovered] = useState(false);
   const [cardSelected] = useState(false);
 
-  const [leftActive, setLeftActive] = useState(false);
-  const [centerActive, setCenterActive] = useState(false);
-  const [rightActive, setRightActive] = useState(false);
+  const [leftActive] = useState(false);
+  const [centerActive] = useState(false);
+  const [rightActive] = useState(false);
 
   const hoverStyle = {
     background: "#936cee",
@@ -27,30 +26,30 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
     // borderBottomLeftRadius: "4px",
   };
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
 
-  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered1] = useState(false);
 
   const hoverStyle1 = {
     background: "#936cee",
     color: "#ffffff",
   };
 
-  const handleMouseEnter1 = () => {
-    setIsHovered1(true);
-  };
+  // const handleMouseEnter1 = () => {
+  //   setIsHovered1(true);
+  // };
 
-  const handleMouseLeave1 = () => {
-    setIsHovered1(false);
-  };
+  // const handleMouseLeave1 = () => {
+  //   setIsHovered1(false);
+  // };
 
-  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered2] = useState(false);
 
   const hoverStyle2 = {
     background: "#936cee",
@@ -58,13 +57,13 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
     borderBottomRightRadius: "4px",
   };
 
-  const handleMouseEnter2 = () => {
-    setIsHovered2(true);
-  };
+  // const handleMouseEnter2 = () => {
+  //   setIsHovered2(true);
+  // };
 
-  const handleMouseLeave2 = () => {
-    setIsHovered2(false);
-  };
+  // const handleMouseLeave2 = () => {
+  //   setIsHovered2(false);
+  // };
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -210,16 +209,16 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               ...(isHovered ? hoverStyle : null),
             }}
             className="flex items-center justify-between"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => {
-              dispatch(
-                setBetSlipData({
-                  data: card,
-                })
-              );
-              setLeftActive((prev) => !prev);
-            }}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
+            // onClick={() => {
+            //   dispatch(
+            //     setBetSlipData({
+            //       data: card,
+            //     })
+            //   );
+            //   setLeftActive((prev) => !prev);
+            // }}
           >
             <p
               style={{
@@ -246,16 +245,16 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               ...(isHovered1 ? hoverStyle1 : null),
             }}
             className="flex items-center justify-between border-l border-r border-solid h-30px "
-            onMouseEnter={handleMouseEnter1}
-            onMouseLeave={handleMouseLeave1}
-            onClick={() => {
-              dispatch(
-                setBetSlipData({
-                  data: card,
-                })
-              );
-              setCenterActive((prev) => !prev);
-            }}
+            // onMouseEnter={handleMouseEnter1}
+            // onMouseLeave={handleMouseLeave1}
+            // onClick={() => {
+            //   dispatch(
+            //     setBetSlipData({
+            //       data: card,
+            //     })
+            //   );
+            //   setCenterActive((prev) => !prev);
+            // }}
           >
             <p
               style={{
@@ -282,16 +281,16 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               ...(isHovered2 ? hoverStyle2 : null),
             }}
             className="flex items-center justify-between"
-            onMouseEnter={handleMouseEnter2}
-            onMouseLeave={handleMouseLeave2}
-            onClick={() => {
-              dispatch(
-                setBetSlipData({
-                  data: card,
-                })
-              );
-              setRightActive((prev) => !prev);
-            }}
+            // onMouseEnter={handleMouseEnter2}
+            // onMouseLeave={handleMouseLeave2}
+            // onClick={() => {
+            //   dispatch(
+            //     setBetSlipData({
+            //       data: card,
+            //     })
+            //   );
+            //   setRightActive((prev) => !prev);
+            // }}
           >
             <p
               style={{

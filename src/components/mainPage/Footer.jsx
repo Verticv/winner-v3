@@ -62,7 +62,7 @@ const Footer = ({ fullWidth = false }) => {
       items: [
         {
           text: "케이플레이슬롯",
-          link: "/live-casino/pragmatic-play",
+          link: "#",
         },
       ],
     },

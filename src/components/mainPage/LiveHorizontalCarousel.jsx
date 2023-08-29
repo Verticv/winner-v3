@@ -173,6 +173,8 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
 
 export default function LiveHorizontalCarousel() {
   const [isPlaying, setPlaying] = useState(true);
+  const [mainHover, setMainHover] = useState(false);
+
   return (
     <div className="flex flex-col">
       <div className="flex items-center mb-5px -ml-4px">
@@ -195,7 +197,12 @@ export default function LiveHorizontalCarousel() {
       >
         <img src={Best} style={{ left: "10px", top: "22px" }} alt="" className="absolute z-30" />
         <Link to="live-casino">
-          <div style={{ minWidth: "193px" }} className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px">
+          <div
+            style={{ minWidth: "193px" }}
+            onMouseEnter={() => setMainHover(true)}
+            onMouseLeave={() => setMainHover(false)}
+            className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px"
+          >
             <img
               src={Left}
               alt="left"
@@ -207,6 +214,21 @@ export default function LiveHorizontalCarousel() {
                 프레그메틱플레이
               </p>
             </div>
+            {mainHover && (
+              <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px flex items-center justify-center"></div>
+            )}
+            {mainHover && (
+              <button
+                className="absolute z-30 left-45px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight"
+                style={{
+                  boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+                  background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
+                  top: "191px",
+                }}
+              >
+                게임시작
+              </button>
+            )}
           </div>
         </Link>
         {/* Start Carousel */}

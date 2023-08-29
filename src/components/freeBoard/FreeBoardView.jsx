@@ -121,7 +121,7 @@ const FreeBoardView = () => {
                 minWidth: "45px",
                 backgroundColor: "#9c3bbb",
               }}
-              className="px-12px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px flex-shrink-0"
+              className="px-12px h-26px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px flex-shrink-0"
             >
               공지
             </div>
@@ -131,7 +131,7 @@ const FreeBoardView = () => {
                 minWidth: "53px",
                 backgroundColor: "#714ce8",
               }}
-              className="px-12px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
+              className="px-12px h-26px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
             >
               이벤트
             </div>

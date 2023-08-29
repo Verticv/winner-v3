@@ -66,7 +66,7 @@ const HotelCasinoBetHistory = ({ isState, setState, showSub = true, isPopup = fa
       {showSub === true && (
         <>
           <div
-            className="mt-10px h-87px w-full px-3px py-3px rounded-6px"
+            className="mt-10px h-88px w-full px-3px py-3px rounded-6px"
             style={{ background: "rgba(52, 34, 103, 0.6)" }}
           >
             <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />

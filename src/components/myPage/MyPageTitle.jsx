@@ -17,7 +17,7 @@ const MyPageTitle = ({
                 <label className="font-bold text-22px ml-4px -mt-4px text-shadow-5 tracking-Stightest" style={{color:'#eeeeee'}} >{title}</label>
                 {couponCount && (
                     <>
-                        <div className="ml-21px h-21px flex items-center space-x-20px mt-px">
+                        <div className="ml-21px h-21px flex items-center space-x-20px mt-2px">
                             <div style={{backgroundColor:"#ebabff"}} className="h-11px w-px mt-2px" />
                             <div className="font-medium tracking-tight text-eeeeee space-x-px mt-px" style={{letterSpacing:'-0.1em'}}>
                                 <span>{couponText}</span>

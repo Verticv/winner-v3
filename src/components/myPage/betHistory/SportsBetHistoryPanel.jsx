@@ -173,7 +173,7 @@ const SportsBetHistoryPanel = ({
                 ? "#33a1e9"
                 : "#666666",
           }}
-          className={`${isPopup ? "w-63px pl-17px" : "w-70px pl-13px"}`}
+          className={`${isPopup ? "w-63px pl-17px" : !isAttached ? "w-70px pl-5px" : "w-70px pl-13px"}`}
         >
           {result === "win" ? "승" : result === "lose" ? "패" : result === "cancel" ? "취소" : "결과없음"}
         </div>
@@ -187,7 +187,7 @@ const SportsBetHistoryPanel = ({
       style={{ borderColor: "#6852a7", overflow: "inherit" }}
     >
       <div
-        className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : " pl-17px pr-17px"}`}
+        className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : (!isPopup && !isAttached) ? "pl-17px pr-18px" : " pl-17px pr-17px"}`}
         style={{ background: "#6852a7" }}
       >
         <div className="flex items-center -mt-3px">
@@ -436,6 +436,7 @@ const SportsBetHistoryPanel = ({
             style={{
               width: isAttached === true ? "58px" : "70px",
               marginRight: isAttached === true ? (isFullPage ? "20px" : "25px") : "6px",
+              paddingLeft: !isPopup && !isAttached ? "11px" : "16px",
             }}
             className="h-full flex items-center justify-center mb-px pl-16px pb-px"
           >
