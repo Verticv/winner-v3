@@ -29,7 +29,7 @@ const MoneyCharge = () => {
             
             <MyPageTitle title="보유머니 충전" />
 
-            <div style={{height: "187px",borderColor:'#cccccc'}} className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px">
+            <div style={{height: "187px",borderColor:'#cccccc'}} className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-bold">
                 <div className="flex items-center h-26px space-x-9px">
                     <img src={AlertIcon} alt="" />
                     <span className="text-rf04281 text-20px tracking-tight -mt-2px" style={{WebkitTextStroke:"0.2px",letterSpacing: '-0.09em'}}>확인 / 필독사항</span>
@@ -99,14 +99,14 @@ const MoneyCharge = () => {
                                 <div className="mt-px ml-8px flex">
                                     <p className="font-bold" style={{color:'#fee300'}}>충전금액 입력</p>
                                     란에 실제 입금하신 금액과 동일한 금액을 입력하고
-                                    <p className="font-bold text-golden-highLight mx-3px">신청하기</p>
+                                    <p className="font-bold text-golden-highLight mx-3px" style={{color:'#fee300'}}>신청하기</p>
                                     버튼을 눌러주세요.
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div style={{width: "906px"}} className="ml-59px mt-26px flex flex-col">
+                    <div style={{width: "906px"}} className="ml-57px mt-26px flex flex-col">
                         <div className="flex space-x-8px">
                             <Title text="현재 보유머니" />
                             <div className="w-full h-44px">
@@ -144,7 +144,7 @@ const MoneyCharge = () => {
                             </div>
                         </div>
                     </div>
-                    <div style={{marginLeft: "270px", paddingRight:'115px'}} className={`mt-21px flex space-x-5px w-full justify-start`}>
+                    <div style={{marginLeft: "268px", paddingRight:'115px'}} className={`mt-21px flex space-x-5px w-full justify-start`}>
                         <button 
                             style={{
                                 background: 'linear-gradient(to top, #ada8a8, #d0d0d0)',
@@ -253,12 +253,12 @@ const MoneyCharge = () => {
                 >
                 <div className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                         style={{background:'linear-gradient(to top, #6b22ff, #df52ff)'}}>
-                        <span className="tracking-tight text-14px text-white -mt-px">정정</span>
+                        <span className="tracking-tight text-14px text-white -mt-px text-shadow-5">정정</span>
                     </div>
                 </button>
                     </div>
                     
-                    <div style={{width: "906px", marginTop:"23px"}} className="ml-59px flex flex-col">
+                    <div style={{width: "906px", marginTop:"23px"}} className="ml-57px flex flex-col">
                         <div className="flex space-x-8px">
                             <Title text="보너스 금액" />
                             <div className="w-full h-44px">
@@ -296,7 +296,7 @@ const MoneyCharge = () => {
                                         onClick={() => setRadioValue("slot_game")}
                                     >
                                         <input type="radio" className="ml-12px" name="gender" checked={radioValue === "slot_game"} />
-                                        <span className="tracking-tight text-14px text-white ml-28px -mt-px" style={{letterSpacing:'-0.1em'}}>슬롯게임</span>
+                                        <span className="tracking-tight text-14px text-white ml-28px -mt-px text-shadow-5" style={{letterSpacing:'-0.1em'}}>슬롯게임</span>
                                         
                                     </button>
                                     <button 
@@ -306,7 +306,7 @@ const MoneyCharge = () => {
                                     >
                                       
                                             <input type="radio" className="ml-12px" name="gender" checked={radioValue === "sports"} />
-                                            <span className="tracking-tight text-14px text-white ml-33px -mt-px" style={{letterSpacing:'-0.1em'}}>스포츠</span>
+                                            <span className="tracking-tight text-14px text-white ml-33px -mt-px text-shadow-5" style={{letterSpacing:'-0.1em'}}>스포츠</span>
                                       
                                     </button>
                                     <button 
@@ -316,7 +316,7 @@ const MoneyCharge = () => {
                                     >
                                       
                                             <input type="radio" className="ml-12px" name="gender" checked={radioValue === "v_game"} />
-                                            <span className="tracking-tight text-14px text-white ml-16px -mt-px" style={{letterSpacing:'-0.1em'}}>키론가상게임</span>
+                                            <span className="tracking-tight text-14px text-white ml-16px -mt-px text-shadow-5" style={{letterSpacing:'-0.1em'}}>키론가상게임</span>
                                         
                                     </button>
                                     <button 
@@ -326,7 +326,7 @@ const MoneyCharge = () => {
                                     >
                                        
                                             <input type="radio" className="ml-12px" name="gender" checked={radioValue === "yes"} />
-                                            <span className="tracking-tight text-14px text-white ml-28px -mt-px" style={{letterSpacing:'-0.1em'}}>피싱게임</span>
+                                            <span className="tracking-tight text-14px text-white ml-28px -mt-px text-shadow-5" style={{letterSpacing:'-0.1em'}}>피싱게임</span>
                                         
                                     </button>
                                     <button 
@@ -336,14 +336,14 @@ const MoneyCharge = () => {
                                     >
                                        
                                         <input type="radio" className="ml-12px" name="gender" checked={radioValue === "no"} />
-                                        <span className="tracking-tight text-14px text-white ml-29px -mt-px" style={{letterSpacing:'-0.1em'}}>받지않기</span>
+                                        <span className="tracking-tight text-14px text-white ml-29px -mt-px text-shadow-5" style={{letterSpacing:'-0.1em'}}>받지않기</span>
                                         
                                     </button>      
                                 </div>    
                             </div>
                         </div>
                         <div style={{ width: "906px", borderColor: '#cccccc', background: '#f7f7f7' }}
-                            className="w-full rounded-8px border mt-21px pt-17px pb-25px px-15px">
+                            className="w-full rounded-8px border mt-21px pt-17px pb-25px px-15px font-bold">
                             <div className="flex items-center h-26px space-x-8px mb-15px ml-3px">
                                 <img src={AlertIcon} alt="" />
                                 <span className="text-rf04281 text-20px tracking-tight -mt-px " style={{letterSpacing: '-0.09em'}}>알아두세요</span>
@@ -364,7 +364,7 @@ const MoneyCharge = () => {
                     boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)"}}
                 className="flex items-center justify-center h-52px rounded-6px  mt-20px hover:brightness-125 filter cursor-pointer ml-3px">
                 
-                    <span className="tracking-tight text-16px text-white ">신청하기</span>
+                    <span className="tracking-tight text-16px text-white text-shadow-5">신청하기</span>
               
             </button>
 

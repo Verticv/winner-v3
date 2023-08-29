@@ -25,7 +25,7 @@ const MoneyExchange = () => {
             
             <MyPageTitle title="보유머니 환전" />
 
-            <div style={{height:'157px',borderColor:'#cccccc'}} className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px">
+            <div style={{height:'157px',borderColor:'#cccccc'}} className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-bold">
                 <div className="flex items-center h-26px space-x-9px">
                     <img src={AlertIcon} alt="" />
                     <span className="text-rf04281 font-spoqaMedium text-20px tracking-tight -mt-2px" style={{WebkitTextStroke:"0.2px",letterSpacing: '-0.09em'}}>확인 / 필독사항</span>
@@ -43,7 +43,7 @@ const MoneyExchange = () => {
               <div className='h-full w-full rounded-6px overflow-hidden bg-white p-9px'>
                 <div style={{height: "128px", borderColor: '#5e399a',
                         background: "linear-gradient(to right, #9d3bbb 0%, #5423a0 100%)"}} className="w-full rounded-4px border">
-                    <div className="text-20px tracking-tight text-white h-19px flex items-center mt-30px ml-55px">환전금액 입력</div>
+                    <div className="text-20px tracking-tight text-white h-19px flex items-center mt-30px ml-55px font-bold">환전금액 입력</div>
                     <div className="text-16px tracking-tight text-eeeeee h-16px flex items-center ml-55px mt-14px" >
                         환전 신청을 완료하게 되면 보유머니에서 신청한 금액만큼 차감되며
                     </div>
@@ -202,7 +202,7 @@ const MoneyExchange = () => {
                     >
                         <div className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                         style={{background:'linear-gradient(to top, #6b22ff, #df52ff)'}}>
-                                <span className="tracking-tight text-14px text-white -mt-px">정정</span>
+                                <span className="tracking-tight text-14px text-white -mt-px text-shadow-5">정정</span>
                         </div>
                     </button>
                 </div>
@@ -234,7 +234,7 @@ const MoneyExchange = () => {
                     boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)"}}
                 className="flex items-center justify-center h-52px rounded-6px  mt-20px hover:brightness-125 filter cursor-pointer ml-3px">
                 
-                    <span className="tracking-tight text-16px text-white ">신청하기</span>
+                    <span className="tracking-tight text-16px text-white text-shadow-5 ">신청하기</span>
             
             </button>
 
