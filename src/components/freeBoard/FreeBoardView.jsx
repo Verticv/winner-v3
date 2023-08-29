@@ -13,17 +13,35 @@ import ReplyArrow from "../../images/freeBoard/reply_v3.png";
 const FreeBoardView = () => {
   const history = useHistory();
 
-  const ReplyCell = ({ text = "이벤트 참여 감사합니다.", rank = 1, username = "쇼유", isEdit = false, tag = null }) => (
+  const ReplyCell = ({
+    text = "이벤트 참여 감사합니다.",
+    rank = 1,
+    username = "쇼유",
+    isEdit = false,
+    tag = null,
+  }) => (
     <div className="w-full pr-19px">
       <div className="py-10px ml-22px flex items-center justify-between">
         <div className="self-start pt-6px flex items-start pr-10px">
           <img className="object-none mt-5px" src={ReplyArrow} alt="" />
           <img
             className="pl-14px mt-px"
-            src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5}
+            src={
+              rank === 1
+                ? Rank1
+                : rank === 2
+                ? Rank2
+                : rank === 3
+                ? Rank3
+                : rank === 4
+                ? Rank4
+                : Rank5
+            }
             alt=""
           />
-          <p className="ml-5px mt-px text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">{username}</p>
+          <p className="ml-5px mt-px text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">
+            {username}
+          </p>
         </div>
         {isEdit === true ? (
           <div className="flex self-start items-start space-x-4px justify-end">
@@ -88,7 +106,9 @@ const FreeBoardView = () => {
             {tag && (
               <span className={`text-blue-2980b9 mr-10px font-spoqaMedium`}>
                 @{tag.length > 8 ? tag.substring(0, 8) : tag}{" "}
-                {tag.length > 8 && <span className="-mt-5px inline-block">...</span>}
+                {tag.length > 8 && (
+                  <span className="-mt-5px inline-block">...</span>
+                )}
               </span>
             )}
             <span className=" text-r666666 -ml-px">{text}</span>
@@ -110,7 +130,10 @@ const FreeBoardView = () => {
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div style={{ backgroundColor: "#ffffff" }} className="w-full bg-gray-323232 rounded-10px overflow-hidden">
+        <div
+          style={{ backgroundColor: "#ffffff" }}
+          className="w-full bg-gray-323232 rounded-10px overflow-hidden"
+        >
           <div
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
             className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px h-55px"
@@ -146,9 +169,18 @@ const FreeBoardView = () => {
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
             className="bg-gray-2e2e2e h-56px border-b border-gray-252525 flex items-center px-19px space-x-10px"
           >
-            <img className="mb-2px h-17px w-72px object-contain" src={WinnerSmall} alt="" />
-            <div className="w-px h-10px ml-8px mt-px" style={{ background: "#ccc" }} />
-            <div className="font-spoqaMedium text-14px tracking-tight text-r666666 mt-px">댓글</div>
+            <img
+              className="mb-2px h-17px w-72px object-contain"
+              src={WinnerSmall}
+              alt=""
+            />
+            <div
+              className="w-px h-10px ml-8px mt-px"
+              style={{ background: "#ccc" }}
+            />
+            <div className="font-spoqaMedium text-14px tracking-tight text-r666666 mt-px">
+              댓글
+            </div>
             <div
               style={{ backgroundColor: "#f04281" }}
               className="pl-7px pr-7px h-20px bg-red-e9441d rounded-full text-12px text-white flex items-center justify-center font-roboto flex-shrink-0 pt-px"
@@ -164,7 +196,8 @@ const FreeBoardView = () => {
 
             <div className="px-19px pt-18px">
               <div className="flex items-center text-14px font-spoqaMedium tracking-tight text-r666666">
-                이벤트 중 주간 낙첨 포인트 지급은 21년 6월 7일 이후 베팅건 부터 아래와 같이 적용됩니다.
+                이벤트 중 주간 낙첨 포인트 지급은 21년 6월 7일 이후 베팅건 부터
+                아래와 같이 적용됩니다.
               </div>
               <div
                 style={{ color: "#dd431e" }}
@@ -176,32 +209,43 @@ const FreeBoardView = () => {
                 10만원 ~<span className="mr-13px"></span> 5,000 쿠폰
               </div>
               <div className="flex items-center text-14px font-spoqaMedium tracking-tight text-r666666 mt-13px">
-                20만원 이상 <span className="mr-13px"></span> 10,000 <span className="ml-5px">쿠폰</span>
+                20만원 이상 <span className="mr-13px"></span> 10,000{" "}
+                <span className="ml-5px">쿠폰</span>
               </div>
               <div className="flex items-center text-14px font-spoqaMedium tracking-tight text-r666666 mt-13px">
-                30만원 이상 <span className="mr-13px"></span> 15,000 <span className="ml-5px">쿠폰</span>
+                30만원 이상 <span className="mr-13px"></span> 15,000{" "}
+                <span className="ml-5px">쿠폰</span>
               </div>
               <div className="flex items-center text-14px font-spoqaMedium tracking-tight text-r666666 mt-12px">
-                50만원 이상 <span className="mr-13px"></span> 25,000 <span className="ml-5px">쿠폰</span>
+                50만원 이상 <span className="mr-13px"></span> 25,000{" "}
+                <span className="ml-5px">쿠폰</span>
               </div>
               <div className="flex items-center text-14px font-spoqaMedium tracking-tight text-r666666 mt-13px">
-                100만원 이상 <span className="mr-13px"></span> 50,000 <span className="ml-5px">쿠폰</span>
+                100만원 이상 <span className="mr-13px"></span> 50,000{" "}
+                <span className="ml-5px">쿠폰</span>
               </div>
               <div className="flex items-center text-14px font-spoqaMedium tracking-tight text-r666666 mt-13px">
-                300만원 이상 <span className="mr-13px"></span> 150,000 <span className="ml-5px"> 쿠폰</span>
+                300만원 이상 <span className="mr-13px"></span> 150,000{" "}
+                <span className="ml-5px"> 쿠폰</span>
               </div>
               <div className="flex items-center text-14px font-spoqaMedium tracking-tight text-r666666 mt-13px">
-                500만원 이상 <span className="mr-13px"></span> 낙첨액 5% <span className="ml-5px">쿠폰</span>
+                500만원 이상 <span className="mr-13px"></span> 낙첨액 5%{" "}
+                <span className="ml-5px">쿠폰</span>
               </div>
 
               <div className="text-14px font-spoqaMedium tracking-tight text-r666666 mt-26px">
                 <span className="relative top-3px">*</span>{" "}
-                <span> 2021년 5월 31일 ~ 6월 6일 (일요일)까지 베팅 내역을 화요일 낙첨금액 5% 쿠폰 발행되며,</span>
+                <span>
+                  {" "}
+                  2021년 5월 31일 ~ 6월 6일 (일요일)까지 베팅 내역을 화요일
+                  낙첨금액 5% 쿠폰 발행되며,
+                </span>
               </div>
               <div className="text-14px font-spoqaMedium tracking-tight text-r666666 mt-9px">
                 <span className="relative top-3px">*</span>{" "}
                 <span style={{ color: "#2980b9" }}>
-                  2021년 6월 7일 (월) 이후 베팅에 대한 낙첨쿠폰은 위 기준에 따라 제공
+                  2021년 6월 7일 (월) 이후 베팅에 대한 낙첨쿠폰은 위 기준에 따라
+                  제공
                 </span>
                 되오니 참고 부탁 드립니다.
               </div>
@@ -270,14 +314,19 @@ const FreeBoardView = () => {
               <p className="flex items-center h-12px mb-px">2</p>
             </div>
           </div>
-          <div style={{ height: "93px" }} className="relative flex w-full rounded-6px bg-gray-252525 -mt-px">
+          <div
+            style={{ height: "93px" }}
+            className="relative flex w-full rounded-6px bg-gray-252525 -mt-px"
+          >
             <textarea
               style={{
-                width: "1130px",
+                width: "1100px",
                 resize: "none",
-                boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
+                overflowY: "auto",
+                boxShadow:
+                  "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
               }}
-              className="outline-none w-full px-19px pb-17px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
+              className="scroll-div4 outline-none w-full px-19px pb-17px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
               placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
             />
 
@@ -309,12 +358,20 @@ const FreeBoardView = () => {
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div style={{ backgroundColor: "#dfdbfa" }} className="w-full bg-gray-323232 rounded-10px pb-21px">
-          <div style={{ borderColor: "#b5afdd" }} className="border-b border-gray-252525 pl-20px pr-19px">
+        <div
+          style={{ backgroundColor: "#dfdbfa" }}
+          className="w-full bg-gray-323232 rounded-10px pb-21px"
+        >
+          <div
+            style={{ borderColor: "#b5afdd" }}
+            className="border-b border-gray-252525 pl-20px pr-19px"
+          >
             <div className="py-9px w-full flex items-center justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
                 <img src={Rank2} alt="" className="mt-2px ml-px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">신풍사우나</p>
+                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6">
+                  신풍사우나
+                </p>
               </div>
               <div className="self-start flex space-x-4px items-start justify-end">
                 <button
@@ -359,7 +416,9 @@ const FreeBoardView = () => {
               <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-2px">
                 두개의 이벤트 모두 참여하였습니다
               </p>
-              <p className="text-14px tracking-tight font-spoqa flex-shrink-0 -mt-2px">2021.06.28 15:36</p>
+              <p className="text-14px tracking-tight font-spoqa flex-shrink-0 -mt-2px">
+                2021.06.28 15:36
+              </p>
             </div>
           </div>
 
@@ -381,12 +440,20 @@ const FreeBoardView = () => {
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div style={{ backgroundColor: "#dfdbfa" }} className=" bg-gray-323232 rounded-10px ">
-          <div style={{ borderColor: "#b8b4d8" }} className="border-b border-gray-252525 px-19px">
+        <div
+          style={{ backgroundColor: "#dfdbfa" }}
+          className=" bg-gray-323232 rounded-10px "
+        >
+          <div
+            style={{ borderColor: "#b8b4d8" }}
+            className="border-b border-gray-252525 px-19px"
+          >
             <div className="py-9px w-full flex items-center  justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
                 <img src={Rank2} alt="" className="mt-px ml-2px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">신풍사우나</p>
+                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">
+                  신풍사우나
+                </p>
               </div>
               <div className="self-start flex space-x-4px justify-end">
                 <button
@@ -431,18 +498,25 @@ const FreeBoardView = () => {
               <p className="text-15px font-spoqa tracking-tight pr-7px -mt-2px -ml-px">
                 두개의 이벤트 모두 참여하였습니다
               </p>
-              <p className="text-14px tracking-tight font-spoqa flex-shrink-0 -mt-2px">2021.06.28 15:36</p>
+              <p className="text-14px tracking-tight font-spoqa flex-shrink-0 -mt-2px">
+                2021.06.28 15:36
+              </p>
             </div>
           </div>
           <div style={{ height: "114px" }} className="px-20px pb-10px pt-10px">
-            <div style={{ height: "93px" }} className="rounded-4px bg-gray-252525 relative flex w-full">
+            <div
+              style={{ height: "93px" }}
+              className="rounded-4px bg-gray-252525 relative flex w-full"
+            >
               <textarea
                 style={{
-                  width: "1130px",
+                  width: "1100px",
                   resize: "none",
-                  boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
+                  overflowY: "auto",
+                  boxShadow:
+                    "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
+                className="scroll-div4 outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
                 placeholder="두개의 이벤트 모두 참여하였습니다."
               />
               <button
@@ -473,12 +547,20 @@ const FreeBoardView = () => {
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
         }}
       >
-        <div style={{ backgroundColor: "#dfdbfa" }} className="w-full bg-gray-323232 rounded-10px">
-          <div style={{ borderColor: "#b8b4d8" }} className="border-b border-gray-252525 px-19px">
+        <div
+          style={{ backgroundColor: "#dfdbfa" }}
+          className="w-full bg-gray-323232 rounded-10px"
+        >
+          <div
+            style={{ borderColor: "#b8b4d8" }}
+            className="border-b border-gray-252525 px-19px"
+          >
             <div className="py-9px w-full flex items-center  justify-between">
               <div className="self-start pt-6px flex items-start space-x-5px mt-px">
                 <img src={Rank2} alt="" className="mt-px ml-2px" />
-                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">신풍사우나</p>
+                <p className="text-15px font-spoqaMedium tracking-tight text-gray-ccc2b6 -mt-px">
+                  신풍사우나
+                </p>
               </div>
               <button
                 style={{
@@ -505,18 +587,25 @@ const FreeBoardView = () => {
               <p className="text-15px font-spoqa tracking-tight pr-7px -ml-px -mt-2px">
                 두개의 이벤트 모두 참여하였습니다
               </p>
-              <p className="text-14px tracking-tight font-spoqa flex-shrink-0  -mt-2px">2021.06.28 15:36</p>
+              <p className="text-14px tracking-tight font-spoqa flex-shrink-0  -mt-2px">
+                2021.06.28 15:36
+              </p>
             </div>
           </div>
           <div style={{ height: "114px" }} className="px-20px pb-11px pt-10px">
-            <div style={{ height: "93px" }} className="relative flex w-full rounded-4px bg-gray-252525">
+            <div
+              style={{ height: "93px" }}
+              className="relative flex w-full rounded-4px bg-gray-252525"
+            >
               <textarea
                 style={{
-                  width: "1130px",
+                  width: "1100px",
                   resize: "none",
-                  boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
+                  overflowY: "auto",
+                  boxShadow:
+                    "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
+                className="scroll-div4 outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
                 placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
               />
 
