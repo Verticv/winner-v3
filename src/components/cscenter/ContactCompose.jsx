@@ -113,7 +113,7 @@ const ContactCompose = () => {
             <div className="w-full border-r border-gray-252525 bg-gray-323232 flex items-center p-10px">
               <textarea
                 style={{ height: "325px", resize: "none" }}
-                className="outline-none w-full rounded-4px border border-gray-404040 px-9px py-10px text-14px font-spoqa tracking-tight placeholder-gray-828282 text-r666666 bg-dark-1a1a1a"
+                className="scroll-div2 outline-none w-full rounded-4px border border-gray-404040 px-9px py-10px text-14px font-spoqa tracking-tight placeholder-gray-828282 text-r666666 bg-dark-1a1a1a"
                 placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
               />
             </div>
