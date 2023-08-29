@@ -23,7 +23,7 @@ const Carousel = () => {
     <div className="absolute z-10 w-full flex justify-start bottom-10px left-10px space-x-3px">
       {images.map((img, i) => (
         <button
-          key={i}
+          key={i + `${img}`}
           className={`${
             currentImage === i ? "bg-white rounded-5px w-29px h-12px" : "bg-white opacity-30 rounded-full w-12px h-12px"
           } p-3px`}
@@ -48,7 +48,7 @@ const Carousel = () => {
         <img
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          key={i}
+          key={i + `${img}`}
           src={images[i]}
           className={`${
             currentImage === i ? "opacity-100" : "opacity-0"

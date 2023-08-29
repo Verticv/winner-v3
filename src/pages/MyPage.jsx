@@ -38,6 +38,7 @@ import IconHighlight7 from "../images/myPage/leftMenu/menuIcons/menuL_on_icon_07
 import IconHighlight8 from "../images/myPage/leftMenu/menuIcons/menuL_on_icon_08.png";
 
 const MyPage = ({ isAuthenticated, setAuthenticated }) => {
+  const location = useLocation();
   const LeftMenuArray = [
     {
       text: "베팅내역",
@@ -120,10 +121,8 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
   ];
 
-  const location = useLocation();
   const [selectedTab, setSelectedTab] = useState(location.pathname);
   const [selectedSubTab, setSelectedSubTab] = useState(location.pathname);
-  console.log("selectedTab", selectedTab, selectedSubTab);
 
   return (
     <div

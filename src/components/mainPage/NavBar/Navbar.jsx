@@ -39,6 +39,7 @@ import NoticeBanner from "../NoticeBanner";
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
   const history = useHistory();
+  const location = window.location.pathname;
 
   const [selectedTab, setSelectedTab] = useState();
   const [hoveredTab, setHoveredTab] = useState();
@@ -67,9 +68,9 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     { text: "베팅내역", id: 1, path: "/mypage/bet-history" },
     { text: "충/환전내역", id: 2, path: "/mypage/transaction/charge-history" },
     { text: "총판페이지", id: 3, path: "/distributor-page" },
-    { text: "회원정보수정", id: 4, path: "/mypage/edit-info" },
+    { text: "회원정보수정", id: 4, path: location === "/" ? "/reauth" : `${location}/reauth` },
     { text: "출석부", id: 5, path: "/attendance" },
-    { text: "로그아웃", id: 6, action: () => window.location.reload() },
+    { text: "로그아웃", id: 6, action: () => window.location.reload(), path: "#" },
   ];
 
   const contactOptionsArray = [

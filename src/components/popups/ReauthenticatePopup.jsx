@@ -18,6 +18,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
         background: "linear-gradient(to right, #b870cd, #9068bf)",
         borderRadius: "20px",
       }}
+      onClick={e => e.stopPropagation() }
       className="relative shadow-popup pt-2px"
     >
       <div
@@ -147,7 +148,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
             className="text-20px tracking-tighter text-white filter hover:brightness-125 mt-40px flex-shrink-0 rounded-full"
             onClick={e => {
               history.push("/mypage/edit-info");
-              setSelectedTab("/mypage/edit-info");
+              setSelectedTab && setSelectedTab("/mypage/edit-info");
               e.stopPropagation();
             }}
           >

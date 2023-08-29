@@ -30,9 +30,8 @@ const SportsHover = ({ selection }) => {
 
   function GamesList({ items }) {
     return items.map((item) => (
-      <Link to={item.path}>
+      <Link key={item.id} to={item.path}>
         <div
-          key={item.id}
           className={`relative group cursor-pointer flex items-center flex-shrink-0 h-68px rounded-6px`}
           style={{
             width: "210px",

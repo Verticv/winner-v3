@@ -110,7 +110,7 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
     const [isHover, setHover] = useState(null);
 
     return (
-      <Link to={!(row2Game === "준비중" && isRow2) && "/live-casino"}>
+      <Link to={!(row2Game === "준비중" && isRow2) ? "/live-casino" : "#"}>
         <div className="flex w-full justify-center">
           <div
             style={{

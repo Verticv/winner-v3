@@ -20,7 +20,6 @@ const LeftMenu = ({
   const [isExpanded, setExpanded] = useState(window.location.pathname);
   const [isMouseHover, setMouseHover] = useState("");
 
-  console.log(pathname);
   function buttonPressed(text, path) {
     if (text === "총판페이지") {
       window.open("/distributor-page");
@@ -158,7 +157,9 @@ const LeftMenu = ({
                 {item.sub1 && (
                   <img
                     className={
-                      isExpanded !== item.path + "closed" && pathname.includes(item.mainPath) && "transform rotate-180"
+                      isExpanded !== item.path + "closed" && pathname.includes(item.mainPath)
+                        ? "transform rotate-180"
+                        : ""
                     }
                     src={pathname.includes(item.mainPath) ? ArrowOn : ArrowDown}
                     alt=""

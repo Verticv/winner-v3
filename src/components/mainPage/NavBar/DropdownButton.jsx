@@ -9,7 +9,6 @@ const DropdownButton = ({
   ButtonIcon,
   ButtonActiveIcon,
   DropdownHeight,
-  setPopupOpen,
 }) => {
   const [isMyMenuOpen, setIsMyMenuOpen] = useState(false);
   // eslint-disable-next-line no-unused-vars
@@ -66,9 +65,8 @@ const DropdownButton = ({
           {optionsArray.map((option) => {
             const isOptionHovered = hoveredOption === option.text;
             return (
-              <Link to={option.text !== "회원정보수정" && option.path} target={option.path === "/distributor-page" && "_blank"}>
+              <Link key={option.id} to={option.path} target={option.path === "/distributor-page" ? "_blank" : ""}>
                 <button
-                  key={option.id}
                   className={dropDownCellClass}
                   style={{
                     background: isOptionHovered ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
@@ -78,8 +76,8 @@ const DropdownButton = ({
                     marginBottom: "1px",
                   }}
                   onClick={() => {
-                    option.text === "회원정보수정" && setPopupOpen(true)
                     setIsMyMenuOpen(false);
+                    option.action && option.action();
                   }}
                   onMouseOver={() => setHoveredOption(option.text)}
                   onMouseLeave={() => setHoveredOption("")}

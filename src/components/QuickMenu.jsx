@@ -17,6 +17,7 @@ import LeftIcon from "../images/sideMenu/left.png";
 
 const Button = ({ text, img, path }) => {
   const history = useHistory();
+
   return (
     <div
       onClick={() => history.push(path)}
@@ -62,6 +63,7 @@ const Button = ({ text, img, path }) => {
 
 const QuickMenu = () => {
   const [isHover, setIsHover] = React.useState(false);
+  const location = window.location.pathname;
 
   return (
     <div
@@ -123,7 +125,7 @@ const QuickMenu = () => {
           <Button text="베팅내역" img={Quick7} path="/mypage/bet-history" />
           <Button text="충/환전내역" img={Quick8} path="/mypage/transaction/charge-history" />
           <Button text="라이브영상" img={Quick9} />
-          <Button text="비번변경" img={Quick10} path="/mypage/edit-info" />
+          <Button text="비번변경" img={Quick10} path={location === "/" ? "/reauth" : `${location}/reauth`} />
         </div>
         <div style={{ backgroundColor: "#b8aadd" }} className="h-px w-full mb-10px" />
         <div style={{ backgroundColor: "#f9f8fe", width: "155px" }} className="h-240px flex flex-col rounded-4px">

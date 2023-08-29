@@ -15,104 +15,84 @@ import LiveCasinoPage from "pages/LiveCasinoPage";
 import HotelCasino from "pages/HotelCasinoPage";
 import TvBetPage from "pages/TvBetPage";
 import NonLiveBet from "pages/NonLiveBet";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ReauthenticatePopup from "components/popups/ReauthenticatePopup";
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
+  const location = useLocation();
+  const [showReauth, setShowReauth] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname.includes("/reauth")) {
+      setShowReauth(true);
+    } else {
+      setShowReauth(false);
+    }
+  }, [location]);
 
   return (
     <div style={{ backgroundColor: "#000" }}>
       <Switch>
         {/*   
-                Example to pass props to a route.
-                <Router>
-                  <Route path="/home" render={() => <Home prop={prop} />} />
-                </Router> 
-              */}
+          Example to pass props to a route.
+          <Router>
+            <Route path="/home" render={() => <Home prop={prop} />} />
+          </Router> 
+        */}
         <Route path="/mypage">
-          <MyPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <MyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/live-casino">
-          <LiveCasinoPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <LiveCasinoPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/distributor-page">
-          <DistributorPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <DistributorPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/attendance">
-          <AttendPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <AttendPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/money">
-          <MoneyPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <MoneyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/cscenter">
-          <CSCenterPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <CSCenterPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/gameresults">
-          <GameResultsPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/freeboard">
-          <Freeboard
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/bet-combination">
-          <NonLiveBet
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <NonLiveBet isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/minigame">
-          <MinigamesPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <MinigamesPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/esports">
-          <EsportsPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <EsportsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/hotel-casino">
-          <HotelCasino
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <HotelCasino isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/tvbet">
-          <TvBetPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <TvBetPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="*">
-          <MainPage
-            isAuthenticated={isAuthenticated}
-            setAuthenticated={setAuthenticated}
-          />
+          <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
       </Switch>
+
+      {showReauth && (
+        <div
+          onClick={() => setShowReauth(false)}
+          className="fixed flex items-center justify-center w-screen h-screen bg-black bg-opacity-60 z-50 left-0 top-0"
+        >
+          <ReauthenticatePopup setPopupOpen={setShowReauth} />
+        </div>
+      )}
     </div>
   );
 }
