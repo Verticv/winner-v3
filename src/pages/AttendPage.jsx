@@ -19,7 +19,12 @@ const AttendPage = ({ isAuthenticated, setAuthenticated }) => {
 
       <div style={{ marginTop: "205px" }} className="flex flex-col items-start limit:items-center w-full h-full">
         <div style={{ height: "136px" }} className="relative">
-          <img className="z-10" src={MyPageBanner} alt="" />
+          <img
+            style={{ height: "150px", width: "1300px", objectFit: "none" }}
+            className="z-10"
+            src={MyPageBanner}
+            alt=""
+          />
           <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex     items-center justify-center">
             <span style={{ textShadow: "0 0 4px rgba(0, 0, 0, 0.6)" }} className="leading-none text-white -mt-2px">
               출석부

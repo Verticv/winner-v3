@@ -15,7 +15,11 @@ const NoticeBanner = () => {
       className="flex items-center h-28px w-full overflow-x-hidden flex-shrink-0 wrap cursor-default mt-px"
     >
       <img
-        style={{ width: pathname === "/bet-combination" && "1482px" }}
+        style={{
+          width: pathname === "/bet-combination" ? "1482px" : "1476px",
+          height: pathname !== "/bet-combination" && "61px",
+          objectFit: "none",
+        }}
         src={Bg}
         alt=""
         className={`absolute object-none -ml-12px  ${pathname === "/bet-combination" && "h-30px"}`}

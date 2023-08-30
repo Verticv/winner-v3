@@ -926,8 +926,13 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
       </div>
 
       <div style={{ marginTop: "148px" }} className="relative flex flex-col items-start limit1920:items-center">
-        <div style={{ height: "136px" }} className="relative mt-26px">
-          <img className="z-10" src={DistributorBanner} alt="" />
+        <div style={{ height: "136px" }} className="relative mt-26px flex-shrink-0">
+          <img
+            style={{ height: "150px", width: "1300px", objectFit: "none" }}
+            className="z-10"
+            src={DistributorBanner}
+            alt=""
+          />
 
           <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex items-center justify-center">
             <span style={{ textShadow: "0 0 4px rgba(0, 0, 0, 0.6)" }} className="leading-none text-white">
