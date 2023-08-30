@@ -132,9 +132,9 @@ const EsportsSingle = () => {
                   width: "97px",
                   height: "25px",
                   //   backgroundColor: "#f45400",
-                  backgroundColor: "#682aa7",
+                  backgroundColor: "#f45400",
                 }}
-                className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px"
+                className="text-white flex items-center justify-center font-bold text-18px tracking-tight pt-px mt-60px"
               >
                 알아두세요!
               </div>
@@ -212,8 +212,6 @@ const EsportsSingle = () => {
             </div>
           </div>
         </div>
-
-        <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
       </div>
     </div>
   );

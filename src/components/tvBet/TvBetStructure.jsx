@@ -2,7 +2,7 @@ import React from "react";
 import Image1 from "../../images/tvBet/1.png";
 import Image2 from "../../images/tvBet/2.png";
 import Dot from "../../images/esports/dot.png";
-import TitleIcon from "../../images/title-icon.png";
+import TitleIcon from "../../images/title-icon1.png";
 
 const TvBetStructure = () => {
   const TitleText = ({ number = "01", title }) => (
@@ -34,6 +34,7 @@ const TvBetStructure = () => {
     text = "본인의 보유머니가 표시됩니다.",
     text2 = null,
     text3 = null,
+    text4 = null,
     color1 = null,
     color2 = null,
     color3 = null,
@@ -70,10 +71,24 @@ const TvBetStructure = () => {
       )}
       {text3 && (
         <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+          style={{
+            color: "#828282",
+            letterSpacing:
+              (text3 === "영상위치설정, 영상 새창띄우기 등 제공합니다." ||
+                text3 === "원하는 이벤트를 선택하면 배당판이 활성화되며") &&
+              "-0.1em",
+          }}
+          className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium`}
         >
           {text3}
+        </span>
+      )}
+      {text4 && (
+        <span
+          style={{ color: "#828282", letterSpacing: "-0.091em" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+        >
+          {text4}
         </span>
       )}
     </div>
@@ -95,13 +110,18 @@ const TvBetStructure = () => {
   }) => (
     <div className="flex flex-col space-y-4px">
       <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center">
-        <span style={{ color: "#682aa7" }} className="text-golden-gradLight">{number}</span>
+        <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
+          {number}
+        </span>
         <span className="text-gray-ccc2b6">{title}</span>
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
         <span
-          style={{ color: "#828282" }}
+          style={{
+            color: "#828282",
+            letterSpacing: text === "로비 : 전체 게임리스트 확인 및 게임선택 가능" && "-0.1rem",
+          }}
           className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
         >
           {text}
@@ -205,10 +225,10 @@ const TvBetStructure = () => {
             className="w-full rounded-xl p-px "
             style={{
               backgroundColor: "#cccccc",
-              height: "665px",
+              height: "685px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "663px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "683px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="01" title="화면구성" />
               <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">

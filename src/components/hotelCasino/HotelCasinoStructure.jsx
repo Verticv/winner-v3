@@ -4,7 +4,7 @@ import Image2 from "../../images/hotelCasino/2.png";
 import Image3 from "../../images/hotelCasino/3.png";
 import Image4 from "../../images/hotelCasino/4.png";
 import Dot from "../../images/esports/dot.png";
-import TitleIcon from "../../images/title-icon.png";
+import TitleIcon from "../../images/title-icon1.png";
 
 const HotelCasinoStructure = () => {
   const TitleText = ({ number = "01", title }) => (
@@ -21,12 +21,14 @@ const HotelCasinoStructure = () => {
         }}
         className="w-39px h-37px p-px flex items-center justify-center ml-5px"
       >
-        <div
-          style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
-          className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
-        >
-          {number}
-        </div>
+        {number && (
+          <div
+            style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
+            className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
+          >
+            {number}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -34,35 +36,55 @@ const HotelCasinoStructure = () => {
   const Item = ({
     number = "1.",
     title = "보유머니",
-    text = "본인의 보유머니가 표시됩니다.",
+    text = null,
     text2 = null,
     text3 = null,
     color1 = null,
     color2 = null,
     color3 = null,
+    exceptionText = null,
   }) => (
     <div className="flex flex-col space-y-4px">
       <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center">
-        <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
-          {number}
-        </span>
+        {number !== "0" && (
+          <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
+            {number}
+          </span>
+        )}
+
         <span style={{ color: "#444444" }} className="text-gray-ccc2b6">
           {title}
         </span>
       </div>
-      <span
-        style={{ color: "#828282", letterSpacing: "-0.091em" }}
-        className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px"
-      >
-        {text}{" "}
-        <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
-          {color1}
-        </p>
-        <p style={{ color: "#f04281" }} className="mr-2px">
-          {color2}
-        </p>
-        <p>{color3}</p>
-      </span>
+      {text !== "0" && (
+        <span
+          style={{ color: "#828282", letterSpacing: "-0.091em" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px"
+        >
+          {text}{" "}
+          {color1 && (
+            <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
+              {color1}
+            </p>
+          )}
+          {exceptionText && <p className="ml-3px"> {exceptionText}</p>}
+          {color2 && (
+            <p style={{ color: "#f04281" }} className="mr-2px">
+              {color2}
+            </p>
+          )}
+        </span>
+      )}
+
+      {color3 && (
+        <span
+          style={{ color: "#ff1237", letterSpacing: "-0.091em" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+        >
+          {color3}
+        </span>
+      )}
+
       {text2 && (
         <span
           style={{ color: "#828282", letterSpacing: "-0.091em" }}
@@ -87,8 +109,10 @@ const HotelCasinoStructure = () => {
     title = "메뉴",
     text = "결과 : 경기결과 확인 가능",
     text2 = "팀 : 팀 순위 확인 가능",
-    text3 = "T&C : 베팅규정 확인 가능",
-    text4 = "공지 : 게임 공지 확인 가능",
+    text3 = null,
+    text4 = null,
+    text5 = null,
+    text11 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
       <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center">
@@ -106,6 +130,17 @@ const HotelCasinoStructure = () => {
           {text}
         </span>
       </div>
+      {text11 && (
+        <div className="flex mt-px">
+          <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
+          <span
+            style={{ color: "#828282" }}
+            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+          >
+            {text11}
+          </span>
+        </div>
+      )}
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
         <span
@@ -115,24 +150,40 @@ const HotelCasinoStructure = () => {
           {text2}
         </span>
       </div>
-      <div className="flex mt-px">
-        <img src={Dot} className="object-none mr-4px" alt="" />
-        <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-        >
-          {text3}
-        </span>
-      </div>
-      <div className="flex mt-px">
-        <img src={Dot} className="object-none mr-4px" alt="" />
-        <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-        >
-          {text4}
-        </span>
-      </div>
+      {text3 && (
+        <div className="flex mt-px">
+          <img src={Dot} className="object-none mr-4px" alt="" />
+          <span
+            style={{ color: "#828282" }}
+            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+          >
+            {text3}
+          </span>
+        </div>
+      )}
+
+      {text4 && (
+        <div className="flex mt-px">
+          <img src={Dot} className="object-none mr-4px" alt="" />
+          <span
+            style={{ color: "#828282" }}
+            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+          >
+            {text4}
+          </span>
+        </div>
+      )}
+      {text5 && (
+        <div className="flex mt-px">
+          <img src={Dot} className="object-none mr-4px" alt="" />
+          <span
+            style={{ color: "#828282" }}
+            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+          >
+            {text5}
+          </span>
+        </div>
+      )}
     </div>
   );
   return (
@@ -157,7 +208,7 @@ const HotelCasinoStructure = () => {
             }}
           >
             <div style={{ backgroundColor: "#ffffff", height: "633px" }} className="w-full h-full rounded-xl p-20px">
-              <TitleText number="0" title="로비화면" />
+              <TitleText title="로비화면" />
               <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
                 <Item title="아이디&보유머니" text="본인의 아이디와 보유머니 표시" />
@@ -187,7 +238,7 @@ const HotelCasinoStructure = () => {
                 <div>
                   <div
                     style={{ width: "97px", height: "25px", backgroundColor: "#f45400" }}
-                    className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px"
+                    className="text-white flex items-center justify-center font-bold text-18px tracking-tight pt-px"
                   >
                     알아두세요!
                   </div>
@@ -211,10 +262,10 @@ const HotelCasinoStructure = () => {
             className="w-full rounded-xl p-px -mt-px"
             style={{
               backgroundColor: "#cccccc",
-              height: "668px",
+              height: "688px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "666px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "686px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="01" title="게임화면" />
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
@@ -316,7 +367,7 @@ const HotelCasinoStructure = () => {
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
 
               <div className="pt-20px space-y-23px">
-                <Item number="0" title="간편 베팅기능 사용방법" />
+                <Item number="0" title="간편 베팅기능 사용방법" text="0" />
                 <Item title="설정버튼" text="게임설정 버튼을 선택합니다." />
                 <Item number="2." title="[S]버튼" text="[S]버튼을 선택합니다." />
                 <Item

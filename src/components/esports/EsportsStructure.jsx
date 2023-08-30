@@ -49,10 +49,16 @@ const EsportsStructure = () => {
         </span>
       </div>
       <span
-        style={{ color: "#828282", letterSpacing: "-0.091em" }}
-        className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px ${text === "라이브경기는 실시간으로 경기영상을 제공하며" ? "tracking-tighter" : "tracking-tight"}`}
+        style={{
+          color: "#828282",
+          letterSpacing: text === "라이브경기는 실시간으로 경기영상을 제공하며" ? "-0.1rem" : "-0.091em",
+        }}
+        className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px`}
       >
-        {text} <p style={{color:"#0072bc"}} className="ml-2px text-blue-2980b9">{color1}</p>
+        {text}{" "}
+        <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
+          {color1}
+        </p>
         <p style={{ color: "#f04281" }} className="mr-2px">
           {color2}
         </p>
@@ -87,7 +93,9 @@ const EsportsStructure = () => {
   }) => (
     <div className="flex flex-col space-y-4px">
       <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center">
-        <span style={{color:"#682aa7"}} className="text-golden-gradLight">{number}</span>
+        <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
+          {number}
+        </span>
         <span className="text-gray-ccc2b6">{title}</span>
       </div>
       <div className="flex mt-px">
@@ -198,7 +206,7 @@ const EsportsStructure = () => {
                   title="+버튼"
                   text="각 팀의 좌/우 가장자리에 있는"
                   color1="[+]"
-                  color2="[-]"
+                  color2="[+]"
                   color3="버튼을"
                   text2="누르면 선택한 경기가 팔레이(다폴더) 리스트에"
                   text3="추가됩니다."

@@ -13,6 +13,10 @@ const EsportsMulti = () => {
     text = "본인의 보유머니가 표시됩니다.",
     text2 = null,
     text3 = null,
+    text4 = null,
+    text5 = null,
+    text6 = null,
+    text7 = null,
     color1 = null,
     color2 = null,
     color3 = null,
@@ -53,6 +57,38 @@ const EsportsMulti = () => {
           className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
           {text3}
+        </span>
+      )}
+      {text4 && (
+        <span
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+        >
+          {text4}
+        </span>
+      )}
+      {text5 && (
+        <span
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+        >
+          {text5}
+        </span>
+      )}
+      {text6 && (
+        <span
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+        >
+          {text6}
+        </span>
+      )}
+      {text7 && (
+        <span
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+        >
+          {text7}
         </span>
       )}
     </div>
@@ -107,11 +143,11 @@ const EsportsMulti = () => {
                 title="배당항목선택"
                 text="가. ①"
                 color1="[+]"
-                color2="[-]"
+                color2="[+]"
                 color3="버튼을 눌러서 원하는 배당을"
                 text2="선택합니다,"
                 text3="나. 선택한 경기(배당)가 ② 팔레이 리스트에"
-                text4="추가됩니다,"
+                text4="추가됩니다."
                 text5="-최소 2개 이상 각각 다른 경기를  추가하세요."
                 text6="다. 2경기 이상 추가되면 ③[확인] 버튼을"
                 text7="누릅니다."
@@ -122,9 +158,9 @@ const EsportsMulti = () => {
                   width: "97px",
                   height: "25px",
                   //   backgroundColor: "#f45400",
-                  backgroundColor: "#682aa7",
+                  backgroundColor: "#f45400",
                 }}
-                className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px"
+                className="text-white flex items-center justify-center font-bold text-18px tracking-tight pt-px mt-60px"
               >
                 알아두세요!
               </div>
@@ -133,8 +169,11 @@ const EsportsMulti = () => {
                   style={{ color: "#8c8c8c" }}
                   className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-5px"
                 >
-                  ※ 각 팀의 좌/우 가장자리에 있는 ①<p style={{color:"#0072bc"}} className="ml-2px text-blue-2980b9">[+]</p>
-                  <p style={{ color: "#f04281" }}>[-]</p>
+                  ※ 각 팀의 좌/우 가장자리에 있는 ①
+                  <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
+                    [+]
+                  </p>
+                  <p style={{ color: "#f04281" }}>[+]</p>
                 </span>
               </div>
               <div className="flex items-center">
@@ -205,9 +244,9 @@ const EsportsMulti = () => {
                   width: "97px",
                   height: "25px",
                   //   backgroundColor: "#f45400",
-                  backgroundColor: "#682aa7",
+                  backgroundColor: "#f45400",
                 }}
-                className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-60px"
+                className="text-white flex items-center justify-center font-bold text-18px tracking-tight pt-px mt-60px"
               >
                 알아두세요!
               </div>
@@ -285,8 +324,6 @@ const EsportsMulti = () => {
             </div>
           </div>
         </div>
-
-        <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
       </div>
     </div>
   );

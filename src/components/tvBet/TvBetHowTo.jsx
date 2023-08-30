@@ -150,7 +150,7 @@ const TvBetHowTo = () => {
               <div>
                 <div
                   style={{ width: "97px", height: "25px", backgroundColor: "#f45400" }}
-                  className="text-white flex items-center justify-center font-spoqaBold text-18px tracking-tight pt-px mt-20px"
+                  className="text-white flex items-center justify-center font-bold text-18px tracking-tight pt-px mt-20px"
                 >
                   알아두세요!
                 </div>
@@ -163,7 +163,7 @@ const TvBetHowTo = () => {
                   </span>
                 </div>
                 <span
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#8c8c8c", letterSpacing: "-0.1rem" }}
                   className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
                 >
                   중인 게임과 '예정된' 게임이벤트를 확인할 수 있습니다.
@@ -185,7 +185,7 @@ const TvBetHowTo = () => {
               <div>
                 <div className="flex items-center">
                   <span
-                    style={{ color: "#8c8c8c" }}
+                    style={{ color: "#8c8c8c", letterSpacing: "-0.1rem" }}
                     className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
                   >
                     ※ ⑤ [플레이방법] 메뉴에서 각 게임별 이용방법과
