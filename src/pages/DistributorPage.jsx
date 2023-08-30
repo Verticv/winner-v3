@@ -925,7 +925,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
 
-      <div style={{ marginTop: "148px" }} className="relative flex flex-col items-start limit1920:items-center">
+      <div style={{ marginTop: "148px" }} className="relative flex flex-col items-start limit1920:items-center w-1260px limit1920:w-auto">
         <div style={{ height: "136px" }} className="relative mt-26px flex-shrink-0">
           <img
             style={{ height: "150px", width: "1300px", objectFit: "none" }}
