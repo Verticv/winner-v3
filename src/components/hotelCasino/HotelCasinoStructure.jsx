@@ -14,22 +14,24 @@ const HotelCasinoStructure = () => {
       <span className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center">
         {title}
       </span>
-      <div
-        style={{
-          background: "linear-gradient(to right, #f4ecd0, #f2eace)",
-          borderRadius: "50%",
-        }}
-        className="w-39px h-37px p-px flex items-center justify-center ml-5px"
-      >
-        {number && (
-          <div
-            style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
-            className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
-          >
-            {number}
-          </div>
-        )}
-      </div>
+      {number !== "0" && (
+        <div
+          style={{
+            background: "linear-gradient(to right, #f4ecd0, #f2eace)",
+            borderRadius: "50%",
+          }}
+          className="w-39px h-37px p-px flex items-center justify-center ml-5px"
+        >
+          {number && (
+            <div
+              style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
+              className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
+            >
+              {number}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 
@@ -63,7 +65,7 @@ const HotelCasinoStructure = () => {
         >
           {text}{" "}
           {color1 && (
-            <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
+            <p style={{ color: "#0072bc", letterSpacing: color1 === "플레이어, 뱅커, 타이, 플레이어페어, 뱅커페어" && "-0.1rem" }} className="text-blue-2980b9">
               {color1}
             </p>
           )}
@@ -208,7 +210,7 @@ const HotelCasinoStructure = () => {
             }}
           >
             <div style={{ backgroundColor: "#ffffff", height: "633px" }} className="w-full h-full rounded-xl p-20px">
-              <TitleText title="로비화면" />
+              <TitleText title="로비화면" number="0" />
               <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
                 <Item title="아이디&보유머니" text="본인의 아이디와 보유머니 표시" />

@@ -182,7 +182,7 @@ const TvBetHowTo = () => {
                 </span>
               </div>
 
-              <div>
+              <div className="mt-20px">
                 <div className="flex items-center">
                   <span
                     style={{ color: "#8c8c8c", letterSpacing: "-0.1rem" }}

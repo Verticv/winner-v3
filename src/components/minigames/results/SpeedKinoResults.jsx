@@ -172,12 +172,12 @@ const SpeedKinoResults = ({array}) => {
     }
 
     return (
-        <div style={{height: "737px"}} className="rounded-4px  flex flex-col w-full">
+        <div style={{height: "733px"}} className="rounded-4px  flex flex-col w-full">
             <div style={{height: "51px", backgroundColor: "#fff"}} className="rounded-t-4px border-b border-gray-252525 p-4px">
                 <HorizontalMenu5 selectedTab={subTab} setSelectedTab={setSubTab} itemsArray={SubTabArray} />
             </div>
 
-            <div className="flex overflow-x-scroll">
+            <div className="flex overflow-x-scroll scroll-div3">
                 <Strip items={array} />
             </div>
         </div>

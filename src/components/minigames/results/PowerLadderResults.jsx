@@ -196,7 +196,7 @@ const PowerLadderResults = ({array}) => {
     }
 
     return (
-        <div style={{height: "686px"}} className="border border-gray-252525 flex w-full overflow-x-scroll">
+        <div style={{height: "686px"}} className="border border-gray-252525 flex w-full overflow-x-scroll scroll-div3">
             <Strip items={array} />
         </div>
     )

@@ -245,7 +245,7 @@ const MinigamesRightPanel = ({
                     <img className="object-none ml-3px" src={LockIcon} alt="" />
                     <div 
                         style={{textShadow: "2px 4px 4px #00000080"}} 
-                        className="text-white  text-18px tracking-Stightest mt-20px"
+                        className="text-white  text-18px tracking-Stightest mt-20px font-bold"
                     >지금은 베팅할 수 없습니다.</div>
                 </div>
             </div>

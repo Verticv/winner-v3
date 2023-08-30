@@ -69,7 +69,10 @@ const EsportsMulti = () => {
       )}
       {text5 && (
         <span
-          style={{ color: "#828282" }}
+          style={{
+            color: "#828282",
+            letterSpacing: text5 === "-최소 2개 이상 각각 다른 경기를 추가하세요." && "-0.1rem",
+          }}
           className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
           {text5}
@@ -148,7 +151,7 @@ const EsportsMulti = () => {
                 text2="선택합니다,"
                 text3="나. 선택한 경기(배당)가 ② 팔레이 리스트에"
                 text4="추가됩니다."
-                text5="-최소 2개 이상 각각 다른 경기를  추가하세요."
+                text5="-최소 2개 이상 각각 다른 경기를 추가하세요."
                 text6="다. 2경기 이상 추가되면 ③[확인] 버튼을"
                 text7="누릅니다."
               />
