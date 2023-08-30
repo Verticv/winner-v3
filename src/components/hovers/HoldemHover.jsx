@@ -24,6 +24,7 @@ const HoldemHover = ({ selection }) => {
       background: Icon2,
       logo: AugBannerLogo,
       imgText: "이용가이드",
+      path: "/esports/hold'emGame"
     },
   ];
 

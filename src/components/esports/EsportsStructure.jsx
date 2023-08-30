@@ -151,48 +151,23 @@ const EsportsStructure = () => {
               height: "525px",
             }}
           >
-            <div
-              style={{ backgroundColor: "#ffffff", height: "523px" }}
-              className="w-full h-full rounded-xl p-20px"
-            >
+            <div style={{ backgroundColor: "#ffffff", height: "523px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText />
 
-              <div
-                className="mt-19px w-full h-px bg-gray-dddddd"
-                style={{ background: "#cccccc" }}
-              ></div>
+              <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
                 <Item />
-                <Item
-                  number="2."
-                  title="게임종류선택"
-                  text="다양한 게임을 선택할 수 있습니다."
-                />
-                <Item
-                  number="3."
-                  title="경기리스트"
-                  text="경기리스트를 확인할 수 있습니다."
-                />
+                <Item number="2." title="게임종류선택" text="다양한 게임을 선택할 수 있습니다." />
+                <Item number="3." title="경기리스트" text="경기리스트를 확인할 수 있습니다." />
                 <LongItem />
-                <Item
-                  number="5."
-                  title="내 베팅"
-                  text="상세한 베팅내역 확인 가능"
-                />
-                <Item
-                  number="6."
-                  title="팔레이"
-                  text="팔레이(다폴더) 리스트 확인 가능"
-                />
+                <Item number="5." title="내 베팅" text="상세한 베팅내역 확인 가능" />
+                <Item number="6." title="팔레이" text="팔레이(다폴더) 리스트 확인 가능" />
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          className="h-px w-full bg-gray-494745 mt-29px"
-          style={{ background: "#aaaaaa" }}
-        />
+        <div className="h-px w-full bg-gray-494745 mt-29px" style={{ background: "#aaaaaa" }} />
 
         <div className="flex space-x-20px items-start">
           <img className="object-none" src={Image2} alt="" />
@@ -203,35 +178,21 @@ const EsportsStructure = () => {
               height: "618px",
             }}
           >
-            <div
-              style={{ backgroundColor: "#ffffff", height: "616px" }}
-              className="w-full h-full rounded-xl p-20px"
-            >
+            <div style={{ backgroundColor: "#ffffff", height: "616px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="02" />
 
-              <div
-                className="mt-20px w-full h-px bg-gray-494745"
-                style={{ background: "#494745" }}
-              ></div>
+              <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
 
               <div className="pt-20px space-y-23px">
                 <Item title="메인(초기)화면" text="메인화면으로 이동됩니다." />
-                <Item
-                  number="2."
-                  title="베팅타입 정렬"
-                  text="베팅타입 별로 배당판이 정렬됩니다."
-                />
+                <Item number="2." title="베팅타입 정렬" text="베팅타입 별로 배당판이 정렬됩니다." />
                 <Item
                   number="3."
                   title="라이브 배당률"
                   text="경기가 시작되면 라이브 배당률을 확인할 수"
                   text2="있습니다."
                 />
-                <Item
-                  number="4."
-                  title="배당판"
-                  text="다양한 배당정보가 표시됩니다."
-                />
+                <Item number="4." title="배당판" text="다양한 배당정보가 표시됩니다." />
                 <Item
                   number="5."
                   title="+버튼"
