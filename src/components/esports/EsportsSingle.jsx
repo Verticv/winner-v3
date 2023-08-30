@@ -18,7 +18,7 @@ const EsportsSingle = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-spoqaBold space-x-2px flex h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -30,16 +30,19 @@ const EsportsSingle = () => {
         style={{ color: "#828282", letterSpacing: "-0.091em" }}
         className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px"
       >
-        {text} <p className="ml-2px text-blue-r0056a6">{color1}</p>
-        <p style={{ color: "#ff1237" }} className="mr-2px">
+        {text}{" "}
+        <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
+          {color1}
+        </p>
+        <p style={{ color: "#f04281" }} className="mr-2px">
           {color2}
         </p>
         <p>{color3}</p>
       </span>
       {text2 && (
         <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+          style={{ color: "#828282", letterSpacing: "-0.091em" }}
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
           {text2}
         </span>
@@ -47,7 +50,7 @@ const EsportsSingle = () => {
       {text3 && (
         <span
           style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
           {text3}
         </span>
@@ -77,10 +80,7 @@ const EsportsSingle = () => {
               height: "370px",
             }}
           >
-            <div
-              style={{ backgroundColor: "#ffffff", height: "368px" }}
-              className="w-full h-full rounded-xl p-20px"
-            >
+            <div style={{ backgroundColor: "#ffffff", height: "368px" }} className="w-full h-full rounded-xl p-20px">
               <Item
                 number="1."
                 title="종목 및 경기선택"
@@ -91,10 +91,7 @@ const EsportsSingle = () => {
           </div>
         </div>
 
-        <div
-          className="h-px w-full bg-gray-dddddd"
-          style={{ background: "#aaaaaa" }}
-        />
+        <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
         <div className="flex space-x-20px items-start">
           <img className="object-none" src={Image4} alt="" />
@@ -105,23 +102,13 @@ const EsportsSingle = () => {
               height: "370px",
             }}
           >
-            <div
-              style={{ backgroundColor: "#ffffff", height: "368px" }}
-              className="w-full h-full rounded-xl p-20px"
-            >
-              <Item
-                number="2."
-                title="배당항목 선택"
-                text="원하는 ① 배당을 선택합니다."
-              />
+            <div style={{ backgroundColor: "#ffffff", height: "368px" }} className="w-full h-full rounded-xl p-20px">
+              <Item number="2." title="배당항목 선택" text="원하는 ① 배당을 선택합니다." />
             </div>
           </div>
         </div>
 
-        <div
-          className="h-px w-full bg-gray-dddddd"
-          style={{ background: "#aaaaaa" }}
-        />
+        <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
         <div className="flex space-x-20px items-start">
           <img className="object-none" src={Image5} alt="" />
@@ -132,10 +119,7 @@ const EsportsSingle = () => {
               height: "370px",
             }}
           >
-            <div
-              style={{ backgroundColor: "#ffffff", height: "368px" }}
-              className="w-full h-full rounded-xl p-20px"
-            >
+            <div style={{ backgroundColor: "#ffffff", height: "368px" }} className="w-full h-full rounded-xl p-20px">
               <Item
                 number="3."
                 title="베팅금액입력"
@@ -155,11 +139,7 @@ const EsportsSingle = () => {
                 알아두세요!
               </div>
               <div className="flex items-center">
-                <img
-                  src={Dot}
-                  className="object-contain mr-4px h-4px mt-6px"
-                  alt=""
-                />
+                <img src={Dot} className="object-contain mr-4px h-4px mt-6px" alt="" />
                 <span
                   style={{ color: "#8c8c8c" }}
                   className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
@@ -168,11 +148,7 @@ const EsportsSingle = () => {
                 </span>
               </div>
               <div className="flex items-center">
-                <img
-                  src={Dot}
-                  className="object-contain mr-4px h-4px mt-6px"
-                  alt=""
-                />
+                <img src={Dot} className="object-contain mr-4px h-4px mt-6px" alt="" />
                 <span
                   style={{ color: "#8c8c8c" }}
                   className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-5px"
@@ -181,11 +157,7 @@ const EsportsSingle = () => {
                 </span>
               </div>
               <div className="flex items-center">
-                <img
-                  src={Dot}
-                  className="object-contain mr-4px h-4px mt-6px"
-                  alt=""
-                />
+                <img src={Dot} className="object-contain mr-4px h-4px mt-6px" alt="" />
                 <span
                   style={{ color: "#8c8c8c" }}
                   className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-5px"
@@ -197,10 +169,7 @@ const EsportsSingle = () => {
           </div>
         </div>
 
-        <div
-          className="h-px w-full bg-gray-dddddd"
-          style={{ background: "#aaaaaa" }}
-        />
+        <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
         <div className="flex space-x-20px items-start">
           <img className="object-none" src={Image6} alt="" />
@@ -211,10 +180,7 @@ const EsportsSingle = () => {
               height: "370px",
             }}
           >
-            <div
-              style={{ backgroundColor: "#ffffff", height: "368px" }}
-              className="w-full h-full rounded-xl p-20px"
-            >
+            <div style={{ backgroundColor: "#ffffff", height: "368px" }} className="w-full h-full rounded-xl p-20px">
               <Item
                 number="4."
                 title="베팅완료"
@@ -225,10 +191,7 @@ const EsportsSingle = () => {
           </div>
         </div>
 
-        <div
-          className="h-px w-full bg-gray-dddddd"
-          style={{ background: "#aaaaaa" }}
-        />
+        <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
         <div className="flex space-x-20px items-start">
           <img className="object-none" src={Image7} alt="" />
@@ -239,10 +202,7 @@ const EsportsSingle = () => {
               height: "370px",
             }}
           >
-            <div
-              style={{ backgroundColor: "#ffffff", height: "368px" }}
-              className="w-full h-full rounded-xl p-20px"
-            >
+            <div style={{ backgroundColor: "#ffffff", height: "368px" }} className="w-full h-full rounded-xl p-20px">
               <Item
                 number="5."
                 title="베팅내역확인"
@@ -253,10 +213,7 @@ const EsportsSingle = () => {
           </div>
         </div>
 
-        <div
-          className="h-px w-full bg-gray-dddddd"
-          style={{ background: "#aaaaaa" }}
-        />
+        <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
       </div>
     </div>
   );

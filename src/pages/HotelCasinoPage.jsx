@@ -52,12 +52,12 @@ const HotelCasino = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedTab={setSelectedTab}
           />
         </Route>
-        <div className="w-default -mt-5px z-30">
+        <div className="w-default mt-4px mb-px z-30">
           <Route path="/hotel-casino/structure">
             <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
           </Route>
         </div>
-        <div className="flex mt-20px mb-60px w-default z-30">
+        <div className="mt-20px mb-65px w-default z-30">
           <Route path="/hotel-casino/structure">
             <HotelCasinoStructure />
           </Route>

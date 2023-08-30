@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 // import Reflect from "../../images/esports/esports_reflect.png";
 
-const HorizontalMenu9 = ({
-  itemsArray,
-  setSelectedTab,
-  setSelectedSubTab = null,
-}) => {
+const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null }) => {
   const history = useHistory();
   const pathname = window.location.pathname;
   const [isHover, setHover] = useState(null);
@@ -63,12 +59,8 @@ const HorizontalMenu9 = ({
             )} */}
             <span
               style={{ color: pathname === item.path ? "#ffffff" : "#5e399a" }}
-              className={`${
-                pathname === item.path
-                  ? "text-gray-252525"
-                  : "text-golden-ccc2b6"
-              }
-                          text-20px font-spoqaBold tracking-tight`}
+              className={`${pathname === item.path ? "text-gray-252525" : "text-golden-ccc2b6"}
+                          text-20px font-bold tracking-tight`}
             >
               {item.text}
             </span>

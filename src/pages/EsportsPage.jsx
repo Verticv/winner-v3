@@ -30,6 +30,8 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
     { text: "다폴더 베팅방법", id: 2, path: "/esports/multi" },
   ];
 
+  const MenuArray1 = [{ text: "실시간스포츠 이용가이드", id: 0, path: "/esports/LiveSport" }];
+
   const [, setSelectedTab] = useState(0);
 
   return (
@@ -51,10 +53,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
 
-      <div
-        style={{ marginTop: "154px" }}
-        className="flex flex-col items-start limit:items-center w-full h-full"
-      >
+      <div style={{ marginTop: "154px" }} className="flex flex-col items-start limit:items-center w-full h-full">
         <Route path="/esports/structure">
           <DirectoryComponent
             branch1="e-스포츠"
@@ -99,22 +98,16 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
 
         <div className="w-default mt-4px mb-px z-30">
           <Route path="/esports/structure">
-            <HorizontalMenu9
-              itemsArray={MenuArray}
-              setSelectedTab={setSelectedTab}
-            />
+            <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
           </Route>
           <Route path="/esports/single">
-            <HorizontalMenu9
-              itemsArray={MenuArray}
-              setSelectedTab={setSelectedTab}
-            />
+            <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
           </Route>
           <Route path="/esports/multi">
-            <HorizontalMenu9
-              itemsArray={MenuArray}
-              setSelectedTab={setSelectedTab}
-            />
+            <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
+          </Route>
+          <Route path="/esports/LiveSport">
+            <HorizontalMenu9 itemsArray={MenuArray1} setSelectedTab={setSelectedTab} />
           </Route>
         </div>
 

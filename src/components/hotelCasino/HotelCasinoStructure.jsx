@@ -42,7 +42,7 @@ const HotelCasinoStructure = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-spoqaBold space-x-2px  h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -54,8 +54,11 @@ const HotelCasinoStructure = () => {
         style={{ color: "#828282", letterSpacing: "-0.091em" }}
         className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px"
       >
-        {text} <p className="ml-2px text-blue-2980b9">{color1}</p>
-        <p style={{ color: "#e65454" }} className="mr-2px">
+        {text}{" "}
+        <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
+          {color1}
+        </p>
+        <p style={{ color: "#f04281" }} className="mr-2px">
           {color2}
         </p>
         <p>{color3}</p>
@@ -88,8 +91,10 @@ const HotelCasinoStructure = () => {
     text4 = "공지 : 게임 공지 확인 가능",
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-spoqaBold space-x-2px flex h-18px items-center">
-        <span className="text-golden-gradLight">{number}</span>
+      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center">
+        <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
+          {number}
+        </span>
         <span className="text-gray-ccc2b6">{title}</span>
       </div>
       <div className="flex mt-px">
@@ -130,7 +135,6 @@ const HotelCasinoStructure = () => {
       </div>
     </div>
   );
-
   return (
     <div
       className="w-full overflow-hidden rounded-10px p-px"

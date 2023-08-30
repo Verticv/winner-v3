@@ -17,7 +17,7 @@ const LiveSport = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-spoqaBold space-x-2px flex h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px h-18px items-center">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -59,25 +59,6 @@ const LiveSport = () => {
     // <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa border border-gray-dddddd p-30px space-y-30px">
     <>
       <div
-        className="w-full rounded-6px p-px h-57px mb-21px -mt-19px"
-        style={{
-          background: "linear-gradient(to top, #4f3a7a, #cb78e6)",
-          boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
-        }}
-      >
-        <div
-          style={{ background: "linear-gradient(to top, #491f9c, #9e3cbc)" }}
-          className="w-full bg-gray-323232 rounded-6px h-55px flex flex-col justify-start pt-14px items-center cursor-pointer"
-        >
-          <span
-            style={{ color: "#ffffff" }}
-            className="text-20px font-spoqaBold tracking-tight"
-          >
-            실시간스포츠 이용가이드
-          </span>
-        </div>
-      </div>
-      <div
         className="w-full overflow-hidden rounded-10px p-px"
         style={{
           background: "linear-gradient(to top, #4f3a7a, #f0d3ff)",
@@ -97,10 +78,7 @@ const LiveSport = () => {
                 height: "395px",
               }}
             >
-              <div
-                style={{ backgroundColor: "#ffffff", height: "393px" }}
-                className="w-full h-full rounded-xl p-20px"
-              >
+              <div style={{ backgroundColor: "#ffffff", height: "393px" }} className="w-full h-full rounded-xl p-20px">
                 <Item
                   number="1."
                   title="종목선택"
@@ -113,10 +91,7 @@ const LiveSport = () => {
             </div>
           </div>
 
-          <div
-            className="h-px w-full bg-gray-dddddd"
-            style={{ background: "#aaaaaa" }}
-          />
+          <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
           <div className="flex space-x-20px items-start">
             <img className="object-none" src={Image4} alt="" />
@@ -127,10 +102,7 @@ const LiveSport = () => {
                 height: "395px",
               }}
             >
-              <div
-                style={{ backgroundColor: "#ffffff", height: "393px" }}
-                className="w-full h-full rounded-xl p-20px"
-              >
+              <div style={{ backgroundColor: "#ffffff", height: "393px" }} className="w-full h-full rounded-xl p-20px">
                 <Item
                   number="2."
                   title="베팅항목선택"
@@ -143,10 +115,7 @@ const LiveSport = () => {
             </div>
           </div>
 
-          <div
-            className="h-px w-full bg-gray-dddddd"
-            style={{ background: "#aaaaaa" }}
-          />
+          <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
           <div className="flex space-x-20px items-start">
             <img className="object-none" src={Image5} alt="" />
@@ -157,10 +126,7 @@ const LiveSport = () => {
                 height: "394px",
               }}
             >
-              <div
-                style={{ backgroundColor: "#ffffff", height: "392px" }}
-                className="w-full h-full rounded-xl p-20px"
-              >
+              <div style={{ backgroundColor: "#ffffff", height: "392px" }} className="w-full h-full rounded-xl p-20px">
                 <Item
                   number="3."
                   title="베팅금액입력"
@@ -171,10 +137,7 @@ const LiveSport = () => {
             </div>
           </div>
 
-          <div
-            className="h-px w-full bg-gray-dddddd"
-            style={{ background: "#aaaaaa" }}
-          />
+          <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
           <div className="flex space-x-20px items-start">
             <img className="object-none" src={Image6} alt="" />
@@ -185,23 +148,13 @@ const LiveSport = () => {
                 height: "394px",
               }}
             >
-              <div
-                style={{ backgroundColor: "#ffffff", height: "392px" }}
-                className="w-full h-full rounded-xl p-20px"
-              >
-                <Item
-                  number="4."
-                  title="베팅완료"
-                  text="[확인] 버튼을 누르면 베팅이 완료됩니다."
-                />
+              <div style={{ backgroundColor: "#ffffff", height: "392px" }} className="w-full h-full rounded-xl p-20px">
+                <Item number="4." title="베팅완료" text="[확인] 버튼을 누르면 베팅이 완료됩니다." />
               </div>
             </div>
           </div>
 
-          <div
-            className="h-px w-full bg-gray-dddddd"
-            style={{ background: "#aaaaaa" }}
-          />
+          <div className="h-px w-full bg-gray-dddddd" style={{ background: "#aaaaaa" }} />
 
           <div className="flex space-x-20px items-start">
             <img className="object-none" src={Image7} alt="" />
@@ -212,10 +165,7 @@ const LiveSport = () => {
                 height: "394px",
               }}
             >
-              <div
-                style={{ backgroundColor: "#ffffff", height: "392px" }}
-                className="w-full h-full rounded-xl p-20px"
-              >
+              <div style={{ backgroundColor: "#ffffff", height: "392px" }} className="w-full h-full rounded-xl p-20px">
                 <Item
                   number="5."
                   title="베팅내역확인"
