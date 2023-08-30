@@ -31,6 +31,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
   ];
 
   const MenuArray1 = [{ text: "실시간스포츠 이용가이드", id: 0, path: "/esports/LiveSport" }];
+  const MenuArray2 = [{ text: "홀덤게임 이용가이드", id: 0, path: "/esports/hold'emGame" }];
 
   const [, setSelectedTab] = useState(0);
 
@@ -108,6 +109,9 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
           </Route>
           <Route path="/esports/LiveSport">
             <HorizontalMenu9 itemsArray={MenuArray1} setSelectedTab={setSelectedTab} />
+          </Route>
+          <Route path="/esports/hold'emGame">
+            <HorizontalMenu9 itemsArray={MenuArray2} setSelectedTab={setSelectedTab} />
           </Route>
         </div>
 

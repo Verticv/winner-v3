@@ -22,7 +22,7 @@ const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null 
               : "linear-gradient( to top, #4f3a7a, #f0d3ff)",
           boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
         }}
-        className="relative overflow-hidden w-full flex p-px items-end rounded-6px"
+        className="relative overflow-hidden w-full flex p-px items-end rounded-6px hover:filter hover:brightness-110"
         onClick={() => {
           history.push(item.path);
           setSelectedTab(item.id);
@@ -52,7 +52,7 @@ const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null 
             //       ? "#54544f"
             //       : "linear-gradient( to top, rgb(50,50,49) 0%, rgb(84,84,82) 100%)",
             // }}
-            className={`w-full rounded-3px flex flex-col justify-start pt-14px items-center relative hover:filter hover:brightness-90`}
+            className={`w-full rounded-3px flex flex-col justify-start pt-14px items-center relative`}
           >
             {/* {pathname === item.path && (
               <img className="absolute top-0 left-0" src={Reflect} alt="" />
