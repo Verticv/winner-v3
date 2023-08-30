@@ -177,7 +177,7 @@ const SpeedKinoResults = ({array}) => {
                 <HorizontalMenu5 selectedTab={subTab} setSelectedTab={setSubTab} itemsArray={SubTabArray} />
             </div>
 
-            <div className="flex overflow-x-scroll scroll-div3">
+            <div className="flex overflow-x-scroll overflow-y-hidden scroll-div5">
                 <Strip items={array} />
             </div>
         </div>

@@ -71,3 +71,21 @@
   background: #9b6bd4;
   /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
 }
+
+.scroll-div5::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+
+.scroll-div5::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 10px #530674; */
+  background: #fff;
+  border-radius: 10px;
+}
+
+.scroll-div5::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #956df1;
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); */
+}
