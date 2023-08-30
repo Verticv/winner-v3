@@ -74,9 +74,9 @@ const TvBetStructure = () => {
           style={{
             color: "#828282",
             letterSpacing:
-              (text3 === "영상위치설정, 영상 새창띄우기 등 제공합니다." ||
-                text3 === "원하는 이벤트를 선택하면 배당판이 활성화되며") &&
-              "-0.1em",
+              (text3 === "영상위치설정, 영상 새창띄우기 등 제공합니다."
+                ? "-0.1em"
+                : text3 === "원하는 이벤트를 선택하면 배당판이 활성화되며") && "-0.125rem",
           }}
           className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium`}
         >
