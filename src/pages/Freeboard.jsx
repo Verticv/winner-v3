@@ -54,7 +54,7 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
           <DirectoryComponent branch1="게시판" branch2="작성하기" mainPath="/freeboard/compose" />
         </Route>
 
-        <div style={{ height: "136px" }} className="relative flex-shrink-0">
+        <div style={{ height: "136px", width: "1280px" }} className="relative flex-shrink-0">
           <img
             style={{ height: "150px", width: "1300px" }}
             className="z-10 object-none flex-shrink-0"

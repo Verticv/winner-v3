@@ -68,7 +68,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
         </Route>
 
         <Route path='/money/charge'>
-          <div style={{height:'136px'}} className='relative'>
+          <div style={{height:'136px', width: "1280px"}} className='relative'>
             <img style={{ height: "150px", width: "1300px", objectFit: "none" }} className='z-10' src={MoneyChargeBanner} alt='' />
            
             <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex     items-center justify-center">
@@ -77,7 +77,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
           </div>
         </Route>
         <Route path='/money/exchange'>
-          <div style={{height:'136px'}} className='relative'>
+          <div style={{height:'136px', width: "1280px"}} className='relative'>
             <img style={{ height: "150px", width: "1300px", objectFit: "none" }} className='z-10' src={MoneyExchangeBanner} alt='' />
             <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex     items-center justify-center">
               <span style={{ textShadow: '0 0 4px rgba(0, 0, 0, 0.6)' }} className="leading-none text-white -mt-2px" >보유머니 환전</span>

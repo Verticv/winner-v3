@@ -18,7 +18,7 @@ const AttendPage = ({ isAuthenticated, setAuthenticated }) => {
       </div>
 
       <div style={{ marginTop: "205px" }} className="flex flex-col items-start limit:items-center w-full h-full">
-        <div style={{ height: "136px" }} className="relative">
+        <div style={{ height: "136px", width: "1280px" }} className="relative">
           <img
             style={{ height: "150px", width: "1300px", objectFit: "none" }}
             className="z-10"
