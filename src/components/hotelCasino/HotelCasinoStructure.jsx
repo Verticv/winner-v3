@@ -11,7 +11,7 @@ const HotelCasinoStructure = () => {
     <div className="flex items-center">
       {/* <div style={{background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius:"3px"}} className="w-8px h-20px"></div> */}
       <img className="z-10 object-none" src={TitleIcon} alt="" />
-      <span className="text-22px font-spoqaMedium tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center">
+      <span className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center">
         {title}
       </span>
       <div
@@ -23,7 +23,7 @@ const HotelCasinoStructure = () => {
       >
         <div
           style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
-          className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto"
+          className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
         >
           {number}
         </div>

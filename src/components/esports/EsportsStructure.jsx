@@ -9,7 +9,7 @@ const EsportsStructure = () => {
     <div className="flex items-center">
       {/* <div style={{background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius:"3px"}} className="w-8px h-20px"></div> */}
       <img className="z-10 object-none" src={TitleIcon} alt="" />
-      <span className="text-22px font-spoqaMedium tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center">
+      <span className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center">
         화면구성
       </span>
       <div
@@ -21,7 +21,7 @@ const EsportsStructure = () => {
       >
         <div
           style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
-          className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-px"
+          className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
         >
           {number}
         </div>
@@ -50,7 +50,7 @@ const EsportsStructure = () => {
       </div>
       <span
         style={{ color: "#828282", letterSpacing: "-0.091em" }}
-        className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px"
+        className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px ${text === "라이브경기는 실시간으로 경기영상을 제공하며" ? "tracking-tighter" : "tracking-tight"}`}
       >
         {text} <p style={{color:"#0072bc"}} className="ml-2px text-blue-2980b9">{color1}</p>
         <p style={{ color: "#f04281" }} className="mr-2px">
