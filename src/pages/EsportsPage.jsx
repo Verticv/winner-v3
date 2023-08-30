@@ -46,8 +46,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
       <div
         style={{
           width: "1496px",
-          height: "calc(100vh - 497px)",
-          top: scrollPosition > 497 ? "235px" : "356px",
+          top: scrollPosition > 200 ? "235px" : "282px",
         }}
         className={`fixed z-50 flex justify-end`}
       >
