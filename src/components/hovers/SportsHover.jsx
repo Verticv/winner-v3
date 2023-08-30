@@ -17,14 +17,14 @@ const SportsHover = ({ selection }) => {
       background: LebronBanner,
       logo: LebronBannerLogo,
       imgText: "실시간스포츠",
-      path: "#",
+      path: "",
     },
     {
       id: 1,
       background: FootballLogo,
       logo: LebronBannerLogo,
       imgText: "이용가이드",
-      path: "#",
+      path: "/esports/LiveSport",
     },
   ];
 

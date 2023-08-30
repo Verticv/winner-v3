@@ -149,7 +149,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
         <div>
           <Footer />
         </div>
-        <div>
+        <div className="z-50">
           <QuickMenu />
         </div>
       </div>

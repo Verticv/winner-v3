@@ -37,7 +37,7 @@ const EsportsHover = ({ selection }) => {
       background: OverwatchBanner,
       logo: SuddenAttackBannerLogo,
       imgText: "보타카지노",
-      path: "/",
+      // path: "",
     },
     {
       id: 3,

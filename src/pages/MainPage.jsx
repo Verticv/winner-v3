@@ -108,7 +108,7 @@ const MainPage = ({ isAuthenticated, setAuthenticated }) => {
 
         <Footer />
 
-        <div>
+        <div className="z-50">
           <QuickMenu />
         </div>
 

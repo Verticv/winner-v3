@@ -73,7 +73,7 @@ const QuickMenu = () => {
       }}
       className={`fixed top-157px ${
         isHover ? "right-0" : "-right-175px"
-      } z-10 flex transition-all duration-300 ease-in-out`}
+      } z-50 flex transition-all duration-300 ease-in-out`}
       onMouseLeave={() => setIsHover(false)}
     >
       <div

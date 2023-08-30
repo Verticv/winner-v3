@@ -36,7 +36,7 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
           width: "1496px",
           top: scrollPosition > 200 ? "235px" : "430px",
         }}
-        className={`right-208px fixed z-20 flex justify-end`}
+        className={`right-208px fixed z-50 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
@@ -55,7 +55,7 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
         </Route>
 
         <div style={{ height: "136px" }} className="relative">
-          <img className="z-10" src={FreeBoardBanner} alt="" />
+          <img className="z-10 object-none" src={FreeBoardBanner} alt="" />
           <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex items-center justify-center">
             <span style={{ textShadow: "0 0 4px rgba(0, 0, 0, 0.6)" }} className="leading-none text-white -mt-6px">
               게시판

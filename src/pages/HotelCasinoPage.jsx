@@ -38,7 +38,7 @@ const HotelCasino = ({ isAuthenticated, setAuthenticated }) => {
           height: "calc(100vh - 497px)",
           top: scrollPosition > 497 ? "235px" : "356px",
         }}
-        className={`fixed z-20 flex justify-end`}
+        className={`fixed z-50 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>

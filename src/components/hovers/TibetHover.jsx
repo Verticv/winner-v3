@@ -25,12 +25,14 @@ const TibetHover = ({ selection }) => {
       background: img3,
       logo: img1Logo,
       imgText: "화면구성설명",
+      path: "/esports/structure",
     },
     {
       id: 2,
       background: img2,
       logo: img1Logo,
       imgText: "베팅방법",
+      path: "/esports/single",
     },
   ];
 

@@ -71,7 +71,7 @@ const MinigamesPage = ({ isAuthenticated, setAuthenticated }) => {
       <div className='fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center'>
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
-      <div>
+      <div className='z-50'>
         <QuickMenu />
         
       </div>

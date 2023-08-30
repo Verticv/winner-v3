@@ -202,8 +202,8 @@ const Inbox = () => {
       <div className="w-full mt-10px"></div>
       <InboxTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} />
 
-      <div className="mt-20px h-36px w-full flex items-center justify-between">
-        <div className="flex space-x-2px">
+      <div className="mt-20px h-36px w-full flex items-center justify-between pl-px">
+        <div className="flex space-x-4px">
           <button
             style={{ background: "#936cee", boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)" }}
             className="flex items-center justify-center w-88px h-36px rounded-6px hover:filter hover:brightness-125"
@@ -221,16 +221,16 @@ const Inbox = () => {
             <span className="tracking-tight text-13px text-white text-shadow-5">선택삭제</span>
           </button>
         </div>
-        <button
+        <div
           style={{
-            width: "158px",
+            width: "128px",
             background: "linear-gradient(to right, #15cfee, #3197e5)",
             boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
           }}
-          className="flex items-center justify-center h-36px rounded-6px p-px hover:filter hover:brightness-125 mr-px"
+          className="flex items-center justify-center h-36px rounded-6px p-px hover:filter hover:brightness-125 cursor-pointer"
         >
           <span className="tracking-tight text-13px text-white text-shadow-5">전체읽음처리</span>
-        </button>
+        </div>
       </div>
 
       <div className="flex w-full justify-center mt-4px mb-60px">

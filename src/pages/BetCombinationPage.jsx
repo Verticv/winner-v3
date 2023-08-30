@@ -87,7 +87,7 @@ const BetCombinationPage = ({ isAuthenticated, setAuthenticated }) => {
           width: "1496px",
           top: scrollPosition > 200 ? "235px" : "282px",
         }}
-        className={`fixed z-20 flex justify-end`}
+        className={`fixed z-50 flex justify-end`}
       >
         <QuickMenu scrollPosition={scrollPosition} />
       </div>

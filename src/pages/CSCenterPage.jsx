@@ -245,7 +245,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
           <Footer />
         </div>
       </div>
-      <div>
+      <div className='z-50'>
         <QuickMenu />
       </div>
     </div>

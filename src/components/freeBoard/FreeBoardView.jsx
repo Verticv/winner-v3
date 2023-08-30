@@ -269,16 +269,25 @@ const FreeBoardView = () => {
             </div>
           </div>
           <div style={{ height: "93px" }} className="relative flex w-full rounded-6px bg-gray-252525 -mt-px">
-            <textarea
+            <div
               style={{
-                width: "1100px",
-                resize: "none",
-                overflowY: "auto",
+                height: "93px",
+                width: "1110px",
                 boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
               }}
-              className="scroll-div4 outline-none w-full px-19px pb-17px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
-              placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
-            />
+              className="h-full bg-white rounded-l-6px"
+            >
+              <textarea
+                style={{
+                  width: "1095px",
+                  resize: "none",
+                  overflowY: "auto",
+                  // boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
+                }}
+                className="scroll-div4 outline-none w-full px-19px pb-17px pt-16px text-14px font-spoqa bg-transparent tracking-tight placeholder-r666666 bg-gray-252525 rounded-l-6px text-r666666 h-full"
+                placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
+              />
+            </div>
 
             <button
               className="rounded-6px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125"
@@ -439,16 +448,25 @@ const FreeBoardView = () => {
           </div>
           <div style={{ height: "114px" }} className="px-20px pb-10px pt-10px">
             <div style={{ height: "93px" }} className="rounded-4px bg-gray-252525 relative flex w-full">
-              <textarea
+              <div
                 style={{
-                  width: "1100px",
-                  resize: "none",
-                  overflowY: "auto",
+                  height: "93px",
+                  width: "1110px",
                   boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="scroll-div4 outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
-                placeholder="두개의 이벤트 모두 참여하였습니다."
-              />
+                className="h-full bg-white rounded-l-6px"
+              >
+                <textarea
+                  style={{
+                    width: "1095px",
+                    resize: "none",
+                    overflowY: "auto",
+                    // boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
+                  }}
+                  className="scroll-div4 outline-none w-full h-full bg-transparent px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
+                  placeholder="두개의 이벤트 모두 참여하였습니다."
+                />
+              </div>
               <button
                 className="rounded-6px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125 -mr-px"
                 style={{
@@ -518,16 +536,24 @@ const FreeBoardView = () => {
           </div>
           <div style={{ height: "114px" }} className="px-20px pb-11px pt-10px">
             <div style={{ height: "93px" }} className="relative flex w-full rounded-4px">
-              <textarea
+              <div
                 style={{
-                  width: "1100px",
-                  resize: "none",
-                  overflowY: "auto",
+                  height: "93px",
+                  width: "1110px",
                   boxShadow: "inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 1px 0px rgba(0, 0, 0, 0.5)",
                 }}
-                className="scroll-div4 outline-none w-full px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
-                placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
-              />
+                className="h-full bg-white rounded-l-6px"
+              >
+                <textarea
+                  style={{
+                    width: "1095px",
+                    resize: "none",
+                    overflowY: "auto",
+                  }}
+                  className="scroll-div4 outline-none w-full h-full bg-transparent px-19px pb-18px pt-16px text-14px font-spoqa tracking-tight placeholder-r666666 bg-gray-252525 rounded-6px text-r666666"
+                  placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
+                />
+              </div>
 
               <button
                 className="-mr-px rounded-6px right-0 absolute flex items-center justify-center w-120px p-px hover:filter hover:brightness-125"
