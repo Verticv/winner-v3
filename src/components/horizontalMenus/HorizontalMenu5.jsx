@@ -18,7 +18,7 @@ const HorizontalMenu5 = ({
                     :'linear-gradient( to top, #4f3a7a 0%, #a05bf6 50%, #f0d3ff 100%)',
                     boxShadow: '0 2px 5px rgba(0,0,0,0.6)'
                 }}
-                className="relative overflow-hidden w-full rounded-6px flex items-end p-px "
+                className="relative overflow-hidden w-full rounded-6px flex items-end p-px hover:filter hover:brightness-110 "
                 onClick={() => setSelectedTab(item.id)}
             >
             
@@ -28,7 +28,7 @@ const HorizontalMenu5 = ({
                         background: selectedTab === item.id
                         ? 'linear-gradient(to top, #491f9c 0%, #9e3cbc 100%)'
                         : 'linear-gradient( to top, #ccc4ff 0%, #ffd9f5 100%)',
-                    }} className="w-full rounded-6px flex items-center justify-center relative hover:filter hover:brightness-90" >
+                    }} className="w-full rounded-6px flex items-center justify-center relative" >
                     
                     <div 
                         style={{color: selectedTab === item.id ? "#ffff" : "#5e399a"}}

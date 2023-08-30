@@ -39,7 +39,7 @@ const HorizontalMenu8 = ({
                   ? "linear-gradient(to top, #491f9c, #9e3cbc)"
                   : "linear-gradient(to top, #ccc4ff, #ffd9f5)",
             }}
-            className={`w-full flex absolute top-0 rounded-6px mt-px`}
+            className={`w-full flex absolute top-0 rounded-6px mt-px hover:filter hover:brightness-110`}
           >
             <div
               style={{
@@ -51,7 +51,7 @@ const HorizontalMenu8 = ({
                       // ? "#54544f"
                       "linear-gradient(to top, #ccc4ff, #ffd9f5)",
               }}
-              className={` w-full rounded-6px flex flex-col justify-end items-center relative hover:filter hover:brightness-90`}
+              className={` w-full rounded-6px flex flex-col justify-end items-center relative`}
             >
               <img
                 className=" object-none"

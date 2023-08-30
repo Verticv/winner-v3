@@ -42,7 +42,7 @@ const NoticeCard = () => {
   return (
     <Card HeaderIcon={Notice} headerText="게시판" headerActionText="더보기 >">
       <div className="flex flex-col mt-12px space-y-12px">
-        <Item text="이벤트 신청합니다. asdhasioduhasuidhasuidhaiduh" name="신풍사우나asd" />
+        <Item text="이벤트 신청합니다." name="신풍사우나" />
         <Item text="이벤트 신청합니다." name="신풍사우나" />
         <Item text="이벤트 신청합니다." name="신풍사우나" />
         <Item text="이벤트 신청합니다." name="신풍사우나" />

@@ -26,7 +26,7 @@ const HorizontalMenu3 = ({
             :'linear-gradient( to top, #4f3a7a 0%, #a05bf6 50%, #f0d3ff 100%)',
             boxShadow: '0 2px 5px rgba(0,0,0,0.6)'
           }}
-          className={`relative overflow-hidden h-59px w-full flex items-end p-px rounded-6px`} 
+          className={`relative overflow-hidden h-59px w-full flex items-end p-px rounded-6px hover:filter hover:brightness-110`} 
           onClick={() => {
             setSelectedTab(item.path)
             setSelectedTab1(0)
@@ -54,7 +54,7 @@ const HorizontalMenu3 = ({
                
             }}
             
-              className={` ${selectedTab === item.path?'pr-21px':'pr-20px'} w-full rounded-6px flex items-center justify-between relative hover:filter hover:brightness-90`}>
+              className={` ${selectedTab === item.path?'pr-21px':'pr-20px'} w-full rounded-6px flex items-center justify-between relative`}>
               <div className={`flex items-center`}>
                 <img 
                 className={`
