@@ -28,8 +28,10 @@ import MyMenuIcon from "../../../images/navBar/managment/my_menu.png";
 import MyMenuActiveIcon from "../../../images/navBar/managment/my_menu_active.png";
 import ContactIcon from "../../../images/navBar/managment/contact.png";
 import ContactActiveIcon from "../../../images/navBar/managment/contact_active.png";
+import MessageIconOn from "../../../images/navBar/managment/message_on.png";
 import MessageIcon from "../../../images/navBar/managment/message.png";
 import CouponIcon from "../../../images/navBar/managment/coupon.png";
+import CouponIconOn from "../../../images/navBar/managment/coupon_on.png";
 
 import { useHistory } from "react-router-dom";
 import TopBar from "../TopBar";
@@ -64,7 +66,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   const myMenuOptionsArray = [
-    // { text: "마이페이지", id: 0, path: "/mypage/bet-history" },
+    { text: "마이페이지", id: 0, path: "/mypage/bet-history" },
     { text: "베팅내역", id: 1, path: "/mypage/bet-history" },
     { text: "충/환전내역", id: 2, path: "/mypage/transaction/charge-history" },
     { text: "총판페이지", id: 3, path: "/distributor-page" },
@@ -171,10 +173,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 buttonText="마이메뉴"
                 ButtonIcon={MyMenuIcon}
                 ButtonActiveIcon={MyMenuActiveIcon}
-                DropdownHeight={"167px"}
+                DropdownHeight={"193px"}
               />
-              <LinkButton ButtonIcon={MessageIcon} buttonText="쪽지" count={25} isAuthenticated={isAuthenticated} />
-              <LinkButton ButtonIcon={CouponIcon} buttonText="쿠폰" count={5} isAuthenticated={isAuthenticated} />
+              <LinkButton ButtonIcon={MessageIcon} ButtonIconHighlight={MessageIconOn} buttonText="쪽지" count={25} isAuthenticated={isAuthenticated} />
+              <LinkButton ButtonIcon={CouponIcon} ButtonIconHighlight={CouponIconOn} buttonText="쿠폰" count={5} isAuthenticated={isAuthenticated} />
               <DropdownButton
                 onMouseOver={() => {
                   setSelectedTab(null);

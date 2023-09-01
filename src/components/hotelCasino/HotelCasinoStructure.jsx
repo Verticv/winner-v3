@@ -47,7 +47,7 @@ const HotelCasinoStructure = () => {
     exceptionText = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         {number !== "0" && (
           <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
             {number}
@@ -117,7 +117,7 @@ const HotelCasinoStructure = () => {
     text11 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center">
+      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -206,10 +206,10 @@ const HotelCasinoStructure = () => {
             className="w-full rounded-xl p-px "
             style={{
               backgroundColor: "#cccccc",
-              height: "635px",
+              height: "665px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "633px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "663px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText title="로비화면" number="0" />
               <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
@@ -264,10 +264,10 @@ const HotelCasinoStructure = () => {
             className="w-full rounded-xl p-px -mt-px"
             style={{
               backgroundColor: "#cccccc",
-              height: "688px",
+              height: "758px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "686px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "756px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="01" title="게임화면" />
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
@@ -308,10 +308,10 @@ const HotelCasinoStructure = () => {
             className="w-full rounded-xl p-px -mt-px"
             style={{
               backgroundColor: "#cccccc",
-              height: "668px",
+              height: "738px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "666px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "736px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="02" title="게임화면" />
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
@@ -360,10 +360,10 @@ const HotelCasinoStructure = () => {
             className="w-full rounded-xl p-px -mt-px"
             style={{
               backgroundColor: "#cccccc",
-              height: "508px",
+              height: "548px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "506px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "546px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="03" title="게임화면" />
 
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>

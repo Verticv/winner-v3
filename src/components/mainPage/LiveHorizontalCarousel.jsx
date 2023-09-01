@@ -232,7 +232,7 @@ export default function LiveHorizontalCarousel() {
           </div>
         </Link>
         {/* Start Carousel */}
-        <div className="container mx-auto">
+        <div className="container mx-auto" onMouseEnter={() => setPlaying(false)} onMouseLeave={() => setPlaying(true)}>
           <div className="animated_carousel-multiple flex items-center justify-center w-full h-full">
             <CarouselProvider
               className=""

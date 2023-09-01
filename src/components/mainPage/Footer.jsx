@@ -152,7 +152,7 @@ const Footer = ({ fullWidth = false }) => {
           >
             <p
               style={{ color: "#7f7d9c" }}
-              className="font-spoqaMedium text-14px h-14px tracking-tigther flex items-center text-white mb-20px"
+              className="font-bold text-14px h-14px tracking-tigther flex items-center text-white mb-20px"
             >
               {menu.title}
             </p>

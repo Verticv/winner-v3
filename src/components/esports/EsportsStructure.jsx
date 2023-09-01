@@ -40,7 +40,7 @@ const EsportsStructure = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -92,7 +92,7 @@ const EsportsStructure = () => {
     text4 = "공지 : 게임 공지 확인 가능",
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center">
+      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -156,10 +156,10 @@ const EsportsStructure = () => {
             className="w-full rounded-xl p-px "
             style={{
               backgroundColor: "#cccccc",
-              height: "525px",
+              height: "585px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "523px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "583px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText />
 
               <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
@@ -183,10 +183,10 @@ const EsportsStructure = () => {
             className="w-full rounded-xl p-px -mt-px"
             style={{
               backgroundColor: "#cccccc",
-              height: "618px",
+              height: "698px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "616px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "696px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="02" />
 
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>

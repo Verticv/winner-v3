@@ -104,7 +104,7 @@ export default function SlotGameVerticalCarousel() {
     >
       <div className="flex text-white h-36px w-full justify-center items-center">
         <img src={slotTitleLeftIcon} alt="slot title icon" />
-        <p className="text-16px font-spoqaMedium tracking-tight pl-5px pr-3px mt-px -ml-px">슬롯 실시간 우승</p>
+        <p className="text-16px font-bold tracking-tight pl-5px pr-3px mt-px -ml-px">슬롯 실시간 우승</p>
         <img src={slotTitleReftIcon} alt="slot title icon" />
       </div>
       {/* Start Carousel */}

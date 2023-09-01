@@ -109,7 +109,7 @@ class Calendar extends React.Component {
             <div
               className={`text-r666666 text-21px font-roboto mt-19px ml-18px h-full w-full flex items-start justify-start`}
             >
-              <p>{isSameMonth(day, monthStart) && formattedDate}</p>
+              <p style={{ color: day.getDay() === 0 && "#ff7f7f" }}>{isSameMonth(day, monthStart) && formattedDate}</p>
             </div>
             {isSameMonth(day, monthStart) && (
               <img
@@ -197,9 +197,10 @@ class Calendar extends React.Component {
                 <div className="mt-12px flex flex-col space-y-16px text-r666666 tracking-tight text-16px ml-2px font-bold">
                   <span className="h-14px space-y-4px">
                     <span className="mr-5px font-bold">✓</span>
-                    일주일(7일) 연속 출석 시.
+                    일주일(7일) 연속 출석 시
                     <span className="font-bold" style={{ color: "#f04281" }}>
-                      1만 포인트
+                      {" "}
+                      1만 포인트{" "}
                     </span>
                     지급
                   </span>
@@ -207,7 +208,8 @@ class Calendar extends React.Component {
                     <span className="mr-5px font-bold">✓</span>
                     매일 3만원 이상 충전, 일주일(7일) 출석 시
                     <span className="font-bold" style={{ color: "#f04281" }}>
-                      3만 포인트
+                      {" "}
+                      3만 포인트{" "}
                     </span>
                     지급
                   </span>
@@ -215,7 +217,8 @@ class Calendar extends React.Component {
                     <span className="mr-5px font-bold">✓</span>
                     매일 3만원 이상 충전, 한달 출석 시
                     <span className="font-bold" style={{ color: "#f04281" }}>
-                      10만 포인트
+                      {" "}
+                      10만 포인트{" "}
                     </span>
                     지급
                   </span>

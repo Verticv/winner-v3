@@ -17,7 +17,7 @@ const Item = ({ text, name }) => (
           overflow: "hidden",
           textOverflow: "ellipsis",
         }}
-        className="text-14px flex items-center font-spoqaMedium tracking-tight w-full -ml-px"
+        className="text-13px flex items-center font-spoqaMedium tracking-tight w-full -ml-px mt-px"
       >
         {text}
       </p>

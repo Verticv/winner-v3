@@ -70,7 +70,7 @@ const HoldemHover = ({ selection }) => {
   return (
     <Expand
       open={selection === 5}
-      duration={200}
+      duration={0}
       styles={{
         open: { left: hoverMenuPosition, boxShadow: "3px 3px 10px #00000050", backgroundColor: "#ededeb" },
         close: { left: hoverMenuPosition, backgroundColor: "#ededeb" },

@@ -15,7 +15,7 @@ const Item = ({ text, itemOrder }) => (
     className="flex justify-between items-end cursor-pointer hover:filter hover:brightness-125 transition"
   >
     <div className="flex items-end">
-      <div style={{ width: "30px", height: "25px" }} className="relative mr-10px flex justify-center items-end">
+      <div style={{ width: "30px", height: "25px" }} className="relative mr-7px flex justify-center items-end">
         {itemOrder === 0 && <img className="" src={currencyItemGold} alt="" />}
         {itemOrder === 1 && <img className="" src={currencyItemGrey} alt="" />}
         {itemOrder === 2 && <img className="" src={currencyItemBronze} alt="" />}
@@ -37,7 +37,7 @@ const Item = ({ text, itemOrder }) => (
           overflow: "hidden",
           width: "85px",
         }}
-        className="text-14px h-15px flex items-center font-spoqaMedium tracking-tight mb-2px"
+        className="text-13px h-15px flex items-center font-spoqaMedium tracking-tight mb-2px"
       >
         {itemOrder === 19
           ? "가나다라마바사".length > 5
@@ -51,7 +51,7 @@ const Item = ({ text, itemOrder }) => (
     <div>
       <p
         style={{ color: itemOrder < 3 ? "#c03a41" : "#666666" }}
-        className="text-14px h-14px flex items-center font-spoqaMedium tracking-tight mb-2px"
+        className="text-13px h-14px flex items-center font-spoqaMedium tracking-tight mb-2px"
       >
         {text}
       </p>
@@ -63,7 +63,7 @@ const CurrencyCard = () => {
   return (
     <Card HeaderIcon={Currency} headerText="금주의 환전 TOP" headerActionText="">
       <div style={{ height: "143px" }} className="overflow-hidden">
-        <div id="middle-list" className="flex flex-col mt-4px w-full pl-10px pr-15px space-y-px">
+        <div id="middle-list" className="flex flex-col mt-4px w-full pl-7px pr-15px space-y-px">
           {testArray.map((item, i) => (
             <Item key={i} text="₩130,456,800" itemOrder={item} />
           ))}

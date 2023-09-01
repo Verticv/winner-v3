@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const LinkButton = ({ buttonText, ButtonIcon, count, isAuthenticated }) => {
+const LinkButton = ({ buttonText, ButtonIcon, ButtonIconHighlight, count, isAuthenticated }) => {
+  const [hover, setHover] = useState(false);
   const myMenuButton = (
     <Link to={buttonText === "쪽지" ? "/mypage/inbox" : "/mypage/coupon/coupon-usage"}>
       <div
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
         style={{
-          color: "#2d2834",
-          height: "82px",
+          color: hover ? "#ffffff" : "#5e399a",
+          background: hover ? "#5323a0" : "none",
+          // color: "#2d2834",
+          height: "84px",
           marginTop: "-3px",
         }}
-        className={`w-80px flex-shrink-0 text-r2d2834 relative flex flex-col items-center justify-center cursor-pointer hover:filter hover:brightness-150`}
+        className={`w-80px flex-shrink-0 text-r2d2834 relative flex flex-col items-center justify-center cursor-pointer`}
       >
         <div className="relative flex justify-center w-48px h-48px -mt-2px">
           {isAuthenticated && (
@@ -26,10 +31,10 @@ const LinkButton = ({ buttonText, ButtonIcon, count, isAuthenticated }) => {
             </div>
           )}
 
-          <img className="object-none" src={ButtonIcon} alt="my menu" />
+          <img className="object-none" src={hover ? ButtonIconHighlight : ButtonIcon} alt="my menu" />
         </div>
         <span
-          style={{ marginBottom: "0px", color: "#5e399a", fontSize: "13px" }}
+          style={{ marginBottom: "0px", color: hover ? "#ffffff" : "#5e399a", fontSize: "13px" }}
           className="cursor-pointer font-bold text-14px tracking-tight -mt-px"
         >
           {buttonText}

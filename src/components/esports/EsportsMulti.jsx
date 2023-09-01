@@ -22,7 +22,7 @@ const EsportsMulti = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -137,10 +137,10 @@ const EsportsMulti = () => {
             className="w-full rounded-xl p-px "
             style={{
               backgroundColor: "#cccccc",
-              height: "399px",
+              height: "419px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "397px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "417px" }} className="w-full h-full rounded-xl p-20px">
               <Item
                 number="2."
                 title="배당항목선택"

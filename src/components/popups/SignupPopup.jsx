@@ -426,10 +426,10 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
               <img src={SignupIcon} alt="login_icon" />
             </div>
 
-            <span style={{ color: "#666666", marginTop: "12px" }} className="text-16px h-16px font-spoqaMedium">
+            <span style={{ color: "#666666", marginTop: "12px" }} className="text-16px h-16px font-bold">
               회원가입 시 모든항목을 정확하게 기재하시기 바랍니다.
             </span>
-            <span style={{ color: "#666666", marginTop: "2px" }} className="text-16px h-16px font-spoqaMedium">
+            <span style={{ color: "#666666", marginTop: "2px" }} className="text-16px h-16px font-bold">
               회원데이터는 안전한 서버에서 안전하게 보관됩니다.
             </span>
 
@@ -830,13 +830,13 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
               <div style={{ width: "274px" }} className="flex justify-between items-center mt-13px -ml-2px">
                 <div className="flex items-center space-x-6px">
                   <img className="object-none" src={KakaoLogo} alt="kakao-icon" />
-                  <span style={{ color: "#62438f" }} className="font-spoqaMedium text-16px mb-2px">
+                  <span style={{ color: "#62438f" }} className="font-bold text-16px mb-2px">
                     test1234
                   </span>
                 </div>
                 <div className="flex items-center space-x-6px">
                   <img className="object-none" src={TelegramLogo} alt="kakao-icon" />
-                  <span style={{ color: "#62438f" }} className="font-spoqaMedium text-16px  mb-2px">
+                  <span style={{ color: "#62438f" }} className="font-bold text-16px  mb-2px">
                     test1234
                   </span>
                 </div>

@@ -76,7 +76,7 @@ const Club = ({ text, Icon }) => {
       </div>
       <p
         style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden", width: "155px" }}
-        className="text-r666666 font-spoqaBold text-15px tracking-tight ml-4px h-16px flex items-center w-full"
+        className="text-r666666 font-spoqaBold text-13px tracking-tight ml-4px h-16px flex items-center w-full"
       >
         {text.length > 10 ? `${text.slice(0, 10)}...` : text}
       </p>
