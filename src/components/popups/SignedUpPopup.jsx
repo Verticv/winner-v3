@@ -67,7 +67,7 @@ const SignedUpPopup = ({ setToLogin }) => {
               관리자 승인 후 로그인 하시면 정상적으로 서비스 이용이 가능합니다.
             </span>
             <span style={{ height: "20px", marginLeft: "-2px" }} className="flex items-center mt-4px">
-              딩시 사이트는 깨끗하고 안전한 운영을 자랑합니다.
+              당사 사이트는 깨끗하고 안전한 운영을 자랑합니다.
             </span>
           </div>
           {/* BREAK */}

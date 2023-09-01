@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DropDownControls from "components/dropdowns/DropDownControls";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const DropdownButton = ({
-  onMouseOver,
-  optionsArray,
-  buttonText,
-  ButtonIcon,
-  ButtonActiveIcon,
-  DropdownHeight,
-}) => {
+const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, ButtonActiveIcon, DropdownHeight }) => {
   const [isMyMenuOpen, setIsMyMenuOpen] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const [hoveredOption, setHoveredOption] = useState("");
+  const location = useLocation();
+  useEffect(() => {
+    setIsMyMenuOpen(false);
+    return () => {};
+  }, [location]);
 
   const tabClass =
     "flex-shrink-0 text-r2d2834 hover:text-white relative flex flex-col items-center justify-center cursor-pointer hover:filter hover:brightness-150";

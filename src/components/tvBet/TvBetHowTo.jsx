@@ -20,11 +20,13 @@ const TvBetHowTo = () => {
     text33 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
-        <span className="text-gray-ccc2b6">{title}</span>
+        <span style={{ color: "#444444" }} className="text-gray-ccc2b6">
+          {title}
+        </span>
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />

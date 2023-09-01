@@ -9,7 +9,10 @@ const TvBetStructure = () => {
     <div className="flex items-center">
       {/* <div style={{background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius:"3px"}} className="w-8px h-20px"></div> */}
       <img className="z-10 object-none" src={TitleIcon} alt="" />
-      <span className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center">
+      <span
+        style={{ color: "#444444" }}
+        className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center"
+      >
         {title}
       </span>
       <div
@@ -40,7 +43,7 @@ const TvBetStructure = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center">
+      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -109,7 +112,7 @@ const TvBetStructure = () => {
     text33 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center">
+      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -225,10 +228,10 @@ const TvBetStructure = () => {
             className="w-full rounded-xl p-px "
             style={{
               backgroundColor: "#cccccc",
-              height: "685px",
+              height: "745px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "683px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "743px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="01" title="화면구성" />
               <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
@@ -271,10 +274,10 @@ const TvBetStructure = () => {
             className="w-full rounded-xl p-px -mt-px"
             style={{
               backgroundColor: "#cccccc",
-              height: "528px",
+              height: "578px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "526px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "576px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="02" title="화면구성" />
 
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>

@@ -9,6 +9,7 @@ export default function DropDownControls({
   isDropdownOpen,
   setDropdownOpen,
   classes,
+  setIsMyMenuOpen,
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef();
@@ -37,12 +38,12 @@ export default function DropDownControls({
       className="relative"
       onMouseLeave={() => {
         setOpen(false);
-        setDropdownOpen(false)
+        setDropdownOpen(false);
       }}
       onMouseEnter={() => {
         if (onClick) onClick();
         setOpen(true);
-        setDropdownOpen(true)
+        setDropdownOpen(true);
       }}
     >
       <button

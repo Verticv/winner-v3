@@ -174,6 +174,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 ButtonIcon={MyMenuIcon}
                 ButtonActiveIcon={MyMenuActiveIcon}
                 DropdownHeight={"193px"}
+                setSelectedTab={setSelectedTab}
               />
               <LinkButton ButtonIcon={MessageIcon} ButtonIconHighlight={MessageIconOn} buttonText="쪽지" count={25} isAuthenticated={isAuthenticated} />
               <LinkButton ButtonIcon={CouponIcon} ButtonIconHighlight={CouponIconOn} buttonText="쿠폰" count={5} isAuthenticated={isAuthenticated} />
@@ -187,6 +188,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 ButtonIcon={ContactIcon}
                 ButtonActiveIcon={ContactActiveIcon}
                 DropdownHeight={"141px"}
+                setSelectedTab={setSelectedTab}
               />
             </div>
           </div>

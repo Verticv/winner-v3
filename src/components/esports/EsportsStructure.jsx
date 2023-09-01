@@ -9,7 +9,10 @@ const EsportsStructure = () => {
     <div className="flex items-center">
       {/* <div style={{background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius:"3px"}} className="w-8px h-20px"></div> */}
       <img className="z-10 object-none" src={TitleIcon} alt="" />
-      <span className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center">
+      <span
+        style={{ color: "#444444" }}
+        className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center"
+      >
         화면구성
       </span>
       <div

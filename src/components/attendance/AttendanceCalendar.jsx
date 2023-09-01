@@ -109,7 +109,7 @@ class Calendar extends React.Component {
             <div
               className={`text-r666666 text-21px font-roboto mt-19px ml-18px h-full w-full flex items-start justify-start`}
             >
-              <p style={{ color: day.getDay() === 0 && "#ff7f7f" }}>{isSameMonth(day, monthStart) && formattedDate}</p>
+              <p style={{ color: day.getDay() === 0 && "#f04281" }}>{isSameMonth(day, monthStart) && formattedDate}</p>
             </div>
             {isSameMonth(day, monthStart) && (
               <img
