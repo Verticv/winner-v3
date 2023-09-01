@@ -66,8 +66,8 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "90vh",
-              marginBottom: "60px",
+              height: "100vh",
+              marginBottom: "8px",
             }}
           >
             <Search />
@@ -78,7 +78,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               overflowX: "visible",
               flexShrink: 0,
-              height: "90vh",
+              height: "100vh",
               marginRight: "1px",
               marginLeft: "1px",
               width: "650px",
@@ -96,7 +96,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "90vh",
+              height: "100vh",
               marginLeft: englandActive ? "-1px" : "0",
               marginRight: englandActive ? "5px" : "",
             }}
@@ -115,7 +115,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               overflowX: "visible",
               flexShrink: 0,
-              height: "90vh",
+              height: "100vh",
               paddingLeft: "10px",
               marginLeft: "-10px",
             }}

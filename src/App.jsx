@@ -65,7 +65,7 @@ function App() {
         <Route path="/freeboard">
           <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
-        <Route path="/bet-combination">
+        <Route path="/bet-combination*">
           <NonLiveBet isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/minigame">

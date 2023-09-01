@@ -16,13 +16,13 @@ const NoticeBanner = () => {
     >
       <img
         style={{
-          width: pathname === "/bet-combination" ? "1482px" : "1476px",
-          height: pathname !== "/bet-combination" && "61px",
+          width: pathname.includes("/bet-combination") ? "1482px" : "1476px",
+          height: !pathname.includes("/bet-combination") ? "61px" : "30px",
           objectFit: "none",
         }}
         src={Bg}
         alt=""
-        className={`absolute object-none -ml-12px  ${pathname === "/bet-combination" && "h-30px"}`}
+        className={`absolute -ml-12px overflow-hidden`}
       />
       <div style={{ paddingLeft: "96px" }} className="z-20 pr-15px flex -mt-4px flex-shrink-0">
         <img className="object-none " src={SpeakerIcon} alt="speakerIcon" />

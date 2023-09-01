@@ -18,6 +18,7 @@ const MainTabs = () => {
       marginLeft: "5px",
       marginRight: "14px",
       width: "107px",
+      path: "/bet-combination",
     },
     {
       id: 1,
@@ -27,6 +28,7 @@ const MainTabs = () => {
       marginLeft: "5px",
       marginRight: "14px",
       width: "120px",
+      path: "/bet-combination/special",
     },
     {
       id: 2,
@@ -36,6 +38,7 @@ const MainTabs = () => {
       marginLeft: "4px",
       marginRight: "13px",
       width: "137px",
+      path: "/bet-combination/live",
     },
     {
       id: 3,
@@ -45,6 +48,7 @@ const MainTabs = () => {
       marginLeft: "4px",
       width: "114px",
       marginRight: "15px",
+      path: "/bet-combination/result",
     },
     {
       id: 4,
@@ -54,6 +58,7 @@ const MainTabs = () => {
       marginLeft: "4px",
       marginRight: "15px",
       width: "124px",
+      path: "/bet-combination/live-video",
     },
     {
       id: 5,
@@ -63,18 +68,14 @@ const MainTabs = () => {
       marginLeft: "5px",
       width: "108px",
       marginRight: "14px",
+      path: "/bet-combination/policy",
     },
   ];
 
   return (
     <div className="flex h-full cursor-pointer ml-6px">
       {items.map((item) => (
-        <TabButton
-          key={item.id}
-          item={item}
-          isActiveTab={isActiveTab}
-          setActiveTab={setActiveTab}
-        />
+        <TabButton key={item.id} item={item} isActiveTab={isActiveTab} setActiveTab={setActiveTab} />
       ))}
     </div>
   );

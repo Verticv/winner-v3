@@ -22,7 +22,6 @@ import icon8 from "../../../images/nonLivePage/Tabs/Icon8.png";
 import icon9 from "../../../images/nonLivePage/Tabs/Icon9.png";
 import icon10 from "../../../images/nonLivePage/Tabs/Icon10.png";
 import horizontalsScroll from "./horizontalsScroll.js";
-// import { ta } from "date-fns/locale";
 
 const tabs = [
   {

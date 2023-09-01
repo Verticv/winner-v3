@@ -19,9 +19,11 @@ import RightComponentCard from "./RightComponentCard";
 import CheckBoxComponent from "./CheckBoxComponent";
 import RightComponentCard1 from "./RightComponentCard1";
 import { deleteAllBetSlipCards } from "reducers/nonLive-reducer";
+import { useLocation } from "react-router-dom";
 
 const RightComponent = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
   const [time, setTime] = useState(Date.now());
   const [isBetSlipActive, setIsBetSlipActive] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
@@ -52,12 +54,9 @@ const RightComponent = () => {
   const increaseCounterButton = (number) => {
     setInputValue((prev) => {
       const newValue = prev?.replaceAll(",", "");
-      const formattedValue = Number(Number(newValue) + number).toLocaleString(
-        undefined,
-        {
-          minimumFractionDigits: 0,
-        }
-      );
+      const formattedValue = Number(Number(newValue) + number).toLocaleString(undefined, {
+        minimumFractionDigits: 0,
+      });
       return formattedValue;
     });
   };
@@ -82,9 +81,7 @@ const RightComponent = () => {
           width: "156px",
           height: "46px",
         }}
-        className={`${
-          !isBetSlipActive && "filter hover:brightness-110"
-        } p-px -ml-px`}
+        className={`${!isBetSlipActive && "filter hover:brightness-110"} p-px -ml-px`}
       >
         <div
           onClick={() => setShowCards(0)}
@@ -97,11 +94,7 @@ const RightComponent = () => {
           }}
           className="flex items-center"
         >
-          <img
-            className="ml-21px mb-px"
-            src={isBetSlipActive ? icon1 : icon_1}
-            alt="icon"
-          />
+          <img className="ml-21px mb-px" src={isBetSlipActive ? icon1 : icon_1} alt="icon" />
           <p
             style={{
               color: isBetSlipActive ? "white" : "#5e399a",
@@ -147,9 +140,7 @@ const RightComponent = () => {
           width: "155px",
           height: "46px",
         }}
-        className={`${
-          isBetSlipActive && "filter hover:brightness-110"
-        } p-px -ml-px z-10`}
+        className={`${isBetSlipActive && "filter hover:brightness-110"} p-px -ml-px z-10`}
       >
         <div
           onClick={() => setShowCards(1)}
@@ -194,9 +185,7 @@ const RightComponent = () => {
               }}
               className="flex items-center rounded-full"
             >
-              <p className="ml-6px -mt-2px mr-6px text-12px text-white font-MalgunGothicBold">
-                2
-              </p>
+              <p className="ml-6px -mt-2px mr-6px text-12px text-white font-MalgunGothicBold">2</p>
             </div>
           </div>
         </div>
@@ -236,7 +225,10 @@ const RightComponent = () => {
     <>
       <div
         style={{
-          background: "linear-gradient(to bottom, #cb78e6, #ffffff)",
+          background:
+            showCards === 0
+              ? "linear-gradient(to bottom, #cb78e6, #ffffff)"
+              : "linear-gradient(to bottom, #cb78e6, #5e399a)",
           width: "310px",
           boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
         }}
@@ -251,12 +243,8 @@ const RightComponent = () => {
           className="flex items-center justify-between h-39px "
         >
           <div>
-            <p
-              style={{ color: "#eeeeee" }}
-              className="ml-8px mt-15px mb-14px text-13px font-malgun"
-            >
-              {format(time, dateFormat, { locale: ko })}(월){" "}
-              {format(time, dateFormat1, { locale: ko })}
+            <p style={{ color: "#eeeeee" }} className="ml-8px mt-15px mb-14px text-13px font-malgun">
+              {format(time, dateFormat, { locale: ko })}(월) {format(time, dateFormat1, { locale: ko })}
             </p>
           </div>
           <div
@@ -296,31 +284,6 @@ const RightComponent = () => {
           <BetSlipButton />
           <BettingHistoryButton />
         </div>
-        {/* {showCards && <RightComponentCard />} */}
-        {/* <div
-        style={{
-          background: "#7553ab",
-          width: "310px",
-          height: "73px",
-          borderBottomLeftRadius: "4px",
-          borderBottomRightRadius: "4px",
-        }}
-        className="p-px z-20 -ml-px -mt-px"
-      >
-        <div
-          style={{
-            background: "#5e399a",
-            height: "71px",
-            borderBottomLeftRadius: "4px",
-            borderBottomRightRadius: "4px",
-          }}
-          className="flex items-center justify-center"
-        >
-          <p className="text-12px text-white mr-3px mt-31px mb-30px tracking-tight font-malgun">
-            베팅내역이 없습니다.
-          </p>
-        </div>
-      </div> */}
 
         {showCards === 0 ? (
           <>
@@ -341,10 +304,7 @@ const RightComponent = () => {
                 }}
                 className="flex items-center justify-between p-px ml-4px mt-5px mb-5px"
               >
-                <CustomDropdown
-                  selectedOption={selectedOption}
-                  setSelectedOption={setSelectedOption}
-                />
+                <CustomDropdown selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
               </div>
               <div
                 onClick={() => {
@@ -367,14 +327,12 @@ const RightComponent = () => {
                   background: "#ffffff",
                   width: "308px",
                   height: "auto",
-                  paddingBottom: '0.1px'
+                  paddingBottom: "0.1px",
                 }}
                 className="pb-px pt-2px"
               >
                 {selectedOption !== "싱글" ? (
-                  betSlipData.map((data, index) => (
-                    <RightComponentCard1 teamsData={data} />
-                  ))
+                  betSlipData.map((data, index) => <RightComponentCard1 teamsData={data} />)
                 ) : (
                   <RightComponentCard1 teamsData={betSlipData[0]} />
                 )}
@@ -401,8 +359,7 @@ const RightComponent = () => {
                   >
                     <div
                       style={{
-                        background:
-                          "linear-gradient(to right, #df52ff, #6b22ff)",
+                        background: "linear-gradient(to right, #df52ff, #6b22ff)",
                         borderRadius: "4px",
                       }}
                       className="items-center h-64px"
@@ -415,18 +372,11 @@ const RightComponent = () => {
                           </p>
                         </div>
                         <div className="flex mr-7px -mt-4px">
-                          <img
-                            onClick={() => setActive(false)}
-                            className="cursor-pointer"
-                            src={icon7}
-                            alt="icon"
-                          />
+                          <img onClick={() => setActive(false)} className="cursor-pointer" src={icon7} alt="icon" />
                         </div>
                       </div>
                       <div className="flex items-center">
-                        <p className="text-12px text-white mr-px mb-10px ml-6px font-bold tracking-tight">
-                          티켓번호
-                        </p>
+                        <p className="text-12px text-white mr-px mb-10px ml-6px font-bold tracking-tight">티켓번호</p>
                         <p
                           style={{ color: "#ffd98b" }}
                           className="text-12px mb-14px mt-5px ml-4px font-bold tracking-tight"
@@ -441,10 +391,7 @@ const RightComponent = () => {
             )}
 
             {betSlipData.length <= 0 && !active && (
-              <div
-                style={{ background: "#5e399a" }}
-                className="flex items-center h-70px "
-              >
+              <div style={{ background: "#5e399a" }} className="flex items-center h-70px ">
                 <div className="items-center mb-4px">
                   <div className="mt-2px -mb-4px">
                     <p
@@ -455,54 +402,35 @@ const RightComponent = () => {
                     </p>
                   </div>
                   <div>
-                    <p
-                      style={{ color: "#ffffff" }}
-                      className="ml-61px tracking-tight text-12px font-malgun"
-                    >
+                    <p style={{ color: "#ffffff" }} className="ml-61px tracking-tight text-12px font-malgun">
                       원하시는 경기의 배당을 선택주세요.
                     </p>
                   </div>
                 </div>
               </div>
             )}
-            <div
-              style={{ background: "#eeeeee", height: "94px" }}
-              className="items-center"
-            >
+            <div style={{ background: "#eeeeee", height: "94px" }} className="items-center">
               <div
                 style={{ height: "48px", borderColor: "#dddddd" }}
                 className="flex items-center justify-between border-b border-t"
               >
-                <p
-                  style={{ color: "#444444" }}
-                  className="ml-9px -mt-2px text-12px font-bold tracking-tight"
-                >
+                <p style={{ color: "#444444" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
                   보유금액
                 </p>
-                <p
-                  style={{ color: "#33a1e9" }}
-                  className="mr-10px text-13px font-bold tracking-tight"
-                >
+                <p style={{ color: "#33a1e9" }} className="mr-10px text-13px font-bold tracking-tight">
                   3,522,170
                 </p>
               </div>
-              <div
-                style={{ height: "46px" }}
-                className="flex items-center justify-between"
-              >
+              <div style={{ height: "46px" }} className="flex items-center justify-between">
                 <div>
-                  <p
-                    style={{ color: "#444444" }}
-                    className="ml-9px -mt-2px text-12px font-bold tracking-tight"
-                  >
+                  <p style={{ color: "#444444" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
                     베팅금액
                   </p>
                 </div>
                 <div className="flex items-center relative">
                   <div
                     style={{
-                      background:
-                        "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
+                      background: "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff)",
                       width: "30px",
                       height: "30px",
                       position: "absolute",
@@ -525,11 +453,7 @@ const RightComponent = () => {
                       }}
                       className="flex items-center justify-center filter hover:brightness-110 cursor-pointer"
                     >
-                      <img
-                        className="ml-5px mr-5px mt-4px mb-5px"
-                        src={icon4}
-                        alt="icon"
-                      />
+                      <img className="ml-5px mr-5px mt-4px mb-5px" src={icon4} alt="icon" />
                     </div>
                   </div>
                   <div
@@ -566,42 +490,6 @@ const RightComponent = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div
-            style={{
-              background: "#aaaaaa",
-              width: "189px",
-            }}
-            className="rounded-lg p-px mt-6px mb-6px mr-10px"
-          >
-            <div
-              style={{ background: "#ffffff" }}
-              className="flex items-center justify-between rounded-lg h-32px"
-            >
-              <div
-                style={{
-                  background: "linear-gradient(to top, #4f3a7a, #f0d3ff)",
-                  width: "30px",
-                }}
-                className="rounded-lg p-px mt-1px mb-1px ml-1px"
-              >
-                <div
-                  style={{
-                    background: "linear-gradient(to top, #ccc4ff, #ffd9f5)",
-                  }}
-                  className="flex items-center justify-center rounded-lg"
-                >
-                  <img
-                    className="ml-5px mr-5px mt-4px mb-5px"
-                    src={icon4}
-                    alt="icon"
-                  />
-                </div>
-              </div>
-              <p style={{ color: "#f04281" }} className="mr-8px text-12px">
-                10,000
-              </p>
-            </div>
-          </div> */}
               </div>
             </div>
             <div
@@ -632,10 +520,7 @@ const RightComponent = () => {
                   className="flex items-center justify-center rounded-md filter hover:brightness-110"
                   onClick={() => increaseCounterButton(10000)}
                 >
-                  <p
-                    style={{ color: "#444444" }}
-                    className="-ml-1px mr-3px mb-2px text-12px tracking-tight font-bold"
-                  >
+                  <p style={{ color: "#444444" }} className="-ml-1px mr-3px mb-2px text-12px tracking-tight font-bold">
                     +10,000
                   </p>
                 </button>
@@ -661,10 +546,7 @@ const RightComponent = () => {
                   className="flex items-center justify-center rounded-md filter hover:brightness-110"
                   onClick={() => increaseCounterButton(50000)}
                 >
-                  <p
-                    style={{ color: "#444444" }}
-                    className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-bold"
-                  >
+                  <p style={{ color: "#444444" }} className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-bold">
                     +50,000
                   </p>
                 </button>
@@ -690,10 +572,7 @@ const RightComponent = () => {
                   className="flex items-center justify-center rounded-md filter hover:brightness-110"
                   onClick={() => increaseCounterButton(100000)}
                 >
-                  <p
-                    style={{ color: "#444444" }}
-                    className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-bold"
-                  >
+                  <p style={{ color: "#444444" }} className="-ml-1px mr-3px mb-2px text-12px  tracking-tight font-bold">
                     +100,000
                   </p>
                 </button>
@@ -740,48 +619,27 @@ const RightComponent = () => {
               className="items-center justify-between border-b"
             >
               <div className="flex items-center justify-between">
-                <p
-                  style={{ color: "#444444" }}
-                  className="ml-9px mt-13px text-12px font-bold tracking-tight"
-                >
+                <p style={{ color: "#444444" }} className="ml-9px mt-13px text-12px font-bold tracking-tight">
                   총 배당
                 </p>
-                <p
-                  style={{ color: "#e9441d" }}
-                  className="mr-10px mt-15px text-12px font-bold tracking-tight"
-                >
+                <p style={{ color: "#e9441d" }} className="mr-10px mt-15px text-12px font-bold tracking-tight">
                   1.00
                 </p>
               </div>
               <div className="flex items-center justify-between">
-                <p
-                  style={{ color: "#444444" }}
-                  className="ml-9px mt-15px text-12px font-bold tracking-tight"
-                >
+                <p style={{ color: "#444444" }} className="ml-9px mt-15px text-12px font-bold tracking-tight">
                   총 베팅금액
                 </p>
-                <p
-                  style={{ color: "#f04281" }}
-                  className="mr-10px -mb-6px mt-10px text-12px font-bold tracking-tight"
-                >
+                <p style={{ color: "#f04281" }} className="mr-10px -mb-6px mt-10px text-12px font-bold tracking-tight">
                   10,000
                 </p>
               </div>
             </div>
-            <div
-              style={{ height: "46px", background: "#ffffff" }}
-              className="flex items-center justify-between "
-            >
-              <p
-                style={{ color: "#5e399a" }}
-                className="ml-9px mt-18px mb-22px text-12px font-bold tracking-tight"
-              >
+            <div style={{ height: "46px", background: "#ffffff" }} className="flex items-center justify-between ">
+              <p style={{ color: "#5e399a" }} className="ml-9px mt-18px mb-22px text-12px font-bold tracking-tight">
                 당첨 예상금액
               </p>
-              <p
-                style={{ color: "#33a1e9" }}
-                className="mr-10px mt-16px mb-18px text-12px font-bold tracking-tight"
-              >
+              <p style={{ color: "#33a1e9" }} className="mr-10px mt-16px mb-18px text-12px font-bold tracking-tight">
                 11,000
               </p>
             </div>
@@ -793,16 +651,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b border-t"
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최소 베팅금액
               </p>
-              <p
-                style={{ color: "#f04281" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#f04281" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 5,000
               </p>
             </div>
@@ -814,16 +666,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b "
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최대 베팅금액
               </p>
-              <p
-                style={{ color: "#666666" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 5,000,000
               </p>
             </div>
@@ -835,16 +681,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최대 당첨금액
               </p>
-              <p
-                style={{ color: "#666666" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 10,000,000
               </p>
             </div>
@@ -856,16 +696,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p
-                style={{ color: "#666666" }}
-                className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
                 최대 베팅배당
               </p>
-              <p
-                style={{ color: "#666666" }}
-                className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight"
-              >
+              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
                 300
               </p>
             </div>
@@ -889,18 +723,22 @@ const RightComponent = () => {
                   setPopupOpen={setIsPopupOpen}
                   onClick={() => setIsPopupOpen(true)}
                 >
-                  <PoupUpComponent
-                    setIsPopupOpen={setIsPopupOpen}
-                    active={active}
-                    setActive={setActive}
-                  />
+                  <PoupUpComponent setIsPopupOpen={setIsPopupOpen} active={active} setActive={setActive} />
                 </PopupControls>
               </div>
             </div>
           </>
         ) : (
           <>
-            <RightComponentCard />
+            {location.pathname === "/bet-combination/special" ? (
+              <div style={{ background: "#5e399a" }} className="flex items-center justify-center h-70px rounded-b-md">
+                <p style={{ color: "#ffffff" }} className="text-12px tracking-tight font-malgun">
+                  배팅내역이 없습니다.
+                </p>
+              </div>
+            ) : (
+              <RightComponentCard />
+            )}
           </>
         )}
       </div>
