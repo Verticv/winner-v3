@@ -48,7 +48,7 @@ const MainTabs = () => {
       marginLeft: "4px",
       width: "114px",
       marginRight: "15px",
-      path: "/bet-combination/result",
+      path: "/gameresults/sports/win-draw-lose",
     },
     {
       id: 4,
@@ -68,7 +68,7 @@ const MainTabs = () => {
       marginLeft: "5px",
       width: "108px",
       marginRight: "14px",
-      path: "/bet-combination/policy",
+      path: "/cscenter/policy/sportsgame/soccer",
     },
   ];
 
