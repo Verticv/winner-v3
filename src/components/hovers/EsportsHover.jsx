@@ -99,9 +99,9 @@ const EsportsHover = ({ selection }) => {
           style={{ width: "132px" }}
           className="absolute flex flex-col justify-end items-center h-full right-0 bottom-0 z-0"
         >
-          <p className="text-white text-12px tracking-tighter font-spoqa mb-7px flex">
+          <div className="text-white text-12px tracking-tighter font-spoqa mb-7px flex">
             {item.imgText} {item.path === "#" && <p style={{ color: "#ebabff" }}>(준비중)</p>}
-          </p>
+          </div>
         </div>
       </div>
     ));

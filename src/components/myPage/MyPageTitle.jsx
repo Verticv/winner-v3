@@ -1,5 +1,4 @@
 import React from 'react'
-
 import TitleIcon from '../../images/title-icon.png'
 
 const MyPageTitle = ({
