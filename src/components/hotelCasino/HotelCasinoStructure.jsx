@@ -130,7 +130,7 @@ const HotelCasinoStructure = () => {
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
-        <span className="text-gray-ccc2b6">{title}</span>
+        <span style={{ color: "#444444" }} className="text-gray-ccc2b6">{title}</span>
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
