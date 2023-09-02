@@ -186,6 +186,6 @@ body {
   row-gap: 3px;
 }
 
-.disable-hover {
-  pointer-events: none;
+.hoverDisabled {
+  pointer-events: 'none',
 }

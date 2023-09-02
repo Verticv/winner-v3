@@ -34,26 +34,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
   const [isHovered3, setIsHovered3] = useState(false);
   // const [idSelected, setIdSelected] = useState([]);
 
-  useEffect(() => {
-    var body = document.body,
-      timer;
-    window.addEventListener(
-      "scroll",
-      function () {
-        clearTimeout(timer);
-        if (!body.classList.contains("disable-hover")) {
-          body.classList.add("disable-hover");
-        }
-        timer = setTimeout(function () {
-          body.classList.remove("disable-hover");
-        }, 100);
-      },
-      false
-    );
-
-    return () => {};
-  }, []);
-
   const favoritePreMatch = useSelector((state) => state?.nonLive?.favoritePreMatch);
 
   const favoriteLaLiga = useSelector((state) => state?.nonLive?.favoriteLaLiga);
@@ -69,9 +49,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
     }
   }, [favoritePreMatch, setActiveStar, card.id, card.type]);
 
-  useEffect(() => {
-    console.log("card20", card);
-  });
   useEffect(() => {
     if (card.type === "라리가") {
       let card_index = favoriteLaLiga.findIndex((el) => +el.id === card.id);
