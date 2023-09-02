@@ -248,13 +248,13 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             card.score1 &&
             setTimeout(() => {
               handleMouseEnter();
-            }, 50)
+            }, 100)
           }
           onMouseLeave={() =>
             card.score1 &&
             setTimeout(() => {
               handleMouseLeave();
-            }, 50)
+            }, 100)
           }
           className="flex items-center justify-between border-l border-r"
         >
