@@ -19,6 +19,7 @@ import { useSelector } from "react-redux";
 const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   const [active, setActive] = useState(0);
   const [englandActive, setEnglandActive] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     console.log("englandActive", englandActive);
@@ -88,7 +89,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             <Tabs active={active} setActive={setActive} />
             {/*  */}
             <div style={{}}>
-              <CenterComponent setEnglandActive={setEnglandActive} />
+              <CenterComponent setEnglandActive={setEnglandActive} setIsOpen={setIsOpen} />
               <CenterAccordion setEnglandActive={setEnglandActive} />
             </div>
           </div>
@@ -102,7 +103,12 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             }}
           >
             {englandActive ? (
-              <EnglandComponent2 englandActive={englandActive} setEnglandActive={setEnglandActive} />
+              <EnglandComponent2
+                englandActive={englandActive}
+                setEnglandActive={setEnglandActive}
+                setIsOpen={setIsOpen}
+                isOpen={isOpen}
+              />
             ) : (
               <>
                 <EnglandComponent englandActive={englandActive} setEnglandActive={setEnglandActive} />

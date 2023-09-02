@@ -10,21 +10,7 @@ import {
 } from "reducers/nonLive-reducer";
 import { useDispatch } from "react-redux";
 
-const AccordionCard = ({
-  id,
-  team1,
-  time,
-  team2,
-  dateAndTime,
-  t1,
-  score1,
-  t3,
-  t4,
-  t5,
-  score3,
-  type,
-  card,
-}) => {
+const AccordionCard = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t4, t5, score3, type, card }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
@@ -141,7 +127,6 @@ const AccordionCard = ({
             style={{
               color: cardHovered || cardSelected ? "#ffffff" : "#f04281",
               letterSpacing: "-0.031em",
-              fontFamily: "MalgunGothicRegular",
             }}
             className="text-12px font-malgun mt-px -mb-6px"
           >
@@ -201,8 +186,7 @@ const AccordionCard = ({
               alt=""
               onClick={toggleAccordion}
               style={{
-                filter:
-                  (cardHovered || cardSelected) && "brightness(0) invert(1)",
+                filter: (cardHovered || cardSelected) && "brightness(0) invert(1)",
                 color: "#444444",
               }}
               className={`object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
@@ -255,7 +239,7 @@ const AccordionCard = ({
                 color: isHovered || leftActive ? "#ffffff" : "#682aa7",
                 letterSpacing: "-0.031em",
               }}
-              className="mr-7px text-12px font-malgun mb-2px"
+              className="mr-7px text-12px font-malgun mb-2px font-semibold"
             >
               {score1 === "icon" ? "" : score1 || "2.12"}
             </p>
@@ -295,7 +279,7 @@ const AccordionCard = ({
                 color: isHovered1 || centerActive ? "#ffffff" : "#682aa7",
                 letterSpacing: "-0.031em",
               }}
-              className="mr-7px text-12px font-malgun mb-2px"
+              className="mr-7px text-12px font-malgun mb-2px font-semibold"
             >
               {t4 || "3.59"}
             </p>
@@ -333,7 +317,7 @@ const AccordionCard = ({
                 color: isHovered2 || rightActive ? "#ffffff" : "#682aa7",
                 letterSpacing: "-0.031em",
               }}
-              className="mr-7px mt-8px mb-10px text-12px"
+              className="mr-7px mt-8px mb-10px text-12px font-semibold"
             >
               {score3 || "3.62"}
             </p>

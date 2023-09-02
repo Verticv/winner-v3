@@ -122,7 +122,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
 
   const hoverStyle = {
     background: "linear-gradient(to top, #5423a0, #9d3bbb)",
-    color: "#eeeeee",
+    color: "#fff",
   };
 
   const handleMouseEnter = () => {
@@ -155,13 +155,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
     setIsHovered3(false);
   };
 
-  //   <div
-  //   style={{ ...defaultStyle, ...(isHovered ? hoverStyle : null) }}
-  //   onMouseOver={handleMouseEnter}
-  //   onMouseLeave={handleMouseLeave}
-  // >
-  //   Hover me!
-  // </div>
   return (
     <>
       <button
@@ -232,9 +225,8 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             borderColor: leftActive ? "#6227a5" : "#cccccc",
             width: "252px",
             height: "30px",
-            fontFamily: "MalgunGothicRegular",
             background: leftActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: leftActive ? "#eeeeee" : "#111111",
+            color: leftActive ? "#fff" : "#111111",
             ...(isHovered ? hoverStyle : null),
           }}
           onMouseOver={() => card.score1 && handleMouseEnter()}
@@ -291,7 +283,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               )}
             </span>
             {card.score1 ? (
-              <p style={{ width: "28px" }} className="text-right flex justify-end">
+              <p style={{ width: "28px" }} className="text-right flex justify-end font-semibold">
                 {card.score1}
               </p>
             ) : (
@@ -317,7 +309,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
           style={{
             height: "100%",
             background: centerActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: centerActive ? "#eeeeee" : "#444444",
+            color: centerActive ? "#ffffff" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
           onMouseOver={card.score2 && handleMouseEnter1}
@@ -358,7 +350,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               width: "100%",
               textAlign: "center",
             }}
-            className="mb-2px"
+            className="mb-2px font-semibold"
           >
             {card.score2 ? (
               card.score2
@@ -389,7 +381,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             width: "252px",
             height: "30px",
             background: rightActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: rightActive ? "#eeeeee" : "#444444",
+            color: rightActive ? "#ffffff" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
           onMouseOver={card.score3 && handleMouseEnter2}
@@ -412,7 +404,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             className="flex items-center ml-9px mt-10px mb-12px flex-shrink-0"
           >
             {card.score3 ? (
-              <p style={{ width: "28px" }} className="text-left">
+              <p style={{ width: "28px" }} className="text-left font-semibold">
                 {card.score3}
               </p>
             ) : (
@@ -464,7 +456,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             height: "100%",
             borderRight: lastItemActive === card ? "1px solid #6227a5" : "",
             background: lastItemActive === card ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: lastItemActive === card ? "#eeeeee" : "#444444",
+            color: lastItemActive === card ? "#ffffff" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
             borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "4px"}`,
           }}

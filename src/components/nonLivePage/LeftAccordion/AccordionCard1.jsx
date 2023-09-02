@@ -116,7 +116,6 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               whiteSpace: "nowrap",
               textOverflow: "ellipsis",
               maxWidth: "220px",
-              fontFamily: "MalgunGothicRegular",
             }}
             className="text-12px mt-6px -mb-px"
           >
@@ -137,6 +136,10 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
             style={{
               color: cardHovered || cardSelected ? "#ffffff" : "#444444",
               letterSpacing: "-0.031em",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+              maxWidth: "220px",
             }}
             className="text-12px font-malgun mt-px"
           >

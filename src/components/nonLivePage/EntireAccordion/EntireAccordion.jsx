@@ -385,7 +385,7 @@ const EntireAccordion = () => {
   //               }}
   //               className="flex items-center justify-center absolute ml-29px mb-34px"
   //             >
-  //               <p className="text-13px tracking-tight font-MalgunGothicBold text-white ">
+  //               <p className="text-13px tracking-tight text-white ">
   //                 25
   //               </p>
   //             </div>
@@ -400,7 +400,7 @@ const EntireAccordion = () => {
   //           >
   //             <p
   //               style={{ color: "#ffffff" }}
-  //               className="ml-14px mt-px text-13px tracking-tight font-MalgunGothicBold"
+  //               className="ml-14px mt-px text-13px tracking-tight"
   //             >
   //               전체
   //             </p>
@@ -411,7 +411,7 @@ const EntireAccordion = () => {
   // >
   //   <p
   //     style={{ color: "#5e399a" }}
-  //     className="ml-14px text-13px -mt-2px tracking-tight font-MalgunGothicBold"
+  //     className="ml-14px text-13px -mt-2px tracking-tight"
   //   >
   //     매치
   //   </p>
@@ -422,7 +422,7 @@ const EntireAccordion = () => {
   //           >
   //             <p
   //               style={{ color: "#5e399a" }}
-  //               className="ml-14px text-13px tracking-tight font-MalgunGothicBold"
+  //               className="ml-14px text-13px tracking-tight"
   //             >
   //               오버/언더
   //             </p>
@@ -433,7 +433,7 @@ const EntireAccordion = () => {
   //           >
   //             <p
   //               style={{ color: "#5e399a" }}
-  //               className="ml-15px text-13px -mt-2px tracking-tight font-MalgunGothicBold"
+  //               className="ml-15px text-13px -mt-2px tracking-tight"
   //             >
   //               핸디캡
   //             </p>
@@ -444,7 +444,7 @@ const EntireAccordion = () => {
   //           >
   //             <p
   //               style={{ color: "#5e399a" }}
-  //               className="ml-14px text-13px -mt-2px tracking-tight font-MalgunGothicBold"
+  //               className="ml-14px text-13px -mt-2px tracking-tight"
   //             >
   //               조합
   //             </p>
@@ -455,7 +455,7 @@ const EntireAccordion = () => {
   //           >
   //             <p
   //               style={{ color: "#5e399a" }}
-  //               className="ml-21px text-13px -mt-2px tracking-tight font-MalgunGothicBold"
+  //               className="ml-21px text-13px -mt-2px tracking-tight"
   //             >
   //               분
   //             </p>
@@ -466,7 +466,7 @@ const EntireAccordion = () => {
   //           >
   //             <p
   //               style={{ color: "#5e399a" }}
-  //               className="ml-12px text-13px  tracking-tight font-MalgunGothicBold"
+  //               className="ml-12px text-13px  tracking-tight"
   //             >
   //               전/후반
   //             </p>
@@ -477,7 +477,7 @@ const EntireAccordion = () => {
   //           >
   //             <p
   //               style={{ color: "#5e399a" }}
-  //               className="ml-15px text-13px -mt-2px tracking-tight font-MalgunGothicBold"
+  //               className="ml-15px text-13px -mt-2px tracking-tight"
   //             >
   //               코너킥
   //             </p>

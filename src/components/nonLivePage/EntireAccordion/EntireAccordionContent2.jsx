@@ -28,7 +28,7 @@ const EntireAccordionContent2 = ({ card }) => {
 
   const hoverStyle = {
     background: "linear-gradient(to top, #5423a0, #9d3bbb)",
-    color: "#eeeeee",
+    color: "#fff",
   };
 
   const handleMouseEnter = () => {
@@ -108,7 +108,7 @@ const EntireAccordionContent2 = ({ card }) => {
             borderColor: leftActive ? "#6227a5" : "#cccccc",
             width: "316px",
             background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: leftActive ? "#eeeeee" : "#444444",
+            color: leftActive ? "#fff" : "#444444",
             ...(isHovered ? hoverStyle : null),
           }}
           className="flex items-center justify-between border-r h-30px cursor-pointer"
@@ -137,11 +137,11 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: leftActive || isHovered ? "#eeeeee" : "#f04281",
+                color: leftActive || isHovered ? "#fff" : "#f04281",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
-              className="mr-9px mb-2px text-right"
+              className="mr-9px mb-2px text-right font-semibold"
             >
               {card.score1}
             </p>
@@ -153,7 +153,7 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "314px",
             height: "100%",
             background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: rightActive ? "#eeeeee" : "#444444",
+            color: rightActive ? "#fff" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
           className="flex items-center justify-between cursor-pointer"
@@ -182,11 +182,11 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: rightActive || isHovered1 ? "#eeeeee" : "#0072bc",
+                color: rightActive || isHovered1 ? "#fff" : "#0072bc",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
-              className="font-malgun mb-2px mr-9px text-right"
+              className="font-malgun mb-2px mr-9px text-right font-semibold"
             >
               {card.score3}
             </p>
@@ -207,7 +207,7 @@ const EntireAccordionContent2 = ({ card }) => {
             borderColor: leftActive1 ? "#6227a5" : "#cccccc",
             width: "316px",
             background: leftActive1 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: leftActive1 ? "#eeeeee" : "#444444",
+            color: leftActive1 ? "#fff" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
           className="flex items-center justify-between border-r h-30px cursor-pointer"
@@ -236,11 +236,11 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: leftActive1 || isHovered2 ? "#eeeeee" : "#f04281",
+                color: leftActive1 || isHovered2 ? "#fff" : "#f04281",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
-              className="mr-9px mb-2px text-right"
+              className="mr-9px mb-2px text-right font-semibold"
             >
               {card.score2}
             </p>
@@ -252,7 +252,7 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "314px",
             height: "100%",
             background: rightActive1 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: rightActive1 ? "#eeeeee" : "#444444",
+            color: rightActive1 ? "#fff" : "#444444",
             ...(isHovered3 ? hoverStyle : null),
           }}
           className="flex items-center justify-between cursor-pointer"
@@ -281,11 +281,11 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: rightActive1 || isHovered3 ? "#eeeeee" : "#0072bc",
+                color: rightActive1 || isHovered3 ? "#fff" : "#0072bc",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
-              className="text-right mb-2px mr-9px"
+              className="text-right mb-2px mr-9px font-semibold"
             >
               {card.score4}
             </p>
@@ -306,7 +306,7 @@ const EntireAccordionContent2 = ({ card }) => {
             borderColor: leftActive2 ? "#6227a5" : "#cccccc",
             width: "316px",
             background: leftActive2 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: leftActive2 ? "#eeeeee" : "#444444",
+            color: leftActive2 ? "#fff" : "#444444",
             ...(isHovered4 ? hoverStyle : null),
           }}
           className="flex items-center justify-between border-r h-30px cursor-pointer"
@@ -333,10 +333,10 @@ const EntireAccordionContent2 = ({ card }) => {
           <p
             style={{
               fontSize: "12px",
-              color: leftActive2 || isHovered4 ? "#eeeeee" : "#111111",
+              color: leftActive2 || isHovered4 ? "#fff" : "#111111",
               letterSpacing: "-0.031em",
             }}
-            className="mr-9px mb-2px font-malgun"
+            className="mr-9px mb-2px font-malgun font-semibold"
           >
             {card.score5}
           </p>
@@ -347,7 +347,7 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "314px",
             height: "100%",
             background: rightActive2 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: rightActive2 ? "#eeeeee" : "#444444",
+            color: rightActive2 ? "#fff" : "#444444",
             ...(isHovered5 ? hoverStyle : null),
           }}
           className="flex items-center justify-between cursor-pointer"
@@ -374,10 +374,10 @@ const EntireAccordionContent2 = ({ card }) => {
           <p
             style={{
               fontSize: "12px",
-              color: rightActive2 || isHovered5 ? "#eeeeee" : "#111111",
+              color: rightActive2 || isHovered5 ? "#fff" : "#111111",
               letterSpacing: "-0.031em",
             }}
-            className="font-malgun mb-2px mr-9px"
+            className="font-malgun mb-2px mr-9px font-semibold"
           >
             {card.score6}
           </p>
@@ -399,7 +399,7 @@ const EntireAccordionContent2 = ({ card }) => {
             borderColor: leftActive3 ? "#6227a5" : "#cccccc",
             width: "316px",
             background: leftActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: leftActive3 ? "#eeeeee" : "#444444",
+            color: leftActive3 ? "#fff" : "#444444",
             ...(isHovered6 ? hoverStyle : null),
             borderBottomLeftRadius: "3px",
           }}
@@ -432,7 +432,7 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "314px",
             height: "100%",
             background: rightActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: rightActive3 ? "#eeeeee" : "#444444",
+            color: rightActive3 ? "#fff" : "#444444",
             ...(isHovered7 ? hoverStyle : null),
             borderBottomRightRadius: "3px",
           }}

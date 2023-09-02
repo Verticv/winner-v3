@@ -69,7 +69,7 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-8px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#222" }} className="ml-6px pt-8px text-12px font-semibold tracking-tight">
                 아스널 VS 리버풀
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px  text-12px font-malgun tracking-tight">
@@ -99,7 +99,7 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-8px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#222" }} className="ml-6px pt-8px text-12px font-semibold tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight">
@@ -126,7 +126,7 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-13px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-13px mb-14px text-12px font-bold tracking-tight">
                 총 배당
               </p>
               <p style={{ color: "#e9441d" }} className="mr-7px mt-12px mb-13px text-12px font-bold tracking-tight">
@@ -142,10 +142,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
                 총 베팅금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-9px mb-11px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="mr-7px mt-9px mb-11px text-12px font-bold tracking-tight">
                 5,000
               </p>
             </div>
@@ -158,10 +158,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-12px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-11px mb-12px text-12px font-bold tracking-tight">
                 당첨 예상금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-10px mb-11px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="mr-7px mt-10px mb-11px text-12px font-bold tracking-tight">
                 50,000
               </p>
             </div>
@@ -176,7 +176,7 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
                 티켓번호
               </p>
               <p style={{ color: "#0072bc" }} className="mr-7px mt-11px mb-14px text-12px font-bold tracking-tight">
@@ -270,7 +270,7 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-13px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-13px mb-14px text-12px font-bold tracking-tight">
                 총 배당
               </p>
               <p style={{ color: "#e9441d" }} className="mr-7px mt-12px mb-13px text-12px font-bold tracking-tight">
@@ -286,10 +286,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
                 총 베팅금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-9px mb-11px text-12px font-bold tracking-tight ">
+              <p style={{ color: "#333" }} className="mr-7px mt-9px mb-11px text-12px font-bold tracking-tight ">
                 5,000
               </p>
             </div>
@@ -302,10 +302,10 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-12px mb-13px text-12px font-bold tracking-tight">
                 당첨 예상금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-7px mt-10px mb-11px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="mr-7px mt-10px mb-11px text-12px font-bold tracking-tight">
                 11,300
               </p>
             </div>
@@ -320,7 +320,7 @@ const RightComponentCard = () => {
               }}
               className="flex items-center justify-between"
             >
-              <p style={{ color: "#666666" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
+              <p style={{ color: "#333" }} className="ml-6px mt-11px mb-14px text-12px font-bold tracking-tight">
                 티켓번호
               </p>
               <p style={{ color: "#0072bc" }} className="mr-7px mt-11px mb-14px text-12px font-bold tracking-tight">

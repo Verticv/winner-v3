@@ -107,9 +107,8 @@ const AccordionButton3 = ({ icon, title }) => {
           <p
             style={{
               letterSpacing: "-0.031em",
-              fontFamily: "MalgunGothicRegular",
             }}
-            className="text-14px text-white ml-5px mt-13px mb-15px font-malgun "
+            className="text-14px text-white ml-5px mt-13px mb-15px font-malgun font-bold"
           >
             {title}
           </p>
@@ -208,10 +207,10 @@ const AccordionButton3 = ({ icon, title }) => {
                 >
                   <div className="flex items-center">
                     <p
-                      style={{ background: "444444", letterSpacing: "-0.031em" }}
-                      className="ml-15px mt-12px mb-19px text-13px"
+                      style={{ color: "#444444", letterSpacing: "-0.031em" }}
+                      className="ml-9px mt-14px mb-14px text-13px"
                     >
-                      L
+                      └
                     </p>
                     <img className="ml-10px" src={flag1} alt="img" />
                     <p
@@ -256,12 +255,12 @@ const AccordionButton3 = ({ icon, title }) => {
                       <div className="flex items-center">
                         <p
                           style={{
-                            background: "444444",
+                            color: "#444444",
                             letterSpacing: "-0.031em",
                           }}
-                          className="ml-45px mt-11px mb-20px text-13px"
+                          className="ml-45px mt-9px mb-14px text-13px"
                         >
-                          L
+                          └
                         </p>
                         <p
                           style={{
@@ -310,12 +309,12 @@ const AccordionButton3 = ({ icon, title }) => {
                       <div className="flex items-center">
                         <p
                           style={{
-                            background: "444444",
+                            color: "#444444",
                             letterSpacing: "-0.031em",
                           }}
-                          className="ml-45px mt-11px mb-20px text-13px"
+                          className="ml-45px mt-9px mb-14px text-13px"
                         >
-                          L
+                          └
                         </p>
                         <p
                           style={{

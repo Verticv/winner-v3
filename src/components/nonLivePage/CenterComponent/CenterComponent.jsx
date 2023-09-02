@@ -9,7 +9,7 @@ import icon4 from "../../../images/nonLivePage/CenterComponent/Icon4.png";
 import icon_4 from "../../../images/nonLivePage/CenterComponent/Icon_4.png";
 import CustomDropdown1 from "./CustomDropdown1";
 
-const CenterComponent = ({ setEnglandActive }) => {
+const CenterComponent = ({ setEnglandActive, setIsOpen }) => {
   const [activeId, setActiveId] = useState(0);
   const [active, setActive] = useState(0);
   const [hover, setHover] = useState();
@@ -34,11 +34,14 @@ const CenterComponent = ({ setEnglandActive }) => {
           className="flex items-center rounded-full ml-7px "
         >
           <img className="ml-2px" src={icon} alt="img" />
-          <p style={{ color: "#eeeeee", letterSpacing: "-0.13em" }} className="ml-5px text-13px mt-8px mb-7px font-bold">
+          <p
+            style={{ color: "#eeeeee", letterSpacing: "-0.13em" }}
+            className="ml-5px text-13px mt-8px mb-7px font-bold"
+          >
             다폴더 보너스 추가 배당
           </p>
           <p style={{ color: "#ffd98b", letterSpacing: "-0.08em" }} className="ml-5px mb-px text-12px font-spoqa">
-            (3, 6, 9) 폴더 이상 조합시 지급
+            (3, 6, 9) 폴더 이상 조합 시 지급
           </p>
         </div>
         <div className="flex mt-5px ml-7px mr-7px mb-7px">
@@ -91,7 +94,6 @@ const CenterComponent = ({ setEnglandActive }) => {
                   style={{
                     color: "#eeeeee",
                     letterSpacing: "-0.031em",
-                    fontFamily: "MalgunGothicRegular",
                   }}
                   className="text-13px font-malgun"
                 >
@@ -146,7 +148,6 @@ const CenterComponent = ({ setEnglandActive }) => {
                   style={{
                     color: "#eeeeee",
                     letterSpacing: "-0.031em",
-                    fontFamily: "MalgunGothicRegular",
                   }}
                   className="text-13px font-malgun"
                 >
@@ -201,7 +202,6 @@ const CenterComponent = ({ setEnglandActive }) => {
                   style={{
                     color: "#eeeeee",
                     letterSpacing: "-0.031em",
-                    fontFamily: "MalgunGothicRegular",
                   }}
                   className="text-13px font-malgun"
                 >
@@ -226,7 +226,6 @@ const CenterComponent = ({ setEnglandActive }) => {
           style={{
             color: "#eeeeee",
             letterSpacing: "-0.031em",
-            fontFamily: "MalgunGothicRegular",
           }}
           className="ml-10px mb-2px text-12px font-malgun"
         >
@@ -237,7 +236,10 @@ const CenterComponent = ({ setEnglandActive }) => {
               borderBottom: "1px solid #a5eefe",
               cursor: "pointer",
             }}
-            onClick={() => setEnglandActive(true)}
+            onClick={() => {
+              setEnglandActive(true);
+              setIsOpen(true);
+            }}
           >
             ‘베팅규정안내’
           </span>
@@ -262,14 +264,13 @@ const CenterComponent = ({ setEnglandActive }) => {
               width: "88px",
               height: "27px",
               boxShadow: activeId === 0 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
-              fontFamily: "MalgunGothicRegular",
             }}
             className={`${
               activeId !== 0 && "filter hover:brightness-110"
             } flex items-center rounded-full mr-5px cursor-pointer`}
             onClick={() => setActiveId(0)}
           >
-            <img className="ml-8px object-none" src={activeId === 0 ? icon2 : icon_2} alt="img" />
+            <img className="ml-8px object-none w-33px" src={activeId === 0 ? icon2 : icon_2} alt="img" />
             <p style={{ color: "#ffffff" }} className="-ml-7px mt-5px mb-7px tracking-tight text-12px">
               시간순
             </p>
@@ -280,7 +281,6 @@ const CenterComponent = ({ setEnglandActive }) => {
               width: "88px",
               height: "27px",
               boxShadow: activeId === 1 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
-              fontFamily: "MalgunGothicRegular",
             }}
             className={`${
               activeId !== 1 && "filter hover:brightness-110"
@@ -290,6 +290,7 @@ const CenterComponent = ({ setEnglandActive }) => {
             <img
               style={{
                 marginLeft: activeId === 1 ? "9px" : "17px",
+                width: activeId === 1 ? "33px" : "17px",
               }}
               className="object-none"
               src={activeId === 1 ? icon_3 : icon3}
@@ -311,7 +312,6 @@ const CenterComponent = ({ setEnglandActive }) => {
               width: "88px",
               height: "27px",
               boxShadow: activeId === 2 ? "0px 1px 2px 0px rgba(0, 0, 0, 0.6)" : "",
-              fontFamily: "MalgunGothicRegular",
             }}
             className={`${
               activeId !== 2 && "filter hover:brightness-110"
@@ -321,6 +321,7 @@ const CenterComponent = ({ setEnglandActive }) => {
             <img
               style={{
                 marginLeft: activeId === 2 ? "9px" : "17px",
+                width: activeId === 2 ? "33px" : "17px",
               }}
               className="object-none"
               src={activeId === 2 ? icon_4 : icon4}
@@ -329,7 +330,6 @@ const CenterComponent = ({ setEnglandActive }) => {
             <p
               style={{
                 color: "#ffffff",
-                fontFamily: "MalgunGothicRegular",
                 marginLeft: activeId === 2 ? "-6px" : "2px",
               }}
               className="mt-5px mb-7px tracking-tight text-12px"

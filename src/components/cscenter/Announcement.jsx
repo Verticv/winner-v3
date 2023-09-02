@@ -3,7 +3,7 @@ import DropDownControls from "components/dropdowns/DropDownControls";
 import MyPageTitle from "components/myPage/MyPageTitle";
 import Pagination from "components/myPage/Pagination";
 import React, { useState } from "react";
-import DownArrowIcon from "../../images/down_arrow_icon.png";
+import DownArrowIcon from "../../images/arrows/arrow1.png";
 import SearchIcon from "../../images/myPage/search.png";
 import AnnouncementTable from "./tables/AnnouncementTable";
 import Icon1 from "../../images/myPage/betHistory/icon_1.png";
@@ -169,7 +169,7 @@ const Announcement = () => {
       <input className="w-0 text-16px" />
       <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
         <label className="ml-14px cursor-pointer group-hover:text-gray-r8c8c8c">{selectedCarrier}</label>
-        <img className="w-10px h-6px object-contain mr-10px" src={DownArrowIcon} alt="arrow" />
+        <img className="object-none mr-9px" src={DownArrowIcon} alt="arrow" />
       </div>
     </div>
   );

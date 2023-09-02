@@ -419,7 +419,7 @@ const FreeBoardMain = () => {
       >
         <input
           style={{ color: "#444" }}
-          className="rounded-6px pl-9px pb-2px placeholder-gray-r666666 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+          className="rounded-6px pl-9px pb-2px placeholder-r666666 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button

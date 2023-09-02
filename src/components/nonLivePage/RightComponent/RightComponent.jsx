@@ -94,7 +94,12 @@ const RightComponent = () => {
           }}
           className="flex items-center"
         >
-          <img className="ml-21px mb-px" src={isBetSlipActive ? icon1 : icon_1} alt="icon" />
+          <img
+            style={{ width: isBetSlipActive ? "29px" : "33px" }}
+            className="ml-21px mb-px"
+            src={isBetSlipActive ? icon1 : icon_1}
+            alt="icon"
+          />
           <p
             style={{
               color: isBetSlipActive ? "white" : "#5e399a",
@@ -155,6 +160,7 @@ const RightComponent = () => {
         >
           <img
             className={`${isBetSlipActive ? "ml-26px" : "ml-22px"}`}
+            style={{width: isBetSlipActive ? "17px" : "25px"}}
             // "ml-26px"
             // "ml-22px"
             src={isBetSlipActive ? icon2 : icon2Active}
@@ -185,7 +191,7 @@ const RightComponent = () => {
               }}
               className="flex items-center rounded-full"
             >
-              <p className="ml-6px -mt-2px mr-6px text-12px text-white font-MalgunGothicBold">2</p>
+              <p className="ml-6px -mt-2px mr-6px text-12px text-white">2</p>
             </div>
           </div>
         </div>
@@ -243,7 +249,7 @@ const RightComponent = () => {
           className="flex items-center justify-between h-39px "
         >
           <div>
-            <p style={{ color: "#eeeeee" }} className="ml-8px mt-15px mb-14px text-13px font-malgun">
+            <p style={{ color: "#eeeeee" }} className="ml-8px mt-15px mb-14px text-14px font-malgun">
               {format(time, dateFormat, { locale: ko })}(월) {format(time, dateFormat1, { locale: ko })}
             </p>
           </div>
@@ -367,9 +373,7 @@ const RightComponent = () => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center ml-7px">
                           <img className="mt-11px" src={img} alt="icon" />
-                          <p className="text-12px text-white mt-10px ml-3px font-MalgunGothicBold tracking-tight">
-                            베팅이 수락되었습니다.
-                          </p>
+                          <p className="text-12px text-white mt-10px ml-3px tracking-tight">베팅이 수락되었습니다.</p>
                         </div>
                         <div className="flex mr-7px -mt-4px">
                           <img onClick={() => setActive(false)} className="cursor-pointer" src={icon7} alt="icon" />
@@ -414,16 +418,16 @@ const RightComponent = () => {
                 style={{ height: "48px", borderColor: "#dddddd" }}
                 className="flex items-center justify-between border-b border-t"
               >
-                <p style={{ color: "#444444" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
+                <p style={{ color: "#333" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
                   보유금액
                 </p>
-                <p style={{ color: "#33a1e9" }} className="mr-10px text-13px font-bold tracking-tight">
+                <p style={{ color: "rgb(96, 47, 183)" }} className="mr-10px text-13px font-bold tracking-tight">
                   3,522,170
                 </p>
               </div>
               <div style={{ height: "46px" }} className="flex items-center justify-between">
                 <div>
-                  <p style={{ color: "#444444" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
+                  <p style={{ color: "#333" }} className="ml-9px -mt-2px text-12px font-bold tracking-tight">
                     베팅금액
                   </p>
                 </div>
@@ -619,7 +623,7 @@ const RightComponent = () => {
               className="items-center justify-between border-b"
             >
               <div className="flex items-center justify-between">
-                <p style={{ color: "#444444" }} className="ml-9px mt-13px text-12px font-bold tracking-tight">
+                <p style={{ color: "#333" }} className="ml-9px mt-13px text-12px font-bold tracking-tight">
                   총 배당
                 </p>
                 <p style={{ color: "#e9441d" }} className="mr-10px mt-15px text-12px font-bold tracking-tight">
@@ -627,7 +631,7 @@ const RightComponent = () => {
                 </p>
               </div>
               <div className="flex items-center justify-between">
-                <p style={{ color: "#444444" }} className="ml-9px mt-15px text-12px font-bold tracking-tight">
+                <p style={{ color: "#333" }} className="ml-9px mt-15px text-12px font-bold tracking-tight">
                   총 베팅금액
                 </p>
                 <p style={{ color: "#f04281" }} className="mr-10px -mb-6px mt-10px text-12px font-bold tracking-tight">
@@ -636,10 +640,16 @@ const RightComponent = () => {
               </div>
             </div>
             <div style={{ height: "46px", background: "#ffffff" }} className="flex items-center justify-between ">
-              <p style={{ color: "#5e399a" }} className="ml-9px mt-18px mb-22px text-12px font-bold tracking-tight">
+              <p
+                style={{ color: "rgb(0, 114,188)" }}
+                className="ml-9px mt-18px mb-22px text-12px font-bold tracking-tight"
+              >
                 당첨 예상금액
               </p>
-              <p style={{ color: "#33a1e9" }} className="mr-10px mt-16px mb-18px text-12px font-bold tracking-tight">
+              <p
+                style={{ color: "rgb(0, 114,188)" }}
+                className="mr-10px mt-16px mb-18px text-12px font-bold tracking-tight"
+              >
                 11,000
               </p>
             </div>
@@ -651,10 +661,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b border-t"
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최소 베팅금액
               </p>
-              <p style={{ color: "#f04281" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">
                 5,000
               </p>
             </div>
@@ -666,10 +676,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b "
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최대 베팅금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">
                 5,000,000
               </p>
             </div>
@@ -681,10 +691,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최대 당첨금액
               </p>
-              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">
                 10,000,000
               </p>
             </div>
@@ -696,10 +706,10 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최대 베팅배당
               </p>
-              <p style={{ color: "#666666" }} className="mr-10px mt-12px mb-13px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">
                 300
               </p>
             </div>

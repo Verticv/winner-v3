@@ -107,7 +107,6 @@ const Search = () => {
                   letterSpacing: "-0.031em",
                   height: "34px",
                   borderRadius: "4px",
-                  fontFamily: "MalgunGothicRegular",
                   paddingTop: 0,
                   paddingBottom: "1px",
                   fontSize: "13px",

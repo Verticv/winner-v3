@@ -158,7 +158,7 @@ const RightComponentCard1 = ({ teamsData }) => {
             className="flex items-center justify-between"
           >
             <div className="flex items-center ml-6px">
-              <p className="text-12px text-white mt-13px mb-15px font-MalgunGothicBold tracking-tight">
+              <p className="text-12px text-white mt-13px mb-15px tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
             </div>
@@ -171,7 +171,7 @@ const RightComponentCard1 = ({ teamsData }) => {
                     className="flex items-center justify-start ml-10px pb-13px"
                   >
                     <img className="object-none -mt-2px" src={img} alt="icon" />
-                    <span className="ml-5px -mt-3px text-12px font-MalgunGothicBold tracking-tight text-white">
+                    <span className="ml-5px -mt-3px text-12px tracking-tight text-white">
                       축구
                     </span>
                   </div>
@@ -187,19 +187,19 @@ const RightComponentCard1 = ({ teamsData }) => {
                   >
                     <p
                       style={{ color: "#666666" }}
-                      className="ml-10px pt-5px text-10px font-MalgunGothicBold tracking-tight"
+                      className="ml-10px pt-5px text-10px tracking-tight"
                     >
                       프리미어리그
                     </p>
                     <p
                       style={{ color: "#666666", marginTop: "2px" }}
-                      className="ml-10px text-10px font-MalgunGothicBold tracking-tight"
+                      className="ml-10px text-10px tracking-tight"
                     >
                       시작되지 않음
                     </p>
                     <p
                       style={{ color: "#666666", marginTop: "1px" }}
-                      className="ml-10px  text-10px font-MalgunGothicBold tracking-tight"
+                      className="ml-10px  text-10px tracking-tight"
                     >
                       아스날 VS 리버풀
                     </p>
@@ -230,7 +230,7 @@ const RightComponentCard1 = ({ teamsData }) => {
               <div className="mr-7px mt-4px">
                 <del
                   style={{ color: "#666666" }}
-                  className="text-12px mt-7px font-MalgunGothicBold tracking-tight"
+                  className="text-12px mt-7px tracking-tight"
                 >
                   2.55
                 </del>
@@ -240,7 +240,7 @@ const RightComponentCard1 = ({ teamsData }) => {
               <div className="ml-6px -mt-px">
                 <p
                   style={{ color: "#5e399a" }}
-                  className="text-12px mt-1px font-MalgunGothicBold tracking-tight"
+                  className="text-12px mt-1px tracking-tight"
                 >
                   FC바르셀로나
                 </p>
@@ -248,7 +248,7 @@ const RightComponentCard1 = ({ teamsData }) => {
               <div className="mr-7px -mt-px">
                 <p
                   style={{ color: "#f04281" }}
-                  className="text-12px mt-2px font-MalgunGothicBold tracking-tight"
+                  className="text-12px mt-2px tracking-tight"
                 >
                   2.26
                 </p>

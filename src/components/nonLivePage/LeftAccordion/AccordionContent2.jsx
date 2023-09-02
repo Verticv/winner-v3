@@ -19,7 +19,6 @@ const AccordionContent2 = ({ card }) => {
         style={{
           color: "#eeeeee",
           letterSpacing: "-0.031em",
-          fontFamily: "MalgunGothicBold",
           fontSize: "14px",
           position: "absolute",
           top: "5px",

@@ -38,7 +38,7 @@ const CenterAccordionButton1 = ({ icon, title, date, icon1, icon2, card }) => {
               textOverflow: "ellipsis",
               maxWidth: "420px",
             }}
-            className="text-12px ml-4px"
+            className="text-12px ml-4px font-semibold"
           >
             {title}
           </p>

@@ -12,7 +12,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
 
   const hoverStyle = {
     background: "linear-gradient(to top, #5423a0, #9d3bbb)",
-    color: "#eeeeee",
+    color: "#fff",
   };
 
   const handleMouseEnter = () => {
@@ -48,7 +48,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           borderColor: leftActive ? "#6227a5" : "#cccccc",
           width: "316px",
           background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-          color: leftActive ? "#eeeeee" : "#444444",
+          color: leftActive ? "#fff" : "#444444",
           ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: `${card.id === 2 ? "3px" : "0px"}`,
         }}
@@ -80,10 +80,10 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
         <p
           style={{
             fontSize: "13px",
-            color: leftActive || isHovered ? "#eeeeee" : "#111111",
+            color: leftActive || isHovered ? "#fff" : "#111111",
             letterSpacing: "-0.031em",
           }}
-          className="mr-9px mb-2px font-malgun"
+          className="mr-9px mb-2px font-malgun font-semibold"
         >
           {card.score1}
         </p>
@@ -94,7 +94,7 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
           width: "314px",
           height: "100%",
           background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-          color: rightActive ? "#eeeeee" : "#444444",
+          color: rightActive ? "#fff" : "#444444",
           ...(isHovered1 ? hoverStyle : null),
           borderBottomRightRadius: `${card.id === 2 ? "3px" : "0px"}`,
         }}
@@ -126,13 +126,13 @@ const EntireAccordionContent_1 = ({ card, lastObject }) => {
         <p
           style={{
             fontSize: "13px",
-            color: rightActive || isHovered1 ? "#eeeeee" : "#111111",
+            color: rightActive || isHovered1 ? "#fff" : "#111111",
             letterSpacing: "-0.031em",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
           }}
-          className="mr-9px mb-2px font-malgun"
+          className="mr-9px mb-2px font-malgun font-semibold"
         >
           {card.score3}
         </p>

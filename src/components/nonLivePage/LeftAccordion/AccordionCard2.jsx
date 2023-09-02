@@ -136,7 +136,6 @@ const AccordionCard2 = ({
               whiteSpace: "nowrap",
               textOverflow: "ellipsis",
               maxWidth: "220px",
-              fontFamily: "MalgunGothicRegular",
             }}
             className="text-12px mt-6px -mb-px"
           >
@@ -273,7 +272,7 @@ const AccordionCard2 = ({
                   letterSpacing: "-0.031em",
                   width: "28px",
                 }}
-                className="mr-8px text-12px mb-2px text-right flex justify-end"
+                className="mr-8px text-12px mb-2px text-right flex justify-end font-semibold"
               >
                 {score1 === "icon" ? "" : score1 || "2.12"}
               </p>
@@ -317,7 +316,7 @@ const AccordionCard2 = ({
                   letterSpacing: "-0.031em",
                   width: "28px",
                 }}
-                className="mr-7px text-12px text-right flex justify-end mb-2px"
+                className="mr-7px text-12px text-right flex justify-end mb-2px font-semibold"
               >
                 {t4 || "3.59"}
               </p>
@@ -359,7 +358,7 @@ const AccordionCard2 = ({
                   letterSpacing: "-0.031em",
                   width: "28px",
                 }}
-                className="mr-8px mt-8px mb-10px text-12px text-right flex justify-end"
+                className="mr-8px mt-8px mb-10px text-12px text-right flex justify-end font-semibold"
               >
                 {score3 || "3.62"}
               </p>

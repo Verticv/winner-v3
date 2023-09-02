@@ -44,10 +44,9 @@ const AccordionButton2 = ({ icon, title, card }) => {
           <p
             style={{
               letterSpacing: "-0.031em",
-              fontFamily: "MalgunGothicRegular",
               marginBottom: "3px",
             }}
-            className="text-14px text-white ml-5px font-malgun"
+            className="text-14px text-white ml-5px font-malgun font-bold"
           >
             {title}
           </p>
@@ -61,7 +60,15 @@ const AccordionButton2 = ({ icon, title, card }) => {
         </div>
       </div>
       {isOpen && (
-        <div style={{ background: "#420572", paddingBottom: "0.1px", borderBottomLeftRadius:'6px', borderBottomRightRadius: '6px' }} className="pt-2px rounded-b-lg">
+        <div
+          style={{
+            background: "#420572",
+            paddingBottom: "0.1px",
+            borderBottomLeftRadius: "6px",
+            borderBottomRightRadius: "6px",
+          }}
+          className="pt-2px rounded-b-lg"
+        >
           {card.map((item) => (
             <AccordionContent2 key={item.id} card={item} />
           ))}
