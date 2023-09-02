@@ -21,6 +21,7 @@ import Card from "../../images/slotCarousel/card.png";
 
 import { CarouselBackButton, CarouselNextButton } from "./SlotGameHorizontalCarousel";
 import { Link } from "react-router-dom";
+import PauseOnHover from "helpers/PauseOnHover";
 
 const list = [
   {
@@ -107,7 +108,7 @@ const list = [
 const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Caption, Row2Img }) => {
   const alt = "image";
   const Card = ({ game, caption, Img, isRow2 }) => {
-    const [isHover, setHover] = useState(null);
+    const [isHover, setHover] = useState(false);
 
     return (
       <Link to={!(row2Game === "준비중" && isRow2) ? "/live-casino" : "#"}>
@@ -170,10 +171,47 @@ const CustomSlide = ({ index, row1Game, row1Caption, Row1Img, row2Game, row2Capt
     </Slide>
   );
 };
-
 export default function LiveHorizontalCarousel() {
-  const [isPlaying, setPlaying] = useState(true);
-  const [mainHover, setMainHover] = useState(false);
+  const MainComp = () => {
+    const [mainHover, setMainHover] = useState(false);
+    return (
+      <Link to="live-casino">
+        <div
+          style={{ minWidth: "193px" }}
+          onPointerOver={() => setMainHover(true)}
+          onMouseLeave={() => setMainHover(false)}
+          className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px"
+        >
+          <img
+            src={Left}
+            alt="left"
+            // style={{ width: '193px', height: '410px' }}
+            className="object-cover rounded-6px"
+          />
+          <div className="absolute bottom-5px ml-10px">
+            <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter">
+              프레그메틱플레이
+            </p>
+          </div>
+          {mainHover && (
+            <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px flex items-center justify-center"></div>
+          )}
+          {mainHover && (
+            <button
+              className="absolute z-30 left-45px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight"
+              style={{
+                boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
+                background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
+                top: "191px",
+              }}
+            >
+              게임시작
+            </button>
+          )}
+        </div>
+      </Link>
+    );
+  };
 
   return (
     <div className="flex flex-col">
@@ -196,43 +234,9 @@ export default function LiveHorizontalCarousel() {
         }}
       >
         <img src={Best} style={{ left: "10px", top: "22px" }} alt="" className="absolute z-30" />
-        <Link to="live-casino">
-          <div
-            style={{ minWidth: "193px" }}
-            onMouseEnter={() => setMainHover(true)}
-            onMouseLeave={() => setMainHover(false)}
-            className="flex flex-shrink-0 relative rounded-6px w-193px h-410px mr-4px"
-          >
-            <img
-              src={Left}
-              alt="left"
-              // style={{ width: '193px', height: '410px' }}
-              className="object-cover rounded-6px"
-            />
-            <div className="absolute bottom-5px ml-10px">
-              <p style={{ color: "#eeeeee" }} className="font-spoqaMedium text-14px tracking-tighter">
-                프레그메틱플레이
-              </p>
-            </div>
-            {mainHover && (
-              <div className="absolute w-full h-full bg-black opacity-60 z-20 rounded-6px flex items-center justify-center"></div>
-            )}
-            {mainHover && (
-              <button
-                className="absolute z-30 left-45px flex items-center justify-center h-28px w-102px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight"
-                style={{
-                  boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
-                  background: "linear-gradient(to right, rgb(223,82,255), rgb(107,34,255))",
-                  top: "191px",
-                }}
-              >
-                게임시작
-              </button>
-            )}
-          </div>
-        </Link>
+        <MainComp />
         {/* Start Carousel */}
-        <div className="container mx-auto" onMouseEnter={() => setPlaying(false)} onMouseLeave={() => setPlaying(true)}>
+        <div className="container mx-auto">
           <div className="animated_carousel-multiple flex items-center justify-center w-full h-full">
             <CarouselProvider
               className=""
@@ -244,93 +248,78 @@ export default function LiveHorizontalCarousel() {
               step={1}
               infinite={true}
               interval={3000}
-              isPlaying={isPlaying}
+              isPlaying
               currentSlide={35}
               dragEnabled={false}
             >
-              <div className="w-full relative flex items-center justify-center">
-                <CarouselBackButton
-                  style={{ left: "-4px" }}
-                  className="-left-10px"
-                  onClick={() => {
-                    setPlaying(false);
-                    setTimeout(() => {
-                      setPlaying(true);
-                    }, 1000);
-                  }}
-                />
-                <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
-                  <Slider
-                    style={{
-                      maxWidth: "632px",
-                    }}
-                    classNameTrayWrap="live_carousel_tray_wrapper"
-                  >
-                    {[
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                      ...list,
-                    ].map((item, index) => (
-                      <CustomSlide
-                        Row1Img={item.row1.Img}
-                        row1Caption={item.row1.caption}
-                        row1Game={item.row1.game}
-                        Row2Img={item.row2.Img}
-                        row2Caption={item.row2.caption}
-                        row2Game={item.row2.game}
-                        key={index}
-                        index={index}
-                      />
-                    ))}
-                  </Slider>
+              <PauseOnHover>
+                <div className="w-full relative flex items-center justify-center">
+                  <CarouselBackButton style={{ left: "-4px" }} className="-left-10px" />
+                  <div className="w-full h-auto mx-auto overflow-x-hidden overflow-y-hidden">
+                    <Slider
+                      style={{
+                        maxWidth: "632px",
+                      }}
+                      classNameTrayWrap="live_carousel_tray_wrapper"
+                    >
+                      {[
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                        ...list,
+                      ].map((item, index) => (
+                        <CustomSlide
+                          Row1Img={item.row1.Img}
+                          row1Caption={item.row1.caption}
+                          row1Game={item.row1.game}
+                          Row2Img={item.row2.Img}
+                          row2Caption={item.row2.caption}
+                          row2Game={item.row2.game}
+                          key={index}
+                          index={index}
+                        />
+                      ))}
+                    </Slider>
+                  </div>
+                  <CarouselNextButton style={{ right: "-4px" }} />
                 </div>
-                <CarouselNextButton
-                  style={{ right: "-4px" }}
-                  onClick={() => {
-                    setPlaying(false);
-                    setTimeout(() => {
-                      setPlaying(true);
-                    }, 1000);
-                  }}
-                />
-              </div>
+              </PauseOnHover>
             </CarouselProvider>
           </div>
         </div>

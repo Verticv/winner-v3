@@ -25,7 +25,7 @@ const SlotGameHover = ({ selection }) => {
       background: KslotBanner1,
       logo: KslotBannerLogo,
       imgText: "스페셜베팅",
-      path: "/bet-combination",
+      path: "/bet-combination/special",
     },
   ];
 

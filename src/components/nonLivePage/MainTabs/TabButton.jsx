@@ -1,16 +1,17 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
-const TabButton = ({ item, isActiveTab, setActiveTab }) => {
+const TabButton = ({ item, setActiveTab }) => {
   const history = useHistory();
+  const location = useLocation();
   return (
     <div
       style={{
-        borderBottom: isActiveTab === item.id ? "3px solid #ffc900" : "",
+        borderBottom: location.pathname === item.path ? "3px solid #ffc900" : "",
         width: `${item.width}}`,
       }}
       className={`flex items-start z-10 mr-5px ${
-        isActiveTab === item.id ? "opacity-100" : "opacity-70 hover:opacity-100"
+        location.pathname === item.path ? "opacity-100" : "opacity-70 hover:opacity-100"
       } `}
       onClick={() => {
         setActiveTab(item.id);

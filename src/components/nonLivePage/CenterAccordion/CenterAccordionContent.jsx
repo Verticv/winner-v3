@@ -227,11 +227,12 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
         </div>
         <div
           onClick={() => {
-            card.score1 && dispatch(
-              setBetSlipData({
-                data: card,
-              })
-            );
+            card.score1 &&
+              dispatch(
+                setBetSlipData({
+                  data: card,
+                })
+              );
             card.score1 && setLeftActive((prev) => !prev);
           }}
           style={{
@@ -243,8 +244,18 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             color: leftActive ? "#eeeeee" : "#111111",
             ...(isHovered ? hoverStyle : null),
           }}
-          onMouseEnter={card.score1 && handleMouseEnter}
-          onMouseLeave={card.score1 && handleMouseLeave}
+          onMouseEnter={() =>
+            card.score1 &&
+            setTimeout(() => {
+              handleMouseEnter();
+            }, 50)
+          }
+          onMouseLeave={() =>
+            card.score1 &&
+            setTimeout(() => {
+              handleMouseLeave();
+            }, 50)
+          }
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -312,11 +323,12 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
         </div>
         <div
           onClick={() => {
-            card.score2 && dispatch(
-              setBetSlipData({
-                data: card,
-              })
-            );
+            card.score2 &&
+              dispatch(
+                setBetSlipData({
+                  data: card,
+                })
+              );
             card.score2 && setCenterActive((prev) => !prev);
           }}
           style={{
@@ -381,11 +393,12 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
         </div>
         <div
           onClick={() => {
-            card.score3 && dispatch(
-              setBetSlipData({
-                data: card,
-              })
-            );
+            card.score3 &&
+              dispatch(
+                setBetSlipData({
+                  data: card,
+                })
+              );
             card.score3 && setRightActive((prev) => !prev);
           }}
           style={{
