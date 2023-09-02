@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DropDownControls from "components/dropdowns/DropDownControls";
+import DropDownControlsInstant from "components/dropdowns/DropDownControlsInstant";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -95,7 +95,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
     <>
       <div style={{ height: "82px" }} className="relative flex justify-between flex-row flex-shrink-0">
         <div className="flex items-center flex-shrink-0">
-          <DropDownControls
+          <DropDownControlsInstant
             buttonChild={myMenuButton}
             isDropdownOpen={isMyMenuOpen}
             setDropdownOpen={setIsMyMenuOpen}
@@ -104,7 +104,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
             classes="left-0 mt-82px sm:mt-82px z-50"
           >
             {searchDropdown}
-          </DropDownControls>
+          </DropDownControlsInstant>
         </div>
       </div>
     </>

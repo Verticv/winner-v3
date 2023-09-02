@@ -1,5 +1,5 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { useOnClickOutside } from '../../helpers/functions';
+import React, { useState, useRef, useCallback, useEffect } from "react";
+import { useOnClickOutside } from "../../helpers/functions";
 
 export default function DropDownControls({
   children,
@@ -9,6 +9,7 @@ export default function DropDownControls({
   isDropdownOpen,
   setDropdownOpen,
   classes,
+  setIsMyMenuOpen,
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef();
@@ -33,9 +34,20 @@ export default function DropDownControls({
   useOnClickOutside(ref, handler);
 
   return (
-    <div className='relative'>
+    <div
+      className="relative"
+      onMouseLeave={() => {
+        setOpen(false);
+        setDropdownOpen(false);
+      }}
+      onMouseEnter={() => {
+        if (onClick) onClick();
+        setOpen(true);
+        setDropdownOpen(true);
+      }}
+    >
       <button
-        className='flex relative items-center justify-center'
+        className="flex relative items-center justify-center"
         onMouseDown={() => {
           if (onClick) onClick();
           setOpen(true);
