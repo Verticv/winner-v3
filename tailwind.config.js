@@ -130,8 +130,7 @@ module.exports = {
         "1836px": "1836px",
       },
       boxShadow: {
-        plain:
-          "0 0px 5px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.06)",
+        plain: "0 0px 5px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.06)",
         plain1: "0 4px 3.5px 0px rgba(0, 0, 0, 0.25)",
         plain2: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.2)",
         plain3: "1px 1px 2px 0px rgba(0, 0, 0, 0.3)",
@@ -168,6 +167,7 @@ module.exports = {
         r666666: "#666666", // Text
         r2c1137: "#2c1137",
         r9d3bbb30: "rgb(157,59,187,30%)",
+        r583ea5: "#583ea5",
         p682aa7: "#682aa7",
         eeeeee: "#eeeeee",
         p594e6a: "#594e6a",
