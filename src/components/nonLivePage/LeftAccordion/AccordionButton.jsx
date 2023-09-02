@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AccordionContent from "./AccordionContent";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 import { useSelector } from "react-redux";
+import icon2 from "../../../images/nonLivePage/CenterAccordion/star2.png";
 
 const AccordionButton = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,16 +41,8 @@ const AccordionButton = ({ icon, title }) => {
           width: "278px",
           height: "44px",
           borderRadius: "5px",
-          borderBottomRightRadius: `${
-            isOpen && (favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id || League[0]?.id)
-              ? "0px"
-              : "5px"
-          }`,
-          borderBottomLeftRadius: `${
-            isOpen && (favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id || League[0]?.id)
-              ? "0px"
-              : "5px"
-          }`,
+          borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
+          borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
         }}
         className={`flex items-center justify-between 
           cursor-pointer h-43px`}
@@ -88,10 +81,35 @@ const AccordionButton = ({ icon, title }) => {
           />
         </div>
       </div>
-      {isOpen && (favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id || League[0]?.id) && (
-        <div style={{ background: "#420572", borderBottomLeftRadius:'6px', borderBottomRightRadius: '6px', paddingBottom:'0.1px' }} className="pt-2px rounded-b-lg">
+      {isOpen && (favoritePreMatch[0]?.id || favoriteLaLiga[0]?.id || bundesliga[0]?.id || League[0]?.id) ? (
+        <div
+          style={{
+            background: "#420572",
+            borderBottomLeftRadius: "6px",
+            borderBottomRightRadius: "6px",
+            paddingBottom: "0.1px",
+          }}
+          className="pt-2px rounded-b-lg"
+        >
           <AccordionContent setIsOpen={setIsOpen} />
         </div>
+      ) : (
+        isOpen && (
+          <div style={{ background: "#5e399a" }} className="flex items-center justify-center h-70px rounded-b-md">
+            <div style={{ color: "#ffffff" }} className="text-12px tracking-tight font-malgun inline">
+              <p className="inline">즐겨찾기에 </p>
+              <img
+                className="object-contain inline"
+                src={icon2}
+                alt="icon"
+                style={{
+                  marginBottom: "8px",
+                }}
+              />
+              <p className="inline">를 클릭하여 추가하기</p>
+            </div>
+          </div>
+        )
       )}
     </div>
   );
