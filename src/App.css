@@ -177,7 +177,6 @@ body {
 }
 
 .table-fixed {
-  
   table-layout: fixed;
 }
 .gap-x-2px {
@@ -185,4 +184,8 @@ body {
 }
 .gap-y-3px {
   row-gap: 3px;
+}
+
+.disable-hover {
+  pointer-events: none;
 }

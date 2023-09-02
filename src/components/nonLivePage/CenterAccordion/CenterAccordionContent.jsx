@@ -35,8 +35,24 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
   // const [idSelected, setIdSelected] = useState([]);
 
   useEffect(() => {
-    console.log("item.teamsitem.teams", card);
-  });
+    var body = document.body,
+      timer;
+    window.addEventListener(
+      "scroll",
+      function () {
+        clearTimeout(timer);
+        if (!body.classList.contains("disable-hover")) {
+          body.classList.add("disable-hover");
+        }
+        timer = setTimeout(function () {
+          body.classList.remove("disable-hover");
+        }, 100);
+      },
+      false
+    );
+
+    return () => {};
+  }, []);
 
   const favoritePreMatch = useSelector((state) => state?.nonLive?.favoritePreMatch);
 
@@ -164,7 +180,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
 
   //   <div
   //   style={{ ...defaultStyle, ...(isHovered ? hoverStyle : null) }}
-  //   onMouseEnter={handleMouseEnter}
+  //   onMouseOver={handleMouseEnter}
   //   onMouseLeave={handleMouseLeave}
   // >
   //   Hover me!
@@ -221,7 +237,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
                 });
               }
             }}
-            onMouseEnter={() => setHoverStar(true)}
+            onMouseOver={() => setHoverStar(true)}
             onMouseLeave={() => setHoverStar(false)}
           />
         </div>
@@ -244,18 +260,8 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             color: leftActive ? "#eeeeee" : "#111111",
             ...(isHovered ? hoverStyle : null),
           }}
-          onMouseEnter={() =>
-            card.score1 &&
-            setTimeout(() => {
-              handleMouseEnter();
-            }, 100)
-          }
-          onMouseLeave={() =>
-            card.score1 &&
-            setTimeout(() => {
-              handleMouseLeave();
-            }, 100)
-          }
+          onMouseOver={() => card.score1 && handleMouseEnter()}
+          onMouseLeave={card.score1 && handleMouseLeave}
           className="flex items-center justify-between border-l border-r"
         >
           <p
@@ -337,7 +343,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             color: centerActive ? "#eeeeee" : "#444444",
             ...(isHovered1 ? hoverStyle : null),
           }}
-          onMouseEnter={card.score2 && handleMouseEnter1}
+          onMouseOver={card.score2 && handleMouseEnter1}
           onMouseLeave={card.score2 && handleMouseLeave1}
           className="flex items-center relative w-68px justify-center"
         >
@@ -409,7 +415,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             color: rightActive ? "#eeeeee" : "#444444",
             ...(isHovered2 ? hoverStyle : null),
           }}
-          onMouseEnter={card.score3 && handleMouseEnter2}
+          onMouseOver={card.score3 && handleMouseEnter2}
           onMouseLeave={card.score3 && handleMouseLeave2}
           className="flex items-center justify-between border-l border-r"
         >
@@ -485,7 +491,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             ...(isHovered3 ? hoverStyle : null),
             borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "4px"}`,
           }}
-          onMouseEnter={handleMouseEnter3}
+          onMouseOver={handleMouseEnter3}
           onMouseLeave={handleMouseLeave3}
           className={`flex items-center justify-end pr-3px ${
             lastItemActive === card ? "justify-end" : "justify-center"
