@@ -50,7 +50,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
         onFocus={() => setSelectedInput(4)}
         onBlur={(e) => setSelectedInput(false)}
         className="flex w-full font-spoqaMedium text-16px outline-none h-full justify-between items-center group"
-        style={{ color: "#7a7a7a" }}
+        style={{ color: "#717171" }}
       >
         <label className="ml-9px cursor-pointer mt-3px">{selectedCarrier}</label>
         <img className="object-none mr-14px" src={DownArrowIcon} alt="arrow" />
@@ -73,7 +73,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
         onFocus={() => setSelectedInput(4)}
         onBlur={(e) => setSelectedInput(false)}
         className="flex w-full font-spoqaMedium text-16px outline-none h-full justify-between items-center group"
-        style={{ color: "#7a7a7a" }}
+        style={{ color: "#717171" }}
       >
         <label className="ml-8px cursor-pointer mt-2px">{selectedBank}</label>
         <img className="object-none mr-14px" src={DownArrowIcon} alt="arrow" />
@@ -452,7 +452,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         width: "540px",
                         height: "42px",
                         borderRadius: "4px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                       }}
@@ -491,7 +491,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                       style={{
                         width: "540px",
                         height: "42px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
@@ -532,7 +532,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                       style={{
                         width: "540px",
                         height: "42px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
@@ -573,7 +573,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                       style={{
                         width: "540px",
                         height: "42px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
@@ -623,12 +623,12 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                       style={{
                         width: "360px",
                         height: "42px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-10px placeholder-r797979 pt-px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-10px placeholder-r717171 pt-px"
                       placeholder="휴대폰번호(숫자만 입력)"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -695,12 +695,12 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                       style={{
                         width: "540px",
                         height: "42px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-r797979 pt-3px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-r717171 pt-3px"
                       placeholder="가입코드"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -746,12 +746,12 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                       style={{
                         width: "360px",
                         height: "42px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-11px placeholder-r797979 pt-3px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-11px placeholder-r717171 pt-3px"
                       placeholder="예금주"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -786,12 +786,12 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                       style={{
                         width: "540px",
                         height: "42px",
-                        color: "#000",
+                        color: "#666",
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-r797979 pt-3px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-r717171 pt-3px"
                       placeholder="계좌번호(숫자만 입력)"
                       onFocus={(e) => {
                         e.target.placeholder = "";

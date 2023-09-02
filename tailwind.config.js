@@ -168,6 +168,7 @@ module.exports = {
         r2c1137: "#2c1137",
         r9d3bbb30: "rgb(157,59,187,30%)",
         r583ea5: "#583ea5",
+        r717171: "#717171",
         p682aa7: "#682aa7",
         eeeeee: "#eeeeee",
         p594e6a: "#594e6a",
