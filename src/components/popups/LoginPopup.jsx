@@ -69,10 +69,10 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
               <img src={Username} alt="" className="ml-19px" />
               <input
                 style={{
-                  color: "#000",
+                  color: "#444",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r797979 pt-3px text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r666666 pt-3px text-center"
                 placeholder={"아이디"}
                 onFocus={(e) => {
                   e.target.placeholder = "";
@@ -107,10 +107,10 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
               <img src={Password} alt="" className="ml-21px" />
               <input
                 style={{
-                  color: "#000",
+                  color: "#444",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r797979 pt-3px text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r666666 pt-3px text-center"
                 placeholder={"비밀번호"}
                 type="password"
                 onFocus={(e) => {

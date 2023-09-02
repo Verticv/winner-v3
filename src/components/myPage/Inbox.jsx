@@ -177,7 +177,8 @@ const Inbox = () => {
         className="flex h-42px bg-dark-1a1a1a rounded-6px  border border-p682aa7 relative"
       >
         <input
-          className="w-full placeholder-aaaaaa flex-shrink-0 outline-none h-40px rounded-6px   px-10px font-medium text-14px tracking-tight  text-r666666 bg-dark-1a1a1a"
+          style={{ color: "#444" }}
+          className="w-full placeholder-r666666 flex-shrink-0 outline-none h-40px rounded-6px   px-10px font-medium text-14px tracking-tight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button

@@ -213,7 +213,7 @@ const CustomSlide = ({
   );
 };
 
-export const CarouselBackButton = ({ className, style, onClick}) => {
+export const CarouselBackButton = ({ className, style, onClick }) => {
   return (
     <ButtonBack
       role="button"
@@ -233,11 +233,12 @@ export const CarouselBackButton = ({ className, style, onClick}) => {
   );
 };
 
-export const CarouselNextButton = ({ className, style }) => {
+export const CarouselNextButton = ({ className, style, onClick }) => {
   return (
     <ButtonNext
       role="button"
       aria-label="slide forward"
+      onClick={onClick && onClick}
       style={{
         boxShadow: "0px 3px 5px 0px rgba(0, 0, 0, 0.5)",
         height: "76px",

@@ -133,7 +133,7 @@ const PointsApply = () => {
               <div className="h-44px w-full overflow-hidden">
                 <input
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
-                  className="w-full text-16px outline-none pl-9px placeholder-aaaaaa h-42px border-b mt-2px"
+                  className="w-full text-16px outline-none pl-9px placeholder-r666666 h-42px border-b mt-2px"
                   placeholder="직접 입력시 숫자만 입력해 주세요."
                   value={inputValue !== null ? nf.format(inputValue) : ""}
                   onChange={(e) => setInputValue(e.target.value.replace(/,/g, ""))}

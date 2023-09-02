@@ -55,7 +55,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                     color:"#7a7a7a"
                   }}
                 >
-                  <label style={{width: "540px"}} className="text-16px pl-10px pr-5px mt-px">
+                  <label style={{width: "540px"}} className="text-16px text-r666666 pl-10px pr-5px mt-px">
                     louie3
                   </label>
                 </div>
@@ -187,7 +187,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                       width: "540px",
                       background: "#ffffff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
-                      color:"#7a7a7a"
+                      color:"#666"
                     }}
                   >
                     <label className="text-16px pl-10px mt-px" >
@@ -205,7 +205,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                       width: "540px",
                       background: "#ffffff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
-                      color:"#7a7a7a"
+                      color:"#666"
                     }}
                   >
                     <label className="text-16px pl-10px mt-px">
@@ -223,7 +223,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                       width: "540px",
                       background: "#ffffff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
-                      color:"#7a7a7a"
+                      color:"#666"
                     }}
                   >
                     <label className="text-16px pl-10px mt-px ">
@@ -241,7 +241,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                       width: "540px",
                       background: "#fff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
-                      color:"#7a7a7a"
+                      color:"#666"
                     }}
                   >
                     <label className=" text-16px pl-10px mt-px">
@@ -259,7 +259,7 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                       width: "540px",
                       background: "#fff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
-                      color:"#7a7a7a"
+                      color:"#666"
                     }}
                   >
                     <label className=" text-16px pl-10px mt-px">
