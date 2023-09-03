@@ -243,7 +243,7 @@ const RightComponentCard = () => {
               }}
               className="items-center border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-6px pt-8px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#222" }} className="ml-6px pt-8px text-12px font-semibold tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
               <p style={{ color: "#666666" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight ">

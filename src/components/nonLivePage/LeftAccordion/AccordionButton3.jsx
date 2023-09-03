@@ -212,7 +212,7 @@ const AccordionButton3 = ({ icon, title }) => {
                     >
                       └
                     </p>
-                    <img className="ml-10px" src={flag1} alt="img" />
+                    <img className="ml-9px" src={flag1} alt="img" />
                     <p
                       style={{
                         background: "444444",
