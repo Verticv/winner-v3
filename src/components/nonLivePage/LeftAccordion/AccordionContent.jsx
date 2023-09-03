@@ -95,7 +95,7 @@ const AccordionContent = ({ setIsOpen }) => {
                   background: "#936cee",
                   borderRadius: "5px",
                 }}
-                className="flex items-center justify-center h-34px cursor-pointer filter hover:brightness-125"
+                className="flex items-center justify-center h-34px cursor-pointer hover:opacity-90"
                 onClick={() => {
                   dispatch(deleteAllFavoriteCards());
                   setIsDeleted(true);

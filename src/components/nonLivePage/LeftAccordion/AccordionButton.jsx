@@ -95,15 +95,18 @@ const AccordionButton = ({ icon, title }) => {
         </div>
       ) : (
         isOpen && (
-          <div style={{ background: "#5e399a" }} className="flex items-center justify-center h-70px rounded-b-md">
-            <div style={{ color: "#ffffff" }} className="text-12px tracking-tight font-malgun inline">
+          <div
+            style={{ background: "#5e399a", height: "47px" }}
+            className="flex items-center justify-center rounded-b-md"
+          >
+            <div style={{ color: "#ffffff" }} className="text-12px tracking-tight font-malgun inline mt-2px">
               <p className="inline">즐겨찾기에 </p>
               <img
                 className="object-contain inline"
                 src={icon2}
                 alt="icon"
                 style={{
-                  marginBottom: "8px",
+                  marginBottom: "5px",
                 }}
               />
               <p className="inline">를 클릭하여 추가하기</p>
