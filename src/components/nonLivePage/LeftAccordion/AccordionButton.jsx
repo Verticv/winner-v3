@@ -96,7 +96,7 @@ const AccordionButton = ({ icon, title }) => {
       ) : (
         isOpen && (
           <div
-            style={{ background: "#5e399a", height: "47px" }}
+            style={{ background: "#420572", height: "47px" }}
             className="flex items-center justify-center rounded-b-md"
           >
             <div style={{ color: "#ffffff" }} className="text-12px tracking-tight font-malgun inline mt-2px">
