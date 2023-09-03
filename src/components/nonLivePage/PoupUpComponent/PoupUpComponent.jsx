@@ -108,7 +108,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
             background: "linear-gradient(to right, #df52ff, #6b22ff)",
             boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
           }}
-          className="flex justify-center items-center mt-20px"
+          className="flex justify-center items-center mt-20px hover:filter hover:brightness-125"
         >
           <p
             style={{

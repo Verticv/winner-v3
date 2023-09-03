@@ -123,7 +123,7 @@ const AccordionButton3 = ({ icon, title }) => {
               // marginLeft: "111px",
               borderRadius: "4px",
             }}
-            className="flex items-center justify-center mr-6px px-5px"
+            className="flex items-center justify-center mr-9px px-5px"
           >
             <p className="text-13px mb-px text-white tracking-tight font-malgun ">1000</p>
           </div>
@@ -212,7 +212,7 @@ const AccordionButton3 = ({ icon, title }) => {
                     >
                       └
                     </p>
-                    <img className="ml-8px" src={flag1} alt="img" />
+                    <img className="ml-9px" src={flag1} alt="img" />
                     <p
                       style={{
                         background: "444444",
@@ -221,7 +221,7 @@ const AccordionButton3 = ({ icon, title }) => {
                         whiteSpace: "nowrap",
                         textOverflow: "ellipsis",
                         maxWidth: "160px",
-                        color: hover === 2 ? "#ffffff" : "#000000",
+                        color: hover === 2 ? "#ffffff" : "#444444",
                       }}
                       className="ml-4px mt-13px mb-14px text-13px font-malgun"
                     >
@@ -259,7 +259,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             letterSpacing: "-0.031em",
                             marginLeft: "40px",
                           }}
-                          className="mt-9px mb-14px text-13px"
+                          className="mt-10px mb-14px text-13px"
                         >
                           └
                         </p>
@@ -272,7 +272,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             textOverflow: "ellipsis",
                             maxWidth: "160px",
 
-                            color: hover === 3 ? "#ffffff" : "#000000",
+                            color: hover === 3 ? "#ffffff" : "#444444",
                           }}
                           className="ml-11px mt-13px mb-16px text-12px font-malgun"
                         >
@@ -314,7 +314,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             letterSpacing: "-0.031em",
                             marginLeft: "40px",
                           }}
-                          className="mt-9px mb-14px text-13px"
+                          className="mt-10px mb-14px text-13px"
                         >
                           └
                         </p>
@@ -326,7 +326,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             whiteSpace: "nowrap",
                             textOverflow: "ellipsis",
                             maxWidth: "160px",
-                            color: hover === 4 ? "#ffffff" : "#000000",
+                            color: hover === 4 ? "#ffffff" : "#444444",
                           }}
                           className="ml-11px mt-13px mb-16px text-12px font-malgun"
                         >
@@ -372,7 +372,7 @@ const AccordionButton3 = ({ icon, title }) => {
                         whiteSpace: "nowrap",
                         textOverflow: "ellipsis",
                         maxWidth: "160px",
-                        color: hover === 5 ? "#ffffff" : "",
+                        color: hover === 5 ? "#ffffff" : "#444444",
                       }}
                       className="ml-4px mt-14px mb-15px text-13px font-malgun"
                     >
@@ -415,7 +415,7 @@ const AccordionButton3 = ({ icon, title }) => {
                         whiteSpace: "nowrap",
                         textOverflow: "ellipsis",
                         maxWidth: "160px",
-                        color: hover === 6 && "#ffffff",
+                        color: hover === 6 ? "#ffffff" : "#444444",
                       }}
                       className="ml-4px mt-14px mb-15px text-13px font-malgun"
                     >
