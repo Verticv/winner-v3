@@ -212,7 +212,7 @@ const AccordionButton3 = ({ icon, title }) => {
                     >
                       └
                     </p>
-                    <img className="ml-9px" src={flag1} alt="img" />
+                    <img className="ml-8px" src={flag1} alt="img" />
                     <p
                       style={{
                         background: "444444",
@@ -257,8 +257,9 @@ const AccordionButton3 = ({ icon, title }) => {
                           style={{
                             color: "#444444",
                             letterSpacing: "-0.031em",
+                            marginLeft: "40px",
                           }}
-                          className="ml-45px mt-9px mb-14px text-13px"
+                          className="mt-9px mb-14px text-13px"
                         >
                           └
                         </p>
@@ -273,7 +274,7 @@ const AccordionButton3 = ({ icon, title }) => {
 
                             color: hover === 3 ? "#ffffff" : "#000000",
                           }}
-                          className="ml-13px mt-13px mb-16px text-12px font-malgun"
+                          className="ml-11px mt-13px mb-16px text-12px font-malgun"
                         >
                           프리미어리그
                         </p>
@@ -311,8 +312,9 @@ const AccordionButton3 = ({ icon, title }) => {
                           style={{
                             color: "#444444",
                             letterSpacing: "-0.031em",
+                            marginLeft: "40px",
                           }}
-                          className="ml-45px mt-9px mb-14px text-13px"
+                          className="mt-9px mb-14px text-13px"
                         >
                           └
                         </p>
@@ -326,7 +328,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             maxWidth: "160px",
                             color: hover === 4 ? "#ffffff" : "#000000",
                           }}
-                          className="ml-13px mt-13px mb-16px text-12px font-malgun"
+                          className="ml-11px mt-13px mb-16px text-12px font-malgun"
                         >
                           챔피언쉽
                         </p>
