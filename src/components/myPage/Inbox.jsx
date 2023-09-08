@@ -121,7 +121,7 @@ const Inbox = () => {
           className={dropDownCellClass}
           style={{
             background: hoveredOption === "제목" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
-            color: hoveredOption === "제목" ? "white" : "#666666",
+            color: hoveredOption === "제목" ? "white" : "#444444",
           }}
           onClick={() => {
             setSelectedCarrier("제목");
@@ -136,7 +136,7 @@ const Inbox = () => {
           className={dropDownCellClass}
           style={{
             background: hoveredOption === "본문" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
-            color: hoveredOption === "본문" ? "white" : "#666666",
+            color: hoveredOption === "본문" ? "white" : "#444444",
           }}
           onClick={() => {
             setSelectedCarrier("본문");
@@ -152,7 +152,7 @@ const Inbox = () => {
   );
 
   const dropdownButton = (
-    <div className="flex w-120px h-42px bg-dark-1a1a1a rounded-6px border group border-p682aa7 text-r666666 bg-white mb-px">
+    <div className="flex w-120px h-42px bg-dark-1a1a1a rounded-6px border group border-p682aa7 text-r444444 bg-white mb-px">
       <input className="w-0 text-16px" />
       <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight ">
         <label className="ml-14px cursor-pointer group-hover:text-gray-r8c8c8c">{selectedCarrier}</label>
@@ -178,7 +178,7 @@ const Inbox = () => {
       >
         <input
           style={{ color: "#444" }}
-          className="w-full placeholder-r666666 flex-shrink-0 outline-none h-40px rounded-6px   px-10px font-medium text-14px tracking-tight bg-dark-1a1a1a"
+          className="w-full placeholder-gray-c8c8c8 flex-shrink-0 outline-none h-40px rounded-6px   px-10px font-medium text-14px tracking-tight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button

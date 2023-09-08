@@ -21,7 +21,7 @@ const TabsComponent = ({
         <div className="flex justify-end items-end">
           {/* Start TabsComponent */}
           <div
-            style={{ width: "536px", height: "28px", backgroundColor:'#eeeeee' }}
+            style={{ width: "536px", height: "28px", backgroundColor:'white' }}
             className="relative overflow-hidden bg-white z-10 p-2px rounded-full flex"
           >
             <div

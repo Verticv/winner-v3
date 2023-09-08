@@ -62,7 +62,7 @@ const Button = ({ number }) => {
 
 const Paragraph = ({ text }) => {
   return (
-    <p className="w-61px h-12px flex justify-center items-center text-center text-r666666 font-spoqaMedium text-12px tracking-tight">
+    <p className="w-61px h-12px flex justify-center items-center text-center text-r444444 font-spoqaMedium text-12px tracking-tight">
       {text}
     </p>
   );
@@ -92,7 +92,7 @@ const Card = ({ item }) => {
           boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.4)",
           width: "403px",
           height: "139px",
-          backgroundColor: "#eeeeee",
+          backgroundColor: "white",
         }}
         // TODO: add the correct shadow
         className="flex flex-col p-5px rounded-6px"
@@ -189,7 +189,7 @@ export default function SportHorizontalCarousel() {
   const tabsData = [
     { id: 1, label: "조합베팅" },
     { id: 2, label: "스페셜베팅" },
-    { id: 3, label: "실시간스포츠" },
+    { id: 3, label: "라이브스포츠" },
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabsData[0].id);

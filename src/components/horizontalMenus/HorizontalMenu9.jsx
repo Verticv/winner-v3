@@ -60,7 +60,7 @@ const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null 
             <span
               style={{ color: pathname === item.path ? "#ffffff" : "#5e399a" }}
               className={`${pathname === item.path ? "text-gray-252525" : "text-golden-ccc2b6"}
-                          text-20px font-bold tracking-tight`}
+                          text-20px font-bold tracking-tight font-semibold`}
             >
               {item.text}
             </span>

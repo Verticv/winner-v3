@@ -15,7 +15,7 @@ const PointsApply = () => {
       style={{ width: "140px", background: "#9b6bd4" }}
       className="space-y-14px flex-shrink-0  h-44px pl-10px flex items-center rounded-4px"
     >
-      <div className=" text-white text-16px tracking-Stightest font-bold">{text}</div>
+      <div className=" text-white text-14px tracking-tight font-bold">{text}</div>
     </div>
   );
 
@@ -24,7 +24,7 @@ const PointsApply = () => {
       style={{ width: "212px", background: "linear-gradient(to right, #15cfee, #3197e5)" }}
       className="flex items-center justify-center h-52px rounded-6px p-px hover:filter hover:brightness-125 shadow-link"
     >
-      <span className=" tracking-tight text-16px text-white text-shadow-5">신청하기</span>
+      <span className=" tracking-tight font-bold text-16px text-white text-shadow-5">신청하기</span>
     </button>
   );
 
@@ -38,14 +38,9 @@ const PointsApply = () => {
       >
         <div className="flex items-center h-26px space-x-9px">
           <img src={AlertIcon} alt="" className="mt-px" />
-          <span
-            className="text-rf04281 text-20px tracking-tight mt-px font-bold"
-            style={{ WebkitTextStroke: "0.2px", letterSpacing: "-0.1em" }}
-          >
-            확인 / 필독사항
-          </span>
+          <span className="text-rf04281 text-20px tracking-tight mt-px font-bold">확인 / 필독사항</span>
         </div>
-        <div className="mt-13px flex flex-col space-y-15px text-r666666 text-16px" style={{ letterSpacing: "-0.1em" }}>
+        <div className="mt-13px flex flex-col space-y-15px text-r444444 text-14px">
           <span className="h-15px font-bold">
             <span className="font-bold mr-7px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
           </span>
@@ -71,12 +66,10 @@ const PointsApply = () => {
             }}
             className="w-full rounded-6px flex border"
           >
-            <div style={{ marginLeft: "114px", letterSpacing: "-0.13em" }} className="pt-34px flex flex-col">
-              <span className="text-20px h-19px text-white font-bold" style={{ letterSpacing: "-0.1em" }}>
-                전환 포인트 입력
-              </span>
-              <span className="text-16px text-eeeeee mt-15px" style={{ letterSpacing: "-0.07em" }}>
-                <span style={{ letterSpacing: "-0.1em" }}>현재 포인트가 보유머니로 전환되며, 최소 </span>
+            <div style={{ marginLeft: "114px" }} className="pt-34px flex flex-col">
+              <span className="text-20px h-19px text-white font-bold">전환 포인트 입력</span>
+              <span className="text-14px text-eeeeee mt-15px">
+                <span>현재 포인트가 보유머니로 전환되며, 최소 </span>
                 <span className="ml-2px font-bold" style={{ color: "#fee300" }}>
                   10,000
                 </span>
@@ -133,7 +126,7 @@ const PointsApply = () => {
               <div className="h-44px w-full overflow-hidden">
                 <input
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
-                  className="w-full text-16px outline-none pl-9px placeholder-r666666 h-42px border-b mt-2px"
+                  className="w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px border-b mt-2px font-semibold"
                   placeholder="직접 입력시 숫자만 입력해 주세요."
                   value={inputValue !== null ? nf.format(inputValue) : ""}
                   onChange={(e) => setInputValue(e.target.value.replace(/,/g, ""))}
@@ -162,7 +155,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r666666">1천P</span>
+                <span className="tracking-tight text-14px text-r444444">1천P</span>
               </div>
             </button>
 
@@ -178,7 +171,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r666666">5천P</span>
+                <span className="tracking-tight text-14px text-r444444">5천P</span>
               </div>
             </button>
 
@@ -194,7 +187,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r666666">1만P</span>
+                <span className="tracking-tight text-14px text-r444444">1만P</span>
               </div>
             </button>
 
@@ -210,7 +203,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r666666">5만P</span>
+                <span className="tracking-tight text-14px text-r444444">5만P</span>
               </div>
             </button>
 
@@ -226,7 +219,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r666666">10만P</span>
+                <span className="tracking-tight text-14px text-r444444">10만P</span>
               </div>
             </button>
 
@@ -242,7 +235,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r666666">50만P</span>
+                <span className="tracking-tight text-14px text-r444444">50만P</span>
               </div>
             </button>
 
@@ -258,7 +251,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r666666">100만P</span>
+                <span className="tracking-tight text-14px text-r444444">100만P</span>
               </div>
             </button>
 

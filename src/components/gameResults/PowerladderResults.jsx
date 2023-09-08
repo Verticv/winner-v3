@@ -128,7 +128,7 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
             <div 
                 key={item.id} 
                 style={{background: item.id % 2 === 0 ? "#fff" : "#f7f7f7",borderColor: "#dddddd"}} 
-                className="flex items-center text-r666666 h-55px w-full border-b  text-14px font-roboto tracking-tight "
+                className="flex items-center text-r444444 h-55px w-full border-b  text-14px font-roboto tracking-tight "
             >
                 <CardContent bet={item.bet} team1={item.team1} team2={item.team2} />
             </div>
@@ -146,7 +146,7 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                 className="h-54px flex items-center justify-between pr-19px">    
                 <div className="flex items-center -mt-3px">
                     <img src={icon} alt="" className="ml-16px object-none" />
-                    <span className="text-white font-spoqaMedium text-20px ml-3px pt-3px truncate" style={{maxWidth: "790px"}}>{title}</span>
+                    <span className="text-white font-spoqaMedium text-16px font-medium ml-3px pt-3px truncate" style={{maxWidth: "790px"}}>{title}</span>
                 </div>
                 
 
@@ -174,7 +174,7 @@ const PowerladderResults = ({title="파워사다리", icon}) => {
                         height: "54px",
                         background: 'linear-gradient(to right, #9d3bbb, #5423a0)'
                     }}
-                    className="px-11px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-eeeeee">
+                    className="px-11px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-eeeeee font-semibold">
                 <div style={{width:"75px",marginLeft:"0"}} className='flex justify-center'>회차</div>
                 <div style={{width:"424px",marginLeft:"0"}} className='flex justify-center'>승(홈)</div>
                 <div style={{width:"82px",marginLeft:"4px"}} className='flex justify-center'>VS</div>

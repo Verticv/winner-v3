@@ -21,7 +21,7 @@ const Item = ({ text, itemOrder }) => (
         {itemOrder === 2 && <img className="" src={currencyItemBronze} alt="" />}
         <p
           style={{
-            color: itemOrder < 3 ? "#fff" : "#666666",
+            color: itemOrder < 3 ? "#fff" : "#444444",
             textShadow: itemOrder < 3 && "0px 0px 2px #00000090",
           }}
           className="absolute bottom-4px z-10 font-spoqa text-13px h-10px flex items-center "
@@ -31,7 +31,7 @@ const Item = ({ text, itemOrder }) => (
       </div>
       <p
         style={{
-          color: itemOrder < 3 ? "#c03a41" : "#666666",
+          color: itemOrder < 3 ? "#c03a41" : "#444444",
           textOverflow: "ellipsis",
           whiteSpace: "nowrap",
           overflow: "hidden",
@@ -50,7 +50,7 @@ const Item = ({ text, itemOrder }) => (
     </div>
     <div>
       <p
-        style={{ color: itemOrder < 3 ? "#c03a41" : "#666666" }}
+        style={{ color: itemOrder < 3 ? "#c03a41" : "#444444" }}
         className="text-13px h-14px flex items-center font-spoqaMedium tracking-tight mb-2px"
       >
         {text}

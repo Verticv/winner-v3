@@ -57,14 +57,14 @@ const RightComponentCard1 = ({ teamsData }) => {
                   }}
                   className="-mt-10px items-center px-10px w-full"
                 >
-                  <p style={{ color: "#666666" }} className="pt-5px text-10px font-bold tracking-tight">
+                  <p style={{ color: "#444444" }} className="pt-5px text-10px font-bold tracking-tight">
                     프리미어리그
                   </p>
-                  <p style={{ color: "#666666", marginTop: "2px" }} className="text-10px font-bold tracking-tight">
+                  <p style={{ color: "#444444", marginTop: "2px" }} className="text-10px font-bold tracking-tight">
                     시작되지 않음
                   </p>
                   <p
-                    style={{ color: "#666666", marginTop: "1px", whiteSpace: "nowrap" }}
+                    style={{ color: "#444444", marginTop: "1px", whiteSpace: "nowrap" }}
                     className=" text-10px font-bold tracking-tight"
                   >
                     {teamsData?.team1} VS {teamsData?.team2}
@@ -98,14 +98,14 @@ const RightComponentCard1 = ({ teamsData }) => {
           <div className="flex items-center justify-between">
             <div className="ml-6px mb-2px">
               <p
-                style={{ color: "#666666", maxWidth: "240px" }}
+                style={{ color: "#444444", maxWidth: "240px" }}
                 className="text-12px mt-8px font-malgun tracking-tight"
               >
                 승무패
               </p>
             </div>
             <div className="mr-7px mt-4px">
-              <del style={{ color: "#666666" }} className="text-12px mt-7px font-bold tracking-tight">
+              <del style={{ color: "#444444" }} className="text-12px mt-7px font-bold tracking-tight">
                 {teamsData?.score3 > teamsData?.score1 ? teamsData?.score1 : teamsData?.score3}
               </del>
             </div>
@@ -186,19 +186,19 @@ const RightComponentCard1 = ({ teamsData }) => {
                     className="-mt-10px items-center"
                   >
                     <p
-                      style={{ color: "#666666" }}
+                      style={{ color: "#444444" }}
                       className="ml-10px pt-5px text-10px tracking-tight"
                     >
                       프리미어리그
                     </p>
                     <p
-                      style={{ color: "#666666", marginTop: "2px" }}
+                      style={{ color: "#444444", marginTop: "2px" }}
                       className="ml-10px text-10px tracking-tight"
                     >
                       시작되지 않음
                     </p>
                     <p
-                      style={{ color: "#666666", marginTop: "1px" }}
+                      style={{ color: "#444444", marginTop: "1px" }}
                       className="ml-10px  text-10px tracking-tight"
                     >
                       아스날 VS 리버풀
@@ -221,7 +221,7 @@ const RightComponentCard1 = ({ teamsData }) => {
             <div className="flex items-center justify-between">
               <div className="ml-6px mb-2px">
                 <p
-                  style={{ color: "#666666" }}
+                  style={{ color: "#444444" }}
                   className="text-12px mt-8px font-malgun tracking-tight"
                 >
                   승무패[정규시간]
@@ -229,7 +229,7 @@ const RightComponentCard1 = ({ teamsData }) => {
               </div>
               <div className="mr-7px mt-4px">
                 <del
-                  style={{ color: "#666666" }}
+                  style={{ color: "#444444" }}
                   className="text-12px mt-7px tracking-tight"
                 >
                   2.55

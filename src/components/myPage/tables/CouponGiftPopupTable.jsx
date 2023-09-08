@@ -43,7 +43,7 @@ const CouponGiftPopupTable = () => {
           </div>
         </div>
         <div className="w-full text-585858 text-14px tracking-tight">
-          <div className=" text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center bg-white">
+          <div className=" text-14px tracking-tight text-r444444 h-56px w-full border-b border-gray-dddddd flex items-center bg-white">
             <td style={{ width: "143px" }} className="text-center pt-6px">
               <RadioButton id={0} />
             </td>
@@ -66,7 +66,7 @@ const CouponGiftPopupTable = () => {
           {new Array(6).fill(0).map((item, index) => (
             <div
               style={{ backgroundColor: index % 2 === 0 ? "#f7f7f7" : "#ffffff" }}
-              className={`text-14px tracking-tight text-r666666 h-56px w-full border-b border-gray-dddddd flex items-center`}
+              className={`text-14px tracking-tight text-r444444 h-56px w-full border-b border-gray-dddddd flex items-center`}
             >
               <td style={{ width: "143px" }} className="text-center pt-6px">
                 <RadioButton id={index + 1} />

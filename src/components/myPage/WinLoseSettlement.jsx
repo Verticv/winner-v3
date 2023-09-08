@@ -31,7 +31,7 @@ const WinLoseSettlement = () => {
             <DateSearchBar isLeagueSearch={false} has3MonthSearch={true} />
 
              <div className="flex h-48px w-full mt-20px space-x-12px">
-                <div style={{ width: '255px', background:'#341d5a', borderColor:'#9361e5' }}
+                <div style={{ width: '280px', background:'#341d5a', borderColor:'#9361e5' }}
                     className="h-48px rounded-full border-2 flex items-center justify-center text-16px">
                     <img src={Diamond} alt="" />
                     <div className="flex items-center space-x-4px ml-8px font-bold">
@@ -40,7 +40,7 @@ const WinLoseSettlement = () => {
                     </div>
                 </div>
 
-                <div style={{ width: '255px', background:'#341d5a', borderColor: '#9361e5' }}
+                <div style={{ width: '280px', background:'#341d5a', borderColor: '#9361e5' }}
                     className="h-48px rounded-full border-2 flex items-center justify-center text-16px">
                     <img src={Diamond} alt="" />
                     <div className="flex items-center space-x-4px ml-10px font-bold">

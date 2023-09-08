@@ -69,7 +69,7 @@ const DropdownButton = ({ onMouseOver, optionsArray, buttonText, ButtonIcon, But
                   className={dropDownCellClass}
                   style={{
                     background: isOptionHovered ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
-                    color: isOptionHovered ? "white" : "#666666",
+                    color: isOptionHovered ? "white" : "#444444",
                     height: "25px",
                     paddingTop: "1px",
                     marginBottom: "1px",

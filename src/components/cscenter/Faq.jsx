@@ -40,7 +40,7 @@ const Faq = () => {
         { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/faq/all" },
         { text: "라이브카지노", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/cscenter/faq/all/live-casino" },
         { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/faq/all/slot" },
-        { text: "실시간스포츠", icon: Icon14, iconHighlight: IconHighlight14, id: 14, path: "/cscenter/faq/all/live-sport" },
+        { text: "라이브스포츠", icon: Icon14, iconHighlight: IconHighlight14, id: 14, path: "/cscenter/faq/all/live-sport" },
         { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/faq/all/sports" },
         { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/cscenter/faq/all/hotel-casino" },
         { text: "홀덤게임", icon: Icon15, iconHighlight: IconHighlight15, id: 15, path: "/cscenter/faq/all/holdem" },
@@ -114,7 +114,7 @@ const Faq = () => {
                         src={AIcon} 
                         alt="" 
                     />
-                    <div className="w-full flex flex-col text-r666666" >
+                    <div className="w-full flex flex-col text-r444444" >
                         <div style={{marginTop: "76px",letterSpacing:'-0.07rem'}} className=" ml-15px  flex items-center text-16px">
                             <p style={{color: "#4a90f0 "}} className="self-start mr-3px" >
                                 No.1

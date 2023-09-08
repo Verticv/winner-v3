@@ -164,6 +164,7 @@ module.exports = {
         r362574: "#362574", // header
         r9688c7: "#9688c7",
         rf04281: "#f04281", // Red circle
+        r444444: "#444444", // Text
         r666666: "#666666", // Text
         r2c1137: "#2c1137",
         r9d3bbb30: "rgb(157,59,187,30%)",
@@ -227,6 +228,8 @@ module.exports = {
         "20px": "20px",
       },
       letterSpacing: {
+        none: "0",
+        slight: "-0.015em",
         Stightest: "-0.13em",
         tighter: "-0.031em",
         digital: ".04em",

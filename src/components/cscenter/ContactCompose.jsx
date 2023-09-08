@@ -37,7 +37,7 @@ const ContactCompose = () => {
     <button
       style={{
         background: isOptionHovered === title ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
-        color: isOptionHovered === title ? "#fff" : "#666",
+        color: isOptionHovered === title ? "#fff" : "#444444",
       }}
       className={dropDownCellClass}
       onClick={() => {
@@ -53,7 +53,7 @@ const ContactCompose = () => {
   const searchDropdown = (
     <div
       style={{ width: "130px" }}
-      className="-mt-2px flex flex-col items-center justify-center overflow-hidden bg-gray-1f1f1e rounded-2px border text-r666666 bg-white font-spoqaMedium text-14px tracking-tight"
+      className="-mt-2px flex flex-col items-center justify-center overflow-hidden bg-gray-1f1f1e rounded-2px border text-r444444 bg-white font-spoqaMedium text-14px tracking-tight"
     >
       {buttonLabels.map((item) => (
         <OptionButton title={item} />
@@ -75,7 +75,7 @@ const ContactCompose = () => {
               style={{ width: "139px", borderColor: "#dddddd", background: "#f7f7f7" }}
               className="flex-shrink-0 border-r flex items-center justify-center"
             >
-              <p className="text-14px font-spoqaMedium tracking-tight text-r666666 font-bold">유형</p>
+              <p className="text-14px font-spoqaMedium tracking-tight text-r444444 font-bold">유형</p>
             </div>
             <div className="w-full border-r border-gray-252525  bg-gray-323232 px-10px flex items-center">
               <DropDownControls
@@ -93,11 +93,11 @@ const ContactCompose = () => {
               style={{ width: "139px", borderColor: "#dddddd", background: "#f7f7f7" }}
               className="flex-shrink-0 border-r border-gray-252525 flex items-center justify-center bg-gray-2e2e2e"
             >
-              <p className="text-14px font-spoqaMedium tracking-tight text-r666666 font-bold">제목</p>
+              <p className="text-14px font-spoqaMedium tracking-tight text-r444444 font-bold">제목</p>
             </div>
             <div className="w-full  border-r border-gray-252525 bg-gray-323232 px-10px flex items-center">
               <input
-                className="outline-none w-full h-35px rounded-4px border border-gray-404040 px-9px text-14px font-spoqa tracking-tight placeholder-gray-828282 bg-dark-1a1a1a text-r666666"
+                className="outline-none w-full h-35px rounded-4px border border-gray-404040 px-9px text-14px font-spoqa tracking-tight placeholder-gray-828282 bg-dark-1a1a1a text-r444444"
                 placeholder="제목을 입력하세요."
               />
             </div>
@@ -108,12 +108,12 @@ const ContactCompose = () => {
               style={{ width: "139px", borderColor: "#dddddd", background: "#f7f7f7" }}
               className="flex-shrink-0 border-r border-gray-252525 flex items-center justify-center bg-gray-2e2e2e"
             >
-              <p className="text-14px font-spoqaMedium tracking-tight text-r666666 font-bold">내용</p>
+              <p className="text-14px font-spoqaMedium tracking-tight text-r444444 font-bold">내용</p>
             </div>
             <div className="w-full border-r border-gray-252525 bg-gray-323232 flex items-center p-10px">
               <textarea
                 style={{ height: "325px", resize: "none" }}
-                className="scroll-div2 outline-none w-full rounded-4px border border-gray-404040 px-9px py-10px text-14px font-spoqa tracking-tight placeholder-gray-828282 text-r666666 bg-dark-1a1a1a"
+                className="scroll-div2 outline-none w-full rounded-4px border border-gray-404040 px-9px py-10px text-14px font-spoqa tracking-tight placeholder-gray-828282 text-r444444 bg-dark-1a1a1a"
                 placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
               />
             </div>

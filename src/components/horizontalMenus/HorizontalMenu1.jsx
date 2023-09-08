@@ -35,7 +35,7 @@ const HorizontalMenu1 = ({ itemsArray, isState = 0, setState }) => {
           <div
             style={{ color: isState === item.id ? "#fff" : "32d2834" }}
             className={` 
-                            text-14px tracking-tight h-14px flex items-center -mt-3px`}
+                            text-14px tracking-tight h-14px flex items-center -mt-3px font-semibold`}
           >
             {item.text}
           </div>

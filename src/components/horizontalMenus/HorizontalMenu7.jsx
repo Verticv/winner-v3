@@ -42,7 +42,7 @@ const HorizontalMenu7 = ({
                             ? '#ffffff'
                             : '#2d2834'
                         }}
-                        className={` text-14px tracking-tight  flex items-center mt-6px`}
+                        className={` text-14px tracking-tight  flex items-center mt-6px font-semibold`}
                     >{item.text}</span>
                     </div>
                 

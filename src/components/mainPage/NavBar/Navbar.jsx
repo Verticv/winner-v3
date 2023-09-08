@@ -54,7 +54,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   const tabsArray = [
     { id: 0, text: "라이브카지노", icon: Item1, activeIcon: Item1Active },
     { id: 1, text: "스포츠", icon: Item2, activeIcon: Item2Active },
-    { id: 2, text: "실시간스포츠", icon: Item3, activeIcon: Item3Active },
+    { id: 2, text: "라이브스포츠", icon: Item3, activeIcon: Item3Active },
     { id: 3, text: "슬롯게임", icon: Item4, activeIcon: Item4Active },
     { id: 4, text: "호텔카지노", icon: Item5, activeIcon: Item5Active },
     { id: 5, text: "홀덤게임", icon: Item11, activeIcon: Item11Active },

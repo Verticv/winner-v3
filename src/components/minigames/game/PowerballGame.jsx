@@ -14,7 +14,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
     const PanelTitle = ({title}) => (
         <div className="w-full h-29px flex items-center pl-3px space-x-5px">
             <img className="z-10 object-none -ml-px -mt-px" src={TitleIcon} alt="" />
-            <p className=" text-14px tracking-tight text-r666666 -mt-px">{title}</p>
+            <p style={{color:'#333'}} className=" text-14px tracking-tight font-semibold -mt-px">{title}</p>
         </div>
     )
 
@@ -98,7 +98,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger  text-20px text-white" >홀</p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight -ml-2px -mt-px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-semibold tracking-tight -ml-2px -mt-px" style={{color:'#333'}}>1.95</p>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -117,7 +117,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <img className={`absolute  ${state === `${titleNumber}-2` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px -ml-2px">짝</p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight -ml-2px -mt-px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-semibold tracking-tight -ml-2px -mt-px" style={{color:'#333'}}>1.95</p>
                             </div>
                         </div>
                     ) : titleNumber === 2 || titleNumber === 7 ? (
@@ -143,7 +143,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight t -ml-2px -mt-px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-semibold tracking-tight t -ml-2px -mt-px" style={{color:'#333'}}>1.95</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -166,7 +166,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </p>
                                     </div>  
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>1.95</p>
                             </div>
                         </div>
                     ) : titleNumber === 3 || titleNumber === 8 ? (
@@ -192,7 +192,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>3.75</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>3.75</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -215,7 +215,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>3.75</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>3.75</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -238,7 +238,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>3.75</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>3.75</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -261,7 +261,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>3.75</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>3.75</p>
                             </div>
                         </div>
                     ) : titleNumber === 4 ? (
@@ -281,7 +281,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(0~2)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>3.15</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>3.15</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -298,7 +298,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(3~4)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.10</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.10</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -315,7 +315,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(5~6)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.10</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.10</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -332,7 +332,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(7~9)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>3.15</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>3.15</p>
                             </div>
                         </div>
                     ) : titleNumber === 5 ? (
@@ -349,7 +349,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <img className={`absolute  ${state === `${titleNumber}-1` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-1` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">0</p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -364,7 +364,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">1</p>
 
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -379,7 +379,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">2</p>
 
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -394,7 +394,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">3</p>
 
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -409,7 +409,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">4</p>
 
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -424,7 +424,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">5</p>
 
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -438,7 +438,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <img className={`absolute  ${state === `${titleNumber}-7` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-7` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">6</p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -452,7 +452,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <img className={`absolute  ${state === `${titleNumber}-8` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-8` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">7</p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -466,7 +466,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <img className={`absolute  ${state === `${titleNumber}-9` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-9` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">8</p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -480,7 +480,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <img className={`absolute  ${state === `${titleNumber}-10` ? "object-contain mb-3px" : "object-none"}`} src={state === `${titleNumber}-10` ? YellowButtonPressed : YellowButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">9</p>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>9.00</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>9.00</p>
                             </div>
                         </div>
                     ) : titleNumber === 9 ? (
@@ -500,7 +500,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(15~64)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>2.90</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>2.90</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -517,7 +517,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(65~80)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>2.60</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>2.60</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -534,7 +534,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(81~130)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>2.90</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>2.90</p>
                             </div>
                         </div>
                     ) : titleNumber === 10 ? (
@@ -554,7 +554,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(15~64)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.85</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.85</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -571,7 +571,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(65~80)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.55</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.55</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -588,7 +588,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(81~130)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.85</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.85</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -605,7 +605,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(15~64)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.85</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.85</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -622,7 +622,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(65~80)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.55</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.55</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -639,7 +639,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">(81~130)</p>
                                     </div>
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight text-white -ml-2px -mt-px" style={{color:'#444444'}}>4.85</p>
+                                <p className="text-12px font-semibold tracking-tight text-white -ml-2px -mt-px" style={{color:'#333'}}>4.85</p>
                             </div>
                         </div>
                     ) : <></> }

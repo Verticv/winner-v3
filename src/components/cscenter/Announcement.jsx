@@ -49,7 +49,7 @@ const Announcement = () => {
     },
     { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/announcement/all/slot" },
     {
-      text: "실시간스포츠",
+      text: "라이브스포츠",
       icon: Icon14,
       iconHighlight: IconHighlight14,
       id: 14,
@@ -132,7 +132,7 @@ const Announcement = () => {
         className={dropDownCellClass}
         style={{
           background: hoveredOption === "제목" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
-          color: hoveredOption === "제목" ? "white" : "#666666",
+          color: hoveredOption === "제목" ? "white" : "#444444",
         }}
         onClick={() => {
           setSelectedCarrier("제목");
@@ -147,7 +147,7 @@ const Announcement = () => {
         className={dropDownCellClass}
         style={{
           background: hoveredOption === "본문" ? "linear-gradient(to right, #9d3bbb, #5423a0)" : "",
-          color: hoveredOption === "본문" ? "white" : "#666666",
+          color: hoveredOption === "본문" ? "white" : "#444444",
         }}
         onClick={() => {
           setSelectedCarrier("본문");
@@ -164,7 +164,7 @@ const Announcement = () => {
   const dropdownButton = (
     <div
       style={{ width: "120px" }}
-      className="flex h-42px bg-dark-1a1a1a rounded-6px border border-p682aa7 text-r666666 bg-white mb-px group"
+      className="flex h-42px bg-dark-1a1a1a rounded-6px border border-p682aa7 text-r444444 bg-white mb-px group"
     >
       <input className="w-0 text-16px" />
       <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
@@ -186,7 +186,7 @@ const Announcement = () => {
       <div style={{ width: "381px" }} className="flex h-42px  rounded-6px border border-p682aa7 relative">
         <input
           style={{ color: "#444" }}
-          className="pl-11px rounded-md pb-2px placeholder-r666666 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
+          className="pl-11px rounded-md pb-2px placeholder-gray-c8c8c8 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
           placeholder="검색어를 입력해 주세요"
         />
         <button

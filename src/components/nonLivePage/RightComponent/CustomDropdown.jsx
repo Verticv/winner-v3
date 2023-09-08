@@ -61,7 +61,7 @@ const CustomDropdown = ({ selectedOption, setSelectedOption }) => {
       {isOpen && (
         <div
           style={{
-            background: "#666666",
+            background: "#444444",
             width: "88px",
             borderRadius: "4px",
           }}

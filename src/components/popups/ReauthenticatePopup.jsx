@@ -40,7 +40,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
           <div className="w-full flex justify-center">
             <label
               style={{ color: "#ffffff", marginTop: "22px", marginLeft: "2px" }}
-              className="font-bold text-24px h-24px flex items-center"
+              className="font-bold text-24px h-24px flex items-center tracking-tight"
             >
               회원정보수정
             </label>
@@ -54,7 +54,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
           <div style={{ marginTop: "37px" }} className="w-full flex justify-center object-none">
             <img src={EditInfoIcon} alt="edit_info_icon" />
           </div>
-          <div className="flex flex-col items-center justify-center text-18px space-y-5px mt-24px">
+          <div className="flex flex-col items-center justify-center text-16px space-y-5px mt-24px">
             <div className="flex items-center h-19px">
               <p
                 style={{
@@ -68,10 +68,10 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
               >
                 {username.length > 12 ? `${username.slice(0, 12)}...` : username}
               </p>
-              <span className="text-r666666">님의 회원정보를 수정합니다.</span>
+              <span className="text-r444444">님의 회원정보를 수정합니다.</span>
             </div>
 
-            <div className="flex items-center h-19px text-r666666">비밀번호를 다시 입력해 주세요.</div>
+            <div className="flex items-center h-19px text-r444444">비밀번호를 다시 입력해 주세요.</div>
           </div>
 
           <div
@@ -94,7 +94,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                 whiteSpace: "nowrap",
                 overflow: "hidden",
               }}
-              className="text-20px outline-none w-full h-full pl-18px placeholder-r666666 pt-3px bg-white"
+              className="text-20px outline-none w-full h-full pl-18px placeholder-gray-c8c8c8 pt-3px bg-white"
               disabled
               placeholder={"louie3"}
             />
@@ -117,7 +117,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                 color: "#444",
                 borderRadius: "4px",
               }}
-              className="text-20px outline-none w-full h-full px-18px placeholder-r666666 pt-3px"
+              className="text-20px outline-none w-full h-full px-18px placeholder-gray-c8c8c8 pt-3px"
               placeholder={"비밀번호"}
               type="password"
               onFocus={(e) => {

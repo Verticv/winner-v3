@@ -320,7 +320,7 @@ const RightComponent = () => {
               >
                 <img className="mr-px" src={icon3} alt="icon" />
                 <p
-                  style={{ color: "#666666", letterSpacing: "-0.031em" }}
+                  style={{ color: "#444444", letterSpacing: "-0.031em" }}
                   className="ml-2px -mt-px -mr-px text-12px font-bold"
                 >
                   전체삭제
@@ -661,7 +661,7 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b border-t"
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
+              <p style={{ color: "#444444" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최소 베팅금액
               </p>
               <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">
@@ -676,7 +676,7 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b "
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
+              <p style={{ color: "#444444" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최대 베팅금액
               </p>
               <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">
@@ -691,7 +691,7 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
+              <p style={{ color: "#444444" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최대 당첨금액
               </p>
               <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">
@@ -706,7 +706,7 @@ const RightComponent = () => {
               }}
               className="flex items-center justify-between border-b"
             >
-              <p style={{ color: "#666666" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
+              <p style={{ color: "#444444" }} className="ml-9px mt-12px mb-15px text-12px font-semibold tracking-tight">
                 최대 베팅배당
               </p>
               <p style={{ color: "#333" }} className="mr-10px mt-12px mb-13px text-12px font-semibold tracking-tight">

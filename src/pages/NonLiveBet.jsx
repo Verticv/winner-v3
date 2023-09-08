@@ -61,7 +61,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
         </div>
         <div
           style={{ background: "linear-gradient(to right, #b644c4, #351894)" }}
-          className="relative w-full flex items-start "
+          className="relative w-full flex items-start justify-center"
         >
           <div
             style={{

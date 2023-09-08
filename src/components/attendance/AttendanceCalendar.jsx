@@ -107,7 +107,7 @@ class Calendar extends React.Component {
             key={day}
           >
             <div
-              className={`text-r666666 text-21px font-roboto mt-19px ml-18px h-full w-full flex items-start justify-start`}
+              className={`text-r444444 text-21px font-roboto mt-19px ml-18px h-full w-full flex items-start justify-start`}
             >
               <p style={{ color: day.getDay() === 0 && "#f04281" }}>{isSameMonth(day, monthStart) && formattedDate}</p>
             </div>
@@ -190,11 +190,11 @@ class Calendar extends React.Component {
               </div>
 
               <div className="w-full">
-                <div className="flex space-x-8px text-r666666 items-center font-bold">
+                <div className="flex space-x-8px text-r444444 items-center font-bold">
                   <img src={Check} alt="" className="w-23px h-23px flex-shrink-0" />
                   <span className="text-20px">출석체크 이벤트 </span>
                 </div>
-                <div className="mt-12px flex flex-col space-y-16px text-r666666 tracking-tight text-16px ml-2px font-bold">
+                <div className="mt-12px flex flex-col space-y-16px text-r444444 tracking-tight text-16px ml-2px font-bold">
                   <span className="h-14px space-y-4px">
                     <span className="mr-5px font-bold">✓</span>
                     일주일(7일) 연속 출석 시
@@ -232,7 +232,7 @@ class Calendar extends React.Component {
                 {this.renderCells()}
               </div>
             </div>
-            <div className="flex absolute bottom-3px left-0 right-0 h-19px justify-center items-center text-20px mb-26px text-r666666 tracking-tight">
+            <div className="flex absolute bottom-3px left-0 right-0 h-19px justify-center items-center text-20px mb-26px text-r444444 tracking-tight">
               2021년 07월은 총
               <p className="mx-4px font-bold" style={{ color: "#33a1e9" }}>
                 7일

@@ -255,7 +255,7 @@ const HotelCasinoStructure = () => {
                   </div>
                   <div className="flex items-center">
                     <span
-                      style={{ color: "#666666" }}
+                      style={{ color: "#444444" }}
                       className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
                     >
                       ※ 스피드게임 : 45초 베팅시간 제공

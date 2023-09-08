@@ -6,7 +6,7 @@ const Card = ({ children, HeaderIcon, headerText, headerActionText }) => {
     <div
       style={{
         boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.6)",
-        backgroundColor: "rgb(237, 237, 235)",
+        backgroundColor: "white",
         width: "373px",
         height: "184px",
       }}

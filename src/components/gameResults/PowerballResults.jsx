@@ -19,7 +19,7 @@ const PowerballResults = () => {
           backgroundColor: item.id % 2 === 0 ? "#fff" : "#f7f7f7",
           borderColor: "#dddddd",
         }}
-        className="flex items-center text-14px tracking-tight text-r666666 h-55px w-full border-b font-roboto last:border-b-0 pt-px"
+        className="flex items-center text-14px tracking-tight text-r444444 h-55px w-full border-b font-roboto last:border-b-0 pt-px"
       >
         <div style={{ marginLeft: "0", width: "216px" }} className="flex justify-center pl-2px">
           2021-06-29 15:45
@@ -27,10 +27,10 @@ const PowerballResults = () => {
         <div style={{ marginLeft: "0", width: "296px" }} className="flex justify-center">
           {count}
         </div>
-        <div style={{ marginLeft: "0", width: "255px", color: "#0072bc" }} className=" flex justify-center">
+        <div style={{ marginLeft: "0", width: "255px", color: "#0072bc" }} className=" flex justify-center font-semibold">
           {item.result}
         </div>
-        <div style={{ marginLeft: "42px", width: "211px" }} className="flex justify-center">
+        <div style={{ marginLeft: "42px", width: "211px" }} className="flex justify-center font-semibold">
           {item.percentage}
         </div>
       </div>
@@ -46,7 +46,7 @@ const PowerballResults = () => {
         className="h-54px flex items-center"
       >
         <img src={PowerballIcon} alt="" className="ml-16px" />
-        <span className="text-white  text-20px ml-4px pt-2px truncate" style={{ maxWidth: "950px" }}>
+        <span className="text-white  text-16px font-medium ml-4px truncate" style={{ maxWidth: "950px" }}>
           파워볼
         </span>
       </div>
@@ -65,7 +65,7 @@ const PowerballResults = () => {
             height: "54px",
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
           }}
-          className="w-full flex items-center text-14px font-spoqaMedium tracking-tight text-eeeeee px-9px"
+          className="w-full flex items-center text-14px font-spoqaMedium tracking-tight text-eeeeee px-9px font-semibold"
         >
           <div className="text-center pl-2px" style={{ width: "216px" }}>
             경기일시

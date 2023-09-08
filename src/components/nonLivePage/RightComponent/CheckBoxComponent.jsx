@@ -76,7 +76,7 @@ const CheckBoxComponent = () => {
               style={{ backgroundColor: "#281d45", borderColor: "#6045ad" }}
               className="ml-10px flex-shrink-0"
             />
-            <p style={{ color: "#666666" }} className="ml-9px text-12px font-malgun tracking-tight">
+            <p style={{ color: "#444444" }} className="ml-9px text-12px font-malgun tracking-tight">
               높은 배당만 수락
             </p>
           </div>
@@ -97,7 +97,7 @@ const CheckBoxComponent = () => {
               style={{ backgroundColor: "#281d45", borderColor: "#6045ad" }}
               className="ml-10px flex-shrink-0"
             />
-            <p style={{ color: "#666666" }} className="ml-9px text-12px font-malgun tracking-tight">
+            <p style={{ color: "#444444" }} className="ml-9px text-12px font-malgun tracking-tight">
               변경되는 배당 수락 (추천)
             </p>
           </div>
@@ -118,7 +118,7 @@ const CheckBoxComponent = () => {
               style={{ backgroundColor: "#281d45", borderColor: "#6045ad" }}
               className="ml-10px flex-shrink-0"
             />
-            <p style={{ color: "#666666" }} className="ml-9px text-12px font-malgun tracking-tight">
+            <p style={{ color: "#444444" }} className="ml-9px text-12px font-malgun tracking-tight">
               변경되는 배당 거절
             </p>
           </div>

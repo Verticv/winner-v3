@@ -11,7 +11,7 @@ const Item = ({ text }) => (
       <p
         style={{
           display: "block",
-          color: "#666666",
+          color: "#444444",
           whiteSpace: "nowrap",
           overflow: "hidden",
           textOverflow: "ellipsis",

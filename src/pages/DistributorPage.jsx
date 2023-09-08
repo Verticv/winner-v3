@@ -154,10 +154,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
         className="w-full flex flex-col items-center justify-start rounded-10px"
       >
         <img className="mt-19px object-none" src={img} alt="" />
-        <span className="mt-3px tracking-tight text-18px font-bold" style={{ color: "#2d2834" }}>
+        <span className="mt-8px tracking-tight text-15px font-bold" style={{ color: "#2d2834" }}>
           {text}
         </span>
-        <span className="mt-px font-bold tracking-tight text-26px" style={{ color: "#c03a41" }}>
+        <span className="mt-px font-bold tracking-tight text-20px" style={{ color: "#c03a41" }}>
           {count}
         </span>
       </div>
@@ -217,16 +217,16 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
     <>
       <div className="w-full flex">
         <div className="w-40px mt-10px flex justify-center items-start"></div>
-        <div className="w-full flex flex-col overflow-x-auto overflow-y-hidden scroll-div1">
+        <div className="w-full flex flex-col overflow-x-auto overflow-y-hidden scroll-div6">
           <div
             style={{
               width: "fit-content",
               paddingRight: innerTable ? "30px" : 0,
-              color: "#ffffff",
+              color: "#eeeeee",
               background: innerTable ? "#513d71" : "#5d4386",
               borderColor: "#dddddd",
             }}
-            className="flex h-56px border-b items-center text-14px tracking-tight flex-shrink-0"
+            className="flex h-56px border-b items-center text-13px tracking-tight flex-shrink-0"
           >
             <div style={{ backgroundColor: "#3f2a5f" }} className="w-85px h-full flex items-center justify-center">
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
@@ -253,7 +253,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               color: "#585858",
               background: "#f3f3f3",
             }}
-            className="flex h-54px items-center text-14px tracking-tight font-roboto flex-shrink-0 bg-white"
+            className="flex h-54px items-center text-13px tracking-tight font-roboto flex-shrink-0 bg-white"
           >
             <div
               style={{ backgroundColor: innerTable ? "#e8e8e8" : "#f8f8f8" }}
@@ -264,7 +264,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
             </div>
             {games.map((item) => {
-              return <div className="w-81px h-full flex items-center justify-center ">0.00%</div>;
+              return <div className="w-81px h-full flex items-center justify-center text-r444444 text-13px">0.00%</div>;
             })}
             <div className="w-100px h-full flex items-center justify-center">
               <button
@@ -281,7 +281,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                   }}
                   className={` flex items-center justify-center h-34px w-85px rounded-4px  cursor-pointer space-x-10px`}
                 >
-                  <span className=" tracking-tight text-14px text-white text-shadow-5">수정</span>
+                  <span className=" tracking-tight text-13px text-white text-shadow-5">수정</span>
                 </div>
               </button>
             </div>
@@ -295,10 +295,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
     <>
       <div className="w-full flex">
         <div className="w-39px mt-10px flex justify-center items-start"></div>
-        <div className="w-full flex flex-col overflow-x-auto bg-white scroll-div">
+        <div className="w-full flex flex-col overflow-x-auto bg-white scroll-div6">
           <div className="flex h-55px items-center bg-eeeeee w-full" style={{ width: `${games.length * 85 + 178}px` }}>
             <div
-              style={{ width: "235px", background: "#6852a7" }}
+              style={{ width: "235px", background: "rgb(56,35,114)" }}
               className="-mt-px ml-8px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
               <img className="mr-10px" src={SmallDiamond} alt="" />
@@ -308,7 +308,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
             </div>
             <div
-              style={{ width: "235px", background: "#6852a7" }}
+              style={{ width: "235px", background: "rgb(56,35,114)" }}
               className="-mt-px ml-5px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
               <img className="mr-10px" src={SmallDiamond} alt="" />
@@ -318,7 +318,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
             </div>
             <div
-              style={{ width: "235px", background: "#6852a7" }}
+              style={{ width: "235px", background: "rgb(56,35,114)" }}
               className="-mt-px ml-5px pr-20px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
               <img className="mr-10px" src={SmallDiamond} alt="" />
@@ -379,11 +379,11 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               paddingRight: innerTable ? "0px" : 0,
               backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
-            className="flex h-55px items-center text-14px tracking-tight font-roboto text-r666666 bg-white border-b border-dddddd"
+            className="flex h-55px items-center text-14px tracking-tight font-roboto text-r444444 bg-white border-b border-dddddd"
           >
             <div
               style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
-              className="w-85px h-full flex items-center justify-center text-r666666 "
+              className="w-85px h-full flex items-center justify-center text-r444444 "
             >
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 베팅금
@@ -411,11 +411,11 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               paddingRight: innerTable ? "0px" : 0,
               backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
-            className="flex h-55px items-center text-14px tracking-tight font-roboto text-r666666 bg-white border-b border-dddddd"
+            className="flex h-55px items-center text-14px tracking-tight font-roboto text-r444444 bg-white border-b border-dddddd"
           >
             <div
               style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
-              className="w-85px h-full flex items-center justify-center  text-r666666"
+              className="w-85px h-full flex items-center justify-center  text-r444444"
             >
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 승패
@@ -442,11 +442,11 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               width: "fit-content",
               backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
-            className="flex h-56px items-center text-14px tracking-tight font-roboto border-b border-dddddd bg-white text-r666666"
+            className="flex h-56px items-center text-14px tracking-tight font-roboto border-b border-dddddd bg-white text-r444444"
           >
             <div
               style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
-              className="w-85px h-full flex items-center justify-center  text-r666666"
+              className="w-85px h-full flex items-center justify-center  text-r444444"
             >
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
                 정산금액
@@ -498,7 +498,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                 ? "#f7f7f7"
                 : "#ffffff",
           }}
-          className={`w-full flex items-center justify-start font-roboto text-14px text-r666666 tracking-tight`}
+          className={`w-full flex items-center justify-start font-roboto text-13px text-r444444 tracking-tight`}
         >
           <div className={`${item.name ? "w-90px pr-5px" : "w-138px"}  h-full flex items-center justify-center`}>
             {item.number}
@@ -559,7 +559,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                   }}
                   className={`flex items-center justify-center h-34px w-85px rounded-4px cursor-pointer space-x-10px`}
                 >
-                  <span className="font-spoqaMedium tracking-tight text-14px text-white text-shadow-5">
+                  <span className="font-spoqaMedium tracking-tight text-13px  text-white text-shadow-5">
                     {isUserCountOpen[item.id] === true ? "접기" : "보기"} {item.user_count}
                   </span>
                   <img className={isUserCountOpen[0] === false && " transform rotate-180"} src={WhiteArrow} alt="" />
@@ -575,7 +575,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
           <div
             className={`${
               item.name ? "pl-2px" : "pl-11px"
-            } text-center flex flex-col items-center justify-center space-y-3px text-14px tracking-tight font-roboto`}
+            } text-center flex flex-col items-center justify-center space-y-3px text-13px  tracking-tight font-roboto`}
             style={{ width: item.name ? "125px" : "134px" }}
           >
             <div className="flex items-center h-16px">{item.recommended_date}</div>
@@ -607,7 +607,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                 }}
                 className={` flex items-center justify-center h-34px w-83px rounded-4px cursor-pointer space-x-10px`}
               >
-                <span className="font-spoqaMedium tracking-tight text-14px text-white text-shadow-5">
+                <span className="font-spoqaMedium tracking-tight text-13px  text-white text-shadow-5">
                   {isUserCountOpen[item.id + 1] === true ? "접기" : "보기"}
                 </span>
                 <img
@@ -673,7 +673,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                 className={`
                     flex items-center justify-center h-34px w-83px rounded-4px cursor-pointer space-x-10px`}
               >
-                <span className="font-spoqaMedium tracking-tight text-14px text-white text-shadow-5">
+                <span className="font-spoqaMedium tracking-tight text-13px  text-white text-shadow-5">
                   {isUserCountOpen[item.id + 2] === true ? "접기" : "보기"}
                 </span>
                 <img
@@ -702,7 +702,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               (isUserCountOpen[item.id] === true ||
                 isUserCountOpen[item.id + 1] === true ||
                 isUserCountOpen[item.id + 2] === true) &&
-              "2px solid #6b22ff",
+              "4px solid #2c135f",
           }}
           className={`flex flex-col relative w-full`}
         >
@@ -724,7 +724,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                   {/* === Header === */}
                   <div
                     style={{ height: "69px", background: "#5d4386" }}
-                    className=" flex items-center justify-start text-14px text-white tracking-tight"
+                    className=" flex items-center justify-start text-13px text-white tracking-tight"
                   >
                     <div className="h-full flex items-center justify-center" style={{ width: "138px" }}>
                       번호
@@ -908,7 +908,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
             whiteSpace: "nowrap",
             overflow: "hidden",
           }}
-          className="text-r666666 text-20px"
+          className="text-r444444 text-15px"
         >
           {name.length > 12 ? `${name.slice(0, 12)}...` : name}
         </span>
@@ -925,7 +925,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
         <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
       </div>
 
-      <div style={{ marginTop: "148px" }} className="relative flex flex-col items-start limit1920:items-center w-1260px limit1920:w-auto">
+      <div
+        style={{ marginTop: "148px" }}
+        className="relative flex flex-col items-start limit1920:items-center w-1260px limit1920:w-auto"
+      >
         <div style={{ height: "136px" }} className="relative mt-26px flex-shrink-0">
           <img
             style={{ height: "150px", width: "1300px", objectFit: "none" }}
@@ -945,7 +948,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
       <div className="relative flex flex-col items-center limit496:items-center mt-11px">
         <div
           style={{ borderRadius: "25px", width: "496px", background: "#341d5a", color: "#acacac" }}
-          className="space-x-4px h-50px flex items-center justify-center text-24px tracking-tighter"
+          className="space-x-4px h-50px flex items-center justify-center text-18px tracking-tight"
         >
           <span
             style={{
@@ -959,18 +962,16 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
           >
             {username.length > 12 ? `${username.slice(0, 12)}...` : username}
           </span>
-          <span className="font-spoqaMedium -mt-2px" style={{ letterSpacing: "-0.1em" }}>
-            님의 총판 정보입니다.
-          </span>
+          <span className="font-spoqaMedium -mt-2px">님의 총판 정보입니다.</span>
         </div>
       </div>
 
       <div className="relative flex flex-col justify-start limit:justify-center">
         <div className="flex flex-col items-start limit1920:items-center w-full h-full">
           <div className="mt-54px w-1836px">
-            <div className="h-29px w-full flex items-center space-x-8px text-24px">
+            <div className="h-29px w-full flex items-center space-x-8px text-18px">
               <img className="mt-px" src={SummaryIcon} alt="" />
-              <span className="text-eeeeee -mt-px tracking-Stightest">총판현황</span>
+              <span className="text-eeeeee -mt-px tracking-tight">총판현황</span>
             </div>
             <div style={{ height: "165px" }} className="flex w-full mt-20px space-x-4px">
               <SummaryCard img={SummaryIcon1} text="전체 유저" count={5} />
@@ -983,7 +984,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               <SummaryCard img={SummaryIcon8} text="제휴 금액" count="117,515,875.76" />
             </div>
 
-            <div className="mt-61px h-29px w-full flex items-center space-x-6px text-24px tracking-Stightest">
+            <div className="mt-61px h-29px w-full flex items-center space-x-6px text-18px tracking-tight">
               <img src={PieIcon} alt="" />
               <span className="-mt-px text-eeeeee">롤링요율</span>
             </div>
@@ -993,10 +994,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                 background: "linear-gradient(to top, #eeeeee, #9361e5)",
                 boxShadow: "0 2px 10px rgba(0, 0, 0, 0.6)",
               }}
-              className="mt-19px h-112px w-full rounded-4px flex items-center p-px overflow-x-auto scroll-div"
+              className="mt-19px h-112px w-full rounded-4px flex items-center p-px overflow-x-auto scroll-div6"
             >
               <table className="w-full overflow-hidden rounded-3px bg-white">
-                <thead className="h-55px w-full text-14px text-eeeeee tracking-tight" style={{ background: "#472480" }}>
+                <thead className="h-55px w-full text-13px text-eeeeee tracking-tight" style={{ background: "#472480" }}>
                   <tr className="flex items-center h-55px w-full">
                     {games.map((item) => {
                       if (!item.title2) return <td className="w-75px text-center">{item.title1}</td>;
@@ -1010,8 +1011,8 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                     })}
                   </tr>
                 </thead>
-                <tbody className="w-full text-r666666 text-14px tracking-tight">
-                  <tr className="flex items-center text-14px tracking-tight text-gray-c8c8c8 h-54px w-full">
+                <tbody className="w-full text-r444444 text-13px tracking-tight">
+                  <tr className="flex items-center text-13px tracking-tight text-gray-c8c8c8 h-54px w-full">
                     {games.map((item, index) => {
                       return <td className="w-75px text-center">{index === 0 ? "0.70%" : "0.00%"}</td>;
                     })}
@@ -1022,19 +1023,19 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
 
             <div
               style={{ marginTop: "59px" }}
-              className="h-29px w-full flex items-center space-x-6px text-24px tracking-Stightest"
+              className="h-29px w-full flex items-center space-x-6px text-18px tracking-tight"
             >
               <img src={DetailIcon} alt="" />
               <span className="-mt-px text-eeeeee">나의 상세내역</span>
             </div>
             <div className="pt-10px">
-              <DateSearchBar isLeagueSearch={false} hasIdSearch={true} />
+              <DateSearchBar isLeagueSearch={false} hasIdSearch={true} fullWidth={true} />
             </div>
 
-            <div className="flex mt-30px w-full space-x-11px">
+            <div className="flex mt-30px w-full justify-center space-x-11px">
               <div
                 style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
-                className="h-48px rounded-full border-2 flex items-center justify-center text-20px tracking-tight"
+                className="h-48px rounded-full border-2 flex items-center justify-center text-15px tracking-tight"
               >
                 <img className="mr-10px mt-px" src={Diamond} alt="" />
                 <div className="flex items-center space-x-4px">
@@ -1045,7 +1046,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
 
               <div
                 style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
-                className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-20px tracking-tight"
+                className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-15px tracking-tight"
               >
                 <img className="mr-9px mt-px" src={Diamond} alt="" />
                 <div className="flex items-center space-x-4px">
@@ -1056,7 +1057,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
 
               <div
                 style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
-                className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-20px tracking-tight"
+                className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-15px tracking-tight"
               >
                 <img className="mr-10px mt-px" src={Diamond} alt="" />
                 <div className="flex items-center space-x-4px">
@@ -1067,7 +1068,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
 
               <div
                 style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
-                className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-20px tracking-tight"
+                className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-15px tracking-tight"
               >
                 <img className="-ml-8px mr-6px mt-px" src={Diamond} alt="" />
                 <div className="flex items-center space-x-4px">
@@ -1083,12 +1084,12 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                   background: "linear-gradient(to top, #eeeeee, #9361e5)",
                   boxShadow: "0 2px 10px rgba(0, 0, 0, 0.6)",
                 }}
-                className="mt-20px w-full rounded-4px flex items-center p-px overflow-x-auto scroll-div"
+                className="mt-20px w-full rounded-4px flex items-center p-px overflow-x-auto scroll-div6"
               >
-                <div className="bg-white rounded-4px text-r666666 ">
+                <div className="bg-white rounded-4px text-r444444 ">
                   <table className="rounded-t-4px">
                     <thead
-                      className="h-53px w-full text-14px text-white tracking-tight border-b"
+                      className="h-53px w-full text-13px text-eeeeee tracking-tight border-b"
                       style={{ borderColor: "#dddddd" }}
                     >
                       <tr className="flex items-center h-53px rounded-t-4px" style={{ background: "#472480" }}>
@@ -1116,14 +1117,14 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                         </td>
                       </tr>
                     </thead>
-                    <tbody className="w-full text-r666666 text-14px tracking-tight">
+                    <tbody className="w-full text-r444444 text-13px tracking-tight">
                       <tr
-                        className="flex items-center  text-14px tracking-tight h-55px w-full border-b"
+                        className="flex items-center  text-13px tracking-tight h-55px w-full border-b"
                         style={{ borderColor: "#dddddd" }}
                       >
                         <td
                           style={{ backgroundColor: "#f2f2f2" }}
-                          className="w-84px h-full flex items-center justify-center text-14px tracking-tight"
+                          className="w-84px h-full flex items-center justify-center text-13px tracking-tight"
                         >
                           베팅금
                         </td>
@@ -1140,12 +1141,12 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                         </td>
                       </tr>
                       <tr
-                        className="flex items-center text-14px tracking-tight h-55px w-full border-b"
+                        className="flex items-center text-13px tracking-tight h-55px w-full border-b"
                         style={{ background: "#f7f7f7", borderColor: "#dddddd" }}
                       >
                         <td
                           style={{ backgroundColor: "#f2f2f2" }}
-                          className="w-84px bg-gray-16181a h-full flex items-center justify-center text-14px tracking-tight"
+                          className="w-84px bg-gray-16181a h-full flex items-center justify-center text-13px tracking-tight"
                         >
                           승패
                         </td>
@@ -1162,10 +1163,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                           0
                         </td>
                       </tr>
-                      <tr className="flex items-center text-14px tracking-tight h-55px w-full">
+                      <tr className="flex items-center text-13px tracking-tight h-55px w-full">
                         <td
                           style={{ backgroundColor: "#f2f2f2" }}
-                          className="w-84px bg-gray-16181a h-full flex items-center justify-center text-14px tracking-tight"
+                          className="w-84px bg-gray-16181a h-full flex items-center justify-center text-13px tracking-tight"
                         >
                           정산금액
                         </td>
@@ -1187,9 +1188,9 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
             </div>
 
-            <div className="mt-55px h-42px w-full flex items-center space-x-8px text-24px text-eeeeee">
+            <div className="mt-55px h-42px w-full flex items-center space-x-8px text-18px text-eeeeee">
               <img src={MemberIcon} alt="" />
-              <div className="tracking-Stightest">
+              <div className="tracking-tight">
                 접속중인 회원수 : <span className="font-bold text-white tracking-tight ">2명</span>
               </div>
 
@@ -1231,7 +1232,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
             )}
 
-            <div className="mt-60px h-29px w-full flex items-end justify-between text-24px tracking-Stightest text-eeeeee">
+            <div className="mt-60px h-29px w-full flex items-end justify-between text-18px tracking-tight text-eeeeee">
               <div className="flex items-center space-x-8px h-29px">
                 <img src={RecommendIcon} alt="" />
                 <div>추천 회원내역</div>
@@ -1260,9 +1261,8 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                     height: "69px",
                     background: "#472480",
                     borderColor: "#acacac",
-                    // filter: "drop-shadow( 0 0px 7px rgba(0, 0, 0, 0.4))",
                   }}
-                  className="w-full flex items-center justify-start font-spoqa text-14px text-white tracking-tight border-b pt-3px"
+                  className="w-full flex items-center justify-start font-spoqa text-13px text-eeeeee tracking-tight border-b pt-3px"
                 >
                   <div className="w-90px text-center pr-5px">번호</div>
                   <button

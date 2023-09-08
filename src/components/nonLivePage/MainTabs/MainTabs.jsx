@@ -34,7 +34,7 @@ const MainTabs = () => {
       id: 2,
       icon: icon3,
       marginLeft1: "15px",
-      text: "실시간스포츠",
+      text: "라이브스포츠",
       marginLeft: "4px",
       marginRight: "13px",
       width: "137px",

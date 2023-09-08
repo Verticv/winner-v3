@@ -40,7 +40,7 @@ const tabsArray = [
     { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history" },
     { text: "라이브카지노", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/mypage/bet-history/live-casino" },
     { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/mypage/bet-history/slot-game" },
-    { text: "실시간스포츠", icon: Icon12, iconHighlight: IconHighlight12, id: 11, path: "/mypage/bet-history/live-sport" },
+    { text: "라이브스포츠", icon: Icon12, iconHighlight: IconHighlight12, id: 11, path: "/mypage/bet-history/live-sport" },
     { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/mypage/bet-history/sports" },
     { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/mypage/bet-history/hotel-casino" },
     { text: "홀덤게임", icon: Icon6, iconHighlight: IconHighlight6, id: 10, path: "/mypage/bet-history/hold'em-game" },

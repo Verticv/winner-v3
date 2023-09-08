@@ -55,9 +55,9 @@ const Pagination = ({ page, setPage }) => {
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
-              className={`text-gray-activeText font-roboto tracking-tight text-12px`}
+              className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 1 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+                color: selectedPage === 1 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               1
@@ -80,9 +80,9 @@ const Pagination = ({ page, setPage }) => {
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
-              className={`text-gray-activeText font-roboto tracking-tight text-12px`}
+              className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 2 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+                color: selectedPage === 2 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               2
@@ -105,9 +105,9 @@ const Pagination = ({ page, setPage }) => {
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
-              className={`text-gray-activeText font-roboto tracking-tight text-12px`}
+              className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 3 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+                color: selectedPage === 3 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               3
@@ -130,9 +130,9 @@ const Pagination = ({ page, setPage }) => {
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
-              className={`text-gray-activeText font-roboto tracking-tight text-12px`}
+              className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 4 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+                color: selectedPage === 4 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               4
@@ -156,9 +156,9 @@ const Pagination = ({ page, setPage }) => {
             className={`flex items-center justify-center h-30px w-30px rounded-3px  cursor-pointer`}
           >
             <span
-              className={`text-gray-activeText font-roboto tracking-tight text-12px`}
+              className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 5 ? "#594e6a" : path.includes("/freeboard/compose") ? "#666666" : "#eeeeee",
+                color: selectedPage === 5 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               5

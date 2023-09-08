@@ -17,7 +17,7 @@ const SportsHover = ({ selection }) => {
       id: 0,
       background: LebronBanner,
       logo: LebronBannerLogo,
-      imgText: "실시간스포츠",
+      imgText: "라이브스포츠",
     },
     {
       id: 1,

@@ -124,7 +124,7 @@ const MinigamesRightPanel = ({
             </div>
             <div style={{width:"107px"}} className=" flex h-full z-20 items-center justify-center pr-8px flex-col space-y-4px flex-shrink-0 -mt-4px">
                 {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
-                    <p  className="text-r666666 text-12px tracking-Stightest flex items-center h-12px">{selectedOption[0].type}</p>
+                    <p  className="text-r444444 text-12px tracking-Stightest flex items-center h-12px">{selectedOption[0].type}</p>
                 )}
                 {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") ? (
                     <p style={{color:"#682aa7"}} className="text-14px tracking-Stightest font-bold flex items-center h-12px">{selectedOption[0].name}</p>

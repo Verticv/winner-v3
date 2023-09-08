@@ -124,8 +124,7 @@ const EsportsSingle = () => {
                 number="3."
                 title="베팅금액입력"
                 text="가. ① 베팅금액을 입력합니다."
-                text2="나. ② [확인] 버튼을 누르면 베팅이"
-                text3="완료됩니다."
+                text2="나. ② [확인] 버튼을 누르면 베팅이 완료됩니다."
               />
               <div
                 style={{

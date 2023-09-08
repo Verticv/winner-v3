@@ -159,7 +159,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     { text: "전체", icon: AllIcon, id: 0 },
     { text: "파워볼", icon: Sub22, id: 1 },
     { text: "파워사다리", icon: Sub23, id: 2 },
-    { text: "스피드키노", icon: Sub24, id: 3, custom: "mt-8px" },
+    { text: "스피드키노", icon: Sub24, id: 3 },
     { text: "키노사다리", icon: Sub25, id: 4 },
   ];
 
@@ -200,7 +200,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     },
     { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/freeboard/compose/slot-game" },
     {
-      text: "실시간스포츠",
+      text: "라이브스포츠",
       icon: Icon12,
       iconHighlight: IconHighlight12,
       id: 11,

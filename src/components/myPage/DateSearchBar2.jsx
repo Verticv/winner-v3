@@ -28,7 +28,7 @@ const DateSearchBar2 = () => {
 
     const gameResultButton = (
         <div style={{ width: "138px", height: "42px", borderColor: "#a088d7" }}
-            className="flex items-center justify-between placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-6px border  px-10px  text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r666666 bg-white mb-px " >
+            className="flex items-center justify-between placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-6px border  px-10px  text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r444444 bg-white mb-px " >
             <p className="mt-px">{selectedCarrier}</p>
             <img src={ArrowDownGray} alt="" />
         </div>
@@ -42,7 +42,7 @@ const DateSearchBar2 = () => {
                     hoveredOption === item.text
                     ? "linear-gradient(to right, #9d3bbb, #5423a0)"
                     : "",
-                color: hoveredOption === item.text ? "white" : "#666666",
+                color: hoveredOption === item.text ? "white" : "#444444",
                 }}
                 className={dropDownCellClass}
                 onClick={() => {
@@ -89,7 +89,7 @@ const DateSearchBar2 = () => {
                 <div className="flex space-x-10px items-center h-full justify-center">
                 <div className="relative">
                     <CustomDatePicker
-                        classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r666666 focus:ml-10px pb-2px`} />
+                        classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r444444 focus:ml-10px pb-2px`} />
                     </div>
                     <div className="pt-px">{InboxSearch}</div>
                     <div className="flex items-center justify-center h-42px w-75px rounded-6px shadow-link hover:filter hover:brightness-125"

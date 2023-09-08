@@ -51,7 +51,7 @@ const HorizontalMenu6 = ({
                                 isState === item.id
                                  ? "text-gray-252525"
                                 : "text-golden-ccc2b6"} 
-                                text-14px font-spoqaMedium tracking-tight mt-3px h-14px flex items-center`}
+                                text-14px font-spoqaMedium tracking-tight mt-3px h-14px flex items-center font-semibold`}
                         >
                             {item.text}
                         </div>

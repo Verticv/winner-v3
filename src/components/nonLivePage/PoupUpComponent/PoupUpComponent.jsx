@@ -70,7 +70,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
             >
               <div className="flex justify-center items-center mt-49px">
                 <p
-                  style={{ fontSize: "16px", color: "#666666" }}
+                  style={{ fontSize: "16px", color: "#444444" }}
                   className="-mt-3px -ml-px tracking-tight"
                 >
                   베팅이 수락되었습니다.
@@ -78,7 +78,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
               </div>
               <div className="flex justify-center items-center ml-2px">
                 <p
-                  style={{ fontSize: "14px", color: "#666666" }}
+                  style={{ fontSize: "14px", color: "#444444" }}
                   className="-ml-5px mt-2px tracking-tight font-bold"
                 >
                   티켓번호

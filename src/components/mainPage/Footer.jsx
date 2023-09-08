@@ -52,7 +52,7 @@ const Footer = ({ fullWidth = false }) => {
           link: "/bet-combination",
         },
         {
-          text: "실시간스포츠",
+          text: "라이브스포츠",
           link: "#",
         },
       ],
@@ -92,7 +92,7 @@ const Footer = ({ fullWidth = false }) => {
         },
         {
           text: "미니게임",
-          link: "#",
+          link: "/minigame/powerball",
         },
         {
           text: "키론가상게임",

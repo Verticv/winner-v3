@@ -337,7 +337,7 @@ const FreeBoardMain = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(true);
 
   const dropDownCellClass =
-    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px text-r666666";
+    "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px text-r444444";
 
   const searchDropdown = (
     <div
@@ -392,7 +392,7 @@ const FreeBoardMain = () => {
     >
       <input className="w-0 text-16px" />
       <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
-        <label style={{ color: "#666666" }} className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c">
+        <label style={{ color: "#444444" }} className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c">
           {selectedCarrier}
         </label>
         <img className="object-none mr-9px" src={DownArrowIcon} alt="arrow" />
@@ -419,7 +419,7 @@ const FreeBoardMain = () => {
       >
         <input
           style={{ color: "#444" }}
-          className="rounded-6px pl-9px pb-2px placeholder-r666666 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+          className="rounded-6px pl-9px pb-2px placeholder-gray-c8c8c8 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button
@@ -444,7 +444,7 @@ const FreeBoardMain = () => {
     return items.map((item, index) => (
       <button
         key={item.id}
-        className={`font-spoqaMedium text-14px tracking-tight text-r666666 h-56px w-full  group`}
+        className={`font-spoqaMedium text-14px text-r444444 h-56px w-full  group`}
         onClick={() => history.push(item.path)}
       >
         <div
@@ -460,11 +460,11 @@ const FreeBoardMain = () => {
             borderBottomWidth: index === items.length - 1 ? 0 : 1,
             borderColor: "#dddddd",
           }}
-          className="flex items-center font-spoqaMedium text-14px  text-r666666 h-56px border-b border-gray-252525"
+          className="flex items-center font-spoqaMedium text-14px  text-r444444 h-56px border-b border-gray-252525"
         >
           <div
             style={{ width: "126px" }}
-            className="font-spoqaMedium text-14px tracking-tight text-r666666 flex items-center justify-center"
+            className="font-spoqaMedium text-14px text-r444444 flex items-center justify-center"
           >
             {item.type === "공지" ? (
               <img className="ml-2px mt-px" src={PurpleSpeaker} alt="" />
@@ -475,10 +475,7 @@ const FreeBoardMain = () => {
             )}
           </div>
 
-          <div
-            style={{ width: "796px" }}
-            className={`flex items-center font-spoqaMedium text-r666666 group ml-px tracking-tight`}
-          >
+          <div style={{ width: "796px" }} className={`flex items-center font-spoqaMedium text-r444444 group ml-px`}>
             {item.type === "공지" ? (
               <div
                 style={{
@@ -499,7 +496,7 @@ const FreeBoardMain = () => {
                   marginTop: "1px",
                   backgroundColor: "#714ce8",
                 }}
-                className="px-10px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0 tracking-tight"
+                className="px-10px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px mr-10px flex-shrink-0"
               >
                 이벤트
               </div>
@@ -509,15 +506,15 @@ const FreeBoardMain = () => {
             <p
               className={`${
                 item.type === "공지"
-                  ? "text-blue-6cbbe9 mr-5px -ml-px"
+                  ? "text-blue-6cbbe9 mr-5px -ml-px font-semibold"
                   : item.type === "이벤트"
-                  ? "mr-4px"
+                  ? "mr-4px font-semibold"
                   : "mr-9px -ml-px"
-              } truncate text-left group-hover:opacity-60`}
+              } truncate text-left group-hover:opacity-60 tracking-none`}
               style={{
-                letterSpacing: "-0.090em",
                 maxWidth: "680px",
-                color: item.type === "공지" ? "#3b2461" : item.type === "이벤트" ? "#3c3096" : "#666666",
+                color:
+                  item.type === "공지" ? "rgb(114, 20, 143)" : item.type === "이벤트" ? "rgb(55, 9, 173)" : "#444444",
               }}
             >
               {item.text}
@@ -550,7 +547,7 @@ const FreeBoardMain = () => {
 
           <div
             style={{ width: "135px" }}
-            className={`flex justify-center items-center font-spoqaMedium tracking-tight text-r666666 text-center`}
+            className={`flex justify-center items-center font-spoqaMedium text-r444444 text-center`}
           >
             {item.type !== "일반" ? (
               <img src={WinnerLogo} alt="" className="-mt-3px -ml-3px flex-shrink-0" />
@@ -573,7 +570,7 @@ const FreeBoardMain = () => {
               </div>
             )}
           </div>
-          <div style={{ width: "190px" }} className="flex items-center justify-center text-r666666 font-spoqa -ml-10px">
+          <div style={{ width: "190px" }} className="flex items-center justify-center text-r444444 font-spoqa -ml-10px">
             {item.type !== "일반" ? (
               ""
             ) : (
@@ -601,7 +598,7 @@ const FreeBoardMain = () => {
             style={{
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             }}
-            className="h-55px bg-gray-2e2e2e w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-ccc2b6 rounded-t-4px  border-b border-gray-252525"
+            className="h-55px bg-gray-2e2e2e w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-ccc2b6 rounded-t-4px  border-b border-gray-252525 font-semibold"
           >
             <div
               style={{ width: "124px", color: "#eeeeee" }}

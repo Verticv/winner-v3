@@ -83,7 +83,7 @@ const HorizontalMenu3 = ({
                     : item.id === 2
                     ? "ml-8px"
                     : "ml-7px"         
-                  } text-20px tracking-Stightest font-bold pt-px`}>
+                  } text-20px tracking-Stightest font-bold pt-px font-semibold`}>
                     {item.text}
                 </span>
               </div>

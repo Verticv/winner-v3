@@ -14,9 +14,9 @@ const ContactTable = ({ array }) => {
           background: item.isRead === false ? "#ecd7fa" : item.id % 2 === 0 ? "#ffffff" : "#f7f7f7",
           color: item.isRead === false ? "#444444" : "#666666",
         }}
-        className={`text-14px tracking-tight h-56px w-full group border-b border-dddddd`}
+        className={`text-14px h-56px w-full group border-b border-dddddd`}
       >
-        <div className="flex items-center  text-14px tracking-tight  h-56px  px-54px">
+        <div className="flex items-center  text-14px  h-56px  px-54px">
           <div
             className="w-54px flex justify-center cursor-pointer h-full items-center"
             onClick={() => history.push(item.path)}
@@ -57,7 +57,7 @@ const ContactTable = ({ array }) => {
           <div
             className={`${
               item.isRead === false && "font-bold"
-            }  w-120px  flex justify-center cursor-pointer h-full items-center tracking-Stightest `}
+            }  w-120px  flex justify-center cursor-pointer h-full items-center tracking-none `}
             onClick={() => history.push(item.path)}
             style={{ color: item.isRead === true ? "#666666" : "#444444" }}
           >
@@ -78,7 +78,7 @@ const ContactTable = ({ array }) => {
               style={{ maxWidth: "370px" }}
               className={`${
                 item.isRead === false && "font-bold"
-              } truncate tracking-Stightest `}
+              } truncate tracking-none `}
             >
               {item.text}
             </p>
@@ -116,7 +116,7 @@ const ContactTable = ({ array }) => {
     >
       <div className="w-full rounded-10px overflow-hidden">
         <div
-          className="flex items-center  text-14px tracking-tight h-55px border-b px-52px"
+          className="flex items-center  text-14px h-55px border-b px-52px font-semibold"
           style={{
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",

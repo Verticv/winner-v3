@@ -17,6 +17,8 @@ import bet11 from "../../../images/myPage/betHistory/liveCasino/bet11.png";
 import bet12 from "../../../images/myPage/betHistory/liveCasino/bet12.png";
 import bet13 from "../../../images/myPage/betHistory/liveCasino/bet13.png";
 import bet14 from "../../../images/myPage/betHistory/liveCasino/bet14.png";
+import { useLocation } from "react-router-dom";
+
 const subTabsArray = [
   { text: "전체", icon: AllIcon, id: 0 },
   { text: "프레그메틱플레이", icon: bet1, id: 1 },
@@ -35,43 +37,43 @@ const subTabsArray = [
   { text: "모티베이션", icon: bet14, id: 14 },
 ];
 
-const tableArray = [
-  {
-    id: 0,
-    number: 7193915,
-    time: "2021-06-29 15:46:13",
-    type: "에볼루션",
-    name: "바카라",
-    amount: "12,000",
-    profit: "-12,000",
-    status: "패",
-  },
-  {
-    id: 1,
-    number: 7193914,
-    time: "2021-06-29 15:45:41",
-    type: "에볼루션",
-    name: "바카라",
-    amount: "900,000,000",
-    profit: "+900,000,000",
-    status: "승",
-  },
-  {
-    id: 2,
-    number: 7193913,
-    time: "2021-06-29 15:45:41",
-    type: "프레그메틱플레이",
-    name: "블랙잭",
-    amount: "800,000",
-    profit: "-800,000",
-    status: "패",
-  },
-];
-
 const LiveCasinoBetHistory = ({ isState, setState, showSub = true, isPopup = false }) => {
   const [checkedState, setCheckedState] = useState(new Array(3).fill(false));
   const [isAllSelected, setAllSelected] = useState(false);
   const [isPopupOpen, setPopupOpen] = useState(true);
+  const location = useLocation();
+  const tableArray = [
+    {
+      id: 0,
+      number: 7193915,
+      time: "2021-06-29 15:46:13",
+      type: location.pathname.includes("hold'em-game") ? "홀덤" : "에볼루션",
+      name: location.pathname.includes("hold'em-game") ? "6-Table" : "바카라",
+      amount: "12,000",
+      profit: "-12,000",
+      status: "패",
+    },
+    {
+      id: 1,
+      number: 7193914,
+      time: "2021-06-29 15:45:41",
+      type: location.pathname.includes("hold'em-game") ? "홀덤" : "에볼루션",
+      name: location.pathname.includes("hold'em-game") ? "9-Table" : "바카라",
+      amount: "900,000,000",
+      profit: "+900,000,000",
+      status: "승",
+    },
+    {
+      id: 2,
+      number: 7193913,
+      time: "2021-06-29 15:45:41",
+      type: location.pathname.includes("hold'em-game") ? "토너먼트" : "프레그메틱플레이",
+      name: location.pathname.includes("hold'em-game") ? "프리롤" : "블랙잭",
+      amount: "800,000",
+      profit: "-800,000",
+      status: "패",
+    },
+  ];
 
   function allSelectButtonPressed() {
     if (isAllSelected) {

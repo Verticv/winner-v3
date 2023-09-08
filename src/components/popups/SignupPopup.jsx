@@ -83,7 +83,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
 
   const carrierDropdown = (
     <div
-      style={{ backgroundColor: "#fff", color: "#7a7a7a", width: "170px" }}
+      style={{ backgroundColor: "#fff", color: "#222222", width: "170px" }}
       className="flex flex-col items-center justify-center py-5px rounded shadow-plain5 font-spoqaMedium text-16px mt-9px"
     >
       <button
@@ -120,7 +120,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
     <div
       style={{
         backgroundColor: "#fff",
-        color: "#7a7a7a",
+        color: "#222222",
         width: "170px",
         height: "170px",
       }}
@@ -426,10 +426,10 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
               <img src={SignupIcon} alt="login_icon" />
             </div>
 
-            <span style={{ color: "#666666", marginTop: "12px" }} className="text-16px h-16px font-bold">
+            <span style={{ color: "#444444", marginTop: "12px" }} className="text-16px h-16px font-bold">
               회원가입 시 모든항목을 정확하게 기재하시기 바랍니다.
             </span>
-            <span style={{ color: "#666666", marginTop: "2px" }} className="text-16px h-16px font-bold">
+            <span style={{ color: "#444444", marginTop: "2px" }} className="text-16px h-16px font-bold">
               회원데이터는 안전한 서버에서 안전하게 보관됩니다.
             </span>
 
@@ -628,7 +628,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-10px placeholder-r666666 pt-px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-10px placeholder-gray-c8c8c8 pt-px"
                       placeholder="휴대폰번호(숫자만 입력)"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -700,7 +700,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-r666666 pt-3px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-gray-c8c8c8 pt-3px"
                       placeholder="가입코드"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -751,7 +751,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-11px placeholder-r666666 pt-3px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-11px placeholder-gray-c8c8c8 pt-3px"
                       placeholder="예금주"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -791,7 +791,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-r666666 pt-3px"
+                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-gray-c8c8c8 pt-3px"
                       placeholder="계좌번호(숫자만 입력)"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -824,7 +824,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                 className="text-20px tracking-tighter font-spoqaMedium text-white filter hover:brightness-125 flex-shrink-0 rounded-full"
                 onClick={() => setSignedUp(true)}
               >
-                <p className="text-20px h-20px flex items-center justify-center mt-px -ml-px">회원가입</p>
+                <p className="text-20px h-20px flex items-center justify-center mt-px -ml-px tracking-tight">회원가입</p>
               </button>
 
               <div style={{ width: "274px" }} className="flex justify-between items-center mt-13px -ml-2px">

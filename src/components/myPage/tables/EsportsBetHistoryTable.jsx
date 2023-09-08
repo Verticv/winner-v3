@@ -8,7 +8,7 @@ const EsportsBetHistoryTable = () => {
     >
       <div className="rounded-10px overflow-hidden">
         <div
-          className="font-medium text-14px tracking-tight h-55px flex items-center border-b "
+          className="font-semibold text-14px tracking-slight h-55px flex items-center border-b "
           style={{
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
@@ -43,7 +43,7 @@ const EsportsBetHistoryTable = () => {
             보기
           </div>
         </div>
-        <div className="w-full text-r666666 text-14px tracking-tight font-spoqa  items-center flex h-full justify-center bg-white">
+        <div className="w-full text-r444444 text-14px tracking-slight font-spoqa  items-center flex h-full justify-center bg-white">
           <div className="flex items-center justify-center h-56px">베팅내역이 없습니다.</div>
         </div>
       </div>

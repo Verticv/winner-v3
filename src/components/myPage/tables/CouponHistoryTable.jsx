@@ -6,7 +6,7 @@ const CouponHistoryTable = () => {
          style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)"}}
           className="rounded-10px shadow-table overflow-hidden p-px">
             <table className="table-fixed rounded-10px overflow-hidden w-full">
-                <thead className="text-14px tracking-tight h-54px  border-b"
+                <thead className="text-14px tracking-slight h-54px  border-b font-semibold"
                  style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" , color:"#eeeeee",borderColor:"#dddddd"}}>
                 <tr>
                     <td style={{maxWidth:'292px'}} className="w-full text-center pl-10px pr-4px">쿠폰명</td>
@@ -18,8 +18,8 @@ const CouponHistoryTable = () => {
                     <td style={{width:'124px'}} className="text-center">만료일</td>
                 </tr>
             </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">
-               <tr className="text-14px tracking-tight text-r666666 h-56px  border-b border-gray-dddddd bg-white">
+            <tbody className="w-full text-585858 text-14px tracking-slight font-spoqa">
+               <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd bg-white">
                     <td style={{ maxWidth: '292px' }} className="w-full text-center">
                         <div style={{ maxWidth: '292px' }} className="w-full text-center truncate pl-10px pr-4px">테스트쿠폰</div>
                     </td>
@@ -30,7 +30,7 @@ const CouponHistoryTable = () => {
                     <td style={{width:'88px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width:'124px'}} className="text-center font-robotoRegular">2021-07-29</td>
                 </tr>
-                <tr className="text-14px tracking-tight text-r666666 h-56px  border-b border-gray-dddddd" style={{background:'#f7f7f7'}}>
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd" style={{background:'#f7f7f7'}}>
                     <td style={{ maxWidth: '292px' }} className="w-full text-center">
                         <div style={{ maxWidth: '292px' }} className="w-full text-center truncate pl-10px pr-4px">테스트쿠폰</div>
                     </td>
@@ -41,7 +41,7 @@ const CouponHistoryTable = () => {
                     <td style={{width:'88px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width:'124px'}} className="text-center font-robotoRegular">2021-07-29</td>
                 </tr>
-                <tr className="text-14px tracking-tight text-r666666 h-56px  border-b border-gray-dddddd bg-white">
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd bg-white">
                     <td style={{ maxWidth: '292px' }} className="w-full text-center">
                         <div style={{ maxWidth: '292px' }} className="w-full text-center truncate pl-10px pr-4px">테스트쿠폰</div>
                     </td>

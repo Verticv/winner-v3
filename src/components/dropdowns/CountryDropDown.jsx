@@ -38,7 +38,7 @@ const CountryDropDown = ({ setCountry, country }) => {
           alt="flag"
         ></img>
         <label
-          style={{ color: selectedTab === item.id ? "#ffffff" : "#666666" }}
+          style={{ color: selectedTab === item.id ? "#ffffff" : "#444444" }}
           className="font-spoqaMedium cursor-pointer text-14px ml-4px mt-px"
         >
           {item.text}

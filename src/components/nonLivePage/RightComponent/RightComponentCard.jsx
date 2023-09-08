@@ -72,7 +72,7 @@ const RightComponentCard = () => {
               <p style={{ color: "#222" }} className="ml-6px pt-8px text-12px font-semibold tracking-tight">
                 아스널 VS 리버풀
               </p>
-              <p style={{ color: "#666666" }} className="ml-6px mt-3px  text-12px font-malgun tracking-tight">
+              <p style={{ color: "#444444" }} className="ml-6px mt-3px  text-12px font-malgun tracking-tight">
                 승무패[정규시간]
               </p>
               <div className="flex items-center justify-between mb-9px mt-2px">
@@ -102,7 +102,7 @@ const RightComponentCard = () => {
               <p style={{ color: "#222" }} className="ml-6px pt-8px text-12px font-semibold tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
-              <p style={{ color: "#666666" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight">
+              <p style={{ color: "#444444" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight">
                 승무패[정규시간]
               </p>
               <div className="flex items-center justify-between mb-9px mt-2px">
@@ -246,7 +246,7 @@ const RightComponentCard = () => {
               <p style={{ color: "#222" }} className="ml-6px pt-8px text-12px font-semibold tracking-tight">
                 FC바르셀로나 VS 아틀레티코
               </p>
-              <p style={{ color: "#666666" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight ">
+              <p style={{ color: "#444444" }} className="ml-6px mt-3px -mb-2px text-12px font-malgun tracking-tight ">
                 승무패[정규시간]
               </p>
               <div className="flex items-center justify-between mb-9px mt-2px">

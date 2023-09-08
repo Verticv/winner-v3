@@ -62,7 +62,7 @@ const HorizontalMenu8 = ({
                 className={`${
                   selectedTab === item.id ? "text-white" : "text-golden-ccc2b6"
                 } 
-                          text-14px font-spoqaMedium tracking-tight -mt-2px mb-5px`}
+                          text-14px font-spoqaMedium tracking-tight -mt-2px mb-5px font-semibold`}
               >
                 {item.text}
               </span>

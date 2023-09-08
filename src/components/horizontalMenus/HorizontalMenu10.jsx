@@ -51,7 +51,7 @@ const HorizontalMenu10 = ({ itemsArray }) => {
             {pathname === item.path && <img className="absolute top-0 left-0" src={Reflect} alt="" />}
             <span
               className={`${pathname === item.path ? "text-black" : "text-golden-ccc2b6"} 
-                              text-14px font-spoqaMedium tracking-tight mt-4px`}
+                              text-14px font-spoqaMedium tracking-tight mt-4px font-semibold`}
             >
               {item.text}
             </span>

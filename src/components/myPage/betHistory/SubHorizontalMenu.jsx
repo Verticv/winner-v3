@@ -33,7 +33,7 @@ const SubHorizontalMenu = ({ itemsArray, isState = 0, setState }) => {
             <img className="ml-2px object-none h-44px" src={item.icon} alt="" />
             <span
               style={{
-                color: isState === item.id ? "#fff" : "#666",
+                color: isState === item.id ? "#fff" : "#444444",
               }}
               className={`text-12px tracking-tight mt-2px ${item.custom}`}
             >

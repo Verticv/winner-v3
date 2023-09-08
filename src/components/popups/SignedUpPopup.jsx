@@ -27,7 +27,7 @@ const SignedUpPopup = ({ setToLogin }) => {
           <div className="w-full flex justify-center">
             <label
               style={{ color: "#ffffff", marginTop: "22px" }}
-              className="font-bold text-24px h-24px flex items-center"
+              className="font-bold text-24px h-24px flex items-center  tracking-tight"
             >
               회원가입완료
             </label>
@@ -44,14 +44,15 @@ const SignedUpPopup = ({ setToLogin }) => {
               marginLeft: "2px",
               color: "#682aa7",
               letterSpacing: "-0.005em",
+              fontSize: "25px",
             }}
-            className="text-30px h-30px flex items-center font-bold"
+            className="h-25px flex items-center font-bold"
           >
             가입 신청이 완료 되었습니다.
           </label>
           <label
-            style={{ color: "#666666", letterSpacing: "-0.005em", marginLeft: "12px" }}
-            className="flex font-bold text-30px h-30px items-center mt-11px"
+            style={{ color: "#444444", letterSpacing: "-0.005em", marginLeft: "12px", fontSize: "25px" }}
+            className="flex font-bold h-25px items-center mt-11px"
           >
             관리자{" "}
             <label style={{ color: "#ec1676" }} className="font-bold pl-7px pr-px">
@@ -60,13 +61,13 @@ const SignedUpPopup = ({ setToLogin }) => {
             입니다.
           </label>
           <div
-            style={{ marginTop: "41px", color: "#666666", marginLeft: "-1px" }}
-            className="text-20px font-spoqaMedium flex flex-col items-center justify-center tracking-tighter"
+            style={{ marginTop: "41px", color: "#444444", marginLeft: "-1px", fontSize: "15px" }}
+            className="font-spoqaMedium flex flex-col items-center justify-center tracking-tighter"
           >
-            <span style={{ height: "20px" }} className="flex items-center">
+            <span style={{ height: "15px" }} className="flex items-center">
               관리자 승인 후 로그인 하시면 정상적으로 서비스 이용이 가능합니다.
             </span>
-            <span style={{ height: "20px", marginLeft: "-2px" }} className="flex items-center mt-4px">
+            <span style={{ height: "15px", marginLeft: "-2px" }} className="flex items-center mt-4px">
               당사 사이트는 깨끗하고 안전한 운영을 자랑합니다.
             </span>
           </div>

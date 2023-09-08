@@ -5,8 +5,8 @@ const PowerBallResults = ({array}) => {
     function Cells({ items }) {
         return items.map(item => (
             <tr 
-                style={{height: "62px", backgroundColor: item.count % 2 === 0 ? "#ffffff" : "#f7f7f7"}} 
-                className="rounded-3xl  text-14px tracking-tight text-r666666 h-62px w-full border-b border-dddddd last:border-b-0 pr-4px"
+                style={{height: "62px", backgroundColor: item.count % 2 === 0 ? "#ffffff" : "#f7f7f7", color:"#444"}} 
+                className="rounded-3xl  text-14px tracking-tight h-62px w-full border-b border-dddddd last:border-b-0 pr-4px"
             >
                 <td style={{width: "156px"}} className="text-center">{item.count}</td>
                 <td style={{width: "225px"}} className="text-center">{item.chosenNum}</td>
@@ -23,7 +23,7 @@ const PowerBallResults = ({array}) => {
     return (
         
         <table>
-            <thead className="rounded-10px text-14px tracking-tight text-eeeeee h-54px border-b border-dddddd"
+            <thead className="rounded-10px text-14px tracking-tight text-eeeeee h-54px border-b border-dddddd font-semibold"
             style={{background:'linear-gradient(to right, #9d3bbb, #5423a0)'}}>
             <tr>
                 <td style={{width: "156px"}} className="text-center"><p className='-mb-px'>회차</p></td>
@@ -36,7 +36,7 @@ const PowerBallResults = ({array}) => {
                 <td style={{width: "172px"}} className="text-left pl-46px"><p className='-mb-px'>파워볼 구간</p></td>
             </tr>
         </thead>
-        <tbody className="w-full text-r666666 text-14px tracking-tight">
+        <tbody style={{color:"#444"}} className="w-full text-14px tracking-tight">
             <Cells items={array} />
         </tbody>
         </table>

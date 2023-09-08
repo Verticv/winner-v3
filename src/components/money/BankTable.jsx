@@ -40,7 +40,7 @@ const BankTable = () => {
                         <img src={Bank1} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:20</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:20</p>
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -48,7 +48,7 @@ const BankTable = () => {
                         <img src={Bank2} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">11:50 ~ 01:00</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">11:50 ~ 01:00</p>
                     </div>
                 </div>
                 <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -56,7 +56,7 @@ const BankTable = () => {
                         <img src={Bank3} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:20</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:20</p>
                     </div>
                 </div>
             </div>
@@ -66,8 +66,8 @@ const BankTable = () => {
                         <img src={Bank4} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex flex-col items-start justify-center h-full -space-y-2px" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">04:00 ~ 05:00</p>
-                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r666666">(금 00:00 ~ 00:40)</p> */}
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">04:00 ~ 05:00</p>
+                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r444444">(금 00:00 ~ 00:40)</p> */}
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -75,8 +75,8 @@ const BankTable = () => {
                         <img src={Bank5} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex flex-col items-start justify-center h-full -space-y-2px" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:10</p>
-                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r666666">(일 00:00 ~ 08:00)</p> */}
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:10</p>
+                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r444444">(일 00:00 ~ 08:00)</p> */}
                     </div>
                 </div>
                 <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -84,7 +84,7 @@ const BankTable = () => {
                         <img src={Bank6} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:20</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:20</p>
                     </div>
                 </div>
             </div>
@@ -94,8 +94,8 @@ const BankTable = () => {
                         <img src={Bank7} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex flex-col items-start justify-center h-full -space-y-2px" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:30</p>
-                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r666666">(타행이체불가)</p> */}
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:30</p>
+                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r444444">(타행이체불가)</p> */}
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -103,7 +103,7 @@ const BankTable = () => {
                         <img src={Bank8} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:40 ~ 00:05</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:40 ~ 00:05</p>
                     </div>
                 </div>
                 <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -111,7 +111,7 @@ const BankTable = () => {
                         <img src={Bank9} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:10</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:10</p>
                     </div>
                 </div>
             </div>
@@ -121,8 +121,8 @@ const BankTable = () => {
                         <img src={Bank10} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex flex-col items-start justify-center h-full -space-y-2px" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:10</p>
-                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r666666">(일 00:00 ~ 08:00)</p> */}
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:10</p>
+                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r444444">(일 00:00 ~ 08:00)</p> */}
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -130,7 +130,7 @@ const BankTable = () => {
                         <img src={Bank11} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:55 ~ 00:10</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:55 ~ 00:10</p>
                     </div>
                 </div>
                 <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -138,8 +138,8 @@ const BankTable = () => {
                         <img src={Bank12} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex flex-col items-start justify-center h-full -space-y-2px" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:20</p>
-                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r666666">(04:00 ~ 05:00)</p> */}
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:20</p>
+                        {/* <p className="text-13px font-spoqaMedium tracking-tight text-r444444">(04:00 ~ 05:00)</p> */}
                     </div>
                 </div>
             </div>
@@ -149,7 +149,7 @@ const BankTable = () => {
                         <img src={Bank13} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 01:00 </p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 01:00 </p>
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -157,7 +157,7 @@ const BankTable = () => {
                         <img src={Bank14} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:10</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:10</p>
                     </div>
                 </div>
                 <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -165,7 +165,7 @@ const BankTable = () => {
                         <img src={Bank15} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:20</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:20</p>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@ const BankTable = () => {
                         <img src={Bank16} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:30</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:30</p>
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -183,7 +183,7 @@ const BankTable = () => {
                         <img src={Bank17} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:30</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:30</p>
                     </div>
                   </div>
                   <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -191,7 +191,7 @@ const BankTable = () => {
                         <img src={Bank18} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:30</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:30</p>
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@ const BankTable = () => {
                         <img src={Bank19} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 01:00 </p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 01:00 </p>
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -209,7 +209,7 @@ const BankTable = () => {
                         <img src={Bank20} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:55 ~ 00:35</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:55 ~ 00:35</p>
                     </div>
                 </div>
                 <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -217,7 +217,7 @@ const BankTable = () => {
                         <img src={Bank21} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:05 ~ 00:20</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:05 ~ 00:20</p>
                     </div>
                 </div>
             </div>
@@ -227,7 +227,7 @@ const BankTable = () => {
                         <img src={Bank22} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:05</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:05</p>
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -235,7 +235,7 @@ const BankTable = () => {
                         <img src={Bank23} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:10</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:10</p>
                     </div>
                   </div>
                   <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -243,7 +243,7 @@ const BankTable = () => {
                         <img src={Bank24} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:20</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:20</p>
                     </div>
                 </div>
               </div>
@@ -253,7 +253,7 @@ const BankTable = () => {
                         <img src={Bank25} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">00:00 ~ 00:05 </p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">00:00 ~ 00:05 </p>
                     </div>
                 </div> 
                 <div style={{width:"320px"}} className="h-full ml-13px flex space-x-20px">
@@ -261,7 +261,7 @@ const BankTable = () => {
                         <img src={Bank26} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:30</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:30</p>
                     </div>
                 </div>
                 <div style={{width:"284px"}} className="h-full ml-23px flex space-x-20px">
@@ -269,7 +269,7 @@ const BankTable = () => {
                         <img src={Bank27} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:30</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:30</p>
                     </div>
                 </div>
               </div>
@@ -279,7 +279,7 @@ const BankTable = () => {
                         <img src={Bank28} alt="" />
                     </div>
                     <div style={{width: "126px"}} className="flex items-center justify-start h-full" >
-                        <p className="text-13px font-spoqaMedium tracking-tight text-r666666 -mt-px">23:50 ~ 00:30</p>
+                        <p className="text-13px font-spoqaMedium tracking-tight text-r444444 -mt-px">23:50 ~ 00:30</p>
                     </div>
                 </div> 
                 

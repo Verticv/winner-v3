@@ -30,7 +30,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
     { text: "다폴더 베팅방법", id: 2, path: "/esports/multi" },
   ];
 
-  const MenuArray1 = [{ text: "실시간스포츠 이용가이드", id: 0, path: "/esports/LiveSport" }];
+  const MenuArray1 = [{ text: "라이브스포츠 이용가이드", id: 0, path: "/esports/LiveSport" }];
   const MenuArray2 = [{ text: "홀덤게임 이용가이드", id: 0, path: "/esports/hold'emGame" }];
 
   const [, setSelectedTab] = useState(0);
@@ -80,7 +80,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
         </Route>
         <Route path="/esports/LiveSport">
           <DirectoryComponent
-            branch1="실시간스포츠"
+            branch1="라이브스포츠"
             branch2="이용가이드"
             mainPath="/esports/LiveSport"
             setSelectedTab={setSelectedTab}

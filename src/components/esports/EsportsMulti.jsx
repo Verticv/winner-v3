@@ -71,7 +71,7 @@ const EsportsMulti = () => {
         <span
           style={{
             color: "#828282",
-            letterSpacing: text5 === "-최소 2개 이상 각각 다른 경기를 추가하세요." && "-0.1rem",
+            letterSpacing: text5 === "- 최소 2개 이상 각각 다른 경기를 추가하세요." && "-0.1rem",
           }}
           className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
@@ -148,11 +148,11 @@ const EsportsMulti = () => {
                 color1="[+]"
                 color2="[+]"
                 color3="버튼을 눌러서 원하는 배당을"
-                text2="선택합니다,"
-                text3="나. 선택한 경기(배당)가 ② 팔레이 리스트에"
+                text2="선택합니다."
+                text3="나. 선택한 경기(배당)가 ② 팔레이리스트에"
                 text4="추가됩니다."
-                text5="-최소 2개 이상 각각 다른 경기를 추가하세요."
-                text6="다. 2경기 이상 추가되면 ③[확인] 버튼을"
+                text5="- 최소 2개 이상 각각 다른 경기를 추가하세요."
+                text6="다. 2경기 이상 추가되면 ③ [확인] 버튼을"
                 text7="누릅니다."
               />
 
@@ -192,7 +192,7 @@ const EsportsMulti = () => {
                   style={{ color: "#8c8c8c" }}
                   className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-4px"
                 >
-                  ②팔레이리스트에 추가됩니다.
+                  ② 팔레이리스트에 추가됩니다.
                 </span>
               </div>
               <div className="flex items-center">
@@ -200,7 +200,7 @@ const EsportsMulti = () => {
                   style={{ color: "#8c8c8c" }}
                   className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-4px"
                 >
-                  ※팔레이베팅은 최소 2개 이상 각각{" "}
+                  ※ 팔레이베팅은 최소 2개 이상 각각{" "}
                 </span>
               </div>
               <div className="flex items-center">
@@ -239,8 +239,7 @@ const EsportsMulti = () => {
                 number="3."
                 title="베팅금액입력"
                 text="가. ① 베팅금액을 입력합니다."
-                text2="나. ② [베팅] 버튼을 누르면 베팅이"
-                text3="완료됩니다."
+                text2="나. ② [베팅] 버튼을 누르면 베팅이 완료됩니다."
               />
               <div
                 style={{

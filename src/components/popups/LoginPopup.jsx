@@ -41,7 +41,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
             <div className="w-full flex justify-center">
               <label
                 style={{ color: "#ffffff", marginTop: "22px", marginLeft: "2px" }}
-                className="font-bold text-24px h-24px flex items-center"
+                className="font-bold text-24px h-24px flex items-center tracking-tight"
               >
                 로그인
               </label>
@@ -72,7 +72,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                   color: "#444",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r666666 pt-3px text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-gray-c8c8c8 pt-3px text-center"
                 placeholder={"아이디"}
                 onFocus={(e) => {
                   e.target.placeholder = "";
@@ -110,7 +110,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                   color: "#444",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-r666666 pt-3px text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-gray-c8c8c8 pt-3px text-center"
                 placeholder={"비밀번호"}
                 type="password"
                 onFocus={(e) => {

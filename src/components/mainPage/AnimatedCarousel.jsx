@@ -27,6 +27,7 @@ import left from "../../images/otherGames/left_corner.png";
 import right from "../../images/otherGames/right_corner.png";
 
 import { CarouselBackButton, CarouselNextButton } from "./SlotGameHorizontalCarousel";
+import { useHistory } from "react-router-dom";
 
 const sampleArray = [
   {
@@ -49,6 +50,7 @@ const sampleArray = [
     logo: logo2,
     center: center2,
     title: "미니게임",
+    url: "/minigame/powerball",
   },
   {
     id: 2,
@@ -91,6 +93,7 @@ const sampleArray = [
     logo: logo2,
     center: center2,
     title: "미니게임",
+    url: "/minigame/powerball",
   },
   {
     id: 8,
@@ -133,6 +136,7 @@ const sampleArray = [
     logo: logo2,
     center: center2,
     title: "미니게임",
+    url: "/minigame/powerball",
   },
   {
     id: 14,
@@ -162,6 +166,7 @@ export default function AnimatedCarousel() {
   const startIndex = 48;
   const [hoveredTab, setHoveredTab] = useState(startIndex);
   const [currentIndex, setCurrentIndex] = useState(startIndex);
+  const history = useHistory();
 
   useEffect(() => {
     if (currentIndex > hoveredTab) {
@@ -186,6 +191,7 @@ export default function AnimatedCarousel() {
           boxShadow: "0px 3px 10px 0px rgba(0, 0, 0, 0.3)",
           borderRadius: "6px",
         }}
+        className="cursor-pointer"
       >
         <div
           style={{
@@ -204,6 +210,7 @@ export default function AnimatedCarousel() {
           onMouseOver={() => {
             setHoveredTab(index);
           }}
+          onClick={() => history.push(item.url)}
         >
           {isHover && (
             <div className="absolute z-30 flex items-center justify-center h-full w-full">

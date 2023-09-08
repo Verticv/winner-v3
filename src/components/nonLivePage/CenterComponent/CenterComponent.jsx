@@ -340,7 +340,7 @@ const CenterComponent = ({ setEnglandActive, setIsOpen }) => {
         </div>
         <div
           style={{
-            background: "#666666",
+            background: "#444444",
             width: "79px",
             height: "29px",
             borderRadius: "5px",

@@ -231,7 +231,7 @@ const AccordionButton3 = ({ icon, title }) => {
 
                   <div
                     style={{
-                      background: "#666666",
+                      background: "#444444",
                       // width: "36px",
                       height: "19px",
                       marginRight: "6px",
@@ -282,7 +282,7 @@ const AccordionButton3 = ({ icon, title }) => {
 
                       <div
                         style={{
-                          background: "#666666",
+                          background: "#444444",
                           // width: "16px",
                           height: "19px",
                           marginRight: "6px",
@@ -335,7 +335,7 @@ const AccordionButton3 = ({ icon, title }) => {
                       </div>
                       <div
                         style={{
-                          background: "#666666",
+                          background: "#444444",
                           // width: "16px",
                           height: "19px",
                           marginRight: "6px",
@@ -381,7 +381,7 @@ const AccordionButton3 = ({ icon, title }) => {
                   </div>
                   <div
                     style={{
-                      background: "#666666",
+                      background: "#444444",
                       // width: "29px",
                       height: "19px",
                       marginRight: "6px",
@@ -424,7 +424,7 @@ const AccordionButton3 = ({ icon, title }) => {
                   </div>
                   <div
                     style={{
-                      background: "#666666",
+                      background: "#444444",
                       // width: "29px",
                       height: "19px",
                       marginRight: "6px",

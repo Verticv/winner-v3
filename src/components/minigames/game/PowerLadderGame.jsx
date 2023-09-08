@@ -16,7 +16,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
     const PanelTitle = ({title}) => (
         <div className="w-full h-29px flex items-center pl-3px space-x-5px">
           <img className="z-10 object-none -ml-px -mt-px" src={TitleIcon} alt="" />
-          <p style={{color:"#666666"}} className=" text-14px tracking-tight -mt-px">{title}</p>
+          <p style={{color:"#333"}} className=" text-14px tracking-tight -mt-px font-semibold">{title}</p>
         </div>
     )
 
@@ -66,11 +66,11 @@ const PowerLadderGame = ({setSelectedOption}) => {
                         </div>
 
                         <div className="w-full h-full flex flex-col items-center justify-center">
-                            <div className="text-12px tracking-tight  h-12px flex items-center" style={{color:'#444444'}}>{subText}</div>
+                            <div className="text-12px tracking-tight  h-12px flex items-center" style={{color:'#444'}}>{subText}</div>
                             {subText2 !== null && (
                                 <>
-                                    <div className="text-12px tracking-tight  h-12px flex items-center mt-2px" style={{color:'#444444'}}>{subText2}</div>
-                                    <div className="text-12px tracking-tight h-12px flex items-center mt-2px" style={{color:'#444444'}}>{subText3}</div>
+                                    <div className="text-12px tracking-tight  h-12px flex items-center mt-2px" style={{color:'#444'}}>{subText2}</div>
+                                    <div className="text-12px tracking-tight h-12px flex items-center mt-2px" style={{color:'#444'}}>{subText3}</div>
                                 </>
                             )}
                         </div>
@@ -111,7 +111,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                          3 <span style={{fontSize: "40px", marginLeft:'-10px'}}>줄</span>
                                     </p>)}
                                 </div>
-                                <div className="text-12px font-robotoRegular tracking-tight mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</div>
+                                <div className="text-12px font-semibold tracking-tight mt-3px h-12px flex items-center -ml-2px" style={{color:'#333'}}>1.95</div>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -142,7 +142,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                          4 <span style={{fontSize: "40px", marginLeft:'-10px'}}>줄</span>
                                     </p>)}
                                 </div>
-                                <p className="text-12px font-robotoRegular tracking-tight  mt-3px h-12px flex items-center -ml-2px" style={{color:'#444444'}}>1.95</p>
+                                <p className="text-12px font-semibold tracking-tight  mt-3px h-12px flex items-center -ml-2px" style={{color:'#333'}}>1.95</p>
                             </div>
                         </div>
                     ) : titleNumber === 4 ? (
@@ -163,7 +163,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-semibold tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#333'}}>3.80</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -180,7 +180,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">3</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-semibold tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#333'}}>3.80</div>
                                 </div>
                             </div>
                             <div className="flex space-x-18px mt-9px -ml-2px"> 
@@ -199,7 +199,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-semibold tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#333'}}>3.80</div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -216,7 +216,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                             <div className="text-white text-12px tracking-tight font-spoqaMedium">4</div>
                                         </div>
                                     </div>
-                                    <div className="text-12px font-robotoRegular tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#444444'}}>3.80</div>
+                                    <div className="text-12px font-semibold tracking-tight  h-12px flex items-center -ml-2px -mt-px" style={{color:'#333'}}>3.80</div>
                                 </div>
                             </div>
                         </div>

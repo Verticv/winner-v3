@@ -107,7 +107,7 @@ const GameDetails = () => {
           <div className="flex items-center">
             <img className="-mt-2px" src={FootballIcon} alt="" />
             <span
-              className="ml-6px  text-20px tracking-tight text-white  truncate -mt-px"
+              className="ml-6px  text-16px font-medium tracking-tight text-white  truncate -mt-px"
               style={{ maxWidth: "920px", letterSpacing: "-0.11rem" }}
             >
               축구 / 미국 - 메이저리그사커
@@ -119,17 +119,17 @@ const GameDetails = () => {
       <div style={{ backgroundColor: "#f7f7f7" }} className="w-full h-54px  flex items-center tracking-tight pt-px">
         <div
           style={{ marginLeft: "25px", width: "114px" }}
-          className="flex items-center justify-center font-roboto text-14px text-r666666 tracking-tight"
+          className="flex items-center justify-center font-roboto text-14px text-r444444 tracking-tight"
         >
           <p className="-ml-6px">2021-06-29 15:45</p>
         </div>
-        <div className="w-80px flex items-center justify-center text-14px text-r666666">축구</div>
+        <div className="w-80px flex items-center justify-center text-14px text-r444444">축구</div>
 
         <div style={{ marginLeft: "0px" }}>
           <Options bet="middle" />
         </div>
 
-        <div className="w-56px ml-17px font-roboto text-14px text-r666666 text-center">4 : 4</div>
+        <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center">4 : 4</div>
         <div className="w-63px text-14px text-center" style={{ color: "#00a651" }}>
           <p className="-ml-3px">무</p>
         </div>
@@ -152,7 +152,7 @@ const GameDetails = () => {
           <div className="flex items-center">
             <img className="-mt-2px" src={BasketballIcon} alt="" />
             <span
-              className="ml-6px font-spoqaMedium text-20px tracking-tight text-white -mt-px truncate"
+              className="ml-6px font-spoqaMedium text-16px font-medium tracking-tight text-white -mt-px truncate"
               style={{ maxWidth: "920px", letterSpacing: "-0.11rem" }}
             >
               농구 / 미국 - NBA
@@ -165,16 +165,16 @@ const GameDetails = () => {
       <div className="w-full h-56px border-b border-gray-dddddd flex items-center tracking-tight">
         <div
           style={{ marginLeft: "25px", width: "114px" }}
-          className="flex items-center pt-px justify-center font-roboto text-14px text-r666666 tracking-tight mt-3px"
+          className="flex items-center pt-px justify-center font-roboto text-14px text-r444444 tracking-tight mt-3px"
         >
           <p className="-ml-4px">2021-06-29 15:45</p>
         </div>
-        <div className="w-80px flex items-center justify-center text-14px text-r666666">축구</div>
+        <div className="w-80px flex items-center justify-center text-14px text-r444444">축구</div>
         <div style={{ marginLeft: "0px" }}>
           <Options bet="left" team1="LA레이커스" team2="피닉스" stat1="2.95" stat2="VS" stat3="1.39" />
         </div>
 
-        <div className="w-56px ml-17px font-roboto text-14px text-r666666 text-center truncate">222 : 222</div>
+        <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center truncate">222 : 222</div>
         <div style={{ color: "#f04281" }} className="w-63px text-center font-spoqaMedium text-14px">
           <p className="-ml-3px">승</p>
         </div>
@@ -183,18 +183,18 @@ const GameDetails = () => {
       <div className="w-full h-54px flex items-center tracking-tight pt-px">
         <div
           style={{ marginLeft: "25px", width: "114px" }}
-          className="flex items-center justify-center font-roboto text-14px text-r666666 tracking-tight mt-3px"
+          className="flex items-center justify-center font-roboto text-14px text-r444444 tracking-tight mt-3px"
         >
           <p className="-ml-4px">2021-06-29 15:45</p>
         </div>
-        <div className="w-80px flex items-center justify-center font-spoqaMedium text-14px text-r666666">축구</div>
+        <div className="w-80px flex items-center justify-center font-spoqaMedium text-14px text-r444444">축구</div>
 
         <div style={{ marginLeft: "0px" }}>
           <Options bet="right" team1="세크라멘토" team2="오클라호마" stat1="2.95" stat2="VS" stat3="2.25" />
         </div>
 
-        <div className="w-56px ml-17px font-roboto text-14px text-r666666 text-center truncate">222 : 222</div>
-        <div className="w-63px text-center text-14px text-r666666">
+        <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center truncate">222 : 222</div>
+        <div className="w-63px text-center text-14px text-r444444">
           <p className="-ml-3px">패</p>
         </div>
       </div>
@@ -208,7 +208,7 @@ const GameDetails = () => {
     >
       <div className="w-full rounded-10px overflow-hidden bg-white">
         <div
-          className="h-54px w-full px-11px font-spoqaMedium text-14px tracking-tight text-eeeeee flex items-center"
+          className="h-54px w-full px-11px font-spoqaMedium text-14px tracking-tight text-eeeeee flex items-center font-semibold"
           style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
         >
           <div style={{ marginLeft: "25px", width: "114px" }} className="h-14px flex justify-center items-center">
