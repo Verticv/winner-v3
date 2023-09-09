@@ -947,7 +947,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
 
       <div className="relative flex flex-col items-center limit496:items-center mt-11px">
         <div
-          style={{ borderRadius: "25px", width: "496px", background: "#341d5a", color: "#acacac" }}
+          style={{ borderRadius: "25px", width: "496px", background: "rgb(56,35,114)", color: "#acacac" }}
           className="space-x-4px h-50px flex items-center justify-center text-18px tracking-tight"
         >
           <span
@@ -1034,7 +1034,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
 
             <div className="flex mt-30px w-full justify-center space-x-11px">
               <div
-                style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
+                style={{ width: "333px", borderColor: "#9361e5", background: "rgb(56,35,114)" }}
                 className="h-48px rounded-full border-2 flex items-center justify-center text-15px tracking-tight"
               >
                 <img className="mr-10px mt-px" src={Diamond} alt="" />
@@ -1045,7 +1045,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
 
               <div
-                style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
+                style={{ width: "333px", borderColor: "#9361e5", background: "rgb(56,35,114)" }}
                 className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-15px tracking-tight"
               >
                 <img className="mr-9px mt-px" src={Diamond} alt="" />
@@ -1056,7 +1056,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
 
               <div
-                style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
+                style={{ width: "333px", borderColor: "#9361e5", background: "rgb(56,35,114)" }}
                 className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-15px tracking-tight"
               >
                 <img className="mr-10px mt-px" src={Diamond} alt="" />
@@ -1067,7 +1067,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
 
               <div
-                style={{ width: "333px", borderColor: "#9361e5", background: "#341d5a" }}
+                style={{ width: "333px", borderColor: "#9361e5", background: "rgb(56,35,114)" }}
                 className="h-48px rounded-full border-2 border-gray-635f5b bg-gray-2e2e2e flex items-center justify-center font-spoqaMedium text-15px tracking-tight"
               >
                 <img className="-ml-8px mr-6px mt-px" src={Diamond} alt="" />
@@ -1239,7 +1239,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               </div>
 
               <div
-                style={{ width: "374px", borderColor: "#9361e5", background: "#341d5a" }}
+                style={{ width: "374px", borderColor: "#9361e5", background: "rgb(56,35,114)" }}
                 className="h-48px rounded-full border-2 flex items-center justify-center text-15px tracking-tight"
               >
                 <img className="mr-16px" src={Diamond} alt="" />
