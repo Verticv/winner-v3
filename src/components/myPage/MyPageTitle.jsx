@@ -47,32 +47,16 @@ const MyPageTitle = ({
         {inboxCount && (
           <div className="ml-21px h-21px flex items-center space-x-19px mt-2px tracking-tight text-14px">
             <div style={{ backgroundColor: "#ebabff" }} className="h-11px w-px mt-px" />
-            <div className=" text-eeeeee">
+            <div className="font-medium tracking-tight text-eeeeee space-x-px mt-px">
               <span>전체 받은 쪽지 : </span>
-              <span className="font-bold ml-3px" style={{ color: "#ff6ea3" }}>
+              <span style={{ color: "#ff6ea3" }} className="font-bold">
                 {inboxCount}
               </span>
-              <span className="">건</span>
+              <span>건</span>
             </div>
           </div>
         )}
       </div>
-      {inboxCount && (
-        <div className="ml-20px h-21px flex items-center space-x-20px flex-shrink-0 mt-2px mr-px tracking-tight text-14px">
-          <div className=" text-eeeeee">
-            <span className="">쪽지 보관은 최장</span>
-            <span className="font-bold ml-4px" style={{ color: "#ffd98b" }}>
-              14
-            </span>
-            <span className="">일</span>
-            <span className="ml-4px">최대</span>
-            <span className="font-bold ml-4px" style={{ color: "#ffd98b" }}>
-              20
-            </span>
-            <span className="">개입니다.</span>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

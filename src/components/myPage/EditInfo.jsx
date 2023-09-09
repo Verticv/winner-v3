@@ -18,7 +18,10 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
       <MyPageTitle title="회원정보수정" />
 
       <div className="mt-7px">
-        <div className="flex flex-col items-center justify-center text-17px space-y-5px text-white">
+        <div
+          style={{ fontSize: "17px", letterSpacing: "0" }}
+          className="flex flex-col items-center justify-center text-17px space-y-5px text-white"
+        >
           <div className="flex items-center h-19px">
             <span className="text-golden-aa9264 font-bold mr-4px truncate" style={{ color: "#ffd98b" }}>
               {name.length > 20 ? name.substring(0, 20) : name}{" "}

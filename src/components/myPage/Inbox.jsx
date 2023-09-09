@@ -198,7 +198,24 @@ const Inbox = () => {
 
   return (
     <div>
-      <MyPageTitle title="쪽지관리" inboxCount="7" />
+      <div className="w-full flex justify-between">
+        <MyPageTitle title="쪽지관리" inboxCount="7" />
+
+        <div className=" text-14px w-full text-right text-eeeeee space-x-4px h-14px mt-px tracking-tight">
+          <div className=" text-eeeeee">
+            <span className="">쪽지 보관은 최장</span>
+            <span className="font-bold ml-4px" style={{ color: "#ffd98b" }}>
+              14
+            </span>
+            <span className="">일</span>
+            <span className="ml-4px">최대</span>
+            <span className="font-bold ml-4px" style={{ color: "#ffd98b" }}>
+              20
+            </span>
+            <span className="">개입니다.</span>
+          </div>
+        </div>
+      </div>
 
       <div className="w-full mt-10px"></div>
       <InboxTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray} />

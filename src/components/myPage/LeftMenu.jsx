@@ -74,7 +74,7 @@ const LeftMenu = ({
         <div className="w-full flex mr-18px ml-9px justify-between items-center">
           <div className="flex items-center">
             <label
-              className={`font-bold text-16px cursor-pointer tracking-Stightest`}
+              className={`font-bold text-16px cursor-pointer`}
               style={{ color: pathname.includes(path) ? "#fff" : "#433459" }}
             >
               {text}
@@ -172,7 +172,8 @@ const LeftMenu = ({
                     ? "pb-px"
                     : ""
                   : "hidden"
-              } w-full font-medium text-16px cursor-pointer tracking-Stightest rounded-b-4px overflow-hidden bg-white`}
+              } w-full font-medium text-16px cursor-pointer rounded-b-4px overflow-hidden bg-white`}
+              style={{ letterSpacing: "-0.08em" }}
             >
               {item.sub1 && (
                 <button
@@ -193,6 +194,7 @@ const LeftMenu = ({
                       pathname === item.path_8
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
+                    letterSpacing: "-0.08em",
                   }}
                   className={`${
                     pathname === item.path ||
@@ -226,6 +228,7 @@ const LeftMenu = ({
                       pathname === item.path2_3
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
+                    letterSpacing: "-0.08em",
                   }}
                   className={`${
                     pathname === item.path2 ||
@@ -251,12 +254,13 @@ const LeftMenu = ({
                       pathname === item.path3 || pathname === item.path3_1
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
+                    letterSpacing: "-0.08em",
                   }}
                   className={`${
                     pathname === item.path3 || pathname === item.path3_1
                       ? "text-white"
                       : "text-p594e6a  hover:opacity-50"
-                  } ${item.sub3 === "키론가상게임" && "rounded-b-3xl"} flex items-center h-47px w-full  pl-57px `}
+                  } ${item.sub3 === "키론가상게임" && "rounded-b-3xl"} flex items-center h-47px w-full pl-57px `}
                 >
                   {item.sub3}
                 </button>
@@ -271,6 +275,7 @@ const LeftMenu = ({
                   }}
                   style={{
                     background: pathname === item.path4 ? "linear-gradient(to right, #df52ff, #6b22ff)" : "#fff",
+                    letterSpacing: "-0.08em",
                   }}
                   className={`${pathname === item.path4 ? "text-white" : "text-p594e6a  hover:opacity-50"} ${
                     item.text === "미니게임" && "rounded-b-3xl"
@@ -297,7 +302,7 @@ const LeftMenu = ({
     >
       <div
         className="rounded-6px overflow-hidden w-full p-5px pb-5px space-y-6px"
-        style={{ background: "linear-gradient(to top, #ccc4ff, #ffd9f5)" }}
+        style={{ background: "linear-gradient(to top, #ccc4ff, #ffd9f5)", letterSpacing: "-0.08em" }}
       >
         <MenuList items={array} />
       </div>

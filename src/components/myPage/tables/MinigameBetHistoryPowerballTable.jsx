@@ -7,13 +7,13 @@ const MinigameBetHistoryPowerballTable = ({ array, checkedState, setCheckedState
     const detailButton = (
       <button
         style={{
-          height: "29px",
-          width: "73px",
+          height: "30px",
+          width: "72px",
           background: "#5d659f",
-          boxShadow: "0px 1px 1px 0px rgba(0, 0, 0, 0.6)",
+          boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
           color: "#ededeb",
         }}
-        className="rounded-4px font-spoqaMedium text-14px tracking-slight pt-2px flex-shrink-0 hover:filter hover:brightness-125"
+        className="rounded-4px font-medium text-13px tracking-slight flex-shrink-0 hover:filter hover:brightness-125"
       >
         상세보기
       </button>
@@ -81,7 +81,7 @@ const MinigameBetHistoryPowerballTable = ({ array, checkedState, setCheckedState
             color: "#eeeeee",
             borderColor: "#dddddd",
           }}
-          className="font-spoqaMedium text-14px tracking-slight  flex items-center pt-px border-b"
+          className="font-semibold text-14px tracking-slight flex items-center pt-px border-b"
         >
           <div style={{ width: "51px" }} className="ml-20px text-center">
             선택

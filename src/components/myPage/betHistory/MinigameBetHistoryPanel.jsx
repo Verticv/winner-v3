@@ -42,13 +42,13 @@ const MinigameBetHistoryPanel = ({
   };
 
   const CardContent = ({ bet, result, choice, team1, team2, stat1, stat2, stat3, hasUp = false, hasDown = false }) => (
-    <div className="flex items-center w-full h-54px" style={{ background: "#fff" }}>
+    <div className="flex items-center w-full h-54px" style={{ background: "#fff", letterSpacing: "-0.015em" }}>
       <div
         style={{
           width: isAttached ? "127px" : "120px",
           marginLeft: isAttached ? "16px" : "0px",
         }}
-        className="-space-y-4px flex items-center justify-center h-54px  text-14px tracking-tight text-r444444 flex-shrink-0"
+        className="-space-y-4px flex items-center justify-center h-54px  text-14px text-r444444 flex-shrink-0"
       >
         <span>200</span>
       </div>
@@ -67,15 +67,16 @@ const MinigameBetHistoryPanel = ({
             style={{
               width: isAttached ? "363px" : "283px",
             }}
-            className={`${bet === "left" ? "text-white" : "text-r444444"} 
-                        flex items-center justify-between h-34px rounded-3px cursor-pointer px-10px pt-px`}
+            className={`${
+              bet === "left" ? "text-white" : "text-r444444"
+            } flex items-center justify-between h-34px rounded-3px cursor-pointer px-10px pt-px`}
           >
-            <span style={{ width: "231px" }} className="truncate text-left  tracking-tight text-14px overflow-ellipsis">
+            <span style={{ width: "231px" }} className="truncate text-left text-14px overflow-ellipsis">
               {team1}
             </span>
             <div className="flex items-center space-x-5px">
               {hasUp && <img className="object-none" src={UpIcon} alt="" />}
-              <span className="font-roboto tracking-tight text-14px">{stat1}</span>
+              <span className="text-14px">{stat1}</span>
             </div>
           </div>
         </button>
@@ -96,7 +97,7 @@ const MinigameBetHistoryPanel = ({
             className={`${bet === "middle" ? "text-white " : "bg-dark-252525 text-gray-c8c8c8"}
                     pt-px flex items-center justify-center h-34px rounded-3px cursor-pointer`}
           >
-            <span className="font-roboto tracking-tight text-14px">{stat2}</span>
+            <span className="text-14px">{stat2}</span>
           </div>
         </button>
 
@@ -118,20 +119,17 @@ const MinigameBetHistoryPanel = ({
                       pt-px flex items-center justify-between h-34px rounded-3px  cursor-pointer px-10px`}
           >
             <div className="flex items-center space-x-5px">
-              <span className="font-roboto tracking-tight text-14px">{stat3}</span>
+              <span className="font-roboto text-14px">{stat3}</span>
               {hasDown && <img className="object-none" src={DownIcon} alt="" />}
             </div>
-            <span
-              style={{ width: "231px" }}
-              className="truncate  tracking-tight text-14px text-right overflow-ellipsis"
-            >
+            <span style={{ width: "231px" }} className="truncate text-14px text-right overflow-ellipsis">
               {team2}
             </span>
           </div>
         </button>
       </div>
 
-      <div className="flex ml-10px  tracking-tight text-14px text-center">
+      <div className="flex ml-10px text-14px text-center">
         <div style={{ width: isPopup ? "120px" : "130px" }} className="text-r444444">
           {choice === "even" ? "짝" : "우"}
         </div>
@@ -148,7 +146,10 @@ const MinigameBetHistoryPanel = ({
   );
 
   const Card = ({ team1, team2, choice, result }) => (
-    <div className="w-full rounded-4px overflow-hidden shadow-panel border-2 mt-8px" style={{ borderColor: "#6852a7" }}>
+    <div
+      className="w-full rounded-4px overflow-hidden shadow-panel border-2 mt-8px"
+      style={{ borderColor: "#6852a7", letterSpacing: "-0.015em" }}
+    >
       <div
         className="flex items-center justify-between h-54px w-full pl-17px pr-19px"
         style={{ background: "#6852a7" }}
@@ -163,18 +164,16 @@ const MinigameBetHistoryPanel = ({
           )}
 
           {game === "파워사다리" ? (
-            <span className="ml-4px text-16px font-medium text-white pt-2px">파워사다리</span>
+            <span className="ml-4px text-16px font-medium text-white">파워사다리</span>
           ) : game === "스피드키노" ? (
-            <span className="ml-6px text-16px font-medium text-white pt-2px">스피드키노</span>
+            <span className="ml-6px text-16px font-medium text-white">스피드키노</span>
           ) : (
-            <span className="ml-6px text-16px font-medium text-white pt-2px">키노사다리</span>
+            <span className="ml-6px text-16px font-medium text-white">키노사다리</span>
           )}
         </div>
         <div className="flex items-center -mt-3px">
           <img src={ClockIcon} alt="" />
-          <span className="ml-5px text-16px tracking-tight text-white pt-px" style={{ letterSpacing: "0.02rem" }}>
-            2021-06-29 15:45
-          </span>
+          <span className="ml-5px text-16px text-white pt-px">2021-06-29 15:45</span>
         </div>
       </div>
       <div className="flex flex-col w-full border-gray-dddddd" style={{ background: "#fff" }}>
@@ -199,8 +198,8 @@ const MinigameBetHistoryPanel = ({
     >
       <div className="w-full bg-white rounded-6px pb-10px overflow-hidden">
         <div
-          className="flex h-54px w-full  text-14px tracking-tight text-white font-semibold"
-          style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
+          className="flex h-54px w-full  text-14px tracking-tight text-eeeeee font-semibold"
+          style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)", letterSpacing: "-0.015em" }}
         >
           <div
             style={{
@@ -250,11 +249,14 @@ const MinigameBetHistoryPanel = ({
           <Card team1={team1} team2={team2} choice={choice} result={result} />
         </div>
 
-        <div className={`flex w-full px-8px ${isPopup ? "mt-11px" : "mt-10px"} space-x-10px`}>
+        <div
+          className={`flex w-full px-8px ${isPopup ? "mt-11px" : "mt-10px"} space-x-10px`}
+          style={{ letterSpacing: "-0.015em" }}
+        >
           <table>
             <div
               style={{ backgroundColor: "#eeeeee" }}
-              className={`flex w-auto h-36px rounded-4px  text-14px tracking-tight text-r444444 ${isPopup && "pt-px"}`}
+              className={`flex w-auto h-36px rounded-4px  text-14px text-r444444 ${isPopup && "pt-px"}`}
             >
               {isAttached === false && (
                 <div style={{ width: "45px" }} className="h-full flex items-center justify-center">
@@ -311,7 +313,7 @@ const MinigameBetHistoryPanel = ({
               </div>
             </div>
             <div
-              className={`flex w-auto h-36px font-spoqa text-14px tracking-tight text-r444444 ${isPopup && "pt-2px"}`}
+              className={`flex w-auto h-36px font-spoqa text-14px text-r444444 ${isPopup && "pt-2px"}`}
             >
               {isAttached === false && checkedState && (
                 <div style={{ width: "45px" }} className="h-full flex items-center justify-center">
@@ -389,7 +391,7 @@ const MinigameBetHistoryPanel = ({
                   style={{ width: "110px", height: "71px" }}
                   className="pt-px flex items-center justify-center rounded-8px cursor-pointer"
                 >
-                  <span className="tracking-tight text-14px text-white text-shadow-5">내역올리기</span>
+                  <span className="text-14px text-white text-shadow-5">내역올리기</span>
                 </div>
               </button>
             )}
@@ -404,7 +406,7 @@ const MinigameBetHistoryPanel = ({
                   style={{ width: "110px", height: "71px" }}
                   className="pt-px flex items-center justify-center rounded-8px cursor-pointer"
                 >
-                  <span className="tracking-tight text-14px text-white text-shadow-5">내역삭제</span>
+                  <span className="text-14px text-white text-shadow-5">내역삭제</span>
                 </div>
               </button>
             )}

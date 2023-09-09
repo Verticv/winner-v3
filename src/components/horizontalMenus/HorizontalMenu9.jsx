@@ -43,24 +43,12 @@ const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null 
           }}
           className="w-full flex rounded-6px"
         >
-          <div
-            // style={{
-            //   background:
-            //     pathname === item.path
-            //       ? "linear-gradient(to top, #8d7752, #dabe82)"
-            //       : isHover === item.path
-            //       ? "#54544f"
-            //       : "linear-gradient( to top, rgb(50,50,49) 0%, rgb(84,84,82) 100%)",
-            // }}
-            className={`w-full rounded-3px flex flex-col justify-start pt-14px items-center relative`}
-          >
-            {/* {pathname === item.path && (
-              <img className="absolute top-0 left-0" src={Reflect} alt="" />
-            )} */}
+          <div className={`w-full rounded-3px flex flex-col justify-start pt-12px items-center relative`}>
             <span
               style={{ color: pathname === item.path ? "#ffffff" : "#5e399a" }}
-              className={`${pathname === item.path ? "text-gray-252525" : "text-golden-ccc2b6"}
-                          text-20px font-bold tracking-tight font-semibold`}
+              className={`${
+                pathname === item.path ? "text-gray-252525" : "text-golden-ccc2b6"
+              } text-20px font-bold tracking-tight`}
             >
               {item.text}
             </span>

@@ -30,7 +30,7 @@ const HorizontalMenu1 = ({ itemsArray, isState = 0, setState }) => {
           }}
           className={`w-full rounded-6px flex flex-col items-center`}
         >
-          <img className="ml-px object-none mt-4px" src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
+          <img className="ml-px object-none mt-4px w-48px h-48px" src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
 
           <div
             style={{ color: isState === item.id ? "#fff" : "32d2834" }}

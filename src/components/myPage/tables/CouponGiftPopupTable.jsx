@@ -28,36 +28,37 @@ const CouponGiftPopupTable = () => {
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
             borderColor: "#dddddd",
+            letterSpacing: "-0.018em",
           }}
         >
           <div>
-            <td style={{ width: "143px" }} className="text-center">
+            <td style={{ width: "143px" }} className="text-center font-semibold">
               선택
             </td>
-            <td style={{ width: "198px" }} className="text-center">
+            <td style={{ width: "198px" }} className="text-center font-semibold">
               아이디
             </td>
-            <td style={{ width: "199px" }} className="text-center">
+            <td style={{ width: "199px" }} className="text-center font-semibold">
               별명
             </td>
           </div>
         </div>
-        <div className="w-full text-585858 text-14px tracking-tight">
-          <div className=" text-14px tracking-tight text-r444444 h-56px w-full border-b border-gray-dddddd flex items-center bg-white">
+        <div className="w-full text-585858 text-14px" style={{ letterSpacing: "-0.015em" }}>
+          <div className=" text-14px text-r444444 h-56px w-full border-b border-gray-dddddd flex items-center bg-white">
             <td style={{ width: "143px" }} className="text-center pt-6px">
               <RadioButton id={0} />
             </td>
             <td style={{ width: "198px" }} className="text-center flex justify-center">
               <p style={{ width: "118px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {"louie32examplelouie32example".length > 16
-                  ? `${"louie32examplelouie32example".slice(0, 16)}...`
+                {"louie32examplelouie32example".length > 15
+                  ? `${"louie32examplelouie32example".slice(0, 15)}...`
                   : "louie32examplelouie32example"}
               </p>
             </td>
             <td style={{ width: "199px" }} className="text-center flex justify-center">
               <p style={{ width: "151px", textOverflow: "unset", overflow: "hidden", whiteSpace: "nowrap" }}>
-                {"위너테스트2위너테스트2위너테스트".length > 12
-                  ? `${"위너테스트2위너테스트2위너테스트".slice(0, 12)}...`
+                {"위너테스트2위너테스트2위너테스트".length > 11
+                  ? `${"위너테스트2위너테스트2위너테스트".slice(0, 11)}...`
                   : "위너테스트2위너테스트2위너테스트"}
               </p>
             </td>
@@ -65,8 +66,8 @@ const CouponGiftPopupTable = () => {
 
           {new Array(6).fill(0).map((item, index) => (
             <div
-              style={{ backgroundColor: index % 2 === 0 ? "#f7f7f7" : "#ffffff" }}
-              className={`text-14px tracking-tight text-r444444 h-56px w-full border-b border-gray-dddddd flex items-center`}
+              style={{ backgroundColor: index % 2 === 0 ? "#f7f7f7" : "#ffffff", letterSpacing: "-0.015em" }}
+              className={`text-14px text-r444444 h-56px w-full border-b border-gray-dddddd flex items-center`}
             >
               <td style={{ width: "143px" }} className="text-center pt-6px">
                 <RadioButton id={index + 1} />

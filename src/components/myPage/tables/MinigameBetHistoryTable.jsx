@@ -10,10 +10,10 @@ const MinigameBetHistoryTable = ({ array, checkedState, setCheckedState, isPopup
           height: "30px",
           width: "72px",
           background: "#5d659f",
-          color: "#ededeb",
           boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
+          color: "#ededeb",
         }}
-        className="rounded-4px text-golden-highLight font-spoqaMedium text-13px tracking-slight pt-2px hover:filter hover:brightness-125 flex-shrink-0"
+        className="rounded-4px font-medium text-13px tracking-slight flex-shrink-0 hover:filter hover:brightness-125"
       >
         상세보기
       </button>

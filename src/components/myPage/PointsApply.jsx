@@ -33,22 +33,23 @@ const PointsApply = () => {
       <MyPageTitle title="포인트전환신청" />
 
       <div
-        style={{ height: "157px", borderColor: "rgb(204, 204, 204)", background: "rgb(255, 255, 255)" }}
-        className="mt-10px w-full rounded-8px border px-19px pt-17px"
+        style={{ height: "157px", borderColor: "#cccccc" }}
+        className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-bold"
       >
         <div className="flex items-center h-26px space-x-9px">
-          <img src={AlertIcon} alt="" className="mt-px" />
-          <span className="text-rf04281 text-20px tracking-tight mt-px font-bold">확인 / 필독사항</span>
+          <img src={AlertIcon} alt="" />
+          <span className="text-rf04281 font-spoqaMedium text-20px tracking-tight -mt-2px">확인 / 필독사항</span>
         </div>
-        <div className="mt-13px flex flex-col space-y-15px text-r444444 text-14px">
-          <span className="h-15px font-bold">
-            <span className="font-bold mr-7px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
+
+        <div className="mt-12px flex flex-col space-y-16px text-r444444 tracking-tight  text-14px">
+          <span className="h-14px space-y-4px">
+            <span className="font-bold mr-3px mt-px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
           </span>
-          <span className="h-15px font-bold">
-            <span className="font-bold mr-7px">✓</span> 최소 10,000P 이상 신청 가능합니다.
+          <span className="h-14px space-y-4px">
+            <span className="font-bold mr-3px mt-px">✓</span> 최소 10,000P 이상 신청 가능합니다.
           </span>
-          <span className="h-15px font-bold">
-            <span className="font-bold mr-7px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
+          <span className="h-14px space-y-4px">
+            <span className="font-bold mr-3px mt-px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
           </span>
         </div>
       </div>
@@ -60,7 +61,7 @@ const PointsApply = () => {
         <div className="bg-white p-9px rounded-6px flex flex-col  w-full h-full">
           <div
             style={{
-              height: "130px",
+              height: "128px",
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
               borderColor: "#5e399a",
             }}

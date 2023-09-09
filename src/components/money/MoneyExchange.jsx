@@ -116,7 +116,7 @@ const MoneyExchange = () => {
           </div>
 
           <div
-            style={{ marginLeft: "277px", paddingRight: "115px" }}
+            style={{ marginLeft: "268px", paddingRight: "115px" }}
             className={`mt-21px flex space-x-5px w-full justify-start`}
           >
             <button
@@ -254,7 +254,7 @@ const MoneyExchange = () => {
               <div className="h-44px w-full overflow-hidden">
                 <input
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
-                  className="w-full text-14px outline-none pl-11px placeholder-gray-c8c8c8 h-42px border-b mt-2px"
+                  className="w-full text-14px outline-none pl-11px placeholder-gray-c8c8c8 h-42px border-b mt-2px font-semibold"
                   placeholder="비밀번호를 입력하세요."
                   value={passwordValue}
                   onChange={(e) => setPasswordValue(e.target.value)}

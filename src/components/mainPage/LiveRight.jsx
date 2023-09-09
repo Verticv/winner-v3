@@ -28,16 +28,13 @@ const LiveRight = () => {
       background: Tg,
       logo: TgLogo,
       imgText: "보타카지노",
-      path: "/esports/single",
       logoClass: "top-30px",
     },
     {
       id: 2,
       background: Preparing,
       logo: PreparingLogo,
-
       imgText: "호텔카지노",
-      path: "/",
       logoClass: "top-37px ml-px",
     },
   ];
@@ -57,7 +54,7 @@ const LiveRight = () => {
         }}
         onMouseEnter={() => setHover(item.id)}
         onMouseLeave={() => setHover(null)}
-        onClick={() => history.push(item.path)}
+        onClick={() => item.path && history.push(item.path)}
       >
         {isHover === item.id && 2 !== item.id && (
           <button

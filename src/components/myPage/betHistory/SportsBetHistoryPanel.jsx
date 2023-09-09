@@ -203,12 +203,12 @@ const SportsBetHistoryPanel = ({
             축구 / 미국 - 메이저리그사커
           </span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center -mt-px">
           <img src={ClockIcon} alt="" />
           <span className="ml-6px text-16px text-white " style={{ letterSpacing: "-0.015rem" }}>
             2021-06-29 15:45
           </span>
-          <img className="ml-11px mb-3px" src={USFlagIcon} alt="" />
+          <img className="ml-11px mb-2px" src={USFlagIcon} alt="" />
         </div>
       </div>
       <div className="flex flex-col w-full " style={{ background: "#fff" }}>

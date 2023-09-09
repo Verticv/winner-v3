@@ -84,7 +84,7 @@ const PowerballHistory = ({ array, checkedState, setCheckedState }) => {
   return (
     <div className="w-full ">
       <div
-        className="flex items-center justify-start text-14px tracking-tight text-white h-55px border-b border-dddddd font-semibold"
+        className="flex items-center justify-start text-14px tracking-tight text-eeeeee h-55px border-b border-dddddd font-semibold"
         style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
       >
         <div style={{ width: "60px" }} className="flex justify-center ml-28px">

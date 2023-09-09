@@ -99,7 +99,9 @@ const MoneyCharge = () => {
               className="flex items-center justify-center h-42px rounded-6px mt-20px hover:brightness-125 filter"
             >
               <div className="flex items-center justify-center h-40px rounded-6px  cursor-pointer">
-                <span className="tracking-tight text-14px text-white text-shadow-5 -mt-2px font-semibold">계좌번호 신청</span>
+                <span className="tracking-tight text-14px text-white text-shadow-5 -mt-2px font-semibold">
+                  계좌번호 신청
+                </span>
               </div>
             </button>
 
@@ -351,7 +353,7 @@ const MoneyCharge = () => {
                     onClick={() => setRadioValue("slot_game")}
                   >
                     <input type="radio" className="ml-12px" name="gender" checked={radioValue === "slot_game"} />
-                    <span className="tracking-tight text-14px text-white ml-28px -mt-px text-shadow-5">슬롯게임</span>
+                    <span className="tracking-tight text-14px text-white ml-23px -mt-px text-shadow-5">슬롯게임</span>
                   </button>
                   <button
                     style={{ width: "135px", background: "#5d659f", boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)" }}
@@ -359,7 +361,7 @@ const MoneyCharge = () => {
                     onClick={() => setRadioValue("sports")}
                   >
                     <input type="radio" className="ml-12px" name="gender" checked={radioValue === "sports"} />
-                    <span className="tracking-tight text-14px text-white ml-33px -mt-px text-shadow-5">스포츠</span>
+                    <span className="tracking-tight text-14px text-white ml-28px -mt-px text-shadow-5">스포츠</span>
                   </button>
                   <button
                     style={{ width: "135px", background: "#5d659f", boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)" }}
@@ -367,7 +369,7 @@ const MoneyCharge = () => {
                     onClick={() => setRadioValue("v_game")}
                   >
                     <input type="radio" className="ml-12px" name="gender" checked={radioValue === "v_game"} />
-                    <span className="tracking-tight text-14px text-white ml-16px -mt-px text-shadow-5">
+                    <span className="tracking-tight text-14px text-white ml-10px -mt-px text-shadow-5">
                       키론가상게임
                     </span>
                   </button>
@@ -377,7 +379,7 @@ const MoneyCharge = () => {
                     onClick={() => setRadioValue("yes")}
                   >
                     <input type="radio" className="ml-12px" name="gender" checked={radioValue === "yes"} />
-                    <span className="tracking-tight text-14px text-white ml-28px -mt-px text-shadow-5">피싱게임</span>
+                    <span className="tracking-tight text-14px text-white ml-23px -mt-px text-shadow-5">피싱게임</span>
                   </button>
                   <button
                     style={{ width: "135px", background: "#c03a41", boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)" }}
@@ -385,7 +387,7 @@ const MoneyCharge = () => {
                     onClick={() => setRadioValue("no")}
                   >
                     <input type="radio" className="ml-12px" name="gender" checked={radioValue === "no"} />
-                    <span className="tracking-tight text-14px text-white ml-29px -mt-px text-shadow-5">받지않기</span>
+                    <span className="tracking-tight text-14px text-white ml-23px -mt-px text-shadow-5">받지않기</span>
                   </button>
                 </div>
               </div>
@@ -440,7 +442,7 @@ const MoneyCharge = () => {
           }}
           className="rounded-full flex justify-center items-center h-42px  text-16px tracking-tight text-white font-semibold"
         >
-          <span className="mt-px">은행점검시간</span>{" "}
+          <span className="">은행점검시간</span>
         </div>
       </div>
       <BankTable />

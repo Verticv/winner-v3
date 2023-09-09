@@ -27,7 +27,9 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
         className="h-full w-full flex flex-col  overflow-hidden "
       >
         <div className="relative pt-20px pb-20px h-67px flex items-center justify-center flex-shrink-0 rounded-t-10px">
-          <label className="font-bold text-white text-24px tracking-tight">포인트 전환 신청</label>
+          <label style={{ letterSpacing: "-0.025em" }} className="font-bold text-white text-24px">
+            포인트 전환 신청
+          </label>
           <button className="absolute top-22px right-22px cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
             <img src={CloseIcon} alt="close_icon" />
           </button>
@@ -53,13 +55,16 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
               </span>
             </div>
           </div>
-          <div className="flex items-center text-14px tracking-tight mt-36px font-bold">
+          <div className="flex items-center text-14px tracking-tight mt-40px font-bold">
             <span style={{ color: "#444444" }}>사용 가능한 포인트 : </span>
             <span className="text-rf04281 ml-4px font-bold">278</span>
             <span style={{ color: "#444444" }}>P</span>
           </div>
-          <div className="h-64px w-full rounded-8px mt-14px flex items-center" style={{ background: "#5e399a" }}>
-            <span style={{ marginLeft: "65px" }} className="text-14px tracking-tight  text-eeeeee leading-none">
+          <div className="h-64px w-full rounded-8px mt-10px flex items-center" style={{ background: "#5e399a" }}>
+            <span
+              style={{ marginLeft: "65px", letterSpacing: "-0.025em" }}
+              className="text-14px text-eeeeee leading-none font-semibold"
+            >
               전환포인트 입력
             </span>
             <input

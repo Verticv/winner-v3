@@ -154,7 +154,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
         className="w-full flex flex-col items-center justify-start rounded-10px"
       >
         <img className="mt-19px object-none" src={img} alt="" />
-        <span className="mt-8px tracking-tight text-15px font-bold" style={{ color: "#2d2834" }}>
+        <span className="mt-10px tracking-tight text-15px font-bold" style={{ color: "#2d2834" }}>
           {text}
         </span>
         <span className="mt-px font-bold tracking-tight text-20px" style={{ color: "#c03a41" }}>
@@ -302,7 +302,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               className="-mt-px ml-8px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
               <img className="mr-10px" src={SmallDiamond} alt="" />
-              <div style={{ fontSize: "16px" }} className="flex items-center space-x-4px">
+              <div style={{ fontSize: "15px" }} className="flex items-center space-x-4px">
                 <span className="text-white">입금 :</span>
                 <span style={{ color: "#ffcc00" }}>000,000,000</span>
               </div>
@@ -312,7 +312,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               className="-mt-px ml-5px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
               <img className="mr-10px" src={SmallDiamond} alt="" />
-              <div style={{ fontSize: "16px" }} className="flex items-center space-x-4px">
+              <div style={{ fontSize: "15px" }} className="flex items-center space-x-4px">
                 <span className="text-white">보너스 :</span>
                 <span style={{ color: "#ffcc00" }}>0</span>
               </div>
@@ -322,7 +322,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               className="-mt-px ml-5px pr-20px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
               <img className="mr-10px" src={SmallDiamond} alt="" />
-              <div style={{ fontSize: "16px" }} className="flex items-center space-x-4px">
+              <div style={{ fontSize: "15px" }} className="flex items-center space-x-4px">
                 <span className="text-white">출금 :</span>
                 <span style={{ color: "#ffcc00" }}>0</span>
               </div>
@@ -335,7 +335,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               paddingRight: innerTable2 ? "40px" : 0,
               background: innerTable2 ? "#513d71" : "#5d4386",
             }}
-            className="flex h-55px border-b border-eeeeee items-center text-white  text-14px tracking-tight "
+            className="flex h-55px border-b border-eeeeee items-center text-white  text-13px tracking-tight "
           >
             <div style={{ backgroundColor: "#3f2a5f" }} className="w-85px h-full flex items-center justify-center ">
               <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
@@ -379,7 +379,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               paddingRight: innerTable ? "0px" : 0,
               backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
-            className="flex h-55px items-center text-14px tracking-tight font-roboto text-r444444 bg-white border-b border-dddddd"
+            className="flex h-55px items-center text-13px tracking-tight font-roboto text-r444444 bg-white border-b border-dddddd"
           >
             <div
               style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
@@ -411,7 +411,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               paddingRight: innerTable ? "0px" : 0,
               backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
-            className="flex h-55px items-center text-14px tracking-tight font-roboto text-r444444 bg-white border-b border-dddddd"
+            className="flex h-55px items-center text-13px tracking-tight font-roboto text-r444444 bg-white border-b border-dddddd"
           >
             <div
               style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
@@ -442,7 +442,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               width: "fit-content",
               backgroundColor: innerTable2 ? "#f3f3f3" : "#f8f8f8",
             }}
-            className="flex h-56px items-center text-14px tracking-tight font-roboto border-b border-dddddd bg-white text-r444444"
+            className="flex h-56px items-center text-13px tracking-tight font-roboto border-b border-dddddd bg-white text-r444444"
           >
             <div
               style={{ backgroundColor: innerTable2 ? "#e8e8e8" : "#eeeeee" }}
@@ -1240,7 +1240,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
 
               <div
                 style={{ width: "374px", borderColor: "#9361e5", background: "#341d5a" }}
-                className="h-48px rounded-full border-2 flex items-center justify-center text-20px tracking-tight"
+                className="h-48px rounded-full border-2 flex items-center justify-center text-15px tracking-tight"
               >
                 <img className="mr-16px" src={Diamond} alt="" />
                 <div className="flex items-center space-x-4px pt-2px">

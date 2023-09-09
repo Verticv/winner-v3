@@ -18,6 +18,7 @@ const PowerballResults = () => {
         style={{
           backgroundColor: item.id % 2 === 0 ? "#fff" : "#f7f7f7",
           borderColor: "#dddddd",
+          letterSpacing: "-0.015em",
         }}
         className="flex items-center text-14px tracking-tight text-r444444 h-55px w-full border-b font-roboto last:border-b-0 pt-px"
       >
@@ -27,7 +28,10 @@ const PowerballResults = () => {
         <div style={{ marginLeft: "0", width: "296px" }} className="flex justify-center">
           {count}
         </div>
-        <div style={{ marginLeft: "0", width: "255px", color: "#0072bc" }} className=" flex justify-center font-semibold">
+        <div
+          style={{ marginLeft: "0", width: "255px", color: "#0072bc" }}
+          className=" flex justify-center font-semibold"
+        >
           {item.result}
         </div>
         <div style={{ marginLeft: "42px", width: "211px" }} className="flex justify-center font-semibold">
@@ -46,7 +50,10 @@ const PowerballResults = () => {
         className="h-54px flex items-center"
       >
         <img src={PowerballIcon} alt="" className="ml-16px" />
-        <span className="text-white  text-16px font-medium ml-4px truncate" style={{ maxWidth: "950px" }}>
+        <span
+          style={{ letterSpacing: "-0.015em", maxWidth: "950px" }}
+          className="text-white text-16px font-medium ml-4px truncate -mt-2px"
+        >
           파워볼
         </span>
       </div>
@@ -64,6 +71,7 @@ const PowerballResults = () => {
           style={{
             height: "54px",
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+            letterSpacing: "-0.015em",
           }}
           className="w-full flex items-center text-14px font-spoqaMedium tracking-tight text-eeeeee px-9px font-semibold"
         >

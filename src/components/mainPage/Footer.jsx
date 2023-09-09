@@ -49,7 +49,7 @@ const Footer = ({ fullWidth = false }) => {
         },
         {
           text: "스페셜베팅",
-          link: "/bet-combination",
+          link: "/bet-combination/special",
         },
         {
           text: "라이브스포츠",

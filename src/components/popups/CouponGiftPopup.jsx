@@ -45,14 +45,14 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
         <div className="w-full h-full pl-33px pr-37px" style={{ height: "734px", backgroundColor: "#dfdbfa" }}>
           <div className="flex items-center h-19px pt-46px space-x-8px">
             <img src={Step1} alt="" />
-            <span className="text-16px tracking-tighter text-r444444 pt-3px">선물로 보낼 쿠폰을 확인하세요.</span>
+            <span className="text-14px tracking-tight text-r444444 pt-3px">선물로 보낼 쿠폰을 확인하세요.</span>
           </div>
 
           <div
             className="mt-26px h-64px w-full rounded-8px flex items-center  text-14px tracking-tight"
             style={{ background: "#5e399a" }}
           >
-            <span style={{ marginLeft: "76px" }} className="text-eeeeee leading-none">
+            <span style={{ marginLeft: "76px" }} className="text-eeeeee leading-none font-semibold">
               선물할 쿠폰
             </span>
             <div
@@ -65,14 +65,14 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
 
           <div className="flex items-center h-19px mt-40px space-x-8px">
             <img src={Step2} alt="" />
-            <span className=" text-16px tracking-tighter text-r444444 pt-3px">쿠폰받을 회원을 선택하세요.</span>
+            <span className=" text-14px tracking-tight text-r444444 pt-3px">쿠폰받을 회원을 선택하세요.</span>
           </div>
 
           <div
             className="mt-17px h-64px w-full rounded-8px flex items-center  text-14px tracking-tight relative"
             style={{ background: "#772fad" }}
           >
-            <span style={{ marginLeft: "63px" }} className="text-eeeeee leading-none">
+            <span style={{ marginLeft: "63px" }} className="text-eeeeee leading-none font-semibold">
               쿠폰받을 회원
             </span>
             <input
@@ -81,7 +81,7 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
               placeholder="아이디를 입력해 주세요."
             />
             <button
-              style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)", top: "11px", right: "75px" }}
+              style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)", top: "11px", right: "65px" }}
               className="flex items-center justify-center w-42px h-42px rounded-6px flex-shrink-0  filter hover:brightness-125 shadow-btn absolute z-10"
             >
               <div
@@ -107,7 +107,7 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
               }}
               className="flex items-center justify-center h-52px filter hover:brightness-125"
             >
-              <span className="tracking-tight text-16px text-white pt-px text-shadow-5">쿠폰발송</span>
+              <span className="tracking-tight text-16px text-white pt-px text-shadow-5 font-bold">쿠폰발송</span>
             </button>
           </div>
         </div>

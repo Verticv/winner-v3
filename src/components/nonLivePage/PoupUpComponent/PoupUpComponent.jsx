@@ -10,8 +10,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
         width: "489px",
         background: "linear-gradient(to right, #b975cf, #8a66bd)",
         borderRadius: "20px",
-        boxShadow:
-          "0px 0px 20px 0px rgba(0, 0, 0, 0.6),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
+        boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.6),inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3)",
       }}
       className="pt-2px "
     >
@@ -26,17 +25,13 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
         className="flex justify-between items-center"
       >
         <p
-          style={{ color: "#eeeeee", marginLeft: "202px", fontSize: "24px" }}
+          style={{ color: "#eeeeee", marginLeft: "202px", fontSize: "24px", letterSpacing: "-0.025em" }}
           className=" font-bold -ml-10px mt-24px mb-24px"
         >
           베팅정보
         </p>
         <button onClick={() => setIsPopupOpen(false)}>
-          <img
-            className="object-none mr-22px mt-24px mb-26px"
-            src={icon}
-            alt="icon"
-          />
+          <img className="object-none mr-22px mt-24px mb-26px" src={icon} alt="icon" />
         </button>
       </div>
       <div
@@ -65,28 +60,20 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
                 width: "397px",
                 background: "#ffffff",
                 borderRadius: "10px",
+                letterSpacing: "-0.015em",
               }}
               className="justify-center items-center pt-px"
             >
               <div className="flex justify-center items-center mt-49px">
-                <p
-                  style={{ fontSize: "16px", color: "#444444" }}
-                  className="-mt-3px -ml-px tracking-tight"
-                >
+                <p style={{ fontSize: "16px", color: "#444444" }} className="-mt-3px -ml-px">
                   베팅이 수락되었습니다.
                 </p>
               </div>
               <div className="flex justify-center items-center ml-2px">
-                <p
-                  style={{ fontSize: "14px", color: "#444444" }}
-                  className="-ml-5px mt-2px tracking-tight font-bold"
-                >
+                <p style={{ fontSize: "14px", color: "#444444" }} className="-ml-5px mt-2px font-bold">
                   티켓번호
                 </p>
-                <p
-                  style={{ fontSize: "14px", color: "#0072bc" }}
-                  className="mt-2px ml-4px tracking-tight font-bold"
-                >
+                <p style={{ fontSize: "14px", color: "#0072bc" }} className="mt-2px ml-4px font-bold">
                   4004791
                 </p>
               </div>
@@ -116,7 +103,7 @@ const PoupUpComponent = ({ setIsPopupOpen, active, setActive }) => {
               color: "#ffffff",
               textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
             }}
-            className="mt-px tracking-tight font-spoqaMedium"
+            className="mt-px tracking-tight font-spoqaMedium font-bold"
           >
             확인
           </p>

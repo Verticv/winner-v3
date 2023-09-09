@@ -8,7 +8,7 @@ const SignedUpPopup = ({ setToLogin }) => {
   return (
     <div
       style={{
-        height: "749px",
+        height: "730px",
         width: "770px",
         borderRadius: "20px",
         background: "linear-gradient(to right, #b574cc, #9198e5)",
@@ -40,7 +40,7 @@ const SignedUpPopup = ({ setToLogin }) => {
           </div>
           <label
             style={{
-              marginTop: "14px",
+              marginTop: "24px",
               marginLeft: "2px",
               color: "#682aa7",
               letterSpacing: "-0.005em",
@@ -52,7 +52,7 @@ const SignedUpPopup = ({ setToLogin }) => {
           </label>
           <label
             style={{ color: "#444444", letterSpacing: "-0.005em", marginLeft: "12px", fontSize: "25px" }}
-            className="flex font-bold h-25px items-center mt-11px"
+            className="flex font-bold h-20px items-center mt-11px"
           >
             관리자{" "}
             <label style={{ color: "#ec1676" }} className="font-bold pl-7px pr-px">
