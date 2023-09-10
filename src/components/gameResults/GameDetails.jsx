@@ -144,7 +144,7 @@ const GameDetails = () => {
         >
           4 : 4
         </div>
-        <div className="w-63px text-14px text-center" style={{ color: "#00a651" }}>
+        <div className="w-63px text-14px text-center font-semibold" style={{ color: "#00a651" }}>
           <p className="-ml-3px">무</p>
         </div>
       </div>
@@ -190,7 +190,7 @@ const GameDetails = () => {
 
         <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center truncate">222 : 222</div>
         <div style={{ color: "#f04281" }} className="w-63px text-center font-spoqaMedium text-14px">
-          <p className="-ml-3px">승</p>
+          <p className="-ml-3px font-semibold">승</p>
         </div>
       </div>
 
@@ -209,7 +209,7 @@ const GameDetails = () => {
 
         <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center truncate">222 : 222</div>
         <div className="w-63px text-center text-14px text-r444444">
-          <p className="-ml-3px">패</p>
+          <p className="-ml-3px font-semibold">패</p>
         </div>
       </div>
     </div>

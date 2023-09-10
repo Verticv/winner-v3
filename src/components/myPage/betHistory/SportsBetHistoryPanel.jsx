@@ -180,7 +180,7 @@ const SportsBetHistoryPanel = ({
               : !isAttached
               ? "w-70px pl-5px"
               : "w-70px pl-13px"
-          }`}
+          } font-semibold`}
         >
           {result === "win" ? "승" : result === "lose" ? "패" : result === "cancel" ? "취소" : "결과없음"}
         </div>

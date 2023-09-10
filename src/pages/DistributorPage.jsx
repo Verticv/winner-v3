@@ -235,10 +235,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
             </div>
             {games.map((item) => {
               if (!item.title2)
-                return <div className="w-81px h-full flex items-center justify-center">{item.title1}</div>;
+                return <div className="w-81px h-full flex items-center justify-center text-eeeeee">{item.title1}</div>;
               else
                 return (
-                  <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px">
+                  <div className="w-81px h-full flex flex-col items-center justify-center -space-y-4px text-eeeeee">
                     <span>{item.title1}</span>
                     <span>{item.title2}</span>
                   </div>
@@ -335,10 +335,10 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               paddingRight: innerTable2 ? "40px" : 0,
               background: innerTable2 ? "#513d71" : "#5d4386",
             }}
-            className="flex h-55px border-b border-eeeeee items-center text-white  text-13px tracking-tight "
+            className="flex h-55px border-b border-eeeeee items-center text-eeeeee  text-13px tracking-tight "
           >
             <div style={{ backgroundColor: "#3f2a5f" }} className="w-85px h-full flex items-center justify-center ">
-              <div className="h-full flex items-center justify-center" style={{ width: "85px" }}>
+              <div className="h-full flex items-center justify-center text-eeeeee" style={{ width: "85px" }}>
                 구분
               </div>
             </div>
@@ -346,7 +346,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               if (!item.title2)
                 return (
                   <div
-                    className={`w-85px h-full flex items-center justify-center ${
+                    className={`w-85px h-full flex items-center justify-center text-eeeeee ${
                       index === games.length - 1 && "mr-8px"
                     }`}
                   >
@@ -356,7 +356,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               else
                 return (
                   <div
-                    className={`w-85px h-full flex flex-col items-center justify-center -space-y-4px ${
+                    className={`w-85px h-full flex flex-col items-center justify-center -space-y-4px text-eeeeee ${
                       index === games.length - 1 && "mr-8px"
                     }`}
                   >
@@ -724,7 +724,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                   {/* === Header === */}
                   <div
                     style={{ height: "69px", background: "#5d4386" }}
-                    className=" flex items-center justify-start text-13px text-white tracking-tight"
+                    className=" flex items-center justify-start text-13px text-eeeeee tracking-tight"
                   >
                     <div className="h-full flex items-center justify-center" style={{ width: "138px" }}>
                       번호
