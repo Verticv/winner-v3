@@ -66,8 +66,8 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
       icon: Icon5,
       iconHighlight: Icon5_on,
       id: 4,
-      path_0: "/cscenter/policy/sportsgame/live-sport",
-      path: "/cscenter/policy/sportsgame/soccer",
+      path: "/cscenter/policy/sportsgame/live-sport",
+      path_9: "/cscenter/policy/sportsgame/soccer",
       path_1: "/cscenter/policy/sportsgame/basketball",
       path_2: "/cscenter/policy/sportsgame/baseball",
       path_3: "/cscenter/policy/sportsgame/volleyball",
@@ -195,7 +195,12 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
         </Route>
 
         <div style={{ height: "136px", width: "1280px" }} className="relative">
-          <img style={{ height: "150px", width: "1300px", objectFit: "none" }} className="z-10" src={CsPageBanner} alt="" />
+          <img
+            style={{ height: "150px", width: "1300px", objectFit: "none" }}
+            className="z-10"
+            src={CsPageBanner}
+            alt=""
+          />
           <div className="font-bold z-20 absolute top-0 text-24px w-full h-full flex     items-center justify-center">
             <span style={{ textShadow: "0 0 4px rgba(0, 0, 0, 0.6)" }} className="leading-none text-white -mt-2px">
               고객센터

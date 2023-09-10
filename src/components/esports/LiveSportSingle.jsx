@@ -31,7 +31,7 @@ const LiveSportSingle = () => {
       <span
         style={{
           color: "#828282",
-          letterSpacing: text === "라이브경기는 실시간으로 경기영상을 제공하며" ? "-0.1rem" : "-0.025em",
+          letterSpacing: text === "라이브경기는 실시간으로 경기영상을 제공하며" ? "-0.1rem" : "-0.091em",
         }}
         className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px`}
       >
@@ -61,8 +61,8 @@ const LiveSportSingle = () => {
             letterSpacing:
               text2 === "② 수락 및 대기중 등 베팅상태를 확인합니다." ||
               text2 === "② 경기결과 및 베팅결과 등 확인 가능합니다."
-                ? "-0.1em"
-                : "-0.025em",
+                ? "-0.091em"
+                : "-0.091em",
           }}
           className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
@@ -71,7 +71,7 @@ const LiveSportSingle = () => {
       )}
       {text3 && (
         <span
-          style={{ color: "#828282", letterSpacing: "-0.025em" }}
+          style={{ color: "#828282", letterSpacing: "-0.091em" }}
           className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
           {text3}
@@ -80,7 +80,7 @@ const LiveSportSingle = () => {
       {other && (
         <div className="flex mt-px py-20px">
           <span
-            style={{ color: "#828282", letterSpacing: "-0.025em" }}
+            style={{ color: "#828282", letterSpacing: "-0.091em" }}
             className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
           >
             {other}

@@ -104,7 +104,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
           <DirectoryComponent
             branch1="라이브스포츠"
             branch2="화면구성설명"
-            mainPath="/esports/LiveSport"
+            mainPath="/esports/LiveSport/guide"
             setSelectedTab={setSelectedTab}
           />
         </Route>

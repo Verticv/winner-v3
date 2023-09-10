@@ -191,7 +191,8 @@ const LeftMenu = ({
                       pathname === item.path_5 ||
                       pathname === item.path_6 ||
                       pathname === item.path_7 ||
-                      pathname === item.path_8
+                      pathname === item.path_8 ||
+                      pathname === item.path_9
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
                     letterSpacing: "-0.08em",
@@ -205,7 +206,8 @@ const LeftMenu = ({
                     pathname === item.path_5 ||
                     pathname === item.path_6 ||
                     pathname === item.path_7 ||
-                    pathname === item.path_8
+                    pathname === item.path_8 ||
+                    pathname === item.path_9
                       ? "text-white"
                       : "text-p594e6a hover:opacity-50"
                   } flex items-center h-47px w-full pl-57px `}
