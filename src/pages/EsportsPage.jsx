@@ -8,8 +8,10 @@ import HorizontalMenu9 from "components/horizontalMenus/HorizontalMenu9";
 import EsportsStructure from "components/esports/EsportsStructure";
 import EsportsSingle from "components/esports/EsportsSingle";
 import EsportsMulti from "components/esports/EsportsMulti";
-import LiveSport from "components/esports/LiveSport";
 import HoldemGame from "components/esports/HoldemGame";
+import LiveSportStructure from "components/esports/LiveSportStructure";
+import LiveSportSingle from "components/esports/LiveSportSingle";
+import LiveSportMulti from "components/esports/LiveSportMulti";
 
 const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -30,7 +32,11 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
     { text: "다폴더 베팅방법", id: 2, path: "/esports/multi" },
   ];
 
-  const MenuArray1 = [{ text: "라이브스포츠 이용가이드", id: 0, path: "/esports/LiveSport" }];
+  const MenuArray1 = [
+    { text: "화면구성설명", id: 0, path: "/esports/LiveSport/guide" },
+    { text: "싱글뷰 베팅방법", id: 1, path: "/esports/LiveSport/single" },
+    { text: "멀티뷰 베팅방법", id: 2, path: "/esports/LiveSport/multi" },
+  ];
   const MenuArray2 = [{ text: "홀덤게임 이용가이드", id: 0, path: "/esports/hold'emGame" }];
 
   const [, setSelectedTab] = useState(0);
@@ -78,10 +84,26 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedTab={setSelectedTab}
           />
         </Route>
-        <Route path="/esports/LiveSport">
+        <Route path="/esports/LiveSport/single">
           <DirectoryComponent
             branch1="라이브스포츠"
-            branch2="이용가이드"
+            branch2="싱글뷰 베팅방법"
+            mainPath="/esports/LiveSport/single"
+            setSelectedTab={setSelectedTab}
+          />
+        </Route>
+        <Route path="/esports/LiveSport/multi">
+          <DirectoryComponent
+            branch1="라이브스포츠"
+            branch2="멀티뷰 베팅방법"
+            mainPath="/esports/LiveSport/multi"
+            setSelectedTab={setSelectedTab}
+          />
+        </Route>
+        <Route path="/esports/LiveSport/guide">
+          <DirectoryComponent
+            branch1="라이브스포츠"
+            branch2="화면구성설명"
             mainPath="/esports/LiveSport"
             setSelectedTab={setSelectedTab}
           />
@@ -124,8 +146,14 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
           <Route path="/esports/multi">
             <EsportsMulti />
           </Route>
-          <Route path="/esports/LiveSport">
-            <LiveSport />
+          <Route path="/esports/LiveSport/guide">
+            <LiveSportStructure />
+          </Route>
+          <Route path="/esports/LiveSport/single">
+            <LiveSportSingle />
+          </Route>
+          <Route path="/esports/LiveSport/multi">
+            <LiveSportMulti />
           </Route>
           <Route path="/esports/hold'emGame">
             <HoldemGame />

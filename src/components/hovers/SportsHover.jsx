@@ -24,7 +24,7 @@ const SportsHover = ({ selection }) => {
       background: FootballLogo,
       logo: LebronBannerLogo,
       imgText: "이용가이드",
-      path: "/esports/LiveSport",
+      path: "/esports/LiveSport/guide",
     },
   ];
 
