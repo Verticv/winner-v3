@@ -24,6 +24,7 @@ const FishingGameHover = ({ selection }) => {
       background: Instruction,
       logo: AugBannerLogo,
       imgText: "이용가이드",
+      path: "/kiron/guide"
     },
   ];
 

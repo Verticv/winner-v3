@@ -18,6 +18,7 @@ import NonLiveBet from "pages/NonLiveBet";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ReauthenticatePopup from "components/popups/ReauthenticatePopup";
+import KironPage from "pages/KironPage";
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -73,6 +74,9 @@ function App() {
         </Route>
         <Route path="/esports">
           <EsportsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+        </Route>
+        <Route path="/kiron">
+          <KironPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/hotel-casino">
           <HotelCasino isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
