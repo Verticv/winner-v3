@@ -121,7 +121,7 @@ const Footer = ({ fullWidth = false }) => {
         },
         {
           text: "베팅규정",
-          link: "/cscenter/policy/sportsgame/soccer",
+          link: "/cscenter/policy/sportsgame/live-sport",
         },
       ],
     },

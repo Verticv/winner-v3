@@ -42,16 +42,15 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
           }}
         >
           <div
-            style={{ paddingLeft: "175px", paddingRight: "175px", background: "#dfdbfa" }}
+            style={{ paddingLeft: "160px", paddingRight: "160px", background: "#dfdbfa" }}
             className="h-full w-full pt-40px rounded-10px"
           >
             <div className="w-full flex flex-col space-y-8px">
               <div className="flex space-x-10px w-full">
                 <Title text="아이디" />
                 <div
-                  className="h-44px space-y-2 flex items-center flex-shrink-0 rounded-4px overflow-hidden"
+                  className="w-full h-44px overflow-hidden space-y-2 flex items-center rounded-4px"
                   style={{
-                    width: "540px",
                     background: "#ffffff",
                     boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                     color: "#7a7a7a",
@@ -184,9 +183,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="레벨" />
                   <div
-                    className="h-44px space-y-2 flex items-center flex-shrink-0 rounded-4px"
+                    className="w-full h-44px space-y-2 flex items-center rounded-4px"
                     style={{
-                      width: "540px",
                       background: "#ffffff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                       color: "#444444",
@@ -200,9 +198,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="스포츠" />
                   <div
-                    className="h-44px space-y-2 flex items-center flex-shrink-0  rounded-4px"
+                    className="w-full h-44px space-y-2 flex items-center rounded-4px"
                     style={{
-                      width: "540px",
                       background: "#ffffff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                       color: "#444444",
@@ -216,9 +213,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="카지노" />
                   <div
-                    className="h-44px space-y-2 flex items-center flex-shrink-0  rounded-4px"
+                    className="w-full h-44px space-y-2 flex items-center rounded-4px"
                     style={{
-                      width: "540px",
                       background: "#ffffff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                       color: "#444444",
@@ -232,9 +228,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="슬롯" />
                   <div
-                    className="h-44px space-y-2 flex items-center flex-shrink-0 rounded-4px"
+                    className="w-full h-44px space-y-2 flex items-center rounded-4px"
                     style={{
-                      width: "540px",
                       background: "#fff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                       color: "#444444",
@@ -248,9 +243,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                 <div className="flex space-x-10px w-full">
                   <Title text="미니게임" />
                   <div
-                    className="h-44px space-y-2 flex items-center flex-shrink-0 rounded-4px"
+                    className="w-full h-44px space-y-2 flex items-center rounded-4px"
                     style={{
-                      width: "540px",
                       background: "#fff",
                       boxShadow: "inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5)",
                       color: "#444444",

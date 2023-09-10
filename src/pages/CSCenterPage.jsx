@@ -66,6 +66,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
       icon: Icon5,
       iconHighlight: Icon5_on,
       id: 4,
+      path_0: "/cscenter/policy/sportsgame/live-sport",
       path: "/cscenter/policy/sportsgame/soccer",
       path_1: "/cscenter/policy/sportsgame/basketball",
       path_2: "/cscenter/policy/sportsgame/baseball",

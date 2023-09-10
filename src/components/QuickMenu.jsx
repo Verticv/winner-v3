@@ -119,7 +119,7 @@ const QuickMenu = () => {
           <Button text="출석부" img={Quick1} path="/attendance" />
           <Button text="게시판" img={Quick2} path="/freeboard" />
           <Button text="경기결과" img={Quick3} path="/gameresults/sports/win-draw-lose" />
-          <Button text="베팅규정" img={Quick4} path="/cscenter/policy/sportsgame/soccer" />
+          <Button text="베팅규정" img={Quick4} path="/cscenter/policy/sportsgame/live-sport" />
           <Button text="문의하기" img={Quick5} path="/cscenter/contact/all" />
           <Button text="계좌문의" img={Quick6} path="#" />
           <Button text="베팅내역" img={Quick7} path="/mypage/bet-history" />

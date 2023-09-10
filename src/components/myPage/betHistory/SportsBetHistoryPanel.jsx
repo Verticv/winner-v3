@@ -172,7 +172,15 @@ const SportsBetHistoryPanel = ({
                 ? "#33a1e9"
                 : "#444444",
           }}
-          className={`${isAttached ? "w-70px pl-16px" : isPopup ? "w-63px pl-17px" : !isAttached ? "w-70px pl-5px" : "w-70px pl-13px"}`}
+          className={`${
+            isAttached
+              ? "w-70px pl-16px"
+              : isPopup
+              ? "w-63px pl-17px"
+              : !isAttached
+              ? "w-70px pl-5px"
+              : "w-70px pl-13px"
+          }`}
         >
           {result === "win" ? "승" : result === "lose" ? "패" : result === "cancel" ? "취소" : "결과없음"}
         </div>
@@ -187,7 +195,13 @@ const SportsBetHistoryPanel = ({
     >
       <div
         className={`flex items-center justify-between h-54px w-full ${
-          isAttached ? "pl-20px pr-17px" : isFullPage ? "px-20px" : !isPopup && !isAttached ? "pl-17px pr-18px" : " pl-17px pr-17px"
+          isAttached
+            ? "pl-20px pr-17px"
+            : isFullPage
+            ? "px-20px"
+            : !isPopup && !isAttached
+            ? "pl-17px pr-18px"
+            : " pl-17px pr-17px"
         }`}
         style={{ background: "#6852a7" }}
       >
@@ -203,12 +217,12 @@ const SportsBetHistoryPanel = ({
             축구 / 미국 - 메이저리그사커
           </span>
         </div>
-        <div className="flex items-center -mt-px">
+        <div className="flex items-center -mt-2px">
           <img src={ClockIcon} alt="" />
-          <span className="ml-6px text-16px text-white " style={{ letterSpacing: "-0.015rem" }}>
+          <span className="ml-6px text-16px text-white " style={{ letterSpacing: "-0.015em" }}>
             2021-06-29 15:45
           </span>
-          <img className="ml-11px mb-2px" src={USFlagIcon} alt="" />
+          <img className="ml-10px" src={USFlagIcon} alt="" />
         </div>
       </div>
       <div className="flex flex-col w-full " style={{ background: "#fff" }}>
@@ -249,12 +263,12 @@ const SportsBetHistoryPanel = ({
             축구 / 잉글랜드 - 프리미어리그
           </span>
         </div>
-        <div className="flex items-center -mt-px">
+        <div className="flex items-center -mt-2px">
           <img src={ClockIcon} alt="" />
           <span className="ml-6px text-16px text-white " style={{ letterSpacing: "-0.015em" }}>
             2021-06-29 15:45
           </span>
-          <img className="ml-10px mb-3px" src={UKFlagIcon} alt="" />
+          <img className="ml-10px" src={UKFlagIcon} alt="" />
         </div>
       </div>
       <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd" style={{ background: "#323231" }}>
@@ -309,7 +323,7 @@ const SportsBetHistoryPanel = ({
             축구 / 잉글랜드 - 프리미어리그
           </span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center -mt-2px">
           <img src={ClockIcon} alt="" />
           <span className="ml-6px text-16px text-white " style={{ letterSpacing: "-0.015em" }}>
             2021-06-29 15:45
@@ -354,7 +368,7 @@ const SportsBetHistoryPanel = ({
             축구 / 스페인 - 라리가
           </span>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center -mt-2px">
           <img src={ClockIcon} alt="" />
           <span className="ml-6px text-16px text-white " style={{ letterSpacing: "-0.015em" }}>
             2021-06-29 15:45

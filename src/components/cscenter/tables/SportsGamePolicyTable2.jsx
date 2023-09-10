@@ -23,18 +23,19 @@ const SportsGamePolicyTable2 = ({ array }) => {
     >
       <table className="w-full bg-gray-323232 rounded-10px overflow-hidden">
         <thead
-          className=" text-14px tracking-tight  h-54px border-b  pt-px"
+          className=" text-14px h-54px border-b  pt-px"
           style={{
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
             borderColor: "#dddddd",
+            letterSpacing: "-0.015em",
           }}
         >
           <tr>
-            <td style={{ width: "248px" }} className="text-center pl-20px">
+            <td style={{ width: "248px" }} className="text-center pl-20px font-semibold">
               타입 및 경기시간
             </td>
-            <td style={{ width: "792px" }} className="text-center">
+            <td style={{ width: "792px" }} className="text-center font-semibold">
               결과적용기준
             </td>
           </tr>

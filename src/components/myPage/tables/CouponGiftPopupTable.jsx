@@ -28,7 +28,7 @@ const CouponGiftPopupTable = () => {
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
             borderColor: "#dddddd",
-            letterSpacing: "-0.018em",
+            letterSpacing: "-0.015em",
           }}
         >
           <div>

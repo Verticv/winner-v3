@@ -152,7 +152,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
               e.stopPropagation();
             }}
           >
-            <p className="text-20px h-20px flex items-center justify-center mt-px">확인</p>
+            <p className="text-20px h-20px flex items-center justify-center mt-px font-semibold">확인</p>
           </button>
         </div>
       </div>

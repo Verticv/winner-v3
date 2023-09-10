@@ -142,7 +142,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
               className="text-20px tracking-tighter font-spoqaMedium text-white filter hover:brightness-125 mt-40px flex-shrink-0 rounded-full"
               onClick={() => setAuth(true)}
             >
-              <p className="text-20px h-20px flex items-center justify-center mt-px">로그인</p>
+              <p className="text-20px h-20px flex items-center justify-center mt-px font-semibold">로그인</p>
             </button>
 
             <div style={{ marginTop: "33px", color: "#5e399a", marginLeft: "-2px" }} className="text-16px">

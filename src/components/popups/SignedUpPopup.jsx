@@ -149,7 +149,7 @@ const SignedUpPopup = ({ setToLogin }) => {
             className="text-20px tracking-tighter font-spoqaMedium text-white filter hover:brightness-125 flex-shrink-0 rounded-full"
             onClick={() => setToLogin(true)}
           >
-            <p className="text-20px h-20px flex items-center justify-center mt-2px -ml-px">로그인</p>
+            <p className="text-20px h-20px flex items-center justify-center mt-2px -ml-px font-semibold">로그인</p>
           </button>
         </div>
       </div>

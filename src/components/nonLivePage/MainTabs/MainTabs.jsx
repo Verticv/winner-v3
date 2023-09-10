@@ -68,7 +68,7 @@ const MainTabs = () => {
       marginLeft: "5px",
       width: "108px",
       marginRight: "14px",
-      path: "/cscenter/policy/sportsgame/soccer",
+      path: "/cscenter/policy/sportsgame/live-sport",
     },
   ];
 

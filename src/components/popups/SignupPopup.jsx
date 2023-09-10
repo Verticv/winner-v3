@@ -824,7 +824,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                 className="text-20px tracking-tighter font-spoqaMedium text-white filter hover:brightness-125 flex-shrink-0 rounded-full"
                 onClick={() => setSignedUp(true)}
               >
-                <p className="text-20px h-20px flex items-center justify-center mt-px -ml-px tracking-tight">회원가입</p>
+                <p className="text-20px h-20px flex items-center justify-center mt-px -ml-px tracking-tight font-semibold">회원가입</p>
               </button>
 
               <div style={{ width: "274px" }} className="flex justify-between items-center mt-13px -ml-2px">

@@ -35,46 +35,37 @@ const CustomDropdown = ({ selectedOption, setSelectedOption }) => {
         height: "27px",
         borderRadius: "4px",
       }}
-      className="relative items-center justify-between  "
+      className="relative items-center justify-between"
     >
-      <button
-        type="button"
-        className="flex items-center justify-between focus:outline-none"
-        onClick={toggleDropdown}
-      >
-        <p
-          style={{ color: "#444444", letterSpacing: "-0.031em" }}
-          className="text-13px mt-4px ml-9px font-malgun"
-        >
+      <button type="button" className="flex items-center justify-between focus:outline-none" onClick={toggleDropdown}>
+        <p style={{ color: "#444444", letterSpacing: "-0.031em" }} className="text-13px mt-4px ml-9px">
           {" "}
           {selectedOption || "싱글"}{" "}
         </p>
         <img
           src={img}
           alt="img"
-          className={`ml-30px -mb-2px mt-3px transition-transform duration-300 ${
-            isOpen ? "transform rotate-180" : ""
-          }`}
+          className={`ml-30px -mb-2px mt-3px transition-transform duration-300 ${isOpen ? "transform rotate-180" : ""}`}
         />
       </button>
 
       {isOpen && (
         <div
           style={{
-            background: "#444444",
+            background: "#fff",
             width: "88px",
             borderRadius: "4px",
           }}
-          className="p-px absolute mt-6px -ml-px"
+          className="absolute mt-6px -ml-px border"
         >
           <div
             style={{
               background: "#ffffff",
               width: "86px",
               // height: "27px",
-              borderRadius: "4px",
+              borderRadius: "3px",
             }}
-            className="hover relative items-center justify-between"
+            className="hover relative items-center justify-between overflow-hidden"
           >
             <ul>
               {options.map((option) => (

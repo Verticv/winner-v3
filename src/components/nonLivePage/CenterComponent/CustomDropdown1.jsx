@@ -62,19 +62,19 @@ const CustomDropdown1 = () => {
       {isOpen && (
         <div
           style={{
-            background: "#444444",
-            width: "79px",
+            background: "#fff",
+            width: "77px",
             borderRadius: "4px",
           }}
-          className="p-px absolute mt-6px -ml-px z-30"
+          className="absolute mt-6px z-30 border"
         >
           <div
             style={{
               background: "#ffffff",
-              width: "77px",
-              borderRadius: "4px",
+              // width: "77px",
+              borderRadius: "3px",
             }}
-            className="hover relative items-center justify-between"
+            className="hover relative items-center justify-between overflow-hidden w-full"
           >
             <ul>
               {options.map((option) => (

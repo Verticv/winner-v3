@@ -80,7 +80,7 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     { text: "공지사항", id: 1, path: "/cscenter/announcement/all" },
     { text: "자주묻는질문", id: 2, path: "/cscenter/faq/all" },
     { text: "계좌문의", id: 3, path: "#" },
-    { text: "베팅규정", id: 4, path: "/cscenter/policy/sportsgame/soccer" },
+    { text: "베팅규정", id: 4, path: "/cscenter/policy/sportsgame/live-sport" },
   ];
 
   function TabsList({ items }) {

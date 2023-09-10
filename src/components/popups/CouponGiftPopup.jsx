@@ -76,12 +76,12 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
               쿠폰받을 회원
             </span>
             <input
-              style={{ width: "311px", borderColor: "#682aa7" }}
+              style={{ width: "309px", borderColor: "#682aa7" }}
               className="h-42px ml-14px bg-white border  rounded-6px flex items-center pl-11px pr-50px leading-none outline-none placeholder-gray-c8c8c8"
               placeholder="아이디를 입력해 주세요."
             />
             <button
-              style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)", top: "11px", right: "65px" }}
+              style={{ background: "linear-gradient(to top, #4f3a7a, #e597ff)", top: "11px", right: "67px" }}
               className="flex items-center justify-center w-42px h-42px rounded-6px flex-shrink-0  filter hover:brightness-125 shadow-btn absolute z-10"
             >
               <div
@@ -107,7 +107,7 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
               }}
               className="flex items-center justify-center h-52px filter hover:brightness-125"
             >
-              <span className="tracking-tight text-16px text-white pt-px text-shadow-5 font-bold">쿠폰발송</span>
+              <span className="tracking-tight text-16px text-white pt-px font-bold">쿠폰발송</span>
             </button>
           </div>
         </div>

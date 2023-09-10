@@ -13,7 +13,7 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
       className="flex flex-col overflow-hidden shadow-popup relative"
       style={{
         width: "609px",
-        height: "519px",
+        height: "520px",
         borderRadius: "20px",
         background: "linear-gradient(to right, #b870cd, #9068bf)",
         paddingTop: "2px",
@@ -80,12 +80,12 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
               }}
             />
           </div>
-          <div className="flex w-full mt-20px space-x-10px">
+          <div className="flex w-full mt-35px space-x-10px">
             <button
               className="flex items-center justify-center h-52px rounded-full hover:filter hover:brightness-125 shadow-panelBtn cursor-pointer"
               style={{ background: "linear-gradient(to right, #df52ff, #6b22ff)", width: "268px" }}
             >
-              <span className=" tracking-tight text-16px text-white text-shadow-5 pt-2px font-bold">포인트전환</span>
+              <span className=" tracking-tight text-16px text-white pt-2px font-bold">포인트전환</span>
             </button>
             <button
               className="flex items-center justify-center h-52px rounded-full  hover:filter hover:brightness-125 shadow-panelBtn cursor-pointer"
@@ -96,7 +96,7 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
               }
               style={{ background: "#9d3bbb", width: "268px" }}
             >
-              <span className="tracking-tight text-16px text-white text-shadow-5 pt-2px font-bold">상세내역</span>
+              <span className="tracking-tight text-16px text-white pt-2px font-bold">상세내역</span>
             </button>
           </div>
         </div>
