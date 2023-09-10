@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Expand from "react-expand-animated";
 import AugBanner from "../../images/navbarHover/8_1.png";
 import AugBannerLogo from "../../images/navbarHover/8_1_logo.png";
+import Instruction from "../../images/navbarHover/8_2.png";
 import { useHistory } from "react-router-dom";
 import useNavButtonPosition from "hooks/useNavButtonPosition";
 
@@ -18,6 +19,12 @@ const FishingGameHover = ({ selection }) => {
       logo: AugBannerLogo,
       imgText: "키론가상게임",
     },
+    {
+      id: 1,
+      background: Instruction,
+      logo: AugBannerLogo,
+      imgText: "이용가이드",
+    },
   ];
 
   function GamesList({ items }) {
@@ -30,7 +37,7 @@ const FishingGameHover = ({ selection }) => {
           background: "linear-gradient(to right, #9c3bbb, #411d99)",
         }}
         onMouseEnter={() => setHover(item.id)}
-        onClick={() => history.push(item.path)}
+        onClick={() => item.path && history.push(item.path)}
       >
         {isHover === item.id && (
           <button

@@ -301,7 +301,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               style={{ width: "235px", background: "rgb(56,35,114)" }}
               className="-mt-px ml-8px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
-              <img className="mr-10px -mt-px" src={SmallDiamond} alt="" />
+              <img className="mr-10px mt-px" src={SmallDiamond} alt="" />
               <div style={{ fontSize: "15px" }} className="flex items-center space-x-4px">
                 <span className="text-white">입금 :</span>
                 <span style={{ color: "#ffcc00" }}>000,000,000</span>
@@ -311,7 +311,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               style={{ width: "235px", background: "rgb(56,35,114)" }}
               className="-mt-px ml-5px pr-3px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
-              <img className="mr-10px -mt-px" src={SmallDiamond} alt="" />
+              <img className="mr-10px mt-px" src={SmallDiamond} alt="" />
               <div style={{ fontSize: "15px" }} className="flex items-center space-x-4px">
                 <span className="text-white">보너스 :</span>
                 <span style={{ color: "#ffcc00" }}>0</span>
@@ -321,7 +321,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
               style={{ width: "235px", background: "rgb(56,35,114)" }}
               className="-mt-px ml-5px pr-20px h-38px rounded-full  flex items-center justify-center text-14px tracking-tight"
             >
-              <img className="mr-10px -mt-px" src={SmallDiamond} alt="" />
+              <img className="mr-10px mt-px" src={SmallDiamond} alt="" />
               <div style={{ fontSize: "15px" }} className="flex items-center space-x-4px">
                 <span className="text-white">출금 :</span>
                 <span style={{ color: "#ffcc00" }}>0</span>
@@ -1242,7 +1242,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
                 style={{ width: "374px", borderColor: "#9361e5", background: "rgb(56,35,114)" }}
                 className="h-48px rounded-full border-2 flex items-center justify-center text-15px tracking-tight"
               >
-                <img className="mr-10px" src={Diamond} alt="" />
+                <img className="mr-10px mt-px" src={Diamond} alt="" />
                 <div className="flex items-center space-x-4px pt-2px">
                   <span className="text-white">보유금 총합계 :</span>
                   <span style={{ color: "#ffd98b" }}>75,000</span>

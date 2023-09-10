@@ -29,7 +29,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
       }}
       className="space-y-2 flex-shrink-0 flex items-center"
     >
-      <label style={{ color: "#ffffff" }} className="font-spoqaMedium text-16px ml-9px mt-2px tracking-tight">
+      <label style={{ color: "#ffffff" }} className="font-spoqaMedium text-14px ml-9px mt-2px tracking-tight font-bold">
         {text}
       </label>
     </div>
@@ -45,11 +45,11 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
       }}
       className="flex w-170px group cursor-pointer"
     >
-      <input className="w-0 text-16px" />
+      <input className="w-0 text-14px" />
       <div
         onFocus={() => setSelectedInput(4)}
         onBlur={(e) => setSelectedInput(false)}
-        className="flex w-full font-spoqaMedium text-16px outline-none h-full justify-between items-center group"
+        className="flex w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center group"
         style={{ color: "#717171" }}
       >
         <label className="ml-9px cursor-pointer mt-3px">{selectedCarrier}</label>
@@ -68,11 +68,11 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
       }}
       className="flex group cursor-pointer"
     >
-      <input className="w-0 text-16px" />
+      <input className="w-0 text-14px" />
       <div
         onFocus={() => setSelectedInput(4)}
         onBlur={(e) => setSelectedInput(false)}
-        className="flex w-full font-spoqaMedium text-16px outline-none h-full justify-between items-center group"
+        className="flex w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center group"
         style={{ color: "#717171" }}
       >
         <label className="ml-8px cursor-pointer mt-2px">{selectedBank}</label>
@@ -84,7 +84,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
   const carrierDropdown = (
     <div
       style={{ backgroundColor: "#fff", color: "#222222", width: "170px" }}
-      className="flex flex-col items-center justify-center py-5px rounded shadow-plain5 font-spoqaMedium text-16px mt-9px"
+      className="flex flex-col items-center justify-center py-5px rounded shadow-plain5 font-spoqaMedium text-14px mt-9px"
     >
       <button
         className={dropDownCellClass}
@@ -124,7 +124,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
         width: "170px",
         height: "170px",
       }}
-      className="flex flex-col py-5px rounded-lg shadow-plain5 font-spoqaMedium text-16px overflow-y-scroll overflow-x-hidden mt-9px"
+      className="flex flex-col py-5px rounded-lg shadow-plain5 font-spoqaMedium text-14px overflow-y-scroll overflow-x-hidden mt-9px"
     >
       <button
         className={dropDownCellClass}
@@ -456,7 +456,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         backgroundColor: "#fff",
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-10px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-10px"
                       onFocus={(e) => setSelectedInput(0)}
                       onBlur={(e) => setSelectedInput(false)}
                     />
@@ -496,7 +496,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-10px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-10px"
                       onFocus={(e) => setSelectedInput(1)}
                       onBlur={(e) => setSelectedInput(false)}
                       type="password"
@@ -537,7 +537,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-10px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-10px"
                       onFocus={(e) => setSelectedInput(2)}
                       onBlur={(e) => setSelectedInput(false)}
                       type="password"
@@ -578,7 +578,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-10px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-10px"
                       onFocus={(e) => setSelectedInput(3)}
                       onBlur={(e) => setSelectedInput(false)}
                     />
@@ -628,7 +628,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-10px placeholder-gray-c8c8c8 pt-px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-10px placeholder-gray-c8c8c8 pt-px"
                       placeholder="휴대폰번호(숫자만 입력)"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -700,7 +700,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-gray-c8c8c8 pt-3px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-8px placeholder-gray-c8c8c8 pt-3px"
                       placeholder="가입코드"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -751,7 +751,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-11px placeholder-gray-c8c8c8 pt-3px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-11px placeholder-gray-c8c8c8 pt-3px"
                       placeholder="예금주"
                       onFocus={(e) => {
                         e.target.placeholder = "";
@@ -791,7 +791,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
                         boxShadow: "inset 1px 1px 0px 0px #00000070",
                         borderRadius: "4px",
                       }}
-                      className="w-full font-spoqaMedium text-16px outline-none px-8px placeholder-gray-c8c8c8 pt-3px"
+                      className="w-full font-spoqaMedium text-14px outline-none px-8px placeholder-gray-c8c8c8 pt-3px"
                       placeholder="계좌번호(숫자만 입력)"
                       onFocus={(e) => {
                         e.target.placeholder = "";

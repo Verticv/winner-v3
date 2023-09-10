@@ -743,7 +743,7 @@ const RightComponent = () => {
             {location.pathname === "/bet-combination/special" ? (
               <div style={{ background: "#5e399a" }} className="flex items-center justify-center h-70px rounded-b-md">
                 <p style={{ color: "#ffffff" }} className="text-12px tracking-tight font-malgun">
-                  배팅내역이 없습니다.
+                  베팅내역이 없습니다.
                 </p>
               </div>
             ) : (

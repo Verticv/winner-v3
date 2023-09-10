@@ -562,7 +562,7 @@ const FreeBoardView2 = () => {
           <div className="flex items-center justify-center cursor-pointer">
             <span
               style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-spoqaMedium tracking-tight text-16px text-golden-highLight pt-px text-white mb-3px"
+              className="font-bold tracking-tight text-16px text-golden-highLight pt-px text-white mb-3px"
             >
               목록보기
             </span>
