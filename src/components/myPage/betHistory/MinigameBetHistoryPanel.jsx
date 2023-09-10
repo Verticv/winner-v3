@@ -193,10 +193,10 @@ const MinigameBetHistoryPanel = ({
 
   return (
     <div
-      className="w-full shadow-table p-px rounded-4px"
+      className="w-full shadow-table p-px rounded-10px"
       style={{ background: "linear-gradient(to top, #ededeb, #cb78e6)" }}
     >
-      <div className="w-full bg-white rounded-6px pb-10px overflow-hidden">
+      <div className="w-full bg-white rounded-9px pb-10px overflow-hidden">
         <div
           className="flex h-54px w-full  text-14px tracking-tight text-eeeeee font-semibold"
           style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)", letterSpacing: "-0.015em" }}

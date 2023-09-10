@@ -55,10 +55,11 @@ const HorizontalMenu = ({
 
             <span
               className={`${pathname === item.path ? "text-black" : "text-golden-ccc2b6"} 
-                  text-13px tracking-Stightest mt-px font-semibold`}
+                  text-13px mt-px font-semibold`}
               style={{
                 color: pathname === item.path ? "#fff" : "#2d2834",
                 lineHeight: "1.2",
+                letterSpacing: "-0.1em",
               }}
             >
               {item.text}

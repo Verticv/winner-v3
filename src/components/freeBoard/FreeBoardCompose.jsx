@@ -38,7 +38,7 @@ const FreeBoardCompose = () => {
           >
             <input
               style={{ backgroundColor: "#f7f7f7" }}
-              className="bg-gray-2e2e2e outline-none w-full h-full px-19px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-gray-c8c8c8"
+              className="bg-gray-2e2e2e outline-none w-full h-full px-19px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-gray-c8c8c8 text-r444444"
               placeholder="제목을 입력하세요."
             />
           </div>
@@ -79,7 +79,7 @@ const FreeBoardCompose = () => {
           >
             <textarea
               style={{ resize: "none", backgroundColor: "#ffffff" }}
-              className="scroll-div2 bg-gray-323232 outline-none w-full h-full  px-19px pb-19px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-gray-c8c8c8"
+              className="scroll-div2 bg-gray-323232 outline-none w-full h-full  px-19px pb-19px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-r444444"
               placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
             />
           </div>

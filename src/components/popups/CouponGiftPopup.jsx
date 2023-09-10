@@ -77,7 +77,7 @@ const CouponGiftPopup = ({ setPopupOpen }) => {
             </span>
             <input
               style={{ width: "309px", borderColor: "#682aa7" }}
-              className="h-42px ml-14px bg-white border  rounded-6px flex items-center pl-11px pr-50px leading-none outline-none placeholder-gray-c8c8c8"
+              className="h-42px ml-14px bg-white border text-r444444  rounded-6px flex items-center pl-11px pr-50px leading-none outline-none placeholder-gray-c8c8c8"
               placeholder="아이디를 입력해 주세요."
             />
             <button

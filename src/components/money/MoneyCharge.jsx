@@ -188,7 +188,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444 -mt-px">1만원</span>
+                <span className="tracking-tight text-14px text-r444444 -mt-px font-semibold">1만원</span>
               </div>
             </button>
 
@@ -204,7 +204,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444 -mt-px">3만원</span>
+                <span className="tracking-tight text-14px text-r444444 -mt-px font-semibold">3만원</span>
               </div>
             </button>
 
@@ -220,7 +220,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444 -mt-px">5만원</span>
+                <span className="tracking-tight text-14px text-r444444 -mt-px font-semibold">5만원</span>
               </div>
             </button>
 
@@ -236,7 +236,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444 -mt-px">10만원</span>
+                <span className="tracking-tight text-14px text-r444444 -mt-px font-semibold">10만원</span>
               </div>
             </button>
 
@@ -252,7 +252,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444 -mt-px">30만원</span>
+                <span className="tracking-tight text-14px text-r444444 -mt-px font-semibold">30만원</span>
               </div>
             </button>
 
@@ -268,7 +268,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444 -mt-px">50만원</span>
+                <span className="tracking-tight text-14px text-r444444 -mt-px font-semibold">50만원</span>
               </div>
             </button>
 
@@ -284,7 +284,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444 -mt-px">100만원</span>
+                <span className="tracking-tight text-14px text-r444444 -mt-px font-semibold">100만원</span>
               </div>
             </button>
 
@@ -300,7 +300,7 @@ const MoneyCharge = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-6px  cursor-pointer hover:brightness-125 filter"
                 style={{ background: "linear-gradient(to top, #6b22ff, #df52ff)" }}
               >
-                <span className="tracking-tight text-14px text-white -mt-px text-shadow-5">정정</span>
+                <span className="tracking-tight text-14px text-white -mt-px text-shadow-5 font-semibold">정정</span>
               </div>
             </button>
           </div>

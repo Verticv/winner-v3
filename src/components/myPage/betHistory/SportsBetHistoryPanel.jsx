@@ -174,9 +174,9 @@ const SportsBetHistoryPanel = ({
           }}
           className={`${
             isAttached
-              ? "w-70px pl-16px"
+              ? "w-70px pl-14px"
               : isPopup
-              ? "w-63px pl-17px"
+              ? "w-63px pl-16px"
               : !isAttached
               ? "w-70px pl-5px"
               : "w-70px pl-13px"

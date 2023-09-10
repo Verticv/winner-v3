@@ -156,7 +156,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444">1천P</span>
+                <span className="tracking-tight text-14px text-r444444 font-semibold">1천P</span>
               </div>
             </button>
 
@@ -172,7 +172,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444">5천P</span>
+                <span className="tracking-tight text-14px text-r444444 font-semibold">5천P</span>
               </div>
             </button>
 
@@ -188,7 +188,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444">1만P</span>
+                <span className="tracking-tight text-14px text-r444444 font-semibold">1만P</span>
               </div>
             </button>
 
@@ -204,7 +204,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444">5만P</span>
+                <span className="tracking-tight text-14px text-r444444 font-semibold">5만P</span>
               </div>
             </button>
 
@@ -220,7 +220,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444">10만P</span>
+                <span className="tracking-tight text-14px text-r444444 font-semibold">10만P</span>
               </div>
             </button>
 
@@ -236,7 +236,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444">50만P</span>
+                <span className="tracking-tight text-14px text-r444444 font-semibold">50만P</span>
               </div>
             </button>
 
@@ -252,7 +252,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px  cursor-pointer hover:filter hover:brightness-125"
                 style={{ background: "linear-gradient(0deg, #e5e5e5, #ffffff)" }}
               >
-                <span className="tracking-tight text-14px text-r444444">100만P</span>
+                <span className="tracking-tight text-14px text-r444444 font-semibold">100만P</span>
               </div>
             </button>
 
@@ -268,7 +268,7 @@ const PointsApply = () => {
                 className="flex items-center justify-center h-40px w-73px  rounded-5px cursor-pointer hover:filter hover:brightness-125 text-shadow-5"
                 style={{ background: "linear-gradient(to top, #6b22ff, #df52ff)" }}
               >
-                <span className="tracking-tight text-14px text-white">정정</span>
+                <span className="tracking-tight text-14px text-white font-semibold">정정</span>
               </div>
             </button>
           </div>

@@ -10,7 +10,6 @@ import TitleIcon from "../../images/title-icon1.png";
 const LiveSportStructure = () => {
   const TitleText = ({ number = "01", title = "싱글뷰 화면구성" }) => (
     <div className="flex items-center">
-      {/* <div style={{background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius:"3px"}} className="w-8px h-20px"></div> */}
       <img className="z-10 object-none" src={TitleIcon} alt="" />
       <span
         style={{ color: "#444444" }}
@@ -58,7 +57,14 @@ const LiveSportStructure = () => {
       <span
         style={{
           color: "#828282",
-          letterSpacing: text === "라이브경기는 실시간으로 경기영상을 제공하며" ? "-0.1rem" : "-0.091em",
+          letterSpacing:
+            text === "라이브경기는 실시간으로 경기영상을 제공하며" ||
+            text === "배당률 변경(업/다운) 시 화살표 아이콘 표시" || 
+            text === "클릭 시 해당 배당 즐겨찾기 추가 및 확인 가능" ||
+            text === "클릭 시 해당 경기 즐겨찾기 추가 및 확인 가능" ||
+            text === "버튼을 누르면 해당 경기는 싱글뷰 화면으로"
+              ? "-0.1rem"
+              : "-0.025em",
         }}
         className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px`}
       >
@@ -73,7 +79,7 @@ const LiveSportStructure = () => {
       </span>
       {text2 && (
         <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
+          style={{ color: "#828282", letterSpacing: "-0.025em" }}
           className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
         >
           {text2}
@@ -88,7 +94,7 @@ const LiveSportStructure = () => {
         </span>
       )}
       {other && (
-        <div className="flex mt-px py-20px">
+        <div className="flex mt-px pt-20px">
           <span
             style={{ color: "#828282", letterSpacing: "-0.1em" }}
             className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
@@ -183,7 +189,7 @@ const LiveSportStructure = () => {
         </div>
       )}
       {other && (
-        <div className="flex mt-px py-20px">
+        <div className="flex mt-px pt-20px">
           <span
             style={{ color: "#828282", letterSpacing: "-0.1em" }}
             className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
@@ -259,10 +265,10 @@ const LiveSportStructure = () => {
             className="w-full rounded-xl p-px -mt-px"
             style={{
               backgroundColor: "#cccccc",
-              height: "658px",
+              height: "638px",
             }}
           >
-            <div style={{ backgroundColor: "#ffffff", height: "656px" }} className="w-full h-full rounded-xl p-20px">
+            <div style={{ backgroundColor: "#ffffff", height: "636px" }} className="w-full h-full rounded-xl p-20px">
               <TitleText number="02" />
 
               <div className="mt-20px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
@@ -355,9 +361,9 @@ const LiveSportStructure = () => {
                 <Item
                   number="2."
                   title="멀티화면"
-                  text="총 9개의 멀티화면을 제공하며 상단에 있는"
-                  text2="① 경기를 더블 클릭하거나 해당 멀티화면으로"
-                  text3="드래그하면 경기 추가 가능"
+                  text="총 9개의 멀티화면을 제공하며"
+                  text2="상단에 있는 ① 경기를 더블 클릭하거나"
+                  text3="해당 멀티화면으로 드래그하면 경기 추가 가능"
                 />
                 <LongItem
                   number="3."
