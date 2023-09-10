@@ -45,9 +45,9 @@ const KironPage = ({ isAuthenticated, setAuthenticated }) => {
       <div style={{ marginTop: "154px" }} className="flex flex-col items-start limit:items-center w-full h-full">
         <Route path="/kiron/guide">
           <DirectoryComponent
-            branch1="e-스포츠"
-            branch2="화면구성설명"
-            mainPath="/esports/structure"
+            branch1="키론가상게임"
+            branch2="이용가이드"
+            mainPath="/kiron/guide"
             setSelectedTab={setSelectedTab}
           />
         </Route>
