@@ -16,10 +16,9 @@ const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null 
         key={item.id}
         style={{
           height: "57px",
-          background:
-            pathname === item.path
-              ? "linear-gradient( to top, #4f3a7a, #cb78e6)"
-              : "linear-gradient( to top, #4f3a7a, #f0d3ff)",
+          background: pathname.includes(item.path)
+            ? "linear-gradient( to top, #4f3a7a, #cb78e6)"
+            : "linear-gradient( to top, #4f3a7a, #f0d3ff)",
           boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.6)",
         }}
         className="relative overflow-hidden w-full flex p-px items-end rounded-6px hover:filter hover:brightness-110"
@@ -36,18 +35,17 @@ const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null 
         <div
           style={{
             height: "55px",
-            background:
-              pathname === item.path
-                ? "linear-gradient(to top, #491f9c, #9e3cbc)"
-                : "linear-gradient(to top, #ccc4ff, #ffd9f5)",
+            background: pathname.includes(item.path)
+              ? "linear-gradient(to top, #491f9c, #9e3cbc)"
+              : "linear-gradient(to top, #ccc4ff, #ffd9f5)",
           }}
           className="w-full flex rounded-6px"
         >
           <div className={`w-full rounded-3px flex flex-col justify-start pt-12px items-center relative`}>
             <span
-              style={{ color: pathname === item.path ? "#ffffff" : "#5e399a" }}
+              style={{ color: pathname.includes(item.path) ? "#ffffff" : "#5e399a" }}
               className={`${
-                pathname === item.path ? "text-gray-252525" : "text-golden-ccc2b6"
+                pathname.includes(item.path) ? "text-gray-252525" : "text-golden-ccc2b6"
               } text-20px font-bold tracking-tight`}
             >
               {item.text}

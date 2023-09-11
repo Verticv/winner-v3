@@ -48,51 +48,51 @@ const Contact = () => {
       icon: Icon2,
       iconHighlight: IconHighlight2,
       id: 1,
-      path: "/cscenter/contact/all/live-casino",
+      path: "/cscenter/contact/live-casino",
     },
-    { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/contact/all/slot" },
+    { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/contact/slot" },
     {
       text: "라이브스포츠",
       icon: Icon14,
       iconHighlight: IconHighlight14,
       id: 14,
-      path: "/cscenter/contact/all/live-sport",
+      path: "/cscenter/contact/live-sport",
     },
-    { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/contact/all/sports" },
+    { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/contact/sports" },
     {
       text: "호텔카지노",
       icon: Icon5,
       iconHighlight: IconHighlight5,
       id: 4,
-      path: "/cscenter/contact/all/hotel-casino",
+      path: "/cscenter/contact/hotel-casino",
     },
-    { text: "홀덤게임", icon: Icon15, iconHighlight: IconHighlight15, id: 15, path: "/cscenter/contact/all/holdem" },
-    { text: "e-스포츠", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/cscenter/contact/all/e-sports" },
-    { text: "미니게임", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/cscenter/contact/all/minigame" },
-    { text: "키론가상게임", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/cscenter/contact/all/ar-game" },
+    { text: "홀덤게임", icon: Icon15, iconHighlight: IconHighlight15, id: 15, path: "/cscenter/contact/holdem" },
+    { text: "e-스포츠", icon: Icon6, iconHighlight: IconHighlight6, id: 5, path: "/cscenter/contact/e-sports" },
+    { text: "미니게임", icon: Icon7, iconHighlight: IconHighlight7, id: 6, path: "/cscenter/contact/minigame" },
+    { text: "키론가상게임", icon: Icon8, iconHighlight: IconHighlight8, id: 7, path: "/cscenter/contact/ar-game" },
     {
       text: "피싱게임",
       icon: Icon9,
       iconHighlight: IconHighlight9,
       id: 8,
-      path: "/cscenter/contact/all/phishing-game",
+      path: "/cscenter/contact/phishing-game",
     },
-    { text: "티비벳", icon: Icon10, iconHighlight: IconHighlight10, id: 9, path: "/cscenter/contact/all/bet" },
+    { text: "티비벳", icon: Icon10, iconHighlight: IconHighlight10, id: 9, path: "/cscenter/contact/bet" },
     {
       text: "충전/환전",
       icon: Icon11,
       iconHighlight: IconHighlight11,
       id: 10,
-      path: "/cscenter/contact/all/transaction",
+      path: "/cscenter/contact/transaction",
     },
     {
       text: "베팅관련",
       icon: Icon16,
       iconHighlight: IconHighlight16,
       id: 11,
-      path: "/cscenter/contact/all/about-betting",
+      path: "/cscenter/contact/about-betting",
     },
-    { text: "기타", icon: Icon13, iconHighlight: IconHighlight13, id: 12, path: "/cscenter/contact/all/other" },
+    { text: "기타", icon: Icon13, iconHighlight: IconHighlight13, id: 12, path: "/cscenter/contact/other" },
   ];
 
   const inboxArray = [
@@ -103,7 +103,7 @@ const Contact = () => {
       time: "2021.06.29 07:35",
       category: "계좌문의",
       isClicked: true,
-      path: "/cscenter/contact/view/1",
+      path: "/cscenter/contact-view/1",
     },
     {
       id: 1,
@@ -111,7 +111,7 @@ const Contact = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       category: "스포츠북",
-      path: "/cscenter/contact/view/2",
+      path: "/cscenter/contact-view/2",
     },
     {
       id: 2,
@@ -119,7 +119,7 @@ const Contact = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       category: "카지노",
-      path: "/cscenter/contact/view/3",
+      path: "/cscenter/contact-view/3",
     },
     {
       id: 3,
@@ -127,7 +127,7 @@ const Contact = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       category: "키론가상게임",
-      path: "/cscenter/contact/view/4",
+      path: "/cscenter/contact-view/4",
     },
     {
       id: 4,
@@ -135,7 +135,7 @@ const Contact = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       category: "미니게임",
-      path: "/cscenter/contact/view/5",
+      path: "/cscenter/contact-view/5",
     },
     {
       id: 5,
@@ -143,7 +143,7 @@ const Contact = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       category: "슬롯",
-      path: "/cscenter/contact/view/6",
+      path: "/cscenter/contact-view/6",
     },
     {
       id: 6,
@@ -151,7 +151,7 @@ const Contact = () => {
       isRead: false,
       time: "2021.06.29 07:35",
       category: "충전환전",
-      path: "/cscenter/contact/view/7",
+      path: "/cscenter/contact-view/7",
     },
     {
       id: 7,
@@ -159,7 +159,7 @@ const Contact = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       category: "베팅관련",
-      path: "/cscenter/contact/view/8",
+      path: "/cscenter/contact-view/8",
     },
     {
       id: 8,
@@ -167,7 +167,7 @@ const Contact = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       category: "기타",
-      path: "/cscenter/contact/view/9",
+      path: "/cscenter/contact-view/9",
     },
     {
       id: 9,
@@ -175,7 +175,7 @@ const Contact = () => {
       isRead: false,
       time: "2021.06.29 07:35",
       category: "기타",
-      path: "/cscenter/contact/view/10",
+      path: "/cscenter/contact-view/10",
     },
   ];
 
@@ -316,7 +316,7 @@ const Contact = () => {
           </button>
           <button
             className="flex items-center justify-center h-36px w-88px rounded-6px  p-px hover:filter hover:brightness-125 cursor-pointer"
-            onClick={() => history.push("/cscenter/contact/compose")}
+            onClick={() => history.push("/cscenter/contact-compose")}
             style={{
               background: "linear-gradient(to right, #15cfee, #3197e5)",
               boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",

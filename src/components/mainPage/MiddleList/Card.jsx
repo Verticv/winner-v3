@@ -33,7 +33,7 @@ const Card = ({ children, HeaderIcon, headerText, headerActionText }) => {
           </p>
         </div>
         {headerActionText && (
-          <Link to={headerText === "게시판" ? "/freeboard" : "/cscenter/announcement/all"}>
+          <Link to={headerText === "게시판" ? "/freeboard/main" : "/cscenter/announcement/all"}>
             <div
               style={{ color: "#e1b8ff" }}
               className="flex items-center cursor-pointer font-spoqaMedium text-12px h-12px tracking-tighter hover:filter hover:brightness-125"

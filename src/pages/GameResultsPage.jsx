@@ -55,7 +55,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
         <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
           <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
         </div>
-        <Route exact path="/gameresults/sports/win-draw-lose">
+        <Route exact path="/gameresults/sports/win-draw-lose*">
           <DirectoryComponent
             branch1="경기결과"
             branch2="스포츠"
@@ -65,7 +65,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedSubTab={setSelectedSubTab}
           />
         </Route>
-        <Route exact path="/gameresults/sports/handicap">
+        <Route exact path="/gameresults/sports/handicap*">
           <DirectoryComponent
             branch1="경기결과"
             branch2="스포츠"
@@ -75,7 +75,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedSubTab={setSelectedSubTab}
           />
         </Route>
-        <Route exact path="/gameresults/sports/unover">
+        <Route exact path="/gameresults/sports/unover*">
           <DirectoryComponent
             branch1="경기결과"
             branch2="스포츠"
@@ -85,7 +85,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedSubTab={setSelectedSubTab}
           />
         </Route>
-        <Route exact path="/gameresults/sports/special">
+        <Route exact path="/gameresults/sports/special*">
           <DirectoryComponent
             branch1="경기결과"
             branch2="스포츠"
@@ -95,7 +95,7 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedSubTab={setSelectedSubTab}
           />
         </Route>
-        <Route path="/gameresults/minigame">
+        <Route path="/gameresults/minigame*">
           <DirectoryComponent
             branch1="경기결과"
             branch2="미니게임"
@@ -126,19 +126,19 @@ const GameResultsPage = ({ isAuthenticated, setAuthenticated }) => {
           </div>
 
           <div style={{ width: "1040px" }} className="ml-20px">
-            <Route exact path="/gameresults/sports/win-draw-lose">
+            <Route exact path="/gameresults/sports/win-draw-lose*">
               <WinDrawLose />
             </Route>
-            <Route exact path="/gameresults/sports/handicap">
+            <Route exact path="/gameresults/sports/handicap*">
               <WinDrawLose pageTitle="핸디캡" />
             </Route>
-            <Route exact path="/gameresults/sports/unover">
+            <Route exact path="/gameresults/sports/unover*">
               <WinDrawLose pageTitle="언오버" />
             </Route>
-            <Route exact path="/gameresults/sports/special">
+            <Route exact path="/gameresults/sports/special*">
               <WinDrawLose pageTitle="스페셜" />
             </Route>
-            <Route path="/gameresults/minigame">
+            <Route path="/gameresults/minigame*">
               <MinigameResults />
             </Route>
 

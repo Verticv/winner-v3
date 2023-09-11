@@ -16,8 +16,8 @@ const DirectoryComponent = ({
 
   function branch1Clicked(branch1) {
     if (branch1 === "마이페이지") {
-      history.push("/mypage/bet-history");
-      setSelectedTab("/mypage/bet-history");
+      history.push("/mypage/bet-history/all");
+      setSelectedTab("/mypage/bet-history/all");
     } else if (branch1 === "출석부") {
       history.push("/attendance");
       setSelectedTab("/attendance");
@@ -34,7 +34,7 @@ const DirectoryComponent = ({
         setSelectedSubTab("/gameresults/sports/win-draw-lose");
       }
     } else if (branch1 === "게시판") {
-      history.push("/freeboard");
+      history.push("/freeboard/main");
     } else if (branch1 === "e-스포츠") {
       history.push("/esports/structure");
       setSelectedTab("/esports/structure");

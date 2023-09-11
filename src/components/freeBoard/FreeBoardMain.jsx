@@ -624,7 +624,7 @@ const FreeBoardMain = () => {
 
       <div className="mt-20px flex justify-end">
         <button
-          onClick={() => history.push("/freeboard/compose/live-casino")}
+          onClick={() => history.push("/freeboard-compose/live-casino")}
           className="flex items-center justify-center h-36px w-118px mr-px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 hover:filter hover:brightness-125 shadow-link"
         >
           <div

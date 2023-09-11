@@ -20,7 +20,7 @@ const LoggedInHeader = ({ setAuth }) => {
       <div className="flex items-center">
         <button
           className="flex items-center h-13px mr-8px flex-shrink-0"
-          onClick={() => history.push("/mypage/bet-history")}
+          onClick={() => history.push("/mypage/bet-history/all")}
         >
           <img src={Nav13} alt="" className="mr-4px object-none" />
           <div className="text-white text-14px h-13px flex items-center font-spoqa">

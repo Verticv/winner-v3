@@ -5,7 +5,7 @@ import announcementItems from "../../../images/middleList/announcement_item.png"
 import { Link } from "react-router-dom";
 
 const Item = ({ text }) => (
-  <Link to="/cscenter/announcement/view">
+  <Link to="/cscenter/announcement-view">
     <div className="flex h-14px items-center hover:filter hover:brightness-125 cursor-pointer transition">
       <img className="ml-15px mr-9px object-none" src={announcementItems} alt="" />
       <p

@@ -105,7 +105,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
       </div>
 
       <div style={{ marginTop: "125px" }} className="flex flex-col items-start limit:items-center w-full h-full">
-        <Route path="/cscenter/contact/all*">
+        <Route path="/cscenter/contact/*">
           <DirectoryComponent
             branch1="고객센터"
             branch2="문의하기"
@@ -113,7 +113,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedTab={setSelectedTab}
           />
         </Route>
-        <Route path="/cscenter/contact/view/*">
+        <Route path="/cscenter/contact-view*">
           <DirectoryComponent
             branch1="고객센터"
             branch2="문의하기"
@@ -122,7 +122,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedTab={setSelectedTab}
           />
         </Route>
-        <Route path="/cscenter/contact/compose">
+        <Route path="/cscenter/contact-compose*">
           <DirectoryComponent
             branch1="고객센터"
             branch2="문의하기"
@@ -131,7 +131,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedTab={setSelectedTab}
           />
         </Route>
-        <Route exact path="/cscenter/announcement/all*">
+        <Route exact path="/cscenter/announcement/*">
           <DirectoryComponent
             branch1="고객센터"
             branch2="공지사항"
@@ -139,7 +139,7 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
             setSelectedTab={setSelectedTab}
           />
         </Route>
-        <Route path="/cscenter/announcement/view">
+        <Route path="/cscenter/announcement-view">
           <DirectoryComponent
             branch1="고객센터"
             branch2="공지사항"
@@ -220,23 +220,23 @@ const CSCenterPage = ({ isAuthenticated, setAuthenticated }) => {
           </div>
 
           <div style={{ width: "1040px" }} className="ml-20px">
-            <Route path="/cscenter/contact/all/">
+            <Route path="/cscenter/contact/*">
               <Contact />
             </Route>
-            <Route path="/cscenter/contact/view/*">
+            <Route path="/cscenter/contact-view*">
               <ContactView />
             </Route>
-            <Route path="/cscenter/contact/compose">
+            <Route path="/cscenter/contact-compose*">
               <ContactCompose />
             </Route>
 
-            <Route path="/cscenter/announcement/all/">
+            <Route path="/cscenter/announcement/*">
               <Announcement />
             </Route>
-            <Route exact path="/cscenter/announcement/view">
+            <Route exact path="/cscenter/announcement-view*">
               <AnnouncementView />
             </Route>
-            <Route path="/cscenter/faq">
+            <Route path="/cscenter/faq*">
               <Faq />
             </Route>
             <Route path="/cscenter/policy/sportsgame">

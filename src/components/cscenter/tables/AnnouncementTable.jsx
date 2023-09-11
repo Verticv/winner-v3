@@ -132,7 +132,7 @@ const AnnouncementTable = () => {
         </thead>
         <tbody
           className="w-full text-r444444 text-14px tracking-tight cursor-pointer"
-          onClick={() => history.push("/cscenter/announcement/view")}
+          onClick={() => history.push("/cscenter/announcement-view")}
         >
           <Cells items={ExampleArray} />
         </tbody>

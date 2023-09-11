@@ -62,7 +62,7 @@ const Menus = () => {
                 optionIconHighlight2={TransactionHistoryIconHighlight}
                 optionIconHighlight3={PointHistoryIconHighlight}
                 extraIconCss="w-41px h-50px mr-6px mb-px"
-                path1="/mypage/bet-history"
+                path1="/mypage/bet-history/all"
                 path2="/mypage/transaction/charge-history"
                 path3="/mypage/points/points-accumulate-history"
             />
@@ -80,7 +80,7 @@ const Menus = () => {
                 optionIconHighlight3={ManageProfileIconHighlight}
                 extraIconCss="w-43px h-52px mr-6px -mb-px"
                 path1="/attendance"
-                path2="/mypage/inbox"
+                path2="/mypage/inbox/main"
                 path3=""
             />
             <MenuCard 

@@ -16,7 +16,7 @@ const Inbox = () => {
       time: "2021.06.29 07:35",
       type: "일반",
       isClicked: true,
-      path: "/mypage/inbox/1",
+      path: "/mypage/inbox/view1",
     },
     {
       id: 1,
@@ -24,7 +24,7 @@ const Inbox = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/2",
+      path: "/mypage/inbox/view2",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ const Inbox = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/3",
+      path: "/mypage/inbox/view3",
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Inbox = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/4",
+      path: "/mypage/inbox/view4",
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ const Inbox = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/5",
+      path: "/mypage/inbox/view5",
     },
     {
       id: 5,
@@ -56,7 +56,7 @@ const Inbox = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/6",
+      path: "/mypage/inbox/view6",
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ const Inbox = () => {
       isRead: false,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/7",
+      path: "/mypage/inbox/view7",
     },
     {
       id: 7,
@@ -72,7 +72,7 @@ const Inbox = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/8",
+      path: "/mypage/inbox/view8",
     },
     {
       id: 8,
@@ -80,7 +80,7 @@ const Inbox = () => {
       isRead: true,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/9",
+      path: "/mypage/inbox/view9",
     },
     {
       id: 9,
@@ -88,7 +88,7 @@ const Inbox = () => {
       isRead: false,
       time: "2021.06.29 07:35",
       type: "일반",
-      path: "/mypage/inbox/10",
+      path: "/mypage/inbox/view10",
     },
   ];
 

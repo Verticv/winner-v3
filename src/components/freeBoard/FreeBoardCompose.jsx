@@ -92,7 +92,7 @@ const FreeBoardCompose = () => {
             width: "192px",
             boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
           }}
-          onClick={() => history.push("/freeboard")}
+          onClick={() => history.push("/freeboard/main")}
           className="flex items-center justify-center h-52px rounded-6px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 hover:filter hover:brightness-125 shadow-link"
         >
           <div
@@ -111,7 +111,7 @@ const FreeBoardCompose = () => {
           </div>
         </button>
         <button
-          onClick={() => history.push("/freeboard")}
+          onClick={() => history.push("/freeboard/main")}
           className="flex items-center justify-center h-52px rounded-6px  shadow-link hover:filter hover:brightness-125"
           style={{
             // background: "linear-gradient(to top, #4b3b09, #e8b888)",

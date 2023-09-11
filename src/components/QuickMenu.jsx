@@ -117,12 +117,12 @@ const QuickMenu = () => {
       >
         <div style={{ height: "360px" }} className="grid gap-5px grid-cols-2 mb-10px">
           <Button text="출석부" img={Quick1} path="/attendance" />
-          <Button text="게시판" img={Quick2} path="/freeboard" />
+          <Button text="게시판" img={Quick2} path="/freeboard/main" />
           <Button text="경기결과" img={Quick3} path="/gameresults/sports/win-draw-lose" />
           <Button text="베팅규정" img={Quick4} path="/cscenter/policy/sportsgame/live-sport" />
           <Button text="문의하기" img={Quick5} path="/cscenter/contact/all" />
           <Button text="계좌문의" img={Quick6} path="#" />
-          <Button text="베팅내역" img={Quick7} path="/mypage/bet-history" />
+          <Button text="베팅내역" img={Quick7} path="/mypage/bet-history/all" />
           <Button text="충/환전내역" img={Quick8} path="/mypage/transaction/charge-history" />
           <Button text="라이브영상" img={Quick9} />
           <Button text="비번변경" img={Quick10} path={location === "/" ? "/reauth" : `${location}/reauth`} />

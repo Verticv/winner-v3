@@ -41,17 +41,14 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
         <QuickMenu scrollPosition={scrollPosition} />
       </div>
       <div style={{ marginTop: "154px" }} className="flex flex-col items-start limit:items-center w-full h-full">
-        <Route exact path="/freeboard">
-          <DirectoryComponent branch1="게시판" mainPath="/freeboard" />
+        <Route exact path="/freeboard/main*">
+          <DirectoryComponent branch1="게시판" mainPath="/freeboard/main" />
         </Route>
-        <Route path="/freeboard/view">
+        <Route path="/freeboard/view*">
           <DirectoryComponent branch1="게시판" branch2="뷰" mainPath="/freeboard/view" />
         </Route>
-        <Route path="/freeboard/view2">
-          <DirectoryComponent branch1="게시판" branch2="뷰" mainPath="/freeboard/view" />
-        </Route>
-        <Route path="/freeboard/compose">
-          <DirectoryComponent branch1="게시판" branch2="작성하기" mainPath="/freeboard/compose" />
+        <Route path="/freeboard/compose*">
+          <DirectoryComponent branch1="게시판" branch2="작성하기" mainPath="/freeboard-compose" />
         </Route>
 
         <div style={{ height: "136px", width: "1280px" }} className="relative flex-shrink-0">
@@ -68,16 +65,16 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
           </div>
         </div>
         <div className="mt-13px w-default z-30">
-          <Route exact path="/freeboard">
+          <Route exact path="/freeboard/main*">
             <FreeBoardMain />
           </Route>
-          <Route path="/freeboard/view">
+          <Route path="/freeboard/view/*">
             <FreeBoardView />
           </Route>
-          <Route path="/freeboard/view2">
+          <Route path="/freeboard/view2*">
             <FreeBoardView2 />
           </Route>
-          <Route path="/freeboard/compose">
+          <Route path="/freeboard/compose*">
             <FreeBoardCompose />
           </Route>
         </div>

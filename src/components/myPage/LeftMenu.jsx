@@ -183,31 +183,31 @@ const LeftMenu = ({
                   }}
                   style={{
                     background:
-                      pathname === item.path ||
-                      pathname === item.path_1 ||
-                      pathname === item.path_2 ||
-                      pathname === item.path_3 ||
-                      pathname === item.path_4 ||
-                      pathname === item.path_5 ||
-                      pathname === item.path_6 ||
-                      pathname === item.path_7 ||
-                      pathname === item.path_8 ||
-                      pathname === item.path_9
+                      pathname.includes(item.path) ||
+                      pathname.includes(item.path_1) ||
+                      pathname.includes(item.path_2) ||
+                      pathname.includes(item.path_3) ||
+                      pathname.includes(item.path_4) ||
+                      pathname.includes(item.path_5) ||
+                      pathname.includes(item.path_6) ||
+                      pathname.includes(item.path_7) ||
+                      pathname.includes(item.path_8) ||
+                      pathname.includes(item.path_9)
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
                     letterSpacing: "-0.08em",
                   }}
                   className={`${
-                    pathname === item.path ||
-                    pathname === item.path_1 ||
-                    pathname === item.path_2 ||
-                    pathname === item.path_3 ||
-                    pathname === item.path_4 ||
-                    pathname === item.path_5 ||
-                    pathname === item.path_6 ||
-                    pathname === item.path_7 ||
-                    pathname === item.path_8 ||
-                    pathname === item.path_9
+                    pathname.includes(item.path) ||
+                    pathname.includes(item.path_1) ||
+                    pathname.includes(item.path_2) ||
+                    pathname.includes(item.path_3) ||
+                    pathname.includes(item.path_4) ||
+                    pathname.includes(item.path_5) ||
+                    pathname.includes(item.path_6) ||
+                    pathname.includes(item.path_7) ||
+                    pathname.includes(item.path_8) ||
+                    pathname.includes(item.path_9)
                       ? "text-white"
                       : "text-p594e6a hover:opacity-50"
                   } flex items-center h-47px w-full pl-57px `}
@@ -224,19 +224,19 @@ const LeftMenu = ({
                   }}
                   style={{
                     background:
-                      pathname === item.path2 ||
-                      pathname === item.path2_1 ||
-                      pathname === item.path2_2 ||
-                      pathname === item.path2_3
+                      pathname.includes(item.path2) ||
+                      pathname.includes(item.path2_1) ||
+                      pathname.includes(item.path2_2) ||
+                      pathname.includes(item.path2_3)
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
                     letterSpacing: "-0.08em",
                   }}
                   className={`${
-                    pathname === item.path2 ||
-                    pathname === item.path2_1 ||
-                    pathname === item.path2_2 ||
-                    pathname === item.path2_3
+                    pathname.includes(item.path2) ||
+                    pathname.includes(item.path2_1) ||
+                    pathname.includes(item.path2_2) ||
+                    pathname.includes(item.path2_3)
                       ? "text-white"
                       : "text-p594e6a hover:opacity-50"
                   }  flex items-center h-47px w-full pl-57px `}
@@ -253,13 +253,13 @@ const LeftMenu = ({
                   }}
                   style={{
                     background:
-                      pathname === item.path3 || pathname === item.path3_1
+                      pathname.includes(item.path3) || pathname.includes(item.path3_1)
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
                     letterSpacing: "-0.08em",
                   }}
                   className={`${
-                    pathname === item.path3 || pathname === item.path3_1
+                    pathname.includes(item.path3) || pathname.includes(item.path3_1)
                       ? "text-white"
                       : "text-p594e6a  hover:opacity-50"
                   } ${item.sub3 === "키론가상게임" && "rounded-b-3xl"} flex items-center h-47px w-full pl-57px `}
@@ -276,10 +276,10 @@ const LeftMenu = ({
                     history.push(item.path4);
                   }}
                   style={{
-                    background: pathname === item.path4 ? "linear-gradient(to right, #df52ff, #6b22ff)" : "#fff",
+                    background: pathname.includes(item.path4) ? "linear-gradient(to right, #df52ff, #6b22ff)" : "#fff",
                     letterSpacing: "-0.08em",
                   }}
-                  className={`${pathname === item.path4 ? "text-white" : "text-p594e6a  hover:opacity-50"} ${
+                  className={`${pathname.includes(item.path4) ? "text-white" : "text-p594e6a  hover:opacity-50"} ${
                     item.text === "미니게임" && "rounded-b-3xl"
                   } flex items-center h-47px w-full  pl-57px `}
                 >

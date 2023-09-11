@@ -45,7 +45,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       icon: Icon1,
       iconHighlight: IconHighlight1,
       id: 0,
-      path: "/mypage/bet-history",
+      path: "/mypage/bet-history/all",
       mainPath: "/mypage/bet-history",
     },
     {
@@ -107,7 +107,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       icon: Icon7,
       iconHighlight: IconHighlight7,
       id: 6,
-      path: "/mypage/inbox",
+      path: "/mypage/inbox/main",
       inboxCount: "3",
       mainPath: "/mypage/inbox",
     },
@@ -151,7 +151,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               setSelectedTab={setSelectedTab}
               setSelectedSubTab={setSelectedSubTab}
               branch2="베팅내역"
-              mainPath="/mypage/bet-history"
+              mainPath="/mypage/bet-history/all"
             />
           </Route>
           <Route path="/mypage/transaction/charge-history">
@@ -234,7 +234,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               mainPath="/mypage/points/points-apply"
             />
           </Route>
-          <Route exact path="/mypage/inbox">
+          <Route exact path="/mypage/inbox/main*">
             <DirectoryComponent
               setSelectedTab={setSelectedTab}
               setSelectedSubTab={setSelectedSubTab}
@@ -242,7 +242,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               mainPath="/mypage/inbox"
             />
           </Route>
-          <Route path="/mypage/inbox/*">
+          <Route path="/mypage/inbox/view*">
             <DirectoryComponent
               setSelectedTab={setSelectedTab}
               setSelectedSubTab={setSelectedSubTab}
@@ -311,10 +311,10 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               <Route path="/mypage/points/points-transaction-history">
                 <PointsTransaction />
               </Route>
-              <Route exact path="/mypage/inbox">
+              <Route exact path="/mypage/inbox/main*">
                 <Inbox />
               </Route>
-              <Route path="/mypage/inbox/*">
+              <Route path="/mypage/inbox/view*">
                 <InboxView />
               </Route>
               <Route path="/mypage/edit-info">

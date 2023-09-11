@@ -56,10 +56,10 @@ const CouponHistory = () => {
             </div>
 
             <div className="mt-10px">
-                <Route exact path="/mypage/coupon/coupon-history/received">
+                <Route exact path="/mypage/coupon/coupon-history/received*">
                     <CouponRequestTable />
                 </Route>
-                <Route exact path="/mypage/coupon/coupon-history/sent">
+                <Route exact path="/mypage/coupon/coupon-history/sent*">
                     <CouponHistoryTable />
                 </Route>
             </div>

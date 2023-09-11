@@ -557,7 +557,7 @@ const FreeBoardView2 = () => {
             width: "192px",
             boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
           }}
-          onClick={() => history.push("/freeboard")}
+          onClick={() => history.push("/freeboard/main")}
         >
           <div className="flex items-center justify-center cursor-pointer">
             <span

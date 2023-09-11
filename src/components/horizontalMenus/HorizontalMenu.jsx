@@ -19,13 +19,12 @@ const HorizontalMenu = ({
         <button
           key={item.id}
           style={{
-            background:
-              pathname === item.path
-                ? "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #cb78e6 100%)"
-                : "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff 100%)",
+            background: pathname.includes(item.path)
+              ? "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #cb78e6 100%)"
+              : "linear-gradient(to top, #4f3a7a, #a05bf6 50%, #f0d3ff 100%)",
           }}
           className={`${
-            pathname === item.path ? "flex-shrink" : "flex-shrink"
+            pathname.includes(item.path) ? "flex-shrink" : "flex-shrink"
           } relative overflow-hidden h-78px w-full flex items-center rounded-6px p-px shadow-link`}
           onClick={() => {
             history.push(item.path);
@@ -40,24 +39,23 @@ const HorizontalMenu = ({
         >
           <div
             style={{
-              background:
-                pathname === item.path
-                  ? "linear-gradient(to top, #491f9c, #9e3cbc)"
-                  : "linear-gradient(to top, #ccc4ff, #ffd8f5)",
+              background: pathname.includes(item.path)
+                ? "linear-gradient(to top, #491f9c, #9e3cbc)"
+                : "linear-gradient(to top, #ccc4ff, #ffd8f5)",
             }}
             className={`w-full rounded-6px flex flex-col justify-start items-center relative hover:filter hover:brightness-110 h-76px pt-5px pb-6px`}
           >
             <img
               className="object-none h-48px w-48px"
-              src={pathname === item.path ? item.iconHighlight : item.icon}
+              src={pathname.includes(item.path) ? item.iconHighlight : item.icon}
               alt=""
             />
 
             <span
-              className={`${pathname === item.path ? "text-black" : "text-golden-ccc2b6"} 
+              className={`${pathname.includes(item.path) ? "text-black" : "text-golden-ccc2b6"} 
                   text-13px mt-px font-semibold`}
               style={{
-                color: pathname === item.path ? "#fff" : "#2d2834",
+                color: pathname.includes(item.path) ? "#fff" : "#2d2834",
                 lineHeight: "1.2",
                 letterSpacing: "-0.1em",
               }}

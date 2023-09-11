@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LinkButton = ({ buttonText, ButtonIcon, ButtonIconHighlight, count, isAuthenticated }) => {
   const [hover, setHover] = useState(false);
   const myMenuButton = (
-    <Link to={buttonText === "쪽지" ? "/mypage/inbox" : "/mypage/coupon/coupon-usage"}>
+    <Link to={buttonText === "쪽지" ? "/mypage/inbox/main" : "/mypage/coupon/coupon-usage"}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}

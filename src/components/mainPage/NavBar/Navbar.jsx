@@ -66,8 +66,8 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
   ];
 
   const myMenuOptionsArray = [
-    { text: "마이페이지", id: 0, path: "/mypage/bet-history" },
-    { text: "베팅내역", id: 1, path: "/mypage/bet-history" },
+    { text: "마이페이지", id: 0, path: "/mypage/bet-history/all" },
+    { text: "베팅내역", id: 1, path: "/mypage/bet-history/all" },
     { text: "충/환전내역", id: 2, path: "/mypage/transaction/charge-history" },
     { text: "총판페이지", id: 3, path: "/distributor-page" },
     { text: "회원정보수정", id: 4, path: location === "/" ? "/reauth" : `${location}/reauth` },

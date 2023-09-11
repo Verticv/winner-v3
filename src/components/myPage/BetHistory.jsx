@@ -37,7 +37,7 @@ import { Route } from 'react-router'
 import ESportsBetHistory from './betHistory/ESportsBetHistory'
 
 const tabsArray = [
-    { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history" },
+    { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/mypage/bet-history/all" },
     { text: "라이브카지노", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/mypage/bet-history/live-casino" },
     { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/mypage/bet-history/slot-game" },
     { text: "라이브스포츠", icon: Icon12, iconHighlight: IconHighlight12, id: 11, path: "/mypage/bet-history/live-sport" },
@@ -69,7 +69,7 @@ const BetHistory = () => {
                 <HorizontalMenu itemsArray={tabsArray} setSelectedSubTab={setSelectedSubTab}/>
             </div>
             
-            <Route exact path="/mypage/bet-history">
+            <Route exact path="/mypage/bet-history/all*">
                 <>
                     <AllBetHistory />
                     <div className='mt-5px mb-60px'>
@@ -77,7 +77,7 @@ const BetHistory = () => {
                     </div>
                 </>
             </Route>
-            <Route path="/mypage/bet-history/live-casino">
+            <Route path="/mypage/bet-history/live-casino*">
                 <>
                     <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <div className='mt-5px mb-60px'>
@@ -85,7 +85,7 @@ const BetHistory = () => {
                     </div>
                 </>
             </Route>
-            <Route path="/mypage/bet-history/hold'em-game">
+            <Route path="/mypage/bet-history/hold'em-game*">
                 <>
                     <AllBetHistory />
                     <div className='mt-5px mb-60px'>
@@ -93,7 +93,7 @@ const BetHistory = () => {
                     </div>
                 </>
              </Route>
-            <Route path="/mypage/bet-history/sports">
+            <Route path="/mypage/bet-history/sports*">
                 <>
                     <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <div className='mt-5px mb-60px'>
@@ -101,7 +101,7 @@ const BetHistory = () => {
                     </div>
                 </>
             </Route>
-            <Route path="/mypage/bet-history/live-sport">
+            <Route path="/mypage/bet-history/live-sport*">
                 <>
                 <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
                     <div className='mt-5px mb-60px'>
@@ -109,7 +109,7 @@ const BetHistory = () => {
                     </div>
                 </>
             </Route>
-            <Route path="/mypage/bet-history/slot-game">
+            <Route path="/mypage/bet-history/slot-game*">
                 <>
                     <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
                     <div className='mt-5px mb-60px'>
@@ -117,12 +117,12 @@ const BetHistory = () => {
                     </div>    
                 </>
             </Route>
-            <Route path="/mypage/bet-history/e-sports">
+            <Route path="/mypage/bet-history/e-sports*">
                 <>
                     <ESportsBetHistory />
                 </>
             </Route>
-            <Route path="/mypage/bet-history/minigame">
+            <Route path="/mypage/bet-history/minigame*">
                 <>
                     <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <div className='mt-5px mb-60px'>
@@ -130,7 +130,7 @@ const BetHistory = () => {
                     </div>
                 </>
             </Route>
-            <Route path="/mypage/bet-history/ar-game">
+            <Route path="/mypage/bet-history/ar-game*">
                 <>
                     <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <div className='mt-5px mb-60px'>
@@ -138,7 +138,7 @@ const BetHistory = () => {
                     </div>    
                 </>
             </Route>
-            <Route path="/mypage/bet-history/fishing-game">
+            <Route path="/mypage/bet-history/fishing-game*">
                 <>
                     <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <div className='mt-5px mb-60px'>
@@ -146,7 +146,7 @@ const BetHistory = () => {
                     </div>
                 </>
             </Route>
-            <Route path="/mypage/bet-history/hotel-casino">
+            <Route path="/mypage/bet-history/hotel-casino*">
                 <>
                     <HotelCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <div className='mt-5px mb-60px'>
@@ -155,7 +155,7 @@ const BetHistory = () => {
                     
                 </>
             </Route> 
-            <Route exact path="/mypage/bet-history/bet">
+            <Route exact path="/mypage/bet-history/bet*">
               <>
                 <AllBetHistory />
                 <div className='mt-5px mb-20px'>

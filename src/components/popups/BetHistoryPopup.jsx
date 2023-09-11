@@ -104,7 +104,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
 
   useEffect(() => {
     return () => {
-      history.push("/freeboard/compose/live-casino");
+      history.push("/freeboard-compose/live-casino");
     };
   }, [history]);
 
@@ -183,37 +183,37 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
     { text: "보타카지노", icon: HIcon2, id: 1 },
     { text: "준비중", icon: HIcon3, id: 4 },
   ];
-  const [selectedTab, setSelectedTab] = useState("/freeboard/compose/live-casino");
+  const [selectedTab, setSelectedTab] = useState("/freeboard-compose/live-casino");
   const [selectedSubTab, setSelectedSubTab] = useState(0);
   const [page, setPage] = useState(0);
 
   const [checkedState, setCheckedState] = useState(new Array(3).fill(false));
 
   const tabsArray = [
-    // { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/freeboard/compose/all" },
+    // { text: "전체", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/freeboard-compose/all" },
     {
       text: "라이브카지노",
       icon: Icon2,
       iconHighlight: IconHighlight2,
       id: 1,
-      path: "/freeboard/compose/live-casino",
+      path: "/freeboard-compose/live-casino",
     },
-    { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/freeboard/compose/slot-game" },
+    { text: "스포츠", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/freeboard-compose/slot-game" },
     {
       text: "라이브스포츠",
       icon: Icon12,
       iconHighlight: IconHighlight12,
       id: 11,
-      path: "/freeboard/compose/live-sport",
+      path: "/freeboard-compose/live-sport",
     },
-    { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/freeboard/compose/sports" },
-    { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/freeboard/compose/hotel-casino" },
-    { text: "홀덤게임", icon: Icon6, iconHighlight: IconHighlight6, id: 10, path: "/freeboard/compose/hold'em-game" },
-    { text: "e-스포츠", icon: Icon7, iconHighlight: IconHighlight7, id: 5, path: "/freeboard/compose/e-sports" },
-    { text: "미니게임", icon: Icon8, iconHighlight: IconHighlight8, id: 6, path: "/freeboard/compose/minigame" },
-    { text: "키론가상게임", icon: Icon9, iconHighlight: IconHighlight9, id: 7, path: "/freeboard/compose/ar-game" },
-    { text: "피싱게임", icon: Icon10, iconHighlight: IconHighlight10, id: 8, path: "/freeboard/compose/fishing-game" },
-    { text: "티비벳", icon: Icon11, iconHighlight: IconHighlight11, id: 9, path: "/freeboard/compose/bet" },
+    { text: "슬롯게임", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/freeboard-compose/sports" },
+    { text: "호텔카지노", icon: Icon5, iconHighlight: IconHighlight5, id: 4, path: "/freeboard-compose/hotel-casino" },
+    { text: "홀덤게임", icon: Icon6, iconHighlight: IconHighlight6, id: 10, path: "/freeboard-compose/hold'em-game" },
+    { text: "e-스포츠", icon: Icon7, iconHighlight: IconHighlight7, id: 5, path: "/freeboard-compose/e-sports" },
+    { text: "미니게임", icon: Icon8, iconHighlight: IconHighlight8, id: 6, path: "/freeboard-compose/minigame" },
+    { text: "키론가상게임", icon: Icon9, iconHighlight: IconHighlight9, id: 7, path: "/freeboard-compose/ar-game" },
+    { text: "피싱게임", icon: Icon10, iconHighlight: IconHighlight10, id: 8, path: "/freeboard-compose/fishing-game" },
+    { text: "티비벳", icon: Icon11, iconHighlight: IconHighlight11, id: 9, path: "/freeboard-compose/bet" },
   ];
 
   useEffect(() => {
@@ -262,12 +262,12 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
               />
             </div>
 
-            {selectedTab !== "/freeboard/compose/all" &&
-              selectedTab !== "/freeboard/compose/slot-game" &&
-              selectedTab !== "/freeboard/compose/live-sport" &&
-              selectedTab !== "/freeboard/compose/hold'em-game" &&
-              selectedTab !== "/freeboard/compose/e-sports" &&
-              selectedTab !== "/freeboard/compose/bet" && (
+            {selectedTab !== "/freeboard-compose/all" &&
+              selectedTab !== "/freeboard-compose/slot-game" &&
+              selectedTab !== "/freeboard-compose/live-sport" &&
+              selectedTab !== "/freeboard-compose/hold'em-game" &&
+              selectedTab !== "/freeboard-compose/e-sports" &&
+              selectedTab !== "/freeboard-compose/bet" && (
                 <div
                   style={{
                     background: "#5e399a",
@@ -278,17 +278,17 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                 >
                   <SubHorizontalMenu
                     itemsArray={
-                      selectedTab === "/freeboard/compose/live-casino"
+                      selectedTab === "/freeboard-compose/live-casino"
                         ? subTabsArray1
-                        : selectedTab === "/freeboard/compose/sports"
+                        : selectedTab === "/freeboard-compose/sports"
                         ? subTabsArray2
-                        : selectedTab === "/freeboard/compose/hotel-casino"
+                        : selectedTab === "/freeboard-compose/hotel-casino"
                         ? subTabsArray5
-                        : selectedTab === "/freeboard/compose/minigame"
+                        : selectedTab === "/freeboard-compose/minigame"
                         ? subTabsArray3
-                        : selectedTab === "/freeboard/compose/ar-game"
+                        : selectedTab === "/freeboard-compose/ar-game"
                         ? subTabsArray4
-                        : selectedTab === "/freeboard/compose/fishing-game"
+                        : selectedTab === "/freeboard-compose/fishing-game"
                         ? subTabsArray2
                         : subTabsArray2
                     }
