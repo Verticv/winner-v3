@@ -635,7 +635,7 @@ const FreeBoardMain = () => {
             }}
             className="flex items-center justify-center h-36px w-118px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer"
           >
-            <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-2px text-white mb-3px ml-2px text-shadow-5">
+            <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff text-white ml-2px text-shadow-5">
               작성하기
             </span>
           </div>

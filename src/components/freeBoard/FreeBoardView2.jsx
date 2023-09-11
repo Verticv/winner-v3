@@ -33,7 +33,7 @@ const FreeBoardView2 = () => {
               className="flex items-center justify-center w-90px h-36px rounded-6px hover:filter hover:brightness-125"
             >
               <div className="flex items-center justify-center cursor-pointer">
-                <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 pt-px text-white text-shadow-5">
+                <span className="font-spoqaMedium tracking-tight text-13px text-red-ffd2d2 pt-px text-white text-shadow-5">
                   수정하기
                 </span>
               </div>
@@ -46,7 +46,7 @@ const FreeBoardView2 = () => {
               }}
             >
               <div className="flex items-center justify-center cursor-pointer">
-                <span className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white text-shadow-5">
+                <span className="font-spoqaMedium tracking-tight text-13px text-golden-highLight pt-px text-white text-shadow-5">
                   삭제하기
                 </span>
               </div>
@@ -61,7 +61,7 @@ const FreeBoardView2 = () => {
             className="self-start flex items-center justify-center h-36px w-90px rounded-6px p-px hover:filter hover:brightness-125"
           >
             <div className="flex items-center justify-center cursor-pointer">
-              <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff mb-px text-white text-shadow-5">
+              <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff mb-px text-white text-shadow-5">
                 답글달기
               </span>
             </div>
@@ -162,7 +162,7 @@ const FreeBoardView2 = () => {
           className="flex items-center justify-center w-90px h-36px rounded-6px hover:filter hover:brightness-125"
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 text-white text-shadow-5">
+            <span className="font-spoqaMedium tracking-tight text-13px text-red-ffd2d2 text-white text-shadow-5">
               수정하기
             </span>
           </div>
@@ -175,7 +175,7 @@ const FreeBoardView2 = () => {
           }}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white text-shadow-5">
+            <span className="font-spoqaMedium tracking-tight text-13px text-golden-highLight pt-px text-white text-shadow-5">
               삭제하기
             </span>
           </div>
@@ -196,7 +196,7 @@ const FreeBoardView2 = () => {
           <div className="pt-16px pb-18px flex items-start space-x-5px">
             <p
               style={{ letterSpacing: "-0.091em" }}
-              className="text-15px font-spoqaMedium tracking-tight text-r444444 -ml-px font-bold"
+              className="text-13px font-spoqaMedium tracking-tight text-r444444 -ml-px font-bold"
             >
               댓글 작성하기
             </p>
@@ -237,7 +237,7 @@ const FreeBoardView2 = () => {
               }}
             >
               <div className="flex items-center justify-center cursor-pointer">
-                <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-white text-shadow-5">
+                <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-px text-white text-shadow-5">
                   댓글작성
                 </span>
               </div>
@@ -269,7 +269,7 @@ const FreeBoardView2 = () => {
                   className="flex items-center justify-center w-90px h-36px rounded-6px hover:filter hover:brightness-125"
                 >
                   <div className="flex items-center justify-center cursor-pointer">
-                    <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 pt-px text-white text-shadow-5">
+                    <span className="font-spoqaMedium tracking-tight text-13px text-red-ffd2d2 pt-px text-white text-shadow-5">
                       수정하기
                     </span>
                   </div>
@@ -282,7 +282,7 @@ const FreeBoardView2 = () => {
                   }}
                 >
                   <div className="flex items-center justify-center cursor-pointer">
-                    <span className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white text-shadow-5">
+                    <span className="font-spoqaMedium tracking-tight text-13px text-golden-highLight pt-px text-white text-shadow-5">
                       삭제하기
                     </span>
                   </div>
@@ -335,7 +335,7 @@ const FreeBoardView2 = () => {
                   className="flex items-center justify-center w-90px h-36px rounded-6px  hover:filter hover:brightness-125"
                 >
                   <div className="flex items-center justify-center cursor-pointer">
-                    <span className="font-spoqaMedium tracking-tight text-14px text-red-ffd2d2 text-white text-shadow-5">
+                    <span className="font-spoqaMedium tracking-tight text-13px text-red-ffd2d2 text-white text-shadow-5">
                       수정하기
                     </span>
                   </div>
@@ -348,7 +348,7 @@ const FreeBoardView2 = () => {
                   }}
                 >
                   <div className="flex items-center justify-center cursor-pointer">
-                    <span className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white text-shadow-5">
+                    <span className="font-spoqaMedium tracking-tight text-13px text-golden-highLight pt-px text-white text-shadow-5">
                       삭제하기
                     </span>
                   </div>
@@ -400,7 +400,7 @@ const FreeBoardView2 = () => {
                 }}
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-white text-shadow-5">
+                  <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-px text-white text-shadow-5">
                     댓글수정
                   </span>
                 </div>
@@ -431,7 +431,7 @@ const FreeBoardView2 = () => {
                 className="self-start flex items-center justify-center h-36px w-90px rounded-6px p-px hover:filter hover:brightness-125"
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff mb-px text-white text-shadow-5">
+                  <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff mb-px text-white text-shadow-5">
                     답글달기
                   </span>
                 </div>
@@ -482,7 +482,7 @@ const FreeBoardView2 = () => {
                 }}
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-white text-shadow-5">
+                  <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-px text-white text-shadow-5">
                     답글작성
                   </span>
                 </div>
@@ -502,9 +502,7 @@ const FreeBoardView2 = () => {
           onClick={() => history.push("/freeboard/view")}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 pt-px text-white mb-2px">
-              이전
-            </span>
+            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 text-white">이전</span>
           </div>
         </button>
 
@@ -518,7 +516,7 @@ const FreeBoardView2 = () => {
           onClick={() => history.push("/freeboard/main")}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-bold tracking-tight text-16px text-shadow-5 pt-px text-white mb-3px">목록보기</span>
+            <span className="font-bold tracking-tight text-16px text-shadow-5 text-white">목록보기</span>
           </div>
         </button>
 
@@ -530,9 +528,7 @@ const FreeBoardView2 = () => {
           }}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 pt-px text-white mb-2px">
-              다음
-            </span>
+            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 text-white">다음</span>
           </div>
         </button>
       </div>

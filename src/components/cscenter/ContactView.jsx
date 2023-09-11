@@ -130,7 +130,7 @@ const ContactView = () => {
           }}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 pt-px text-white">이전</span>
+            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 text-white">이전</span>
           </div>
         </button>
 
@@ -144,7 +144,7 @@ const ContactView = () => {
           onClick={() => history.push("/cscenter/contact/all")}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-bold tracking-tight text-16px text-shadow-5 pt-px text-white">목록보기</span>
+            <span className="font-bold tracking-tight text-16px text-shadow-5 text-white">목록보기</span>
           </div>
         </button>
 
@@ -156,7 +156,7 @@ const ContactView = () => {
           }}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 pt-px text-white">다음</span>
+            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 text-white">다음</span>
           </div>
         </button>
       </div>
