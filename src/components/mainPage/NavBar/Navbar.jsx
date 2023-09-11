@@ -33,14 +33,12 @@ import MessageIcon from "../../../images/navBar/managment/message.png";
 import CouponIcon from "../../../images/navBar/managment/coupon.png";
 import CouponIconOn from "../../../images/navBar/managment/coupon_on.png";
 
-import { useHistory } from "react-router-dom";
 import TopBar from "../TopBar";
 import DropdownButton from "./DropdownButton";
 import LinkButton from "./LinkButton";
 import NoticeBanner from "../NoticeBanner";
 
 const Navbar = ({ isAuthenticated, setAuth }) => {
-  const history = useHistory();
   const location = window.location.pathname;
 
   const [selectedTab, setSelectedTab] = useState();
@@ -98,10 +96,10 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
           className={`h-full ${isSelectedTap ? selectedTabClass : tabClass} ${
             items.length - 2 === index ? "" : items.length - 1 === index ? "" : ""
           }`}
-          onClick={() => {
-            setSelectedTab(item.id);
-            history.push(item.path);
-          }}
+          // onClick={() => {
+          //   setSelectedTab(item.id);
+          //   history.push(item.path);
+          // }}
           onMouseOver={() => {
             setHoveredTab(item.id);
             setSelectedTab(item.id);
@@ -176,8 +174,20 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
                 DropdownHeight={"193px"}
                 setSelectedTab={setSelectedTab}
               />
-              <LinkButton ButtonIcon={MessageIcon} ButtonIconHighlight={MessageIconOn} buttonText="쪽지" count={25} isAuthenticated={isAuthenticated} />
-              <LinkButton ButtonIcon={CouponIcon} ButtonIconHighlight={CouponIconOn} buttonText="쿠폰" count={5} isAuthenticated={isAuthenticated} />
+              <LinkButton
+                ButtonIcon={MessageIcon}
+                ButtonIconHighlight={MessageIconOn}
+                buttonText="쪽지"
+                count={25}
+                isAuthenticated={isAuthenticated}
+              />
+              <LinkButton
+                ButtonIcon={CouponIcon}
+                ButtonIconHighlight={CouponIconOn}
+                buttonText="쿠폰"
+                count={5}
+                isAuthenticated={isAuthenticated}
+              />
               <DropdownButton
                 onMouseOver={() => {
                   setSelectedTab(null);
