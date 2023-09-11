@@ -61,7 +61,7 @@ const FreeBoardView2 = () => {
             className="self-start flex items-center justify-center h-36px w-90px rounded-6px p-px hover:filter hover:brightness-125"
           >
             <div className="flex items-center justify-center cursor-pointer">
-              <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff mb-px text-white text-shadow-5">
+              <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff ml-2px text-white text-shadow-5">
                 답글달기
               </span>
             </div>
@@ -431,7 +431,7 @@ const FreeBoardView2 = () => {
                 className="self-start flex items-center justify-center h-36px w-90px rounded-6px p-px hover:filter hover:brightness-125"
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff mb-px text-white text-shadow-5">
+                  <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff ml-2px text-white text-shadow-5">
                     답글달기
                   </span>
                 </div>
@@ -499,7 +499,7 @@ const FreeBoardView2 = () => {
             background: "#936cee",
             boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
           }}
-          onClick={() => history.push("/freeboard/view")}
+          onClick={() => history.push("/freeboard/view/0")}
         >
           <div className="flex items-center justify-center cursor-pointer">
             <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 text-white">이전</span>
