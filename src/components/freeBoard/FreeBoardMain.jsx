@@ -624,7 +624,7 @@ const FreeBoardMain = () => {
 
       <div className="mt-20px flex justify-end">
         <button
-          onClick={() => history.push("/freeboard-compose/live-casino")}
+          onClick={() => history.push("/freeboard/compose/live-casino")}
           className="flex items-center justify-center h-36px w-118px mr-px rounded-4px bg-gradient-to-t from-blue-3d4a8d to-blue-88d9e8 hover:filter hover:brightness-125 shadow-link"
         >
           <div
@@ -635,10 +635,7 @@ const FreeBoardMain = () => {
             }}
             className="flex items-center justify-center h-36px w-118px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer"
           >
-            <span
-              style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-2px text-white mb-3px ml-2px"
-            >
+            <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-2px text-white mb-3px ml-2px text-shadow-5">
               작성하기
             </span>
           </div>

@@ -32,10 +32,7 @@ const FreeBoardCompose = () => {
         }}
       >
         <div className="w-full bg-gray-323232 rounded-10px overflow-hidden">
-          <div
-            style={{ borderColor: "#dddddd" }}
-            className="h-55px w-full bg-gray-2e2e2e border-b border-gray-252525"
-          >
+          <div style={{ borderColor: "#dddddd" }} className="h-55px w-full bg-gray-2e2e2e border-b border-gray-252525">
             <input
               style={{ backgroundColor: "#f7f7f7" }}
               className="bg-gray-2e2e2e outline-none w-full h-full px-19px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-gray-c8c8c8 text-r444444"
@@ -47,11 +44,7 @@ const FreeBoardCompose = () => {
             style={{ backgroundColor: "#f7f7f7", borderColor: "#dddddd" }}
             className="h-56px w-full bg-gray-2e2e2e border-b border-gray-252525 px-19px flex items-center"
           >
-            <PopupControls
-              buttonChild={AttachButton}
-              isPopupOpen={isPopupOpen}
-              setPopupOpen={setPopupOpen}
-            >
+            <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
               <BetHistoryPopup
                 setPopupOpen={setPopupOpen}
                 attachedArray={attachedArray}
@@ -73,10 +66,7 @@ const FreeBoardCompose = () => {
             </div>
           ))}
 
-          <div
-            style={{ height: "401px", backgroundColor: "#ffffff" }}
-            className="w-full bg-gray-323232"
-          >
+          <div style={{ height: "401px", backgroundColor: "#ffffff" }} className="w-full bg-gray-323232">
             <textarea
               style={{ resize: "none", backgroundColor: "#ffffff" }}
               className="scroll-div2 bg-gray-323232 outline-none w-full h-full  px-19px pb-19px pt-16px text-14px font-spoqa tracking-tight placeholder-gray-c8c8c8 text-r444444"
@@ -102,10 +92,7 @@ const FreeBoardCompose = () => {
             }}
             className="flex items-center justify-center h-52px bg-black rounded-6px bg-gradient-to-b from-blue-528ccd to-blue-396084 cursor-pointer pt-2px"
           >
-            <span
-              style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-bold tracking-tight text-16px text-blue-d6f3ff text-white mb-2px"
-            >
+            <span className="font-bold tracking-tight text-16px text-blue-d6f3ff text-white mb-2px text-shadow-5">
               작성하기
             </span>
           </div>

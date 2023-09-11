@@ -48,7 +48,7 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
           <DirectoryComponent branch1="게시판" branch2="뷰" mainPath="/freeboard/view" />
         </Route>
         <Route path="/freeboard/compose*">
-          <DirectoryComponent branch1="게시판" branch2="작성하기" mainPath="/freeboard-compose" />
+          <DirectoryComponent branch1="게시판" branch2="작성하기" mainPath="/freeboard/compose" />
         </Route>
 
         <div style={{ height: "136px", width: "1280px" }} className="relative flex-shrink-0">

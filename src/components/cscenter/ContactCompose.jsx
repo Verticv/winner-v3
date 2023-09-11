@@ -125,13 +125,13 @@ const ContactCompose = () => {
           style={{ width: "190px", background: "linear-gradient(to right, #15cfee, #3197e5)" }}
           className="flex items-center justify-center h-52px rounded-6px p-px hover:filter hover:brightness-125 shadow-link"
         >
-          <span className=" tracking-tight text-16px text-white text-shadow-5">신청하기</span>
+          <span className=" tracking-tight text-16px text-white text-shadow-5 font-bold">신청하기</span>
         </button>
         <button
           style={{ width: "190px", background: "linear-gradient(to right, #ff7760, #f14a53)" }}
           className="flex items-center justify-center h-52px rounded-6px p-px hover:filter hover:brightness-125 shadow-link"
         >
-          <span className=" tracking-tight text-16px text-white text-shadow-5">취소하기</span>
+          <span className=" tracking-tight text-16px text-white text-shadow-5 font-bold">취소하기</span>
         </button>
       </div>
     </div>

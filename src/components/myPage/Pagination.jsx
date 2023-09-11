@@ -9,7 +9,7 @@ const Pagination = ({ page, setPage }) => {
   const path = window.location.pathname;
   const LeftArrow = () => (
     <button
-      style={{ filter: path.includes("/freeboard-compose") && "brightness(1) invert(0.7)" }}
+      style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
       className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 mr-12px"
       onClick={() => selectedPage !== 1 && setSelectedPage(selectedPage - 1)}
     >
@@ -18,7 +18,7 @@ const Pagination = ({ page, setPage }) => {
   );
   const RightArrow = () => (
     <button
-      style={{ filter: path.includes("/freeboard-compose") && "brightness(1) invert(0.7)" }}
+      style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
       className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 ml-12px"
       onClick={() => selectedPage !== 5 && setSelectedPage(selectedPage + 1)}
     >
@@ -31,7 +31,7 @@ const Pagination = ({ page, setPage }) => {
   return (
     <div className="relative flex h-32px items-center justify-center">
       <button
-        style={{ filter: path.includes("/freeboard-compose") && "brightness(1) invert(0.7)" }}
+        style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
         className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 mr-px"
         onClick={() => setSelectedPage(1)}
       >
@@ -57,7 +57,7 @@ const Pagination = ({ page, setPage }) => {
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 1 ? "#333" : path.includes("/freeboard-compose") ? "#444444" : "#eeeeee",
+                color: selectedPage === 1 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               1
@@ -82,7 +82,7 @@ const Pagination = ({ page, setPage }) => {
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 2 ? "#333" : path.includes("/freeboard-compose") ? "#444444" : "#eeeeee",
+                color: selectedPage === 2 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               2
@@ -107,7 +107,7 @@ const Pagination = ({ page, setPage }) => {
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 3 ? "#333" : path.includes("/freeboard-compose") ? "#444444" : "#eeeeee",
+                color: selectedPage === 3 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               3
@@ -132,7 +132,7 @@ const Pagination = ({ page, setPage }) => {
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 4 ? "#333" : path.includes("/freeboard-compose") ? "#444444" : "#eeeeee",
+                color: selectedPage === 4 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               4
@@ -158,7 +158,7 @@ const Pagination = ({ page, setPage }) => {
             <span
               className={`text-gray-activeText font-roboto tracking-tight text-12px font-semibold`}
               style={{
-                color: selectedPage === 5 ? "#333" : path.includes("/freeboard-compose") ? "#444444" : "#eeeeee",
+                color: selectedPage === 5 ? "#333" : path.includes("/freeboard/compose") ? "#444444" : "#eeeeee",
               }}
             >
               5
@@ -169,7 +169,7 @@ const Pagination = ({ page, setPage }) => {
 
       <RightArrow />
       <button
-        style={{ filter: path.includes("/freeboard-compose") && "brightness(1) invert(0.7)" }}
+        style={{ filter: path.includes("/freeboard/compose") && "brightness(1) invert(0.7)" }}
         className="flex items-center justify-center w-32px h-32px rounded-4px  hover:filter hover:brightness-125 ml-px"
         onClick={() => setSelectedPage(5)}
       >

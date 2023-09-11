@@ -312,7 +312,7 @@ const Contact = () => {
               boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
             }}
           >
-            <span className=" tracking-tight text-14px text-white text-shadow-5 -mt-px">계좌문의</span>
+            <span className=" tracking-tight text-13px text-white text-shadow-5 -mt-px">계좌문의</span>
           </button>
           <button
             className="flex items-center justify-center h-36px w-88px rounded-6px  p-px hover:filter hover:brightness-125 cursor-pointer"
@@ -323,7 +323,7 @@ const Contact = () => {
               marginRight: "1px",
             }}
           >
-            <span className="tracking-tight text-14px text-white text-shadow-5 -mt-px">문의작성</span>
+            <span className="tracking-tight text-13px text-white text-shadow-5 -mt-px">문의작성</span>
           </button>
         </div>
 

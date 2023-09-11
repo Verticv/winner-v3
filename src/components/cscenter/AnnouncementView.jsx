@@ -132,12 +132,7 @@ const AnnouncementView = () => {
           }}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span
-              style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white"
-            >
-              이전
-            </span>
+            <span className="font-spoqaMedium tracking-tight text-13px text-shadow-5 pt-px text-white">이전</span>
           </div>
         </button>
 
@@ -151,12 +146,7 @@ const AnnouncementView = () => {
           onClick={() => history.push("/cscenter/announcement/all")}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span
-              style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-bold tracking-tight text-16px text-golden-highLight pt-px text-white"
-            >
-              목록보기
-            </span>
+            <span className="font-bold tracking-tight text-16px text-shadow-5 pt-px text-white">목록보기</span>
           </div>
         </button>
 
@@ -168,12 +158,7 @@ const AnnouncementView = () => {
           }}
         >
           <div className="flex items-center justify-center cursor-pointer">
-            <span
-              style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-spoqaMedium tracking-tight text-14px text-golden-highLight pt-px text-white"
-            >
-              다음
-            </span>
+            <span className="font-spoqaMedium tracking-tight text-13px pt-px text-shadow-5 text-white">다음</span>
           </div>
         </button>
       </div>
