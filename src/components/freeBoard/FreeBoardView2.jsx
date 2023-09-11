@@ -254,7 +254,7 @@ const FreeBoardView2 = () => {
               <div className="flex items-center justify-center cursor-pointer">
                 <span
                   style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-                  className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff pt-px text-white"
+                  className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-white"
                 >
                   댓글작성
                 </span>
@@ -432,7 +432,7 @@ const FreeBoardView2 = () => {
                 <div className="flex items-center justify-center cursor-pointer">
                   <span
                     style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-                    className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff pt-px text-white"
+                    className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-white"
                   >
                     댓글수정
                   </span>
@@ -520,7 +520,7 @@ const FreeBoardView2 = () => {
                 <div className="flex items-center justify-center cursor-pointer">
                   <span
                     style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-                    className="font-spoqaMedium tracking-tight text-16px text-blue-d6f3ff pt-px text-white"
+                    className="font-spoqaMedium tracking-tight text-14px text-blue-d6f3ff pt-px text-white"
                   >
                     답글작성
                   </span>

@@ -110,11 +110,12 @@ const AnnouncementTable = () => {
     >
       <table className="w-full rounded-10px overflow-hidden">
         <thead
-          className=" text-14px tracking-tight h-54px border-b pt-px font-semibold"
+          className="text-14px tracking-tight h-54px border-b pt-px font-semibold"
           style={{
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
             borderColor: "#dddddd",
+            letterSpacing: "-0.015em",
           }}
         >
           <tr>

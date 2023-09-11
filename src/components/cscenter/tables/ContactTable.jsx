@@ -76,9 +76,7 @@ const ContactTable = ({ array }) => {
           >
             <p
               style={{ maxWidth: "370px" }}
-              className={`${
-                item.isRead === false && "font-bold"
-              } truncate tracking-none `}
+              className={`${item.isRead === false && "font-bold"} truncate tracking-none `}
             >
               {item.text}
             </p>
@@ -90,7 +88,9 @@ const ContactTable = ({ array }) => {
           </div>
 
           <div
-            className={`${item.isRead === false && "font-bold"} flex justify-center text-center cursor-pointer h-full items-center pr-5px`}
+            className={`${
+              item.isRead === false && "font-bold"
+            } flex justify-center text-center cursor-pointer h-full items-center pr-5px`}
             style={{ color: item.isRead === true ? "#666666" : "#444444", width: "138px" }}
             onClick={() => history.push(item.path)}
           >
@@ -121,6 +121,7 @@ const ContactTable = ({ array }) => {
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
             borderColor: "#dddddd",
+            letterSpacing: "-0.015em",
           }}
         >
           <div style={{ width: "57px" }} className="flex justify-center -mt-px">
