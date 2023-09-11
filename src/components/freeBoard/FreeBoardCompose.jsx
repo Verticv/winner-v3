@@ -113,10 +113,7 @@ const FreeBoardCompose = () => {
               width: "192px",
             }}
           >
-            <span
-              style={{ textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)" }}
-              className="font-bold tracking-tight text-16px text-golden-highLight pt-px text-white mb-px"
-            >
+            <span className="font-bold tracking-tight text-16px text-golden-highLight pt-px text-white mb-px text-shadow-5">
               취소하기
             </span>
           </div>
