@@ -179,13 +179,6 @@ module.exports = {
         dddddd: "#dddddd",
       },
       fontFamily: {
-        // spoqa: ["SpoqaHanSansNeo"],
-        // spoqaMedium: ["SpoqaHanSansNeoMedium"],
-        // spoqaBold: ["SpoqaHanSansNeoBold"],
-        // robotoRegular: ["RobotoRegular"],
-        // roboto: ["RobotoMedium"],
-        // robotoBold: ["RobotoBold"],
-        digital: ["Digital-7"],
         swagger: ["Swagger"],
       },
       fontSize: {
