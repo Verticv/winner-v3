@@ -342,7 +342,7 @@ const FreeBoardMain = () => {
   const searchDropdown = (
     <div
       style={{ backgroundColor: "white" }}
-      className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a "
+      className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a "
     >
       <div className="w-full p-px h-full overflow-x-hidden border-gray-2c2c2c">
         <button
@@ -391,7 +391,7 @@ const FreeBoardMain = () => {
       className="flex w-120px h-42px bg-dark-1a1a1a rounded-6px border border-gray-404040 group"
     >
       <input className="w-0 text-16px" />
-      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
+      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-slight">
         <label style={{ color: "#444444" }} className="ml-13px mb-px cursor-pointer group-hover:text-gray-r8c8c8c">
           {selectedCarrier}
         </label>
@@ -419,7 +419,7 @@ const FreeBoardMain = () => {
       >
         <input
           style={{ color: "#444" }}
-          className="rounded-6px pl-9px pb-2px placeholder-gray-c8c8c8 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a"
+          className="rounded-6px pl-9px pb-2px placeholder-gray-c8c8c8 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-slight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button
@@ -597,8 +597,9 @@ const FreeBoardMain = () => {
           <div
             style={{
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+              letterSpacing: "-0.015em",
             }}
-            className="h-55px bg-gray-2e2e2e w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-ccc2b6 rounded-t-4px  border-b border-gray-252525 font-semibold"
+            className="h-55px bg-gray-2e2e2e w-full flex items-center text-14px font-spoqaMedium text-gray-ccc2b6 rounded-t-4px  border-b border-gray-252525 font-semibold"
           >
             <div
               style={{ width: "124px", color: "#eeeeee" }}

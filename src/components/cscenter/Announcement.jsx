@@ -126,7 +126,7 @@ const Announcement = () => {
   const searchDropdown = (
     <div
       style={{ width: "120px" }}
-      className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border p-px  text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white "
+      className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border p-px  text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-white "
     >
       <button
         className={dropDownCellClass}
@@ -167,7 +167,7 @@ const Announcement = () => {
       className="flex h-42px bg-dark-1a1a1a rounded-6px border border-p682aa7 text-r444444 bg-white mb-px group"
     >
       <input className="w-0 text-16px" />
-      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
+      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-slight">
         <label className="ml-14px cursor-pointer group-hover:text-gray-r8c8c8c">{selectedCarrier}</label>
         <img className="object-none mr-9px" src={DownArrowIcon} alt="arrow" />
       </div>
@@ -186,7 +186,7 @@ const Announcement = () => {
       <div style={{ width: "381px" }} className="flex h-42px  rounded-6px border border-p682aa7 relative">
         <input
           style={{ color: "#444" }}
-          className="pl-11px rounded-md pb-2px placeholder-gray-c8c8c8 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
+          className="pl-11px rounded-md pb-2px placeholder-gray-c8c8c8 w-full font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-slight"
           placeholder="검색어를 입력해 주세요"
         />
         <button

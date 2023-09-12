@@ -83,15 +83,15 @@ const CouponUsageTable = () => {
       date: "2021-06-29",
       expireDate: "2021-07-29",
     },
-    {
-      id: 9,
-      name: "테스트쿠폰",
-      amount: "10,000",
-      username: "eric123",
-      status: "사용가능",
-      date: "2021-06-29",
-      expireDate: "2021-07-29",
-    },
+    // {
+    //   id: 9,
+    //   name: "테스트쿠폰",
+    //   amount: "10,000",
+    //   username: "eric123",
+    //   status: "사용가능",
+    //   date: "2021-06-29",
+    //   expireDate: "2021-07-29",
+    // },
   ];
 
   const UseButton = () => (
@@ -103,17 +103,21 @@ const CouponUsageTable = () => {
         boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
         color: "#ededeb",
       }}
-      className="rounded-4px text-13px tracking-slight pt-2px hover:filter hover:brightness-125"
+      className="rounded-4px font-medium text-13px tracking-slight flex-shrink-0 hover:filter hover:brightness-125"
     >
-      <span className="">사용하기</span>
+      사용하기
     </button>
   );
 
   function Cells({ items }) {
     return items.map((item, index) => (
       <tr
-        className={`font-spoqa text-14px tracking-slight text-r444444 h-56px border-b  last:border-b-0`}
-        style={{ background: index % 2 === 0 ? "#fff" : "#f7f7f7", borderColor: "#dddddd" }}
+        className={`font-spoqa text-14px tracking-slight text-r444444 h-56px border-b last:border-0`}
+        style={{
+          background: index % 2 === 0 ? "#fff" : "#f7f7f7",
+          height: `${item.id}` === `${items.length - 1}` ? "55px" : "56px",
+          borderColor: "#dddddd",
+        }}
       >
         <td style={{ width: "313px" }} className="text-center">
           <div style={{ width: "313px" }} className="truncate px-5px">

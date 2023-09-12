@@ -114,7 +114,7 @@ const Inbox = () => {
   const searchDropdown = (
     <div
       style={{ width: "120px" }}
-      className=" h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white"
+      className=" h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-white"
     >
       <div className="w-full h-full overflow-x-hidden border-gray-2c2c2c">
         <button
@@ -154,7 +154,7 @@ const Inbox = () => {
   const dropdownButton = (
     <div className="flex w-120px h-42px bg-dark-1a1a1a rounded-6px border group border-p682aa7 text-r444444 bg-white mb-px">
       <input className="w-0 text-16px" />
-      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight ">
+      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-slight ">
         <label className="ml-14px cursor-pointer group-hover:text-gray-r8c8c8c">{selectedCarrier}</label>
         <img className="object-none mr-10px" src={ArrowDownGray} alt="arrow" />
       </div>
@@ -178,7 +178,7 @@ const Inbox = () => {
       >
         <input
           style={{ color: "#444" }}
-          className="w-full placeholder-gray-c8c8c8 flex-shrink-0 outline-none h-40px rounded-6px   px-10px font-medium text-14px tracking-tight bg-dark-1a1a1a"
+          className="w-full placeholder-gray-c8c8c8 flex-shrink-0 outline-none h-40px rounded-6px   px-10px font-medium text-14px tracking-slight bg-dark-1a1a1a"
           placeholder="검색어를 입력해 주세요"
         />
         <button

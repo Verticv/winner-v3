@@ -191,7 +191,7 @@ const Contact = () => {
   const searchDropdown = (
     <div
       style={{ width: "120px" }}
-      className="mt-4px flex flex-col items-center justify-center overflow-hidden   rounded-2px border border-gray-404040 shadow-plain5 text-gray-ccc2b6  text-14px tracking-tight bg-white"
+      className="mt-4px flex flex-col items-center justify-center overflow-hidden   rounded-2px border border-gray-404040 shadow-plain5 text-gray-ccc2b6  text-14px tracking-slight bg-white"
     >
       <div className="w-full p-px h-full overflow-x-hidden border-gray-2c2c2c">
         <button
@@ -249,7 +249,7 @@ const Contact = () => {
       className="flex h-42px bg-dark-1a1a1a rounded-6px border border-p682aa7 text-r444444 bg-white mb-px"
     >
       <input className="w-0 text-16px" />
-      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight">
+      <div className="flex w-full text-gray-ccc2b6 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-slight">
         <label className="ml-14px cursor-pointer group-hover:text-gray-r8c8c8c">{selectedCarrier}</label>
         <img className="object-none mr-9px" src={DownArrowIcon} alt="arrow" />
       </div>
@@ -268,7 +268,7 @@ const Contact = () => {
       <div style={{ width: "381px" }} className="flex h-42px  rounded-6px border border-p682aa7 relative">
         <input
           style={{ color: "#444" }}
-          className="pl-11px placeholder-gray-c8c8c8 pb-2px w-full text-14px outline-none h-full justify-between items-center tracking-tight bg-dark-1a1a1a rounded-6px"
+          className="pl-11px placeholder-gray-c8c8c8 pb-2px w-full text-14px outline-none h-full justify-between items-center tracking-slight bg-dark-1a1a1a rounded-6px"
           placeholder="검색어를 입력해 주세요"
         />
         <button

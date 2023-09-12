@@ -29,7 +29,7 @@ const CouponGiftTable = () => {
                 </tr>
             </thead>
             <tbody className="w-full text-14px tracking-slight">
-                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd bg-white">
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd bg-white">
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -38,7 +38,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd" style={{background:'#f7f7f7'}}>
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd" style={{background:'#f7f7f7'}}>
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -47,7 +47,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr>
-                 <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd bg-white">
+                 <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd bg-white">
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -56,7 +56,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd " style={{background:'#f7f7f7'}}>
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd " style={{background:'#f7f7f7'}}>
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -65,7 +65,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-                 <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd bg-white">
+                 <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd bg-white">
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -74,7 +74,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd" style={{background:'#f7f7f7'}}>
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd" style={{background:'#f7f7f7'}}>
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -83,7 +83,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd bg-white">
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd bg-white">
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -92,7 +92,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd" style={{background:'#f7f7f7'}}>
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd" style={{background:'#f7f7f7'}}>
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -101,7 +101,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd bg-white">
+                <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-dddddd bg-white">
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>
@@ -110,7 +110,7 @@ const CouponGiftTable = () => {
                     <td style={{width: '132px'}} className="text-center font-robotoRegular">2021-06-29</td>
                     <td style={{width: '119px'}} className="text-center font-robotoRegular pr-9px">2021-07-29</td>
                 </tr> 
-               <tr className="text-14px tracking-slight text-r444444 h-56px  border-b border-gray-dddddd" style={{background:'#f7f7f7'}}>
+               <tr className="text-14px tracking-slight text-r444444 h-55px" style={{background:'#f7f7f7'}}>
                     <td style={{width: '79px'}} className="text-center pt-7px">{RadioButton}</td>
                     <td style={{width: '340px'}} className="text-center"><div style={{width: '340px'}} className='truncate px-5px'>테스트쿠폰</div></td>
                     <td style={{width: '143px'}} className="text-right text-e9441d pr-13px font-robotoRegular">10,000</td>

@@ -177,6 +177,7 @@ module.exports = {
         aaaaaa: "#aaaaaa",
         ffd200: "#ffd200",
         dddddd: "#dddddd",
+        f7f7f7: "#f7f7f7",
       },
       fontFamily: {
         swagger: ["Swagger"],
@@ -237,6 +238,7 @@ module.exports = {
     extend: {
       linearGradients: ["hover", "responsive"],
       borderWidth: ["last"],
+      borderColor: ["last"],
       brightness: ["hover"],
       filter: ["hover", "focus"],
     },

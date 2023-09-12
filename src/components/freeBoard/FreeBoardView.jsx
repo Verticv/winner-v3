@@ -242,7 +242,7 @@ const FreeBoardView = () => {
           <div className="pt-16px pb-18px flex items-start space-x-5px">
             <p
               style={{ letterSpacing: "-0.091em" }}
-              className="text-13px font-spoqaMedium tracking-tight text-r444444 -ml-px font-bold"
+              className="text-15px font-spoqaMedium tracking-tight text-r444444 -ml-px font-bold"
             >
               댓글 작성하기
             </p>
@@ -283,9 +283,7 @@ const FreeBoardView = () => {
               }}
             >
               <div className="flex items-center justify-center cursor-pointer">
-                <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-px text-white text-shadow-5">
-                  댓글작성
-                </span>
+                <span className="tracking-slight text-14px text-white text-shadow-5">댓글작성</span>
               </div>
             </button>
           </div>
@@ -446,9 +444,7 @@ const FreeBoardView = () => {
                 }}
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-px text-white text-shadow-5">
-                    댓글수정
-                  </span>
+                  <span className="tracking-slight text-14px text-white text-shadow-5">댓글수정</span>
                 </div>
               </button>
             </div>
@@ -528,9 +524,7 @@ const FreeBoardView = () => {
                 }}
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="font-spoqaMedium tracking-tight text-13px text-blue-d6f3ff pt-px text-white text-shadow-5">
-                    답글작성
-                  </span>
+                  <span className="tracking-slight text-14px text-white text-shadow-5">답글작성</span>
                 </div>
               </button>
             </div>

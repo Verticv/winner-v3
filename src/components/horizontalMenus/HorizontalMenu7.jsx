@@ -35,7 +35,7 @@ const HorizontalMenu7 = ({ itemsArray }) => {
               color: pathname.includes(item.path) ? "#ffffff" : "#2d2834",
               letterSpacing: "-0.1em",
             }}
-            className={` text-14px tracking-tight  flex items-center mt-6px font-semibold`}
+            className={` text-13px tracking-tight  flex items-center mt-6px font-semibold`}
           >
             {item.text}
           </span>

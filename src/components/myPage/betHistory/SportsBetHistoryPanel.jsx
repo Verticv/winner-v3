@@ -205,10 +205,13 @@ const SportsBetHistoryPanel = ({
         }`}
         style={{ background: "#6852a7" }}
       >
-        <div className="flex items-center -mt-3px">
+        <div
+          className="flex items-center -mt-3px"
+          style={{ marginLeft: isAttached && isFullPage ? "-3px" : isAttached && "-1px" }}
+        >
           <img src={FootballIcon} alt="" className="ml-px" />
           <span
-            className="ml-6px text-16px font-medium text-white truncate"
+            className="ml-6px text-16px font-medium text-white truncate -mt-px"
             style={{
               maxWidth: width === "full" || isFullPage ? "910px" : "736px",
               letterSpacing: "-0.015em",
@@ -247,14 +250,17 @@ const SportsBetHistoryPanel = ({
       style={{ borderColor: "#6852a7", overflow: "inherit" }}
     >
       <div
-        className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : " pl-17px pr-18px"}`}
+        className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : "pl-17px pr-18px"}`}
         style={{ background: "#6852a7" }}
       >
-        <div className="flex items-center -mt-3px">
+        <div
+          className="flex items-center -mt-3px"
+          style={{ marginLeft: isAttached && isFullPage ? "-3px" : isAttached && "-1px" }}
+        >
           <img src={FootballIcon} alt="" className="ml-2px" />
 
           <span
-            className="ml-6px  text-16px font-medium text-white truncate"
+            className="ml-6px  text-16px font-medium text-white truncate  -mt-px"
             style={{
               maxWidth: width === "full" || isFullPage ? "910px" : "736px",
               letterSpacing: "-0.015em",
@@ -311,10 +317,13 @@ const SportsBetHistoryPanel = ({
         className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : " pl-17px pr-18px"}`}
         style={{ background: "#6852a7" }}
       >
-        <div className="flex items-center -mt-3px">
+        <div
+          className="flex items-center -mt-3px"
+          style={{ marginLeft: isAttached && isFullPage ? "-3px" : isAttached && "-1px" }}
+        >
           <img src={FootballIcon} alt="" className="ml-px" />
           <span
-            className="ml-6px  text-16px font-medium  text-white truncate"
+            className="ml-6px  text-16px font-medium  text-white truncate -mt-px"
             style={{
               maxWidth: width === "full" || isFullPage ? "910px" : "736px",
               letterSpacing: "-0.015em",
@@ -356,10 +365,13 @@ const SportsBetHistoryPanel = ({
         className={`flex items-center justify-between h-54px w-full ${isFullPage ? "px-20px" : " pl-17px pr-18px"}`}
         style={{ background: "#6852a7" }}
       >
-        <div className="flex items-center -mt-3px">
+        <div
+          className="flex items-center -mt-3px"
+          style={{ marginLeft: isAttached && isFullPage ? "-3px" : isAttached && "-1px" }}
+        >
           <img src={FootballIcon} alt="" className="ml-px" />
           <span
-            className="ml-6px  text-16px font-medium text-white truncate"
+            className="ml-6px  text-16px font-medium text-white truncate -mt-px"
             style={{
               maxWidth: width === "full" || isFullPage ? "910px" : "736px",
               letterSpacing: "-0.015em",

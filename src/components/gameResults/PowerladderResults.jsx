@@ -81,7 +81,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
             }}
             className={`pt-px flex items-center justify-center h-34px w-80px rounded-3px cursor-pointer`}
           >
-            <span className="font-spoqaMedium  tracking-tight text-14px pt-2px">VS</span>
+            <span className="font-spoqaMedium text-14px pt-2px">VS</span>
           </div>
         </button>
 
@@ -99,7 +99,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
               width: "422px",
               color: bet === "right" ? "#fff" : "#444444",
               background: bet === "right" ? "linear-gradient(to top, #5423a0, #9d3bbb )" : "#fff",
-              letterSpacing: "-0.015em"
+              letterSpacing: "-0.015em",
             }}
             className={`${
               bet === "right" ? "text-golden-highLight" : "bg-dark-252525 text-gray-c8c8c8"
@@ -145,7 +145,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
         <div className="flex items-center -mt-3px">
           <img src={icon} alt="" className="ml-16px object-none" />
           <span
-            className="text-white font-spoqaMedium text-16px font-medium ml-3px pt-px truncate"
+            className="text-white font-spoqaMedium text-16px font-medium ml-3px truncate"
             style={{ maxWidth: "790px", letterSpacing: "-0.015em" }}
           >
             {title}
@@ -175,7 +175,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             letterSpacing: "-0.015em",
           }}
-          className="px-11px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-eeeeee font-semibold"
+          className="px-11px w-full flex items-center text-14px font-spoqaMedium text-eeeeee font-semibold"
         >
           <div style={{ width: "75px", marginLeft: "0" }} className="flex justify-center">
             회차

@@ -9,8 +9,13 @@ const PowerballHistory = ({ array, checkedState, setCheckedState }) => {
   function InboxList({ items }) {
     return items.map((item) => (
       <div
-        style={{ height: "62px", backgroundColor: item.id % 2 === 0 ? "#ffffff" : "#f7f7f7", color: "#444444" }}
-        className="flex items-center justify-start  text-14px tracking-tight border-b border-dddddd last:border-b-0"
+        style={{
+          height: "62px",
+          backgroundColor: item.id % 2 === 0 ? "#ffffff" : "#f7f7f7",
+          color: "#444444",
+          letterSpacing: "-0.015em",
+        }}
+        className="flex items-center justify-start  text-14px border-b border-dddddd last:border-b-0"
       >
         <div style={{ width: "60px" }} className="flex justify-center ml-28px">
           <input type="checkbox" checked={checkedState[item.id]} onChange={() => handleOnChange(item.id)} />
@@ -84,8 +89,8 @@ const PowerballHistory = ({ array, checkedState, setCheckedState }) => {
   return (
     <div className="w-full ">
       <div
-        className="flex items-center justify-start text-14px tracking-tight text-eeeeee h-55px border-b border-dddddd font-semibold"
-        style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)" }}
+        className="flex items-center justify-start text-14px text-eeeeee h-55px border-b border-dddddd font-semibold"
+        style={{ background: "linear-gradient(to right, #9d3bbb, #5423a0)", letterSpacing: "-0.015em" }}
       >
         <div style={{ width: "60px" }} className="flex justify-center ml-28px">
           선택

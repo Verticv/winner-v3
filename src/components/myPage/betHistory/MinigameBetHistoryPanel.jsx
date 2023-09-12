@@ -164,11 +164,11 @@ const MinigameBetHistoryPanel = ({
           )}
 
           {game === "파워사다리" ? (
-            <span className="ml-4px text-16px font-medium text-white">파워사다리</span>
+            <span className="ml-4px text-16px font-medium text-white -mt-px">파워사다리</span>
           ) : game === "스피드키노" ? (
-            <span className="ml-6px text-16px font-medium text-white">스피드키노</span>
+            <span className="ml-6px text-16px font-medium text-white -mt-px">스피드키노</span>
           ) : (
-            <span className="ml-6px text-16px font-medium text-white">키노사다리</span>
+            <span className="ml-6px text-16px font-medium text-white -mt-px">키노사다리</span>
           )}
         </div>
         <div className="flex items-center -mt-3px">

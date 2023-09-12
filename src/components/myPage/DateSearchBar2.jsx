@@ -24,11 +24,11 @@ const DateSearchBar2 = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("전체회차")
     const [hoveredOption, setHoveredOption] = useState("");
-    const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px"
+    const dropDownCellClass = "flex w-full h-30px py-2px bg-gray-1f1f1e items-center hover:bg-brown-r3d3934 px-12px tracking-slight"
 
     const gameResultButton = (
         <div style={{ width: "138px", height: "42px", borderColor: "#a088d7" }}
-            className="flex items-center justify-between placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-6px border  px-10px  text-14px tracking-tight hover:text-gray-r8c8c8c border-p682aa7 text-r444444 bg-white mb-px " >
+            className="flex items-center justify-between placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-6px border  px-10px  text-14px tracking-slight hover:text-gray-r8c8c8c border-p682aa7 text-r444444 bg-white mb-px " >
             <p className="mt-px">{selectedCarrier}</p>
             <img src={ArrowDownGray} alt="" />
         </div>
@@ -60,7 +60,7 @@ const DateSearchBar2 = () => {
     const searchDropdown = (
         <div
             style={{ height: "249px", width: "138px" }}
-            className="mt-3px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-medium text-14px tracking-tight border-gray-404040 text-gray-ccc2b6 bg-white"
+            className="mt-3px flex flex-col items-center justify-center overflow-hidden rounded-2px border  font-medium text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-white"
         >
             <div className="w-full p-px h-full overflow-y-scroll overflow-x-hidden border-gray-2c2c2c scroll-div3">
                 <DropdownCells items={LeagueExampleArray} />
@@ -89,7 +89,7 @@ const DateSearchBar2 = () => {
                 <div className="flex space-x-10px items-center h-full justify-center">
                 <div className="relative">
                     <CustomDatePicker
-                        classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-tight text-r444444 focus:ml-10px pb-2px`} />
+                        classes={`flex-shrink-0 outline-none w-138px h-42px rounded-7px border border-p682aa7 px-10px font-medium text-14px tracking-slight text-r444444 focus:ml-10px pb-2px`} />
                     </div>
                     <div className="pt-px">{InboxSearch}</div>
                     <div className="flex items-center justify-center h-42px w-75px rounded-6px shadow-link hover:filter hover:brightness-125"

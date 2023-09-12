@@ -12,7 +12,7 @@ const ContactTable = ({ array }) => {
         key={item.id}
         style={{
           background: item.isRead === false ? "#ecd7fa" : item.id % 2 === 0 ? "#ffffff" : "#f7f7f7",
-          color: item.isRead === false ? "#444444" : "#666666",
+          color: item.isRead === false ? "#444444" : "#444444",
         }}
         className={`text-14px h-56px w-full group border-b border-dddddd`}
       >
@@ -59,7 +59,7 @@ const ContactTable = ({ array }) => {
               item.isRead === false && "font-bold"
             }  w-120px  flex justify-center cursor-pointer h-full items-center tracking-none `}
             onClick={() => history.push(item.path)}
-            style={{ color: item.isRead === true ? "#666666" : "#444444" }}
+            style={{ color: item.isRead === true ? "#444444" : "#444444" }}
           >
             {item.category}
           </div>
@@ -67,7 +67,7 @@ const ContactTable = ({ array }) => {
           <div
             style={{
               width: "420px",
-              color: item.isRead === true ? "#666666" : "#444444",
+              color: item.isRead === true ? "#444444" : "#444444",
             }}
             className={` ${
               item.text.length > 30 ? "" : "space-x-11px"
@@ -91,7 +91,7 @@ const ContactTable = ({ array }) => {
             className={`${
               item.isRead === false && "font-bold"
             } flex justify-center text-center cursor-pointer h-full items-center pr-5px`}
-            style={{ color: item.isRead === true ? "#666666" : "#444444", width: "138px" }}
+            style={{ color: item.isRead === true ? "#444444" : "#444444", width: "138px" }}
             onClick={() => history.push(item.path)}
           >
             {item.time}

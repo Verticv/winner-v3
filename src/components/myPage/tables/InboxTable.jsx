@@ -19,7 +19,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
         style={{
           background: item.isRead === false ? "#ecd7fa" : item.id % 2 === 0 ? "#fff" : "#f7f7f7",
           borderColor: "#dddddd",
-          color: item.isRead ? "#444444" : "#666666",
+          color: item.isRead ? "#444444" : "#444444",
         }}
       >
         <div className="flex items-center text-14px tracking-none h-56px border-b px-52px last:border-b-0">
@@ -38,21 +38,21 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
           <div
             style={{
               width: "569px",
-              color: item.isRead === true ? "#666666" : "#444444",
+              color: item.isRead === true ? "#444444" : "#444444",
             }}
             className={` group flex items-center cursor-pointer`}
             onClick={() => history.push(item.path)}
           >
             {item.type === "공지" ? (
               <div
-                className="px-12px h-25px rounded-full bg-blue-0469a3 flex items-center justify-center text-white text-12px -mt-px  pt-px flex-shrink-0 "
+                className="px-12px h-25px rounded-full flex items-center justify-center text-white text-12px -mt-px  pt-px flex-shrink-0 "
                 style={{ maxWidth: "92px" }}
               >
                 공지
               </div>
             ) : item.type === "이벤트" ? (
               <div
-                className="px-12px h-25px rounded-full bg-yellow-c08029 flex items-center justify-center text-white text-12px -mt-px pt-px flex-shrink-0"
+                className="px-12px h-25px rounded-full flex items-center justify-center text-white text-12px -mt-px pt-px flex-shrink-0"
                 style={{ maxWidth: "92px" }}
               >
                 이벤트
@@ -61,7 +61,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
               ""
             )}
             <p
-              className={`group-hover:text-gray-f1e9e9 truncate -ml-2px mr-9px ${!item.isRead && "font-bold"}`}
+              className={`truncate -ml-2px mr-9px ${!item.isRead && "font-bold"}`}
               style={{
                 letterSpacing: "0",
                 maxWidth: item.type === "공지" || item.type === "이벤트" ? "487px" : "550px",
@@ -84,7 +84,7 @@ const InboxTable = ({ array, checkedState, setCheckedState }) => {
             className={` flex justify-center text-center ${!item.isRead && "font-bold"}`}
             style={{
               width: "160px",
-              color: item.isRead === true ? "#666666" : "#444444",
+              color: item.isRead === true ? "#444444" : "#444444",
             }}
           >
             {item.time}

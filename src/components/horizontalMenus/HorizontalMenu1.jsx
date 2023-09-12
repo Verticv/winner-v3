@@ -37,8 +37,8 @@ const HorizontalMenu1 = ({ itemsArray, isState = 0, setState }) => {
           />
 
           <div
-            style={{ color: isState === item.id ? "#fff" : "32d2834", letterSpacing: "-0.1em" }}
-            className={`text-14px tracking-tight h-14px flex items-center -mt-3px font-semibold`}
+            style={{ color: isState === item.id ? "#fff" : "#2d2834", letterSpacing: "-0.1em" }}
+            className={`text-13px tracking-tight h-14px flex items-center -mt-3px font-semibold`}
           >
             {item.text}
           </div>
@@ -46,7 +46,7 @@ const HorizontalMenu1 = ({ itemsArray, isState = 0, setState }) => {
             style={{
               backgroundColor: isState === item.id ? "#281d45" : "#69637f",
               minWidth: "38px",
-              letterSpacing: "-0.1em",
+              letterSpacing: "0",
             }}
             className={`text-white text-12px font-roboto tracking-tight px-9px mt-9px h-17px rounded-full flex items-center justify-center`}
           >
