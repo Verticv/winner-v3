@@ -68,7 +68,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive, setIsOpen, isOpen }
                 borderRadius: "6px",
                 boxShadow: "1px 1.732px 5px 0px rgba(0, 0, 0, 0.6)",
               }}
-              className="flex absolute items-center justify-center w-178px h-46px mt-180px rounded-lg"
+              className="flex absolute items-center justify-center w-178px h-46px mt-180px rounded-lg filter hover:brightness-110"
               onClick={() => {
                 setIsOpen((prev) => !prev);
               }}
