@@ -63,7 +63,7 @@ const LiveRight = () => {
               background: "linear-gradient(to right, #df52ff, #6c22ff)",
               width: "102px",
             }}
-            className="absolute z-30 top-51px right-130px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium pt-2px text-14px tracking-tight"
+            className="absolute z-30 top-51px right-130px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-14px tracking-tight"
           >
             게임시작
           </button>
@@ -111,10 +111,7 @@ const LiveRight = () => {
         className="rounded-8px w-auto h-full bg-white -mt-3px"
       >
         <div style={{ minHeight: "254px" }} className="h-full w-auto flex justify-center">
-          <div
-            // style={{ width: '360px' }}
-            className="p-15px grid gap-10px grid-cols-1 limit:grid-cols-1"
-          >
+          <div className="p-15px grid gap-10px grid-cols-1 limit:grid-cols-1">
             <GamesList items={gamesArray} />
           </div>
         </div>

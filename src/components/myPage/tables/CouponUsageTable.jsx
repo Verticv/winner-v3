@@ -83,15 +83,15 @@ const CouponUsageTable = () => {
       date: "2021-06-29",
       expireDate: "2021-07-29",
     },
-    // {
-    //   id: 9,
-    //   name: "테스트쿠폰",
-    //   amount: "10,000",
-    //   username: "eric123",
-    //   status: "사용가능",
-    //   date: "2021-06-29",
-    //   expireDate: "2021-07-29",
-    // },
+    {
+      id: 9,
+      name: "테스트쿠폰",
+      amount: "10,000",
+      username: "eric123",
+      status: "사용가능",
+      date: "2021-06-29",
+      expireDate: "2021-07-29",
+    },
   ];
 
   const UseButton = () => (

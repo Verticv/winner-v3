@@ -310,7 +310,7 @@ const BetHistoryPopup = ({ setPopupOpen, setAttachedArray, attachedArray }) => {
                     ? "580px"
                     : selectedTab.includes("/slot-game") || selectedTab.includes("/live-sport")
                     ? "580px"
-                    : selectedTab.includes("/hotel-casino")
+                    : selectedTab.includes("/hotel-casino") || selectedTab.includes("/minigame")
                     ? "480px"
                     : selectedTab.includes("/sports") || selectedTab.includes("/fishing-game")
                     ? "234px"

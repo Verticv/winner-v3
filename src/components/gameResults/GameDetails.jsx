@@ -111,7 +111,7 @@ const GameDetails = () => {
           <div className="flex items-center">
             <img className="-mt-2px" src={FootballIcon} alt="" />
             <span
-              className="ml-6px  text-16px font-medium text-white  truncate -mt-2px"
+              className="ml-6px  text-16px font-medium text-white  truncate -mt-3px"
               style={{ maxWidth: "920px", letterSpacing: "-0.015em" }}
             >
               축구 / 미국 - 메이저리그사커
@@ -169,13 +169,13 @@ const GameDetails = () => {
           <div className="flex items-center">
             <img className="-mt-2px" src={BasketballIcon} alt="" />
             <span
-              className="ml-6px font-spoqaMedium text-16px font-medium text-white -mt-2px truncate"
+              className="ml-6px font-spoqaMedium text-16px font-medium text-white -mt-3px truncate"
               style={{ maxWidth: "920px", letterSpacing: "-0.015em" }}
             >
               농구 / 미국 - NBA
             </span>
           </div>
-          <img className="ml-px -mt-2px" src={USFlagIcon} alt="" />
+          <img className="ml-px -mt-px" src={USFlagIcon} alt="" />
         </div>
       </div>
 
@@ -191,9 +191,9 @@ const GameDetails = () => {
           <Options bet="left" team1="LA레이커스" team2="피닉스" stat1="2.95" stat2="VS" stat3="1.39" />
         </div>
 
-        <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center truncate">222 : 222</div>
+        <div className="w-57px ml-17px font-roboto text-14px text-r444444 text-center truncate tracking-tight">222 : 222</div>
         <div style={{ color: "#f04281" }} className="w-63px text-center font-spoqaMedium text-14px">
-          <p className="-ml-3px font-semibold">승</p>
+          <p className="-ml-4px font-semibold">승</p>
         </div>
       </div>
 
@@ -210,9 +210,9 @@ const GameDetails = () => {
           <Options bet="right" team1="세크라멘토" team2="오클라호마" stat1="2.95" stat2="VS" stat3="2.25" />
         </div>
 
-        <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center truncate">222 : 222</div>
+        <div className="w-57px ml-17px font-roboto text-14px text-r444444 text-center truncate tracking-tight">222 : 222</div>
         <div style={{ color: "#666666" }} className="w-63px text-center text-14px">
-          <p className="-ml-3px font-semibold">패</p>
+          <p className="-ml-4px font-semibold">패</p>
         </div>
       </div>
     </div>

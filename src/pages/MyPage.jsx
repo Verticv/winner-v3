@@ -239,7 +239,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               setSelectedTab={setSelectedTab}
               setSelectedSubTab={setSelectedSubTab}
               branch2="쪽지관리"
-              mainPath="/mypage/inbox"
+              mainPath="/mypage/inbox/main"
             />
           </Route>
           <Route path="/mypage/inbox/view*">

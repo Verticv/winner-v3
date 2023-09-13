@@ -222,7 +222,7 @@ export default function AnimatedCarousel() {
                   width: "132px",
                 }}
               >
-                <p className="-ml-px mt-2px">게임시작</p>
+                <p className="-ml-px">게임시작</p>
               </button>
             </div>
           )}

@@ -2015,7 +2015,7 @@ const SportsGamePolicy = ({ setSelectedTab }) => {
 
       <div className=" mt-25px w-full flex h-16px items-center justify-center text-16px tracking-tight text-white">
         <Route path="/cscenter/policy/sportsgame/live-sport">
-          <p className="text-white">라이브스포츠 베팅규정 (모든 종목의 기본규정과 다를 시 별도 표기하고있습니다.)</p>
+          <p className="text-white">라이브스포츠 베팅규정 (모든 종목의 기본규정과 다를 시 별도 표기하고 있습니다.)</p>
         </Route>
         <Route path="/cscenter/policy/sportsgame/soccer">
           <p className="text-white">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>

@@ -103,7 +103,7 @@ const TvBetHowTo = () => {
     >
       <div
         style={{ backgroundColor: "#dfdbfa" }}
-        className="w-full bg-gray-323232 rounded-10px overflow-hidden p-30px space-y-30px"
+        className="w-full bg-gray-323232 rounded-10px overflow-hidden p-30px pr-27px space-y-30px"
       >
         <div className="flex space-x-20px items-start -mt-px">
           <img className="object-none mt-px" src={Image3} alt="" />
@@ -144,7 +144,7 @@ const TvBetHowTo = () => {
                   style={{ color: "#8c8c8c", whiteSpace: "pre-wrap" }}
                   className="flex items-center text-14px tracking-tight mt-7px break-words"
                 >
-                  {`※ ④ [이벤트정보] 화면에서 현재 '라이브' 중인 \n게임과 '예정된' 게임이벤트를 확인할 수 \n있습니다. 원하는 이벤트를 선택하면 '배당판'이 활성화되며 배당을 선택하면 베팅이 가능합니다.`}
+                  {`※ ④ [이벤트정보] 화면에서 현재 '라이브' 중인 \n게임과 '예정된' 게임이벤트를 확인할 수 있습니다. \n원하는 이벤트를 선택하면 '배당판'이 활성화되며 배당을 선택하면 베팅이 가능합니다.`}
                 </span>
                 {/* <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-14px tracking-tight mt-7px">
                   원하는 이벤트를 선택하면 '배당판'이 활성화되며
@@ -160,7 +160,7 @@ const TvBetHowTo = () => {
                     style={{ color: "#8c8c8c", whiteSpace: "pre-wrap" }}
                     className="flex items-center text-14px tracking-tight mt-7px"
                   >
-                    {`※ ⑤ [플레이방법] 메뉴에서 각 게임별 \n이용방법과 규정 등 확인 가능합니다.`}
+                    {`※ ⑤ [플레이방법] 메뉴에서 각 게임별 이용방법과\n규정 등 확인 가능합니다.`}
                   </span>
                 </div>
                 {/* <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-14px tracking-tight mt-7px">

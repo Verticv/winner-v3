@@ -62,7 +62,7 @@ const MoneyPage = ({ isAuthenticated, setAuthenticated }) => {
           <DirectoryComponent
             branch1='충전/환전'
             branch2='보유머니 환전'
-            mainPath='/money/charge'
+            mainPath='/money/exchange'
             setSelectedTab={setSelectedTab}
           />
         </Route>

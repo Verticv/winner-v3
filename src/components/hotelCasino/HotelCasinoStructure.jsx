@@ -7,7 +7,7 @@ import Dot from "../../images/esports/dot.png";
 import TitleIcon from "../../images/title-icon1.png";
 
 const HotelCasinoStructure = () => {
-  const TitleText = ({ number = "01", title }) => (
+  const TitleText = ({ number, title }) => (
     <div className="flex items-center">
       <img className="z-10 object-none" src={TitleIcon} alt="" />
       <span
@@ -16,20 +16,22 @@ const HotelCasinoStructure = () => {
       >
         {title}
       </span>
-      <div
-        style={{
-          background: "linear-gradient(to right, #f4ecd0, #f2eace)",
-          borderRadius: "50%",
-        }}
-        className="w-35px h-33px p-px flex items-center justify-center ml-5px"
-      >
+      {number && (
         <div
-          style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
-          className="w-33px h-31px flex items-center justify-center text-gray-ccc2b6 text-18px text-white font-roboto pb-2px"
+          style={{
+            background: "linear-gradient(to right, #f4ecd0, #f2eace)",
+            borderRadius: "50%",
+          }}
+          className="w-35px h-33px p-px flex items-center justify-center ml-5px"
         >
-          {number}
+          <div
+            style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
+            className="w-33px h-31px flex items-center justify-center text-gray-ccc2b6 text-18px text-white font-roboto pb-2px"
+          >
+            {number}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 
@@ -180,7 +182,7 @@ const HotelCasinoStructure = () => {
             }}
           >
             <div style={{ backgroundColor: "#ffffff", height: "663px" }} className="w-full h-full rounded-xl p-20px">
-              <TitleText title="로비화면" number="0" />
+              <TitleText title="로비화면" />
               <div className="mt-19px w-full h-px bg-gray-dddddd" style={{ background: "#cccccc" }}></div>
               <div className="pt-20px space-y-23px">
                 <Item title="아이디&보유머니" text="본인의 아이디와 보유머니 표시" />
@@ -216,7 +218,7 @@ const HotelCasinoStructure = () => {
                   </div>
                   <div className="flex items-center">
                     <span
-                      style={{ color: "#444444" }}
+                      style={{ color: "#8c8c8c" }}
                       className="flex h-16px items-center text-14px tracking-tight mt-7px"
                     >
                       ※ 스피드게임 : 45초 베팅시간 제공

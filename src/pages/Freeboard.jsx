@@ -9,9 +9,11 @@ import React, { useEffect, useState } from "react";
 import { Route } from "react-router";
 import FreeBoardBanner from "../images/freeBoard/free_board_banner_v3.png";
 import FreeBoardView2 from "components/freeBoard/FreeBoardView2";
+import { useLocation } from "react-router-dom";
 
 const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const location = useLocation();
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -45,7 +47,7 @@ const Freeboard = ({ isAuthenticated, setAuthenticated }) => {
           <DirectoryComponent branch1="게시판" mainPath="/freeboard/main" />
         </Route>
         <Route path="/freeboard/view*">
-          <DirectoryComponent branch1="게시판" branch2="뷰" mainPath="/freeboard/view" />
+          <DirectoryComponent branch1="게시판" branch2="뷰" mainPath={location.pathname} />
         </Route>
         <Route path="/freeboard/compose*">
           <DirectoryComponent branch1="게시판" branch2="작성하기" mainPath="/freeboard/compose" />

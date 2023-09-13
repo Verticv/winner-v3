@@ -46,7 +46,7 @@ const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null 
               style={{ color: pathname.includes(item.path) ? "#ffffff" : "#5e399a" }}
               className={`${
                 pathname.includes(item.path) ? "text-gray-252525" : "text-golden-ccc2b6"
-              } text-17px font-bold tracking-tight`}
+              } text-17px font-bold tracking-tight -mt-px`}
             >
               {item.text}
             </span>
