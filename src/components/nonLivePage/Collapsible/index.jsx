@@ -9,7 +9,7 @@ const Collapsible = ({
   iconButtonClassName = "collapsible-icon-button-edonec",
   contentClassName = "collapsible-content-edonec",
   contentClassNameDisableClose = "collapsible-content-edonec-disable-close",
-  contentContainerClassName = "collapsible-content-padding-edonec",
+  contentContainerClassName = "collapsible-content-container",
   children,
   headerChild,
   disableAnimationOnClose = false,
@@ -56,7 +56,7 @@ const Collapsible = ({
           style={{ height }}
         >
           <div ref={ref}>
-            <div className={contentContainerClassName}>{children}</div>
+            <div className={`${contentContainerClassName} ${!isOpen?'opacity-0':'opacity-1'}`} >{children}</div>
           </div>
         </div>
       </div>
