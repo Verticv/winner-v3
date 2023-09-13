@@ -27,52 +27,44 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
   console.log("state :>> ", liveGameData);
 
-   const pauseHover = () => {
-    let timer 
+  const pauseHover = () => {
+    let timer;
     clearTimeout(timer);
-    const allWithClass = Array.from(
-      document.getElementsByClassName('hover-style')
-    );
-    allWithClass.forEach(element => {
-      let list = element.classList
+    const allWithClass = Array.from(document.getElementsByClassName("hover-style"));
+    allWithClass.forEach((element) => {
+      let list = element.classList;
       list.remove("can-hover");
-    })
-    
-  }
+    });
+  };
   const handleOnScroll = (element) => {
     element.addEventListener("scroll", (event) => {
-      pauseHover()
+      pauseHover();
     });
-  }
+  };
 
   const handleScrollEnd = (element) => {
     element.addEventListener("scrollend", (event) => {
-      let timer 
+      let timer;
       clearTimeout(timer);
-      const allWithClass = Array.from(
-        document.getElementsByClassName('hover-style')
-      );
+      const allWithClass = Array.from(document.getElementsByClassName("hover-style"));
       setTimeout(() => {
-      allWithClass.forEach(element => {
-          let list = element.classList
+        allWithClass.forEach((element) => {
+          let list = element.classList;
           list.add("can-hover");
-      })
+        });
       }, 500);
-    })
-  }
-
+    });
+  };
 
   useEffect(() => {
-    let container_boxes =  document.querySelectorAll('div.scroll-box')
+    let container_boxes = document.querySelectorAll("div.scroll-box");
     if (container_boxes) {
       container_boxes.forEach((element) => {
-        handleOnScroll(element)
-        handleScrollEnd(element)
-      })
+        handleOnScroll(element);
+        handleScrollEnd(element);
+      });
     }
-    
   });
-
 
   return (
     <>
@@ -116,9 +108,10 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               overflowY: "auto",
               flexShrink: 0,
               maxHeight: "100vh",
+              minHeight: "400px",
               marginBottom: "8px",
             }}
-           id='scroll-box'
+            id="scroll-box"
           >
             <Search />
             <LeftAccordion />
@@ -151,7 +144,8 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               marginLeft: englandActive ? "-1px" : "0",
               marginRight: englandActive ? "5px" : "",
             }}
-          className="scroll-box">
+            className="scroll-box"
+          >
             {englandActive ? (
               <EnglandComponent2
                 englandActive={englandActive}
