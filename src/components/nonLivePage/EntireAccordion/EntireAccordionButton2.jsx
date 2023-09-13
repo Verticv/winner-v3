@@ -4,7 +4,7 @@ import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
 
 import EntireAccordionContent2 from "./EntireAccordionContent2";
-
+import Collapsible from "../Collapsible/index";
 // import AccordionContent1 from "./AccordionContent1";
 
 const EntireAccordionButton2 = ({ icon, title, cards, handleZoomClick }) => {
@@ -18,60 +18,63 @@ const EntireAccordionButton2 = ({ icon, title, cards, handleZoomClick }) => {
 
   return (
     <div className="ml-4px mr-5px mb-5px">
-      <div
-        style={{
-          background: "linear-gradient(to right, #9d3bbb, #5423a0)",
-          width: "630px",
-          borderRadius: "4px",
-          borderBottomRightRadius: `${isOpen ? "0px" : "4px"}`,
-          borderBottomLeftRadius: `${isOpen ? "0px" : "4px"}`,
-        }}
-        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-31px`}
-        onClick={toggleAccordion}
-      >
-        <div className="flex items-center">
-          <p
+      <Collapsible
+        open
+        headerChild={
+          <div
             style={{
-              color: "#eeeeee",
-              letterSpacing: "-0.031em",
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              maxWidth: "540px",
+              background: "linear-gradient(to right, #9d3bbb, #5423a0)",
+              width: "630px",
+              borderRadius: "4px",
+              borderBottomRightRadius: `${isOpen ? "0px" : "4px"}`,
+              borderBottomLeftRadius: `${isOpen ? "0px" : "4px"}`,
             }}
-            className="text-13px mb-px ml-9px font-bold"
+            className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-31px`}
+            onClick={toggleAccordion}
           >
-            {title}
-          </p>
-        </div>
-        <div className="flex items-center">
-          <img
-            style={{
-              borderColor: "#764cbb",
-              height: "31px",
-              paddingRight: "2px",
-              marginTop: activeStar || hoverStar ? "1px" : "",
-            }}
-            className="border-r mb-px -mr-px object-none"
-            src={activeStar || hoverStar ? activeStarIcon : icon}
-            alt="icon"
-            onClick={(e) => {
-              e.stopPropagation();
-              setActiveStar((prev) => !prev);
-              handleZoomClick("zoom-out");
-            }}
-            onMouseEnter={() => setHoverStar(true)}
-            onMouseLeave={() => setHoverStar(false)}
-          />
-          <img
-            src={Arrow}
-            alt="img"
-            style={{ marginBottom: "1px" }}
-            className={` object-none text-white ml-14px mr-14px ${isOpen ? "transform rotate-180" : ""}`}
-          />
-        </div>
-      </div>
-      {isOpen && (
+            <div className="flex items-center">
+              <p
+                style={{
+                  color: "#eeeeee",
+                  letterSpacing: "-0.031em",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  maxWidth: "540px",
+                }}
+                className="text-13px mb-px ml-9px font-bold"
+              >
+                {title}
+              </p>
+            </div>
+            <div className="flex items-center">
+              <img
+                style={{
+                  borderColor: "#764cbb",
+                  height: "31px",
+                  paddingRight: "2px",
+                  marginTop: activeStar || hoverStar ? "1px" : "",
+                }}
+                className="border-r mb-px -mr-px object-none"
+                src={activeStar || hoverStar ? activeStarIcon : icon}
+                alt="icon"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveStar((prev) => !prev);
+                  handleZoomClick("zoom-out");
+                }}
+                onMouseEnter={() => setHoverStar(true)}
+                onMouseLeave={() => setHoverStar(false)}
+              />
+              <img
+                src={Arrow}
+                alt="img"
+                style={{ marginBottom: "1px" }}
+                className={` object-none text-white ml-14px mr-14px ${isOpen ? "transform rotate-180" : ""}`}
+              />
+            </div>
+          </div>
+        }>
         <div style={{ background: "#420572" }} className="rounded-b-lg">
           <div style={{ background: "#eeeeee", width: "630px" }} className="flex items-center justify-between h-28px  ">
             <div style={{ width: "315px" }} className="flex justify-center px-10px">
@@ -109,7 +112,7 @@ const EntireAccordionButton2 = ({ icon, title, cards, handleZoomClick }) => {
             <EntireAccordionContent2 key={item.id} card={item} />
           ))}
         </div>
-      )}
+      </Collapsible>
     </div>
   );
 };

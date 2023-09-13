@@ -14,7 +14,6 @@ const AccordionContent = ({ setIsOpen }) => {
   const [isOpen1, setIsOpen1] = useState(true);
   const [isOpen2, setIsOpen2] = useState(true);
   const [isOpen3, setIsOpen3] = useState(true);
-  const [isHovered, setHovered] = useState(null);
 
   const toggleAccordion1 = () => {
     setIsOpen1(!isOpen1);
@@ -125,35 +124,29 @@ const AccordionContent = ({ setIsOpen }) => {
             <>
               <div
                 style={{
-                  background: isHovered === 1 ? "#946cf0" : "#ffffff",
                   borderRadius: "4px",
                 }}
-                className="flex items-center justify-between mx-2px h-35px mb-2px cursor-pointer"
+                className="flex items-center justify-between mx-2px h-35px mb-2px cursor-pointer accordion can-hover"
                 onClick={toggleAccordion1}
-                onMouseEnter={() => setHovered(1)}
-                onMouseLeave={() => setHovered(null)}
+                
               >
                 <div className="flex items-center">
                   <img
-                    style={{
-                      filter: isHovered === 1 && "brightness(0) invert(1)",
-                    }}
-                    className="ml-6px mt-6px mb-6px"
+                    className="ml-6px mt-6px mb-6px hover"
                     src={icon}
                     alt="img"
                   />
                   <p
                     style={{
-                      color: isHovered === 1 ? "#fff" : "#444444",
                       letterSpacing: "-0.031em",
                       whiteSpace: "nowrap",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
                       maxWidth: "210px",
                     }}
-                    className="text-12px mt-10px mb-12px ml-5px"
+                    className="hover text-12px mt-10px mb-12px ml-5px"
                   >
-                    프리미어리그
+                    프리미어리그 
                   </p>
                 </div>
 
@@ -161,10 +154,9 @@ const AccordionContent = ({ setIsOpen }) => {
                   src={Arrow}
                   alt=""
                   style={{
-                    color: "#444444",
-                    filter: isHovered === 1 && "brightness(0) invert(1)",
+                    color: "#444444"
                   }}
-                  className={`object-none cursor-pointer mr-11px filter hover:opacity-75 ${
+                  className={` hover object-none cursor-pointer mr-11px filter hover:opacity-75 ${
                     isOpen1 ? "transform rotate-180" : ""
                   }`}
                 />
@@ -201,32 +193,27 @@ const AccordionContent = ({ setIsOpen }) => {
             <>
               <div
                 style={{
-                  background: isHovered === 2 ? "#946cf0" : "#ffffff",
+                  background:  "#ffffff",
                   borderRadius: "4px",
                 }}
-                className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer justify-between"
+                className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer justify-between accordion can-hover"
                 onClick={toggleAccordion2}
-                onMouseEnter={() => setHovered(2)}
-                onMouseLeave={() => setHovered(null)}
               >
                 <div className="flex items-center">
                   <img
-                    style={{
-                      filter: isHovered === 2 && "brightness(0) invert(1)",
-                    }}
-                    className="ml-6px"
+                    className="hover ml-6px"
                     src={icon}
                     alt="img"
                   />
                   <p
                     style={{
-                      color: isHovered === 2 ? "#fff" : "#444444",
+                      color:  "#444444",
                       whiteSpace: "nowrap",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
                       maxWidth: "210px",
                     }}
-                    className="text-12px ml-5px"
+                    className="hover text-12px ml-5px"
                   >
                     라리가
                   </p>
@@ -239,10 +226,9 @@ const AccordionContent = ({ setIsOpen }) => {
                   //   setShowCard1((prev) => !prev);
                   // }}
                   style={{
-                    color: "#444444",
-                    filter: isHovered === 2 && "brightness(0) invert(1)",
+                    color: "#444444"
                   }}
-                  className={`object-none mr-11px cursor-pointer ${isOpen2 ? "transform rotate-180" : ""}`}
+                  className={`hover object-none mr-11px cursor-pointer ${isOpen2 ? "transform rotate-180" : ""}`}
                 />
               </div>
               {isOpen2 && (
@@ -274,35 +260,30 @@ const AccordionContent = ({ setIsOpen }) => {
                 <>
                   <div
                     style={{
-                      background: isHovered === 3 ? "#946cf0" : "#ffffff",
+                      background:  "#ffffff",
                       borderRadius: "4px",
                     }}
-                    className="flex items-center mx-2px h-35px mb-2px cursor-pointer justify-between"
+                    className="flex items-center mx-2px h-35px mb-2px cursor-pointer justify-between accordion can-hover"
                     onClick={toggleAccordion3}
-                    onMouseEnter={() => setHovered(3)}
-                    onMouseLeave={() => setHovered(null)}
                   >
                     <div className="flex items-center">
                       <img
-                        style={{
-                          filter: isHovered === 3 && "brightness(0) invert(1)",
-                        }}
-                        className="ml-6px mt-7px mb-6px"
+                        className="hover ml-6px mt-7px mb-6px"
                         src={icon}
                         alt="img"
                       />
                       <p
                         style={{
-                          color: isHovered === 3 ? "#fff" : "#444444",
+                          color:  "#444444",
                           letterSpacing: "-0.031em",
                           whiteSpace: "nowrap",
                           overflow: "hidden",
                           textOverflow: "ellipsis",
                           maxWidth: "210px",
                         }}
-                        className="text-12px mt-10px mb-13px ml-5px"
+                        className="hover text-12px mt-10px mb-13px ml-5px"
                       >
-                        분데스리가
+                        분데스리가 
                       </p>
                     </div>
                     <img
@@ -310,10 +291,9 @@ const AccordionContent = ({ setIsOpen }) => {
                       alt=""
                       // onClick={() => setShowCard2((prev) => !prev)}
                       style={{
-                        color: "#444444",
-                        filter: isHovered === 3 && "brightness(0) invert(1)",
+                        color: "#444444"
                       }}
-                      className={`object-none mr-11px cursor-pointer ${isOpen3 ? "transform rotate-180" : ""}`}
+                      className={`hover object-none mr-11px cursor-pointer ${isOpen3 ? "transform rotate-180" : ""}`}
                     />
                   </div>
                   {isOpen3 && (
@@ -416,7 +396,7 @@ const AccordionContent = ({ setIsOpen }) => {
                           overflow: "hidden",
                           width: "205px",
                         }}
-                        className="text-12px ml-5px"
+                        className="hover text-12px ml-5px"
                       >
                         {el.title.includes("프리미어리그")
                           ? "프리미어리그"

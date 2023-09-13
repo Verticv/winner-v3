@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import icon1 from "../../../images/nonLivePage/LeftAccordion/1.png";
 import icon2 from "../../../images/nonLivePage/LeftAccordion/2.png";
 import icon3 from "../../../images/nonLivePage/LeftAccordion/3.png";
@@ -17,6 +17,8 @@ import icon_4 from "../../../images/nonLivePage/LeftAccordion/content1/icon41.pn
 import icon_5 from "../../../images/nonLivePage/LeftAccordion/content1/icon51.png";
 import AccordionButton from "./AccordionButton";
 import AccordionButton3 from "./AccordionButton3";
+
+  
 
 const card2 = [
   {
@@ -88,13 +90,50 @@ const card3 = [
   },
 ];
 
+
 const LeftAccordion = () => {
+  
+  const pauseHover = () => {
+    let timer 
+    clearTimeout(timer);
+    const allWithClass = Array.from(
+      document.getElementsByClassName('accordion')
+    );
+    allWithClass.forEach(element => {
+      let list = element.classList
+      list.remove("can-hover");
+    })
+    
+  }
+
+  useEffect(() => {
+    const element = document.querySelector("div#scroll-box");
+    if (element) {
+      element.addEventListener("scroll", (event) => {
+        pauseHover()
+      });
+    }
+    element.addEventListener("scrollend", (event) => {
+      let timer 
+      clearTimeout(timer);
+      const allWithClass = Array.from(
+        document.getElementsByClassName('accordion')
+      );
+      setTimeout(() => {
+       allWithClass.forEach(element => {
+          let list = element.classList
+          list.add("can-hover");
+       })
+      }, 500);
+    });
+ }, []);
   return (
-    <div className="h-full items-start mr-4px mt-5px mx-auto relative">
+    <div className="h-full items-start mr-4px mt-5px mx-auto relative" >
       <AccordionButton icon={icon1} title="즐겨찾기" />
       <AccordionButton1 icon={icon2} title="인기경기" card={card2} />
       <AccordionButton2 icon={icon3} title="인기리그" card={card3} />
-      <AccordionButton3 icon={icon4} title="모든경기" />
+      <AccordionButton3 icon={icon4} title="모든경기" /> 
+    
     </div>
   );
 };

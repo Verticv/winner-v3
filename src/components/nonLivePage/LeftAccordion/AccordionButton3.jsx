@@ -14,12 +14,13 @@ import icon7 from "../../../images/nonLivePage/Tabs/Icon7.png";
 import icon8 from "../../../images/nonLivePage/Tabs/Icon8.png";
 import icon9 from "../../../images/nonLivePage/Tabs/Icon9.png";
 import icon10 from "../../../images/nonLivePage/Tabs/Icon10.png";
+import Collapsible from "../Collapsible/index";
 
 const AccordionButton3 = ({ icon, title }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [showCard, setShowCard] = useState(false);
   const [showCard1, setShowCard1] = useState(false);
-  const [hover, setHover] = useState(null);
+  const [hover] = useState(null);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -31,14 +32,12 @@ const AccordionButton3 = ({ icon, title }) => {
         background: hover === count ? "#946cf0" : "#ffffff",
         borderRadius: "4px",
       }}
-      className="flex items-center ml-2px mb-2px mr-2px h-37px justify-between cursor-pointer"
-      onMouseEnter={() => setHover(count)}
-      onMouseLeave={() => setHover(null)}
+      className="flex items-center ml-2px mb-2px mr-2px h-37px justify-between cursor-pointer accordion can-hover"
     >
       <div className="flex items-center">
         <img
           style={{ filter: hover === count && "brightness(0) invert(1)" }}
-          className="ml-6px"
+          className="hover ml-6px"
           src={image}
           alt="img"
         />
@@ -51,7 +50,7 @@ const AccordionButton3 = ({ icon, title }) => {
             textOverflow: "ellipsis",
             maxWidth: "190px",
           }}
-          className="text-13px ml-5px mt-13px mb-14px font-malgun"
+          className="hover text-13px ml-5px mt-13px mb-14px font-malgun"
         >
           {title}
         </p>
@@ -83,58 +82,59 @@ const AccordionButton3 = ({ icon, title }) => {
       }}
       className="p-px mb-5px"
     >
-      <div
-        style={{
-          background: "linear-gradient(to top, #6b22ff, #df52ff)",
-          width: "278px",
-          height: "44px",
-          borderRadius: "5px",
-          borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
-          borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
-        }}
-        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer`}
-        onClick={toggleAccordion}
-      >
-        <div className="flex items-center">
-          <img
-            className="-ml-4px mb-11px"
-            src={icon}
-            alt="icon"
-            style={{
-              marginTop: "3px",
-            }}
-          />
-          <p
-            style={{
-              letterSpacing: "-0.031em",
-            }}
-            className="text-14px text-white ml-5px mt-13px mb-15px font-malgun font-bold"
-          >
-            {title}
-          </p>
-        </div>
-
-        <div className="flex items-center">
+      <Collapsible
+        open={isOpen}
+        headerChild={
           <div
             style={{
-              background: "#5423a0",
-              // width: "39px",
-              height: "19px",
-              // marginLeft: "111px",
-              borderRadius: "4px",
+              background: "linear-gradient(to top, #6b22ff, #df52ff)",
+              width: "278px",
+              height: "44px",
+              borderRadius: "5px",
+              borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
+              borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
             }}
-            className="flex items-center justify-center mr-9px px-5px"
+            className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer`}
+            onClick={toggleAccordion}
           >
-            <p className="text-13px mb-px text-white tracking-tight font-malgun ">1000</p>
+            <div className="flex items-center">
+              <img
+                className="-ml-4px mb-11px"
+                src={icon}
+                alt="icon"
+                style={{
+                  marginTop: "3px",
+                }}
+              />
+              <p
+                style={{
+                  letterSpacing: "-0.031em",
+                }}
+                className="text-14px text-white ml-5px mt-13px mb-15px font-malgun font-bold"
+              >
+                {title}
+              </p>
+            </div>
+
+            <div className="flex items-center">
+              <div
+                style={{
+                  background: "#5423a0",
+                  height: "19px",
+                  borderRadius: "4px",
+                }}
+                className="flex items-center justify-center mr-9px px-5px"
+              >
+                <p className="text-13px mb-px text-white tracking-tight font-malgun ">1000</p>
+              </div>
+              <img
+                src={Arrow}
+                alt=""
+                className={`object-none text-white mr-10px mt-17px mb-18px ${isOpen ? "transform rotate-180" : ""}`}
+              />
+            </div>
           </div>
-          <img
-            src={Arrow}
-            alt=""
-            className={`object-none text-white mr-10px mt-17px mb-18px ${isOpen ? "transform rotate-180" : ""}`}
-          />
-        </div>
-      </div>
-      {isOpen && (
+        }>
         <div
           style={{
             background: "#420572",
@@ -150,14 +150,13 @@ const AccordionButton3 = ({ icon, title }) => {
               background: hover === 1 ? "#946cf0" : "#ffffff",
               borderRadius: "4px",
             }}
-            className="flex items-center ml-2px mb-2px mr-2px h-37px cursor-pointer justify-between"
-            onMouseEnter={() => setHover(1)}
-            onMouseLeave={() => setHover(null)}
+            className="flex items-center ml-2px mb-2px mr-2px h-37px cursor-pointer justify-between accordion can-hover"
+         
           >
             <div className="flex items-center">
               <img
                 style={{ filter: hover === 1 && "brightness(0) invert(1)" }}
-                className="ml-6px mt-8px mb-8px"
+                className="hover ml-6px mt-8px mb-8px"
                 src={icon2}
                 alt="img"
               />
@@ -170,7 +169,7 @@ const AccordionButton3 = ({ icon, title }) => {
                   textOverflow: "ellipsis",
                   maxWidth: "190px",
                 }}
-                className="text-13px ml-5px mt-12px mb-13px font-malgun"
+                className="hover text-13px ml-5px mt-12px mb-13px font-malgun"
               >
                 축구
               </p>
@@ -178,7 +177,6 @@ const AccordionButton3 = ({ icon, title }) => {
             <div
               style={{
                 background: "#6b22ff",
-                // width: "36px",
                 height: "19px",
                 marginRight: "6px",
                 borderRadius: "4px",
@@ -201,9 +199,7 @@ const AccordionButton3 = ({ icon, title }) => {
               >
                 <div
                   onClick={() => setShowCard1((prev) => !prev)}
-                  onMouseEnter={() => setHover(2)}
-                  onMouseLeave={() => setHover(null)}
-                  className="flex items-center h-37px cursor-pointer justify-between"
+                  className="flex items-center h-37px cursor-pointer justify-between accordion can-hover"
                 >
                   <div className="flex items-center">
                     <p
@@ -223,7 +219,7 @@ const AccordionButton3 = ({ icon, title }) => {
                         maxWidth: "160px",
                         color: hover === 2 ? "#ffffff" : "#444444",
                       }}
-                      className="ml-4px mt-13px mb-14px text-13px font-malgun"
+                      className="hover ml-4px mt-13px mb-14px text-13px font-malgun"
                     >
                       잉글랜드
                     </p>
@@ -248,9 +244,7 @@ const AccordionButton3 = ({ icon, title }) => {
                   <>
                     <div
                       style={{ borderColor: "#cccccc", background: hover === 3 ? "#946cf0" : "#dddddd" }}
-                      className="flex items-center h-38px border-t justify-between cursor-pointer"
-                      onMouseEnter={() => setHover(3)}
-                      onMouseLeave={() => setHover(null)}
+                      className="flex items-center h-38px border-t justify-between cursor-pointer accordion can-hover"
                     >
                       <div className="flex items-center">
                         <p
@@ -259,7 +253,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             letterSpacing: "-0.031em",
                             marginLeft: "40px",
                           }}
-                          className="mt-10px mb-14px text-13px"
+                          className="hover mt-10px mb-14px text-13px"
                         >
                           └
                         </p>
@@ -274,7 +268,7 @@ const AccordionButton3 = ({ icon, title }) => {
 
                             color: hover === 3 ? "#ffffff" : "#444444",
                           }}
-                          className="ml-11px mt-13px mb-16px text-12px font-malgun"
+                          className="hover ml-11px mt-13px mb-16px text-12px font-malgun"
                         >
                           프리미어리그
                         </p>
@@ -303,9 +297,7 @@ const AccordionButton3 = ({ icon, title }) => {
                     </div>
                     <div
                       style={{ borderColor: "#cccccc", background: hover === 4 ? "#946cf0" : "#dddddd" }}
-                      className="flex items-center h-38px border-t justify-between cursor-pointer"
-                      onMouseEnter={() => setHover(4)}
-                      onMouseLeave={() => setHover(null)}
+                      className="flex items-center h-38px border-t justify-between cursor-pointer accordion can-hover"
                     >
                       <div className="flex items-center">
                         <p
@@ -314,7 +306,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             letterSpacing: "-0.031em",
                             marginLeft: "40px",
                           }}
-                          className="mt-10px mb-14px text-13px"
+                          className="hover mt-10px mb-14px text-13px"
                         >
                           └
                         </p>
@@ -328,7 +320,7 @@ const AccordionButton3 = ({ icon, title }) => {
                             maxWidth: "160px",
                             color: hover === 4 ? "#ffffff" : "#444444",
                           }}
-                          className="ml-11px mt-13px mb-16px text-12px font-malgun"
+                          className="hover ml-11px mt-13px mb-16px text-12px font-malgun"
                         >
                           챔피언쉽
                         </p>
@@ -336,7 +328,6 @@ const AccordionButton3 = ({ icon, title }) => {
                       <div
                         style={{
                           background: "#444444",
-                          // width: "16px",
                           height: "19px",
                           marginRight: "6px",
                           borderRadius: "4px",
@@ -358,9 +349,8 @@ const AccordionButton3 = ({ icon, title }) => {
                 )}
                 <div
                   style={{ borderColor: "#cccccc", background: hover === 5 ? "#946cf0" : "#eeeeee" }}
-                  className="flex items-center h-38px border-t justify-between cursor-pointer"
-                  onMouseEnter={() => setHover(5)}
-                  onMouseLeave={() => setHover(null)}
+                  className="flex items-center h-38px border-t justify-between cursor-pointer accordion can-hover"
+
                 >
                   <div className="flex items-center">
                     <img className="ml-31px" src={flag2} alt="img" />
@@ -374,7 +364,7 @@ const AccordionButton3 = ({ icon, title }) => {
                         maxWidth: "160px",
                         color: hover === 5 ? "#ffffff" : "#444444",
                       }}
-                      className="ml-4px mt-14px mb-15px text-13px font-malgun"
+                      className="hover ml-4px mt-14px mb-15px text-13px font-malgun"
                     >
                       이탈리아
                     </p>
@@ -401,9 +391,7 @@ const AccordionButton3 = ({ icon, title }) => {
                     borderBottomRightRadius: "4px",
                     borderBottomLeftRadius: "4px",
                   }}
-                  className="flex items-center h-38px border-t justify-between cursor-pointer"
-                  onMouseEnter={() => setHover(6)}
-                  onMouseLeave={() => setHover(null)}
+                  className="flex items-center h-38px border-t justify-between cursor-pointer accordion can-hover"
                 >
                   <div className="flex items-center">
                     <img className="ml-31px" src={flag3} alt="img" />
@@ -417,7 +405,7 @@ const AccordionButton3 = ({ icon, title }) => {
                         maxWidth: "160px",
                         color: hover === 6 ? "#ffffff" : "#444444",
                       }}
-                      className="ml-4px mt-14px mb-15px text-13px font-malgun"
+                      className="hover ml-4px mt-14px mb-15px text-13px font-malgun"
                     >
                       스페인
                     </p>
@@ -449,7 +437,7 @@ const AccordionButton3 = ({ icon, title }) => {
           <Cell title="미식축구" count={13} image={icon9} />
           <Cell title="격투기" count={14} image={icon10} />
         </div>
-      )}
+      </Collapsible>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import CenterAccordionButton from "./CenterAccordionButton";
 const CenterAccordion = ({ setEnglandActive }) => {
   const data = useSelector((state) => state?.nonLive?.data);
   const [lastItemActive, setLastItemActive] = useState(false);
-
+ 
   return (
     <>
       <div className="h-full items-start mr-10px mt-5px">

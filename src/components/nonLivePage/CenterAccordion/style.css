@@ -15,3 +15,10 @@
     opacity: 0;
   }
 }
+.hover-style.can-hover:not(.lock-cell):hover {
+  background: linear-gradient(to top, #5423a0, #9d3bbb);
+  color: #fff !important
+}
+.hover-style.can-hover:not(.lock-cell):hover p {
+  color: #fff !important
+}
