@@ -70,7 +70,7 @@ const CenterAccordionButton = ({
         borderRadius: "6px",
         marginLeft: "1px",
       }}
-      className="rounded-lg p-px mb-4px"
+      className="rounded-lg py-px mb-4px"
     >
        <Collapsible
         open
@@ -85,7 +85,7 @@ const CenterAccordionButton = ({
               borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
             }}
             className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"
-              } cursor-pointer h-30px `}
+              } cursor-pointer h-30px ml-px`}
             onClick={toggleAccordion}
           >
             <div className="flex items-center">
@@ -169,7 +169,7 @@ const CenterAccordionButton = ({
               borderBottomRightRadius: "5px",
               borderBottomLeftRadius: "5px",
             }}
-            className=" -ml-px"
+            className=""
           >
             {cards.map((item) => (
               // @ts-ignore

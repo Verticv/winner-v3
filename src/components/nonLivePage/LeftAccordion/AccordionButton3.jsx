@@ -134,7 +134,8 @@ const AccordionButton3 = ({ icon, title }) => {
               />
             </div>
           </div>
-        }>
+        }
+      >
         <div
           style={{
             background: "#420572",
@@ -151,7 +152,6 @@ const AccordionButton3 = ({ icon, title }) => {
               borderRadius: "4px",
             }}
             className="flex items-center ml-2px mb-2px mr-2px h-37px cursor-pointer justify-between accordion can-hover"
-         
           >
             <div className="flex items-center">
               <img
@@ -197,9 +197,12 @@ const AccordionButton3 = ({ icon, title }) => {
                 }}
                 className="items-center ml-2px mb-2px mr-2px"
               >
+            
+
                 <div
                   onClick={() => setShowCard1((prev) => !prev)}
-                  className="flex items-center h-37px cursor-pointer justify-between accordion can-hover"
+                  style={{ borderColor: "#cccccc", background: hover === 5 ? "#946cf0" : "#eeeeee" }}
+                  className="flex items-center h-38px justify-between cursor-pointer accordion can-hover"
                 >
                   <div className="flex items-center">
                     <p
@@ -217,25 +220,24 @@ const AccordionButton3 = ({ icon, title }) => {
                         whiteSpace: "nowrap",
                         textOverflow: "ellipsis",
                         maxWidth: "160px",
-                        color: hover === 2 ? "#ffffff" : "#444444",
+                        color: hover === 5 ? "#ffffff" : "#444444",
                       }}
-                      className="hover ml-4px mt-13px mb-14px text-13px font-malgun"
+                      className="hover ml-4px mt-14px mb-15px text-13px font-malgun"
                     >
                       잉글랜드
                     </p>
                   </div>
-
                   <div
                     style={{
                       background: "#444444",
-                      // width: "36px",
+                      // width: "29px",
                       height: "19px",
                       marginRight: "6px",
                       borderRadius: "4px",
                     }}
                     className="flex items-center justify-center px-5px"
                   >
-                    <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px font-malgun mb-px">
+                    <p style={{ color: "#eeeeee", letterSpacing: "-0.031em" }} className="text-12px  font-malgun mb-px">
                       1000
                     </p>
                   </div>
@@ -350,7 +352,6 @@ const AccordionButton3 = ({ icon, title }) => {
                 <div
                   style={{ borderColor: "#cccccc", background: hover === 5 ? "#946cf0" : "#eeeeee" }}
                   className="flex items-center h-38px border-t justify-between cursor-pointer accordion can-hover"
-
                 >
                   <div className="flex items-center">
                     <img className="ml-31px" src={flag2} alt="img" />
