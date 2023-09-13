@@ -2,3 +2,8 @@
   overflow: hidden;
   transition: height 0.2s ease-in-out;
 }
+
+.collapsible-content-edonec-disable-close {
+  overflow: hidden;
+  /* transition: height 0.2s ease-in-out; */
+}

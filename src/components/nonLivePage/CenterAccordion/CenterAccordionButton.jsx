@@ -74,6 +74,7 @@ const CenterAccordionButton = ({
     >
        <Collapsible
         open
+        disableAnimationOnClose
         headerChild={
           <div
             style={{

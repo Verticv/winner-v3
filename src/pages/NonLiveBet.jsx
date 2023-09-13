@@ -115,7 +115,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
             style={{
               overflowY: "auto",
               flexShrink: 0,
-              height: "100vh",
+              maxHeight: "100vh",
               marginBottom: "8px",
             }}
            id='scroll-box'

@@ -440,7 +440,7 @@ const FreeBoardView = () => {
                 }}
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="tracking-slight text-14px text-white text-shadow-5">댓글수정</span>
+                  <span className="tracking-tight text-14px text-white text-shadow-5">댓글수정</span>
                 </div>
               </button>
             </div>
@@ -520,7 +520,7 @@ const FreeBoardView = () => {
                 }}
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="tracking-slight text-14px text-white text-shadow-5">답글작성</span>
+                  <span className="tracking-tight text-14px text-white text-shadow-5">답글작성</span>
                 </div>
               </button>
             </div>

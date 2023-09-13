@@ -22,6 +22,7 @@ const EntireAccordionButton = ({ icon, title, cards, handleZoomClick }) => {
   return (
     <div className="ml-4px mr-5px mb-5px ">
         <Collapsible
+        disableAnimationOnClose
         open
         headerChild={
           <div
