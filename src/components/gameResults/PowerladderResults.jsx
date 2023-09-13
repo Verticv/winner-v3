@@ -148,7 +148,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
         <div className="flex items-center -mt-3px">
           <img src={icon} alt="" className="ml-16px object-none" />
           <span
-            className="text-white font-spoqaMedium text-16px font-medium ml-3px truncate"
+            className="text-white font-spoqaMedium text-16px font-medium ml-3px truncate -mt-px"
             style={{ maxWidth: "790px", letterSpacing: "-0.015em" }}
           >
             {title}
