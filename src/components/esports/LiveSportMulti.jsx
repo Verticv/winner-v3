@@ -22,7 +22,7 @@ const LiveSportMulti = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
+      <div className="flex text-16px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -31,11 +31,8 @@ const LiveSportMulti = () => {
         </span>
       </div>
       <span
-        style={{
-          color: "#828282",
-          letterSpacing: text === "라이브경기는 실시간으로 경기영상을 제공하며" ? "-0.1rem" : "-0.091em",
-        }}
-        className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px`}
+        style={{ color: "#828282" }}
+        className={`flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-px`}
       >
         {text}{" "}
         <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
@@ -50,7 +47,7 @@ const LiveSportMulti = () => {
         <div className="flex mt-px pl-15px pb-20px">
           <span
             style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+            className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium "
           >
             {text1_1}
           </span>
@@ -58,42 +55,32 @@ const LiveSportMulti = () => {
       )}
       {text2 && (
         <span
-          style={{
-            color: "#828282",
-            letterSpacing:
-              text2 === "② 수락 및 대기중 등 베팅상태를 확인합니다." ||
-              text2 === "② 경기결과 및 베팅결과 등 확인 가능합니다."
-                ? "-0.091em"
-                : "-0.091em",
-          }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text2}
         </span>
       )}
       {text3 && (
         <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text3}
         </span>
       )}
       {text3_1 && (
         <span
-          style={{
-            color: "#828282",
-            letterSpacing: text3_1 === "- 또는 비어 있는 ④ 화면에 드래그 추가 가능" ? "-0.091em" : "-0.091em",
-          }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ml-15px"
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium ml-15px"
         >
           {text3_1}
         </span>
       )}
       {text3_2 && (
         <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium ml-15px"
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium ml-15px"
         >
           {text3_2}
         </span>
@@ -101,8 +88,8 @@ const LiveSportMulti = () => {
       {other && (
         <div className="flex mt-px py-20px">
           <span
-            style={{ color: "#828282", letterSpacing: "-0.091em" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+            style={{ color: "#828282" }}
+            className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium "
           >
             {other}
           </span>

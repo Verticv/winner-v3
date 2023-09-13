@@ -13,7 +13,7 @@ const LiveSportStructure = () => {
       <img className="z-10 object-none" src={TitleIcon} alt="" />
       <span
         style={{ color: "#444444" }}
-        className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center"
+        className="text-18px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center"
       >
         {title}
       </span>
@@ -22,11 +22,11 @@ const LiveSportStructure = () => {
           background: "linear-gradient(to right, #f4ecd0, #f2eace)",
           borderRadius: "50%",
         }}
-        className="w-39px h-37px p-px flex items-center justify-center ml-5px"
+        className="w-35px h-33px p-px flex items-center justify-center ml-5px"
       >
         <div
           style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
-          className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
+          className="w-33px h-31px flex items-center justify-center text-gray-ccc2b6 text-18px text-white font-roboto pb-2px"
         >
           {number}
         </div>
@@ -45,8 +45,8 @@ const LiveSportStructure = () => {
     color2 = null,
     color3 = null,
   }) => (
-    <div style={{ letterSpacing: "-0.091em" }} className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
+    <div style={{ letterSpacing: "-0.025em" }} className="flex flex-col space-y-4px">
+      <div className="flex text-16px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -57,16 +57,9 @@ const LiveSportStructure = () => {
       <span
         style={{
           color: "#828282",
-          letterSpacing:
-            text === "라이브경기는 실시간으로 경기영상을 제공하며" ||
-            text === "배당률 변경(업/다운) 시 화살표 아이콘 표시" ||
-            text === "클릭 시 해당 배당 즐겨찾기 추가 및 확인 가능" ||
-            text === "클릭 시 해당 경기 즐겨찾기 추가 및 확인 가능" ||
-            text === "버튼을 누르면 해당 경기는 싱글뷰 화면으로"
-              ? "-0.1rem"
-              : "-0.091em",
+          letterSpacing: "-0.025em",
         }}
-        className={`flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px`}
+        className={`flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-px`}
       >
         {text}{" "}
         <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
@@ -79,26 +72,23 @@ const LiveSportStructure = () => {
       </span>
       {text2 && (
         <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center tracking-tight font-spoqaMedium text-14px"
         >
           {text2}
         </span>
       )}
       {text3 && (
         <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center tracking-tight font-spoqaMedium text-14px"
         >
           {text3}
         </span>
       )}
       {other && (
-        <div className="flex mt-px pt-20px">
-          <span
-            style={{ color: "#828282", letterSpacing: "-0.091em" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+        <div className="flex mt-px pt-20px text-14px">
+          <span style={{ color: "#828282" }} className="flex h-16px items-center tracking-tight font-spoqaMedium">
             {other}
           </span>
         </div>
@@ -118,7 +108,7 @@ const LiveSportStructure = () => {
     other = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center mb-10px">
+      <div className="text-16px tracking-tight font-bold space-x-2px flex h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -126,77 +116,59 @@ const LiveSportStructure = () => {
           {title}
         </span>
       </div>
-      <div className="flex mt-px">
+      <div className="flex mt-px text-14px tracking-tight">
         <img src={Dot} className="object-none mr-4px" alt="" />
         <span
           style={{
             color: "#828282",
-            letterSpacing: text === "전체추가 : 화면에 전체 경기 추가(최대 9개)" ? "-0.091em" : "-0.091em",
+            letterSpacing: "-0.025em",
           }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
+          className="flex h-16px items-center font-spoqaMedium "
         >
           {text}
         </span>
       </div>
-      <div className="flex mt-px">
+      <div className="flex mt-px text-14px tracking-tight">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
           {text2}
         </span>
       </div>
       {text2_2 && (
-        <div className="flex mt-px pl-10px pb-20px">
-          <span
-            style={{ color: "#828282", letterSpacing: "-0.091em" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+        <div className="flex mt-px pl-10px pb-20px text-14px tracking-tight">
+          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
             {text2_2}
           </span>
         </div>
       )}
 
       {text3 && (
-        <div className="flex mt-px">
+        <div className="flex mt-px text-14px tracking-tight">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282", letterSpacing: "-0.091em" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
             {text3}
           </span>
         </div>
       )}
       {text4 && (
-        <div className="flex mt-px">
+        <div className="flex mt-px text-14px tracking-tight">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282", letterSpacing: "-0.091em" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
             {text4}
           </span>
         </div>
       )}
       {text5 && (
-        <div className="flex mt-px">
+        <div className="flex mt-px text-14px tracking-tight">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282", letterSpacing: "-0.091em" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
             {text5}
           </span>
         </div>
       )}
       {other && (
-        <div className="flex mt-px pt-20px">
-          <span
-            style={{ color: "#828282", letterSpacing: "-0.091em" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+        <div className="flex mt-px pt-20px text-14px tracking-tight">
+          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
             {other}
           </span>
         </div>

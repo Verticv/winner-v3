@@ -17,7 +17,7 @@ const MoneyExchange = () => {
       style={{ width: "201px", background: "#9b6bd4" }}
       className="space-y-2 flex-shrink-0 h-44px pl-9px flex items-center rounded-4px"
     >
-      <div className=" text-white tracking-tight font-bold text-14px">{text}</div>
+      <div className=" text-white tracking-tight font-semibold text-14px">{text}</div>
     </div>
   );
 
@@ -27,7 +27,7 @@ const MoneyExchange = () => {
 
       <div
         style={{ height: "157px", borderColor: "#cccccc" }}
-        className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-bold"
+        className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-semibold"
       >
         <div className="flex items-center h-26px space-x-9px">
           <img src={AlertIcon} alt="" />
@@ -36,15 +36,15 @@ const MoneyExchange = () => {
 
         <div className="mt-12px flex flex-col space-y-16px text-r444444 tracking-tight  text-14px">
           <span className="h-14px space-y-4px">
-            <span className="font-bold mr-3px mt-px">✓</span> 환전 신청 시 현재 보유머니에서 차감되며, 회원님의
+            <span className="font-semibold mr-3px mt-px">✓</span> 환전 신청 시 현재 보유머니에서 차감되며, 회원님의
             계좌번호로 입금됩니다.
           </span>
           <span className="h-14px space-y-4px">
-            <span className="font-bold mr-3px mt-px">✓</span> 입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검
-            시간을 피해 신청해 주시기 바랍니다.
+            <span className="font-semibold mr-3px mt-px">✓</span> 입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후
+            점검 시간을 피해 신청해 주시기 바랍니다.
           </span>
           <span className="h-14px space-y-4px">
-            <span className="font-bold mr-3px mt-px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
+            <span className="font-semibold mr-3px mt-px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
           </span>
         </div>
       </div>
@@ -60,20 +60,17 @@ const MoneyExchange = () => {
         <div className="h-full w-full rounded-6px overflow-hidden bg-white p-9px">
           <div
             style={{
-              height: "128px",
+              height: "110px",
               borderColor: "#5e399a",
               background: "linear-gradient(to right, #9d3bbb 0%, #5423a0 100%)",
             }}
             className="w-full rounded-4px border"
           >
-            <div className="text-20px tracking-tight text-white h-19px flex items-center mt-30px ml-55px font-bold">
+            <div className="text-20px tracking-tight text-white h-19px flex items-center mt-30px ml-55px font-semibold">
               환전금액 입력
             </div>
             <div className="text-14px tracking-tight text-eeeeee h-14px flex items-center ml-55px mt-14px">
-              환전 신청을 완료하게 되면 보유머니에서 신청한 금액만큼 차감되며
-            </div>
-            <div className="text-14px tracking-tight text-eeeeee h-14px flex items-center ml-55px mt-3px">
-              고객님의 계좌번호로 입금됩니다.
+              환전 신청을 완료하게 되면 보유머니에서 신청한 금액만큼 차감되며 고객님의 계좌번호로 입금됩니다.
             </div>
           </div>
 
@@ -85,7 +82,7 @@ const MoneyExchange = () => {
                   className="h-full text-16px pl-11px border-b"
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
                 >
-                  <div className="h-full w-full flex items-center font-bold ml-2px">
+                  <div className="h-full w-full flex items-center font-semibold ml-2px">
                     <span className="text-rf04281">487,240</span>
                     <span>원</span>
                   </div>
@@ -98,7 +95,9 @@ const MoneyExchange = () => {
                 <form autoComplete="off">
                   <input
                     style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
-                    className="w-full text-14px outline-none pl-11px placeholder-gray-c8c8c8 h-42px border-b mt-2px font-semibold"
+                    className={`w-full text-14px outline-none pl-11px placeholder-gray-c8c8c8 h-42px border-b mt-2px tracking-tight ${
+                      inputValue !== null && "font-semibold"
+                    }`}
                     placeholder="직접 입력시 숫자만 입력해 주세요."
                     value={inputValue !== null ? nf.format(inputValue) : ""}
                     onChange={(e) => setInputValue(e.target.value.replace(/,/g, ""))}
@@ -254,7 +253,9 @@ const MoneyExchange = () => {
               <div className="h-44px w-full overflow-hidden">
                 <input
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
-                  className="w-full text-14px outline-none pl-11px placeholder-gray-c8c8c8 h-42px border-b mt-2px font-semibold"
+                  className={`w-full text-14px outline-none pl-11px placeholder-gray-c8c8c8 h-42px border-b mt-2px tracking-tight ${
+                    passwordValue && "font-semibold"
+                  }`}
                   placeholder="비밀번호를 입력하세요."
                   value={passwordValue}
                   onChange={(e) => setPasswordValue(e.target.value)}
@@ -289,6 +290,18 @@ const MoneyExchange = () => {
 
       <div className="mt-19px mb-60px">
         <Pagination page={page} setPage={setPage} />
+      </div>
+      <div className="-mt-18px w-full flex  items-center justify-center  mb-30px">
+        <div
+          style={{
+            width: "332px",
+            background: "linear-gradient(to right, #df52ff, #6b22ff)",
+            boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.3)",
+          }}
+          className="rounded-full flex justify-center items-center h-42px  text-16px tracking-tight text-white font-semibold"
+        >
+          <span className="">은행점검시간</span>
+        </div>
       </div>
 
       <BankTable />

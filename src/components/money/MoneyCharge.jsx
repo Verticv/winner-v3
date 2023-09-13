@@ -21,7 +21,7 @@ const MoneyCharge = () => {
       style={{ width: "201px", background: "#9b6bd4" }}
       className="space-y-2 flex-shrink-0 h-44px pl-9px flex items-center rounded-4px"
     >
-      <div className=" text-white tracking-tight font-bold text-14px">{text}</div>
+      <div className="text-white tracking-tight font-semibold text-14px">{text}</div>
     </div>
   );
 
@@ -31,7 +31,7 @@ const MoneyCharge = () => {
 
       <div
         style={{ height: "187px", borderColor: "#cccccc" }}
-        className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-bold"
+        className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-semibold"
       >
         <div className="flex items-center h-26px space-x-9px">
           <img src={AlertIcon} alt="" />
@@ -39,18 +39,18 @@ const MoneyCharge = () => {
         </div>
         <div className="mt-12px flex flex-col space-y-16px text-r444444 tracking-tight text-14px">
           <span style={{ color: "#f04281" }} className="h-14px space-y-4px">
-            <span className="mr-3px font-bold">✓</span> 입금 시 반드시 회원님의 성함으로 입금 바랍니다.
+            <span className="mr-3px font-semibold">✓</span> 입금 시 반드시 회원님의 성함으로 입금 바랍니다.
           </span>
           <span className="h-14px space-y-4px">
-            <span className="mr-3px mt-px font-bold">✓</span> 입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검
-            시간을 피해 신청해 주시기 바랍니다.
+            <span className="mr-3px mt-px font-semibold">✓</span> 입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후
+            점검 시간을 피해 신청해 주시기 바랍니다.
           </span>
           <span className="h-14px space-y-4px">
-            <span className="mr-3px mt-px font-bold">✓</span> 입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을
-            통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.
+            <span className="mr-3px mt-px font-semibold">✓</span> 입금계좌는 수시로 변경되오니 반드시 계좌번호 문의
+            신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.
           </span>
           <span className="h-14px space-y-4px">
-            <span className="mr-3px mt-px font-bold">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
+            <span className="mr-3px mt-px font-semibold">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
           </span>
         </div>
       </div>
@@ -74,7 +74,7 @@ const MoneyCharge = () => {
           >
             <div
               style={{ marginTop: "31px", marginLeft: "54px" }}
-              className="text-20px font-bold tracking-tight text-white h-19px flex items-center"
+              className="text-20px font-semibold tracking-tight text-white h-19px flex items-center"
             >
               입금 계좌 정보 확인
             </div>
@@ -110,7 +110,7 @@ const MoneyCharge = () => {
                 <img src={Step1} alt="" />
                 <div className="mt-px ml-8px flex">
                   위{" "}
-                  <p className="font-bold ml-3px" style={{ color: "#fee300" }}>
+                  <p className="font-semibold ml-3px" style={{ color: "#fee300" }}>
                     계좌번호 신청
                   </p>
                   버튼을 누르시면 계좌번호가 쪽지로 발송됩니다.
@@ -123,11 +123,11 @@ const MoneyCharge = () => {
               <div className="h-19px flex items-center text-14px tracking-tight text-eeeeee">
                 <img src={Step3} alt="" />
                 <div className="mt-px ml-8px flex">
-                  <p className="font-bold" style={{ color: "#fee300" }}>
+                  <p className="font-semibold" style={{ color: "#fee300" }}>
                     충전금액 입력
                   </p>
                   란에 실제 입금하신 금액과 동일한 금액을 입력하고
-                  <p className="font-bold text-golden-highLight mx-3px" style={{ color: "#fee300" }}>
+                  <p className="font-semibold text-golden-highLight mx-3px" style={{ color: "#fee300" }}>
                     신청하기
                   </p>
                   버튼을 눌러주세요.
@@ -144,7 +144,7 @@ const MoneyCharge = () => {
                   className="h-full text-16px pl-11px border-b"
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
                 >
-                  <div className="h-full w-full flex items-center font-bold">
+                  <div className="h-full w-full flex items-center font-semibold">
                     <span className="text-rf04281">487,240</span>
                     <span>원</span>
                   </div>
@@ -156,7 +156,9 @@ const MoneyCharge = () => {
               <div className="h-44px w-full overflow-hidden">
                 <input
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
-                  className="w-full text-14px outline-none pl-10px placeholder-gray-c8c8c8 h-42px border-b mt-2px font-semibold"
+                  className={`w-full text-14px outline-none pl-10px placeholder-gray-c8c8c8 h-42px border-b mt-2px tracking-tight ${
+                    inputValue !== null && "font-semibold"
+                  }`}
                   placeholder="직접 입력시 숫자만 입력해 주세요."
                   value={inputValue !== null ? nf.format(inputValue) : ""}
                   onChange={(e) => setInputValue(e.target.value.replace(/,/g, ""))}
@@ -313,7 +315,7 @@ const MoneyCharge = () => {
                   className="h-full text-16px pl-10px border-b"
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
                 >
-                  <div className="h-full w-full flex items-center font-bold">
+                  <div className="h-full w-full flex items-center font-semibold">
                     <span style={{ color: "#33a1e9" }}>100,000,000</span>
                     <span>원</span>
                   </div>
@@ -323,7 +325,7 @@ const MoneyCharge = () => {
 
             <div className="flex space-x-4px items-start mt-34px" style={{ marginLeft: "211px" }}>
               <img src={InfoIcon} alt="info" className="w-15px h-15px" />
-              <div className="text-14px text-r444444 flex flex-col -mt-3px space-y-4px">
+              <div className="text-14px text-r444444 flex flex-col -mt-3px space-y-4px tracking-tight">
                 <span className="h-15px">
                   첫 충전 보너스 머니를 받으실 경우 아래 버튼을{" "}
                   <span className="font-semibold" style={{ color: "#33a1e9" }}>
@@ -394,7 +396,7 @@ const MoneyCharge = () => {
             </div>
             <div
               style={{ width: "906px", borderColor: "#cccccc", background: "#f7f7f7" }}
-              className="w-full rounded-8px border mt-21px pt-17px pb-25px px-15px font-bold"
+              className="w-full rounded-8px border mt-21px pt-17px pb-25px px-15px font-semibold"
             >
               <div className="flex items-center h-26px space-x-8px mb-15px ml-3px">
                 <img src={AlertIcon} alt="" />
@@ -402,12 +404,12 @@ const MoneyCharge = () => {
               </div>
               <div className="mt-12px flex flex-col space-y-17px text-r444444 tracking-tight text-14px">
                 <span className="h-14px space-y-4px">
-                  <span className="mr-3px mt-px font-bold">✓</span> 첫충전을 받으신 경우 선택하신 게임에서 롤링을 먼저
-                  충족하셔야 합니다.
+                  <span className="mr-3px mt-px font-semibold">✓</span> 첫충전을 받으신 경우 선택하신 게임에서 롤링을
+                  먼저 충족하셔야 합니다.
                 </span>
                 <span className="h-14px space-y-4px">
-                  <span className="mr-3px mt-px font-bold">✓</span> 타게임을 이용하시면서 첫충을 받으시는 경우 전액 몰수
-                  될 수 있으니 주의 바랍니다.
+                  <span className="mr-3px mt-px font-semibold">✓</span> 타게임을 이용하시면서 첫충을 받으시는 경우 전액
+                  몰수 될 수 있으니 주의 바랍니다.
                 </span>
               </div>
             </div>

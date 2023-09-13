@@ -15,7 +15,7 @@ const PointsApply = () => {
       style={{ width: "140px", background: "#9b6bd4" }}
       className="space-y-14px flex-shrink-0  h-44px pl-10px flex items-center rounded-4px"
     >
-      <div className=" text-white text-14px tracking-tight font-bold">{text}</div>
+      <div className=" text-white text-14px tracking-tight font-semibold">{text}</div>
     </div>
   );
 
@@ -34,7 +34,7 @@ const PointsApply = () => {
 
       <div
         style={{ height: "157px", borderColor: "#cccccc" }}
-        className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-bold"
+        className="mt-11px w-full rounded-8px border bg-white px-19px pt-18px font-semibold"
       >
         <div className="flex items-center h-26px space-x-9px">
           <img src={AlertIcon} alt="" />
@@ -43,13 +43,13 @@ const PointsApply = () => {
 
         <div className="mt-12px flex flex-col space-y-16px text-r444444 tracking-tight  text-14px">
           <span className="h-14px space-y-4px">
-            <span className="font-bold mr-3px mt-px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
+            <span className="font-semibold mr-3px mt-px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
           </span>
           <span className="h-14px space-y-4px">
-            <span className="font-bold mr-3px mt-px">✓</span> 최소 10,000P 이상 신청 가능합니다.
+            <span className="font-semibold mr-3px mt-px">✓</span> 최소 10,000P 이상 신청 가능합니다.
           </span>
           <span className="h-14px space-y-4px">
-            <span className="font-bold mr-3px mt-px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
+            <span className="font-semibold mr-3px mt-px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
           </span>
         </div>
       </div>
@@ -65,13 +65,13 @@ const PointsApply = () => {
               background: "linear-gradient(to right, #9d3bbb, #5423a0)",
               borderColor: "#5e399a",
             }}
-            className="w-full rounded-6px flex border"
+            className="w-full rounded-4px flex border"
           >
-            <div style={{ marginLeft: "114px" }} className="pt-34px flex flex-col">
-              <span className="text-20px h-19px text-white font-bold">전환 포인트 입력</span>
+            <div style={{ marginLeft: "114px" }} className="pt-34px flex flex-col tracking-tight">
+              <span className="text-20px h-19px text-white font-semibold">전환 포인트 입력</span>
               <span className="text-14px text-eeeeee mt-15px">
                 <span>현재 포인트가 보유머니로 전환되며, 최소 </span>
-                <span className="ml-2px font-bold" style={{ color: "#fee300" }}>
+                <span className="ml-2px font-semibold" style={{ color: "#fee300" }}>
                   10,000
                 </span>
                 P 부터 신청 가능합니다.
@@ -87,7 +87,7 @@ const PointsApply = () => {
                   className="h-full text-16px pl-9px border-b"
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
                 >
-                  <div className="h-full w-full flex items-center font-bold">
+                  <div className="h-full w-full flex items-center font-semibold">
                     <span className="text-rf04281">278</span>
                     <span>P</span>
                   </div>
@@ -101,7 +101,7 @@ const PointsApply = () => {
                   className="h-full text-16px  pl-9px border-b"
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
                 >
-                  <div className="h-full w-full flex items-center font-bold">
+                  <div className="h-full w-full flex items-center font-semibold">
                     <span>0</span>
                     <span>P</span>
                   </div>
@@ -115,7 +115,7 @@ const PointsApply = () => {
                   className="h-full  text-16px pl-9px border-b"
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
                 >
-                  <div className="h-full w-full flex items-center font-bold">
+                  <div className="h-full w-full flex items-center font-semibold">
                     <span>0</span>
                     <span>P</span>
                   </div>
@@ -127,7 +127,9 @@ const PointsApply = () => {
               <div className="h-44px w-full overflow-hidden">
                 <input
                   style={{ background: "#fff", borderColor: "#e2e2e2", color: "#444444" }}
-                  className="w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px border-b mt-2px font-semibold"
+                  className={`w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px border-b mt-2px tracking-tight ${
+                    inputValue !== null && "font-semibold"
+                  }`}
                   placeholder="직접 입력시 숫자만 입력해 주세요."
                   value={inputValue !== null ? nf.format(inputValue) : ""}
                   onChange={(e) => setInputValue(e.target.value.replace(/,/g, ""))}

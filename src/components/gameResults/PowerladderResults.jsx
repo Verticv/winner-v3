@@ -46,6 +46,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
             textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
             borderColor: bet === "left" ? "#5523a0" : "#bbbbbb",
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+            fontWeight: bet === "left" && "600",
           }}
           className="flex items-center justify-center h-36px rounded-4px border"
         >
@@ -70,6 +71,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
             textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
             borderColor: bet === "middle" ? "#6852a7" : "#bbbbbb",
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+            fontWeight: bet === "middle" && "600",
           }}
           className={`flex group items-center justify-center h-36px rounded-4px  border`}
         >
@@ -91,6 +93,7 @@ const PowerladderResults = ({ title = "파워사다리", icon }) => {
             textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
             borderColor: bet === "right" ? "#5523a0" : "#bbbbbb",
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+            fontWeight: bet === "right" && "600",
           }}
           className={`flex group items-center justify-center h-36px rounded-4px border`}
         >

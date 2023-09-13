@@ -9,32 +9,27 @@ import TitleIcon from "../../images/title-icon1.png";
 const HotelCasinoStructure = () => {
   const TitleText = ({ number = "01", title }) => (
     <div className="flex items-center">
-      {/* <div style={{background: "linear-gradient(120deg, #2087f0, #1873cf", borderRadius:"3px"}} className="w-8px h-20px"></div> */}
       <img className="z-10 object-none" src={TitleIcon} alt="" />
       <span
         style={{ color: "#444444" }}
-        className="text-22px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center"
+        className="text-18px font-bold tracking-tight text-gray-ccc2b6 ml-10px h-22px flex items-center"
       >
         {title}
       </span>
-      {number !== "0" && (
+      <div
+        style={{
+          background: "linear-gradient(to right, #f4ecd0, #f2eace)",
+          borderRadius: "50%",
+        }}
+        className="w-35px h-33px p-px flex items-center justify-center ml-5px"
+      >
         <div
-          style={{
-            background: "linear-gradient(to right, #f4ecd0, #f2eace)",
-            borderRadius: "50%",
-          }}
-          className="w-39px h-37px p-px flex items-center justify-center ml-5px"
+          style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
+          className="w-33px h-31px flex items-center justify-center text-gray-ccc2b6 text-18px text-white font-roboto pb-2px"
         >
-          {number && (
-            <div
-              style={{ backgroundColor: "#682aa7", borderRadius: "50%" }}
-              className="w-37px h-35px flex items-center justify-center text-gray-ccc2b6 text-22px text-white font-roboto pb-2px"
-            >
-              {number}
-            </div>
-          )}
+          {number}
         </div>
-      )}
+      </div>
     </div>
   );
 
@@ -50,7 +45,7 @@ const HotelCasinoStructure = () => {
     exceptionText = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
+      <div className="flex text-16px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         {number !== "0" && (
           <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
             {number}
@@ -62,19 +57,10 @@ const HotelCasinoStructure = () => {
         </span>
       </div>
       {text !== "0" && (
-        <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px"
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight mt-px">
           {text}{" "}
           {color1 && (
-            <p
-              style={{
-                color: "#0072bc",
-                letterSpacing: color1 === "플레이어, 뱅커, 타이, 플레이어페어, 뱅커페어" && "-0.1rem",
-              }}
-              className="text-blue-2980b9"
-            >
+            <p style={{ color: "#0072bc" }} className="text-blue-2980b9">
               {color1}
             </p>
           )}
@@ -88,27 +74,18 @@ const HotelCasinoStructure = () => {
       )}
 
       {color3 && (
-        <span
-          style={{ color: "#ff1237", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
-        >
+        <span style={{ color: "#ff1237" }} className="flex h-16px items-center text-14px tracking-tight">
           {color3}
         </span>
       )}
 
       {text2 && (
-        <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
           {text2}
         </span>
       )}
       {text3 && (
-        <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
           {text3}
         </span>
       )}
@@ -126,48 +103,38 @@ const HotelCasinoStructure = () => {
     text11 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="text-18px tracking-tight font-bold space-x-2px flex h-18px items-center mb-10px">
+      <div className="text-16px tracking-tight font-bold space-x-2px flex h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
-        <span style={{ color: "#444444" }} className="text-gray-ccc2b6">{title}</span>
+        <span style={{ color: "#444444" }} className="text-gray-ccc2b6">
+          {title}
+        </span>
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text}
         </span>
       </div>
       {text11 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text11}
           </span>
         </div>
       )}
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text2}
         </span>
       </div>
       {text3 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text3}
           </span>
         </div>
@@ -176,10 +143,7 @@ const HotelCasinoStructure = () => {
       {text4 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text4}
           </span>
         </div>
@@ -187,10 +151,7 @@ const HotelCasinoStructure = () => {
       {text5 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text5}
           </span>
         </div>
@@ -256,7 +217,7 @@ const HotelCasinoStructure = () => {
                   <div className="flex items-center">
                     <span
                       style={{ color: "#444444" }}
-                      className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
+                      className="flex h-16px items-center text-14px tracking-tight mt-7px"
                     >
                       ※ 스피드게임 : 45초 베팅시간 제공
                     </span>

@@ -20,6 +20,7 @@ const GameDetails = () => {
           width: "287px",
           borderColor: bet === "left" ? "#5523a0" : "#bbbbbb",
           boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+          fontWeight: bet === "left" && "600",
         }}
         className={`flex items-center justify-center h-38px rounded-5px border`}
       >
@@ -48,6 +49,7 @@ const GameDetails = () => {
           background: bet === "middle" ? "linear-gradient(to top, #5423a0, #9d3bbb )" : "",
           borderColor: bet === "middle" ? "#5523a0" : "#bbbbbb",
           boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+          fontWeight: bet === "middle" && "600",
         }}
         className={`flex group items-center justify-center w-83px h-38px rounded-5px border`}
       >
@@ -70,6 +72,7 @@ const GameDetails = () => {
           borderColor: bet === "right" ? "#5523a0" : "#bbbbbb",
           width: "286px",
           boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+          fontWeight: bet === "right" && "600",
         }}
         className={` flex group items-center justify-center h-38px rounded-5px border`}
       >
@@ -208,7 +211,7 @@ const GameDetails = () => {
         </div>
 
         <div className="w-56px ml-17px font-roboto text-14px text-r444444 text-center truncate">222 : 222</div>
-        <div className="w-63px text-center text-14px text-r444444">
+        <div style={{ color: "#666666" }} className="w-63px text-center text-14px">
           <p className="-ml-3px font-semibold">패</p>
         </div>
       </div>

@@ -59,6 +59,7 @@ const MinigameBetHistoryPanel = ({
             textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
             borderColor: bet === "left" ? "#5523a0" : "#bbbbbb",
             background: bet === "left" ? "linear-gradient(to top, #5423a0, #9d3bbb )" : "#fff",
+            fontWeight: bet === "left" && "600",
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
           }}
           className="flex items-center justify-center h-36px rounded-4px shadow-btn p-px border"
@@ -108,6 +109,7 @@ const MinigameBetHistoryPanel = ({
             background: bet === "right" ? "linear-gradient(to top, #5423a0, #9d3bbb )" : "#fff",
             textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
+            fontWeight: bet === "right" && "600",
           }}
           className={`flex group items-center justify-center h-36px rounded-4px p-px shadow-btn border`}
         >
@@ -115,8 +117,9 @@ const MinigameBetHistoryPanel = ({
             style={{
               width: isAttached ? "363px" : "283px",
             }}
-            className={` ${bet === "right" ? "text-white" : "text-r444444"}  
-                      pt-px flex items-center justify-between h-34px rounded-3px  cursor-pointer px-10px`}
+            className={`${
+              bet === "right" ? "text-white" : "text-r444444"
+            } pt-px flex items-center justify-between h-34px rounded-3px  cursor-pointer px-10px`}
           >
             <div className="flex items-center space-x-5px">
               <span className="font-roboto text-14px">{stat3}</span>
@@ -312,9 +315,7 @@ const MinigameBetHistoryPanel = ({
                 당첨금
               </div>
             </div>
-            <div
-              className={`flex w-auto h-36px font-spoqa text-14px text-r444444 ${isPopup && "pt-2px"}`}
-            >
+            <div className={`flex w-auto h-36px font-spoqa text-14px text-r444444 ${isPopup && "pt-2px"}`}>
               {isAttached === false && checkedState && (
                 <div style={{ width: "45px" }} className="h-full flex items-center justify-center">
                   <input

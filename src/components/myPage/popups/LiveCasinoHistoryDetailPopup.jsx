@@ -30,7 +30,7 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
             
             <div  style={{ backgroundColor: "#dfdbfa" }} className="h-full flex flex-col items-center ">
                 <div 
-                    className="text-20px text-white rounded-full flex h-42px pr-53px pl-54px items-center mt-17px mb-17px"
+                    className="text-17px text-white rounded-full flex h-42px pr-53px pl-54px items-center mt-17px mb-17px"
                     style={{background:'#6852a7'}}>
                     <p >플레이어 이름 :</p>
                     <p style={{maxWidth:'150px', textOverflow: 'unset', whiteSpace: 'nowrap', overflow:'hidden',color:'#ffcc00'}} className="ml-5px">{username.length > 12 ? `${username.slice(0,12)}...` : username}</p>

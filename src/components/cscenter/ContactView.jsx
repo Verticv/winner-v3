@@ -20,6 +20,7 @@ const ContactView = () => {
         style={{
           background: "linear-gradient(to top, #ededeb, #cb78e6)",
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
+          letterSpacing: "0",
         }}
       >
         <div style={{ backgroundColor: "#ffffff" }} className="w-full bg-gray-323232 rounded-10px overflow-hidden">
@@ -63,7 +64,7 @@ const ContactView = () => {
               </p>
             </div>
 
-            <div className="text-15px tracking-tight text-r444444 -ml-px mt-px font-bold">스포츠북 문의</div>
+            <div className="text-15px text-r444444 -ml-px mt-px font-bold">스포츠북 문의</div>
           </div>
 
           <div
@@ -73,20 +74,20 @@ const ContactView = () => {
             <img src={Rank1Icon} alt="" />
             <p className="ml-3px text-r444444 text-14px">마이마이프로틴화이팅</p>
             <div className="w-px h-10px ml-8px mt-px" style={{ background: "#ccc" }} />
-            <div className="font-spoqaMedium text-14px tracking-tight text-r444444">2021.06.28 15:49</div>
+            <div className="font-spoqaMedium text-14px text-r444444">2021.06.28 15:49</div>
           </div>
 
           <div className="w-full bg-gray-323232 py-22px px-16px">
             <div
               style={{ borderColor: "#dddddd" }}
-              className="rounded-4px  py-15px  flex items-start px-21px font-spoqa text-14px tracking-tight text-r444444 bg-gray-252525 border"
+              className="rounded-4px  py-15px  flex items-start px-21px font-spoqa text-14px text-r444444 bg-gray-252525 border"
             >
               스포츠북 문의 입니다.
             </div>
 
             <div
               style={{ backgroundColor: "rgb(223,219,250)" }}
-              className="rounded-4px pt-20px pb-17px  px-22px mt-21px font-spoqaMedium text-14px tracking-tight text-r444444 space-y-35px"
+              className="rounded-4px pt-20px pb-17px  px-22px mt-21px font-spoqaMedium text-14px text-r444444 space-y-35px"
             >
               <div className="space-y-10px">
                 {BodyText1.split("\n").map((item, i) => (

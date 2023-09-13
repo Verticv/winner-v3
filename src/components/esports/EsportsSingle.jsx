@@ -18,7 +18,7 @@ const EsportsSingle = () => {
     color3 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
+      <div className="flex text-16px tracking-tight font-bold space-x-2px  h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -27,8 +27,8 @@ const EsportsSingle = () => {
         </span>
       </div>
       <span
-        style={{ color: "#828282", letterSpacing: "-0.091em" }}
-        className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium mt-px"
+        style={{ color: "#828282" }}
+        className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-px"
       >
         {text}{" "}
         <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
@@ -41,8 +41,8 @@ const EsportsSingle = () => {
       </span>
       {text2 && (
         <span
-          style={{ color: "#828282", letterSpacing: "-0.091em" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+          style={{ color: "#828282" }}
+          className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text2}
         </span>
@@ -50,7 +50,7 @@ const EsportsSingle = () => {
       {text3 && (
         <span
           style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium"
+          className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text3}
         </span>

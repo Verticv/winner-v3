@@ -96,7 +96,7 @@ const AnnouncementTable = () => {
             </div>
           )}
         </td>
-        <td style={{ width: "111px" }} className="w-full text-center pr-60px text-r444444">
+        <td style={{ width: "111px", letterSpacing: "0" }} className="w-full text-center pr-60px text-r444444">
           {item.time}
         </td>
       </tr>
@@ -110,7 +110,7 @@ const AnnouncementTable = () => {
     >
       <table className="w-full rounded-10px overflow-hidden">
         <thead
-          className="text-14px tracking-tight h-54px border-b pt-px font-semibold"
+          className="text-14px h-54px border-b pt-px font-semibold"
           style={{
             background: "linear-gradient(to right, #9d3bbb, #5423a0)",
             color: "#eeeeee",
@@ -131,7 +131,7 @@ const AnnouncementTable = () => {
           </tr>
         </thead>
         <tbody
-          className="w-full text-r444444 text-14px tracking-tight cursor-pointer"
+          className="w-full text-r444444 text-14px cursor-pointer"
           onClick={() => history.push("/cscenter/announcement-view")}
         >
           <Cells items={ExampleArray} />

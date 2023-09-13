@@ -41,23 +41,23 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
           >
             <div className="flex items-center h-26px space-x-9px">
               <img src={AlertIcon} alt="" />
-              <span className="text-20px text-rf04281 tracking-tight mt-px font-bold">확인 / 필독사항</span>
+              <span className="text-20px text-rf04281 tracking-tight mt-px font-semibold">확인 / 필독사항</span>
             </div>
             <div className="mt-14px flex flex-col space-y-6px text-r444444 tracking-tight  text-14px">
-              <span className="font-bold">
-                <span className="font-bold mr-4px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
+              <span className="font-semibold">
+                <span className="font-semibold mr-4px">✓</span> 포인트 전환 시 보유머니로 충전됩니다.
               </span>
-              <span className="font-bold">
-                <span className="font-bold mr-4px">✓</span> 최소 10,000P 이상 신청 가능합니다.
+              <span className="font-semibold">
+                <span className="font-semibold mr-4px">✓</span> 최소 10,000P 이상 신청 가능합니다.
               </span>
-              <span className="font-bold">
-                <span className="font-bold mr-4px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
+              <span className="font-semibold">
+                <span className="font-semibold mr-4px">✓</span> 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.
               </span>
             </div>
           </div>
-          <div className="flex items-center text-14px tracking-tight mt-40px font-bold">
+          <div className="flex items-center text-14px tracking-tight mt-40px font-semibold">
             <span style={{ color: "#444444" }}>사용 가능한 포인트 : </span>
-            <span className="text-rf04281 ml-4px font-bold">278</span>
+            <span className="text-rf04281 ml-4px font-semibold">278</span>
             <span style={{ color: "#444444" }}>P</span>
           </div>
           <div className="h-64px w-full rounded-8px mt-10px flex items-center" style={{ background: "#5e399a" }}>
@@ -70,7 +70,9 @@ const PointsApplyPopup = ({ setPopupOpen, isQuickMenu = false }) => {
             <input
               placeholder="0"
               style={{ width: "311px", borderColor: "#682aa7", color: "#444444" }}
-              className="flex-shrink-0 outline-none h-42px rounded-6px border  px-10px  text-14px tracking-tight text-r444444  ml-9px font-bold"
+              className={`flex-shrink-0 outline-none h-42px rounded-6px border  px-10px  text-14px tracking-tight text-r444444 ml-9px ${
+                inputValue && "font-semibold"
+              }`}
               value={inputValue !== null ? nf.format(inputValue) : ""}
               onChange={(e) => setInputValue(e.target.value.replace(/,/g, ""))}
               onKeyPress={(event) => {

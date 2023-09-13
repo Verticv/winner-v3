@@ -20,7 +20,7 @@ const TvBetHowTo = () => {
     text33 = null,
   }) => (
     <div className="flex flex-col space-y-4px">
-      <div className="flex text-18px tracking-tight font-bold space-x-2px h-18px items-center mb-10px">
+      <div className="flex text-16px tracking-tight font-bold space-x-2px h-18px items-center mb-10px">
         <span style={{ color: "#682aa7" }} className="text-golden-gradLight">
           {number}
         </span>
@@ -30,20 +30,14 @@ const TvBetHowTo = () => {
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text}
         </span>
       </div>
       {text11 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text11}
           </span>
         </div>
@@ -51,20 +45,14 @@ const TvBetHowTo = () => {
 
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span
-          style={{ color: "#828282" }}
-          className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-        >
+        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text2}
         </span>
       </div>
       {text22 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text22}
           </span>
         </div>
@@ -72,10 +60,7 @@ const TvBetHowTo = () => {
       {!no3rd && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text3}
           </span>
         </div>
@@ -83,10 +68,7 @@ const TvBetHowTo = () => {
       {text33 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text33}
           </span>
         </div>
@@ -94,10 +76,7 @@ const TvBetHowTo = () => {
       {!no4th && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text4}
           </span>
         </div>
@@ -105,10 +84,7 @@ const TvBetHowTo = () => {
       {!no5th && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span
-            style={{ color: "#828282" }}
-            className="flex h-16px items-center text-16px tracking-tight font-spoqaMedium "
-          >
+          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text5}
           </span>
         </div>
@@ -156,49 +132,40 @@ const TvBetHowTo = () => {
                 >
                   알아두세요!
                 </div>
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <span
                     style={{ color: "#8c8c8c" }}
-                    className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
+                    className="flex h-16px items-center text-14px tracking-tight mt-7px"
                   >
                     ※ ④ [이벤트정보] 화면에서 현재 '라이브'
                   </span>
-                </div>
+                </div> */}
                 <span
-                  style={{ color: "#8c8c8c", letterSpacing: "-0.1rem" }}
-                  className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
+                  style={{ color: "#8c8c8c", whiteSpace: "pre-wrap" }}
+                  className="flex items-center text-14px tracking-tight mt-7px break-words"
                 >
-                  중인 게임과 '예정된' 게임이벤트를 확인할 수 있습니다.
+                  {`※ ④ [이벤트정보] 화면에서 현재 '라이브' 중인 \n게임과 '예정된' 게임이벤트를 확인할 수 \n있습니다. 원하는 이벤트를 선택하면 '배당판'이 활성화되며 배당을 선택하면 베팅이 가능합니다.`}
                 </span>
-                <span
-                  style={{ color: "#8c8c8c" }}
-                  className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
-                >
+                {/* <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-14px tracking-tight mt-7px">
                   원하는 이벤트를 선택하면 '배당판'이 활성화되며
                 </span>
-                <span
-                  style={{ color: "#8c8c8c" }}
-                  className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
-                >
+                <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-14px tracking-tight mt-7px">
                   배당을 선택하면 베팅이 가능합니다.
-                </span>
+                </span> */}
               </div>
 
               <div className="mt-20px">
                 <div className="flex items-center">
                   <span
-                    style={{ color: "#8c8c8c", letterSpacing: "-0.1rem" }}
-                    className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
+                    style={{ color: "#8c8c8c", whiteSpace: "pre-wrap" }}
+                    className="flex items-center text-14px tracking-tight mt-7px"
                   >
-                    ※ ⑤ [플레이방법] 메뉴에서 각 게임별 이용방법과
+                    {`※ ⑤ [플레이방법] 메뉴에서 각 게임별 \n이용방법과 규정 등 확인 가능합니다.`}
                   </span>
                 </div>
-                <span
-                  style={{ color: "#8c8c8c" }}
-                  className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
-                >
+                {/* <span style={{ color: "#8c8c8c" }} className="flex h-16px items-center text-14px tracking-tight mt-7px">
                   규정 등 확인 가능합니다.
-                </span>
+                </span> */}
               </div>
             </div>
           </div>

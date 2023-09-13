@@ -157,7 +157,7 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
         <span className="mt-10px tracking-tight text-15px font-bold" style={{ color: "#2d2834" }}>
           {text}
         </span>
-        <span className="mt-px font-bold tracking-tight text-20px" style={{ color: "#c03a41" }}>
+        <span className="mt-5px font-bold tracking-tight text-20px" style={{ color: "#c03a41" }}>
           {count}
         </span>
       </div>
@@ -962,7 +962,9 @@ const DistributorPage = ({ isAuthenticated, setAuthenticated }) => {
           >
             {username.length > 12 ? `${username.slice(0, 12)}...` : username}
           </span>
-          <span className="font-spoqaMedium -mt-2px">님의 총판 정보입니다.</span>
+          <span style={{ color: "#eee" }} className="font-spoqaMedium -mt-2px">
+            님의 총판 정보입니다.
+          </span>
         </div>
       </div>
 

@@ -177,7 +177,7 @@ const LiveCasinoHover = ({ selection }) => {
               height: "26px",
               right: "60px",
             }}
-            className="absolute z-50 top-0px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
+            className="absolute z-50 top-0px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
             게임시작
           </button>
@@ -191,7 +191,7 @@ const LiveCasinoHover = ({ selection }) => {
               height: "26px",
               right: "60px",
             }}
-            className="absolute z-50 top-21px pt-2px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
+            className="absolute z-50 top-21px flex items-center justify-center text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
             점검중
           </button>

@@ -37,7 +37,7 @@ const MinigamesPanel = ({ selectedGame, setSelectedGame, selectedTab, setSelecte
               checkedState={checkedState}
               setCheckedState={setCheckedState}
               setSelectedOption={setSelectedOption}
-            />{" "}
+            />
           </Route>
           <Route path="/minigame/powerladder">
             <PowerLadderPanel

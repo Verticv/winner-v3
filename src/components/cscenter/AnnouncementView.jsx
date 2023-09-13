@@ -39,6 +39,7 @@ const AnnouncementView = () => {
         style={{
           background: "linear-gradient(to top, #ededeb, #cb78e6)",
           boxShadow: "0px 0px 8px 0px rgba(0, 0, 0, 0.5)",
+          letterSpacing: "0",
         }}
       >
         <div style={{ backgroundColor: "#ffffff" }} className="w-full bg-gray-323232 rounded-9px overflow-hidden">
@@ -48,12 +49,12 @@ const AnnouncementView = () => {
             className="bg-gray-2e2e2e border-b border-gray-252525 flex items-start px-19px py-15px space-x-10px"
           >
             <p
-              className="text-14px font-semibold tracking-tight flex flex-shrink-0 mt-3px"
+              className="text-14px font-semibold flex flex-shrink-0 mt-3px"
               style={{ color: "rgb(114,20,143)" }}
             >
               스포츠북
             </p>
-            <div className="text-15px font-bold tracking-tight text-r444444 mt-2px">
+            <div className="text-15px font-bold text-r444444 mt-2px">
               <h1 className="align-top">
                 {TitleText} <span className="inline-block align-top ml-6px pt-2px font-normal">{NewLabel}</span>
               </h1>
@@ -66,53 +67,53 @@ const AnnouncementView = () => {
           >
             <img className="mb-2px h-17px w-72px object-contain" src={WinnerLogo} alt="" />
             <div className="w-px h-10px ml-8px mt-px" style={{ background: "#ccc" }} />
-            <div className="font-spoqaMedium text-14px tracking-tight text-r444444 mt-px">2021.06.29</div>
+            <div className="font-spoqaMedium text-14px text-r444444 mt-px">2021.06.29</div>
           </div>
           <div className="w-full bg-gray-323232 flex flex-col px-19px border-b border-gray-252525 py-18px">
-            <p className="font-spoqaMedium text-16px tracking-tight text-r444444 ">{SubtitleText}</p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-r444444 space-y-10px mt-39px">
+            <p className="font-spoqaMedium text-16px text-r444444 ">{SubtitleText}</p>
+            <p className="font-spoqaMedium text-14px text-r444444 space-y-10px mt-39px">
               {BodyText1.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}
                 </p>
               ))}
             </p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-r444444 space-y-10px mt-39px">
+            <p className="font-spoqaMedium text-14px text-r444444 space-y-10px mt-39px">
               {BodyText2.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}
                 </p>
               ))}
             </p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-r444444 space-y-10px mt-39px">
+            <p className="font-spoqaMedium text-14px text-r444444 space-y-10px mt-39px">
               {BodyText3.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}
                 </p>
               ))}
             </p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-r444444 space-y-10px mt-39px">
+            <p className="font-spoqaMedium text-14px text-r444444 space-y-10px mt-39px">
               {BodyText4.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}
                 </p>
               ))}
             </p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-r444444 space-y-10px mt-39px">
+            <p className="font-spoqaMedium text-14px text-r444444 space-y-10px mt-39px">
               {BodyText5.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}
                 </p>
               ))}
             </p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-r444444 space-y-10px mt-39px">
+            <p className="font-spoqaMedium text-14px text-r444444 space-y-10px mt-39px">
               {BodyText6.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}
                 </p>
               ))}
             </p>
-            <p className="font-spoqaMedium text-14px tracking-tight text-r444444 space-y-10px mt-39px">
+            <p className="font-spoqaMedium text-14px text-r444444 space-y-10px mt-39px">
               {BodyText7.split("\n").map((item, i) => (
                 <p key={i} className="flex items-center">
                   {item}

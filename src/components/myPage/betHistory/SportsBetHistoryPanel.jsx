@@ -75,6 +75,7 @@ const SportsBetHistoryPanel = ({
             background: bet === "left" ? "linear-gradient(to top, #5423a0, #9d3bbb )" : "#fff",
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
             borderRadius: "5px",
+            fontWeight: bet === "left" && "600"
           }}
           className="flex items-center justify-center h-36px p-px border"
         >
@@ -126,6 +127,7 @@ const SportsBetHistoryPanel = ({
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
             textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
             borderRadius: "5px",
+            fontWeight: bet === "right" && "600"
           }}
           className={`flex group items-center justify-between h-36px p-px border`}
         >
@@ -167,10 +169,10 @@ const SportsBetHistoryPanel = ({
               result === "win"
                 ? "#f04281"
                 : result === "lose"
-                ? "#444444"
+                ? "#666666"
                 : result === "cancel"
                 ? "#33a1e9"
-                : "#444444",
+                : "#666666",
           }}
           className={`${
             isAttached

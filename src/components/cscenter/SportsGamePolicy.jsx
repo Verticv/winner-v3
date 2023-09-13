@@ -1729,7 +1729,7 @@ const LiveSportSubArray = [
     id: 0,
     title: "공통사항",
     color: "rgb(240, 66, 129)",
-    text: "라이브베팅은 실시간 경기 진행 상황에 따라 베팅수락,지연 또는 거절 될 수 있습니다.",
+    text: "라이브스포츠는 실시간 경기 진행 상황에 따라 베팅수락,지연 또는 거절 될 수 있습니다.",
     text2:
       "위험지대 베팅 PK, 코너킥, 프리킥, 파울, 부킹, 선수교체, VAR, 투수교체, 안타, 투수교체 등 경기 결과에 영향을 줄 수있는 상황이 진행중인 상태입니다. 대기중인 베팅은 경기에 영향을 끼칠 수 있다고 판단될 시, 거절/취소될 수 있으며 위엄지대 이후 경기 결과가 변동되지 않을 경우 베팅은 지연 수락될 수 있습니다.",
     text3:
@@ -1989,7 +1989,7 @@ const ESportsSubArray = [
 const SportsGamePolicy = ({ setSelectedTab }) => {
   const tabsArray = [
     {
-      text: "라이브베팅",
+      text: "라이브스포츠",
       icon: Icon14,
       iconHighlight: IconHighlight14,
       id: 0,
@@ -2015,7 +2015,7 @@ const SportsGamePolicy = ({ setSelectedTab }) => {
 
       <div className=" mt-25px w-full flex h-16px items-center justify-center text-16px tracking-tight text-white">
         <Route path="/cscenter/policy/sportsgame/live-sport">
-          <p className="text-white">라이브베팅 규정 (모든 종목의 기본규정과 다를시 별도 표기 하고있습니다.)</p>
+          <p className="text-white">라이브스포츠 베팅규정 (모든 종목의 기본규정과 다를 시 별도 표기하고있습니다.)</p>
         </Route>
         <Route path="/cscenter/policy/sportsgame/soccer">
           <p className="text-white">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
