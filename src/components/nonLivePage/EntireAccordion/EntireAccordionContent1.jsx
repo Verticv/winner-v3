@@ -7,29 +7,7 @@ const EntireAccordionContent1 = ({ card }) => {
   const [leftActive, setLeftActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHovered1, setIsHovered1] = useState(false);
-
-  const hoverStyle = {
-    background: "linear-gradient(to top, #5423a0, #9d3bbb)",
-    color: "#fff",
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleMouseEnter1 = () => {
-    setIsHovered1(true);
-  };
-
-  const handleMouseLeave1 = () => {
-    setIsHovered1(false);
-  };
+  
   return (
     <div
       style={{
@@ -47,10 +25,9 @@ const EntireAccordionContent1 = ({ card }) => {
           width: "316px",
           background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive ? "#fff" : "#444444",
-          ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: "3px",
         }}
-        className="flex items-center justify-between border-r  h-30px cursor-pointer"
+        className="flex items-center justify-between border-r  h-30px cursor-pointer  hover-style can-hover"
         onClick={() => {
           dispatch(
             setBetSlipData({
@@ -59,8 +36,6 @@ const EntireAccordionContent1 = ({ card }) => {
           );
           setLeftActive((prev) => !prev);
         }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         <p
           style={{
@@ -77,7 +52,7 @@ const EntireAccordionContent1 = ({ card }) => {
         <p
           style={{
             fontSize: "13px",
-            color: leftActive || isHovered ? "#fff" : "#111111",
+            color: leftActive  ? "#fff" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="mr-9px font-malgun font-semibold"
@@ -92,10 +67,9 @@ const EntireAccordionContent1 = ({ card }) => {
           height: "100%",
           background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#fff" : "#444444",
-          ...(isHovered1 ? hoverStyle : null),
           borderBottomRightRadius: "3px",
         }}
-        className="flex items-center justify-between cursor-pointer"
+        className="flex items-center justify-between cursor-pointer  hover-style can-hover"
         onClick={() => {
           dispatch(
             setBetSlipData({
@@ -104,8 +78,6 @@ const EntireAccordionContent1 = ({ card }) => {
           );
           setRightActive((prev) => !prev);
         }}
-        onMouseEnter={handleMouseEnter1}
-        onMouseLeave={handleMouseLeave1}
       >
         <p
           style={{
@@ -123,7 +95,7 @@ const EntireAccordionContent1 = ({ card }) => {
         <p
           style={{
             fontSize: "13px",
-            color: rightActive || isHovered1 ? "#fff" : "#111111",
+            color: rightActive  ? "#fff" : "#111111",
             letterSpacing: "-0.031em",
             whiteSpace: "nowrap",
             overflow: "hidden",

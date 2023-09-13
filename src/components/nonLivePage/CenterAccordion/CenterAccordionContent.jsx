@@ -24,15 +24,9 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
   const [leftActive, setLeftActive] = useState(false);
   const [centerActive, setCenterActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
-  // const [lastItemActive, setLastItemActive] = useState(false);
   const [activeStar, setActiveStar] = useState(false);
   const [hoverStar, setHoverStar] = useState(null);
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHovered1, setIsHovered1] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
-  const [isHovered3, setIsHovered3] = useState(false);
-  // const [idSelected, setIdSelected] = useState([]);
 
   const favoritePreMatch = useSelector((state) => state?.nonLive?.favoritePreMatch);
 
@@ -120,41 +114,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
     }
   };
 
-  const hoverStyle = {
-    background: "linear-gradient(to top, #5423a0, #9d3bbb)",
-    color: "#fff",
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleMouseEnter1 = () => {
-    setIsHovered1(true);
-  };
-
-  const handleMouseLeave1 = () => {
-    setIsHovered1(false);
-  };
-  const handleMouseEnter2 = () => {
-    setIsHovered2(true);
-  };
-
-  const handleMouseLeave2 = () => {
-    setIsHovered2(false);
-  };
-  const handleMouseEnter3 = () => {
-    setIsHovered3(true);
-  };
-
-  const handleMouseLeave3 = () => {
-    setIsHovered3(false);
-  };
-
   return (
     <>
       <button
@@ -226,12 +185,11 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             width: "252px",
             height: "30px",
             background: leftActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: leftActive ? "#fff" : "#111111",
-            ...(isHovered ? hoverStyle : null),
+            color: leftActive ? "#fff" : "#111111"
           }}
-          onMouseOver={() => card.score1 && handleMouseEnter()}
-          onMouseLeave={card.score1 && handleMouseLeave}
-          className="flex items-center justify-between border-l border-r"
+          onMouseOver={() => card.score1}
+          onMouseLeave={card.score1}
+          className={`flex items-center justify-between border-l border-r hover-style can-hover ${card.score1?'':'lock-cell'}`}
         >
           <p
             style={{
@@ -251,7 +209,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             style={{
               fontSize: "12px",
               color:
-                leftActive || isHovered
+                leftActive 
                   ? "#ffffff"
                   : card.score1ArrowUp
                   ? "#f04281"
@@ -290,7 +248,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               <img
                 src={icon1}
                 alt="icon1"
-                style={{ filter: (leftActive || isHovered) && "brightness(0) invert(1)" }}
+                style={{ filter: (leftActive ) && "brightness(0) invert(1)" }}
                 className="mr-5px mt-2px"
               />
             )}
@@ -309,12 +267,11 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
           style={{
             height: "100%",
             background: centerActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: centerActive ? "#ffffff" : "#444444",
-            ...(isHovered1 ? hoverStyle : null),
+            color: centerActive ? "#ffffff" : "#444444"
           }}
-          onMouseOver={card.score2 && handleMouseEnter1}
-          onMouseLeave={card.score2 && handleMouseLeave1}
-          className="flex items-center relative w-68px justify-center"
+          onMouseOver={card.score2}
+          onMouseLeave={card.score2}
+          className={`flex items-center relative w-68px justify-center hover-style can-hover  ${card.score2 ? '' : 'lock-cell'}`}
         >
           {card.score2ArrowUp ? (
             <img
@@ -339,7 +296,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             style={{
               fontSize: "12px",
               color:
-                centerActive || isHovered1
+                centerActive 
                   ? "#ffffff"
                   : card.score1ArrowUp
                   ? "#f04281"
@@ -359,7 +316,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
                 <img
                   src={icon1}
                   alt="icon1"
-                  style={{ filter: (centerActive || isHovered1) && "brightness(0) invert(1)" }}
+                  style={{ filter: (centerActive ) && "brightness(0) invert(1)" }}
                   className="mt-2px"
                 />
               </span>
@@ -381,18 +338,17 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             width: "252px",
             height: "30px",
             background: rightActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
-            color: rightActive ? "#ffffff" : "#444444",
-            ...(isHovered2 ? hoverStyle : null),
+            color: rightActive ? "#ffffff" : "#444444"
           }}
-          onMouseOver={card.score3 && handleMouseEnter2}
-          onMouseLeave={card.score3 && handleMouseLeave2}
-          className="flex items-center justify-between border-l border-r"
+          onMouseOver={card.score3 }
+          onMouseLeave={card.score3 }
+          className={`flex items-center justify-between border-l border-r hover-style can-hover  ${card.score3?'':'lock-cell'}`}
         >
           <p
             style={{
               fontSize: "12px",
               color:
-                rightActive || isHovered2
+                rightActive 
                   ? "#ffffff"
                   : card.score1ArrowUp
                   ? "#0072bc"
@@ -411,7 +367,7 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
               <img
                 src={icon1}
                 alt="icon1"
-                style={{ filter: (rightActive || isHovered2) && "brightness(0) invert(1)" }}
+                style={{ filter: (rightActive ) && "brightness(0) invert(1)" }}
                 className="ml-5px mt-2px"
               />
             )}
@@ -457,14 +413,12 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             borderRight: lastItemActive === card ? "1px solid #6227a5" : "",
             background: lastItemActive === card ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: lastItemActive === card ? "#ffffff" : "#444444",
-            ...(isHovered3 ? hoverStyle : null),
-            borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "4px"}`,
+            borderBottomRightRadius: `${lastObject.id !== card.id ? "0px" : "4px"}`
           }}
-          onMouseOver={handleMouseEnter3}
-          onMouseLeave={handleMouseLeave3}
+         
           className={`flex items-center justify-end pr-3px ${
             lastItemActive === card ? "justify-end" : "justify-center"
-          }`}
+          } hover-style can-hover`}
           onClick={() => {
             dispatch(setLiveGameData(card));
             setLastItemActive(card);

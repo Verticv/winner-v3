@@ -13,18 +13,14 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const [isHovered] = useState(false);
-  const [cardHovered, setCardHovered] = useState(false);
+  const [cardHovered] = useState(false);
   const [cardSelected] = useState(false);
 
   const [leftActive] = useState(false);
   const [centerActive] = useState(false);
   const [rightActive] = useState(false);
 
-  const hoverStyle = {
-    background: "#936cee",
-    color: "#ffffff",
-    // borderBottomLeftRadius: "4px",
-  };
+ 
 
   // const handleMouseEnter = () => {
   //   setIsHovered(true);
@@ -36,10 +32,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
 
   const [isHovered1] = useState(false);
 
-  const hoverStyle1 = {
-    background: "#936cee",
-    color: "#ffffff",
-  };
+  
 
   // const handleMouseEnter1 = () => {
   //   setIsHovered1(true);
@@ -98,14 +91,12 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
         width: "274px",
         borderRadius: "4px",
       }}
-      className="items-center justify-between mx-2px rounded-lg mb-2px overflow-hidden"
+      className="items-center justify-between mx-2px rounded-lg mb-2px overflow-hidden "
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div
-        onMouseEnter={() => setCardHovered(true)}
-        onMouseLeave={() => setCardHovered(false)}
         // onClick={() => setCardSelected((prev) => !prev)}
-        className="cursor-pointer"
+        className="cursor-pointer accordion can-hover"
       >
         <div className="flex ml-10px justify-between items-center mr-11px">
           <p
@@ -117,16 +108,16 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               textOverflow: "ellipsis",
               maxWidth: "220px",
             }}
-            className="text-12px mt-6px -mb-px"
+            className="hover text-12px mt-6px -mb-px"
           >
-            {team1}
+            {team1} 
           </p>
           <p
             style={{
               color: cardHovered || cardSelected ? "#ffffff" : "#f04281",
               letterSpacing: "-0.031em",
             }}
-            className="text-12px font-malgun mt-px -mb-6px"
+            className="hover text-12px font-malgun mt-px -mb-6px"
           >
             {time}
           </p>
@@ -141,7 +132,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               textOverflow: "ellipsis",
               maxWidth: "220px",
             }}
-            className="text-12px font-malgun mt-px"
+            className="hover text-12px font-malgun mt-px"
           >
             {team2}
           </p>
@@ -153,7 +144,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
                 color: cardHovered || cardSelected ? "#ffffff" : "#0072bc",
                 letterSpacing: "-0.031em",
               }}
-              className="text-12px font-malgun"
+              className="hover text-12px font-malgun"
             >
               {dateAndTime}
             </p>
@@ -174,7 +165,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               />
               <span
                 style={{ boxShadow: "0px 2px 5px 0px rgba(0, 0, 0, 0.5)" }}
-                className="tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white"
+                className="hover tooltiptext items-center justify-center text-10px font-malgun tracking-tight text-white"
               >
                 즐겨찾기에서 제거
               </span>
@@ -187,7 +178,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
                 filter: (cardHovered || cardSelected) && "brightness(0) invert(1)",
                 color: "#444444",
               }}
-              className={`object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
+              className={`hover object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
                 isOpen ? "transform rotate-180" : ""
               }`}
             />
@@ -208,27 +199,17 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
             style={{
               width: "91px",
               height: "30px",
-              background: leftActive ? "#936cee" : "",
-              ...(isHovered ? hoverStyle : null),
-            }}
-            className="flex items-center justify-between"
-            // onMouseEnter={handleMouseEnter}
-            // onMouseLeave={handleMouseLeave}
-            // onClick={() => {
-            //   dispatch(
-            //     setBetSlipData({
-            //       data: card,
-            //     })
-            //   );
-            //   setLeftActive((prev) => !prev);
-            // }}
+              background: leftActive ? "#936cee" : ""
+            }} 
+            className="flex items-center justify-between" 
+            
           >
             <p
               style={{
                 color: isHovered || leftActive ? "#ffffff" : "#444444",
                 letterSpacing: "-0.031em",
               }}
-              className=" ml-6px mt-9px mb-11px text-12px font-malgun"
+              className="ml-6px mt-9px mb-11px text-12px font-malgun"
             >
               {t1 || "1"}
             </p>
@@ -244,8 +225,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               borderColor: "#cccccc",
               width: "93px",
               height: "30px",
-              background: centerActive ? "#936cee" : "",
-              ...(isHovered1 ? hoverStyle1 : null),
+              background: centerActive ? "#936cee" : ""
             }}
             className="flex items-center justify-between border-l border-r border-solid h-30px "
             // onMouseEnter={handleMouseEnter1}
@@ -284,16 +264,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               ...(isHovered2 ? hoverStyle2 : null),
             }}
             className="flex items-center justify-between"
-            // onMouseEnter={handleMouseEnter2}
-            // onMouseLeave={handleMouseLeave2}
-            // onClick={() => {
-            //   dispatch(
-            //     setBetSlipData({
-            //       data: card,
-            //     })
-            //   );
-            //   setRightActive((prev) => !prev);
-            // }}
+        
           >
             <p
               style={{
@@ -305,7 +276,7 @@ const AccordionCard1 = ({ id, team1, time, team2, dateAndTime, t1, score1, t3, t
               {t5 || "2"}
             </p>
             <img
-              className="mr-8px mb-8px mt-7px object-none"
+              className=" hover mr-8px mb-8px mt-7px object-none"
               style={{ filter: (isHovered2 || rightActive) && "brightness(0) invert(1)" }}
               src={icon1}
               alt="img"

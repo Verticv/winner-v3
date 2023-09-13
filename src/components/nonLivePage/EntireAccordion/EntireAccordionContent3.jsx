@@ -8,37 +8,7 @@ const EntireAccordionContent3 = ({ card }) => {
   const [centerActive, setCenterActive] = useState(false);
   const [rightActive, setRightActive] = useState(false);
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHovered1, setIsHovered1] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
-
-  const hoverStyle = {
-    background: "linear-gradient(to top, #5423a0, #9d3bbb)",
-    color: "#fff",
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleMouseEnter1 = () => {
-    setIsHovered1(true);
-  };
-
-  const handleMouseLeave1 = () => {
-    setIsHovered1(false);
-  };
-  const handleMouseEnter2 = () => {
-    setIsHovered2(true);
-  };
-
-  const handleMouseLeave2 = () => {
-    setIsHovered2(false);
-  };
+  
   return (
     <div
       style={{
@@ -56,10 +26,9 @@ const EntireAccordionContent3 = ({ card }) => {
           width: "210px",
           background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: leftActive ? "#fff" : "#444444",
-          ...(isHovered ? hoverStyle : null),
           borderBottomLeftRadius: `${card.id !== 0 ? "3px" : "0px"}`,
         }}
-        className="flex items-center justify-between border-r h-30px cursor-pointer"
+        className="flex items-center justify-between border-r h-30px cursor-pointer  hover-style can-hover"
         onClick={() => {
           dispatch(
             setBetSlipData({
@@ -68,8 +37,6 @@ const EntireAccordionContent3 = ({ card }) => {
           );
           setLeftActive((prev) => !prev);
         }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         <p
           style={{
@@ -86,7 +53,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: leftActive || isHovered ? "#fff" : "#111111",
+            color: leftActive  ? "#fff" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="mr-8px mb-2px font-malgun font-semibold"
@@ -100,9 +67,8 @@ const EntireAccordionContent3 = ({ card }) => {
           width: "209px",
           background: centerActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: centerActive ? "#fff" : "#444444",
-          ...(isHovered1 ? hoverStyle : null),
         }}
-        className="flex items-center justify-between border-r h-30px cursor-pointer"
+        className="flex items-center justify-between border-r h-30px cursor-pointer  hover-style can-hover"
         onClick={() => {
           dispatch(
             setBetSlipData({
@@ -111,8 +77,6 @@ const EntireAccordionContent3 = ({ card }) => {
           );
           setCenterActive((prev) => !prev);
         }}
-        onMouseEnter={handleMouseEnter1}
-        onMouseLeave={handleMouseLeave1}
       >
         <p
           style={{
@@ -129,7 +93,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: centerActive || isHovered1 ? "#fff" : "#111111",
+            color: centerActive  ? "#fff" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className=" mr-7px mb-2px font-malgun font-semibold"
@@ -143,10 +107,9 @@ const EntireAccordionContent3 = ({ card }) => {
           height: "100%",
           background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
           color: rightActive ? "#fff" : "#444444",
-          ...(isHovered2 ? hoverStyle : null),
           borderBottomRightRadius: `${card.id !== 0 ? "3px" : "0px"}`,
         }}
-        className="flex items-center justify-between cursor-pointer"
+        className="flex items-center justify-between cursor-pointer hover-style can-hover"
         onClick={() => {
           dispatch(
             setBetSlipData({
@@ -155,8 +118,6 @@ const EntireAccordionContent3 = ({ card }) => {
           );
           setRightActive((prev) => !prev);
         }}
-        onMouseEnter={handleMouseEnter2}
-        onMouseLeave={handleMouseLeave2}
       >
         <p
           style={{
@@ -173,7 +134,7 @@ const EntireAccordionContent3 = ({ card }) => {
         <p
           style={{
             fontSize: "12px",
-            color: rightActive || isHovered2 ? "#fff" : "#111111",
+            color: rightActive ? "#fff" : "#111111",
             letterSpacing: "-0.031em",
           }}
           className="font-malgun mb-2px mr-9px font-semibold"

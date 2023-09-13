@@ -17,82 +17,7 @@ const EntireAccordionContent2 = ({ card }) => {
   const [leftActive3, setLeftActive3] = useState(false);
   const [rightActive3, setRightActive3] = useState(false);
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHovered1, setIsHovered1] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
-  const [isHovered3, setIsHovered3] = useState(false);
-  const [isHovered4, setIsHovered4] = useState(false);
-  const [isHovered5, setIsHovered5] = useState(false);
-  const [isHovered6, setIsHovered6] = useState(false);
-  const [isHovered7, setIsHovered7] = useState(false);
-
-  const hoverStyle = {
-    background: "linear-gradient(to top, #5423a0, #9d3bbb)",
-    color: "#fff",
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleMouseEnter1 = () => {
-    setIsHovered1(true);
-  };
-
-  const handleMouseLeave1 = () => {
-    setIsHovered1(false);
-  };
-
-  const handleMouseEnter2 = () => {
-    setIsHovered2(true);
-  };
-
-  const handleMouseLeave2 = () => {
-    setIsHovered2(false);
-  };
-
-  const handleMouseEnter3 = () => {
-    setIsHovered3(true);
-  };
-
-  const handleMouseLeave3 = () => {
-    setIsHovered3(false);
-  };
-  const handleMouseEnter4 = () => {
-    setIsHovered4(true);
-  };
-
-  const handleMouseLeave4 = () => {
-    setIsHovered4(false);
-  };
-
-  const handleMouseEnter5 = () => {
-    setIsHovered5(true);
-  };
-
-  const handleMouseLeave5 = () => {
-    setIsHovered5(false);
-  };
-
-  const handleMouseEnter6 = () => {
-    setIsHovered6(true);
-  };
-
-  const handleMouseLeave6 = () => {
-    setIsHovered6(false);
-  };
-
-  const handleMouseEnter7 = () => {
-    setIsHovered7(true);
-  };
-
-  const handleMouseLeave7 = () => {
-    setIsHovered7(false);
-  };
+  
   return (
     <>
       <div
@@ -109,9 +34,8 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "316px",
             background: leftActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: leftActive ? "#fff" : "#444444",
-            ...(isHovered ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          className="flex items-center justify-between border-r h-30px cursor-pointer  hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -120,8 +44,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setLeftActive((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
           <p
             style={{
@@ -137,7 +59,7 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: leftActive || isHovered ? "#fff" : "#f04281",
+                color: leftActive  ? "#fff" : "#f04281",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
@@ -154,9 +76,8 @@ const EntireAccordionContent2 = ({ card }) => {
             height: "100%",
             background: rightActive ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: rightActive ? "#fff" : "#444444",
-            ...(isHovered1 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between cursor-pointer"
+          className="flex items-center justify-between cursor-pointer hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -165,8 +86,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setRightActive((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter1}
-          onMouseLeave={handleMouseLeave1}
         >
           <p
             style={{
@@ -182,7 +101,7 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: rightActive || isHovered1 ? "#fff" : "#0072bc",
+                color: rightActive  ? "#fff" : "#0072bc",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
@@ -208,9 +127,8 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "316px",
             background: leftActive1 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: leftActive1 ? "#fff" : "#444444",
-            ...(isHovered2 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          className="flex items-center justify-between border-r h-30px cursor-pointer  hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -219,8 +137,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setLeftActive1((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter2}
-          onMouseLeave={handleMouseLeave2}
         >
           <p
             style={{
@@ -236,7 +152,7 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: leftActive1 || isHovered2 ? "#fff" : "#f04281",
+                color: leftActive1  ? "#fff" : "#f04281",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
@@ -253,9 +169,8 @@ const EntireAccordionContent2 = ({ card }) => {
             height: "100%",
             background: rightActive1 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: rightActive1 ? "#fff" : "#444444",
-            ...(isHovered3 ? hoverStyle : null),
           }}
-          className="flex items-center justify-between cursor-pointer"
+          className="flex items-center justify-between cursor-pointer  hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -264,8 +179,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setRightActive1((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter3}
-          onMouseLeave={handleMouseLeave3}
         >
           <p
             style={{
@@ -281,7 +194,7 @@ const EntireAccordionContent2 = ({ card }) => {
             <p
               style={{
                 fontSize: "12px",
-                color: rightActive1 || isHovered3 ? "#fff" : "#0072bc",
+                color: rightActive1  ? "#fff" : "#0072bc",
                 letterSpacing: "-0.031em",
                 width: "28px",
               }}
@@ -306,10 +219,9 @@ const EntireAccordionContent2 = ({ card }) => {
             borderColor: leftActive2 ? "#6227a5" : "#cccccc",
             width: "316px",
             background: leftActive2 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: leftActive2 ? "#fff" : "#444444",
-            ...(isHovered4 ? hoverStyle : null),
+            color: leftActive2 ? "#fff" : "#444444"
           }}
-          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          className="flex items-center justify-between border-r h-30px cursor-pointer  hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -318,8 +230,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setLeftActive2((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter4}
-          onMouseLeave={handleMouseLeave4}
         >
           <p
             style={{
@@ -333,7 +243,7 @@ const EntireAccordionContent2 = ({ card }) => {
           <p
             style={{
               fontSize: "12px",
-              color: leftActive2 || isHovered4 ? "#fff" : "#111111",
+              color: leftActive2  ? "#fff" : "#111111",
               letterSpacing: "-0.031em",
             }}
             className="mr-9px mb-2px font-malgun font-semibold"
@@ -347,10 +257,9 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "314px",
             height: "100%",
             background: rightActive2 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: rightActive2 ? "#fff" : "#444444",
-            ...(isHovered5 ? hoverStyle : null),
+            color: rightActive2 ? "#fff" : "#444444"
           }}
-          className="flex items-center justify-between cursor-pointer"
+          className="flex items-center justify-between cursor-pointer  hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -359,8 +268,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setRightActive2((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter5}
-          onMouseLeave={handleMouseLeave5}
         >
           <p
             style={{
@@ -374,7 +281,7 @@ const EntireAccordionContent2 = ({ card }) => {
           <p
             style={{
               fontSize: "12px",
-              color: rightActive2 || isHovered5 ? "#fff" : "#111111",
+              color: rightActive2  ? "#fff" : "#111111",
               letterSpacing: "-0.031em",
             }}
             className="font-malgun mb-2px mr-9px font-semibold"
@@ -400,10 +307,9 @@ const EntireAccordionContent2 = ({ card }) => {
             width: "316px",
             background: leftActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: leftActive3 ? "#fff" : "#444444",
-            ...(isHovered6 ? hoverStyle : null),
             borderBottomLeftRadius: "3px",
           }}
-          className="flex items-center justify-between border-r h-30px cursor-pointer"
+          className="flex items-center justify-between border-r h-30px cursor-pointer hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -412,8 +318,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setLeftActive3((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter6}
-          onMouseLeave={handleMouseLeave6}
         >
           <p
             style={{
@@ -433,10 +337,9 @@ const EntireAccordionContent2 = ({ card }) => {
             height: "100%",
             background: rightActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
             color: rightActive3 ? "#fff" : "#444444",
-            ...(isHovered7 ? hoverStyle : null),
             borderBottomRightRadius: "3px",
           }}
-          className="flex items-center justify-between cursor-pointer"
+          className="flex items-center justify-between cursor-pointer  hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -445,8 +348,6 @@ const EntireAccordionContent2 = ({ card }) => {
             );
             setRightActive3((prev) => !prev);
           }}
-          onMouseEnter={handleMouseEnter7}
-          onMouseLeave={handleMouseLeave7}
         >
           <p
             style={{

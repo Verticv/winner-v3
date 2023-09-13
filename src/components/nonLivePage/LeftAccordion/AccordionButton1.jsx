@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState  } from "react";
 import AccordionContent1 from "./AccordionContent1";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow2.png";
 
+import Collapsible from "../Collapsible/index";
+ 
 const AccordionButton1 = ({ icon, title, card }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-
+  
   return (
     <div
       style={{
@@ -19,18 +21,21 @@ const AccordionButton1 = ({ icon, title, card }) => {
       }}
       className="rounded-lg p-px mb-5px"
     >
-      <div
-        style={{
-          background: "linear-gradient(to top, #6b22ff, #df52ff)",
-          width: "278px",
-          height: "44px",
-          borderRadius: "5px",
-          borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
-          borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
-        }}
-        className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer`}
-        onClick={toggleAccordion}
-      >
+      <Collapsible
+        open
+        headerChild={
+          <div
+          style={{
+            background: "linear-gradient(to top, #6b22ff, #df52ff)",
+            width: "278px",
+            height: "44px",
+            borderRadius: "5px",
+            borderBottomRightRadius: `${isOpen ? "0px" : "5px"}`,
+            borderBottomLeftRadius: `${isOpen ? "0px" : "5px"}`,
+          }}
+          className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer`}
+          onClick={toggleAccordion}
+        >
         <div className="flex items-center">
           <img
             className="-ml-3px mt-11px mb-16px object-none"
@@ -58,21 +63,23 @@ const AccordionButton1 = ({ icon, title, card }) => {
           />
         </div>
       </div>
-      {isOpen && (
-        <div
+        }>
+       <div
           style={{
             background: "#420572",
             paddingBottom: "0.1px",
             borderBottomLeftRadius: "6px",
             borderBottomRightRadius: "6px",
           }}
-          className="pt-2px rounded-b-lg"
+          className="w-full pt-2px rounded-b-lg"
         >
           {card.map((item) => (
             <AccordionContent1 key={item.id} card={item} />
           ))}
         </div>
-      )}
+      </Collapsible>
+
+          
     </div>
   );
 };

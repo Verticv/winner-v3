@@ -33,8 +33,8 @@ const AccordionCard2 = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const [isHovered, setIsHovered] = useState(false);
-  const [cardHovered, setCardHovered] = useState(false);
+  const [isHovered] = useState(false);
+  const [cardHovered] = useState(false);
   const [cardSelected] = useState(false);
 
   const [leftActive, setLeftActive] = useState(false);
@@ -47,30 +47,18 @@ const AccordionCard2 = ({
     // borderBottomLeftRadius: "4px",
   };
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered1] = useState(false);
 
   const hoverStyle1 = {
     background: "#936cee",
     color: "#ffffff",
   };
 
-  const handleMouseEnter1 = () => {
-    setIsHovered1(true);
-  };
+  
 
-  const handleMouseLeave1 = () => {
-    setIsHovered1(false);
-  };
-
-  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered2] = useState(false);
 
   const hoverStyle2 = {
     background: "#936cee",
@@ -78,14 +66,7 @@ const AccordionCard2 = ({
     borderBottomRightRadius: "4px",
   };
 
-  const handleMouseEnter2 = () => {
-    setIsHovered2(true);
-  };
-
-  const handleMouseLeave2 = () => {
-    setIsHovered2(false);
-  };
-
+  
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
@@ -122,10 +103,8 @@ const AccordionCard2 = ({
       // className="items-center justify-between px-3px rounded-lg mb-2px h-85px"
     >
       <div
-        onMouseEnter={() => setCardHovered(true)}
-        onMouseLeave={() => setCardHovered(false)}
         // onClick={() => setCardSelected((prev) => !prev)}
-        className="cursor-pointer"
+        className="cursor-pointer accordion can-hover"
       >
         <div className="flex ml-10px justify-between items-center mr-11px">
           <p
@@ -137,7 +116,7 @@ const AccordionCard2 = ({
               textOverflow: "ellipsis",
               maxWidth: "220px",
             }}
-            className="text-12px mt-6px -mb-px"
+            className="hover text-12px mt-6px -mb-px"
           >
             {team1}
           </p>
@@ -146,7 +125,7 @@ const AccordionCard2 = ({
               color: cardHovered || cardSelected ? "#ffffff" : "#f04281",
               letterSpacing: "-0.031em",
             }}
-            className="text-12px font-malgun mt-px -mb-6px"
+            className="hover text-12px font-malgun mt-px -mb-6px"
           >
             {time}
           </p>
@@ -161,7 +140,7 @@ const AccordionCard2 = ({
               textOverflow: "ellipsis",
               maxWidth: "220px",
             }}
-            className="text-12px font-malgun mt-px"
+            className="hover text-12px font-malgun mt-px"
           >
             {team2}
           </p>
@@ -173,7 +152,7 @@ const AccordionCard2 = ({
                 color: cardHovered || cardSelected ? "#ffffff" : "#0072bc",
                 letterSpacing: "-0.031em",
               }}
-              className="text-12px font-malgun"
+              className="hover text-12px font-malgun"
             >
               {dateAndTime}
             </p>
@@ -194,7 +173,7 @@ const AccordionCard2 = ({
             <div className="tooltip mt-8px items-center justify-center">
               <img
                 id={id}
-                className="mt-12px ml-px object-none cursor-pointer filter hover:brightness-110"
+                className=" mt-12px ml-px object-none cursor-pointer filter hover:brightness-110"
                 src={icon}
                 alt="img"
                 onClick={() => {
@@ -219,7 +198,7 @@ const AccordionCard2 = ({
                 filter: (cardHovered || cardSelected) && "brightness(0) invert(1)",
                 color: "#444444",
               }}
-              className={`object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
+              className={`hover object-none mr-11px ml-29px mt-15px cursor-pointer filter hover:opacity-75 ${
                 isOpen ? "transform rotate-180" : ""
               }`}
             />
@@ -243,9 +222,7 @@ const AccordionCard2 = ({
               background: leftActive ? "#936cee" : "",
               ...(isHovered ? hoverStyle : null),
             }}
-            className="flex items-center justify-between"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            className="flex items-center justify-between card-btn"
             onClick={() => {
               dispatch(
                 setBetSlipData({
@@ -286,9 +263,7 @@ const AccordionCard2 = ({
               background: centerActive ? "#936cee" : "",
               ...(isHovered1 ? hoverStyle1 : null),
             }}
-            className="flex items-center border-l border-r border-solid justify-between h-30px"
-            onMouseEnter={handleMouseEnter1}
-            onMouseLeave={handleMouseLeave1}
+            className="flex items-center border-l border-r border-solid justify-between h-30px card-btn"
             onClick={() => {
               dispatch(
                 setBetSlipData({
@@ -329,9 +304,7 @@ const AccordionCard2 = ({
               background: rightActive ? "#936cee" : "",
               ...(isHovered2 ? hoverStyle2 : null),
             }}
-            className="flex items-center justify-between"
-            onMouseEnter={handleMouseEnter2}
-            onMouseLeave={handleMouseLeave2}
+            className="flex items-center justify-between card-btn"
             onClick={() => {
               dispatch(
                 setBetSlipData({
