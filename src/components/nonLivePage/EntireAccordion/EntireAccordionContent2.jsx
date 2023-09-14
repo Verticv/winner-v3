@@ -15,7 +15,7 @@ const EntireAccordionContent2 = ({ card }) => {
   const [leftActive2, setLeftActive2] = useState(false);
   const [rightActive2, setRightActive2] = useState(false);
   const [leftActive3, setLeftActive3] = useState(false);
-  const [rightActive3, setRightActive3] = useState(false);
+  const [,setRightActive3] = useState(false);
 
   
   return (
