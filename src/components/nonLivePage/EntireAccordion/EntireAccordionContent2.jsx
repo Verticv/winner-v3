@@ -14,9 +14,6 @@ const EntireAccordionContent2 = ({ card }) => {
   const [rightActive1, setRightActive1] = useState(false);
   const [leftActive2, setLeftActive2] = useState(false);
   const [rightActive2, setRightActive2] = useState(false);
-  const [leftActive3, setLeftActive3] = useState(false);
-  const [rightActive3, setRightActive3] = useState(false);
-
   
   return (
     <>
@@ -303,21 +300,13 @@ const EntireAccordionContent2 = ({ card }) => {
       >
         <div
           style={{
-            borderColor: leftActive3 ? "#6227a5" : "#cccccc",
+            borderColor: "#cccccc",
             width: "316px",
-            background: leftActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: leftActive3 ? "#fff" : "#444444",
+            background: "#ffffff",
+            color: "#444444",
             borderBottomLeftRadius: "3px",
           }}
-          className="flex items-center justify-between border-r h-30px cursor-pointer hover-style can-hover"
-          onClick={() => {
-            dispatch(
-              setBetSlipData({
-                data: card,
-              })
-            );
-            setLeftActive3((prev) => !prev);
-          }}
+          className="flex items-center justify-between border-r h-30px cursor-pointer"
         >
           <p
             style={{
@@ -332,22 +321,14 @@ const EntireAccordionContent2 = ({ card }) => {
         </div>
         <div
           style={{
-            borderColor: rightActive3 ? "#6227a5" : "#cccccc",
+            borderColor: "#cccccc",
             width: "314px",
             height: "100%",
-            background: rightActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: rightActive3 ? "#fff" : "#444444",
+            background: "#ffffff",
+            color: "#444444",
             borderBottomRightRadius: "3px",
           }}
-          className="flex items-center justify-between cursor-pointer  hover-style can-hover"
-          onClick={() => {
-            dispatch(
-              setBetSlipData({
-                data: card,
-              })
-            );
-            setRightActive3((prev) => !prev);
-          }}
+          className="flex items-center justify-between cursor-pointer"
         >
           <p
             style={{

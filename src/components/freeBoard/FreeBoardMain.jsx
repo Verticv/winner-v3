@@ -342,7 +342,7 @@ const FreeBoardMain = () => {
   const searchDropdown = (
     <div
       style={{ backgroundColor: "white" }}
-      className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-2px border  font-spoqaMedium text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a "
+      className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden rounded-6px border  font-spoqaMedium text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-dark-1a1a1a "
     >
       <div className="w-full p-px h-full overflow-x-hidden border-gray-2c2c2c">
         <button
@@ -564,7 +564,7 @@ const FreeBoardMain = () => {
                 ) : (
                   <img className="object-none" src={Rank5} alt="" />
                 )}
-                <p style={{ maxWidth: "120px" }} className="truncate">
+                <p style={{ maxWidth: "120px" }} className="truncate tracking-none">
                   {item.author}
                 </p>
               </div>
@@ -574,7 +574,7 @@ const FreeBoardMain = () => {
             {item.type !== "일반" ? (
               ""
             ) : (
-              <div>
+              <div className="tracking-none">
                 {item.date} {item.time}
               </div>
             )}

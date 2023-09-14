@@ -126,7 +126,7 @@ const Announcement = () => {
   const searchDropdown = (
     <div
       style={{ width: "120px" }}
-      className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border p-px  text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-white "
+      className="mt-4px flex flex-col items-center justify-center overflow-hidden rounded-6px border p-px  text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-white "
     >
       <button
         className={dropDownCellClass}

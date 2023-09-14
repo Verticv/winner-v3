@@ -94,7 +94,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           top: "125px",
           background: "linear-gradient(to right, #52296b, #2c1c5d)",
         }}
-        className="w-full absolute flex flex-col justify-center items-start limit:items-center limit1920:overflow-x-hidden"
+        className="w-full absolute flex flex-col justify-center items-start"
       >
         <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
           <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
@@ -107,7 +107,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           <div className="absolute bottom-0 left-0 h-px w-full bg-r2c1137" />
         </div>
         <div
-          style={{ background: "linear-gradient(to right, #b644c4, #351894)" }}
+          style={{ background: "linear-gradient(to right, #b644c4, #351894)", minHeight: "100vh" }}
           className="relative w-full flex items-start justify-center"
         >
           <div
@@ -117,6 +117,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
               maxHeight: "100vh",
               minHeight: "400px",
               marginBottom: "8px",
+              marginLeft:'-10px'
             }}
             id="scroll-box"
           >

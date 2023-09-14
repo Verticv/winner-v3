@@ -114,7 +114,7 @@ const Inbox = () => {
   const searchDropdown = (
     <div
       style={{ width: "120px" }}
-      className=" h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-2px border font-medium text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-white"
+      className=" h-full mt-4px flex flex-col items-center justify-center overflow-hidden rounded-6px border font-medium text-14px tracking-slight border-gray-404040 text-gray-ccc2b6 bg-white"
     >
       <div className="w-full h-full overflow-x-hidden border-gray-2c2c2c">
         <button

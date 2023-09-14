@@ -191,7 +191,7 @@ const Contact = () => {
   const searchDropdown = (
     <div
       style={{ width: "120px" }}
-      className="mt-4px flex flex-col items-center justify-center overflow-hidden   rounded-2px border border-gray-404040 shadow-plain5 text-gray-ccc2b6  text-14px tracking-slight bg-white"
+      className="mt-4px flex flex-col items-center justify-center overflow-hidden   rounded-6px border border-gray-404040 shadow-plain5 text-gray-ccc2b6  text-14px tracking-slight bg-white"
     >
       <div className="w-full p-px h-full overflow-x-hidden border-gray-2c2c2c">
         <button
