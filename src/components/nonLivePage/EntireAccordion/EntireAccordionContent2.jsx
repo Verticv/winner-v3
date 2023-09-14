@@ -309,7 +309,7 @@ const EntireAccordionContent2 = ({ card }) => {
             color: leftActive3 ? "#fff" : "#444444",
             borderBottomLeftRadius: "3px",
           }}
-          className="flex items-center justify-between border-r h-30px cursor-pointer hover-style can-hover"
+          className="flex items-center justify-between border-r h-30px cursor-pointer hover-style"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -339,7 +339,7 @@ const EntireAccordionContent2 = ({ card }) => {
             color: rightActive3 ? "#fff" : "#444444",
             borderBottomRightRadius: "3px",
           }}
-          className="flex items-center justify-between cursor-pointer  hover-style can-hover"
+          className="flex items-center justify-between cursor-pointer  hover-style"
           onClick={() => {
             dispatch(
               setBetSlipData({
