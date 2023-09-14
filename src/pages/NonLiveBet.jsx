@@ -52,7 +52,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
           let list = element.classList;
           list.add("can-hover");
         });
-      }, 500);
+      }, 100);
     });
   };
 
