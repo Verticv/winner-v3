@@ -5,10 +5,7 @@ import { useHistory } from "react-router";
 const HorizontalMenu9 = ({ itemsArray, setSelectedTab, setSelectedSubTab = null }) => {
   const history = useHistory();
   const pathname = window.location.pathname;
-  const [isHover, setHover] = useState(null);
-  console.log(isHover + "");
-
-  console.log(pathname);
+  const [, setHover] = useState(null);
 
   function TabsList({ items }) {
     return items.map((item) => (

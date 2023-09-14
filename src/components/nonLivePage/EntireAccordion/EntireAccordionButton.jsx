@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Arrow from "../../../images/nonLivePage/CenterAccordion/Arrow.png";
 import activeStarIcon from "../../../images/nonLivePage/CenterAccordion/star_on2.png";
 import EntireAccordionContent from "./EntireAccordionContent";
-import { useEffect } from "react";
 import Collapsible from "../Collapsible/index";
 
 // import AccordionContent1 from "./AccordionContent1";
@@ -16,12 +15,10 @@ const EntireAccordionButton = ({ icon, title, cards, handleZoomClick }) => {
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-  useEffect(() => {
-    console.log("yyyyyyyyyyt", cards);
-  });
+
   return (
     <div className="ml-4px mr-5px mb-5px ">
-        <Collapsible
+      <Collapsible
         disableAnimationOnClose
         open
         headerChild={
@@ -33,7 +30,9 @@ const EntireAccordionButton = ({ icon, title, cards, handleZoomClick }) => {
               borderBottomRightRadius: `${isOpen ? "0px" : "4px"}`,
               borderBottomLeftRadius: `${isOpen ? "0px" : "4px"}`,
             }}
-            className={`flex items-center justify-between ${isOpen ? "rounded-t-lg" : "rounded-lg"} cursor-pointer h-31px`}
+            className={`flex items-center justify-between ${
+              isOpen ? "rounded-t-lg" : "rounded-lg"
+            } cursor-pointer h-31px`}
             onClick={toggleAccordion}
           >
             <div className="flex items-center">
@@ -77,13 +76,14 @@ const EntireAccordionButton = ({ icon, title, cards, handleZoomClick }) => {
               />
             </div>
           </div>
-        }>
+        }
+      >
         <div style={{ background: "#420572" }} className="rounded-b-lg">
           {cards.map((item) => (
             <EntireAccordionContent key={item.id} card={item} />
           ))}
         </div>
-        </Collapsible>
+      </Collapsible>
     </div>
   );
 };

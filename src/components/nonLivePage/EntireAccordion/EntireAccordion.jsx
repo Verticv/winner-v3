@@ -65,7 +65,6 @@ const EntireAccordion = () => {
   ];
 
   useEffect(() => {
-    console.log("zoomClass", zoomClass);
     setTimeout(() => {
       setZoomClass("");
     }, 500);
@@ -106,19 +105,12 @@ const EntireAccordion = () => {
                 borderRadius: "4px",
                 flexShrink: 0,
                 background: activeId === 0 ? "#762ead" : "#f3cbff",
-                borderBottom:
-                  activeId === 0 ? "3px solid #ffc900" : "3px solid #f3cbff",
+                borderBottom: activeId === 0 ? "3px solid #ffc900" : "3px solid #f3cbff",
               }}
               className="flex w-54px h-36px items-center cursor-pointer relative filter hover:brightness-110"
               onClick={() => setActiveId(0)}
             >
-              <img
-                className={`ml-15px mt-2px object-none ${
-                  zoomClass ? zoomClass : ""
-                }`}
-                src={star}
-                alt="icon"
-              />
+              <img className={`ml-15px mt-2px object-none ${zoomClass ? zoomClass : ""}`} src={star} alt="icon" />
               <div
                 style={{
                   height: "19px",
@@ -128,9 +120,7 @@ const EntireAccordion = () => {
                 }}
                 className="flex items-center justify-center absolute ml-31px mb-15px pl-6px pr-7px"
               >
-                <p className="text-13px tracking-tight font-bold text-white ">
-                  25
-                </p>
+                <p className="text-13px tracking-tight font-bold text-white ">25</p>
               </div>
             </div>
             {buttonContent.map((content) => (
@@ -140,11 +130,8 @@ const EntireAccordion = () => {
                   borderRadius: "4px",
                   flexShrink: 0,
                   minWidth: content.width,
-                  width:"max-content",
-                  borderBottom:
-                    activeId === content.id
-                      ? "3px solid #ffc900"
-                      : "3px solid #f3cbff",
+                  width: "max-content",
+                  borderBottom: activeId === content.id ? "3px solid #ffc900" : "3px solid #f3cbff",
                 }}
                 className="flex ml-3px w-54px h-36px items-center justify-center align-center cursor-pointer px-10px filter hover:brightness-110"
                 onClick={() => setActiveId(content.id)}

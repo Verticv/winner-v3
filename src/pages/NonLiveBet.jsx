@@ -21,11 +21,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   const [englandActive, setEnglandActive] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    console.log("englandActive", englandActive);
-  }, [englandActive, setEnglandActive]);
   const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
-  console.log("state :>> ", liveGameData);
 
   const pauseHover = () => {
     let timer;

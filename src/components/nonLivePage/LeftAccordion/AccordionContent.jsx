@@ -36,9 +36,6 @@ const AccordionContent = ({ setIsOpen }) => {
   const bundesliga = useSelector((state) => state?.nonLive?.bundesliga);
   const League = useSelector((state) => state?.nonLive?.League);
 
-  useEffect(() => {
-    console.log("favoritePreMatch13", favoritePreMatch, "favoriteLaLiga", favoriteLaLiga, "bundesliga", bundesliga);
-  });
   const deleteFromFavorite = ({ id }) => {
     dispatch(
       deleteFavoriteLeagueById({
@@ -46,10 +43,6 @@ const AccordionContent = ({ setIsOpen }) => {
       })
     );
   };
-
-  useEffect(() => {
-    console.log("League.length !== 0", favoriteLaLiga);
-  });
 
   useEffect(() => {
     if (
@@ -128,14 +121,9 @@ const AccordionContent = ({ setIsOpen }) => {
                 }}
                 className="flex items-center justify-between mx-2px h-35px mb-2px cursor-pointer accordion can-hover"
                 onClick={toggleAccordion1}
-                
               >
                 <div className="flex items-center">
-                  <img
-                    className="ml-6px mt-6px mb-6px hover"
-                    src={icon}
-                    alt="img"
-                  />
+                  <img className="ml-6px mt-6px mb-6px hover" src={icon} alt="img" />
                   <p
                     style={{
                       letterSpacing: "-0.031em",
@@ -146,7 +134,7 @@ const AccordionContent = ({ setIsOpen }) => {
                     }}
                     className="hover text-12px mt-10px mb-12px ml-5px"
                   >
-                    프리미어리그 
+                    프리미어리그
                   </p>
                 </div>
 
@@ -154,7 +142,7 @@ const AccordionContent = ({ setIsOpen }) => {
                   src={Arrow}
                   alt=""
                   style={{
-                    color: "#444444"
+                    color: "#444444",
                   }}
                   className={` hover object-none cursor-pointer mr-11px filter hover:opacity-75 ${
                     isOpen1 ? "transform rotate-180" : ""
@@ -193,21 +181,17 @@ const AccordionContent = ({ setIsOpen }) => {
             <>
               <div
                 style={{
-                  background:  "#ffffff",
+                  background: "#ffffff",
                   borderRadius: "4px",
                 }}
                 className="flex items-center mx-2px rounded-lg h-35px mb-2px cursor-pointer justify-between accordion can-hover"
                 onClick={toggleAccordion2}
               >
                 <div className="flex items-center">
-                  <img
-                    className="hover ml-6px"
-                    src={icon}
-                    alt="img"
-                  />
+                  <img className="hover ml-6px" src={icon} alt="img" />
                   <p
                     style={{
-                      color:  "#444444",
+                      color: "#444444",
                       whiteSpace: "nowrap",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
@@ -226,7 +210,7 @@ const AccordionContent = ({ setIsOpen }) => {
                   //   setShowCard1((prev) => !prev);
                   // }}
                   style={{
-                    color: "#444444"
+                    color: "#444444",
                   }}
                   className={`hover object-none mr-11px cursor-pointer ${isOpen2 ? "transform rotate-180" : ""}`}
                 />
@@ -260,21 +244,17 @@ const AccordionContent = ({ setIsOpen }) => {
                 <>
                   <div
                     style={{
-                      background:  "#ffffff",
+                      background: "#ffffff",
                       borderRadius: "4px",
                     }}
                     className="flex items-center mx-2px h-35px mb-2px cursor-pointer justify-between accordion can-hover"
                     onClick={toggleAccordion3}
                   >
                     <div className="flex items-center">
-                      <img
-                        className="hover ml-6px mt-7px mb-6px"
-                        src={icon}
-                        alt="img"
-                      />
+                      <img className="hover ml-6px mt-7px mb-6px" src={icon} alt="img" />
                       <p
                         style={{
-                          color:  "#444444",
+                          color: "#444444",
                           letterSpacing: "-0.031em",
                           whiteSpace: "nowrap",
                           overflow: "hidden",
@@ -283,7 +263,7 @@ const AccordionContent = ({ setIsOpen }) => {
                         }}
                         className="hover text-12px mt-10px mb-13px ml-5px"
                       >
-                        분데스리가 
+                        분데스리가
                       </p>
                     </div>
                     <img
@@ -291,7 +271,7 @@ const AccordionContent = ({ setIsOpen }) => {
                       alt=""
                       // onClick={() => setShowCard2((prev) => !prev)}
                       style={{
-                        color: "#444444"
+                        color: "#444444",
                       }}
                       className={`hover object-none mr-11px cursor-pointer ${isOpen3 ? "transform rotate-180" : ""}`}
                     />
