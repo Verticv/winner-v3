@@ -93,6 +93,17 @@ const card3 = [
 
 const LeftAccordion = () => {
   
+  useEffect(() => {
+    const element = document.querySelector("div#scroll-box");
+    if (element) {
+      element.addEventListener("scroll", (event) => {
+        pauseHover()
+      });
+      element.addEventListener("scrollend", (event) => {
+        activateHover()
+      });
+    }
+  }, []);
   const pauseHover = () => {
     let timer 
     clearTimeout(timer);
@@ -103,30 +114,23 @@ const LeftAccordion = () => {
       let list = element.classList
       list.remove("can-hover");
     })
-    
+    activateHover()
   }
 
-  useEffect(() => {
-    const element = document.querySelector("div#scroll-box");
-    if (element) {
-      element.addEventListener("scroll", (event) => {
-        pauseHover()
+  const activateHover = () => {
+    let timer
+    clearTimeout(timer);
+    const allWithClass = Array.from(
+      document.getElementsByClassName('accordion')
+    );
+    setTimeout(() => {
+      allWithClass.forEach((element) => {
+        let list = element.classList;
+        list.add("can-hover");
       });
-    }
-    element.addEventListener("scrollend", (event) => {
-      let timer 
-      clearTimeout(timer);
-      const allWithClass = Array.from(
-        document.getElementsByClassName('accordion')
-      );
-      setTimeout(() => {
-       allWithClass.forEach(element => {
-          let list = element.classList
-          list.add("can-hover");
-       })
-      }, 500);
-    });
- }, []);
+    }, 1000);
+  }
+
   return (
     <div className="h-full items-start mr-4px mt-5px mx-auto relative" >
       <AccordionButton icon={icon1} title="즐겨찾기" />

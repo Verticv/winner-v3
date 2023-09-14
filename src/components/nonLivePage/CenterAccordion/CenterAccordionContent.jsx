@@ -187,8 +187,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             background: leftActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: leftActive ? "#fff" : "#111111"
           }}
-          onMouseOver={() => card.score1}
-          onMouseLeave={card.score1}
           className={`flex items-center justify-between border-l border-r hover-style can-hover ${card.score1?'':'lock-cell'}`}
         >
           <p
@@ -269,8 +267,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             background: centerActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: centerActive ? "#ffffff" : "#444444"
           }}
-          onMouseOver={card.score2}
-          onMouseLeave={card.score2}
           className={`flex items-center relative w-68px justify-center hover-style can-hover  ${card.score2 ? '' : 'lock-cell'}`}
         >
           {card.score2ArrowUp ? (
@@ -340,8 +336,6 @@ const CenterAccordionContent = ({ card, lastObject, setEnglandActive, lastItemAc
             background: rightActive ? `linear-gradient(to top, #5423a0, #9d3bbb)` : "",
             color: rightActive ? "#ffffff" : "#444444"
           }}
-          onMouseOver={card.score3 }
-          onMouseLeave={card.score3 }
           className={`flex items-center justify-between border-l border-r hover-style can-hover  ${card.score3?'':'lock-cell'}`}
         >
           <p

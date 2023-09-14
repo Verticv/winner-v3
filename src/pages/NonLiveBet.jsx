@@ -26,35 +26,7 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
   }, [englandActive, setEnglandActive]);
   const liveGameData = useSelector((state) => state.nonLive.liveGame.data);
   console.log("state :>> ", liveGameData);
-
-  const pauseHover = () => {
-    let timer;
-    clearTimeout(timer);
-    const allWithClass = Array.from(document.getElementsByClassName("hover-style"));
-    allWithClass.forEach((element) => {
-      let list = element.classList;
-      list.remove("can-hover");
-    });
-  };
-  const handleOnScroll = (element) => {
-    element.addEventListener("scroll", (event) => {
-      pauseHover();
-    });
-  };
-
-  const handleScrollEnd = (element) => {
-    element.addEventListener("scrollend", (event) => {
-      let timer;
-      clearTimeout(timer);
-      const allWithClass = Array.from(document.getElementsByClassName("hover-style"));
-      setTimeout(() => {
-        allWithClass.forEach((element) => {
-          let list = element.classList;
-          list.add("can-hover");
-        });
-      }, 500);
-    });
-  };
+ 
 
   useEffect(() => {
     let container_boxes = document.querySelectorAll("div.scroll-box");
@@ -65,6 +37,41 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
       });
     }
   });
+
+  const handleOnScroll = (element) => {
+    element.addEventListener("scroll", (event) => {
+      pauseHover();
+    });
+  };
+
+  const handleScrollEnd = (element) => {
+    element.addEventListener("scrollend", (event) => {
+      let timer;
+      clearTimeout(timer);
+      activateHover()
+    });
+  };
+
+  const pauseHover = () => {
+    let timer;
+    clearTimeout(timer);
+    const allWithClass = Array.from(document.getElementsByClassName("hover-style"));
+    allWithClass.forEach((element) => {
+      let list = element.classList;
+      list.remove("can-hover");
+    });
+    activateHover()
+  };
+
+  const activateHover = () => {
+    const allWithClass = Array.from(document.getElementsByClassName("hover-style"));
+    setTimeout(() => {
+      allWithClass.forEach((element) => {
+        let list = element.classList;
+        list.add("can-hover");
+      });
+    }, 1000);
+  }
 
   return (
     <>
