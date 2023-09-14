@@ -309,7 +309,7 @@ const EntireAccordionContent2 = ({ card }) => {
             color: leftActive3 ? "#fff" : "#444444",
             borderBottomLeftRadius: "3px",
           }}
-          className="flex items-center justify-between border-r h-30px cursor-pointer hover-style"
+          className="flex items-center justify-between border-r h-30px cursor-pointer hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
@@ -332,14 +332,14 @@ const EntireAccordionContent2 = ({ card }) => {
         </div>
         <div
           style={{
-            borderColor: rightActive3 ? "#6227a5" : "#cccccc",
+            borderColor: "#cccccc",
             width: "314px",
             height: "100%",
-            background: rightActive3 ? "linear-gradient(to top, rgb(84, 35, 160), rgb(157, 59, 187))" : "#ffffff",
-            color: rightActive3 ? "#fff" : "#444444",
+            background: "#ffffff",
+            color: "#444444",
             borderBottomRightRadius: "3px",
           }}
-          className="flex items-center justify-between cursor-pointer  hover-style"
+          className="flex items-center justify-between cursor-pointer hover-style can-hover"
           onClick={() => {
             dispatch(
               setBetSlipData({
