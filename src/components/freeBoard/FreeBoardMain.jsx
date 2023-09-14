@@ -564,7 +564,7 @@ const FreeBoardMain = () => {
                 ) : (
                   <img className="object-none" src={Rank5} alt="" />
                 )}
-                <p style={{ maxWidth: "120px" }} className="truncate">
+                <p style={{ maxWidth: "120px" }} className="truncate tracking-none">
                   {item.author}
                 </p>
               </div>
@@ -574,7 +574,7 @@ const FreeBoardMain = () => {
             {item.type !== "일반" ? (
               ""
             ) : (
-              <div>
+              <div className="tracking-none">
                 {item.date} {item.time}
               </div>
             )}
