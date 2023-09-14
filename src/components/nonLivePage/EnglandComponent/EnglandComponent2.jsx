@@ -54,7 +54,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive, setIsOpen, isOpen }
               background: "#5e399a",
               width: "632px",
               height: "100%",
-              borderRadius: "1px",
+              borderRadius: "4px",
             }}
             className="flex items-center justify-center"
           >
