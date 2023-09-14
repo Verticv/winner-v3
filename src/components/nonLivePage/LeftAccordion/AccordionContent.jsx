@@ -287,6 +287,7 @@ const AccordionContent = ({ setIsOpen }) => {
                           el.score3ArrowUp ||
                           el.score3ArrowDown ? (
                             <AccordionCard2
+                               key={el?.id}
                               id={el?.id}
                               team1={el?.team1}
                               time={el?.time}
@@ -309,6 +310,7 @@ const AccordionContent = ({ setIsOpen }) => {
                             <>
                               {!el.score1 ? (
                                 <AccordionCard1
+                                  key={el?.id}
                                   id={el?.id}
                                   team1={el?.team1}
                                   time={el?.time}
@@ -325,6 +327,7 @@ const AccordionContent = ({ setIsOpen }) => {
                                 />
                               ) : (
                                 <AccordionCard
+                                  key={el?.id}
                                   id={el?.id}
                                   team1={el?.team1}
                                   time={el?.time}
