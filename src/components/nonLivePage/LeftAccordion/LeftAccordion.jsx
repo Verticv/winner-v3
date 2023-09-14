@@ -103,7 +103,9 @@ const LeftAccordion = () => {
         activateHover()
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   const pauseHover = () => {
     let timer 
     clearTimeout(timer);
