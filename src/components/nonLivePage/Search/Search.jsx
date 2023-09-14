@@ -21,7 +21,7 @@ const Search = () => {
       style={{
         background: "#ffffff",
         borderRadius: "4px",
-        width: "259px",
+        width: "255px",
       }}
       className="flex items-center mx-4px h-35px mb-4px pr-10px"
     >
@@ -51,7 +51,7 @@ const Search = () => {
         borderTopRightRadius: first && "4px",
         borderBottomLeftRadius: last && "4px",
         borderBottomRightRadius: last && "4px",
-        width: "259px",
+        width: "255px",
         marginBottom: last && "4px",
       }}
       className={`${
@@ -76,7 +76,7 @@ const Search = () => {
   );
 
   return (
-    <div className="relative">
+    <div className="relative ml-10px">
       <div className="items-start mr-4px mt-10px">
         <div
           style={{
@@ -147,11 +147,11 @@ const Search = () => {
         </div>
       </div>
       {showSearchContent && (
-        <div className="items-start mr-10px absolute z-10">
+        <div className="items-start mr-10px absolute z-10 ml-px">
           <div
             style={{
               background: "#956bde",
-              width: "284px",
+              width: "280px",
               borderRadius: "6px",
               boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.8)",
             }}
@@ -160,7 +160,7 @@ const Search = () => {
             <div
               style={{
                 background: "#5932a7",
-                width: "276px",
+                width: "272px",
                 borderRadius: "5px",
               }}
               className="items-center py-3px cursor-pointer"
@@ -168,9 +168,9 @@ const Search = () => {
               <div
                 style={{
                   background: "#5932a7",
-                  width: "273px",
+                  width: "269px",
                   borderRadius: "5px",
-                  height: "289px",
+                  height: "291px",
                   overflowY: "auto",
                   overflowX: "hidden",
                 }}
