@@ -147,7 +147,7 @@ const Search = () => {
         </div>
       </div>
       {showSearchContent && (
-        <div className="items-start mr-10px absolute z-10 ml-px">
+        <div className="items-start mr-10px absolute z-10">
           <div
             style={{
               background: "#956bde",
