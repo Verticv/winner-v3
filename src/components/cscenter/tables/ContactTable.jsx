@@ -90,7 +90,7 @@ const ContactTable = ({ array }) => {
           <div
             className={`${
               item.isRead === false && "font-bold"
-            } flex justify-center text-center cursor-pointer h-full items-center pr-5px`}
+            } flex justify-center text-center cursor-pointer h-full items-center pr-5px tracking-none`}
             style={{ color: item.isRead === true ? "#444444" : "#444444", width: "138px" }}
             onClick={() => history.push(item.path)}
           >
