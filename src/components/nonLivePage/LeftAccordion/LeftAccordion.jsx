@@ -93,19 +93,7 @@ const card3 = [
 
 const LeftAccordion = () => {
   
-  const pauseHover = () => {
-    let timer 
-    clearTimeout(timer);
-    const allWithClass = Array.from(
-      document.getElementsByClassName('accordion')
-    );
-    allWithClass.forEach(element => {
-      let list = element.classList
-      list.remove("can-hover");
-    })
-    
-  }
-
+  
   useEffect(() => {
     const element = document.querySelector("div#scroll-box");
     if (element) {
@@ -116,17 +104,33 @@ const LeftAccordion = () => {
     element.addEventListener("scrollend", (event) => {
       let timer 
       clearTimeout(timer);
-      const allWithClass = Array.from(
-        document.getElementsByClassName('accordion')
-      );
-      setTimeout(() => {
-       allWithClass.forEach(element => {
-          let list = element.classList
-          list.add("can-hover");
-       })
-      }, 500);
+      activateHover()
     });
- }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const pauseHover = () => {
+    let timer 
+    clearTimeout(timer);
+    const allWithClass = Array.from(
+      document.getElementsByClassName('accordion')
+    );
+    allWithClass.forEach(element => {
+      let list = element.classList
+      list.remove("can-hover");
+    })
+    activateHover()
+  }
+
+  const activateHover = () => {
+    const allWithClass = Array.from(document.getElementsByClassName('accordion'));
+    setTimeout(() => {
+      allWithClass.forEach((element) => {
+        let list = element.classList;
+        list.add("can-hover");
+      });
+    }, 500);
+  }
   return (
     <div className="h-full items-start mr-4px mt-5px mx-auto relative ml-10px" >
       <AccordionButton icon={icon1} title="즐겨찾기" />
