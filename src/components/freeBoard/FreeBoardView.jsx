@@ -336,8 +336,8 @@ const FreeBoardView = () => {
               style={{ borderColor: "#bbbbbb", backgroundColor: "#ffffff" }}
               className="rounded-6px border border-solid bg-gray-252525 w-full flex items-start px-19px pt-17px pb-14px justify-between text-r444444 mb-10px mt-px"
             >
-              <p className="text-15px font-spoqa pr-7px -ml-px -mt-px">두개의 이벤트 모두 참여하였습니다</p>
-              <p className="text-14px font-spoqa flex-shrink-0 -mt-px">2021.06.28 15:36</p>
+              <p className="text-15px font-spoqa pr-7px -ml-px -mt-2px">두개의 이벤트 모두 참여하였습니다</p>
+              <p className="text-14px font-spoqa flex-shrink-0 -mt-2px">2021.06.28 15:36</p>
             </div>
           </div>
 
