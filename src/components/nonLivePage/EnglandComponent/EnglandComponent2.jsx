@@ -32,7 +32,7 @@ const EnglandComponent = ({ englandActive, setEnglandActive, setIsOpen, isOpen }
               letterSpacing: "-0.031em",
               textShadow: "0px 0px 5px rgba(0, 0, 0, 0.5)",
             }}
-            className="text-18px mb-3px font-bold"
+            className="text-18px font-bold"
           >
             스포츠 베팅규정 안내
           </p>

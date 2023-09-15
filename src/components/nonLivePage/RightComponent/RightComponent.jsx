@@ -249,7 +249,7 @@ const RightComponent = () => {
           className="flex items-center justify-between h-39px "
         >
           <div>
-            <p style={{ color: "#eeeeee" }} className="ml-8px mt-15px mb-14px text-14px font-malgun">
+            <p style={{ color: "#eeeeee" }} className="ml-8px mt-12px mb-14px text-14px font-malgun">
               {format(time, dateFormat, { locale: ko })}(월) {format(time, dateFormat1, { locale: ko })}
             </p>
           </div>

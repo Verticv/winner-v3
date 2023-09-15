@@ -427,7 +427,7 @@ const SignupPopup = ({ setAuth, setPopupOpen }) => {
             </div>
 
             <span style={{ color: "#444444", marginTop: "12px" }} className="text-16px h-16px font-bold">
-              회원가입 시 모든항목을 정확하게 기재하시기 바랍니다.
+              회원가입 시 모든 항목을 정확하게 기재하시기 바랍니다.
             </span>
             <span style={{ color: "#444444", marginTop: "2px" }} className="text-16px h-16px font-bold">
               회원데이터는 안전한 서버에서 안전하게 보관됩니다.

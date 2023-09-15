@@ -133,12 +133,12 @@ const MinigameBetHistoryPanel = ({
       </div>
 
       <div className="flex ml-10px text-14px text-center">
-        <div style={{ width: isPopup ? "120px" : "130px" }} className="text-r444444">
+        <div style={{ width: isPopup ? "130px" : "130px" }} className="text-r444444">
           {choice === "even" ? "짝" : "우"}
         </div>
         <div
           style={{
-            width: isPopup ? "116px" : "108px",
+            width: isPopup ? "108px" : "108px",
             color: result === "win" ? "#f04281" : result === "lose" ? "" : result === "cancel" ? "#33a1e9" : "",
           }}
         >
@@ -207,9 +207,9 @@ const MinigameBetHistoryPanel = ({
           <div
             style={{
               width: isAttached === true ? "162px" : "120px",
-              marginLeft: isAttached === true ? "0" : "8px",
+              marginLeft: isAttached === true ? "0" : "10px",
             }}
-            className="h-full flex items-center justify-center ml-10px"
+            className="h-full flex items-center justify-center"
           >
             회차
           </div>
@@ -248,21 +248,23 @@ const MinigameBetHistoryPanel = ({
           </div>
         </div>
 
-        <div className="w-full px-8px space-y-10px">
+        <div className="w-full px-8px pr-7px space-y-10px mt-9px -ml-px">
           <Card team1={team1} team2={team2} choice={choice} result={result} />
         </div>
 
-        <div
-          className={`flex w-full px-8px ${isPopup ? "mt-11px" : "mt-10px"} space-x-10px`}
-          style={{ letterSpacing: "-0.015em" }}
-        >
+        <div className={`flex justify-between pl-6px px-8px ${isPopup ? "mt-11px" : "mt-10px"} space-x-10px`}>
           <table>
             <div
               style={{ backgroundColor: "#eeeeee" }}
-              className={`flex w-auto h-36px rounded-4px  text-14px text-r444444 ${isPopup && "pt-px"}`}
+              className={`${
+                isPopup && "pt-px w-900px"
+              } flex h-36px rounded-4px bg-dark-252525 text-14px tracking-slight text-r444444 overflow-hidden`}
             >
               {isAttached === false && (
-                <div style={{ width: "45px" }} className="h-full flex items-center justify-center">
+                <div
+                  style={{ backgroundColor: "#eeeeee", width: "50px" }}
+                  className="h-full flex items-center justify-center"
+                >
                   선택
                 </div>
               )}
@@ -276,48 +278,78 @@ const MinigameBetHistoryPanel = ({
               )}
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "151px" : "178px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "131px"
+                      : // : "130px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-center border-l border-white"
+                className="h-full flex items-center justify-center border-l border-white pb-px"
               >
                 베팅시간
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "131px" : "145px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "131px"
+                      : // : "130px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-center border-l border-white"
+                className="h-full flex items-center justify-center border-l border-white pb-px"
               >
                 베팅금액
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "78px" : "178px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "98px"
+                      : // : "97px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-center border-l border-white"
+                className="h-full flex items-center justify-center border-l border-white pb-px"
               >
                 배당률
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "131px" : "165px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "131px"
+                      : // : "165px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-center border-l border-white"
+                className="h-full flex items-center justify-center border-l border-white pb-px"
               >
                 예상적중금액
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "129px"
+                      : // : "179px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-center border-l border-white"
+                className="h-full flex items-center justify-center border-l border-white pb-px"
               >
                 당첨금
               </div>
             </div>
-            <div className={`flex w-auto h-36px font-spoqa text-14px text-r444444 ${isPopup && "pt-2px"}`}>
+            <div className={`flex w-auto h-36px  text-14px tracking-slight text-r444444 ${isPopup && "pt-2px"}`}>
               {isAttached === false && checkedState && (
-                <div style={{ width: "45px" }} className="h-full flex items-center justify-center">
+                <div style={{ width: "50px" }} className="h-full flex items-center justify-center">
                   <input
                     className="radio"
                     type="checkbox"
@@ -328,52 +360,80 @@ const MinigameBetHistoryPanel = ({
                 </div>
               )}
               {isAttached === false && isPopup === false && (
-                <div
-                  style={{ width: "116px" }}
-                  className="h-full flex items-center justify-center border-l border-gray-2b2b2a"
-                >
+                <div style={{ width: "116px" }} className="h-full flex items-center justify-center ">
                   {ticketNumber}
                 </div>
               )}
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "151px" : "178px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "131px"
+                      : // : "151px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-center border-l border-gray-2b2b2a"
+                className="h-full flex items-center justify-center pb-px"
               >
                 {time}
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "131px" : "145px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "131px"
+                      : // : "150px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-end border-l border-gray-2b2b2a pr-5px"
+                className="h-full flex items-center justify-end  pr-5px pb-px"
               >
                 {amount}
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "78px" : "178px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "98px"
+                      : // : "178px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-center border-l border-gray-2b2b2a"
+                className="h-full flex items-center justify-center pb-px"
               >
                 {ratio}
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "131px" : "165px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "131px"
+                      : // : "165px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-end border-l border-gray-2b2b2a pr-5px"
+                className="h-full flex items-center justify-end  pr-5px pb-px"
               >
                 {predictedPrice}
               </div>
               <div
                 style={{
-                  width: isAttached === true ? "212px" : isPopup === false ? "131px" : "178px",
+                  width:
+                    isAttached === true
+                      ? "212px"
+                      : isPopup === false
+                      ? "128px"
+                      : // : "200px",
+                        "169px",
                 }}
-                className="h-full flex items-center justify-end border-l border-gray-2b2b2a pr-5px"
+                className="h-full flex items-center justify-end  pr-2px pb-px"
               >
-                <p className={`${winAmount.includes("+") && "text-red-500"}`}>{winAmount}</p>원
+                <p style={{ color: winAmount.includes("+") && "#f04281" }}>{winAmount}</p>
+                <p>원</p>
               </div>
             </div>
           </table>
@@ -386,28 +446,28 @@ const MinigameBetHistoryPanel = ({
                   setAttachedArray && addEntryClick();
                 }}
                 style={{ width: "110px", background: "#8458cd" }}
-                className="flex items-center justify-center h-73px rounded-8px  hover:filter hover:brightness-125 shadow-panelBtn"
+                className="flex items-center justify-center h-73px rounded-8px hover:brightness-125 filter shadow-panelBtn"
               >
                 <div
                   style={{ width: "110px", height: "71px" }}
                   className="pt-px flex items-center justify-center rounded-8px cursor-pointer"
                 >
-                  <span className="text-14px text-white text-shadow-5">내역올리기</span>
+                  <span className=" tracking-slight text-14px text-white text-shadow-5">내역올리기</span>
                 </div>
               </button>
             )}
 
             {isPopup === false && (
               <button
-                onClick={() => setAttachedArray && handleRemoveItem(id)}
                 style={{ width: "110px", background: "#646eb6" }}
-                className="flex items-center justify-center h-73px rounded-8px  hover:filter hover:brightness-125 shadow-panelBtn"
+                onClick={() => setAttachedArray && handleRemoveItem(id)}
+                className="flex items-center justify-center h-73px rounded-8px bg-gradient-to-t  hover:brightness-125 filter shadow-panelBtn"
               >
                 <div
                   style={{ width: "110px", height: "71px" }}
-                  className="pt-px flex items-center justify-center rounded-8px cursor-pointer"
+                  className="pt-px flex items-center justify-center rounded-8px bg-gradient-to-b from-red-e06446  to-red-96341d cursor-pointer"
                 >
-                  <span className="text-14px text-white text-shadow-5">내역삭제</span>
+                  <span className="tracking-slight text-14px text-white text-shadow-5">내역삭제</span>
                 </div>
               </button>
             )}
