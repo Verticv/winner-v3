@@ -93,22 +93,33 @@ const card3 = [
 
 const LeftAccordion = () => {
   
+  useEffect(() => {
+    handleOnScroll(window);
+    handleScrollEnd(window);
+  });
   
   useEffect(() => {
     const element = document.querySelector("div#scroll-box");
     if (element) {
-      element.addEventListener("scroll", (event) => {
-        pauseHover()
-      });
+      handleOnScroll(element);
+      handleScrollEnd(element);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+   
+  const handleOnScroll = (element) => {
+    element.addEventListener("scroll", (event) => {
+      pauseHover();
+    });
+  };
+
+  const handleScrollEnd = (element) => {
     element.addEventListener("scrollend", (event) => {
-      let timer 
+      let timer;
       clearTimeout(timer);
       activateHover()
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+  };
   const pauseHover = () => {
     let timer 
     clearTimeout(timer);

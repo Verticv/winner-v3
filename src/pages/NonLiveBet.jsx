@@ -33,6 +33,11 @@ const NonLiveBet = ({ isAuthenticated, setAuthenticated }) => {
     }
   });
 
+  useEffect(() => {
+      handleOnScroll(window);
+      handleScrollEnd(window);
+  });
+
   const handleOnScroll = (element) => {
     element.addEventListener("scroll", (event) => {
       pauseHover();
