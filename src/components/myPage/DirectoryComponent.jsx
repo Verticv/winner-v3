@@ -57,7 +57,7 @@ const DirectoryComponent = ({
       <img className="object-none cursor-none mb-px" src={RightArrow} alt="" />
       <span
         className={`${!branch2 ? "font-bold" : "opacity-60"} text-13px text-eeeeee cursor-pointer`}
-        style={{ marginLeft: "9px", letterSpacing: "-0.08em" }}
+        style={{ marginLeft: "9px", letterSpacing: "-0.05em" }}
         onClick={() => {
           branch1Clicked(branch1);
         }}
@@ -72,7 +72,7 @@ const DirectoryComponent = ({
               !branch3 ? "font-bold" : "opacity-60"
             } text-13px  text-eeeeee cursor-pointer`}
             onClick={() => branch2Clicked(mainPath)}
-            style={{ letterSpacing: "-0.08em" }}
+            style={{ letterSpacing: "-0.05em" }}
           >
             {branch2}
           </span>
@@ -81,13 +81,13 @@ const DirectoryComponent = ({
       {branch3 && (
         <>
           <img className="object-none" src={RightArrow} alt="" />
-          <span style={{ letterSpacing: "-0.08em" }} className="font-bold text-13px  text-eeeeee cursor-pointer">{branch3}</span>
+          <span style={{ letterSpacing: "-0.05em" }} className="font-bold text-13px  text-eeeeee cursor-pointer">{branch3}</span>
         </>
       )}
       {branch4 && (
         <>
           <img className="object-none" src={RightArrow} alt="" />
-          <span style={{ letterSpacing: "-0.08em" }} className="font-bold text-13px text-gray-r393e41">{branch4}</span>
+          <span style={{ letterSpacing: "-0.05em" }} className="font-bold text-13px text-gray-r393e41">{branch4}</span>
         </>
       )}
     </div>

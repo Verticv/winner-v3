@@ -56,7 +56,7 @@ const LiveSportStructure = () => {
       </div>
       <span
         style={{
-          color: "#828282",
+          color: "#666",
           letterSpacing: "-0.025em",
         }}
         className={`flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-px`}
@@ -72,7 +72,7 @@ const LiveSportStructure = () => {
       </span>
       {text2 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center tracking-tight font-spoqaMedium text-14px"
         >
           {text2}
@@ -80,7 +80,7 @@ const LiveSportStructure = () => {
       )}
       {text3 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center tracking-tight font-spoqaMedium text-14px"
         >
           {text3}
@@ -88,7 +88,7 @@ const LiveSportStructure = () => {
       )}
       {other && (
         <div className="flex mt-px pt-20px text-14px">
-          <span style={{ color: "#828282" }} className="flex h-16px items-center tracking-tight font-spoqaMedium">
+          <span style={{ color: "#666" }} className="flex h-16px items-center tracking-tight font-spoqaMedium">
             {other}
           </span>
         </div>
@@ -120,7 +120,7 @@ const LiveSportStructure = () => {
         <img src={Dot} className="object-none mr-4px" alt="" />
         <span
           style={{
-            color: "#828282",
+            color: "#666",
             letterSpacing: "-0.025em",
           }}
           className="flex h-16px items-center font-spoqaMedium "
@@ -130,13 +130,13 @@ const LiveSportStructure = () => {
       </div>
       <div className="flex mt-px text-14px tracking-tight">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center font-spoqaMedium ">
           {text2}
         </span>
       </div>
       {text2_2 && (
         <div className="flex mt-px pl-10px pb-20px text-14px tracking-tight">
-          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center font-spoqaMedium ">
             {text2_2}
           </span>
         </div>
@@ -145,7 +145,7 @@ const LiveSportStructure = () => {
       {text3 && (
         <div className="flex mt-px text-14px tracking-tight">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center font-spoqaMedium ">
             {text3}
           </span>
         </div>
@@ -153,7 +153,7 @@ const LiveSportStructure = () => {
       {text4 && (
         <div className="flex mt-px text-14px tracking-tight">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center font-spoqaMedium ">
             {text4}
           </span>
         </div>
@@ -161,14 +161,14 @@ const LiveSportStructure = () => {
       {text5 && (
         <div className="flex mt-px text-14px tracking-tight">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center font-spoqaMedium ">
             {text5}
           </span>
         </div>
       )}
       {other && (
         <div className="flex mt-px pt-20px text-14px tracking-tight">
-          <span style={{ color: "#828282" }} className="flex h-16px items-center font-spoqaMedium ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center font-spoqaMedium ">
             {other}
           </span>
         </div>

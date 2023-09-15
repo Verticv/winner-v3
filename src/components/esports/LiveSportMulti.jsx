@@ -31,7 +31,7 @@ const LiveSportMulti = () => {
         </span>
       </div>
       <span
-        style={{ color: "#828282" }}
+        style={{ color: "#666" }}
         className={`flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-px`}
       >
         {text}{" "}
@@ -46,7 +46,7 @@ const LiveSportMulti = () => {
       {text1_1 && (
         <div className="flex mt-px pl-15px pb-20px">
           <span
-            style={{ color: "#828282" }}
+            style={{ color: "#666" }}
             className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium "
           >
             {text1_1}
@@ -55,7 +55,7 @@ const LiveSportMulti = () => {
       )}
       {text2 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text2}
@@ -63,7 +63,7 @@ const LiveSportMulti = () => {
       )}
       {text3 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text3}
@@ -71,7 +71,7 @@ const LiveSportMulti = () => {
       )}
       {text3_1 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium ml-15px"
         >
           {text3_1}
@@ -79,7 +79,7 @@ const LiveSportMulti = () => {
       )}
       {text3_2 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium ml-15px"
         >
           {text3_2}
@@ -88,7 +88,7 @@ const LiveSportMulti = () => {
       {other && (
         <div className="flex mt-px py-20px">
           <span
-            style={{ color: "#828282" }}
+            style={{ color: "#666" }}
             className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium "
           >
             {other}

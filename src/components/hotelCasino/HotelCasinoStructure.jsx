@@ -59,7 +59,7 @@ const HotelCasinoStructure = () => {
         </span>
       </div>
       {text !== "0" && (
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight mt-px">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight mt-px">
           {text}{" "}
           {color1 && (
             <p style={{ color: "#0072bc" }} className="text-blue-2980b9">
@@ -82,12 +82,12 @@ const HotelCasinoStructure = () => {
       )}
 
       {text2 && (
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight">
           {text2}
         </span>
       )}
       {text3 && (
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight">
           {text3}
         </span>
       )}
@@ -115,28 +115,28 @@ const HotelCasinoStructure = () => {
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text}
         </span>
       </div>
       {text11 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text11}
           </span>
         </div>
       )}
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text2}
         </span>
       </div>
       {text3 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text3}
           </span>
         </div>
@@ -145,7 +145,7 @@ const HotelCasinoStructure = () => {
       {text4 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text4}
           </span>
         </div>
@@ -153,7 +153,7 @@ const HotelCasinoStructure = () => {
       {text5 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text5}
           </span>
         </div>
@@ -218,7 +218,7 @@ const HotelCasinoStructure = () => {
                   </div>
                   <div className="flex items-center">
                     <span
-                      style={{ color: "#8c8c8c" }}
+                      style={{ color: "#666" }}
                       className="flex h-16px items-center text-14px tracking-tight mt-7px"
                     >
                       ※ 스피드게임 : 45초 베팅시간 제공

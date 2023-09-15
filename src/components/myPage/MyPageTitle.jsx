@@ -15,7 +15,7 @@ const MyPageTitle = ({
         <img className="z-10 -ml-4px" src={TitleIcon} alt="" />
         <label
           className="font-bold text-22px ml-4px -mt-4px text-shadow-5"
-          style={{ color: "#eeeeee", letterSpacing: "-0.08em" }}
+          style={{ color: "#eeeeee", letterSpacing: "-0.05em" }}
         >
           {title}
         </label>

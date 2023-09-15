@@ -29,7 +29,7 @@ const LiveSportSingle = () => {
         </span>
       </div>
       <span
-        style={{ color: "#828282" }}
+        style={{ color: "#666" }}
         className={`flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-px`}
       >
         {text}{" "}
@@ -44,7 +44,7 @@ const LiveSportSingle = () => {
       {text1_1 && (
         <div className="flex mt-px pl-15px pb-20px">
           <span
-            style={{ color: "#828282" }}
+            style={{ color: "#666" }}
             className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium "
           >
             {text1_1}
@@ -53,7 +53,7 @@ const LiveSportSingle = () => {
       )}
       {text2 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text2}
@@ -61,7 +61,7 @@ const LiveSportSingle = () => {
       )}
       {text3 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text3}
@@ -70,7 +70,7 @@ const LiveSportSingle = () => {
       {other && (
         <div className="flex mt-px py-20px">
           <span
-            style={{ color: "#828282" }}
+            style={{ color: "#666" }}
             className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium "
           >
             {other}

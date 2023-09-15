@@ -49,6 +49,7 @@ const LeftMenu = ({
   const EditProfileButton = ({ path, text, icon, iconHighlight, selectedTab }) => (
     <div
       className="flex w-full items-center flex-col"
+      style={{ letterSpacing: "-0.05em" }}
       onClick={() => {
         buttonPressed(path);
         setPopupOpen(true);
@@ -75,7 +76,7 @@ const LeftMenu = ({
           <div className="flex items-center">
             <label
               className={`font-bold text-16px cursor-pointer`}
-              style={{ color: pathname.includes(path) ? "#fff" : "#433459" }}
+              style={{ color: pathname.includes(path) ? "#fff" : "#433459", letterSpacing: "-0.05em" }}
             >
               {text}
             </label>
@@ -134,7 +135,7 @@ const LeftMenu = ({
                 <div className="flex items-center">
                   <label
                     className={`font-bold text-16px cursor-pointer`}
-                    style={{ color: pathname.includes(item.mainPath) ? "#fff" : "#433459", letterSpacing: "-0.08em" }}
+                    style={{ color: pathname.includes(item.mainPath) ? "#fff" : "#433459", letterSpacing: "-0.05em" }}
                   >
                     {item.text}
                   </label>
@@ -173,7 +174,7 @@ const LeftMenu = ({
                     : ""
                   : "hidden"
               } w-full font-medium text-16px cursor-pointer rounded-b-4px overflow-hidden bg-white`}
-              style={{ letterSpacing: "-0.08em" }}
+              style={{ letterSpacing: "-0.05em" }}
             >
               {item.sub1 && (
                 <button
@@ -195,7 +196,7 @@ const LeftMenu = ({
                       pathname.includes(item.path_9)
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
-                    letterSpacing: "-0.08em",
+                    letterSpacing: "-0.05em",
                   }}
                   className={`${
                     pathname.includes(item.path) ||
@@ -230,7 +231,7 @@ const LeftMenu = ({
                       pathname.includes(item.path2_3)
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
-                    letterSpacing: "-0.08em",
+                    letterSpacing: "-0.05em",
                   }}
                   className={`${
                     pathname.includes(item.path2) ||
@@ -256,7 +257,7 @@ const LeftMenu = ({
                       pathname.includes(item.path3) || pathname.includes(item.path3_1)
                         ? "linear-gradient(to right, #df52ff, #6b22ff)"
                         : "#fff",
-                    letterSpacing: "-0.08em",
+                    letterSpacing: "-0.05em",
                   }}
                   className={`${
                     pathname.includes(item.path3) || pathname.includes(item.path3_1)
@@ -277,7 +278,7 @@ const LeftMenu = ({
                   }}
                   style={{
                     background: pathname.includes(item.path4) ? "linear-gradient(to right, #df52ff, #6b22ff)" : "#fff",
-                    letterSpacing: "-0.08em",
+                    letterSpacing: "-0.05em",
                   }}
                   className={`${pathname.includes(item.path4) ? "text-white" : "text-p594e6a  hover:opacity-50"} ${
                     item.text === "미니게임" && "rounded-b-3xl"
@@ -304,7 +305,7 @@ const LeftMenu = ({
     >
       <div
         className="rounded-6px overflow-hidden w-full p-5px pb-5px space-y-6px"
-        style={{ background: "linear-gradient(to top, #ccc4ff, #ffd9f5)", letterSpacing: "-0.08em" }}
+        style={{ background: "linear-gradient(to top, #ccc4ff, #ffd9f5)", letterSpacing: "-0.05em" }}
       >
         <MenuList items={array} />
       </div>

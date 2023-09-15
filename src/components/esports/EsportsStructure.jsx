@@ -50,7 +50,7 @@ const EsportsStructure = () => {
           {title}
         </span>
       </div>
-      <span style={{ color: "#828282" }} className={`flex h-16px items-center text-14px tracking-tight mt-px`}>
+      <span style={{ color: "#666" }} className={`flex h-16px items-center text-14px tracking-tight mt-px`}>
         {text}{" "}
         <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
           {color1}
@@ -61,12 +61,12 @@ const EsportsStructure = () => {
         <p>{color3}</p>
       </span>
       {text2 && (
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight">
           {text2}
         </span>
       )}
       {text3 && (
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight">
           {text3}
         </span>
       )}
@@ -92,25 +92,25 @@ const EsportsStructure = () => {
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text}
         </span>
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text2}
         </span>
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text3}
         </span>
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text4}
         </span>
       </div>

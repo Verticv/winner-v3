@@ -50,7 +50,7 @@ const TvBetStructure = () => {
           {title}
         </span>
       </div>
-      <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight mt-px">
+      <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight mt-px">
         {text}{" "}
         <p style={{ color: "#0072bc" }} className="ml-2px text-blue-2980b9">
           {color1}
@@ -61,17 +61,17 @@ const TvBetStructure = () => {
         <p>{color3}</p>
       </span>
       {text2 && (
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight">
           {text2}
         </span>
       )}
       {text3 && (
-        <span style={{ color: "#828282" }} className={`flex h-16px items-center text-14px tracking-tight`}>
+        <span style={{ color: "#666" }} className={`flex h-16px items-center text-14px tracking-tight`}>
           {text3}
         </span>
       )}
       {text4 && (
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight">
           {text4}
         </span>
       )}
@@ -103,14 +103,14 @@ const TvBetStructure = () => {
       </div>
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text}
         </span>
       </div>
       {text11 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text11}
           </span>
         </div>
@@ -118,14 +118,14 @@ const TvBetStructure = () => {
 
       <div className="flex mt-px">
         <img src={Dot} className="object-none mr-4px" alt="" />
-        <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+        <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
           {text2}
         </span>
       </div>
       {text22 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text22}
           </span>
         </div>
@@ -133,7 +133,7 @@ const TvBetStructure = () => {
       {!no3rd && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text3}
           </span>
         </div>
@@ -141,7 +141,7 @@ const TvBetStructure = () => {
       {text33 && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px opacity-0" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text33}
           </span>
         </div>
@@ -149,7 +149,7 @@ const TvBetStructure = () => {
       {!no4th && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text4}
           </span>
         </div>
@@ -157,7 +157,7 @@ const TvBetStructure = () => {
       {!no5th && (
         <div className="flex mt-px">
           <img src={Dot} className="object-none mr-4px" alt="" />
-          <span style={{ color: "#828282" }} className="flex h-16px items-center text-14px tracking-tight ">
+          <span style={{ color: "#666" }} className="flex h-16px items-center text-14px tracking-tight ">
             {text5}
           </span>
         </div>

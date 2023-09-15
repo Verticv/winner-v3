@@ -27,7 +27,7 @@ const EsportsSingle = () => {
         </span>
       </div>
       <span
-        style={{ color: "#828282" }}
+        style={{ color: "#666" }}
         className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-px"
       >
         {text}{" "}
@@ -41,7 +41,7 @@ const EsportsSingle = () => {
       </span>
       {text2 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text2}
@@ -49,7 +49,7 @@ const EsportsSingle = () => {
       )}
       {text3 && (
         <span
-          style={{ color: "#828282" }}
+          style={{ color: "#666" }}
           className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium"
         >
           {text3}
@@ -140,7 +140,7 @@ const EsportsSingle = () => {
               <div className="flex items-center">
                 <img src={Dot} className="object-contain mr-4px h-4px mt-6px" alt="" />
                 <span
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#666" }}
                   className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-7px"
                 >
                   1/8 최대 : 최대 한도금액을 8로 나눈 금액 베팅
@@ -149,7 +149,7 @@ const EsportsSingle = () => {
               <div className="flex items-center">
                 <img src={Dot} className="object-contain mr-4px h-4px mt-6px" alt="" />
                 <span
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#666" }}
                   className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-5px"
                 >
                   1/4 최대 : 최대 한도금액을 4로 나눈 금액 베팅
@@ -158,7 +158,7 @@ const EsportsSingle = () => {
               <div className="flex items-center">
                 <img src={Dot} className="object-contain mr-4px h-4px mt-6px" alt="" />
                 <span
-                  style={{ color: "#8c8c8c" }}
+                  style={{ color: "#666" }}
                   className="flex h-16px items-center text-14px tracking-tight font-spoqaMedium mt-5px"
                 >
                   1/2 최대 : 최대 한도금액을 2로 나눈 금액 베팅{" "}

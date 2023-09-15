@@ -73,7 +73,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                   }}
                 >
                   <input
-                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pt-px"
+                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pb-8px"
+                    style={{ color: "#444" }}
                     onFocus={(e) => setSelectedInput(0)}
                     onBlur={(e) => setSelectedInput(false)}
                     type="password"
@@ -105,7 +106,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                   }}
                 >
                   <input
-                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pt-px"
+                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pb-8px"
+                    style={{ color: "#444" }}
                     onFocus={(e) => setSelectedInput(1)}
                     onBlur={(e) => setSelectedInput(false)}
                     type="password"
@@ -131,7 +133,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                   }}
                 >
                   <input
-                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pt-px"
+                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pb-8px"
+                    style={{ color: "#444" }}
                     onFocus={(e) => setSelectedInput(2)}
                     onBlur={(e) => setSelectedInput(false)}
                     type="password"
@@ -163,7 +166,8 @@ const EditInfo = ({ name = "Louie3Louie3Louie3Louie3Louie3Louie3Louie3" }) => {
                   }}
                 >
                   <input
-                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pt-px"
+                    className="bg-white w-full text-14px outline-none pl-9px placeholder-gray-c8c8c8 h-42px rounded-4px pb-8px"
+                    style={{ color: "#444" }}
                     onFocus={(e) => setSelectedInput(3)}
                     onBlur={(e) => setSelectedInput(false)}
                     type="password"
