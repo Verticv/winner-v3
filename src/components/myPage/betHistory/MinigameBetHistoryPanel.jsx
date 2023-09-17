@@ -206,7 +206,7 @@ const MinigameBetHistoryPanel = ({
         >
           <div
             style={{
-              width: isAttached === true ? "162px" : "120px",
+              width: isAttached === true ? "162px" : isPopup ? "119px" : "120px",
               marginLeft: isAttached === true ? "0" : "10px",
             }}
             className="h-full flex items-center justify-center"
@@ -214,7 +214,7 @@ const MinigameBetHistoryPanel = ({
             회차
           </div>
           <div
-            style={{ width: isAttached === true ? "315px" : isPopup ? "285px" : "285px" }}
+            style={{ width: isAttached === true ? "315px" : isPopup ? "285px" : "284px" }}
             className="h-full flex items-center justify-center"
           >
             승(홈)
@@ -232,14 +232,14 @@ const MinigameBetHistoryPanel = ({
             패(원정)
           </div>
           <div
-            style={{ width: isAttached === true ? "66px" : isPopup ? "152px" : "150px" }}
+            style={{ width: isAttached === true ? "66px" : isPopup ? "153px" : "150px" }}
             className="h-full flex items-center justify-center"
           >
             선택
           </div>
           <div
             style={{
-              width: isAttached === true ? "58px" : "89px",
+              width: isAttached === true ? "58px" : isPopup ? "86px" : "88px",
               marginRight: isAttached === true ? "25px" : "10px",
             }}
             className="h-full flex items-center justify-center"
@@ -296,7 +296,7 @@ const MinigameBetHistoryPanel = ({
                     isAttached === true
                       ? "212px"
                       : isPopup === false
-                      ? "131px"
+                      ? "140px"
                       : // : "130px",
                         "169px",
                 }}
@@ -310,7 +310,7 @@ const MinigameBetHistoryPanel = ({
                     isAttached === true
                       ? "212px"
                       : isPopup === false
-                      ? "98px"
+                      ? "89px"
                       : // : "97px",
                         "169px",
                 }}
@@ -370,7 +370,7 @@ const MinigameBetHistoryPanel = ({
                     isAttached === true
                       ? "212px"
                       : isPopup === false
-                      ? "131px"
+                      ? "140px"
                       : // : "151px",
                         "169px",
                 }}
@@ -398,7 +398,7 @@ const MinigameBetHistoryPanel = ({
                     isAttached === true
                       ? "212px"
                       : isPopup === false
-                      ? "98px"
+                      ? "89px"
                       : // : "178px",
                         "169px",
                 }}
