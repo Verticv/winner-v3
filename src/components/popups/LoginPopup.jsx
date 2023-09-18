@@ -72,7 +72,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                   color: "#444",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-gray-c8c8c8 text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-gray-c8c8c8 text-center pb-px"
                 placeholder={"아이디"}
                 onFocus={(e) => {
                   e.target.placeholder = "";
@@ -110,7 +110,7 @@ const LoginPopup = ({ setAuth, setPopupOpen }) => {
                   color: "#444",
                   borderRadius: "4px",
                 }}
-                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-gray-c8c8c8 text-center"
+                className="text-20px outline-none font-spoqaMedium w-full h-full px-18px placeholder-gray-c8c8c8 text-center pb-px"
                 placeholder={"비밀번호"}
                 type="password"
                 onFocus={(e) => {

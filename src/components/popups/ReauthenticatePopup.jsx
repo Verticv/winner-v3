@@ -94,7 +94,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                 whiteSpace: "nowrap",
                 overflow: "hidden",
               }}
-              className="text-20px outline-none w-full h-full pl-18px placeholder-gray-c8c8c8 pt-3px bg-white"
+              className="text-20px outline-none w-full h-full pl-18px placeholder-gray-c8c8c8 bg-white pb-px"
               disabled
               placeholder={"louie3"}
             />
@@ -117,7 +117,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                 color: "#444",
                 borderRadius: "4px",
               }}
-              className="text-20px outline-none w-full h-full px-18px placeholder-gray-c8c8c8 pt-3px"
+              className="text-20px outline-none w-full h-full px-18px placeholder-gray-c8c8c8 pb-px"
               placeholder={"비밀번호"}
               type="password"
               onFocus={(e) => {
