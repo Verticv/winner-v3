@@ -449,7 +449,7 @@ const SportsBetHistoryPanel = ({
             style={{
               width: isAttached === true ? (isFullPage ? "90px" : "85px") : "99px",
               paddingLeft: isPopup ? "7px" : !isAttached ? "7px" : isFullPage ? "0px" : "0px",
-              paddingRight: isAttached && !isFullPage && "2px",
+              // paddingRight: isAttached && !isFullPage && "2px",
               marginLeft: isAttached === true ? (isFullPage ? "32px" : "40px") : "10px",
             }}
             className="h-full flex items-center justify-center mb-px pb-px"
