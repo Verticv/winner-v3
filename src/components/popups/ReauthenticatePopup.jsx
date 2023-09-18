@@ -94,11 +94,11 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                 whiteSpace: "nowrap",
                 overflow: "hidden",
               }}
-              className="text-20px outline-none w-full h-full pl-18px placeholder-gray-c8c8c8 bg-white pb-px"
+              className="text-20px outline-none w-full h-full px-18px placeholder-gray-c8c8c8 text-center bg-white pb-2px"
               disabled
               placeholder={"louie3"}
             />
-            <img src={Username} alt="" className="mr-4px opacity-0" />
+            <img src={Username} alt="" className="mr-19px opacity-0" />
           </div>
           <div
             style={{
@@ -117,7 +117,7 @@ const ReauthenticatePopup = ({ setPopupOpen, setSelectedTab }) => {
                 color: "#444",
                 borderRadius: "4px",
               }}
-              className="text-20px outline-none w-full h-full px-18px placeholder-gray-c8c8c8 pb-px"
+              className="text-20px outline-none w-full h-full px-18px placeholder-gray-c8c8c8 text-center pb-2px"
               placeholder={"비밀번호"}
               type="password"
               onFocus={(e) => {

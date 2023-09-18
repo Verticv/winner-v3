@@ -75,7 +75,7 @@ const SportsBetHistoryPanel = ({
             background: bet === "left" ? "linear-gradient(to top, #5423a0, #9d3bbb )" : "#fff",
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
             borderRadius: "5px",
-            fontWeight: bet === "left" && "600"
+            fontWeight: bet === "left" && "600",
           }}
           className="flex items-center justify-center h-36px p-px border"
         >
@@ -127,7 +127,7 @@ const SportsBetHistoryPanel = ({
             boxShadow: "0 1px 1px rgba(0,0,0,0.5)",
             textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
             borderRadius: "5px",
-            fontWeight: bet === "right" && "600"
+            fontWeight: bet === "right" && "600",
           }}
           className={`flex group items-center justify-between h-36px p-px border`}
         >
@@ -176,7 +176,7 @@ const SportsBetHistoryPanel = ({
           }}
           className={`${
             isAttached
-              ? "w-70px pl-14px"
+              ? "w-70px pl-16px"
               : isPopup
               ? "w-63px pl-16px"
               : !isAttached
@@ -448,7 +448,7 @@ const SportsBetHistoryPanel = ({
           <div
             style={{
               width: isAttached === true ? (isFullPage ? "90px" : "85px") : "99px",
-              paddingLeft: isPopup ? "9px" : !isAttached ? "7px" : isFullPage ? "4px" : "5px",
+              paddingLeft: isPopup ? "7px" : !isAttached ? "7px" : isFullPage ? "0px" : "0px",
               marginLeft: isAttached === true ? (isFullPage ? "32px" : "40px") : "10px",
             }}
             className="h-full flex items-center justify-center mb-px pb-px"
@@ -456,8 +456,8 @@ const SportsBetHistoryPanel = ({
             스코어
           </div>
           <div
-            style={{ width: isAttached === true ? "66px" : "61px" }}
-            className="h-full flex items-center justify-center mb-px pb-px pl-px"
+            style={{ width: isAttached === true ? "61px" : "61px", paddingLeft: isAttached ? "0px" : "1px" }}
+            className="h-full flex items-center justify-center mb-px pb-px"
           >
             선택
           </div>
@@ -465,7 +465,7 @@ const SportsBetHistoryPanel = ({
             style={{
               width: isAttached === true ? "58px" : "70px",
               marginRight: isAttached === true ? (isFullPage ? "20px" : "25px") : "6px",
-              paddingLeft: !isPopup && !isAttached ? "11px" : "16px",
+              paddingLeft: !isPopup && !isAttached ? "11px" : isAttached ? "24px" : "15px",
             }}
             className="h-full flex items-center justify-center mb-px pl-16px pb-px"
           >
