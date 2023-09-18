@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import LebronBanner from "../../images/navbarHover/3_1.png";
+import SingleBanner from "../../images/navbarHover/3_3.png";
+import MultiBanner from "../../images/navbarHover/3_4.png";
 import FootballLogo from "../../images/navbarHover/football_logo.png";
 import LebronBannerLogo from "../../images/navbarHover/3_1_logo.png";
 import Expand from "react-expand-animated";
@@ -21,10 +23,24 @@ const SportsHover = ({ selection }) => {
     },
     {
       id: 1,
+      background: SingleBanner,
+      logo: LebronBannerLogo,
+      imgText: "화면구성설명",
+      path: "/esports/LiveSport/guide",
+    },
+    {
+      id: 2,
       background: FootballLogo,
       logo: LebronBannerLogo,
-      imgText: "이용가이드",
-      path: "/esports/LiveSport/guide",
+      imgText: "싱글뷰베팅방법",
+      path: "/esports/LiveSport/single",
+    },
+    {
+      id: 3,
+      background: MultiBanner,
+      logo: LebronBannerLogo,
+      imgText: "멀티뷰베팅방법",
+      path: "/esports/LiveSport/multi",
     },
   ];
 
@@ -80,10 +96,10 @@ const SportsHover = ({ selection }) => {
     >
       <div
         onMouseLeave={() => setHover(null)}
-        style={{ minHeight: "98px" }}
+        style={{ minHeight: "176px" }}
         className="h-full w-auto flex justify-center"
       >
-        <div style={{ width: "240px" }} className="p-15px grid gap-10px grid-cols-1 limit:grid-cols-1">
+        <div style={{ width: "460px" }} className="p-15px grid gap-10px grid-cols-2 limit:grid-cols-2">
           <GamesList items={gamesArray} />
         </div>
       </div>
