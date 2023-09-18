@@ -448,8 +448,8 @@ const SportsBetHistoryPanel = ({
           <div
             style={{
               width: isAttached === true ? (isFullPage ? "90px" : "85px") : "99px",
-              paddingLeft: isPopup ? "7px" : !isAttached ? "7px" : isFullPage ? "0px" : "5px",
-              // paddingRight: isAttached && !isFullPage && "2px",
+              paddingLeft: isPopup ? "7px" : !isAttached ? "7px" : isFullPage ? "0px" : "0px",
+              paddingRight: isAttached && !isFullPage && "2px",
               marginLeft: isAttached === true ? (isFullPage ? "32px" : "40px") : "10px",
             }}
             className="h-full flex items-center justify-center mb-px pb-px"
@@ -457,7 +457,7 @@ const SportsBetHistoryPanel = ({
             스코어
           </div>
           <div
-            style={{ width: isAttached === true ? "61px" : "61px", paddingLeft: isAttached ? "0px" : "1px" }}
+            style={{ width: isAttached === true && !isFullPage ? "66px" : "61px", paddingLeft: isAttached && !isFullPage ? "0px" : "1px" }}
             className="h-full flex items-center justify-center mb-px pb-px"
           >
             선택
@@ -466,7 +466,7 @@ const SportsBetHistoryPanel = ({
             style={{
               width: isAttached === true ? "58px" : "70px",
               marginRight: isAttached === true ? (isFullPage ? "20px" : "25px") : "6px",
-              paddingLeft: !isPopup && !isAttached ? "11px" : isFullPage ? "24px" : isAttached ? "16px" : "15px",
+              paddingLeft: !isPopup && !isAttached ? "11px" : isFullPage ? "24px" : isAttached ? "18px" : "15px",
             }}
             className="h-full flex items-center justify-center mb-px pl-16px pb-px"
           >
