@@ -28,10 +28,14 @@ import Slot22 from '../../../images/myPage/betHistory/slotGame/slot22.png'
 import Slot23 from '../../../images/myPage/betHistory/slotGame/slot23.png'
 import Slot24 from '../../../images/myPage/betHistory/slotGame/slot24.png'
 import Slot25 from '../../../images/myPage/betHistory/slotGame/slot25.png'
+import Slot26 from '../../../images/myPage/betHistory/slotGame/slot26.png'
+import Slot27 from '../../../images/myPage/betHistory/slotGame/slot27.png'
+import Slot28 from '../../../images/myPage/betHistory/slotGame/slot28.png'
 
 const subTabsArray = [
     { text: "전체", icon: AllIcon, id: 0 },
     { text: "프레그메틱플레이", icon: Slot1, id: 1 },
+    { text: "히든버튼", icon: Slot26, id: 26 },
     { text: "씨큐나인", icon: Slot2, id: 2 },
     { text: "월드매치", icon: Slot3, id: 3 },
     { text: "하바네로", icon: Slot4, id: 4 },
@@ -56,6 +60,8 @@ const subTabsArray = [
     { text: "CC88", icon: Slot23, id: 23 },
     { text: "패스트스핀", icon: Slot24, id: 24 },
     { text: "나가게임즈", icon: Slot25, id: 25 },
+    { text: "넥스트스핀", icon: Slot27, id: 27 },
+    { text: "스피닉스", icon: Slot28, id: 28 },
     
 ];
 

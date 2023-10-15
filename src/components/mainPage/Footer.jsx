@@ -83,7 +83,7 @@ const Footer = ({ fullWidth = false }) => {
       title: "기타게임",
       items: [
         {
-          text: "K-홀덤",
+          text: "히든포커",
           link: "#",
         },
         {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Expand from "react-expand-animated";
 import Icon1 from "../../images/navbarHover/11_1.png";
-import Icon2 from "../../images/navbarHover/11_2.png";
+// import Icon2 from "../../images/navbarHover/11_2.png";
 import AugBannerLogo from "../../images/navbarHover/11_1_logo.png";
 import { useHistory } from "react-router-dom";
 import useNavButtonPosition from "hooks/useNavButtonPosition";
@@ -17,15 +17,15 @@ const HoldemHover = ({ selection }) => {
       id: 0,
       background: Icon1,
       logo: AugBannerLogo,
-      imgText: "K-홀덤",
+      imgText: "히든포커",
     },
-    {
-      id: 1,
-      background: Icon2,
-      logo: AugBannerLogo,
-      imgText: "이용가이드",
-      path: "/esports/hold'emGame"
-    },
+    // {
+    //   id: 1,
+    //   background: Icon2,
+    //   logo: AugBannerLogo,
+    //   imgText: "이용가이드",
+    //   path: "/esports/hold'emGame"
+    // },
   ];
 
   function GamesList({ items }) {

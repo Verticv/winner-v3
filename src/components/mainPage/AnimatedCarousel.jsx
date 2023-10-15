@@ -35,7 +35,7 @@ const sampleArray = [
     activeIcon: activeImage6,
     logo: logo6,
     center: center6,
-    title: "K-홀덤",
+    title: "히든포커",
   },
   {
     id: 0,
@@ -78,7 +78,7 @@ const sampleArray = [
     activeIcon: activeImage6,
     logo: logo6,
     center: center6,
-    title: "K-홀덤",
+    title: "히든포커",
   },
   {
     id: 6,
@@ -121,7 +121,7 @@ const sampleArray = [
     activeIcon: activeImage6,
     logo: logo6,
     center: center6,
-    title: "K-홀덤",
+    title: "히든포커",
   },
   {
     id: 12,
@@ -248,7 +248,7 @@ export default function AnimatedCarousel() {
                 ? "mb-px -ml-px"
                 : item.title === "티비벳"
                 ? "mb-8px -ml-3px"
-                : item.title === "K-홀덤"
+                : item.title === "히든포커"
                 ? "mb-7px -ml-px"
                 : "-ml-2px"
             }`}
