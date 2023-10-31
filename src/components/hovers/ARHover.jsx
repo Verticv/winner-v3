@@ -9,6 +9,9 @@ import AugBanner3 from "../../images/navbarHover/7_3.png";
 import AugBannerLogo3 from "../../images/navbarHover/7_3_logo.png";
 import AugBanner4 from "../../images/navbarHover/7_4.png";
 import AugBannerLogo4 from "../../images/navbarHover/7_4_logo.png";
+import AugBanner5 from "../../images/navbarHover/7_5.png";
+import AugBanner6 from "../../images/navbarHover/7_6.png";
+
 import useNavButtonPosition from "hooks/useNavButtonPosition";
 
 const ARHover = ({ selection }) => {
@@ -18,6 +21,20 @@ const ARHover = ({ selection }) => {
   const hoverMenuPosition = useNavButtonPosition("menu-wrapper", "navbar-7-button");
 
   const gamesArray = [
+    {
+      id: 4,
+      background: AugBanner5,
+      logo: AugBannerLogo,
+      imgText: "에볼루션파워볼",
+      path: "/minigame/powerball",
+    },
+    {
+      id: 5,
+      background: AugBanner6,
+      logo: AugBannerLogo,
+      imgText: "프레그메틱파워볼",
+      path: "/minigame/powerball",
+    },
     {
       id: 0,
       background: AugBanner,
@@ -99,10 +116,10 @@ const ARHover = ({ selection }) => {
     >
       <div
         onMouseLeave={() => setHover(null)}
-        style={{ minHeight: "176px" }}
+        style={{ minHeight: "254px" }}
         className="h-full w-auto flex justify-center"
       >
-        <div style={{ width: "460px" }} className="p-15px grid gap-10px grid-cols-2 limit:grid-cols-2">
+        <div style={{ width: "240px" }} className="p-15px grid gap-10px grid-cols-1 limit:grid-cols-1">
           <GamesList items={gamesArray} />
         </div>
       </div>
