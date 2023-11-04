@@ -26,14 +26,12 @@ const ARHover = ({ selection }) => {
       background: AugBanner5,
       logo: AugBannerLogo,
       imgText: "에볼루션파워볼",
-      path: "/minigame/powerball",
     },
     {
       id: 5,
       background: AugBanner6,
       logo: AugBannerLogo,
       imgText: "프레그메틱파워볼",
-      path: "/minigame/powerball",
     },
     {
       id: 0,
@@ -75,7 +73,7 @@ const ARHover = ({ selection }) => {
           background: "linear-gradient(to right, #9c3bbb, #411d99)",
         }}
         onMouseEnter={() => setHover(item.id)}
-        onClick={() => history.push(item.path)}
+        onClick={() => item.path && history.push(item.path)}
       >
         {isHover === item.id && (
           <button
