@@ -1,7 +1,7 @@
 import React from "react";
-import img from "../../images/esports/guide_03_01.png";
+import img from "../../images/esports/guide_02_01.png";
 
-const HoldemGame = () => {
+const HoldemStructure = () => {
   return (
     // <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa border border-gray-dddddd p-30px space-y-30px">
     <>
@@ -22,11 +22,11 @@ const HoldemGame = () => {
           }}
           className="w-full bg-gray-323232 rounded-10px overflow-hidden justify-center items-center"
         >
-          <img className="object-cover w-full" src={img} alt="img" />
+          <img className="object-contain" src={img} alt="img" />
         </div>
       </div>
     </>
   );
 };
 
-export default HoldemGame;
+export default HoldemStructure;

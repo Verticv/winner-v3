@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Expand from "react-expand-animated";
 import Icon1 from "../../images/navbarHover/11_1.png";
+import Icon2 from "../../images/navbarHover/11_3.png";
+import Icon3 from "../../images/navbarHover/11_4.png";
+import Icon4 from "../../images/navbarHover/11_5.png";
 // import Icon2 from "../../images/navbarHover/11_2.png";
 import AugBannerLogo from "../../images/navbarHover/11_1_logo.png";
 import { useHistory } from "react-router-dom";
@@ -19,13 +22,27 @@ const HoldemHover = ({ selection }) => {
       logo: AugBannerLogo,
       imgText: "히든포커",
     },
-    // {
-    //   id: 1,
-    //   background: Icon2,
-    //   logo: AugBannerLogo,
-    //   imgText: "이용가이드",
-    //   path: "/esports/hold'emGame"
-    // },
+    {
+      id: 1,
+      background: Icon2,
+      logo: AugBannerLogo,
+      imgText: "게임종류안내",
+      path: "/esports/holdem-type"
+    },
+    {
+      id: 2,
+      background: Icon3,
+      logo: AugBannerLogo,
+      imgText: "로비화면구성",
+      path: "/esports/holdem-structure"
+    },
+    {
+      id: 3,
+      background: Icon4,
+      logo: AugBannerLogo,
+      imgText: "게임화면구성",
+      path: "/esports/holdem-game"
+    },
   ];
 
   function GamesList({ items }) {
@@ -51,7 +68,7 @@ const HoldemHover = ({ selection }) => {
             }}
             className="absolute z-50 top-20px right-15px flex items-center justify-center h-28px text-white rounded-14px cursor-pointer font-spoqaMedium text-13px tracking-tighter"
           >
-            {item.imgText.includes("이용가이드") ? "설명보기" : "게임시작"}
+            {!item.imgText.includes("히든포커") ? "설명보기" : "게임시작"}
           </button>
         )}
         {isHover === item.id && <div className="w-full h-full bg-black opacity-60 z-10 rounded-6px"></div>}
@@ -79,10 +96,10 @@ const HoldemHover = ({ selection }) => {
     >
       <div
         onMouseLeave={() => setHover(null)}
-        style={{ minHeight: "98px" }}
+        style={{ minHeight: "176px" }}
         className="h-full w-auto flex justify-center"
       >
-        <div style={{ width: "240px" }} className="p-15px grid gap-10px grid-cols-1 limit:grid-cols-1">
+        <div style={{ width: "460px" }} className="p-15px grid gap-10px grid-cols-2 limit:grid-cols-2">
           <GamesList items={gamesArray} />
         </div>
       </div>

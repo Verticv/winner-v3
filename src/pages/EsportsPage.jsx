@@ -9,6 +9,8 @@ import EsportsStructure from "components/esports/EsportsStructure";
 import EsportsSingle from "components/esports/EsportsSingle";
 import EsportsMulti from "components/esports/EsportsMulti";
 import HoldemGame from "components/esports/HoldemGame";
+import HoldemType from "components/esports/HoldemType";
+import HoldemStructure from "components/esports/HoldemStructure";
 import LiveSportStructure from "components/esports/LiveSportStructure";
 import LiveSportSingle from "components/esports/LiveSportSingle";
 import LiveSportMulti from "components/esports/LiveSportMulti";
@@ -37,7 +39,7 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
     { text: "싱글뷰 베팅방법", id: 1, path: "/esports/LiveSport/single" },
     { text: "멀티뷰 베팅방법", id: 2, path: "/esports/LiveSport/multi" },
   ];
-  const MenuArray2 = [{ text: "홀덤게임 이용가이드", id: 0, path: "/esports/hold'emGame" }];
+  const MenuArray2 = [{ text: "게임종류안내", id: 0, path: "/esports/holdem-type" }, { text: "로비화면구성", id: 1, path: "/esports/holdem-structure" }, { text: "게임화면구성", id: 2, path: "/esports/holdem-game" }];
 
   const [, setSelectedTab] = useState(0);
 
@@ -109,15 +111,30 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
           />
         </Route>
 
-        <Route path="/esports/hold'emGame">
+        <Route path="/esports/holdem-type">
           <DirectoryComponent
             branch1="홀덤게임"
-            branch2="이용가이드"
-            mainPath="/esports/hold'emGame"
+            branch2="게임종류안내"
+            mainPath="/esports/holdem-type"
             setSelectedTab={setSelectedTab}
           />
         </Route>
-
+        <Route path="/esports/holdem-structure">
+          <DirectoryComponent
+            branch1="홀덤게임"
+            branch2="로비화면구성"
+            mainPath="/esports/holdem-structure"
+            setSelectedTab={setSelectedTab}
+          />
+        </Route>
+        <Route path="/esports/holdem-game">
+          <DirectoryComponent
+            branch1="홀덤게임"
+            branch2="게임화면구성"
+            mainPath="/esports/holdem-game"
+            setSelectedTab={setSelectedTab}
+          />
+        </Route>
         <div className="w-default mt-4px mb-px z-30">
           <Route path="/esports/structure">
             <HorizontalMenu9 itemsArray={MenuArray} setSelectedTab={setSelectedTab} />
@@ -131,7 +148,13 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
           <Route path="/esports/LiveSport">
             <HorizontalMenu9 itemsArray={MenuArray1} setSelectedTab={setSelectedTab} />
           </Route>
-          <Route path="/esports/hold'emGame">
+          <Route path="/esports/holdem-type">
+            <HorizontalMenu9 itemsArray={MenuArray2} setSelectedTab={setSelectedTab} />
+          </Route>
+          <Route path="/esports/holdem-structure">
+            <HorizontalMenu9 itemsArray={MenuArray2} setSelectedTab={setSelectedTab} />
+          </Route>
+          <Route path="/esports/holdem-game">
             <HorizontalMenu9 itemsArray={MenuArray2} setSelectedTab={setSelectedTab} />
           </Route>
         </div>
@@ -155,7 +178,13 @@ const EsportsPage = ({ isAuthenticated, setAuthenticated }) => {
           <Route path="/esports/LiveSport/multi">
             <LiveSportMulti />
           </Route>
-          <Route path="/esports/hold'emGame">
+          <Route path="/esports/holdem-type">
+            <HoldemType />
+          </Route>
+          <Route path="/esports/holdem-structure">
+            <HoldemStructure />
+          </Route>
+          <Route path="/esports/holdem-game">
             <HoldemGame />
           </Route>
           <Route path="*"></Route>
