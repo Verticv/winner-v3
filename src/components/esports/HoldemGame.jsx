@@ -22,7 +22,7 @@ const HoldemGame = () => {
           }}
           className="w-full bg-gray-323232 rounded-10px overflow-hidden justify-center items-center"
         >
-          <img className="object-cover w-full" src={img} alt="img" />
+          <img className="object-contain w-full" src={img} alt="img" />
         </div>
       </div>
     </>
